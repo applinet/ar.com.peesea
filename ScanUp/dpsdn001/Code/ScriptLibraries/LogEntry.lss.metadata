@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8003E0F7C" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="17a" sequence="7" unid="65A987B7EAED3C6AC125768E005342ED">
+<created><datetime dst="true">20091216T170926,21+02</datetime></created>
+<modified><datetime>20171029T081752,44-03</datetime></modified>
+<revised><datetime>20111212T103018,65-03</datetime></revised>
+<lastaccessed><datetime>20171029T081752,06-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T081752,06-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ALEXANDRE AUGEN - U251305/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>7</text></item>
+<item name="$TITLE" sign="true"><text>LogEntry</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$Comment"><text>Interfacage avec la log applicative</text></item>
+
+
+<item name="$POID"><datetime>20111212T103018,65-03</datetime></item></note>

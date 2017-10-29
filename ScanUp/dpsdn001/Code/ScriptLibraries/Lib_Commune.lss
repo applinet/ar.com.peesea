@@ -1,0 +1,19 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+' On force la déclaration des variables dans le code
+Option Declare
+Use "LogEntry"
+
+
+
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+' Descripteur du fichier de log
+Dim file_log As Integer
+
+' Flag pour une éventuelle réponse
+Public i_flag_reponse As Integer
+Dim SortedArray As Variant

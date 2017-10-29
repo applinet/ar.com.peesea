@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.0' replicaid='032581C8003E0F7C'>
+<noteinfo noteid='11e' unid='99F3B30B4D639FEFC1256ACB00201750' sequence='41'>
+<created><datetime dst='true'>20010918T075031,20+02</datetime></created>
+<modified><datetime>20171029T081752,58-03</datetime></modified>
+<revised><datetime>20171029T081752,57-03</datetime></revised>
+<lastaccessed><datetime>20171029T081752,06-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T081752,01-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=LAURENT GALVES - P525975/OU=users/O=PSA</name><name>CN=DEV008.DEV/OU=S/O=PSADEVDSIN</name><name
+>CN=LAURENT GALVES - P525975/OU=users/O=PSA</name><name>CN=MARTIAL VALENTIN - J508192/OU=users/O=PSA</name><name
+>CN=MARIE EDITH TISSOT - J484276/OU=users/O=PSA</name><name>CN=GPW005.DOMINO/OU=S/O=PSA</name><name
+>CN=GPW506.DOMINO/OU=S/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=CLAUDIA SOLDANO - E355133/OU=users/O=PSA</name><name>CN=MARCELO GUSTAVO HUERTA - E500756/OU=users/O=PSA</name></updatedby>
+<item name='$UpdatedByLimit'><number>0</number></item>
+<item name='$RevisionsLimit'><number>0</number></item>
+<item name='$SoftDeleteExpireHours'><number>0</number></item>
+<item name='$FlagsNoRefresh'><text/></item>
+<item name='$TemplateModTime'><datetime>20111212T103018,92-03</datetime></item>
+<item name='$TemplateServerName'><text>CN=CLAUDIA SOLDANO - E355133/OU=users/O=PSA</text></item>
+<item name='$TemplateFileName'><text>C:\User\E355133\notes 8 IBM\data\Templates\DSP\dspdn001.ntf</text></item>
+<item name='IconBitmap' summary='true' sign='true'>
+<rawitemdata type='6'>
+AiAgAQAA/4c//v+CH/z/AA/4/gAP8P4AB+D+AAPg/gAB4P4AAOD+AADg/gAA4P4AAOD+AADg/gAA
+4P4AAeDBAYIgwMACAICAAACAAAAAwAAAAPAGAADgBgAAwAYAAIAGAACBBgAAgwYAAIAAAACAAAAA
+wAAAAOAAAADAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAIgAAAAAG
+ZmAAZgAAAAAAAiIAAAAAZmZmAGYAAAAAACIiAAAAAGYAZgBmAAAAAAIiIgAAAABmAGYAZgAAAAAC
+IiIAAAAAZgBmAGZmYAAAAiIiAAAAAGYAZgBmZmYAAAIiIgAAAABmAGYAZgBmAAACIiIAAAAAZgBm
+AGYAZgAAAiIiAAAAAGYAZgBmAGYAAAIiIgAAAABmAGYAZgBmAAACIiIAAAAAZgBmAGZmZgAAAiIi
+AAAAAGYAZgAGZmAAAAIiIgAAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAACAGZmAABmZgBm
+BmAGYAZgAgBmZmAGZmYAZgZgBmAGYAIAAAZgBmAAAGYGYAZgBmACAAAGYAZgAABmBmAGYAZgAgAA
+BmAGYAAAZgZgBmAGYAIABmZgBmAAAGZmYAZgZmACAGZmAAZgAABmZmAGZmZgAgBmAAAGYAAAZgZg
+BmYGYAIAZgAABmAAAGYGYAZgBmACAGYAAAZgAABmBmAGYAZgAgBmZmAGZmYAZmZgBmAGYAIABmZg
+AGZmAAZmAAZgBmACAAAAAEQAAARAAARAAEAAIgBEREREREREREREREREQiIERERERERERERERERE
+REQiREREREREREREREREREREQg==
+</rawitemdata></item>
+<item name='$Flags'><text>JR</text></item>
+<item name='$Daos'><text>0</text></item>
+<item name='$TITLE'><text>MDL base de pieces jointes linux 11052010
+#1dspdn001.ntf
+#2dspdn001_loc</text></item></note>
+
