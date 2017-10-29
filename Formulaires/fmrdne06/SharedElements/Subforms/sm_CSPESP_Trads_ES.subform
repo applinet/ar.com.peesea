@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='fb6' unid='03B3E2DE7B53C326C1257E2700409EFB' sequence='22'>
+<created><datetime dst='true'>20150414T134550,03+02</datetime></created>
+<modified><datetime>20171029T102001,32-03</datetime></modified>
+<revised><datetime>20170911T114755,59-03</datetime></revised>
+<lastaccessed><datetime>20171029T101955,28-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101955,28-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAgwEAAAAAAAAAAAAAAAAAAAAAAADc/5YB+f+EASBOAAAAAAAAAAB2YXIgbF9D
+U1BFU1BfVGl0bGVfdlN1aXZyZSA9ICJDU1BFU1AiOw0NdmFyIGxfQ1NQRVNQX1RpdGxlVmFsaWRT
+ZWN0MTAgPSAiRW4gZXNwZXJhIGRlIHZhbGlkYWNpom4gZGVsIHZhbGlkYWRvciI7DXZhciBsX0NT
+UEVTUF9UaXRsZVZhbGlkU2VjdDIwID0gIkVuIGVzcGVyYSBkZSB2YWxpZGFjaaJuIGRlbCBDU1Ag
+UGFpZSI7DQ12YXIgbF9DU1BFU1BfRXRhYmxpc3NlbWVudCA9ICJTaXRpbyI7DXZhciBsX0NTUEVT
+UF9UeXBlRGVEZW0gPSAiVGlwbyBkZSBEZW1hbmRhIjsNdmFyIGxfQ1NQRVNQX1BpZWNlSm9pbnRl
+ID0gIkFkanVudG8iOw12YXIgbF9DU1BFU1BfVmFsaWRldXIgPSAiVmFsaWRhZG9yIjsNdmFyIGxf
+Q1NQRVNQX0NvbW1lbnRhaXJlcyA9ICJDb21lbnRhcmlvcyI7DQAAX/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>sm_CSPESP_Trads_ES</text><text>sm_CSPESP_Trads_ES</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_CHARTE_Trads_FR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQEADhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEA3QYAAIX/hf8aAAEAAghzbV9D
+U1BFU1BfVHJhZHNfRVPSCAEA/wAAAN4GAACF/w==
+</rawitemdata></item></note>
+

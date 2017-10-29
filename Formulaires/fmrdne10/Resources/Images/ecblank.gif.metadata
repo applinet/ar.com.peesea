@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C800498301" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="5de" sequence="26" unid="4A9FEFB6BDE2EF0AC1256BDC002F22CB">
+<created><datetime dst="true">20020618T103450,99+02</datetime></created>
+<modified><datetime>20171029T102302,85-03</datetime></modified>
+<revised><datetime>20170606T011406,13-03</datetime></revised>
+<lastaccessed><datetime>20171029T102300,07-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102300,07-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ANGEL GARCIA PUJALTE - E168524/OU=users/O=PSA</name><name>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name>CN=FRANCK NUWENDAM - E100441/OU=users/O=PSA</name><name>CN=ANGEL GARCIA PUJALTE - E168524/OU=users/O=PSA</name><name>CN=CHRISTOPHE LAZZARO - E278731/OU=users/O=PSA</name><name>CN=BERNARD ALLAINE - C010578/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>ecblank.gif</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>ecblank.gif</text></item>
+<item name="$DesignerVersion" sign="true"><text>5</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$Flags"><text>34CiQ</text></item></note>

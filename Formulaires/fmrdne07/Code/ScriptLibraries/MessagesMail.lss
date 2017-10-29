@@ -1,0 +1,111 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Msg01(db As notesdatabase, docCour As NotesDocument, rtitem As notesrichtextitem)	
+Declare Sub Msg02(db As NotesDataBase, docCour As NotesDocument, rtitem As NotesRichTextItem)	
+Declare Sub Msg03(db As NotesDataBase, docCour As NotesDocument, rtitem As NotesRichTextItem)	
+Declare Sub Msg04(db As NotesDataBase, docCour As NotesDocument, rtitem As NotesRichTextItem)	
+Declare Sub Msg05(db As NotesDataBase, docCour As NotesDocument, rtitem As NotesRichTextItem)	
+Declare Sub Msg06(db As NotesDataBase, docCour As NotesDocument, rtitem As NotesRichTextItem)	
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+'Views
+Dim viewCurrent As notesview
+'Notesdocument
+Dim docMessage As notesdocument
+'NotesRichTextItems
+Dim messageItem As NotesRichTextItem
+'Variants
+Dim typeform As String
+
+'++LotusScript Development Environment:2:2:Msg01:1:8
+Sub Msg01(db As notesdatabase, docCour As NotesDocument, rtitem As notesrichtextitem)	
+	Dim session As New notessession
+	typeform = docCour.f_TypeForm(0)
+	Set viewCurrent = db.GetView("v_FormsParams")
+	Set docMessage = viewCurrent.GetDocumentbyKey(typeform)
+	If Not docMessage Is Nothing Then
+	'	cadena = docMessage.GetItemValue("f_message01")
+		Call rtitem.AddNewLine(1)
+	'	Call rtitem.Appendtext(cadena(0))
+		Dim richText As NotesRichTextItem	
+		Set richText = docMessage.GetFirstItem("f_message01")	
+		Call rtitem.AppendRTItem(richText)
+	End If
+End Sub
+'++LotusScript Development Environment:2:2:Msg02:1:8
+Sub Msg02(db As NotesDataBase, docCour As NotesDocument, rtitem As NotesRichTextItem)	
+	Dim session As New notessession
+	typeform = docCour.f_TypeForm(0)
+	Set viewCurrent = db.GetView("v_FormsParams")
+	Set docMessage = viewCurrent.GetDocumentbyKey(typeform)
+	If Not docMessage Is Nothing Then
+	'	cadena = docMessage.GetItemValue("f_message02")
+		Call rtitem.AddNewLine(1)
+	'	Call rtitem.Appendtext(cadena(0))
+		Dim richText As NotesRichTextItem	
+		Set richText = docMessage.GetFirstItem("f_message02")	
+		Call rtitem.AppendRTItem(richText)
+	End If
+End Sub
+'++LotusScript Development Environment:2:2:Msg03:1:8
+Sub Msg03(db As NotesDataBase, docCour As NotesDocument, rtitem As NotesRichTextItem)	
+	Dim session As New notessession
+	typeform = docCour.f_TypeForm(0)
+	Set viewCurrent = db.GetView("v_FormsParams")
+	Set docMessage = viewCurrent.GetDocumentbyKey(typeform)
+	If Not docMessage Is Nothing Then
+	'	cadena = docMessage.GetItemValue("f_message03")
+		Call rtitem.AddNewLine(1)
+	'	Call rtitem.Appendtext(cadena(0))
+		Dim richText As NotesRichTextItem	
+		Set richText = docMessage.GetFirstItem("f_message03")	
+		Call rtitem.AppendRTItem(richText)
+	End If
+End Sub
+'++LotusScript Development Environment:2:2:Msg04:1:8
+Sub Msg04(db As NotesDataBase, docCour As NotesDocument, rtitem As NotesRichTextItem)	
+	Dim session As New notessession
+	typeform = docCour.f_TypeForm(0)
+	Set viewCurrent = db.GetView("v_FormsParams")
+	Set docMessage = viewCurrent.GetDocumentbyKey(typeform)
+	If Not docMessage Is Nothing Then
+	'	cadena = docMessage.GetItemValue("f_message04")
+		Call rtitem.AddNewLine(1)
+	'	Call rtitem.Appendtext(cadena(0))
+		Dim richText As NotesRichTextItem	
+		Set richText = docMessage.GetFirstItem("f_message04")	
+		Call rtitem.AppendRTItem(richText)
+	End If
+End Sub
+'++LotusScript Development Environment:2:2:Msg05:1:8
+Sub Msg05(db As NotesDataBase, docCour As NotesDocument, rtitem As NotesRichTextItem)	
+	Dim session As New notessession
+	typeform = docCour.f_TypeForm(0)
+	Set viewCurrent = db.GetView("v_FormsParams")
+	Set docMessage = viewCurrent.GetDocumentbyKey(typeform)
+	If Not docMessage Is Nothing Then
+	'	cadena = docMessage.GetItemValue("f_message05")
+		Call rtitem.AddNewLine(1)
+	'	Call rtitem.Appendtext(cadena(0))
+		Dim richText As NotesRichTextItem	
+		Set richText = docMessage.GetFirstItem("f_message05")	
+		Call rtitem.AppendRTItem(richText)
+	End If
+End Sub
+'++LotusScript Development Environment:2:2:Msg06:1:8
+Sub Msg06(db As NotesDataBase, docCour As NotesDocument, rtitem As NotesRichTextItem)	
+	Dim session As New notessession
+	typeform = docCour.f_TypeForm(0)
+	Set viewCurrent = db.GetView("v_FormsParams")
+	Set docMessage = viewCurrent.GetDocumentbyKey(typeform)
+	If Not docMessage Is Nothing Then
+	'	cadena = docMessage.GetItemValue("f_message06")
+		Call rtitem.AddNewLine(1)
+	'	Call rtitem.Appendtext(cadena(0))
+		Dim richText As NotesRichTextItem	
+		Set richText = docMessage.GetFirstItem("f_message06")	
+		Call rtitem.AppendRTItem(richText)
+	End If
+End Sub

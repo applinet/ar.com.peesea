@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8004968DB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="4b2" sequence="73" unid="E1194E3A8F9B92F7C1256B980051E977">
+<created><datetime dst="true">20020411T165441,83+02</datetime></created>
+<modified><datetime>20171029T102154,43-03</datetime></modified>
+<revised><datetime>20170307T090543,53-03</datetime></revised>
+<lastaccessed><datetime>20171029T102152,28-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102152,28-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name>CN=FRANCK NUWENDAM - E100441/OU=users/O=PSA</name><name>CN=ANGEL GARCIA PUJALTE - E168524/OU=users/O=PSA</name><name>CN=BERNARD ALLAINE - C010578/OU=users/O=PSA</name><name>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>start.gif</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+
+<item name="$ImageNames" sign="true"><text>start.gif</text></item>
+<item name="$ImagesColorize" sign="true"><number>1</number></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$Flags"><text>34CiQ</text></item></note>

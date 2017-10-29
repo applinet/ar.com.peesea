@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004968DB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="e92" sequence="14" unid="F202B1F6C829A9B2C1257E0E0036555C">
+<created><datetime dst="true">20150320T115327,96+02</datetime></created>
+<modified><datetime>20171029T102206,47-03</datetime></modified>
+<revised><datetime>20170307T090551,23-03</datetime></revised>
+<lastaccessed><datetime>20171029T102159,31-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102159,31-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+
+
+<item name="$TITLE" sign="true"><text>Forms_Libs_old2</text></item>
+<item name="$Comment" sign="true"><text>Pre v15.4</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$POID"><datetime>20170307T090551,23-03</datetime></item></note>

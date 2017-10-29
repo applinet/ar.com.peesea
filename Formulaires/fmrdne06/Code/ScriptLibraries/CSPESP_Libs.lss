@@ -1,0 +1,83 @@
+'++LotusScript Development Environment:2:5:(Options):0:72
+Option Public
+Option Declare
+
+Use "Forms_Libs"
+Use "LogEntry"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Function CSPESP_Export_GetDocumentLine(docProcessed As NotesDocument, dbParam As NotesDatabase, strLang As String) As String
+Declare Function CSPESP_Export_GetHeaders(strLang As String) As String
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+'++LotusScript Development Environment:2:1:CSPESP_Export_GetDocumentLine:1:8
+Function CSPESP_Export_GetDocumentLine(docProcessed As NotesDocument, dbParam As NotesDatabase, strLang As String) As String
+	
+	' Gestion d'erreurs	
+	On Error GoTo ErrorHandler
+	
+	Dim intIndex As Integer
+	Dim strLine As String, strTemp As String, strKey As string
+	Dim varTemp As Variant
+	Dim nameTemp As NotesName
+	Dim i As Integer
+	Dim LogEntry As LogEntry
+	
+	' Etat du formulaire (en français)
+	varTemp = Evaluate(|@Trim(@Right(f_EtatNoms;"_FR:"))|, docProcessed)
+	strLine = FormatForCSV(varTemp(0))
+	
+	' Etablissement
+	strLine = strLine + ";" + docProcessed.CSPESP_Etablissement(0)
+	
+	' Référence
+	strLine = strLine + ";" + docProcessed.f_Reference(0)
+	
+	'Type de Demande
+	strLine = strLine + ";" + docProcessed.CSPESP_TypeDeDem(0)
+	
+	' Demandeur
+	Set nameTemp = New NotesName(docProcessed.f_Demandeur(0))
+	strLine = strLine + ";" + FormatForCSV(nameTemp.Common)
+	
+	' Date d'arrivée dans l'état
+	strLine = strLine + ";" + Format(docProcessed.f_DateArriveeEtat(0), "dd/mm/yyyy")	
+	
+	' Date de création
+	strLine = strLine + ";" + Format(docProcessed.f_DateSortieEtatInit(0), "dd/mm/yyyy")
+
+	' Renvoi de la ligne	
+	CSPESP_Export_GetDocumentLine = strLine	
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+' Gestion d'erreurs
+ErrorHandler:
+	set LogEntry = New LogEntry
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+	Else
+		LogEntry.LogType = LOGLEVEL_EMERG%
+		LogEntry.SubName = "CSPESP_Export_GetDocumentLine"
+		LogEntry.Erl = Erl
+		LogEntry.Err = Err
+		LogEntry.Msg = Error$
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+	End If
+	Exit Function
+End Function
+
+
+'++LotusScript Development Environment:2:1:CSPESP_Export_GetHeaders:1:8
+Function CSPESP_Export_GetHeaders(strLang As String) As String
+	If strLang = "ES" Then
+		CSPESP_Export_GetHeaders = "Estado;Sitio;Referencia;Tipo de Demande;Demandante;Fecha el Estado;Fecha de Demanda"
+	Else
+		CSPESP_Export_GetHeaders = "Etat;Etablessiment;Référence;Type de Demande;Emis par;Date d'arrivée dans l'état;Emis le"
+	End If
+End Function
+

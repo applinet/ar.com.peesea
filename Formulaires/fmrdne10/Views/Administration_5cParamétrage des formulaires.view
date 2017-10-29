@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800498301'>
+<noteinfo noteid='58e' unid='7E4F58B6384F018FC1256BC30054F022' sequence='34'>
+<created><datetime dst='true'>20020524T172744,98+02</datetime></created>
+<modified><datetime>20171029T102302,47-03</datetime></modified>
+<revised><datetime>20170606T011409,47-03</datetime></revised>
+<lastaccessed><datetime>20171029T102259,84-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102259,84-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormatNote' summary='true' sign='true'>
+<rawitemdata type='4'>
+AQBqMVlVc0hfJx2JMgBXayXB
+</rawitemdata></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+dAACABgABgBmX1R5cGUFAAYAZl9UeXBlAwAFACIAHQADAAYACQAEAGZfVHlwZSRDb25mbGljdCRS
+RUYABAAEAAAAJgAFAAsAZl9UeXBlT2JqZXQAAQAKAEZvcm1QYXJhbXMKAgMABwAOAAgACUwxUzJT
+M1M=
+</formula></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EwABAABEgGYAAAAGAGZfVHlwZQ==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAcACUEAAFZDAQAGAAoAGgAAAFAAAQAACgAAAAAAAAAAAAICAAAAZl9UeXBlRm9ybXVsYWly
+ZRoAAgAYAAYAZl9UeXBlBQAGAGZfVHlwZQMAJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAEC
+AAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQgAA
+AAAAAQD///8ABQD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Paramètres des formulaires</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAAAAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29yaV96ZQAB
+AE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUAAACdAQAA
+DgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0ZvcndhcmQE
+AAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4AAAAFAAAA
+nQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcgAGAD58vv9YAAAAAQAeAJ8BAAARAAAAAAAA
+ACBDcoJlciBwYXJhbYp0cmVzAjAAAAAiAAIA6AMAAAAAAAABAAwAbV9Gb3JtUGFyYW1z7QIDAAcA
+DAAFAAkwUzBFAL7/gAAAAAEAYwCfQQAAEAAoAAAAAABNb2RpZmllciBQcm9maWxlMgAAACQAAgAN
+GAAAAAAAAAEADgBtX1Byb2ZpbGVQYXJhbe0CAwAHAAwABQAJMFMwRQAoAAAAGgDnAAEADABbQWRt
+aW5Gb3Jtc10LAgMABwAMAAUACTBTMEUA
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZQABAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcnQGAD58vv9YAAAAAQAeAJ8BAAAR
+AAAAAAAAACBDcoJlciBwYXJhbYp0cmVz/zAAAAAiAAIA6AMAAAAAAAABAAwAbV9Gb3JtUGFyYW1z
+7QIDAAcADAAFAAkwUzBFAL7/gAAAAAEAYwCfQQAAEAAoAAAAAABNb2RpZmllciBQcm9maWxlMgAA
+ACQAAgANGAAAAAAAAAEADgBtX1Byb2ZpbGVQYXJhbe0CAwAHAAwABQAJMFMwRQAoAAAAGgDnAAEA
+DABbQWRtaW5Gb3Jtc10LAgMABwAMAAUACTBTMEUA
+</rawitemdata></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$TITLE' sign='true'><text>Administration\Paramétrage des formulaires|v_FormsParams</text></item>
+<item name='$DesignerVersion' sign='true'><text>7</text></item></note>
+

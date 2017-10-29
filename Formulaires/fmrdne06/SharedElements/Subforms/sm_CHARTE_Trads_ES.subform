@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='f6e' unid='BB7E49C906E28178C1257DF100403DC2' sequence='28'>
+<created><datetime dst='true'>20150219T134141,14+02</datetime></created>
+<modified><datetime>20171029T102001,00-03</datetime></modified>
+<revised><datetime>20170911T114755,27-03</datetime></revised>
+<lastaccessed><datetime>20171029T101955,06-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101955,06-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAAgMAAAAAAAAAAAAAAAAAAAAAAADc/xQD+f8CAyBOAAAAAAAAAAB2YXIgbF9D
+SEFSVEVfVGl0bGVWYWxpZFNlY3QxID0gIkVzcGVyYW5kbyByZXNwdWVzdGEgZGVsIENvbGFib3Jh
+ZG9yIjsNdmFyIGxfQ0hBUlRFX1RpdGxlVmFsaWRTZWN0MiA9ICJFc3BlcmFuZG8gcmVzcHVlc3Rh
+IGplcqBycXVpY2EiOw12YXIgbF9DSEFSVEVfVGl0bGVWYWxpZFNlY3QzID0gIkVzcGVyYW5kbyB2
+YWxpZGFjaaJuIGRlIGdlc3Rpom4ggnRpY2EiOw12YXIgbF9DSEFSVEVfVGl0bGVWYWxpZFNlY3Q0
+ID0gIkVzcGVyYW5kbyBjb25maXJtYWNpom4gZGUgSFJCUCI7DXZhciBsX0NIQVJURV9Bbm5lZSA9
+ICJBpG8iOw12YXIgbF9DSEFSVEVfUGF5cyA9ICJQYaFzIjsNdmFyIGxfQ0hBUlRFX0NvbGxhYm9y
+YXRldXIgPSAiQ29sYWJvcmFkb3IiOw12YXIgbF9DSEFSVEVfSGllcmFyY2hpcXVlID0gIkplcqBy
+cXVpY28iOw12YXIgbF9DSEFSVEVfSFJCUCA9ICJIUkJQIjsNdmFyIGxfQ0hBUlRFX1Jlc3BFdGgg
+PSAiUmVzcG9uc2FibGUgkHRpY28iOw12YXIgbF9DSEFSVEVfUGFyYWdUaXQgPSAiVKF0dWxvIGRl
+bCBQoHJyYWZvIjsNdmFyIGxfQ0hBUlRFX1BhcmFnQ29udCA9ICJDb250ZW5pZG8gZGVsIFCgcnJh
+Zm8iOw12YXIgbF9DSEFSVEVfRGVtQ29tID0gIkNvbWVudGFyaW9zIjsNdmFyIGxfQ0hBUlRFX0hp
+ZXJhcmNoaXF1ZV9WYWxpZENvbSA9ICJQbGFuIGRlIEFjY2mibiI7DXZhciBsX0NIQVJURV9SZXNw
+RXRoX1ZhbGlkQ29tID0gIlBsYW4gZGUgQWNjaaJuIjsNDXZhciBsX0NIQVJURV9UaXRsZV92U3Vp
+dnJlID0gIkNBUlRBIJBUSUNBIjsNAF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>sm_CHARTE_Trads_ES</text><text>sm_CHARTE_Trads_ES</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_CHARTE_Trads_FR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQEADhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEA3QYAAIX/hf8aAAEAAghzbV9D
+SEFSVEVfVHJhZHNfRVPSCAEA/wAAAN4GAACF/w==
+</rawitemdata></item></note>
+

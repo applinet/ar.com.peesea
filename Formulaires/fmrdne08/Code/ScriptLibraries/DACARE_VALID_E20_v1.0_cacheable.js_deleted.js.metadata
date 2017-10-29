@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004968DB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="e12" sequence="21" unid="546727799F7BE5DEC1257C8D0049789A">
+<created><datetime dst="true">20140228T152230,02+02</datetime></created>
+<modified><datetime>20171029T102205,89-03</datetime></modified>
+<revised><datetime>20170307T090550,61-03</datetime></revised>
+<lastaccessed><datetime>20171029T102158,95-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102158,95-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$TITLE" sign="true"><text>DACARE_VALID_E20_v1.0_cacheable.js_deleted</text></item>
+<item name="$Comment" sign="true"><text>Deleted for v15.4</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$POID"><datetime>20170307T090550,61-03</datetime></item></note>

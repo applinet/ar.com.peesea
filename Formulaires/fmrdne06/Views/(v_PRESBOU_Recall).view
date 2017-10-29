@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='d7e' unid='682682DE65EFFF1AC1257D5B0027A68C' sequence='25'>
+<created><datetime dst='true'>20140922T091305,40+02</datetime></created>
+<modified><datetime>20171029T101958,94-03</datetime></modified>
+<revised><datetime>20170911T114753,99-03</datetime></revised>
+<lastaccessed><datetime>20171029T101953,45-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101953,45-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_PRESBOU_Recall)|v_PRESBOU_Recall</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+OAECACAACgBmX1R5cGVGb3JtBQAKAGZfVHlwZUZvcm0DAAIADAACACQypAADAAIADgACACQzkABW
+AQMABQAuACkABQAKAAIAAgAJAAQAZl9UeXBlRm9ybSQyJDMkQ29uZmxpY3QkUkVGAAQABAAAAJIA
+BQAKAGZfVHlwZUZvcm1iAQEABwBQUkVTQk9VAAoCBAAFABIARm9ybXNfVGVtcERvY3VtZW50AQAB
+ADEACwIEABwCBQAGAGZfRXRhdAAAAAAAAAAAEEAKAgQABQAGAGZfRXRhdAAAAAAAAAAAFEAKAgQA
+HQIEABwCBQAJACRDb25mbGljdABoAR4BHAIDAAcAOAAxAAlMMVM2UzdTOVMxMFMxMlMxM1MxNVMx
+NlMxOVMyMFMyMlMyM1MyNVMyNlMyOVMzMFMA
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+KQADAABEAGYAAAAKAIBmAAoAAgCAZgAMAAIAZl9UeXBlRm9ybSQyJDM=
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAUAiAAAAFZDAQAKAAQAIgAAADMABQAOCIIAAAAAAAAAAAICAAAAVkMBAAIAFQAOAAAAdQAG
+AA4IggAAAAAAAAAAAgIAAABWQwEAAgAQABwAAADQAAcADgiAAAAAAAAAAAACAgAAAGZfVHlwZUZv
+cm1Gb3JtIgACACAACgBmX1R5cGVGb3JtBQAKAGZfVHlwZUZvcm0DACQyRGVybmmKcmUgbW9kaWZp
+Y2F0aW9uDgACAAwAAgAkMqQAAwAkM0RvY3VtZW50VW5pcXVlSUQcAAIADgACACQzkABWAQMABwAM
+AAUACTBTMEUAJgABAAAAAQEACQEAAAoBAQ4KAAAvAK0rAQABAAEAAAAAAAAAAABXQwEACggAAAAA
+AAAAAAAAAAAAAAAAAQAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAoIAAAAAAAAAAAAAAAAAAAA
+AAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAKCAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//
+AAAAAAAAAAAAAAAAAABCABAAAAABAP///wABAPf39wABAAAAAAAAAAAAAAAAAAEA////AAEA////
+AAAAAQAAAAAAAQCAgIAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Tahoma</text><text>6</text><text>38</text><text>Tahoma</text><text>7</text><text
+>38</text><text>Tahoma</text></textlist></item>
+<item name='$Comment' sign='true'><text>Vue des documents pour la relance des valideurs</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8004968DB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="cce" sequence="37" unid="44F548F7F374C018C1257862002AB3C0">
+<created><datetime dst="true">20110329T094625,28+02</datetime></created>
+<modified><datetime>20171029T102204,31-03</datetime></modified>
+<revised><datetime>20170307T090548,65-03</datetime></revised>
+<lastaccessed><datetime>20171029T102157,99-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102157,99-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>puceBleu.gif</text></item>
+<item name="$TITLE" sign="true"><textlist><text>widgets\pucebleu_cacheable.gif</text><text>pucebleu_cacheable.gif</text></textlist></item>
+<item name="$DesignerVersion" sign="true"><text>7</text></item></note>

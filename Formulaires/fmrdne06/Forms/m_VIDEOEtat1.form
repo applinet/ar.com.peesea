@@ -1,0 +1,644 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='996' unid='7D279B85B72246C6C125750C0035037F' sequence='84'>
+<created><datetime dst='true'>20081125T113903,03+02</datetime></created>
+<modified><datetime>20171029T101954,14-03</datetime></modified>
+<revised><datetime>20170911T114744,33-03</datetime></revised>
+<lastaccessed><datetime>20171029T101950,68-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101950,68-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatSoumis' summary='false' sign='true'><number>0</number></item>
+<item name='f_EtatRefus' summary='false' sign='true'><number>0</number></item>
+<item name='f_ProchainEtat' summary='false' sign='true'><number>0</number></item>
+<item name='DateCreate' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='TID_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='SSV_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RPP_Date' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RPP_Dateini' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RPP_Datefin' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RPP_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='f_Datehoy' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='f_DateSoumetre' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DIE_Espbas' summary='false' sign='true'><number>0</number></item>
+<item name='DIE_Db2' summary='false' sign='true'><number>0</number></item>
+<item name='DIE_Nomad' summary='false' sign='true'><number>0</number></item>
+<item name='DIE_Vivant' summary='false' sign='true'><number>0</number></item>
+<item name='DIE_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='CUA_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='CUA_DateapprobEtat2' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='CUA_DateapprobEtat3' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='VIDEO_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$NoBackgroundOverride' sign='true'><text>1</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIEAAAAIgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$SubForms' sign='true'><textlist><text>sm_VIDEOLngsDispos</text><text
+>sm_ToutFormToutEtat</text><text>sm_ToutFormToutEtat</text><text> </text><text
+>sm_Anulee</text><text>sm_Reengager</text><text>sm_EnTeteVisu</text><text
+>sm_VIDEOSections</text><text>sm_CalendrierCSS</text><text>sm_Calendar_</text></textlist></item>
+<item name='$SubForm_RepIDs' sign='true'><textlist><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text><text>0000000000000000</text></textlist></item>
+<item name='$Flags'><text>CD</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$$Script_O' sign='true'>
+<rawitemdata type='14'>
+AQAAAkxTT0IDABQIZnIAAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AAAA//9U
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
+AAAAAABXMzJJvgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAwCMAAAAAAD//wkAKgAyADMANAA4AEQANAAxADQAAABsAAMATgBFAFcAAACAAAYARABFAEwA
+RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
+AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAABAsefRBAAHAAAAAAAdAAAC
+AAAACgAAAA==
+</rawitemdata></item>
+<item name='f_TypeForm' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='f_EtatIcone' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EtatNoms' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_TypeEtat' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_TitresForm' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_AuteursAdmin' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_LecteursPotentiels' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_AuteursPotentiels' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EstModele' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursMembresGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowGroupes' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowIndividus' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='F_ENREGDATE' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='F_ENREGACTEUR' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='F_ADETRUIRE' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_CompterUtilisation' summary='false' sign='true'><number>0</number></item>
+<item name='f_EtatTerminal' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='server_name' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='HTTP_Referer' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='URL' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_BalFon' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Path_Parametre' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_MailAnnul' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Annule' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='IDDoc' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Reengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='URLReengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='AutorReengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeurAnnulation' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeurSuppressionPackage' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_DemandeurSuppressionPackage' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='IDDemandeur' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='CheminPartageVideo' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='URL_Video' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VIDEO_TitreVideo' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VIDEO_Description' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VIDEO_DureeIntervention' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VIDEO_NombreSequences' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VIDEO_TitreCourtVideo' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VIDEO_DateDebutDiffusion' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='VIDEO_HeureDebutDiffusion' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='VIDEO_DateFinDiffusion' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='VIDEO_ResponsableDiffusion' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat1ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat1ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_BalFon_Etat1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat1Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat1Commentaires' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat3ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat3ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_BalFon_Etat3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Etat1NbrSoumission' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Reflex_EtatInit' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ValideurNiveau1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat3Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat4ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat4ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_BalFon_Etat4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat4Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat4Commentaires' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Reflex_EtatVerrouillage' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat5ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat5ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_BalFon_Etat5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat5Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat6ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat6ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_BalFon_Etat6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Reflex_EtatDeploiement' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat6Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat7Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat8Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat7ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat8ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat7ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat7ActeursIndividu_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_BalFon_Etat7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_BalFon_Etat8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Reflex_EtatSuppression' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$PublicAccess' sign='true'><text>1</text></item>
+<item name='$TITLE'><text>m_VIDEOEtat1</text></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwBAAAAAQABAAAAAwAAAAAAAAABAAAYCAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZQABAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcgAGAD58
+</rawitemdata></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwBAAAAAQABAAAAAwAAAAAAAAABAAAYCAACAHn/bAABAP///wABAAAAAAABAAAAAAABAAAgYAAA
+ADEAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUA
+AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
+AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
+BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
+AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIABgA+fA==
+</rawitemdata></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQA/BQAAAAAAAAAAAAAAAAAAAAAAADc/w4V+f/8FCBOAAAAAAAAAAB2YXIgc2lf
+ZW52b3llID0gZmFsc2UNDWZ1bmN0aW9uIFNvdW1ldHRyZSgpIHsNCS8vY29udHKTbGUgdmFsaWRp
+dIINDWlmIChzaV9lbnZveWUpe3JldHVybiBmYWxzZX0NCQ0JLypDb250cpNsZXMgdmFsaWRpdIIg
+RWxlbWVudHMgZGUgbGEgZGVtYW5kZSovDQkgICAgaWYgKGN1ckZvcm0oKS5WSURFT19UaXRyZVZp
+ZGVvLnZhbHVlLnJlcGxhY2UoLyAvZ2ksJycpID09IiIpIHsNICAgICAgICAgICAgICBhbGVydCAo
+bF9FcnJWSURFT19UaXRyZVZpZGVvKTsNICAgICAgICAgICAgICBjdXJGb3JtKCkuVklERU9fVGl0
+cmVWaWRlby5mb2N1cygpOyANICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7DSAgICAgfQ0gICAg
+IA0gICAgIGlmIChjdXJGb3JtKCkuVklERU9fRGVzY3JpcHRpb24udmFsdWUucmVwbGFjZSgvIC9n
+aSwnJykgPT0iIikgew0gICAgICAgICAgICAgIGFsZXJ0IChsX0VyclZJREVPX0Rlc2NyaXB0aW9u
+KTsNICAgICAgICAgICAgICBjdXJGb3JtKCkuVklERU9fRGVzY3JpcHRpb24uZm9jdXMoKTsgDSAg
+ICAgICAgICAgICAgcmV0dXJuIGZhbHNlOw0gICAgIH0NDSAgICAgaWYgKGN1ckZvcm0oKS5WSURF
+T19UaXRyZUNvdXJ0VmlkZW8udmFsdWUucmVwbGFjZSgvIC9naSwnJykgPT0iIikgew0gICAgICAg
+ICAgICAgIGFsZXJ0IChsX0VyclZJREVPX1RpdHJlQ291cnRWaWRlbyk7DSAgICAgICAgICAgICAg
+Y3VyRm9ybSgpLlZJREVPX1RpdHJlQ291cnRWaWRlby5mb2N1cygpOyANICAgICAgICAgICAgICBy
+ZXR1cm4gZmFsc2U7DSAgICAgfQ0gICAgIA0gICAgIC8vIFaCcmlmaWNhdGlvbiBkdSBub24gcoJm
+gnJlbmNlbWVudCAgZHUgdGl0cmUgY291cnQgZGUgbGEgdmlkgm8NICAgICB2YXIgdHJvdXZlID0g
+ZmFsc2U7DSAgICAgdmFyIHRhYmxlVVJMc1ZpZGVvcyA9IGxpc3RlVVJMc1ZpZGVvcy5zcGxpdCgi
+OyAiKTsNICAgICBmb3IodmFyIGk9MDtpPHRhYmxlVVJMc1ZpZGVvcy5sZW5ndGg7aSsrKXsNICAg
+ICAJaWYoY3VyRm9ybSgpLlZJREVPX1RpdHJlQ291cnRWaWRlby52YWx1ZS5yZXBsYWNlKC8gL2dp
+LCcnKS50b0xvd2VyQ2FzZSgpPT10YWJsZVVSTHNWaWRlb3NbaV0udG9Mb3dlckNhc2UoKSl7DSAg
+ICAgCQl0cm91dmUgPSB0cnVlOw0gICAgIAkJYnJlYWs7DSAgICAgCX0NICAgICB9DSAgICAgaWYo
+dHJvdXZlKXsNICAgICAJYWxlcnQobF9FcnJWSURFT19UaXRlQ291cnRWaWRlb0V4aXN0ZSk7DSAg
+ICAgCWN1ckZvcm0oKS5WSURFT19UaXRyZUNvdXJ0VmlkZW8uZm9jdXMoKTsNICAgICAJcmV0dXJu
+IGZhbHNlOw0gICAgIH0NICAgICANDSAgICAgaWYgKGN1ckZvcm0oKS5WSURFT19EYXRlRGVidXRE
+aWZmdXNpb24udmFsdWUucmVwbGFjZSgvIC9naSwnJykgPT0iIikgew0gICAgICAgICAgICAgIGFs
+ZXJ0IChsX0VyclZJREVPX0RhdGVEZWJ1dERpZmZ1c2lvbik7DSAgICAgICAgICAgICAgY3VyRm9y
+bSgpLlZJREVPX0RhdGVEZWJ1dERpZmZ1c2lvbi5mb2N1cygpOyANICAgICAgICAgICAgICByZXR1
+cm4gZmFsc2U7DSAgICAgfQ0gICAgIA0gICAgIGlmIChjdXJGb3JtKCkuVklERU9fSGV1cmVEZWJ1
+dERpZmZ1c2lvbi52YWx1ZS5yZXBsYWNlKC8gL2dpLCcnKSA9PSIiKSB7DSAgICAgICAgICAgICAg
+YWxlcnQgKGxfRXJyVklERU9fSGV1cmVEZWJ1dERpZmZ1c2lvbik7DSAgICAgICAgICAgICAgY3Vy
+Rm9ybSgpLlZJREVPX0hldXJlRGVidXREaWZmdXNpb24uZm9jdXMoKTsgDSAgICAgICAgICAgICAg
+cmV0dXJuIGZhbHNlOw0gICAgIH0NICAgICANICAgICAgaWYgKGN1ckZvcm0oKS5WSURFT19EYXRl
+RmluRGlmZnVzaW9uLnZhbHVlLnJlcGxhY2UoLyAvZ2ksJycpID09IiIpIHsNICAgICAgICAgICAg
+ICBhbGVydCAobF9FcnJWSURFT19EYXRlRmluRGlmZnVzaW9uKTsNICAgICAgICAgICAgICBjdXJG
+b3JtKCkuVklERU9fRGF0ZUZpbkRpZmZ1c2lvbi5mb2N1cygpOyANICAgICAgICAgICAgICByZXR1
+cm4gZmFsc2U7DSAgICAgfQ0gICAgIA0gICAgIHZhciBEZWJ1dERpZmZ1c2lvbkFubmVlID0gY3Vy
+Rm9ybSgpLlZJREVPX0RhdGVEZWJ1dERpZmZ1c2lvbi52YWx1ZS5zdWJzdHJpbmcoNiwxMCk7DSAg
+ICAgdmFyIERlYnV0RGlmZnVzaW9uTW9pcyA9IGN1ckZvcm0oKS5WSURFT19EYXRlRGVidXREaWZm
+dXNpb24udmFsdWUuc3Vic3RyaW5nKDMsNSk7DSAgICAgdmFyIERlYnV0RGlmZnVzaW9uSm91ciA9
+IGN1ckZvcm0oKS5WSURFT19EYXRlRGVidXREaWZmdXNpb24udmFsdWUuc3Vic3RyaW5nKDAsMik7
+DSAgICAgdmFyIEZpbkRpZmZ1c2lvbkFubmVlID0gY3VyRm9ybSgpLlZJREVPX0RhdGVGaW5EaWZm
+dXNpb24udmFsdWUuc3Vic3RyaW5nKDYsMTApOw0gICAgIHZhciBGaW5EaWZmdXNpb25Nb2lzID0g
+Y3VyRm9ybSgpLlZJREVPX0RhdGVGaW5EaWZmdXNpb24udmFsdWUuc3Vic3RyaW5nKDMsNSk7DSAg
+ICAgdmFyIEZpbkRpZmZ1c2lvbkpvdXIgPSBjdXJGb3JtKCkuVklERU9fRGF0ZUZpbkRpZmZ1c2lv
+bi52YWx1ZS5zdWJzdHJpbmcoMCwyKTsNICAgICANICAgICB2YXIgRGF0ZURlYnV0RGlmZnVzaW9u
+ID0gbmV3IERhdGUoRGVidXREaWZmdXNpb25Bbm5lZSxEZWJ1dERpZmZ1c2lvbk1vaXMtMSwgRGVi
+dXREaWZmdXNpb25Kb3VyKTsNICAgICB2YXIgRGF0ZUZpbkRpZmZ1c2lvbiA9IG5ldyBEYXRlKEZp
+bkRpZmZ1c2lvbkFubmVlLCBGaW5EaWZmdXNpb25Nb2lzLTEsIEZpbkRpZmZ1c2lvbkpvdXIpOw0g
+ICAgIA0gICAgIGlmKERhdGVGaW5EaWZmdXNpb24uZ2V0VGltZSgpIDwgRGF0ZURlYnV0RGlmZnVz
+aW9uLmdldFRpbWUoKSl7DSAgICAgCWFsZXJ0KGxfRXJyVklERU9fRGF0ZXNEaWZmdXNpb24pOw0g
+ICAgIAlyZXR1cm4gZmFsc2U7DSAgICAgfQ0JLypGaW4gQ29udHKTbGVzIHZhbGlkaXSCIEVsZW1l
+bnRzIGRlIGxhIGRlbWFuZGUqLw0JDSAgZWxlZ2lkbz1mYWxzZTsNICBmb3IgKGkgPSAwOyBpIDwg
+Y3VyRm9ybSgpLmZfRXRhdDFBdmlzLmxlbmd0aDsgaSArKykgew0gIAlpZiAoY3VyRm9ybSgpLmZf
+RXRhdDFBdmlzW2ldLmNoZWNrZWQpIHsNICAgICAJaW5kID0gaTsNICAgIAkJZWxlZ2lkbyA9IHRy
+dWU7DSAgCX0NICB9DSAgaWYgKGVsZWdpZG8gPT0gZmFsc2UpICB7DSAgCWFsZXJ0IChsX0VyckV0
+YXQxQXZpcyk7DSAgCWN1ckZvcm0oKS5mX0V0YXQxQXZpc1swXS5mb2N1cygpOyANICAgCXJldHVy
+biBmYWxzZTsgDSAgfQ0gDSBpZiAoY3VyRm9ybSgpLmZfRXRhdDFDb21tZW50YWlyZXMudmFsdWUg
+PT0gIiIgJiYgaW5kID09IDEgKSB7DSAJYWxlcnQgKGxfRXJyRXRhdDFDb21tZW50YWlyZXMpOw0g
+ICAgIGN1ckZvcm0oKS5mX0V0YXQxQ29tbWVudGFpcmVzLmZvY3VzKCk7IA0gICAgIHJldHVybiBm
+YWxzZTsNICB9DSAgICAgDQlzaV9lbnZveWUgPSB0cnVlDQljb25maXJtZXJFdEV4ZWN1dGVyKCdT
+b3VtZXR0cmUnLCBsX0NvbmZTb3VtZXR0cmUpOw0vKglpZiAoY29uZmlybShsX0NvbmZTb3VtZXR0
+cmUpKSB7DQkgICAgICAgICAgLy9DcoJhdGlvbiBkdSBygnBlcnRvaXJlIHN1ciBsZSBzZXJ2ZXVy
+ICBzaSAxinJlIHNvdW1pc3Npb24NCQlpZihFdGF0MU5iclNvdW1pc3Npb24gPT0gIjEiKXsNCQkJ
+dmFyIHhocl9vYmplY3QgPSBudWxsOyANCQkJaWYod2luZG93LlhNTEh0dHBSZXF1ZXN0KSAvLyBG
+aXJlZm94IA0JCQkJICAgeGhyX29iamVjdCA9IG5ldyBYTUxIdHRwUmVxdWVzdCgpOyANCQkJZWxz
+ZSBpZih3aW5kb3cuQWN0aXZlWE9iamVjdCkgLy8gSW50ZXJuZXQgRXhwbG9yZXIgDQkJCQkJCXho
+cl9vYmplY3QgPSBuZXcgQWN0aXZlWE9iamVjdCgiTWljcm9zb2Z0LlhNTEhUVFAiKTsgDQkJCQkJ
+ZWxzZSB7IC8vIFhNTEh0dHBSZXF1ZXN0IG5vbiBzdXBwb3J0giBwYXIgbGUgbmF2aWdhdGV1ciAN
+CQkJCQkJYWxlcnQoIlZvdHJlIG5hdmlnYXRldXIgbmUgc3VwcG9ydGUgcGFzIGxlcyBvYmpldHMg
+WE1MSFRUUFJlcXVlc3QuLi4iKTsNCQkJCQkJcmV0dXJuIGZhbHNlOyAJICAgDQkJCQkJfSANCQkJ
+dmFyIHVybD1DaGVtaW5SZWZsZXggKyAiL3B2M3dlYnNlcnZpY2VzL3NlcnZpY2VzL1ZpZGVvL1Zp
+ZGVvU2VydmljZS5hc214L0luaXRpYWxpc2VyP2NvZGU9IitjdXJGb3JtKCkuVklERU9fVGl0cmVD
+b3VydFZpZGVvLnZhbHVlKyImcmVzcG1haj0iK0lEVXRpbGlzYXRldXI7DQkJCS8vYWxlcnQodXJs
+KTsNCQkJeGhyX29iamVjdC5vcGVuKCJHRVQiLCB1cmwsIGZhbHNlKTsgDQkJCXhocl9vYmplY3Qu
+c2VuZChudWxsKTsgDQkJCWlmKHhocl9vYmplY3QucmVhZHlTdGF0ZSA9PSA0KXsNCQkJCXZhciBy
+ZXRvdXIgPSB4aHJfb2JqZWN0LnJlc3BvbnNlVGV4dDsNCQkgICAgIH1lbHNle3JldHVybiBmYWxz
+ZTt9DQkJICAgIC8vIGFsZXJ0KHJldG91cik7DQkJICAgICB9DQkNCQlleGVjdXRlcigiU291bWV0
+dHJlIikNfQ0JZWxzZXsNCQlzaV9lbnZveWUgPSBmYWxzZQ0JfQ0qLw19DQ1mdW5jdGlvbiBTYXV2
+ZXIoKSB7DQl2YXIgdGl0dWxvDQ0JLy9jb250cpNsZSB2YWxpZGl0gg0JaWYgKGN1ckZvcm0oKS5m
+X1RpdHJlLnZhbHVlPT0iIikgew0JCXRpdHVsbyA9IHByb21wdChsX1Byb21wdFRpdHJlRXRhdElu
+aXRpYWwsICcnKQ0NCQlpZih0aXR1bG8gJiYgdGl0dWxvLnJlcGxhY2UoLyAvZ2ksICcnKSAhPSAn
+Jyl7DQkJY3VyRm9ybSgpLmZfVGl0cmUudmFsdWUgPSB0aXR1bG8NCQl9DQkJZWxzZXsNDQkJcmV0
+dXJuIGZhbHNlDQkJfQ0JCS8vZmluIGNvbnRyk2xlIGRlIHZhbGlkaXSCCQkNCQkvL29uIGVzdCBh
+cnJpdoIgaWNpIGRvbmMgb24gc291bWV0DQl9DQkJZXhlY3V0ZXIoJ1NhdXZlcicpDX0NDWZ1bmN0
+aW9uIFNhdXZlck1vZGVsZSgpIHsNCXZhciB0aXR1bG8NDQkvL2NvbnRyk2xlIHZhbGlkaXSCDQlp
+ZiAoY3VyRm9ybSgpLmZfVGl0cmUudmFsdWU9PSIiKQl7DQkJdGl0dWxvID0gcHJvbXB0KGxfUHJv
+bXB0VGl0cmVNb2RlbGUsICcnKTsNCQlpZih0aXR1bG8gJiYgdGl0dWxvLnJlcGxhY2UoLyAvZ2ks
+ICcnKSAhPSAnJyl7DQkJY3VyRm9ybSgpLmZfVGl0cmUudmFsdWUgPSB0aXR1bG8NCQl9DQkJZWxz
+ZXsNCQlyZXR1cm4gZmFsc2UNCQl9DQl9DQkvL2ZpbiBjb250cpNsZSBkZSB2YWxpZGl0ggkJDQkv
+L29uIGVzdCBhcnJpdoIgaWNpIGRvbmMgb24gc291bWV0DQljb25maXJtZXJFdEV4ZWN1dGVyKCdT
+YXV2ZXJNb2RlbGUnLCBsX0NvbmZTYXV2ZXJNb2RlbGUpDX0NDWZ1bmN0aW9uIFN1cHByZXNzaW9u
+KCkgew0JY29uZmlybWVyRXRFeGVjdXRlcignU3VwcHJpbWVyJywgbF9Db25mU3VwcHJpbWVyKQ19
+DQ1mdW5jdGlvbiBEZXRydWlyZSgpIHsNCS8vY29udHKTbGUgdmFsaWRpdIINCWNvbmZpcm1lckV0
+RXhlY3V0ZXIoJ0RldHJ1aXJlJywgbF9Db25mRGV0cnVpcmUpDX0NDWZ1bmN0aW9uIEFubnVsYXRp
+b24oKSB7DQljb25maXJtZXJFdEV4ZWN1dGVyKCdBbm51bGF0aW9uJywgbF9Db25mQW5udWxhdGlv
+bikNfQ0AAF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=\"0\" marginwidth=\"0\" marginheight=\"0\" leftmargin=\"0\""</formula></item>
+<item name='$WEBQueryOpen' sign='true'><formula>@SetHTTPHeader("Cache-Control";"no-store")</formula></item>
+<item name='$WEBQuerySave' sign='true'><formula>@If(
+	f_ActionAFaire="UtiliserModele";@Command([Compose];Form);
+
+	f_ActionAFaire="Supprimer";@Command( [ToolsRunMacro] ;"(VIDEO_Delete)");
+
+	f_ActionAFaire = "Soumettre" &amp; Etat1NbrSoumission="1" &amp; f_Etat1Avis = "1";@Do(	@Command([ToolsRunMacro];"(VIDEO_ReflexInitialiser)");
+																																		@Command([ToolsRunMacro];"(VIDEO-Etat1ActionsLSBis)"));
+	@Command([ToolsRunMacro];"(VIDEO-Etat1ActionsLS)")
+)</formula></item>
+<item name='$Fields'><textlist><text>Reflex_EtatSuppression</text><text>f_BalFon_Etat8</text><text
+>f_BalFon_Etat7</text><text>f_Etat7ActeursIndividu_1</text><text>f_Etat7ActeursIndividu</text><text
+>f_Etat8ActeursGroupe</text><text>f_Etat7ActeursGroupe</text><text>f_Etat8Avis</text><text
+>f_Etat7Avis</text><text>f_Etat6Avis</text><text>Reflex_EtatDeploiement</text><text
+>f_BalFon_Etat6</text><text>f_Etat6ActeursIndividu</text><text>f_Etat6ActeursGroupe</text><text
+>f_Etat5Avis</text><text>f_BalFon_Etat5</text><text>f_Etat5ActeursIndividu</text><text
+>f_Etat5ActeursGroupe</text><text>Reflex_EtatVerrouillage</text><text>f_Etat4Commentaires</text><text
+>f_Etat4Avis</text><text>f_BalFon_Etat4</text><text>f_Etat4ActeursIndividu</text><text
+>f_Etat4ActeursGroupe</text><text>f_Etat3Avis</text><text>f_ValideurNiveau1</text><text
+>Reflex_EtatInit</text><text>Etat1NbrSoumission</text><text>f_BalFon_Etat3</text><text
+>f_Etat3ActeursIndividu</text><text>f_Etat3ActeursGroupe</text><text>f_Etat1Commentaires</text><text
+>f_Etat1Avis</text><text>f_BalFon_Etat1</text><text>f_Etat1ActeursGroupe</text><text
+>f_Etat1ActeursIndividu</text><text>VIDEO_ResponsableDiffusion</text><text
+>VIDEO_DateFinDiffusion</text><text>VIDEO_HeureDebutDiffusion</text><text
+>VIDEO_DateDebutDiffusion</text><text>VIDEO_TitreCourtVideo</text><text>VIDEO_NombreSequences</text><text
+>VIDEO_DureeIntervention</text><text>VIDEO_Description</text><text>VIDEO_TitreVideo</text><text
+>URL_Video</text><text>CheminPartageVideo</text><text>IDDemandeur</text><text
+>f_DemandeurSuppressionPackage</text><text>f_ActeurSuppressionPackage</text><text
+>f_ActeurAnnulation</text><text>AutorReengager</text><text>URLReengager</text><text
+>Reengager</text><text>IDDoc</text><text>Annule</text><text>f_MailAnnul</text><text
+>f_Path_Parametre</text><text>f_BalFon</text><text>URL</text><text>HTTP_Referer</text><text
+>Server_Name</text><text>f_EtatTerminal</text><text>f_CompterUtilisation</text><text
+>f_ADetruire</text><text>f_EnregActeur</text><text>f_EnregDate</text><text
+>f_ActeursWorkflowIndividus</text><text>f_ActeursWorkflowGroupes</text><text
+>f_ActeursMembresGroupe</text><text>f_ActeursGroupe</text><text>f_ActeursIndividu</text><text
+>f_EstModele</text><text>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text
+>f_AuteursAdmin</text><text>f_TitresForm</text><text>f_TypeEtat</text><text
+>f_EtatNoms</text><text>f_EtatIcone</text><text>f_Etat</text><text>f_TypeForm</text></textlist></item>
+<item name='$WindowTitle' sign='true'><formula>@Trim(@Right(f_TitresForm;"_FR:"))</formula></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_VIDEOEtat1</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gv9GAAEAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAACUAKYwAwAAAAEASFRNTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AQAECIECgv9aAAIAAAAAAAAAAACgBQAAoAUIANACoAVwCEALEA7gELATgBYAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAgQAAAACVhKAFCgCgBQoAAABkAAEAAAAEAAAAgwQCAIX/CAABAAAK3QYAAIr/
+/v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/0AAgAABBQYwAgAIAAAAAAIBAAIIEgAAAAAAAAAKAAAA
+AAASAAAAEAABAAUAVklERU8AAwBmX1R5cGVGb3Jt3gYAAIr/3QYAAIX/hf8IAAUABAnSCAEAAAD/
+AN4GAACF/4ECgv9aAAMAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAgQAAAACVhwAAAAAAAAAAAAAAAAEAAAAEAAAAgwQDAN0GAACF/4X/CAAF
+AAQJ0ggBAAAA/wDeBgAAhf/dBgAArf9x/zUAAAAAAAMAGAATAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+c21fVklERU9fTG5nc0Rpc3BvcwCt/yAADgAIAAAAFABzbV9WSURFT19MbmdzRGlzcG9zAK4C3gYA
+AK4A3QYAAIX/hf8IAAUABAnSCAEAAAD/AN4GAACF/4ECgwQDAN0GAACF/4X/CAAFAAQJ0ggBAAAA
+/wDeBgAAhf+BAoL/WgAEAAMAAAAAAAAAoAUAAKAFCADQAqAFcAhACxAO4BCwE4AWAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAIEAAAAAlYSgBQoAoAUKAAAAZAABAAAABAAAAIMEBACF/wgAAQAACt0G
+AACt/3H/NQAAAAAAAwAYABMAAAAAAAAAAAAAAAAAAAAAAAAAAABzbV9Ub3V0Rm9ybVRvdXRFdGF0
+AK3/IAAOAAgAAAAUAHNtX1RvdXRGb3JtVG91dEV0YXQArgLeBgAArgDdBgAAhf+F/wgAAQAECNII
+AQAAAP8A3gYAAIX/gQKDBAIAzP8IAAAAAACF/wgAAQAACs3/CAAAAAAAgQKDBAIAhf8IAAEAAArd
+BgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/GAGIAQAFAAACAAgAAAAAAgEAAAjoAAAAAAAA
+AAsAAAAAAOgAAQCoAAwARXF1aXBlUHJvamV0BQAOAGZfQmFsRm9uX0V0YXQxAQAAAAsCrwB6ABgA
+BQAOAGZfQmFsRm9uX0V0YXQxrgBiAAUAFABmX0V0YXQxQWN0ZXVyc0dyb3VwZQEAAAALAq8AQAAe
+AAUAFABmX0V0YXQxQWN0ZXVyc0dyb3VwZa4AIgAFABYAZl9FdGF0MUFjdGV1cnNJbmRpdmlkda4A
+BAC1BQMABwAMAAUACTBTMEUAAAAoAAUADABFcXVpcGVQcm9qZXQFAAsAZl9EZW1hbmRldXIAHwID
+AAcACgADAAkwUgBmX01haWxBbm51bADeBgAAiv+F/wgAAQAACoECgwQDAMz/CAAAAAAAhf8IAAEA
+AArN/wgAAAAAAN0GAACt/3H/KwAAAAAAAwAYAAkAAAAAAAAAAAAAAAAAAAAAAAAAAABzbV9BbnVs
+ZWUArf8WAA4ACAAAAAoAc21fQW51bGVlAK4C3gYAAK4AzP8IAAAAAACF/wgAAQAACoECgwQDAIX/
+CAABAAAKgQKDBAIAhf8IAAEAAArN/wgAAAAAAN0GAACt/3H/LgAAAAAAAwAYAAwAAAAAAAAAAAAA
+AAAAAAAAAAAAAABzbV9SZWVuZ2FnZXKt/xkADgAIAAAADQBzbV9SZWVuZ2FnZXIAAK4C3gYAAK4A
+zP8IAAAAAADdBgAAhf+F/wgAAQAECNIIAQAAAP8A3gYAAIX/gQKDBAEA3QYAAIX/hf9HAAEABAg8
+dGFibGUgd2lkdGg9IjEwMCUiIGJvcmRlcj0iMCIgY2VsbHNwYWNpbmc9IjAiIGNlbGxwYWRkaW5n
+PSIwIj4A0ggBAAAA/wDeBgAAhf+BAoMEAQDdBgAAhf+F/xkAAQAECDxUUiB2YWxpZ249InRvcCI+
+ANIIAQAAAP8A3gYAAIX/gQKC/1oABQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAA
+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
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAlIQ4BAAAOAQAAAAAAAABAAAABAAA
+AIMECQDM/wgAAAAAAIX/CAABAAAKzf8IAAAAAADdBgAArf9x/zIAAAAAAAMAGAAQAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAc21fVklERU9TZWN0aW9uc63/HQAOAAgAAAARAHNtX1ZJREVPU2VjdGlvbnMA
+AK4C3gYAAK4AzP8IAAAAAACF/wgAAQAACoECgwQBAN0GAACF/4X/CAABAAQI0ggBAAAA/wDeBgAA
+hf+BAoMEAQDdBgAAhf+F/0cAAQAECDx0YWJsZSB3aWR0aD0iMTAwJSIgYm9yZGVyPSIwIiBjZWxs
+c3BhY2luZz0iMCIgY2VsbHBhZGRpbmc9IjAiPgDSCAEAAAD/AN4GAACF/4ECgwQBAN0GAACF/4X/
+GQABAAQIPFRSIHZhbGlnbj0idG9wIj4A0ggBAAAA/wDeBgAAhf+BAoL/WgAKAAAAAAAAAAAAoAUA
+AKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAlIegBQwA
+oAUMAN8vZAABAAAABAAAALv/ygAKABIA0kXtYRQAvAAKAAQAAACUAAUACgBmX1R5cGVFdGF0AQAN
+AEludGVybWVkaWFpcmUACwIFAAYAZl9FdGF0AAAAAAAAAADwPwoCBQATAGZfQXV0ZXVyc1BvdGVu
+dGllbHMA+wAHARYCAAAAAAAAAAAAAAoCHAIEAB0CBQAPAFJlZmxleF9FdGF0SW5pdAABAAkARW5B
+dHRlbnRlAAoCHQIDAAcAIgAcAAkxUzJTM1M0UjhTOVMxMFMxMVMxNlIxN1MxOFODBAoA3QYAAIX/
+hf8oAAEABAg8VEQgdmFsaWduPSJtaWRkbGUiIGhlaWdodD0iMzUiPtIIAQAAAP8A3gYAAIX/zf8I
+AAAAAADdBgEAmQCZABwAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAfQAcAAAAAQAGAAcAAAAAAAAA
+AAAAAAAAAAAAAPb/OAAAAAAAAwATABYAAAAAAAAAAAAAAAAAAAAAAAAAAABwdWNlYmxldV9jYWNo
+ZWFibGUuZ2lmev8iAAAAAAAAAAAACAAAAAAAAAAAAAAAAABoc3BhY2U9M94GAQCZAN0GAACF/4X/
+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
+</rawitemdata></item></note>
+

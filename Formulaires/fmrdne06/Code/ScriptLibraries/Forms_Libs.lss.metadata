@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="d42" sequence="30" unid="88FF573FC60B0C7FC1257CAC004808F3">
+<created><datetime dst="true">20140331T150648,83+02</datetime></created>
+<modified><datetime>20171029T101958,68-03</datetime></modified>
+<revised><datetime>20170911T114752,93-03</datetime></revised>
+<lastaccessed><datetime>20171029T101953,29-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101953,29-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>7</text></item>
+<item name="$TITLE" sign="true"><text>Forms_Libs</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$Comment"><text>Librairies de fonctions génériques</text></item>
+
+
+
+<item name="$POID"><datetime>20170911T114752,93-03</datetime></item></note>

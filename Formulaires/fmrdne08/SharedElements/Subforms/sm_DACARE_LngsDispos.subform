@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004968DB'>
+<noteinfo noteid='e2a' unid='2644EC2228D532AFC1257C820046A36C' sequence='18'>
+<created><datetime dst='true'>20140217T145133,56+02</datetime></created>
+<modified><datetime>20171029T102206,01-03</datetime></modified>
+<revised><datetime>20170307T090550,43-03</datetime></revised>
+<lastaccessed><datetime>20171029T102159,01-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102159,01-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=LEANDRO FALANGA - E470363/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>sm_DACARE_LngsDispos</text><text>sm_DACARE_LngsDispos</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_VISITE1LngsDispos</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAADgEAAA4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEOAQAADgEAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAIr/aACAAQEFBjAAAAgAAAAAAgEAAgg4AAAAAAAAAAwAAAAAADgA
+AAAmAAEABQBFTjpFTgABAAUARlI6RlIAHwIBAAQAKjpGUh8CAwAHABAACQAJMVMyUzNTNFMAZl9M
+bmdzRGlzcG9zYg4BAIQAAAAAAAAAAADeBgAAiv+F/wgAAQAACg==
+</rawitemdata></item></note>
+

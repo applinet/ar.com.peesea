@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800498301'>
+<noteinfo noteid='686' unid='9F015D5AC8F54653C1256C1000370D07' sequence='54'>
+<created><datetime dst='true'>20020809T120118,15+02</datetime></created>
+<modified><datetime>20171029T102303,65-03</datetime></modified>
+<revised><datetime>20170606T011406,63-03</datetime></revised>
+<lastaccessed><datetime>20171029T102300,62-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102300,62-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=JULIEN ADAM - U160830/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Fields'><text>f_AttsToDelete</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQA0gUAAAAAAAAAAAAAAAAAAAAAAADc/+QF+f/SBSBOAAAAAAAAAABmdW5jdGlv
+biBvcGVuQXR0KHVybCl7DQl2YXIgd2luPXdpbmRvdy5vcGVuKHVybCwnQXR0Jywnc3RhdHVzPW5v
+LHJlc2l6YWJsZT1ZZXMsc2Nyb2xsYmFycz1ubyxzY3JlZW5YPTEyMCxzY3JlZW5ZPTEwMCx3aWR0
+aD05MDAsaGVpZ2h0PTUwMCcpOwkNCXdpbi5mb2N1cygpDX0NDQ1mdW5jdGlvbiByZXNpemVQb3BV
+cChtb25JbWFnZSwgbW9uVGl0cmUpDSAgew0gIHcgPSB3aW5kb3cub3BlbignJywnY2hhcmdlbWVu
+dCcsJ3dpZHRoPTEwLGhlaWdodD0xMCcpOw0gIHcuZG9jdW1lbnQud3JpdGUoICI8aHRtbD48aGVh
+ZD48dGl0bGU+Iittb25UaXRyZSsiPC90aXRsZT5cbiIgKTsgDSAgdy5kb2N1bWVudC53cml0ZSgg
+IjxzY3JpcHQgbGFuZ3VhZ2U9J0phdmFTY3JpcHQnPlxuIik7IA0gIHcuZG9jdW1lbnQud3JpdGUo
+ICJJRTU9Tk40PU5ONj1mYWxzZTtcbiIpOyANICB3LmRvY3VtZW50LndyaXRlKCAiaWYoZG9jdW1l
+bnQuYWxsKUlFNT10cnVlO1xuIik7IA0gIHcuZG9jdW1lbnQud3JpdGUoICJlbHNlIGlmKGRvY3Vt
+ZW50LmdldEVsZW1lbnRCeUlkKU5ONj10cnVlO1xuIik7IA0gIHcuZG9jdW1lbnQud3JpdGUoICJl
+bHNlIGlmKGRvY3VtZW50LmxheWVycylOTjQ9dHJ1ZTtcbiIpOyANICB3LmRvY3VtZW50LndyaXRl
+KCAiZnVuY3Rpb24gYXV0b1NpemUoKSB7XG4iKTsgDSAgdy5kb2N1bWVudC53cml0ZSggImlmKElF
+NSkgc2VsZi5yZXNpemVUbyhkb2N1bWVudC5pbWFnZXNbMF0ud2lkdGgrMTAsZG9jdW1lbnQuaW1h
+Z2VzWzBdLmhlaWdodCszMSlcbiIpOyANICB3LmRvY3VtZW50LndyaXRlKCAiZWxzZSBpZihOTjYp
+IHNlbGYuc2l6ZVRvQ29udGVudCgpO1xuIik7DSAgdy5kb2N1bWVudC53cml0ZSggImVsc2Ugd2lu
+ZG93LnJlc2l6ZVRvKGRvY3VtZW50LmltYWdlc1swXS53aWR0aCxkb2N1bWVudC5pbWFnZXNbMF0u
+aGVpZ2h0KzIwKVxuIik7IA0gIHcuZG9jdW1lbnQud3JpdGUoICJzZWxmLmZvY3VzKCk7XG4iKTsg
+DSAgdy5kb2N1bWVudC53cml0ZSggIn1cbjwvc2NyaSIpOw0gIHcuZG9jdW1lbnQud3JpdGUoICJw
+dD5cbiIpOyANICB3LmRvY3VtZW50LndyaXRlKCAiPC9oZWFkPjxib2R5IGxlZnRtYXJnaW49MCB0
+b3BtYXJnaW49MCBtYXJnaW53aWR0aD0wIG1hcmdpbmhlaWdodD0wIG9uTG9hZD0namF2YXNjcmlw
+dDphdXRvU2l6ZSgpOyc+IiApOw0gIHcuZG9jdW1lbnQud3JpdGUoICI8YSBocmVmPSdqYXZhc2Ny
+aXB0OndpbmRvdy5jbG9zZSgpOyc+PGltZyBzcmM9JyIrbW9uSW1hZ2UrIicgd2lkdGg9JzEwMCUn
+IGJvcmRlcj0wIGFsdD0nIittb25UaXRyZSsiJz48L2E+IiApOyANLy8gIHcuZG9jdW1lbnQud3Jp
+dGUoICI8YSBocmVmPSdqYXZhc2NyaXB0OndpbmRvdy5jbG9zZSgpOyc+PGltZyBzcmM9JyIrbW9u
+SW1hZ2UrIicgYm9yZGVyPTAgYWx0PSciK21vblRpdHJlKyInPjwvYT4iICk7IA0gIHcuZG9jdW1l
+bnQud3JpdGUoICI8L2JvZHk+PC9odG1sPiIgKTsNICB3LmRvY3VtZW50LmNsb3NlKCk7IA0gIH0N
+AF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_Attachments</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>6</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_Attachments</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgAZR41IQUk1SalKXUsRS8VMgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAChAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAzP8IAAAAAACF/wgAAQAACt0G
+AACt/6n/ngEBABgABACSAZIBBwBCADsAYXR0c05hbWVzOj1AVHJpbShAUmVwbGFjZShAQXR0YWNo
+bWVudE5hbWVzO2ZfRmlsZUltZzsiICIpKTsABwAKAAMACTFTAAEAFAAJAGF0dHNOYW1lcwBzAAMA
+BwAKAAMACTBSAAAA9AAFAAkAYXR0c05hbWVzAAEAAAAKAq8A2AAMAAEAAADCAa4AzAABAEQAPGlt
+ZyBzcmM9Ii9pY29ucy9lY2JsYW5rLmdpZiIgYm9yZGVyPTA+PGEgaHJlZj0iamF2YXNjcmlwdDpv
+cGVuQXR0KCeQAFYBIgIBAAcALyRmaWxlLwAiAgUACQBhdHRzTmFtZXMAIgIBAAUAJyk7Ij4AIgIF
+AAkAYXR0c05hbWVzACICAQAQADwvYT4mbmJzcDsmbmJzcDsiAgEAHAA8Zm9udCBmYWNlPUFyaWFs
+IHNpemU9Mj48YnI+IgKKAIUCrgAEALUDAwAHADIAKwAJMFIyUlQ2UlQxMVJUMTRTMTVTMTlTMjBT
+MjFTMjJTMjRTMjdTMjhTMjlTAIX/CAABAAAKqgLeBgAArgDN/wgAAAAAAIX/CAAFAAAJ
+</rawitemdata></item></note>
+

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='89e' unid='5E5C93172ABACDEFC125736A004F7491' sequence='87'>
+<created><datetime dst='true'>20071004T162751,85+02</datetime></created>
+<modified><datetime>20171029T101953,12-03</datetime></modified>
+<revised><datetime>20170911T114743,31-03</datetime></revised>
+<lastaccessed><datetime>20171029T101949,98-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101949,98-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MANUEL UBALDO IGLESIAS MONTES - CV10273/OU=users/O=PSA</name><name
+>CN=ANGEL GARCIA PUJALTE - E168524/OU=users/O=PSA</name><name>CN=MANUEL UBALDO IGLESIAS MONTES - CV10273/OU=users/O=PSA</name><name
+>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=JULIEN ADAM - U160830/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=JULIEN ADAM - U160830/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=JULIEN ADAM - U160830/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=ANNE ANDRIANOFF - E282952/OU=users/O=PSA</name><name
+>CN=JEAN MARC FULCRAND - E370612/OU=users/O=PSA</name><name>CN=CEDRIC FRANCAIS - E288949/OU=users/O=PSA</name><name
+>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$TITLE'><text>Grispg</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAXwABANLS0gAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>C34WQ</text></item>
+<item name='$DesignerVersion' sign='true'><text>5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>Sin título</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK
+</rawitemdata></item></note>
+

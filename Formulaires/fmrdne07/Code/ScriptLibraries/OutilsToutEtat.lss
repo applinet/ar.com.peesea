@@ -1,0 +1,337 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub AddErrMsg(msg As String)
+Declare Sub OKShowMsgs 
+Declare Sub ErrShowMsgs 
+Declare Sub AfficherResultats
+Declare Sub AddOkMsg(msg As String)
+Declare Sub InitTraitement
+Declare Sub Detruire
+Declare Sub Sauver
+Declare Sub ChangerEtat(etatCible As Integer, nomAction As String, typeEtat As String)
+Declare Sub Imprimer (InstanceID, TypeForm, Modele, Printer, path)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Dim ErrMsgs As Variant
+Dim OkMsgs  As Variant
+Dim lng As String
+Dim msg List As String
+Dim docCour As NotesDocument
+Dim session As NotesSession
+Dim utilisateur As NotesName
+Dim etat As String
+Dim action As String
+Dim db As NotesDatabase
+
+
+
+
+
+
+
+'++LotusScript Development Environment:2:2:AddErrMsg:1:8
+Sub AddErrMsg(msg As String)
+	If Isempty(ErrMsgs) Then
+		Redim ErrMsgs(0)
+	Else 
+		If Ubound(ErrMsgs) = 0 Then
+			Redim Preserve ErrMsgs(Ubound(ErrMsgs)+1) 
+		End If
+	End If
+	ErrMsgs(Ubound(ErrMsgs)) =  msg
+End Sub
+
+'++LotusScript Development Environment:2:2:OKShowMsgs:1:8
+Sub OKShowMsgs 
+	Dim idx As Integer
+	Dim pathInfo As String
+	Dim pos As Integer
+	Dim docUrl As String
+	
+	If Not(Isempty(OkMsgs)) Then
+		For   idx = 0 To Ubound(OkMsgs)		
+			Print "<CENTER><P></B><FONT FACE=Arial SIZE=3 COLOR=""00CC00"">"+ OkMsgs(idx)+"</FONT></B></P></CENTER>"
+		Next
+	End If
+	msg("FR") = "Cliquez ici si vous voulez voir le formulaire."
+	msg("ES") = "Cliquez ici si vous voulez voir le formulaire._ES_"
+	msg("PT") = "Cliquez ici si vous voulez voir le formulaire._PT_"
+	msg("EN") = "Cliquez ici si vous voulez voir le formulaire._EN_"
+	
+	pathInfo = docCour.Path_Info(0)
+	
+	pos = Instr(pathInfo,".nsf")
+	docUrl = Left(pathInfo,pos)+ "nsf/0/"+docCour.UniversalID+"?OpenDocument"
+	Print |<A HREF ="|+docUrl+|" >|+msg(lng)+"</A>"
+End Sub
+'++LotusScript Development Environment:2:2:ErrShowMsgs:1:8
+Sub ErrShowMsgs 
+	Dim idx As Integer
+	If Not(Isempty(ErrMsgs)) Then
+		For   idx = 0 To Ubound(ErrMsgs)
+			Print "<CENTER><P></B><FONT FACE=Arial SIZE=3 COLOR=""DD0000"">"+ ErrMsgs(idx)+"</FONT></B></P></CENTER>"
+		Next
+	End If
+	msg("FR") = "Revenir au formulaire."
+	msg("ES") = "Revenir au formulaire._ES_"
+	msg("PT") = "Revenir au formulaire._PT_"
+	msg("EN")= "Revenir au formulaire._EN_"
+	Print "<A href = javascript:history.back()>"+msg(lng)+"<A></CENTER>"
+End Sub
+'++LotusScript Development Environment:2:2:AfficherResultats:1:8
+Sub AfficherResultats
+	Dim formule
+	Dim res
+	Dim literal, Mensg As String
+	formule = "@Subset(f_HistoActions;1)"
+	res = Evaluate(formule,docCour)
+	
+	If res(0) = ""  Or res(0) = " " Then	
+		
+		If docCour.f_EstModele(0) = 99 Then
+			Print ""
+			literal = "l_Error"			
+		Else		
+			
+			If docCour.f_EstModele(0) = 1 Then
+				literal = "l_Modele"
+			Else
+				literal = "l_Brouillon"
+			End If
+		End If
+	Else
+		literal = res(0)		
+	End If
+	
+	If Isempty(ErrMsgs)Then
+		Mensg = ""	
+	Else
+		Mensg = ErrMsgs(0)
+	End If	
+	
+	Print "<script>"
+	Print "var url = self.window.location.href;"
+	Print "var cadena = url.substring(0,(url.lastIndexOf('.nsf')+5))+'m_DocLien?OpenForm&DocID=" + docCour.UniversalId+"&Action="+literal+"&Msge="+Mensg+"&'"
+	Print "window.location=cadena"
+	Print "</script>"
+	
+End Sub
+'++LotusScript Development Environment:2:2:AddOkMsg:1:8
+Sub AddOkMsg(msg As String)
+	If Isempty(OkMsgs) Then
+		Redim OkMsgs(0)
+	Else 
+		If Ubound(OkMsgs) = 0 Then
+			Redim Preserve OkMsgs(Ubound(OkMsgs)+1) 
+		End If
+	End If
+	OkMsgs(Ubound(OkMsgs)) =  msg
+End Sub
+'++LotusScript Development Environment:2:2:InitTraitement:1:8
+Sub InitTraitement
+	Set session = New NotesSession
+	Set docCour = session.documentContext
+	Set db = session.CurrentDatabase
+	Set utilisateur = New NotesName(session.EffectiveUserName)
+	lng = docCour.f_lng(0)
+End Sub
+'++LotusScript Development Environment:2:2:Detruire:1:8
+Sub Detruire
+	docCour.f_EstDetruit = True
+	docCour.SaveOptions="1"
+	Print "il faut implanter la vérif par rapport au champ f_CanUserDelete"
+	msg("FR") = "Le formulaire a été détruit."
+	msg("ES") = "Le formulaire a été détruit._ES_"
+	msg("PT") = "Le formulaire a été détruit._PT_"
+	msg("EN") = "Le formulaire a été détruit._EN_"
+	Print "<CENTER><P></B><FONT FACE=Arial SIZE=3 COLOR=""DD0000"">"+msg(lng)+"</FONT></B></P></CENTER>"
+End Sub
+'++LotusScript Development Environment:2:2:Sauver:1:8
+Sub Sauver
+	docCour.f_EnregActeur=utilisateur.canonical
+	docCour.f_EnregDate=Now
+	Msg("FR") = "Votre formulaire a été sauvé."
+	Msg("ES") = "Votre formulaire a été sauvé en brouillon_ES_."
+	Msg("EN") = "Votre formulaire a été sauvé en brouillon_EN_."
+	Msg("PT") = "Votre formulaire a été sauvé en brouillon_PT_."
+	Call AddOkMsg(Msg(lng))
+	docCour.SaveOptions="1"
+End Sub
+'++LotusScript Development Environment:2:2:ChangerEtat:1:8
+Sub ChangerEtat(etatCible As Integer, nomAction As String, typeEtat As String)
+	Dim params As NotesDocument
+	Dim vFormsParams As NotesView
+	
+	Dim res As Variant
+	Dim formule As String
+	Dim stEtatCible As String
+	stEtatCible = Trim(Cstr(etatCible))
+	Set vFormsParams = db.getView("v_FormsParams")
+	Set params = vFormsParams.getDocumentByKey(docCour.f_TypeForm)
+	
+	If docCour.f_TypeEtat(0) = "Initial" Then
+		REM on sort d'un état initial
+		docCour.f_EstModele = 0
+		docCour.removeItem("f_Titre")
+	End If
+	
+	formule = |@Trim(@Right(f_EtatsNoms;"_|+stEtatCible+|"))|
+	res = Evaluate(formule,params)
+	docCour.f_EtatNoms = res
+	
+	formule = |@Trim(@Right(f_EtatsForms;"|+stEtatCible+|:"))|
+	res = Evaluate(formule,params)
+	docCour.Form = res(0)
+	
+	REM mise à jour des champs de l'historique
+	formule = |@Trim(@text(@Now;"Z2"):f_HistoDates)|
+	res = Evaluate(formule,docCour)
+	docCour.f_HistoDates = res
+	
+	formule = |@Trim("|+nomAction+|":f_HistoActions)|
+	res = Evaluate(formule,docCour)
+	docCour.f_HistoActions = res
+	
+	formule =|@Trim(Remote_User:f_HistoActeurs)|
+	res = Evaluate(formule,docCour)
+	docCour.f_HistoActeurs = res
+	
+	REM  on force f_AuteursPotentiels à une forme de type cn=...,ou=... (cannonique) pour que le contrôle d'accès au sections fonctionne correctement
+	formule =|@Name([Canonicalize];f_AuteursPotentiels)|
+	res = Evaluate(formule,docCour)
+	docCour.f_AuteursPotentiels = res
+	
+	REM  calcul de l'intersection @UserNamesList et f_ActeursGroupe 
+	REM le champ f_ActeursWorkflowGroupes contient la liste de tous les groupes qui sont intervenu dans le workflow après l'état initial jusqu'à l'instant présent
+	If (docCour.f_TypeEtat(0)<>"Initial") Then
+		formule = |@Trim(@Unique(f_ActeursWorkflowGroupes:@Keywords(f_ActeursGroupe;@UserNamesList;"")))|
+		docCour.f_ActeursWorkflowGroupes = Evaluate(formule,docCour)
+	End If
+	
+	REM le champ f_ActeursWorkflowIndividus contient la liste de tous les individus qui sont intervenu dans le workflow après l'état initial jusqu'à l'instant présent
+	If (docCour.f_TypeEtat(0)<>"Initial") Then
+		formule = |@Trim(@Unique(f_ActeursWorkflowIndividus:Remote_User))|
+		docCour.f_ActeursWorkflowIndividus = Evaluate(formule,docCour)
+	End If
+	
+	docCour.f_EnregDate =""
+	docCour.f_EnregActeur =""
+	docCour.f_Etat=etatCible
+	res = Evaluate(|r := @Trim(@Right(f_EtatsIcones;"_|+Trim(Cstr(etatCible))+|_"));
+	@Right(r;":")|,params)
+	docCour.f_EtatIcone = res(0)
+	
+	docCour.f_DateArriveeEtat = Now
+	
+	If  (docCour.f_TypeEtat(0)="Initial")  And (typeEtat <>"Initial") Then 
+		docCour.f_DateSortieEtatInit = docCour.f_DateArriveeEtat
+	End If
+	
+	docCour.f_TypeEtat=typeEtat
+End Sub
+'++LotusScript Development Environment:2:2:Imprimer:1:8
+Sub Imprimer (InstanceID, TypeForm, Modele, Printer, path)
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Set db=session.CurrentDatabase
+	REM Récupération du document de paramétrage correspondant à l'instance qui va	être imprimée
+	Dim vueParam As NotesView
+	Set vueParam=db.GetView("v_FormsParams")
+	Dim docParam As NotesDocument
+	Set docParam=vueParam.GetDocumentByKey(TypeForm)
+	REM si ce document de paramétrage existe et qu'il contient le fichier attaché souhaité, alors ce fichier est détaché sur le serveur
+	If docParam Is Nothing Then
+		Print "Impression impossible : aucun document de paramétrage spécifié."
+		Exit Sub
+	Else
+		If Not docParam.HasEmbedded Then
+			Print "Impression impossible : aucun modele d'impression est attaché."
+			Exit Sub
+		Else
+			Dim objet As NotesEmbeddedObject
+			Set objet=docParam.GetAttachment(modele)
+			If (objet.Type=EMBED_ATTACHMENT) Then
+				Call objet.ExtractFile(path+modele)
+			Else
+				Print "Impression impossible : aucun modele d'impression est attaché."
+				Exit Sub	
+			End If
+		End If
+	End If
+	REM récupération du document à imprimer
+	Dim docInstance As NotesDocument
+	Set docInstance=db.GetDocumentByUNID(InstanceID)
+	Dim numMod As Integer
+	Dim numImp As Integer
+	numMod% = Freefile
+	REM ouverture du fichier modele d'impression en lecture
+	Open path+Modele For Input As numMod%
+	numImp% = Freefile
+	REM création d'un fichier correspondant au document à imprimer (accès en écriture)
+	Open path+InstanceID For Output As numImp%
+	Dim ligne As String
+	Dim textAvant As String
+	Dim textApres As String
+	Dim pos1 As Long
+	Dim pos2 As Long
+	Dim champ As String
+	Dim tabValeurs As Variant
+	Dim tmp As String
+	Dim formule As String
+	Dim res As Variant
+	tmp=""
+	REM lecture du modele d'impression ligne par ligne
+	REM si <!--#NOM_DU_CHAMP#--> est trouvé, alors on le remplace par la valeur de de champ
+	While Not Eof(numMod%)
+		Line Input #numMod%, ligne
+		pos1=Instr(1, ligne, "<!--#")
+		If pos1<>0 Then 
+			textAvant=Left(ligne, pos1-1)
+			pos2=Instr(1, ligne, "#-->")
+			textApres=Right(ligne, Len(ligne)-pos2-3)
+			champ=Strleft(Strright(ligne, "<!--#"), "#-->")
+			If docInstance.HasItem(champ) Then
+				tabValeurs=docInstance.GetItemValue(champ)
+			End If
+			Forall valeur In tabValeurs
+				tmp=tmp+valeur+", "
+			End Forall
+			ligne=textAvant+Strleft(tmp,",")+textApres
+			formule = |@Ascii("|+ligne+|")|
+			res = Evaluate(formule)
+			ligne = res(0)
+			tmp=""
+		End If
+		Print ligne+"<br>"
+		Print #numImp%, ligne
+	Wend
+	REM fermeture des fichiers
+	Close numMod%
+	Close numImp%
+	REM on génére le fichier de commande à executer, c'est lui qui positionne les variables d'environnement nécessaires à UNIQPRINT
+	Dim fichierCmd As String
+	fichierCmd = path+"cmds"
+	Dim numCmd As Integer
+	numCmd% = Freefile
+	Open fichierCmd For Output As numCmd%
+	Print #numCmd%, "UNIQDIR=/soft/UniQPrint export UNIQDIR"
+	Print #numCmd%, "UF_HOME=/soft/UniQPrint/uniform export UF_HOME"
+	Print #numCmd%, "a=`echo $PATH|grep /soft/UniQPrint/programs/commands|wc -l`"
+	Print #numCmd%, "if [ $a -ne 1 ]"
+	Print #numCmd%, "then"
+	Print #numCmd%, "  PATH=$PATH:/soft/UniQPrint/programs/commands export PATH"
+	Print #numCmd%, "	fi"
+	Print #numCmd%, "apq -at PYIP58 -df "+path+InstanceID
+	REM fermeture du fichier
+	Close #numCmd%
+	REM execution de la commande d'impression qui est dans le fichier cmds ET création d'une log (contient uniquement la derniere impression)
+	Dim taskID As Integer
+	taskID%=Shell ("/bin/sh "+fichierCmd+">"+path+"log.txt")
+	REM suppression des fichiers créés sur le serveur
+	Kill path+modele 		'le modele d'inmpression
+'	Kill path+InstanceID	'le document imprimé
+'	Kill path+"log.txt"		'le fichier de log
+'	Kill path+"cmds"		'le fichier lancant la commande d'impression
+End Sub

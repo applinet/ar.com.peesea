@@ -1,0 +1,34 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+'++LotusScript Development Environment:2:5:(Forward):0:1
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Type d'erreur
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Const LOGTYPE_ERROR$		= "Error"
+Const LOGTYPE_WARNING$	= "Warning"
+Const LOGTYPE_MESSAGE$	= "Message"
+
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Les constantes qui suivent sont des codes d'erreurs personnalisés
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Const ERROR_PROCESSED%													= 1000	' On lance cette erreur depuis une procedure fille, pour signaler à l'appelant qu'une erreur c'est produite
+Const ERROR_PROPAGATE%													= 1001	' Propagation d'une erreur jusqu'à la première procédure
+
+
+Const ERROR_CANT_OPEN_PROFILEDOC%								= 1101	' Impossible d'ouvrir le document de profil !
+Const ERROR_CANT_OPEN_VIEW%											= 1502	' Impossible d'ouvrir une vue
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Types d'acteurs
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Const ACTORTYPE_UNKNOWN%	= 0	' Indéterminé
+Const ACTORTYPE_PERSON%		= 1	' Personne
+Const ACTORTYPE_GROUP%		= 2	' Groupe
+Const ACTORTYPE_BALFON%		= 3	' Boite fonctionnelle

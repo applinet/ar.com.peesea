@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="56a" sequence="67" unid="B5F5DB11F25BE2D1C1256BCF002D84BE">
+<created><datetime dst="true">20020605T101711,02+02</datetime></created>
+<modified><datetime>20171029T101950,08-03</datetime></modified>
+<revised><datetime>20170911T114740,45-03</datetime></revised>
+<lastaccessed><datetime>20171029T101947,48-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101947,48-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>ecblank.gif</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>ecblank.gif</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$Comment" sign="true"><text>deprecated</text></item>
+<item name="$DesignerVersion" sign="true"><text>7</text></item></note>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004968DB'>
+<noteinfo noteid='bd2' unid='C22171D074582938C1257753004A138D' sequence='51'>
+<created><datetime dst='true'>20100701T152906,69+02</datetime></created>
+<modified><datetime>20171029T102203,07-03</datetime></modified>
+<revised><datetime>20170307T090547,79-03</datetime></revised>
+<lastaccessed><datetime>20171029T102157,26-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102157,26-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQA7gIAAAAAAAAAAAAAAAAAAAAAAADc/wAD+f/uAiBOAAAAAAAAAAB2YXIgY2Fs
+ZW5kcmllcl9kYXRlam91ID0gbmV3IENhbGVuZGFyUG9wdXAoImNhbF9kYXRqb3UiKTsNY2FsZW5k
+cmllcl9kYXRlam91LnNldE1vbnRoTmFtZXMoIkphbnWgciIsImZlYnJ1oHIiLCJNYXJlYyIsIkFw
+cqFsIiwiTaBqIiwiSqNuIiwiSqNsIiwiQXVndXN0IiwiU2VwdGVtYmVyIiwiT2t0omJlciIsIk5v
+dmVtYmVyIiwiRGVjZW1iZXIiKTsNY2FsZW5kcmllcl9kYXRlam91LnNldERheUhlYWRlcnMoIk5l
+IiwiUG8iLCJVdCIsIlN0IiwiBuZ0IiwiUGkiLCJTbyIpOw1jYWxlbmRyaWVyX2RhdGVqb3Uuc2V0
+V2Vla1N0YXJ0RGF5KDEpOw1jYWxlbmRyaWVyX2RhdGVqb3Uuc2V0VG9kYXlUZXh0KCJEbmVzIik7
+DWNhbGVuZHJpZXJfZGF0ZWpvdS5zZXRDc3NQcmVmaXgoIkNBTCIpOw1jYWxlbmRyaWVyX2RhdGVq
+b3Uub2Zmc2V0WCA9IDA7DWNhbGVuZHJpZXJfZGF0ZWpvdS5vZmZzZXRZID0gMjU7DWNhbGVuZHJp
+ZXJfZGF0ZWpvdS5hdXRvSGlkZSgpOw0NdmFyIGNhbGVuZHJpZXJfaGV1cmUgPSBuZXcgQ2FsZW5k
+YXJQb3B1cCgiY2FsX3RpbWUiKTsNY2FsZW5kcmllcl9oZXVyZS5zZXRDc3NQcmVmaXgoIkNBTCIp
+Ow1jYWxlbmRyaWVyX2hldXJlLm9mZnNldFggPSAwOw1jYWxlbmRyaWVyX2hldXJlLm9mZnNldFkg
+PSAyNTsNY2FsZW5kcmllcl9oZXVyZS5zZXREaXNwbGF5VHlwZSgiaG91ciIpOw1jYWxlbmRyaWVy
+X2hldXJlLnNldFRpbWVUZXh0KCJIb2RpbmEiKTsNY2FsZW5kcmllcl9oZXVyZS5hdXRvSGlkZSgp
+OwBf/xAAAgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_Calendar_SK</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_Calendar_FR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAo=
+</rawitemdata></item></note>
+

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='c72' unid='AB7C2778E896A930C1257925002B7EED' sequence='41'>
+<created><datetime dst='true'>20111010T095505,41+02</datetime></created>
+<modified><datetime>20171029T101957,68-03</datetime></modified>
+<revised><datetime>20170911T114751,65-03</datetime></revised>
+<lastaccessed><datetime>20171029T101952,68-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101952,68-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$TITLE' sign='true'><text>(v_Forms_ExportFiles)|v_Forms_ExportFiles</text></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAIACAAAAFZDAQAUAAMANgAAAFAAAQAACgAAAAAAAAAAAAICAAAARm9ybXNfRXhwb3J0Rmls
+ZV9LZXlLRVk2AAIANAAUAEZvcm1zX0V4cG9ydEZpbGVfS2V5BQAUAEZvcm1zX0V4cG9ydEZpbGVf
+S2V5AwAmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAA
+AAAAAAAAAAABAAAAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wAFAP///wABAAAAAAAA
+AAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+ugAFADAAKwADABQACQAEAEZvcm1zX0V4cG9ydEZpbGVfS2V5JENvbmZsaWN0JFJFRgACADQAFABG
+b3Jtc19FeHBvcnRGaWxlX0tleQUAFABGb3Jtc19FeHBvcnRGaWxlX0tleQMABAAEAAAAPgAFAAQA
+Rm9ybQEAEwBtX0Zvcm1zX0V4cG9ydEZpbGVzAAoCBAAFAAkAJENvbmZsaWN0AGgBHgEcAgMABwAS
+AAwACUwxUzNTNFM2UzdT
+</formula></item>
+<item name='$Comment' sign='true'><text>Vue des fichiers d'export planifiés</text></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+IQABAABEAGYAAAAUAEZvcm1zX0V4cG9ydEZpbGVfS2V5
+</rawitemdata></item></note>
+

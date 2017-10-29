@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="dde" sequence="23" unid="9963461DD789D39DC1257D850025A608">
+<created><datetime dst="true">20141103T085113,36+02</datetime></created>
+<modified><datetime>20171029T101959,40-03</datetime></modified>
+<revised><datetime>20170911T114754,87-03</datetime></revised>
+<lastaccessed><datetime>20171029T101953,73-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101953,73-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE" sign="true"><text>QuickSort</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+
+<item name="$POID"><datetime>20170911T114754,87-03</datetime></item></note>

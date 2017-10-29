@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800495382'>
+<noteinfo noteid='942' unid='BCEE816EE856A7DFC125774300586B60' sequence='21'>
+<created><datetime dst='true'>20100615T180546,56+02</datetime></created>
+<modified><datetime>20171029T102105,08-03</datetime></modified>
+<revised><datetime>20140609T101030,59-03</datetime></revised>
+<lastaccessed><datetime>20171029T102100,89-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102100,89-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_MyModelsTmp)|v_MyModelsTmp</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+PgECAEIAAwAkMTAAAgAGAAAAAAAAAAUACwBmX0RlbWFuZGV1cgC0AgEAAQD1ACICBQAKAGZfVHlw
+ZUZvcm0iAmIBAwACABYAAwAkMTEAAAAAAAAAAADwPwMABQAkAB8ABAADAAMACQAEACQxMCQxMSRD
+b25mbGljdCRSRUYABAAEAAAAhgAFAAoAZl9UeXBlRm9ybQEAAAALAgQABQAOAGZfRXN0QnJvdWls
+bG9uVgEBAAEAMQALAgQAHAIFAAsAZl9Fc3RNb2RlbGUAVgEBAAEAMQAKAgQAHAIFAAYAZl9FdGF0
+VgEBAAEAMAAKAgQAHAIFAAkAJENvbmZsaWN0AGgBHgEcAgMABwA2ADAACUwxUzNTNFM2UzdTMTJT
+MTNTMTVTMTZTMjFTMjJTMjRTMjVTMzBTMzFTMzNTMzRT
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABECGYHAAADACQxMA==
+</rawitemdata></item>
+<item name='$Totals' sign='true'><textlist><text>0</text><text>1</text></textlist></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAAwACUEAAFZDAwADAAYAVAAAAM0AAQAACgABAAAAAAAAAAICAAAAVkMAAAMABQAYAAAAUAAB
+AAAKBAAAAAAAAAAAAgIAAAAkMTBBdXRldXJUAAIAQgADACQxMAACAAYAAAAAAAAABQALAGZfRGVt
+YW5kZXVyALQCAQABAPUAIgIFAAoAZl9UeXBlRm9ybSICYgEDAAcAEAAJAAk4UzEwUzExUwAkMTFU
+b3RhbBgAAgAWAAMAJDExAAAAAAAAAAAA8D8DACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQAB
+AgAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdD
+AQEACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCABAAAAABAP///wAF
+AP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQCAgIAAAQAAAAAAAAAIAAAA
+AAABAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAABAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAA==
+</rawitemdata></item></note>
+

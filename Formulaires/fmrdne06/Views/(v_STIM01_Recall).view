@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='f02' unid='B0D8535E5F4503B7C1257D1C0043DAF9' sequence='33'>
+<created><datetime dst='true'>20140721T142109,69+02</datetime></created>
+<modified><datetime>20171029T102000,48-03</datetime></modified>
+<revised><datetime>20170911T114753,29-03</datetime></revised>
+<lastaccessed><datetime>20171029T101954,65-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101954,65-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_STIM01_Recall)|v_STIM01_Recall</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+pAAFADQALwADABgACQAEAFNUSU0wMV9QYXJ0bmVyX0RhdGVWYWxpZCRDb25mbGljdCRSRUYABAAE
+AAAATAAFAAQARm9ybQEACABtX1NUSU0wMQoCBAAFAAYAZl9FdGF0AAAAAAAAAEBYQAoCBAAcAgUA
+CQAkQ29uZmxpY3QAaAEeARwCAwAHAB4AFwAJTDFTM1M0UzZTN1M5UzEwUzEyUzEzUwA=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+JQABAABEAGYAAAAYAFNUSU0wMV9QYXJ0bmVyX0RhdGVWYWxpZA==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAEACAAAAFZDAQAYABcAAAAAAIQAAQAACgAAAAAAAAAAAAICAAAAU1RJTTAxX1BhcnRuZXJf
+RGF0ZVZhbGlkRGF0ZSBkZSBmaW4gZGUgdmFsaWRpdIImAAEAAAABAQAJAQAACgEBDgoAAAEArSsB
+AAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAP//AAAAAAAAAAAAAAAA
+AABCAAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAA
+AAAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

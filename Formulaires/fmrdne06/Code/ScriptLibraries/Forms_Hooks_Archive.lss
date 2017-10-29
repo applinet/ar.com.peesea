@@ -1,0 +1,109 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+Use "Forms_Constants"
+
+Use "LogEntry"
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Initialize
+Declare Private Sub Hooks_HandleError(pSubName As String)
+Declare Sub Hooks_Archive_BeforeProcess(pDocument As NotesDocument)
+Declare Sub Hooks_Archive_AfterProcess(pDocument As NotesDocument)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+End Sub
+'++LotusScript Development Environment:2:2:Hooks_HandleError:5:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+'	Cette procédure se charge d'enregistrer les messages d'erreur. Elle ne sert qu'a allèger les codes
+' 										en regroupant les lignes identiques
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Private Sub Hooks_HandleError(pSubName As String)
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_CRITICAL%
+		LogEntry.LibName			= "PerfRHCore_Hooks_Purge"
+		LogEntry.SubName		= pSubName
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+End Sub
+'++LotusScript Development Environment:2:2:Hooks_Archive_BeforeProcess:4:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Executer avant l'archivage des données
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub Hooks_Archive_BeforeProcess(pDocument As NotesDocument)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	
+	Exit Sub
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Archive_BeforeProcess")
+	
+	Exit Sub
+	
+End Sub
+'++LotusScript Development Environment:2:2:Hooks_Archive_AfterProcess:4:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Executer apres l'archivage des données
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub Hooks_Archive_AfterProcess(pDocument As NotesDocument)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	
+	Exit Sub
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Archive_AfterProcess")
+	
+	Exit Sub
+	
+End Sub

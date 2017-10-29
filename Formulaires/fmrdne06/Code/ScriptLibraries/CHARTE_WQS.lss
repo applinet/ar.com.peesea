@@ -1,0 +1,392 @@
+'++LotusScript Development Environment:2:5:(Options):0:72
+%REM
+	Library CHARTE_WQS
+	Created 7 juil. 2015 by DIEGO LIBERMAN - E455758/users/PSA
+	Description: Comments for Library
+%END REM
+Option Public
+Option Declare
+
+Use "Forms_Libs"
+Use "Forms_Class_Process"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub DenyDocument(dbCurrent As NotesDatabase, docFormParams As NotesDocument, docProfile As NotesDocument, docContext As NotesDocument, userContext As NotesName, dbParam As NotesDatabase)
+Declare Sub StepUpDocument(dbCurrent As NotesDatabase, docFormParams As NotesDocument, docProfile As NotesDocument, docContext As NotesDocument, userContext As NotesName, dbParam As NotesDatabase)
+Declare Sub ValidateDocument(dbCurrent As NotesDatabase, docFormParams As NotesDocument, docProfile As NotesDocument, docContext As NotesDocument, userContext As NotesName, dbParam As NotesDatabase)
+Declare Sub startAgent
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+'++LotusScript Development Environment:2:2:DenyDocument:0:8
+' Refus d'une demande
+Sub DenyDocument(dbCurrent As NotesDatabase, docFormParams As NotesDocument, docProfile As NotesDocument, docContext As NotesDocument, userContext As NotesName, dbParam As NotesDatabase)
+	
+	' Gestion d'erreurs	
+	On Error GoTo ErrorHandler
+	
+	' Demandeur
+	Dim nameRequester As New NotesName(Trim(docContext.f_Demandeur(0)))
+	Dim itemActors As NotesItem
+	
+	' Indice de l'étape du workflow où se trouve le document
+	Dim intWorkflowStep As Integer
+	intWorkflowStep = CInt(docContext.f_Etat(0))
+	
+	If (intWorkflowStep = 2) Then
+		' Auteurs: Hiearchique
+		Set itemActors = docContext.GetFirstItem("CHARTE_RespEth")
+		Call docContext.ReplaceItemValue("f_AuteursPotentiels", itemActors.Values)
+				
+		' Lecteurs: ajout des valideurs
+		docContext.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : f_AuteursPotentiels)))|, docContext)
+				
+		' Changement d'état
+		Call ChangeState(docContext, docFormParams, 3, "Intermediaire")
+		Call DispatchActors(docContext)
+		
+		' Historique
+		Call AddHistLine(docContext, "l_HRefuse", userContext.Abbreviated)
+				
+		' Notification Hierarchique
+		Call SendPresetMail(dbCurrent, docFormParams, docProfile, docContext, itemActors, Null, "KO")
+		
+	ElseIf (intWorkflowStep = 3) Then
+		' Auteurs: Hiearchique
+		Set itemActors = docContext.GetFirstItem("CHARTE_Hierarchique")
+		Call docContext.ReplaceItemValue("f_AuteursPotentiels", itemActors.Values)
+				
+		' Lecteurs: ajout des valideurs
+		docContext.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : f_AuteursPotentiels)))|, docContext)
+				
+		' Changement d'état
+		Call ChangeState(docContext, docFormParams, 2, "Intermediaire")
+		Call DispatchActors(docContext)
+		
+		' Historique
+		Call AddHistLine(docContext, "l_HRefuse", docContext.Getitemvalue ("CHARTE_RespEth_ForDisplay")(0))
+				
+		' Notification Hierarchique
+		Call SendPresetMail(dbCurrent, docFormParams, docProfile, docContext, itemActors, Null, "KO")
+		
+	End If
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+' Gestion d'erreurs	
+ErrorHandler:
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType = LOGLEVEL_EMERG%
+		LogEntry.SubName = "DenyDocument"
+		LogEntry.Erl = Erl
+		LogEntry.Err = Err
+		LogEntry.Msg = Error$
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+	End If
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:StepUpDocument:0:8
+' Avancement dans le workflow
+Sub StepUpDocument(dbCurrent As NotesDatabase, docFormParams As NotesDocument, docProfile As NotesDocument, docContext As NotesDocument, userContext As NotesName, dbParam As NotesDatabase)
+	
+	' Gestion d'erreurs
+	On Error GoTo ErrorHandler
+	
+	
+	' Variables temporaires
+	Dim itemTemp As NotesItem, itemActors As NotesItem
+	Dim strTemp As String
+	
+	
+	' Indice de l'étape du workflow où se trouve le document
+	Dim intWorkflowStep As Integer
+	intWorkflowStep = CInt(docContext.f_Etat(0))
+	
+	' Initialisation
+	If (intWorkflowStep = 0) Then
+		docContext.f_CompterUtilisation = 1
+		docContext.IDDoc = docContext.Universalid
+	End If
+	
+	
+	' Demandeur
+	Dim nameRequester As NotesName
+	Set nameRequester = New NotesName(Trim(docContext.f_Demandeur(0)))
+	
+	
+	' Ajout des destinataires/valideurs précédents à la liste des destinataires du mail d'annulation
+	Dim itemSendToForCancellationActive As NotesItem
+	Set itemSendToForCancellationActive = docContext.GetFirstItem("Forms_SendToForCancellation_Active")
+	Dim itemLastValidSendTo As NotesItem
+	Set itemLastValidSendTo = docContext.GetFirstItem("Forms_LastValidSendTo")
+	If Not itemLastValidSendTo Is Nothing Then
+		If itemSendToForCancellationActive Is Nothing Then
+			Set itemSendToForCancellationActive = New NotesItem(docContext, "Forms_SendToForCancellation_Active", itemLastValidSendTo.Values)
+			itemSendToForCancellationActive.Issummary = True
+		Else
+			Call itemSendToForCancellationActive.AppendToTextList(itemLastValidSendTo.Values)
+		End If
+	End If
+	
+		
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' de:	"E1 - Attente réponse collaborateur
+	' vers:	"E2 - Attente réponse hiérarchique
+	If (intWorkflowStep = 1) Then
+		
+		' Auteurs: Hiearchique
+		Set itemActors = docContext.GetFirstItem("CHARTE_Hierarchique")
+		Call docContext.ReplaceItemValue("f_AuteursPotentiels", itemActors.Values)
+				
+		' Lecteurs: ajout des valideurs
+		docContext.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : f_AuteursPotentiels)))|, docContext)
+				
+		' Changement d'état
+		Call ChangeState(docContext, docFormParams, 2, "Intermediaire")
+		Call DispatchActors(docContext)
+		
+		' Historique
+		Call AddHistLine(docContext, "l_HValide", userContext.Abbreviated)
+				
+		' Notification Hierarchique
+		Call SendPresetMail(dbCurrent, docFormParams, docProfile, docContext, itemActors, Null, "VALID")
+
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' de:	"E2 - Attente réponse hiérarchique / E3 - En attente validation gestion éthique
+	' vers:	"E4 - En attente confirmation HRBP
+	ElseIf (intWorkflowStep = 2 Or intWorkflowStep = 3) Then
+		
+		
+		Set itemActors = docContext.GetFirstItem("CHARTE_HRBP")
+		Call docContext.ReplaceItemValue("f_AuteursPotentiels", itemActors.Values)
+				
+		' Lecteurs: ajout des valideurs
+		docContext.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : f_AuteursPotentiels)))|, docContext)
+				
+		' Changement d'état
+		Call ChangeState(docContext, docFormParams, 4, "Intermediaire")
+		Call DispatchActors(docContext)
+		
+		' Historique
+		If (intWorkflowStep = 3) Then
+			Call AddHistLine(docContext, "l_HValide", docContext.Getitemvalue ("CHARTE_RespEth_ForDisplay")(0))
+		Else
+			Call AddHistLine(docContext, "l_HValide", userContext.Abbreviated)
+		End If
+				
+		' Notification Hierarchique
+		Call SendPresetMail(dbCurrent, docFormParams, docProfile, docContext, itemActors, Null, "VALID")
+		
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' de:	"E4 - En attente confirmation HRBP
+	' vers:	"validation de la demande"
+	ElseIf (intWorkflowStep = 4) Then
+		Call ValidateDocument(dbCurrent, docFormParams, docProfile, docContext, userContext, dbParam)
+		
+	End If
+	
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+' Gestion d'erreurs
+ErrorHandler:
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType = LOGLEVEL_EMERG%
+		LogEntry.SubName = "StepUpDocument"
+		LogEntry.Erl = Erl
+		LogEntry.Err = Err
+		LogEntry.Msg = Error$
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+	End If
+	Exit Sub
+End Sub
+
+
+
+'++LotusScript Development Environment:2:2:ValidateDocument:0:8
+' Validation d'une demande
+Sub ValidateDocument(dbCurrent As NotesDatabase, docFormParams As NotesDocument, docProfile As NotesDocument, docContext As NotesDocument, userContext As NotesName, dbParam As NotesDatabase)
+	
+	' Gestion d'erreurs	
+	On Error GoTo ErrorHandler
+	
+	' Auteurs: [AdminForms]
+	Call docContext.ReplaceItemValue("f_AuteursPotentiels", "[AdminForms]")
+	
+	' Changement d'état
+	Call ChangeState(docContext, docFormParams, 97, "Terminal")
+	docContext.f_ActeursIndividu = ""
+	docContext.f_ActeursGroupe = ""
+	docContext.f_ActeursMembresGroupe = ""
+	docContext.f_EtatTerminal = "O"
+	
+	' Historique
+	Call AddHistLine(docContext, "l_HValideFinal", userContext.Abbreviated)
+	
+	' Envoi du mail au demandeur
+	'Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, nameRequester, Null, "OK")
+	
+	' C'est fini, on sort	
+	Exit Sub
+	
+	
+' Gestion d'erreurs
+ErrorHandler:
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType = LOGLEVEL_EMERG%
+		LogEntry.SubName = "ValidateDocument"
+		LogEntry.Erl = Erl
+		LogEntry.Err = Err
+		LogEntry.Msg = Error$
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+	End If
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:startAgent:5:8
+%REM
+	Sub startAgent
+	Description: Comments for Sub
+%END REM
+Sub startAgent
+	
+	' Gestion d'erreurs
+	On Error GoTo ErrorHandler
+	
+	' Session
+	Dim Session As New NotesSession
+	
+	' Base courante	
+	Dim Database As NotesDatabase
+	Set Database = Session.CurrentDatabase
+	
+	' Document de profil
+	Dim docProfile As NotesDocument
+	Set docProfile = Database.GetProfileDocument("m_ProfileParam")
+	If docProfile Is Nothing Then Error lsERR_NOTES_NOSUCH_PROFILE, "Impossible d'ouvrir le document de profil !"
+	
+	' Document de context
+	Dim docContext As NotesDocument
+	Set docContext = Session.DocumentContext
+	
+	' Utilisateur connecté	
+	Dim CurrentUser As NotesName
+	Set CurrentUser = New NotesName(docContext.Remote_User(0))	
+	
+	
+	Dim CurrentLng As String
+	CurrentLng = docContext.f_lng(0)
+	
+	
+	' Processus de traitement
+	Dim Process As New Process
+	Process.Status = PROCESSSTATUS_SUCCESS%
+	
+	
+	' On récupère la vue des documents de paramétrage
+	Dim ParamsView As NotesView
+	Set ParamsView = Database.GetView("v_FormsParams")
+	
+	' On récupère le document de paramétrage pour le modèle du document traité
+	Dim ParamsDocument As NotesDocument
+	Set ParamsDocument = ParamsView.GetDocumentbyKey(docContext.f_TypeForm(0))	
+	
+	
+	' On ouvre la base de paramètrage
+	Dim ParamDB As NotesDatabase		
+	Set ParamDB = Session.GetDatabase(docProfile.f_Serveur_Parametre(0), docProfile.f_Path_Parametre(0))
+	
+	
+	Dim ActionToUndertake As String
+	ActionToUnderTake = Trim(LCase(docContext.f_ActionAFaire(0)))
+	
+	
+	' Conflit d'enregistrement
+	If docContext.IsResponse Then
+		Error ERROR_SAVECONFLICT%, "Conflit d'enregistrement"
+	End If
+	
+	
+	' Soumettre/Confirmer
+	If ActionToUndertake = "soumettre" Then
+		Process.Action = PROCESSACTION_SUBMIT%
+		Call StepUpDocument(Database, ParamsDocument, docProfile, docContext, CurrentUser, ParamDB)
+		
+		
+	' Refuser
+	ElseIf ActionToUndertake = "refuser" Then
+		Process.Action = PROCESSACTION_DENY%
+		Call DenyDocument(Database, ParamsDocument, docProfile, docContext, CurrentUser, ParamDB)
+	
+	End If
+	
+	
+	' On marque le document comme formulaire valide/non temporaire.
+	docContext.Forms_TempDocument = "0"
+	
+	
+	' On enregistre le document
+	' /!\ l'utilisateur éxécutant l'agent est toujours auteur sur le document de contexte.
+	' Mais quand on passe un document en paramètre (dans les sous-procédures de cet agent), 
+	' les seuls auteurs sont définis dans les champs auteurs. Problématique quand on change d'étape...
+	Call docContext.Save(True, False)
+	
+	
+	' On affiche le résultat
+	Process.DocumentID = docContext.UniversalID
+	Call Process.DisplayStatus()
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+' Gestion d'erreur	
+ErrorHandler:
+	Dim LogEntry As New LogEntry
+	If (Err = ERROR_PROPAGATE%) Then
+		LogEntry.FromString(Error$)
+	Else
+		
+		If Err = ERROR_SAVECONFLICT% Then
+			LogEntry.LogType = LOGLEVEL_WARNING%
+		Else
+			LogEntry.LogType = LOGLEVEL_EMERG%
+		End If
+		
+		LogEntry.SubName = "startAgent"
+		LogEntry.Erl = Erl
+		LogEntry.Err = Err
+		LogEntry.Msg = Error$
+		
+	End If
+	LogEntry.Component = "CHARTE"
+	
+	' Si l'erreur n'a pas déjà été loggée (répétition de l'erreur)
+	If Not Process.IsErrLogged(LogEntry) Then
+		Call LogEntry.Save(docProfile.f_Serveur_Log(0), docProfile.f_Path_Log(0))
+		Call Process.AddLogEntry(LogEntry)
+	End If
+	
+	' Erreur fatale
+	If LogEntry.IsFatal Then
+		Call Process.DisplayStatus()
+		Exit Sub
+	Else
+		Resume Next
+	End If
+	
+End Sub

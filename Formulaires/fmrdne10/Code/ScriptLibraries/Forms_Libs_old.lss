@@ -1,0 +1,1946 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+Use "Forms_Constants"
+Use "LogEntry"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Initialize
+Declare Function EvaluateFormulaeStr(pString, pDocument As NotesDocument) As String
+Declare Function EvaluateFormulaeRTI(pRichTextItem As NotesRichTextItem, pDocument As NotesDocument) As NotesRichTextItem
+Declare Function GetUserPreferredLng(pUserName As String) As String
+Declare Sub SaveDraft(pDocument As NotesDocument, pUserName As NotesName)
+Declare Sub SaveModel(pDocument As NotesDocument, pUserName As NotesName)
+Declare Function CanUserSaveNewModel(pDB As NotesDatabase, pUserName As NotesName, pTypeForm As String) As Variant 
+Declare Sub ChangeState(pDocument As NotesDocument, pFormParamsDocument As NotesDocument, pTargetState As Integer, pStateType As String)
+Declare Sub AddHistLine(pDocument As NotesDocument, pActionName As String, pUserName As String)
+Declare Sub SendPresetMail(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pSendToRecipients As Variant, pCopyToRecipients As Variant, pMailCode As String)
+Declare Function GetActorType(pActorName As String) As Integer
+Declare Sub DispatchActors(pDocument As NotesDocument)
+Declare Function FormatForCSV(pString As String) As String
+Declare Function FormatForXML(pString As String) As String
+Declare Sub AddNotifiedReaders(pDocument As NotesDocument, pNotifiedReaders As Variant)
+Declare Function CanUserSaveNewDraft(pDB As NotesDatabase, pUserName As NotesName, pTypeForm As String) As Variant 
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:EvaluateFormulaeStr:6:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+'				Cette fonction interprète les formules contenues dans une chaines de caratères
+' 								sous forme de pseudo-balises "<# Formule #>"
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function EvaluateFormulaeStr(pString, pDocument As NotesDocument) As String
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim Formule As String, Res As Variant		
+	Dim PseudoBalise As String, TempString As String
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	' Tant qu'il y a une pseudo balise
+	While ((Instr(pString, "<#") > 0) And (Instr(pString, "#>") > 0) And (Instr(pString, "#>") > Instr(pString, "<#")))
+		
+		' Tout depuis "<#"
+		TempString = Mid(pString, Instr(pString, "<#"))
+		' Tout jusqu'a "#>"
+		PseudoBalise = Mid(TempString, 1, Instr(TempString, "#>") + 1)
+		
+		' On évalue la formule contenue dans la pseudo-balise
+		Formule = Trim(Mid(PseudoBalise, 3, Len(PseudoBalise) - 4))
+		Res = Evaluate(Formule, pDocument)
+		
+		' On remplace la pseudo-balise par le résultat de la formule
+		pString = Replace(pString, PseudoBalise, Cstr(Res(0)))
+		
+	Wend
+	
+	
+	' On retourne le texte			
+	EvaluateFormulaeStr = pString
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.LibName			= "Forms_Libs"
+		LogEntry.SubName		= "EvaluateFormulaeStr"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:EvaluateFormulaeRTI:6:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+'				Cette fonction interprète les formules contenues dans un RichTextItem
+' 								sous forme de pseudo-balises "<# Formule #>"
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function EvaluateFormulaeRTI(pRichTextItem As NotesRichTextItem, pDocument As NotesDocument) As NotesRichTextItem
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim Formule As String, Res As Variant		
+	Dim PseudoBalise As String, TempString As String
+	
+	Dim TextRun As String
+	Dim RichTextNavigator As NotesRichTextNavigator, RichTextRange As NotesRichTextRange
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Set RichTextNavigator = pRichTextItem.CreateNavigator
+	
+	' Si on trouve au moins une balise dans le texte (test neccessaire pour les performances)
+	If ((Instr(pRichTextItem.Text, "<#") > 0) And (Instr(pRichTextItem.Text, "#>") > 0) And (Instr(pRichTextItem.Text, "#>") > Instr(pRichTextItem.Text, "<#"))) And RichTextNavigator.FindFirstElement(RTELEM_TYPE_TEXTRUN) Then
+		
+		' On boucle sur tout les paragraphes
+		Do
+			
+			' Début de la balise
+			Set RichTextRange = pRichTextItem.CreateRange
+			RichTextRange.SetBegin(RichTextNavigator)
+			RichTextRange.SetEnd(RichTextNavigator)
+			
+			TextRun = RichTextRange.TextRun
+			
+			' Tant que l'on trouve une balise "<# Formule #>" dans le paragraphe
+			While ((Instr(TextRun, "<#") > 0) And (Instr(TextRun, "#>") > 0) And (Instr(TextRun, "#>") > Instr(TextRun, "<#")))
+				
+				
+				' Tout depuis "<#"
+				TempString = Mid(TextRun, Instr(TextRun, "<#"))
+				' Tout jusqu'a "#>"
+				PseudoBalise = Mid(TempString, 1, Instr(TempString, "#>") + 1)
+				
+				' On évalue la formule contenue dans la pseudo-balise
+				Formule = Trim(Mid(PseudoBalise, 3, Len(PseudoBalise) - 4))
+				Res = Evaluate(Formule, pDocument)
+				
+				TextRun = Replace(TextRun, PseudoBalise, Cstr(Res(0)))
+				
+			Wend
+			
+			' On remplace la pseudo-balise par le résultat des formules, si neccessaire
+			If(TextRun <> RichTextRange.TextRun) Then			
+				pRichTextItem.BeginInsert(RichTextNavigator)
+				pRichTextItem.AppendText(TextRun)
+				pRichTextItem.EndInsert
+				RichTextRange.Remove
+				' Reset au début. En effet, après "RichTextRange.Remove", on perd la position, 
+				' et donc "RichTextNavigator.FindNextElement" ne marche pas
+				RichTextNavigator.FindFirstElement(RTELEM_TYPE_TEXTRUN)
+			End If
+			
+			
+		' On passe à la balise suivante			
+		Loop While RichTextNavigator.FindNextElement()
+		
+	End If
+	
+	
+	' On renvoi le RichTextItem
+	Set EvaluateFormulaeRTI = pRichTextItem
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.LibName			= "Forms_Libs"
+		LogEntry.SubName		= "EvaluateFormulaeRTI"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:GetUserPreferredLng:6:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette fonction renvoi le code de langue de l'utilisateur
+' Calculé à partir des champs "Country" et "OfficeCountry" du carnet du carnet d'adresse
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function GetUserPreferredLng(pUserName As String) As String
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim Formule As String, Res As Variant		
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+'	' Pour test	
+'	If (Instr(pUserName, "user10")) Then
+'		GetUserPreferredLng = "ES"
+'		Exit Function
+'	End If
+	
+	' On recherche le code de langue
+	Res = Evaluate(|PreferredLng := @NameLookup([NOSEARCHING]; "| + pUserName + |"; "preferredLanguage"); Country := @NameLookup([NOSEARCHING]; "| + pUserName + |"; "country"); OfficeCountry := @NameLookup([NOSEARCHING]; "| + pUserName + |"; "OfficeCountry"); @If(@Trim(PreferredLng) = ""; @If(@Trim(Country) = ""; OfficeCountry; Country); PreferredLng)|)
+	
+	
+	' Si on a trouvé un code de langue
+	If (Trim(Res(0)) <> "") Then
+		GetUserPreferredLng = Trim(Res(0))
+		
+	' Sinon, on retourne "FR" comme langue par défaut
+	Else
+		GetUserPreferredLng = "FR"
+		
+	End If
+	
+	
+	' C'est fini, on sort		
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.LibName			= "Forms_Libs"
+		LogEntry.SubName		= "GetUserPreferredLng"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:2:SaveDraft:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge de sauver un brouillon
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub SaveDraft(pDocument As NotesDocument, pUserName As NotesName)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	pDocument.f_EstBrouillon = 1
+	pDocument.f_EstModele = 0
+	pDocument.f_EnregActeur = pUserName.Canonical
+	pDocument.f_EnregDate = Now
+	pDocument.Forms_TempDocument = "0"
+	Call pDocument.Save(False, False)
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.LibName			= "Forms_Libs"
+		LogEntry.SubName		= "SaveDraft"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+	
+End Sub
+
+
+'++LotusScript Development Environment:2:2:SaveModel:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge de sauver un modèle
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub SaveModel(pDocument As NotesDocument, pUserName As NotesName)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	pDocument.f_EstBrouillon = 0
+	pDocument.f_EstModele = 1
+	pDocument.f_EnregActeur = pUserName.Canonical
+	pDocument.f_EnregDate = Now
+	pDocument.Forms_TempDocument = "0"
+	Call pDocument.Save(False, False)
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.LibName			= "Forms_Libs"
+		LogEntry.SubName		= "SaveModel"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:CanUserSaveNewModel:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette fonction renvoie True si l'utilisateur à le droit de sauvegarder un nouveau modèle, False sinon
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function CanUserSaveNewModel(pDB As NotesDatabase, pUserName As NotesName, pTypeForm As String) As Variant 
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' Vue des documents de paramétrage des formulaires
+	Dim viewFormParams As NotesView
+	Set viewFormParams = pDB.GetView("v_FormsParams")	
+	If viewFormParams Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_FormsParams"" !"
+	
+	' Document de paramétrage du formulaire
+	Dim docFormParams As NotesDocument
+	Set docFormParams = viewFormParams.GetDocumentbyKey(pTypeForm, True)
+	
+	
+	' Vue affichant le nombre de modèles par formulaire	
+	Dim ModelCountView As NotesView
+	Set ModelCountView = pDB.getView("v_NbModeles")
+	Call ModelCountView.Refresh
+	
+	' Navigateur de vue
+	Dim Nav As NotesViewNavigator
+	Set Nav = ModelCountView.CreateViewNav
+	
+	' Entrée de la vue	
+	Dim Entry As NotesViewEntry
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' Si les modèles ne sont pas autorisés
+	If Ucase(docFormParams.Model_Allowed(0)) <> "Y" Then
+		CanUserSaveNewModel = False
+		
+	' Si les modèles sont autorisés		
+	Else		
+		
+		' Si le nombre max de modèles n'est pas limité
+		If Cstr(docFormParams.Model_MaxCount(0)) = "-1" Then
+			CanUserSaveNewModel = True
+			
+		' Si le nombre max de modèles est précisé
+		Elseif (Cstr(docFormParams.Model_MaxCount(0)) <> "") And Isnumeric(docFormParams.Model_MaxCount(0)) Then
+			
+			' Recherche d'une entrée correspondant au formulaire et à l'utilisateur dans la liste des modèles			
+			Set Entry = ModelCountView.GetEntryByKey(Ucase(pTypeForm + "\" + pUserName.Abbreviated),True)
+			
+			' Si on n'a pas trouvé de document correspondant
+			If Entry Is Nothing Then
+				If Cint(docFormParams.Model_MaxCount(0)) > 0 Then
+					CanUserSaveNewModel = True
+				Else
+					CanUserSaveNewModel = False
+				End If
+			Else
+				
+				' On remonte à la catégorie contenant le document.
+				' La ligne contient le nombre total de modèles autorisés		
+				Set Entry = Nav.getPrevCategory(Entry)
+				
+				' Si le nombre de modèle stockés est supérieur ou égale au nombre de modeles autorisé, on refuse		
+				If Cint(Entry.ColumnValues(1)) >= Cint(docFormParams.Model_MaxCount(0)) Then
+					CanUserSaveNewModel=False
+				Else
+					CanUserSaveNewModel = True
+				End If
+				
+			End If
+			
+		' Si le nombre max de modèles n'est pas précisé
+		Else
+			CanUserSaveNewModel = False
+			
+		End If
+		
+	End If
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType		= LOGLEVEL_EMERG%
+		LogEntry.LibName		= "Forms_Libs"
+		LogEntry.SubName	= "CanUserSaveNewModel"
+		LogEntry.Erl 				= Erl
+		LogEntry.Err				= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:2:ChangeState:0:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' 															Changement d'état du document
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub ChangeState(pDocument As NotesDocument, pFormParamsDocument As NotesDocument, pTargetState As Integer, pStateType As String)
+	
+		' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Dim Formule As String, Res As Variant
+	Dim TempItem As NotesItem
+	Dim itemActeursWorkflowMembresGroupes As NotesItem
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' Si on sort d'un état initial
+	' i.e. : utilisation d'un modèle ou d'un brouillon. On supprime le titre
+	If (pDocument.f_TypeEtat(0) = TYPEETAT_INITIAL$) Then
+		pDocument.f_EstBrouillon = 0
+		pDocument.f_EstModele = 0
+		pDocument.removeItem("f_Titre")
+	End If
+	
+	' Récupération du nom de l'état cible dans le paramétrage
+	' Les noms sont sous la forme "_X_Nom", ou X est le numéro de l'état cible
+	' Cette formule récupère le nom, à droite du numéro d'état
+	Formule = |Res := "_"+@Trim(@Right(f_EtatsNoms; "_| + Trim(Cstr(pTargetState)) + |_")); "_" + @RightBack(@Left(Res; ":"); "_") + ":" + @Right(Res; ":")|
+	pDocument.f_EtatNoms = Evaluate(Formule, pFormParamsDocument)
+	
+	' Récupération du nom du masque à utiliser pour l'état cible
+	Formule = |@Trim(@Right(f_EtatsForms; "| + Trim(Cstr(pTargetState)) + |:"))|
+	Res = Evaluate(Formule, pFormParamsDocument)
+	pDocument.Form = Res(0)
+	
+	
+	' On force f_LectteursPotentiels à une forme de type cn=...,ou=... (cannonique) pour que le contrôle d'accès au sections fonctionne correctement
+	Formule =|@Sort(@Unique(@Trim(@Name([Canonicalize];f_LecteursPotentiels))))|
+	pDocument.f_LecteursPotentiels = Evaluate(Formule, pDocument)
+	Set TempItem = pDocument.GetFirstItem("f_LecteursPotentiels")
+	If Not TempItem Is Nothing Then TempItem.IsReaders = True
+	
+	' On force f_AuteursPotentiels à une forme de type cn=...,ou=... (cannonique) pour que le contrôle d'accès au sections fonctionne correctement
+	Formule =|@Sort(@Unique(@Trim(@Name([Canonicalize];f_AuteursPotentiels))))|
+	pDocument.f_AuteursPotentiels = Evaluate(Formule, pDocument)
+	Set TempItem = pDocument.GetFirstItem("f_AuteursPotentiels")
+	If Not TempItem Is Nothing Then TempItem.IsAuthors = True
+	
+	' Calcul de l'intersection @UserNamesList et f_ActeursGroupe
+	' Le champ f_ActeursWorkflowGroupes contient la liste de tous les groupes qui sont intervenu dans le workflow après l'état initial jusqu'à l'instant présent
+	If (pDocument.f_TypeEtat(0)<>TYPEETAT_INITIAL$) Then
+		Formule = |@Trim(@Unique(f_ActeursWorkflowGroupes:@Keywords(f_ActeursGroupe; @UserNamesList; "")))|
+		pDocument.f_ActeursWorkflowGroupes = Evaluate(Formule, pDocument)
+		
+		' On s'occupe de remplir le champ f_ActeursWorkflowMembresGroupes en "explosant" les groupes du champ f_ActeursWorkflowGroupes
+		' Récupération du champ devant contenir la liste des personnes appartenant aux groupes du workflow (création si il n'existe pas)
+		Set itemActeursWorkflowMembresGroupes = pDocument.GetFirstItem("f_ActeursWorkflowMembresGroupes")
+		If itemActeursWorkflowMembresGroupes Is Nothing Then Set itemActeursWorkflowMembresGroupes = New NotesItem(pDocument, "f_ActeursWorkflowMembresGroupes", "", READERS)
+		
+		Forall nomGroupe In pDocument.f_ActeursWorkflowGroupes
+			' Ajout des membres du groupe à la liste des noms			
+			itemActeursWorkflowMembresGroupes.AppendToTextList(Evaluate(|@Sort(@Unique(@Name([Canonicalize]; @DBLookup("":"NoCache"; "":"names.nsf"; "($VIMGroups)" ; "| + Cstr(nomGroupe) + |"; "Members"; [FAILSILENT]))))|))
+		End Forall
+		
+		'Format canonique
+		pDocument.f_ActeursWorkflowMembresGroupes = Evaluate(|@Sort(@Unique(@Trim(@Name([Canonicalize]; f_ActeursWorkflowMembresGroupes))))|, pDocument)
+		
+		itemActeursWorkflowMembresGroupes.IsNames = True
+		itemActeursWorkflowMembresGroupes.IsSummary = True
+	End If
+	
+	' Le champ f_ActeursWorkflowIndividus contient la liste de tous les individus qui sont intervenu dans le workflow après l'état initial jusqu'à l'instant présent
+	If (pDocument.f_TypeEtat(0) <> TYPEETAT_INITIAL$) Then
+		Formule = |@Trim(@Unique(f_ActeursWorkflowIndividus:@Username))|
+		pDocument.f_ActeursWorkflowIndividus = Evaluate(Formule, pDocument)
+	End If
+	
+	' On efface date et acteur, pour le cas où le document serait un modèle/brouillon
+	pDocument.f_EnregDate = ""
+	pDocument.f_EnregActeur = ""
+	
+	' On récupère l'icone de l'état dans le paramétrage
+	Formule = |@Right(@Trim(@Right(f_EtatsIcones; "_| + Trim(Cstr(pTargetState)) + |_"));  ":")|
+	Res = Evaluate(Formule, pFormParamsDocument)
+	pDocument.f_EtatIcone = Res(0)
+	
+	' On renseigne la date d'arrivé dans l'état cible
+	pDocument.f_DateArriveeEtat = Now
+	
+	' Si le document est dans un état "Initial", mais que l'on souhaite le placer dans un autre état,
+	' on renseigne la date de sortie de l'état "Initial"
+	If  (pDocument.f_TypeEtat(0) = TYPEETAT_INITIAL$)  And (pStateType <> TYPEETAT_INITIAL$) Then
+		pDocument.f_DateSortieEtatInit = pDocument.f_DateArriveeEtat
+	End If
+	
+	' On change le numéro de l'état courant. On le met à la valeur du numéro de l'état cible
+	pDocument.f_Etat = pTargetState
+	' On change le type de l'état courant. On le met à la valeur du type de l'état cible
+	pDocument.f_TypeEtat = pStateType
+	
+	' Pour gestion attachements - fonctionnement incertain: à revoir
+	pDocument.f_TempSaved="0"		
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.LibName			= "Forms_Libs"
+		LogEntry.SubName		= "CanSaveNewModel"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:AddHistLine:0:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' 													Ajout d'une ligne dans l'historique
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub AddHistLine(pDocument As NotesDocument, pActionName As String, pUserName As String)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim Formule As String
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' On place les date et heure actuelles au début de la liste du champs "f_HistoDates"
+	Formule = |@Trim(@Text(@Now;"Z2"):f_HistoDates)|
+	pDocument.f_HistoDates = Evaluate(Formule, pDocument)
+	
+	' On place le code JavaScript représentant le nom de l'action effectuée au début de la liste du champs "f_HistoActions"
+	Formule = |@Trim("| + pActionName + |":f_HistoActions)|
+	pDocument.f_HistoActions = Evaluate(Formule, pDocument)
+	
+	' On place le nom de l'utilisateur au début de la liste du champs "f_HistoActeurs"
+	Formule =|@Trim("| + pUserName + |":f_HistoActeurs)|
+	pDocument.f_HistoActeurs = Evaluate(Formule, pDocument)
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.LibName			= "Forms_Libs"
+		LogEntry.SubName		= "AddHistLine"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:SendPresetMail:0:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' 														Envoi d'un mail issu du paramétrage
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub SendPresetMail(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pSendToRecipients As Variant, pCopyToRecipients As Variant, pMailCode As String)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim CurrentSession As New NotesSession
+	
+	Dim Formule As String, Res As Variant, i As Integer
+	Dim MailDocument As NotesDocument
+	
+	Dim SubjectItem As NotesItem	
+	
+	Dim RichTextItem As NotesRichTextItem
+	Dim RichTextParagraphStyle As NotesRichTextParagraphStyle
+	
+	Dim SendToItem As NotesItem, CopyToItem As NotesItem
+	Dim SendToRecipients List As String, CopyToRecipients List As String, AllRecipients List As String
+	
+	Dim MailTitles List As String
+	
+	Dim TempString As String
+	Dim TempName As NotesName
+	
+	Dim PreferredLng As String
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' Création du mail.
+	Set MailDocument = New NotesDocument(pDB)
+	MailDocument.Form = "Memo"
+	
+	
+	' Construction de l'entète du mail
+	' - - - - - - - - - - - - - - -
+	' Destinataires		
+	MailDocument.SendTo = ""
+	Set SendToItem = MailDocument.GetFirstItem("SendTo")
+	
+	
+	' pSendToRecipient peut être
+	'	- de type "String" : "f_Demandeur(0), eMail...
+	'	- de type "NotesName"
+	' ... List, Array, ou simple objet/valeur
+	
+	' List ou Array
+	If Islist(pSendToRecipients) Or Isarray(pSendToRecipients) Then
+		Forall Recipient In pSendToRecipients
+			
+			' Objet
+			If Isobject(Recipient) Then
+				
+				' NotesName
+				If Recipient Isa "NotesName" Then
+					SendToRecipients(Recipient.Canonical) = Recipient.Canonical
+					AllRecipients(Recipient.Canonical) = Recipient.Canonical
+					Call SendToItem.AppendToTextList(Recipient.Canonical)
+					
+				' NotesItem
+				Elseif Recipient Isa "NotesItem" Then
+					Forall Value1 In Recipient.Values
+						Set TempName = New NotesName(Value1)
+						SendToRecipients(TempName.Canonical) = TempName.Canonical
+						AllRecipients(TempName.Canonical) = TempName.Canonical
+						Call SendToItem.AppendToTextList(TempName.Canonical)
+					End Forall
+					
+				End If
+				
+			' Chaine de caractères
+			Elseif Isscalar(Recipient) Then
+				Set TempName = New NotesName(Recipient)
+				SendToRecipients(TempName.Canonical) = TempName.Canonical
+				AllRecipients(TempName.Canonical) = TempName.Canonical
+				Call SendToItem.AppendToTextList(TempName.Canonical)
+				
+			End If
+			
+		End Forall
+		
+	' Valeur/Objet			
+	Else
+		
+	' Objet
+		If Isobject(pSendToRecipients) Then
+			
+			' NotesName			
+			If pSendToRecipients Isa "NotesName" Then			
+				SendToRecipients(pSendToRecipients.Canonical) = pSendToRecipients.Canonical
+				AllRecipients(pSendToRecipients.Canonical) = pSendToRecipients.Canonical
+				Call SendToItem.AppendToTextList(pSendToRecipients.Canonical)
+				
+			' NotesItem
+			Elseif pSendToRecipients Isa "NotesItem" Then
+				Forall Value2 In pSendToRecipients.Values
+					Set TempName = New NotesName(Value2)
+					SendToRecipients(TempName.Canonical) = TempName.Canonical
+					AllRecipients(TempName.Canonical) = TempName.Canonical
+					Call SendToItem.AppendToTextList(TempName.Canonical)
+				End Forall
+				
+			End If
+			
+		' Chaine de caractères
+		Elseif Isscalar(pSendToRecipients) Then
+			Set TempName = New NotesName(pSendToRecipients)
+			SendToRecipients(TempName.Canonical) = TempName.Canonical
+			AllRecipients(TempName.Canonical) = TempName.Canonical
+			Call SendToItem.AppendToTextList(TempName.Canonical)
+			
+		End If
+		
+	End If
+	
+	
+	
+	' - - - - - - - - - - - - - - -	
+	' En copie		
+	If Not Isnull(pCopyToRecipients) Then	
+		
+		MailDocument.CopyTo = ""
+		Set CopyToItem = MailDocument.GetFirstItem("CopyTo")
+		
+		
+		' pCopyToRecipeitns peut être
+		'	- de type "String" : "f_Demandeur(0), eMail...
+		'	- de type "NotesName"
+		' ... List, Array, ou simple objet/valeur
+		
+		' List ou Array
+		If Islist(pCopyToRecipients) Or Isarray(pCopyToRecipients) Then
+			Forall Recipient In pCopyToRecipients
+				
+				' Objets
+				If Isobject(Recipient) Then
+					
+					' NotesName
+					If Recipient Isa "NotesName" Then
+						CopyToRecipients(Recipient.Canonical) = Recipient.Canonical
+						AllRecipients(Recipient.Canonical) = Recipient.Canonical
+						Call CopyToItem.AppendToTextList(Recipient.Canonical)
+						
+					' NotesItem
+					Elseif Recipient Isa "NotesItem" Then
+						Forall Value3 In Recipient.Values
+							Set TempName = New NotesName(Value3)
+							CopyToRecipients(TempName.Canonical) = TempName.Canonical
+							AllRecipients(TempName.Canonical) = TempName.Canonical
+							Call CopyToItem.AppendToTextList(TempName.Canonical)							
+						End Forall
+						
+					End If
+					
+				' Chaine de caractères
+				Elseif Isscalar(Recipient) Then
+					Set TempName = New NotesName(Recipient)
+					CopyToRecipients(TempName.Canonical) = TempName.Canonical
+					AllRecipients(TempName.Canonical) = TempName.Canonical
+					Call CopyToItem.AppendToTextList(TempName.Canonical)
+					
+				End If
+				
+			End Forall
+			
+		' Valeur/Objet			
+		Else
+			
+			' Objets
+			If Isobject(pCopyToRecipients) Then
+				
+				' NotesName				
+				If pCopyToRecipients Isa "NotesName" Then				
+					CopyToRecipients(pCopyToRecipients.Canonical) = pCopyToRecipients.Canonical
+					AllRecipients(pCopyToRecipients.Canonical) = pCopyToRecipients.Canonical
+					Call CopyToItem.AppendToTextList(pCopyToRecipients.Canonical)
+					
+				' NotesItem
+				Elseif pCopyToRecipients Isa "NotesItem" Then
+					Forall Value4 In pCopyToRecipients
+						Set TempName = New NotesName(Value4)
+						CopyToRecipients(TempName.Canonical) = TempName.Canonical
+						AllRecipients(TempName.Canonical) = TempName.Canonical
+						Call CopyToItem.AppendToTextList(TempName.Canonical)						
+					End Forall
+					
+				End If
+				
+			' Chaine de caractères
+			Elseif Isscalar(pCopyToRecipients) Then
+				Set TempName = New NotesName(pCopyToRecipients)
+				CopyToRecipients(TempName.Canonical) = TempName.Canonical
+				AllRecipients(TempName.Canonical) = TempName.Canonical
+				Call CopyToItem.AppendToTextList(TempName.Canonical)
+				
+			End If
+			
+		End If
+		
+	End If
+	
+	
+	
+	' - - - - - - - - - - - - - - -
+	' Titre du mail
+	
+	Set SubjectItem = pFormParamsDocument.GetFirstItem("Mail_" + Trim(Ucase(pMailCode)) + "_Subject")
+	If Not SubjectItem Is Nothing Then
+		
+		' On boucle sur les destinataires
+		Forall Recipient2 In AllRecipients
+			
+			' On récupère la langue à utiliser
+			PreferredLng = GetUserPreferredLng(Recipient2)
+			
+			' Si le couple langue/titre n'est pas encore dans la liste, on l'y ajoute
+			If Not Iselement(MailTitles(PreferredLng)) Then
+				
+				' On boucle sur les titres du paramétrage
+				Forall Title In SubjectItem.Values
+					
+					' Si le titre commence par l'indice et la langue que l'on souhaite
+					If (Instr(Title, "" + Ucase(PreferredLng) + ":") = 1) Then
+						
+						' On ajoute le couple langue/titre à la liste
+						MailTitles(PreferredLng) = EvaluateFormulaeStr(Strright(Title, ":"), pDocument)
+						Exit Forall
+						
+					End If
+					
+				End Forall
+				
+			End If
+			
+		End Forall
+		
+	End If
+	
+	
+	' On fabrique un chaine de caratères "titre1@@titre2@@...". Cela permet de convertir une List en Array
+	TempString = ""
+	Forall MailTitle In MailTitles
+		TempString = TempString + "@@"  + MailTitle
+	End Forall
+	
+	' Si il n'y a pas de titres (par exemple si la langue préférée n'a pas de correspondance dans les titres traduits), on prend le premier
+	If (Trim(TempString) = "") Then
+		TempString = EvaluateFormulaeStr(Strright(SubjectItem.Values(0), ":"), pDocument)
+	End If
+	
+	' On explose la chaine des titres, on supprime les espaces surnuméraires, et on n'affiche chaque titre qu'une fois (en cas de traductions identiques)
+	MailDocument.Subject = Arrayunique(Fulltrim(Split(TempString, "@@")))
+	
+	
+	
+	' On force le format "CN=...", et on supprime les doublons
+	Formule =|@Sort(@Unique(@Trim(@Name([Canonicalize]; SendTo))))|
+	MailDocument.SendTo = Evaluate(Formule, MailDocument)
+	
+	Formule =|@Sort(@Unique(@Trim(@Name([Canonicalize]; CopyTo))))|
+	MailDocument.CopyTo = Evaluate(Formule, MailDocument)
+	
+	
+	' Si il n'y a pas de destinataires, inutile d'aller plus loin
+'	If (Trim(MailDocument.SendTo(0)) <> "") Or (Trim(MailDocument.CopyTo(0)) <> "") Then		
+	
+	' Corps du mail
+	Set RichTextItem = MailDocument.CopyItem(pFormParamsDocument.GetFirstItem("Mail_" + Trim(Ucase(pMailCode)) + "_Body"), "Body")
+	Set RichTextItem = EvaluateFormulaeRTI(RichTextItem, pDocument)
+	
+	
+	
+	' Ajout du lien vers le document
+	If pFormParamsDocument.GetItemValue("Mail_" + Trim(Ucase(pMailCode)) + "_ShowLink")(0) = "O" Then
+		MailDocument.URL = pDocument.URL(0)
+		Call RichTextItem.AddNewline(1)
+		Call RichTextItem.AppendRTItem(pProfileDocument.getFirstItem("f_Lien"))
+	End If
+	
+	
+	' Envoi du mail
+	Call MailDocument.Send(False)
+	
+'	End If
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 											Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType		= LOGLEVEL_EMERG%
+		LogEntry.LibName		= "Forms_Libs"
+		LogEntry.SubName	= "SendPresetMail"
+		LogEntry.Erl 				= Erl
+		LogEntry.Err				= Err
+		LogEntry.Msg			= Error$
+		
+		' Cas particuliers
+		If ((Err = 4294) Or (Err = 4295))Then
+			LogEntry.AddDebugLine("Destinataire: " + MailDocument.SendTo(0))
+		End If
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:GetActorType:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' 
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function GetActorType(pActorName As String) As Integer
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim Formule As String, Res As Variant
+	Dim nameTemp As NotesName
+	Dim NameServer As NotesName
+	Dim CurrentSession As New NotesSession
+	Dim CurrentDB As NotesDatabase
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	' On récupère le champ "Type" du document de l'acteur
+	Set nameTemp = New NotesName(pActorName)
+	If Ucase(nameTemp.OrgUnit1) = "BF" Then
+		GetActorType = ACTORTYPE_BALFON%
+	Elseif Ucase(nameTemp.OrgUnit1) = "USERS" Then
+		GetActorType = ACTORTYPE_PERSON%
+	Else
+		Set CurrentDB = CurrentSession.CurrentDatabase
+		Set NameServer = New NotesName(CurrentDB.Server)
+		Res = Evaluate(|@DbLookup(""; "| + NameServer.Abbreviated + |":"names.nsf"; "$VIMPeopleAndGroups"; "| + nameTemp.Abbreviated + |"; "Type")|)
+		If Isarray(Res) Then
+			If (Ucase(Res(0)) = "GROUP") Then
+				GetActorType = ACTORTYPE_GROUP%
+			Else
+				GetActorType = ACTORTYPE_UNKNOWN%
+			End If
+		Else
+			GetActorType = ACTORTYPE_UNKNOWN%
+		End If
+	End If
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.LibName			= "Forms_Libs"
+		LogEntry.SubName		= "GetActorType"
+		LogEntry.Erl		 			= Erl
+		LogEntry.Err					= Err
+		LogEntry.Msg				= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:2:DispatchActors:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure place les auteurs potentiels dans les champs "ActeursIndividu" et "ActeursGroupe"
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub DispatchActors(pDocument As NotesDocument)
+	
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim TempItem As NotesItem, IndItem As NotesItem, GrpItem As NotesItem
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	pDocument.f_ActeursIndividu = ""
+	Set IndItem = pDocument.GetFirstItem("f_ActeursIndividu")
+	
+	pDocument.f_ActeursGroupe = ""
+	Set GrpItem = pDocument.GetFirstItem("f_ActeursGroupe")
+	
+	' On boucle sur les acteurs
+	Set TempItem = pDocument.GetFirstItem("f_AuteursPotentiels")
+	Forall Actor In TempItem.Values
+		' Si ce n'est pas un rôle
+		If (Instr(Cstr(Actor), "[") = 0) Then
+			
+			' Groupe		
+			If GetActorType(Cstr(Actor)) = ACTORTYPE_GROUP% Then
+				GrpItem.AppendToTextList(Cstr(Actor))
+			' Personne			
+			Else
+				IndItem.AppendToTextList(Cstr(Actor))				
+			End If
+			
+		End If
+		
+	End Forall	
+	
+	
+	' Calcul des membres des groupes de valideurs
+	pDocument.f_ActeursMembresGroupe = Evaluate(|@Sort(@Unique(@Name([Canonicalize]; @DBLookup("":"'NoCache"; "":"names.nsf"; "($VIMGroups)"; f_ActeursGroupe; "Members"; [FAILSILENT]))))|, pDocument)
+	
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.LibName			= "Forms_Libs"
+		LogEntry.SubName		= "DispathActors"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:FormatForCSV:0:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette fonction formatte un texte pour export CSV
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function FormatForCSV(pString As String) As String
+	
+	' Gestion d'erreurs	
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim FindArray() As String	
+	Dim ReplacementArray() As String
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	Redim FindArray(2) As String
+	Redim ReplacementArray(2) As String
+	
+	FindArray(0) = Chr(10)
+	ReplacementArray(0) = " "
+	
+	FindArray(1) = Chr(13)
+	ReplacementArray(1) = " "
+	
+	FindArray(2) = """"
+	ReplacementArray(2) = """"""
+	
+	pString = Fulltrim(Replace(pString, FindArray, ReplacementArray))	
+	
+'	pString = Implode(Fulltrim(Split(pString, """")), """""")
+	
+	FormatForCSV = """" + pString + """"
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.SubName		= "FormatForCSV"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:FormatForXML:0:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette fonction formatte un texte pour export XML
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function FormatForXML(pString As String) As String
+	
+	' Gestion d'erreurs	
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim FindArray() As String
+	Dim ReplacementArray() As String
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	Redim FindArray(99) As String
+	Redim ReplacementArray(99) As String
+	
+	FindArray(0) = Chr(10)
+	ReplacementArray(0) = ""
+	
+	FindArray(1) = Chr(13)
+	ReplacementArray(1) = ""
+	
+	FindArray(2) = "&"
+	ReplacementArray(2) = "&#38;"
+	
+	FindArray(3) = """"
+	ReplacementArray(3) = "&#34;"
+	
+	FindArray(4) = "<"
+	ReplacementArray(4) = "&#60;"
+	
+	FindArray(5) = ">"
+	ReplacementArray(5) = "&#62;"
+	
+	FindArray(6) = "¡"
+	ReplacementArray(6) = "&#161;"
+	
+	FindArray(7) = "¢"
+	ReplacementArray(7) = "&#162;"
+	
+	FindArray(8) = "£"
+	ReplacementArray(8) = "&#163;"
+	
+	FindArray(9) = "¤"
+	ReplacementArray(9) = "&#164;"
+	
+	FindArray(10) = "¥"	
+	ReplacementArray(10) = "&#165;"
+	
+	FindArray(11) = "¦"
+	ReplacementArray(11) = "&#166;"
+	
+	FindArray(12) = "§"	
+	ReplacementArray(12) = "&#167;"
+	
+	FindArray(13) = "¨"	
+	ReplacementArray(13) = "&#168;"
+	
+	FindArray(14) = "©"	
+	ReplacementArray(14) = "&#169;"
+	
+	FindArray(15) = "ª"	
+	ReplacementArray(15) = "&#170;"
+	
+	FindArray(16) = "«"	
+	ReplacementArray(16) = "&#171;"
+	
+	FindArray(17) = "¬"	
+	ReplacementArray(17) = "&#172;"
+	
+'	FindArray(18) = "­"	
+'	ReplacementArray(18) = "&#173;"
+	
+	FindArray(18) = "®"	
+	ReplacementArray(18) = "&#174;"
+	
+	FindArray(19) = "¯"	
+	ReplacementArray(19) = "&#175;"
+	
+	FindArray(20) = "°"	
+	ReplacementArray(20) = "&#176;"
+	
+	FindArray(21) = "±"	
+	ReplacementArray(21) = "&#177;"
+	
+	FindArray(22) = "²"	
+	ReplacementArray(22) = "&#178;"
+	
+	FindArray(23) = "³"	
+	ReplacementArray(23) = "&#179;"
+	
+	FindArray(24) = "´"	
+	ReplacementArray(24) = "&#180;"
+	
+	FindArray(25) = "µ"	
+	ReplacementArray(25) = "&#181;"
+	
+	FindArray(26) = "¶"	
+	ReplacementArray(26) = "&#182;"
+	
+	FindArray(27) = "·"	
+	ReplacementArray(27) = "&#183;"
+	
+	FindArray(28) = "¸"	
+	ReplacementArray(28) = "&#184;"
+	
+	FindArray(29) = "¹"	
+	ReplacementArray(29) = "&#185;"
+	
+	FindArray(30) = "º"	
+	ReplacementArray(30) = "&#186;"
+	
+	FindArray(31) = "»"	
+	ReplacementArray(31) = "&#187;"
+	
+	FindArray(32) = "¼"	
+	ReplacementArray(32) = "&#188;"
+	
+	FindArray(33) = "½"	
+	ReplacementArray(33) = "&#189;"
+	
+	FindArray(34) = "¾"	
+	ReplacementArray(34) = "&#190;"
+	
+	FindArray(35) = "¿"	
+	ReplacementArray(35) = "&#191;"
+	
+	FindArray(36) = "À"	
+	ReplacementArray(36) = "&#192;"
+	
+	FindArray(37) = "Á"	
+	ReplacementArray(37) = "&#193;"
+	
+	FindArray(38) = "Â"	
+	ReplacementArray(38) = "&#194;"
+	
+	FindArray(39) = "Ã"	
+	ReplacementArray(39) = "&#195;"
+	
+	FindArray(40) = "Ä"	
+	ReplacementArray(40) = "&#196;"
+	
+	FindArray(41) = "Å"	
+	ReplacementArray(41) = "&#197;"
+	
+	FindArray(42) = "Æ"	
+	ReplacementArray(42) = "&#198;"
+	
+	FindArray(43) = "Ç"	
+	ReplacementArray(43) = "&#199;"
+	
+	FindArray(44) = "È"	
+	ReplacementArray(44) = "&#200;"
+	
+	FindArray(45) = "É"	
+	ReplacementArray(45) = "&#201;"
+	
+	FindArray(46) = "Ê"	
+	ReplacementArray(46) = "&#202;"
+	
+	FindArray(47) = "Ë"	
+	ReplacementArray(47) = "&#203;"
+	
+	FindArray(48) = "Ì"	
+	ReplacementArray(48) = "&#204;"
+	
+	FindArray(49) = "Í"	
+	ReplacementArray(49) = "&#205;"
+	
+	FindArray(50) = "Î"	
+	ReplacementArray(50) = "&#206;"
+	
+	FindArray(51) = "Ï"	
+	ReplacementArray(51) = "&#207;"
+	
+	FindArray(52) = "Ð"	
+	ReplacementArray(52) = "&#208;"
+	
+	FindArray(53) = "Ñ"	
+	ReplacementArray(53) = "&#209;"
+	
+	FindArray(54) = "Ò"	
+	ReplacementArray(54) = "&#210;"
+	
+	FindArray(55) = "Ó"	
+	ReplacementArray(55) = "&#211;"
+	
+	FindArray(56) = "Ô"	
+	ReplacementArray(56) = "&#212;"
+	
+	FindArray(57) = "Õ"	
+	ReplacementArray(57) = "&#213;"
+	
+	FindArray(58) = "Ö"	
+	ReplacementArray(58) = "&#214;"
+	
+	FindArray(59) = "×"	
+	ReplacementArray(59) = "&#215;"
+	
+	FindArray(60) = "Ø"	
+	ReplacementArray(60) = "&#216;"
+	
+	FindArray(61) = "Ù"	
+	ReplacementArray(61) = "&#217;"
+	
+	FindArray(62) = "Ú"	
+	ReplacementArray(62) = "&#218;"
+	
+	FindArray(63) = "Û"	
+	ReplacementArray(63) = "&#219;"
+	
+	FindArray(64) = "Ü"	
+	ReplacementArray(64) = "&#220;"
+	
+	FindArray(65) = "Ý"	
+	ReplacementArray(65) = "&#221;"
+	
+	FindArray(66) = "Þ"	
+	ReplacementArray(66) = "&#222;"
+	
+	FindArray(67) = "ß"	
+	ReplacementArray(67) = "&#223;"
+	
+	FindArray(68) = "à"	
+	ReplacementArray(68) = "&#224;"
+	
+	FindArray(69) = "á"	
+	ReplacementArray(69) = "&#225;"
+	
+	FindArray(70) = "â"	
+	ReplacementArray(70) = "&#226;"
+	
+	FindArray(71) = "ã"	
+	ReplacementArray(71) = "&#227;"
+	
+	FindArray(72) = "ä"	
+	ReplacementArray(72) = "&#228;"
+	
+	FindArray(73) = "å"	
+	ReplacementArray(73) = "&#229;"
+	
+	FindArray(74) = "æ"	
+	ReplacementArray(74) = "&#230;"
+	
+	FindArray(75) = "ç"	
+	ReplacementArray(75) = "&#231;"
+	
+	FindArray(76) = "è"	
+	ReplacementArray(76) = "&#232;"
+	
+	FindArray(77) = "é"	
+	ReplacementArray(77) = "&#233;"
+	
+	FindArray(78) = "ê"	
+	ReplacementArray(78) = "&#234;"
+	
+	FindArray(79) = "ë"	
+	ReplacementArray(79) = "&#235;"
+	
+	FindArray(80) = "ì"	
+	ReplacementArray(80) = "&#236;"
+	
+	FindArray(81) = "í"	
+	ReplacementArray(81) = "&#237;"
+	
+	FindArray(82) = "î"	
+	ReplacementArray(82) = "&#238;"
+	
+	FindArray(83) = "ï"	
+	ReplacementArray(83) = "&#239;"
+	
+	FindArray(84) = "ð"	
+	ReplacementArray(84) = "&#240;"
+	
+	FindArray(85) = "ñ"	
+	ReplacementArray(85) = "&#241;"
+	
+	FindArray(86) = "ò"	
+	ReplacementArray(86) = "&#242;"
+	
+	FindArray(87) = "ó" 
+	ReplacementArray(87) = "&#243;"
+	
+	FindArray(88) = "ô"	
+	ReplacementArray(88) = "&#244;"
+	
+	FindArray(89) = "õ"	
+	ReplacementArray(89) = "&#245;"
+	
+	FindArray(90) = "ö"
+	ReplacementArray(90) = "&#246;"
+	
+	FindArray(91) = "÷"	
+	ReplacementArray(91) = "&#247;"
+	
+	FindArray(92) = "ø"	
+	ReplacementArray(92) = "&#248;"
+	
+	FindArray(93) = "ù"	
+	ReplacementArray(93) = "&#249;"
+	
+	FindArray(94) = "ú"	
+	ReplacementArray(94) = "&#250;"
+	
+	FindArray(95) = "û"	
+	ReplacementArray(95) = "&#251;"
+	
+	FindArray(96) = "ü"	
+	ReplacementArray(96) = "&#252;"
+	
+	FindArray(97) = "ý"	
+	ReplacementArray(97) = "&#253;"
+	
+	FindArray(98) = "þ"	
+	ReplacementArray(98) = "&#254;"
+	
+	FindArray(99) = "ÿ"	
+	ReplacementArray(99) = "&#255;"
+	
+	pString = Fulltrim(Replace(pString, FindArray, ReplacementArray))	
+	
+	FormatForXML = pString
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.SubName		= "FormatForXML"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:2:AddNotifiedReaders:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure place les noms des personnes notifiées dans les champs "f_NotifiedReadersIndividus", 
+' "f_NotifiedReadersGroupes" et "f_NotifiedReadersMembresGroupes" afin ' qu'ils puissent voir la demande 
+' dans la vue "Suivre/Ce que j'ai reçu"
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub AddNotifiedReaders(pDocument As NotesDocument, pNotifiedReaders As Variant)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim nameTemp As NotesName
+	Dim itemNotifiedReadersGroupe As NotesItem
+	Dim itemNotifiedReadersMembresGroupe As NotesItem
+	Dim itemNotifiedReadersIndividu As NotesItem
+	Dim varListNotifiedReaders List As String
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	'on recupere le champ f_NotifiedReadersGroupes et il est cree s'il n'existe pas
+	Set itemNotifiedReadersGroupe = pDocument.GetFirstItem("f_NotifiedReadersGroupes")
+	If itemNotifiedReadersGroupe Is Nothing Then Set itemNotifiedReadersGroupe = New NotesItem(pDocument, "f_NotifiedReadersGroupes", "", READERS)
+	
+	'on recupere le champ f_NotifiedReadersIndividus et il est cree s'il n'existe pas
+	Set itemNotifiedReadersIndividu = pDocument.GetFirstItem("f_NotifiedReadersIndividus")
+	If itemNotifiedReadersIndividu Is Nothing Then Set itemNotifiedReadersIndividu = New NotesItem(pDocument, "f_NotifiedReadersIndividus", "", READERS)
+	
+	' Récupération du champ devant contenir la liste des personnes appartenant aux groupes notifiées (création si il n'existe pas)
+	Set itemNotifiedReadersMembresGroupe = pDocument.GetFirstItem("f_NotifiedReadersMembresGroupes")
+	If itemNotifiedReadersMembresGroupe Is Nothing Then Set itemNotifiedReadersMembresGroupe = New NotesItem(pDocument, "f_NotifiedReadersMembresGroupes", "", READERS)
+	
+	
+	' List ou Array
+	If Islist(pNotifiedReaders) Or Isarray(pNotifiedReaders) Then
+		Forall NotifiedReader In pNotifiedReaders
+			
+			' Objet
+			If Isobject(NotifiedReader) Then
+				
+				' NotesName
+				If NotifiedReader Isa "NotesName" Then
+					varListNotifiedReaders(NotifiedReader.Canonical) = NotifiedReader.Canonical
+					
+				' NotesItem
+				Elseif NotifiedReader Isa "NotesItem" Then
+					Forall Value1 In NotifiedReader.Values
+						Set nameTemp = New NotesName(Value1)
+						varListNotifiedReaders(nameTemp.Canonical) = nameTemp.Canonical
+					End Forall
+					
+				End If
+				
+			' Chaine de caractères
+			Elseif Isscalar(NotifiedReader) Then
+				Set nameTemp = New NotesName(NotifiedReader)
+				varListNotifiedReaders(nameTemp.Canonical) = nameTemp.Canonical
+				
+			End If
+			
+		End Forall
+		
+	' Valeur/Objet		
+	Else
+		
+		' Objet
+		If Isobject(pNotifiedReaders) Then
+			
+			' NotesName
+			If pNotifiedReaders Isa "NotesName" Then
+				varListNotifiedReaders(pNotifiedReaders.Canonical) = pNotifiedReaders.Canonical
+				
+			' NotesItem
+			Elseif pNotifiedReaders Isa "NotesItem" Then
+				Forall Value2 In pNotifiedReaders.Values
+					Set nameTemp = New NotesName(Value2)
+					varListNotifiedReaders(nameTemp.Canonical) = nameTemp.Canonical
+				End Forall
+				
+			End If
+			
+		' Chaine de caractères
+		Elseif Isscalar(pNotifiedReaders) Then
+			Set nameTemp = New NotesName(pNotifiedReaders)
+			varListNotifiedReaders(nameTemp.Canonical) = nameTemp.Canonical
+			
+		End If
+		
+	End If
+	
+	
+	'boucle sur la liste des valeurs qui contient des individus et/ou groupes
+	Forall nomNotifiedReaders In varListNotifiedReaders
+		Select Case GetActorType(nomNotifiedReaders) 
+		Case ACTORTYPE_GROUP%	: 'le nom est un groupe
+			'ajout dans la liste du groupe a notifier
+			itemNotifiedReadersGroupe.appendToTextList(nomNotifiedReaders)
+			
+		Case ACTORTYPE_PERSON%	: 'le nom est un individu
+			'ajout dans la liste de l'individu a notifier
+			itemNotifiedReadersIndividu.appendToTextList(nomNotifiedReaders)
+		End Select
+	End Forall
+	
+	
+	' On ajoute les groupes dans cette liste en les "explosant" : c'est a dire qu'on va retenir que le nom des personnes composant le groupe ! 
+	Forall nomGroupe In itemNotifiedReadersGroupe.Values
+		' Ajout des membres du groupe à la liste des noms			
+		itemNotifiedReadersMembresGroupe.AppendToTextList(Evaluate(|@Sort(@Unique(@Name([Canonicalize]; @DBLookup("":"NoCache"; "":"names.nsf"; "($VIMGroups)" ; "| + Cstr(nomGroupe) + |"; "Members"; [FAILSILENT]))))|))
+	End Forall
+	
+	
+	' Format canonique
+	pDocument.f_NotifiedReadersIndividus = Evaluate(|@Sort(@Unique(@Trim(@Name([Canonicalize]; f_NotifiedReadersIndividus))))|, pDocument)
+	pDocument.f_NotifiedReadersGroupes = Evaluate(|@Sort(@Unique(@Trim(@Name([Canonicalize]; f_NotifiedReadersGroupes))))|, pDocument)
+	pDocument.f_NotifiedReadersMembresGroupes = Evaluate(|@Sort(@Unique(@Trim(@Name([Canonicalize]; f_NotifiedReadersMembresGroupes))))|, pDocument)
+	
+	
+	' Champs lecteurs	
+	itemNotifiedReadersGroupe.IsReaders = True
+	itemNotifiedReadersGroupe.IsSummary = True
+	itemNotifiedReadersMembresGroupe.IsReaders = True
+	itemNotifiedReadersMembresGroupe.IsSummary = True
+	itemNotifiedReadersIndividu.IsReaders = True
+	itemNotifiedReadersIndividu.IsSummary = True
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType		= LOGLEVEL_EMERG%
+		LogEntry.LibName		= "Forms_Libs"
+		LogEntry.SubName	= "AddNotifiedReaders"
+		LogEntry.Erl 				= Erl
+		LogEntry.Err				= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+	
+End Sub
+
+
+'++LotusScript Development Environment:2:1:CanUserSaveNewDraft:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette fonction renvoie True si l'utilisateur à le droit de sauvegarder un nouveau brouillon, False sinon
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function CanUserSaveNewDraft(pDB As NotesDatabase, pUserName As NotesName, pTypeForm As String) As Variant 
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' Vue des documents de paramétrage des formulaires
+	Dim viewFormParams As NotesView
+	Set viewFormParams = pDB.GetView("v_FormsParams")	
+	If viewFormParams Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_FormsParams"" !"
+	
+	' Document de paramétrage du formulaire
+	Dim docFormParams As NotesDocument
+	Set docFormParams = viewFormParams.GetDocumentbyKey(pTypeForm, True)
+	
+	
+	' Vue affichant le nombre de brouillons par formulaire	
+	Dim DraftCountView As NotesView
+	Set DraftCountView = pDB.getView("v_NbBrouillons")
+	Call DraftCountView.Refresh
+	
+	' Navigateur de vue
+	Dim Nav As NotesViewNavigator
+	Set Nav = DraftCountView.CreateViewNav
+	
+	' Entrée de la vue	
+	Dim Entry As NotesViewEntry
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' Si les brouillons ne sont pas autorisés
+	If Ucase(docFormParams.Draft_Allowed(0)) <> "Y" Then
+		CanUserSaveNewDraft = False
+		
+	' Si les brouillons sont autorisés		
+	Else		
+		
+		' Si le nombre max de brouillons n'est pas limité
+		If Cstr(docFormParams.Draft_MaxCount(0)) = "-1" Then
+			CanUserSaveNewDraft = True
+			
+		' Si le nombre max de brouillons est précisé
+		Elseif (Cstr(docFormParams.Draft_MaxCount(0)) <> "") And Isnumeric(docFormParams.Draft_MaxCount(0)) Then
+			
+			' Recherche d'une entrée correspondant au formulaire et à l'utilisateur dans la liste des brouillons			
+			Set Entry = DraftCountView.GetEntryByKey(Ucase(pTypeForm + "\" + pUserName.Abbreviated),True)
+			
+			' Si on n'a pas trouvé de document correspondant
+			If Entry Is Nothing Then
+				If Cint(docFormParams.Draft_MaxCount(0)) > 0 Then
+					CanUserSaveNewDraft = True
+				Else
+					CanUserSaveNewDraft = False
+				End If
+			Else
+				
+				' On remonte à la catégorie contenant le document.
+				' La ligne contient le nombre total de brouillons autorisés		
+				Set Entry = Nav.getPrevCategory(Entry)
+				
+				' Si le nombre de brouillon stockés est supérieur ou égale au nombre de brouillons autorisé, on refuse		
+				If Cint(Entry.ColumnValues(1)) >= Cint(docFormParams.Draft_MaxCount(0)) Then
+					CanUserSaveNewDraft=False
+				Else
+					CanUserSaveNewDraft = True
+				End If
+				
+			End If
+			
+		' Si le nombre max de brouillons n'est pas précisé
+		Else
+			CanUserSaveNewDraft = False
+			
+		End If
+		
+	End If
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType		= LOGLEVEL_EMERG%
+		LogEntry.LibName		= "Forms_Libs"
+		LogEntry.SubName	= "CanUserSaveNewDraft"
+		LogEntry.Erl 				= Erl
+		LogEntry.Err				= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Function
+	
+End Function

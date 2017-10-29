@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C800498301" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="a1a" sequence="1" unid="67201E7071908E8DC1256F070032724C">
+<created><datetime dst="true">20040906T111100,60+02</datetime></created>
+<modified><datetime>20171029T102308,11-03</datetime></modified>
+<revised><datetime dst="true">20040906T111100,46+02</datetime></revised>
+<lastaccessed><datetime>20171029T102303,45-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102303,45-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MANUEL UBALDO IGLESIAS MONTES - CV10273/OU=users/O=PSA</name><name>CN=MANUEL GARCIA VELEZ - PG24295/OU=users/O=PSA</name></updatedby>
+<item name="$TITLE"><textlist><text>envoye.gif</text></textlist></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide"><number>1</number></item>
+<item name="$ImagesHigh"><number>1</number></item>
+<item name="$ImagesColorize"><number>0</number></item>
+
+<item name="$ImageNames"><textlist><text>envoye.gif</text></textlist></item>
+<item name="$DesignerVersion"><text>5</text></item></note>

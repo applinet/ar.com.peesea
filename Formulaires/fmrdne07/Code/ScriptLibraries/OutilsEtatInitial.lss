@@ -1,0 +1,89 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Use "OutilsToutEtat"
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Function  SauverModeleOk
+Declare Sub SauverModele
+Declare Sub SauverBrouillon
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:1:SauverModeleOk:1:8
+Function  SauverModeleOk
+	Dim vNbModeles As NotesView
+	Dim vFormsParams As NotesView
+	Dim params As NotesDocument
+	Dim entry As NotesViewEntry
+	Dim nav As NotesViewNavigator
+	Dim nbMaxModeles, nbModeles As Integer
+	Dim key As String
+	
+	Set vFormsParams = db.getView("v_FormsParams")
+	Call vFormsParams.refresh
+	Set params = vFormsParams.getDocumentByKey(docCour.f_TypeForm(0))
+	nbMaxModeles = params.f_NbMaxModeles(0)
+	
+	REM On contrôle que le nombre de Modeles existants n'est pas égal à nbMaxModeles 
+	
+	Set vNbModeles = db.getView("v_NbModeles")
+	Call vNbModeles.refresh  
+	Set nav = vNbModeles.CreateViewNav
+	
+	key =docCour.f_TypeForm(0)+"\"+utilisateur.Abbreviated 
+	
+	
+	Set entry =vNbModeles.GetEntryByKey(key,True )
+	If entry Is Nothing Then
+		SauverModeleOK = True
+		Exit Function
+	End If
+	
+	Set entry = nav.getPrevCategory(entry)
+	
+	nbModeles = Cint(entry.ColumnValues(1))
+	
+	If nbModeles >= nbMaxModeles Then
+		Print ""
+		msg("FR")= "Vous ne pouvez avoir plus de "+nbMaxModeles +" modèles pour ce type de formulaire."
+		msg("ES")= "Vous ne pouvez avoir plus de "+nbMaxModeles +" modèles pour ce type de formulaire._ES_"
+		msg("EN")="Vous ne pouvez avoir plus de "+nbMaxModeles +" modèles pour ce type de formulaire._EN_"
+		msg("PT")="Vous ne pouvez avoir plus de "+nbMaxModeles +" modèles pour ce type de formulaire._PT_"
+		
+		Call AddErrMsg(msg(lng))
+		SauverModeleOK=False
+		Exit Function
+	Else
+		SauverModeleOK = True
+	End If
+	Print ""
+	
+End Function
+'++LotusScript Development Environment:2:2:SauverModele:1:8
+Sub SauverModele
+	If SauverModeleOK Then
+		docCour.f_EstModele= 1
+		docCour.f_EnregActeur=utilisateur.canonical
+		docCour.f_EnregDate=Now
+		
+		Msg("FR") = "Votre formulaire a été sauvé en tant que modèle."
+		Msg("ES") = "Votre formulaire a été sauvé en tant que modèle_ES_."
+		Msg("EN") = "Votre formulaire a été sauvé en tant que brouillon._EN_"
+		Msg("PT") = "Votre formulaire a été sauvé en tqnt que brouillon._PT_"
+		Call AddOkMsg(Msg(lng))
+		docCour.SaveOptions="1"
+	Else
+		docCour.f_EstModele= 99
+	End If
+End Sub
+'++LotusScript Development Environment:2:2:SauverBrouillon:1:8
+Sub SauverBrouillon
+	docCour.f_EstBrouillon= 1
+	docCour.f_EnregActeur=utilisateur.canonical
+	docCour.f_EnregDate=Now
+	Msg("FR") = "Votre formulaire a été sauvé."
+	Msg("ES") = "Votre formulaire a été sauvé en brouillon_ES_."
+	Msg("EN") = "Votre formulaire a été sauvé en brouillon_EN_."
+	Msg("PT") = "Votre formulaire a été sauvé en brouillon_PT_."
+	Call AddOkMsg(Msg(lng))
+	docCour.SaveOptions="1"
+End Sub

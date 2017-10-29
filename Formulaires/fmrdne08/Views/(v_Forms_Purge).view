@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004968DB'>
+<noteinfo noteid='88e' unid='174E94B8B69E4A2DC125753C002612C6' sequence='82'>
+<created><datetime dst='true'>20090112T085551,74+02</datetime></created>
+<modified><datetime>20171029T102159,25-03</datetime></modified>
+<revised><datetime>20170307T090545,33-03</datetime></revised>
+<lastaccessed><datetime>20171029T102154,95-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102154,95-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_Forms_Purge)|v_Forms_Purge</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+FAECACAACgBmX1R5cGVGb3JtBQAKAGZfVHlwZUZvcm0DAAIAIAAKAGZfVHlwZUV0YXQFAAoAZl9U
+eXBlRXRhdAMAAgAMAAIAJDKkAAMAAgAOAAIAJDOQAFYBAwACABwABwBmX1RpdHJlAAUABwBmX1Rp
+dHJlAAMABQBQAEsACAAKAAoAAgACAAcACwAJAAQAZl9UeXBlRm9ybWZfVHlwZUV0YXQkMiQzZl9U
+aXRyZWZfRGVtYW5kZXVyJENvbmZsaWN0JFJFRgAEAAQAAAA2AAUABABGb3JtAQAMAG1fRm9ybVBh
+cmFtcwsCBAAFAAkAJENvbmZsaWN0AGgBHgEcAgMABwASAAwACUwxUzNTNFM2UzdT
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+WgAGAABEAGYAAAAKAIBmAAoACgCAZgAUAAIAgGYAFgACAIBmABgABwCAZgAfAAsAZl9UeXBlRm9y
+bWZfVHlwZUV0YXQkMiQzZl9UaXRyZWZfRGVtYW5kZXVy
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAGAAQAiAAAAFZDAQAKAAQAIgAAADEABQAOCIIAAAAAAAAAAAICAAAAVkMBAAoABAAiAAAAVwAG
+AA4IgAAAAAAAAAAAAgIAAABWQwEAAgALAA4AAACGAAcADgiCAAAAAAAAAAACAgAAAFZDAQACAAIA
+HAAAANAACAAOCIAAAAAAAAAAAAICAAAAVkMBAAcACQAeAAAAUAAJAA4IggAAAAAAAAAAAgIAAABW
+QwEACwAJAAAAAADKAAEADgiCAAAAAAAAAAACAgAAAGZfVHlwZUZvcm1Gb3JtIgACACAACgBmX1R5
+cGVGb3JtBQAKAGZfVHlwZUZvcm0DAGZfVHlwZUV0YXRFdGF0IgACACAACgBmX1R5cGVFdGF0BQAK
+AGZfVHlwZUV0YXQDACQyTGFzdCBNb2RpZnkOAAIADAACACQypAADACQzSUQcAAIADgACACQzkABW
+AQMABwAMAAUACTBTMEUAZl9UaXRyZUJyb3VpbGxvbh4AAgAcAAcAZl9UaXRyZQAFAAcAZl9UaXRy
+ZQADAGZfRGVtYW5kZXVyRGVtYW5kZXVyJgABAAAAAQEACQEAAAoBAQ4KAAAvAK0rAQABAAEAAAAA
+AAAAAABXQwEACggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAoI
+AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAKCAAAAAAAAAAAAAAA
+AAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEACggAAAAAAAAAAAAAAAAAAAAAAAAEAAAA
+AAD//wAAAAAAAAAAAAAAAAAAV0MBAAoIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAA
+AAAAAAAAAFdDAQAKCAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCABAA
+AAABAP///wABAPf39wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQCAgIAAAQAA
+AAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Tahoma</text><text>6</text><text>38</text><text>Tahoma</text><text>7</text><text
+>38</text><text>Tahoma</text><text>8</text><text>38</text><text>Tahoma</text><text
+>9</text><text>38</text><text>Tahoma</text></textlist></item>
+<item name='$Comment' sign='true'><text>Vue des documents pour la purge</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

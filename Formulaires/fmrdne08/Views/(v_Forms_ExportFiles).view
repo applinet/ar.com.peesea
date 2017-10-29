@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004968DB'>
+<noteinfo noteid='e72' unid='0AC8BD4AB9AB911EC1257C930051DA9E' sequence='17'>
+<created><datetime dst='true'>20140306T165403,82+02</datetime></created>
+<modified><datetime>20171029T102206,31-03</datetime></modified>
+<revised><datetime>20170307T090550,85-03</datetime></revised>
+<lastaccessed><datetime>20171029T102159,21-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102159,21-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_Forms_ExportFiles)|v_Forms_ExportFiles</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+oAACADQAFABGb3Jtc19FeHBvcnRGaWxlX0tleQUAFABGb3Jtc19FeHBvcnRGaWxlX0tleQMABQAw
+ACsAAwAUAAkABABGb3Jtc19FeHBvcnRGaWxlX0tleSRDb25mbGljdCRSRUYABAAEAAAAKAAFAAQA
+Rm9ybQEAEwBtX0Zvcm1zX0V4cG9ydEZpbGVzAAoCAwAHAA4ACAAJTDFTMlMzUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+IQABAABEAGYAAAAUAEZvcm1zX0V4cG9ydEZpbGVfS2V5
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAIACAAAAFZDAQAUAAMANgAAAPUAAQAACgAAAAAAAAAAAAICAAAARm9ybXNfRXhwb3J0Rmls
+ZV9LZXlLRVk2AAIANAAUAEZvcm1zX0V4cG9ydEZpbGVfS2V5BQAUAEZvcm1zX0V4cG9ydEZpbGVf
+S2V5AwAmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAA
+AAAAAAAAAAABAAAAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wAFAP///wABAAAAAAAA
+AAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Vue des fichiers d'export planifiés</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

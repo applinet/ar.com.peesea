@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800498301'>
+<noteinfo noteid='cfa' unid='4F71D88F1475C288C125780F002D80C1' sequence='19'>
+<created><datetime dst='true'>20110105T101700,81+02</datetime></created>
+<modified><datetime>20171029T102311,01-03</datetime></modified>
+<revised><datetime>20170606T011409,11-03</datetime></revised>
+<lastaccessed><datetime>20171029T102305,57-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102305,57-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_Forms_MajActeursWorkflowMembresGroupe)|v_Forms_MajActeursWorkflowMembresGroupe</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+ZgECADAAAwAkMTEABQAYAGZfQWN0ZXVyc1dvcmtmbG93R3JvdXBlcwEAAgAjI4UCAwACAEQAAwAk
+MTIAAgAGAAAAAAAAAAUAHwBmX0FjdGV1cnNXb3JrZmxvd01lbWJyZXNHcm91cGVzALQCAQACACMj
+hQIDAAIAJgACACQ5AgAGAAAAAAAAAAUACwBmX0RlbWFuZGV1cgC0AgMAAgAUAAQARm9ybQUABABG
+b3JtAwACACQAAgAkNwUACgBmX0V0YXROb21zAQADAEZSOgBgAl4BAwAFADIALQAHAAMAAwACAAQA
+AgAJAAQAJDExJDEyJDlGb3JtJDckQ29uZmxpY3QkUkVGAAQABAAAAEIABQAYAGZfQWN0ZXVyc1dv
+cmtmbG93R3JvdXBlc14BAQAAAAsCBQAGAGZfRXRhdAAAAAAAAAAAAAAPAhwCAwAHABoAEwAJTDFT
+NVM2UzdTOFMyRTlTMTBTAA==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+NwAFAABECGYAAAADAIBmAAMAAwCAZgAGAAIAgGYACAAEAIBmAAwAAgAkMTEkMTIkOUZvcm0kNw==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAFAA0AiAAAAFZDAQADAA0APgAAAOYAAQACCIABAAAAAAAAAAICAAAAVkMBAAMAFABSAAAAoQEB
+AAQIgAAAAAAAAAAAAgIAAABWQwEAAgAJADIAAACiAAEAAAiAAAAAAAAAAAACAgAAAFZDAQAEAAQA
+FgAAAF4AAQAJCIAAAAAAAAAAAAICAAAAVkMBAAIABAAwAAAAhwABAAAIgAAAAAAAAAAAAgIAAAAk
+MTFBY3RldXJzR3JvdXBlPgACADAAAwAkMTEABQAYAGZfQWN0ZXVyc1dvcmtmbG93R3JvdXBlcwEA
+AgAjI4UCAwAHAAwABQAJMFI0UwAkMTJBY3RldXJzTWVtYnJlc0dyb3VwZVIAAgBEAAMAJDEyAAIA
+BgAAAAAAAAAFAB8AZl9BY3RldXJzV29ya2Zsb3dNZW1icmVzR3JvdXBlcwC0AgEAAgAjI4UCAwAH
+AAwABQAJNlM5UwAkOURlbWFuZGV1cjIAAgAmAAIAJDkCAAYAAAAAAAAABQALAGZfRGVtYW5kZXVy
+ALQCAwAHAAoAAwAJNFMARm9ybUZvcm0WAAIAFAAEAEZvcm0FAAQARm9ybQMAJDdFdGF0MAACACQA
+AgAkNwUACgBmX0V0YXROb21zAQADAEZSOgBgAl4BAwAHAAoAAwAJNlMAJgABAAAAAQEACQEAAAoB
+AQ4KAAAvAK0rAQABAAEAAAAAAAAAAABXQwEACgkAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAD//wAA
+AAAAAAAAAAAAAAAAV0MBAAoJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAA
+AFdDAQAKCQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEACgkAAAAA
+AAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAoJAAAAAAAAAAAAAAAAAAAA
+AAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAEA9/f3AAEAAAAAAAAAAAAAAAAA
+AQD///8AAQD///8AAAABAAAAAAABAAAAAAABAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Vue des groupes et de leurs membrespour les ActeursWorkflow afin de pouvoir recalculer avec le form_cron</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='d7a' unid='927BC9E87ECED07FC1257D5B0027A68B' sequence='25'>
+<created><datetime dst='true'>20140922T091305,39+02</datetime></created>
+<modified><datetime>20171029T101958,92-03</datetime></modified>
+<revised><datetime>20170911T114754,01-03</datetime></revised>
+<lastaccessed><datetime>20171029T101953,45-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101953,45-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_PRESBOU_Print_CheckList)|v_PRESBOU_Print_CheckList</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+1AACAA4AAgAkM5AAVgEDAAUAHgAZAAMAAgAJAAQAJDMkQ29uZmxpY3QkUkVGAAQABAAAAHYABQAK
+AGZfVHlwZUZvcm1iAQEABwBQUkVTQk9VAAoCBAAFABIARm9ybXNfVGVtcERvY3VtZW50AQABADEA
+CwIEABwCBQAGAGZfRXRhdAAAAAAAAABAWEAKAgQAHAIFAAkAJENvbmZsaWN0AGgBHgEcAgMABwAs
+ACUACUwxUzZTN1M5UzEwUzEyUzEzUzE1UzE2UzE4UzE5UzIxUzIyUwA=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEgGYAAAACACQz
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAUAiAAAAFZDAQACABAAHAAAANAABQAOCIAAAAAAAAAAAAICAAAAJDNEb2N1bWVudFVuaXF1
+ZUlEHAACAA4AAgAkM5AAVgEDAAcADAAFAAkwUzBFACYAAQAAAAEBAAkBAAAKAQEOCgAALwCtKwEA
+AQABAAAAAAAAAAAAV0MBAAoIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAA
+AEIAEAAAAAEA////AAEA9/f3AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAICA
+gAABAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Tahoma</text></textlist></item>
+<item name='$FormFormula' summary='true' sign='true'><formula>"m_PRESBOU_Print_CheckList"</formula></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

@@ -1,0 +1,347 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+Use "Forms_Constants"
+
+Use "LogEntry"
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Initialize
+Declare Private Sub Hooks_HandleError(pSubName As String)
+Declare Function Hook_Purge_GetDateLimitDraft(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+Declare Function Hook_Purge_GetDateLimitModel(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+Declare Function Hook_Purge_GetDateLimitInterm(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+Declare Function Hook_Purge_GetDateLimitValid(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+Declare Function Hook_Purge_GetDateLimitDenied(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+Declare Function Hook_Purge_GetDateLimitCancelled(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+End Sub
+'++LotusScript Development Environment:2:2:Hooks_HandleError:5:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+'	Cette procédure se charge d'enregistrer les messages d'erreur. Elle ne sert qu'a allèger les codes
+' 										en regroupant les lignes identiques
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Private Sub Hooks_HandleError(pSubName As String)
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_CRITICAL%
+		LogEntry.LibName			= "PerfRHCore_Hooks_Purge"
+		LogEntry.SubName		= pSubName
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:Hook_Purge_GetDateLimitDraft:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Retourne la date limite de conservation
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function Hook_Purge_GetDateLimitDraft(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim TempVar As Variant
+	Dim TempItem As NotesItem
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' Récupération du paramètre de délai d'attente
+	Set TempItem = pParamDocument.GetFirstItem("Draft_KeepingDays")
+	If TempItem Is Nothing Then
+		Error lsERR_NOTES_ITEM_MISSING, "Champ de paramétrage introuvable ! (""Draft_KeepingDays"")"
+	Elseif Trim(TempItem.Text) = "" Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage vide ! (""Draft_KeepingDays"")"
+	Elseif Cint(Trim(TempItem.Text)) < 0 Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage mal renseigné ! (""Draft_KeepingDays"")"
+	End If
+	
+	TempVar = Datenumber(Year(pDocument.Lastmodified), Month(pDocument.Lastmodified), Day(pDocument.Lastmodified)) + pParamDocument.Draft_KeepingDays(0)
+	
+	Hook_Purge_GetDateLimitDraft = TempVar
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Purge_GetDateLimitDraft")
+	Exit Function
+	
+End Function
+'++LotusScript Development Environment:2:1:Hook_Purge_GetDateLimitModel:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Retourne la date limite de conservation
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function Hook_Purge_GetDateLimitModel(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim TempVar As Variant
+	Dim TempItem As NotesItem
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' Récupération du paramètre de délai d'attente
+	Set TempItem = pParamDocument.GetFirstItem("Model_KeepingDays")
+	If TempItem Is Nothing Then
+		Error lsERR_NOTES_ITEM_MISSING, "Champ de paramétrage introuvable ! (""Model_KeepingDays"")"
+	Elseif Trim(TempItem.Text) = "" Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage vide ! (""Model_KeepingDays"")"
+	Elseif Cint(Trim(TempItem.Text)) < 0 Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage mal renseigné ! (""Model_KeepingDays"")"
+	End If
+	
+	TempVar = Datenumber(Year(pDocument.Lastmodified), Month(pDocument.Lastmodified), Day(pDocument.Lastmodified)) + pParamDocument.Model_KeepingDays(0)
+	
+	Hook_Purge_GetDateLimitModel = TempVar
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Purge_GetDateLimitModel")
+	Exit Function
+	
+End Function
+
+
+
+'++LotusScript Development Environment:2:1:Hook_Purge_GetDateLimitInterm:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Retourne la date limite de conservation
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function Hook_Purge_GetDateLimitInterm(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim TempVar As Variant
+	Dim TempItem As NotesItem
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' Récupération du paramètre de délai d'attente
+	Set TempItem = pParamDocument.GetFirstItem("Interm_KeepingDays")
+	If TempItem Is Nothing Then
+		Error lsERR_NOTES_ITEM_MISSING, "Champ de paramétrage introuvable ! (""Interm_KeepingDays"")"
+	Elseif Trim(TempItem.Text) = "" Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage vide ! (""Interm_KeepingDays"")"
+	Elseif Cint(Trim(TempItem.Text)) < 0 Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage mal renseigné ! (""Interm_KeepingDays"")"
+	End If
+	
+	TempVar = Cdat(Left(pDocument.F_HISTODATES(0),10)) + pParamDocument.Interm_KeepingDays(0)
+	
+	Hook_Purge_GetDateLimitInterm = TempVar
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Purge_GetDateLimitInterm")
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:Hook_Purge_GetDateLimitValid:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Retourne la date limite de conservation
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function Hook_Purge_GetDateLimitValid(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim TempVar As Variant
+	Dim TempItem As NotesItem
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+		' Récupération du paramètre de délai d'attente
+	Set TempItem = pParamDocument.GetFirstItem("Valid_KeepingDays")
+	If TempItem Is Nothing Then
+		Error lsERR_NOTES_ITEM_MISSING, "Champ de paramétrage introuvable ! (""Valid_KeepingDays"")"
+	Elseif Trim(TempItem.Text) = "" Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage vide ! (""Valid_KeepingDays"")"
+	Elseif Cint(Trim(TempItem.Text)) < 0 Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage mal renseigné ! (""Valid_KeepingDays"")"
+	End If
+	
+	TempVar = Cdat(Left(pDocument.F_HISTODATES(0),10)) + pParamDocument.Valid_KeepingDays(0)
+	
+	Hook_Purge_GetDateLimitValid = TempVar
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Purge_GetDateLimitValid")
+	Exit Function
+	
+End Function
+
+
+
+'++LotusScript Development Environment:2:1:Hook_Purge_GetDateLimitDenied:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Retourne la date limite de conservation
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function Hook_Purge_GetDateLimitDenied(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim TempVar As Variant
+	Dim TempItem As NotesItem
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+		' Récupération du paramètre de délai d'attente
+	Set TempItem = pParamDocument.GetFirstItem("Denied_KeepingDays")
+	If TempItem Is Nothing Then
+		Error lsERR_NOTES_ITEM_MISSING, "Champ de paramétrage introuvable ! (""Denied_KeepingDays"")"
+	Elseif Trim(TempItem.Text) = "" Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage vide ! (""Denied_KeepingDays"")"
+	Elseif Cint(Trim(TempItem.Text)) < 0 Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage mal renseigné ! (""Denied_KeepingDays"")"
+	End If
+	
+	TempVar = Cdat(Left(pDocument.F_HISTODATES(0),10)) + pParamDocument.Denied_KeepingDays(0)
+	
+	Hook_Purge_GetDateLimitDenied = TempVar
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Purge_GetDateLimitDenied")
+	Exit Function
+	
+End Function
+
+
+'++LotusScript Development Environment:2:1:Hook_Purge_GetDateLimitCancelled:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Retourne la date limite de conservation
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function Hook_Purge_GetDateLimitCancelled(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim TempVar As Variant
+	Dim TempItem As NotesItem
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' Récupération du paramètre de délai d'attente
+	Set TempItem = pParamDocument.GetFirstItem("Cancelled_KeepingDays")
+	If TempItem Is Nothing Then
+		Error lsERR_NOTES_ITEM_MISSING, "Champ de paramétrage introuvable ! (""Cancelled_KeepingDays"")"
+	Elseif Trim(TempItem.Text) = "" Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage vide ! (""Cancelled_KeepingDays"")"
+	Elseif Cint(Trim(TempItem.Text)) < 0 Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage mal renseigné ! (""Cancelled_KeepingDays"")"
+	End If
+	
+	TempVar = Cdat(Left(pDocument.F_HISTODATES(0),10)) + pParamDocument.Cancelled_KeepingDays(0)
+	
+	Hook_Purge_GetDateLimitCancelled = TempVar
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Purge_GetDateLimitCancelled")
+	Exit Function
+	
+End Function

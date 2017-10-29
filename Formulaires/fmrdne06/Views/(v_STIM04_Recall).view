@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='f16' unid='28BF8764B53191D4C1257D270027C8ED' sequence='32'>
+<created><datetime dst='true'>20140801T091433,41+02</datetime></created>
+<modified><datetime>20171029T102000,58-03</datetime></modified>
+<revised><datetime>20170911T114753,61-03</datetime></revised>
+<lastaccessed><datetime>20171029T101954,79-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101954,79-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_STIM04_Recall)|v_STIM04_Recall</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+vAACAC4AAgAkMQUAFQBTVElNMDRfUGFydG5lclNvY2lldGUAAQABAPUAogJXAQMABQAeABkAAwAC
+AAkABAAkMSRDb25mbGljdCRSRUYABAAEAAAATAAFAAQARm9ybQEACABtX1NUSU0wNAoCBAAFAAYA
+Zl9FdGF0AAAAAAAAAEBYQAoCBAAcAgUACQAkQ29uZmxpY3QAaAEeARwCAwAHAB4AFwAJTDFTM1M0
+UzZTN1M5UzEwUzEyUzEzUwA=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEAGYAAAACACQx
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAIACAAAAFZDAQACABcAOgAAAIQAAQAACgAAAAAAAAAAAAICAAAAJDFEYXRlIGRlIGZpbiBk
+ZSB2YWxpZGl0gjoAAgAuAAIAJDEFABUAU1RJTTA0X1BhcnRuZXJTb2NpZXRlAAEAAQD1AKICVwED
+AAcACgADAAk2UwAmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAA
+AAAAAAAAAAAAAAAAAAABAAAAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wAFAP///wAB
+AAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

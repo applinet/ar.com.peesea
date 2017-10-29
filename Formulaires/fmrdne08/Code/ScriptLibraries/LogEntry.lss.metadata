@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004968DB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="b12" sequence="73" unid="9908058BE8AEFE5CC125763B004FE0FA">
+<created><datetime dst="true">20090924T163229,38+02</datetime></created>
+<modified><datetime>20171029T102202,21-03</datetime></modified>
+<revised><datetime>20170307T090547,83-03</datetime></revised>
+<lastaccessed><datetime>20171029T102156,73-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102156,73-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ALEXANDRE AUGEN - U251305/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=NICOLAS ENRICO LAURENZANO - E363578/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name>CN=JUAN BAUTISTA CABRAL - E376693/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>7</text></item>
+<item name="$TITLE" sign="true"><text>LogEntry</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$Comment"><text>Interfacage avec la log applicative</text></item>
+
+
+<item name="$POID"><datetime>20170307T090547,83-03</datetime></item></note>

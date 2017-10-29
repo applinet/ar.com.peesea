@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='6be' unid='ACA142AD4A24CEDDC125732300452C0F' sequence='98'>
+<created><datetime dst='true'>20070725T143532,63+02</datetime></created>
+<modified><datetime>20171029T101951,52-03</datetime></modified>
+<revised><datetime>20170911T114741,87-03</datetime></revised>
+<lastaccessed><datetime>20171029T101948,46-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101948,46-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$TITLE' sign='true'><text>(v_VIDEO_Etat1)|v_VIDEO_Etat1</text></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAEAAQACAAAAFZDAwACAAAAEgAAAFAAAQAACgABAAAAAAAAAAICAAAAVkMAABUAEQAAAAAAjQAB
+AAAKggAAAAAAAAAAAgIAAABWQwAAEAAKAC4AAABQAAEAAAqCAAAAAAAAAAACAgAAAFZDAAACAAAA
+CgAKAFAAAQAACoIAAAAAAAAAAAICAAAAJDMSAAIAEAACACQzAQABADEAAwBWSURFT19UaXRyZUNv
+dXJ0VmlkZW9UaXRyZSBDb3VydCBWaWSCb1ZJREVPX1RpdHJlVmlkZW9UaXJ0ZSBsb25nLgACACwA
+EABWSURFT19UaXRyZVZpZGVvBQAQAFZJREVPX1RpdHJlVmlkZW8DACQyCgAAAAgAkgADAAEFAQAE
+AH9BMP8mAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAA
+AAAAAAAAAAABAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAA
+AAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABC
+AAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAA
+AQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+9gAFAEYAQgAFAAIAFQAQAAkABAAkM1ZJREVPX1RpdHJlQ291cnRWaWRlb1ZJREVPX1RpdHJlVmlk
+ZW8kQ29uZmxpY3QkUkVGAgAQAAIAJDMBAAEAMQADAAIALAAQAFZJREVPX1RpdHJlVmlkZW8FABAA
+VklERU9fVGl0cmVWaWRlbwMABAAEAAAAUAAFAAoAZl9UeXBlRm9ybQEABQBWSURFTwAKAgQABQAG
+AGZfRXRhdAAAAAAAAAAAAEAKAgQAHAIFAAkAJENvbmZsaWN0AGgBHgEcAgMABwAeABcACUwxUzNT
+NFM2UzdTOVMxMFMxMlMxM1MA
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEiGYHAAACACQz
+</rawitemdata></item></note>
+

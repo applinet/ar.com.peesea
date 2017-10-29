@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='ff6' unid='14A488AC49388ECDC1257ED7003BE383' sequence='33'>
+<created><datetime dst='true'>20151007T125408,67+02</datetime></created>
+<modified><datetime>20171029T102001,58-03</datetime></modified>
+<revised><datetime>20170911T114755,87-03</datetime></revised>
+<lastaccessed><datetime>20171029T101955,45-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101955,45-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$SubForms' sign='true'><textlist><text>sm_ARIEX_LngsDispos | sm_ARIEX_LngsDispos</text><text
+>sm_Forms_Includes | sm_Forms_Includes</text><text>sm_Forms_JavaScript | sm_Forms_JavaScript</text><text
+>sm_Forms_Trads_</text><text> </text></textlist></item>
+<item name='$SubForm_RepIDs' sign='true'><textlist><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text><text>0000000000000000</text><text
+>0000000000000000</text></textlist></item>
+<item name='$Flags'><text/></item>
+<item name='f_TypeForm' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_TitresForm' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='f_EtatIcone' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EtatNoms' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EtatTerminal' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_TypeEtat' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_AuteursAdmin' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_LecteursPotentiels' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_AuteursPotentiels' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursMembresGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowIndividus' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowGroupes' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowMembresGroupes' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EstModele' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='F_ENREGDATE' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='F_ENREGACTEUR' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='F_ADETRUIRE' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_CompterUtilisation' summary='false' sign='true'><number>0</number></item>
+<item name='URL' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_NotifiedReadersIndividus' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_NotifiedReadersGroupes' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_NotifiedReadersMembresGroupes' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Forms_TempDocument' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='IDDoc' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='ParentDocUNID' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>ParentDocUNID</text><text>IDDoc</text><text
+>Forms_TempDocument</text><text>f_NotifiedReadersMembresGroupes</text><text
+>f_NotifiedReadersGroupes</text><text>f_NotifiedReadersIndividus</text><text
+>URL</text><text>f_CompterUtilisation</text><text>f_ADetruire</text><text
+>f_EnregActeur</text><text>f_EnregDate</text><text>f_EstModele</text><text
+>f_ActeursWorkflowMembresGroupes</text><text>f_ActeursWorkflowGroupes</text><text
+>f_ActeursWorkflowIndividus</text><text>f_ActeursMembresGroupe</text><text
+>f_ActeursGroupe</text><text>f_ActeursIndividu</text><text>f_AuteursPotentiels</text><text
+>f_LecteursPotentiels</text><text>f_AuteursAdmin</text><text>f_TypeEtat</text><text
+>f_EtatTerminal</text><text>f_EtatNoms</text><text>f_EtatIcone</text><text
+>f_Etat</text><text>f_TitresForm</text><text>f_TypeForm</text></textlist></item>
+<item name='$TITLE' sign='true'><textlist><text>m_ARIEX_AccessDenied_depreciated</text><text
+>m_ARIEX_AccessDenied_depreciated</text></textlist></item>
+<item name='$Comment' sign='true'><text>_depreciated V16.5</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_ARIEX_AccessDenied_depreciated</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gv9GAAEAAAAAAAAAAACgBasqoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAACUAKYwAwAAAAEASmF2YXNjcmlwdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AQAJCIL/RgACAAAAAAAAAAAAoAWrKqAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAlACmMAMAAAACAEhUTUwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAEABAiC/0YAAwAAAAAAAAAAAKAFzDWgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAJQApjADAAAAAwBIVE1MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAQIgQKC/1oABAAAAAAAAAAAAHAIAAA4BAgA0AKgBXAIQAsQDuAQsBOAFgAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAJWEcAgKADgECgAAAGQAAQAAAAYAAACDBAQA3QYAAIX/
+hf8IAAEAAgrSCAEA/wAAAN4GAACF/90GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv9AAIAA
+AQUGMAIACAAAAAACAQACCBIAAAAAAAAACgAAAAAAEgAAABAAAQAFAEFSSUVYAAMAZl9UeXBlRm9y
+bWIOAQCEAAAAAAAAAAAA3gYAAIr/3QYAAIX/hf8IAAEAAgrSCAEA/wAAAN4GAACF/4ECgv9aAAUA
+AAAAAAAAAACgBQAAoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+gQAAAACVhwAAAAAAAAAAAAAAAAEAAAAEAAAAgwQFAIX/CAABAAAK3QYAAK3/cf81AAAAAAADABgA
+EwAAAAAAAAAAAAAAAAAAAAAAAAAAAHNtX0FSSUVYX0xuZ3NEaXNwb3MArf82AA4ACAAAACoAc21f
+QVJJRVhfTG5nc0Rpc3BvcyB8IHNtX0FSSUVYX0xuZ3NEaXNwb3MArgLeBgAArgCF/wgAAQAACoEC
+gv9aAAYAAAAAAAAAAAA4BAAAOAQIANACoAVwCEALEA7gELATgBYAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAgQAAAACVhDgECgA4BAoAAABkAAEAAAAGAAAAgwQGAIX/CAABAAAK3QYAAK3/cf8zAAAA
+AAADABgAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAHNtX0Zvcm1zX0luY2x1ZGVzAK3/MgAOAAgAAAAm
+AHNtX0Zvcm1zX0luY2x1ZGVzIHwgc21fRm9ybXNfSW5jbHVkZXMArgLeBgAArgCF/wgAAQAACoEC
+gv9aAAcAAAAAAAAAAAA4BAAAOAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAQAAAACUhDgECQA4BAkAAAAAAAEAAAAEAAAAgwQHAMz/CAAAAAAA3QYAAIX/hf8MAAEA
+BAg8aDE+0ggBAAAA/wDeBgAAhf/dBgAArf+p/xgBAQAYAAQADAEMAQEAaAABAG0ABQALAGZfRXN0
+TW9kZWxlAK8ATABAAAEANQA8c2NyaXB0PmRvY3VtZW50LndyaXRlKCcoJytsX01vZGVsZSsnKScr
+JyAnKTwvc2NyaXB0PgCuAAwAAQAAAK4ABAC1AwMABwAQAAkACTFTMlM2UzhTAAAAbAAFAAEAbQAB
+ABgAPHNjcmlwdD5kb2N1bWVudC53cml0ZSgnIgIFAAwAZl9UaXRyZXNGb3JtAQABAF8ABQAFAGZf
+bG5nACICAQABADoAIgJgAl4BIgIBAAsAJyk8L3NjcmlwdD4AIgIDAAcAJgAgAAkwUjFTMlMzUzRT
+MTBTMTFTMTJTMTNTMTRTMTdTMThT3QYAAIX/hf8IAAEABAjSCAEAAAD/AN4GAACF/6oC3gYAAK4A
+3QYAAIX/hf8NAAEABAg8L2gxPgDSCAEAAAD/AN4GAACF/4ECgwQHAN0GAACF/4X/UwABAAQIPGRp
+diBjbGFzcz0iU3ViVGl0bGUiIGNsYXNzPSJOb1ByaW50Ij48YSBocmVmPSJqYXZhc2NyaXB0OmFm
+ZmljaGVyRG9jRm9ybSgnANIIAQAAAP8A3gYAAIX/3QYAAK3/qf+KAAEAGAAEAH4AfgAAAGgAAQAB
+AC8AAQAOAG1fUHJvZmlsZVBhcmFtAQAOAGZfUGF0aF9BY2N1ZWls9wIiAgEACQAvdl9BaWRlcy8A
+IgIFAAoAZl9UeXBlRm9ybSICAQANAD9PcGVuRG9jdW1lbnQAIgIDAAcAFAANAAkxMFMxMVMxMlMx
+M1MA3QYAAIX/hf8IAAEABAjSCAEAAAD/AN4GAACF/6oC3gYAAK4A3QYAAIX/hf9nAAEABAgnKSI+
+PGltZyBzcmM9Ii9pY29ucy92d2ljbjAxMS5naWYiIGJvcmRlcj0iMCI+PHNjcmlwdD5kb2N1bWVu
+dC53cml0ZShsX0luZm8pPC9zY3JpcHQ+PC9hPjwvZGl2PgDSCAEAAAD/AN4GAACF/4ECgwQHAN0G
+AACF/4X/CAABAAQI0ggBAAAA/wDeBgAAhf+BAoMEBwDdBgAAhf+F/yAAAQAECDxicj48YnI+PGJy
+Pjxicj48YnI+PGJyPtIIAQAAAP8A3gYAAIX/gQKDBAcA3QYAAIX/hf8IAAEABAjSCAEAAAD/AN4G
+AACF/4ECgwQHAN0GAACF/4X/uwABAAQIPGgxPkNlIGZvcm11bGFpcmUgZXN0IGFiYW5kb25ugiBh
+dSBwcm9maXQgZHUgc2l0ZSBpbnRyYW5ldCAgOiAgPG5vYnI+PGEgaHJlZj0iaHR0cHM6Ly93ZWJz
+ZWN1cml0ZS5pbmV0cHNhLmNvbSIgdGFyZ2V0PVwiX2JsYW5rXCI+IGh0dHBzOi8vd2Vic2VjdXJp
+dGUuaW5ldHBzYS5jb20uPC9hPjwvbm9icj48L2gxPjsA0ggBAAAA/wDeBgAAhf/N/wgAAAAAAA==
+</rawitemdata></item></note>
+

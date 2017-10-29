@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800498301'>
+<noteinfo noteid='55a' unid='8FB1C7B7ADF0430DC1256BC30054CDC9' sequence='31'>
+<created><datetime dst='true'>20020524T172617,05+02</datetime></created>
+<modified><datetime>20171029T102302,21-03</datetime></modified>
+<revised><datetime>20170606T011405,51-03</datetime></revised>
+<lastaccessed><datetime>20171029T102259,68-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102259,68-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name
+>CN=FRANCK NUWENDAM - E100441/OU=users/O=PSA</name><name>CN=ANGEL GARCIA PUJALTE - E168524/OU=users/O=PSA</name><name
+>CN=CHRISTOPHE LAZZARO - E278731/OU=users/O=PSA</name><name>CN=BERNARD ALLAINE - C010578/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$DesignerVersion' sign='true'><text>5</text></item>
+<item name='$TITLE'><text>m_MajListeFormsAliases</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$PublicAccess' sign='true'><text>1</text></item>
+<item name='$Flags'><text>CD</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_MajListeFormsAliases</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAMz/CAAAAAAAhf88AAEAAAo8c2NyaXB0Pndp
+bmRvdy5wYXJlbnQuQ29udGVudS5NQUpMaXN0ZUZvcm1zQWxpYXNlcygn3QYAAK3/qf9iAAEAGAAE
+AFYAVgAAAEgAAQAAAAEABwBOb0NhY2hlAB8CAQAAAAEAAAAfAgEAEwB2X0xvb2t1cEZvcm1zUGFy
+YW1zAAAAAAAAAAAA8D+qBF4BAwAHAAwABQAJMFMwRQCF/wgAAQAACqoC3gYAAK4Ahf8TAAEAAAon
+KTwvc2NyaXB0PgDN/wgAAAAAAA==
+</rawitemdata></item></note>
+

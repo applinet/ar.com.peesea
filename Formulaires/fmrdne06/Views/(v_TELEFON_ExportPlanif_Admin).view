@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='106e' unid='C7A0EA99EFFF493CC1258002004972C3' sequence='10'>
+<created><datetime dst='true'>20160801T152215,07+02</datetime></created>
+<modified><datetime>20171029T102002,04-03</datetime></modified>
+<revised><datetime>20170911T114756,29-03</datetime></revised>
+<lastaccessed><datetime>20171029T101955,81-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101955,81-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormatNote' summary='true' sign='true'>
+<rawitemdata type='4'>
+AQBqMVlVc0hfJx2JMgBXayXB
+</rawitemdata></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_TELEFON_ExportPlanif_Admin)|v_TELEFON_ExportPlanif_Admin</text></item>
+<item name='$Index' sign='true'><text>/O/C</text></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+ygACACgAAwAkODUAAgAGAAAAAAAAAAUACwBmX0RlbWFuZGV1cgC0AgMABQAsACcABAADAAsACQAE
+ACQ4NWZfUmVmZXJlbmNlJENvbmZsaWN0JFJFRgAEAAQAAABSAAUACgBmX1R5cGVGb3JtAQAHAFRF
+TEVGT04ACgIEAAUABgBmX0V0YXQAAAAAAAAAAAAADwIEABwCBQAJACRDb25mbGljdABoAR4BHAID
+AAcAHgAXAAlMMVMzUzRTNlM3UzlTMTBTMTJTMTNTAA==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+IgACAABEiGYAAAADAIhmAAMACwAkODVmX1JlZmVyZW5jZQ==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAFQACUAAAFZDAQADAAsANAAAAIcAAQACCIABAAAAAAAAAAICAAAAVkMBAAsACwAAAAAAhwAB
+AAIIgAEAAAAAAAAAAgIAAAAkODVmX0RlbWFuZGV1cjQAAgAoAAMAJDg1AAIABgAAAAAAAAAFAAsA
+Zl9EZW1hbmRldXIAtAIDAAcACgADAAk0UwBmX1JlZmVyZW5jZWZfUmVmZXJlbmNlJgABAAAAAQEA
+CQEAAAoBAQ4KAAABAK0rAQABAAEBAAAAAAAAAABXQwEBAggAAAAAAAAAAAAAAAAAAAAAAAAEAAAA
+AAD//wAAAAAAAAAAAAAAAAAAV0MBAQIIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAA
+AAAAAAAAAEIAEAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAABAAAA
+AAABAICAgAABAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Liste des formulaires pour export planifié administrateur</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAABAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUA
+AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
+AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
+BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
+AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIABgA+fA==
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZQABAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcmUGAD58
+</rawitemdata></item></note>
+

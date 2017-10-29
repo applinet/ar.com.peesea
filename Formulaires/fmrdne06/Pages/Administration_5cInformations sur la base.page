@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='b52' unid='CF89AAAF841C9FE8C12578380046D3C1' sequence='55'>
+<created><datetime dst='true'>20110215T145337,29+02</datetime></created>
+<modified><datetime>20171029T101956,28-03</datetime></modified>
+<revised><datetime>20170911T114750,59-03</datetime></revised>
+<lastaccessed><datetime>20171029T101951,89-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101951,89-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgLAIAAAAAAgAAA2AABALDI4AAQAAAA
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text> p_Left_Footer</text></item>
+<item name='$Flags'><text>C34WQ1w</text></item>
+<item name='$TITLE' sign='true'><textlist><text>Administration\Informations sur la base</text><text
+>p_Admin_DBInfo</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>7</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQADAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSEoAUJAKAFCQAAAAAAAQAAAAQAAACDBAEAhf8IAAIAAAjdBgAArf+p/zwA
+AQAYAAQAMAAwAAAAIgACAAUAAAAAAAAAiwAAAAAAAAAAAPA/EAFrArQCAwAHAAwABQAJNFM4UwCF
+/wgAAgAACKoC3gYAAK4Ahf8IAAIAAAiBAoMEAQCF/wgAAgAACN0GAACt/6n/OgABABgABAAuAC4A
+AAAgAAIABQAAAAAAAACLAAAAAAAAAAAA8D9rArQCAwAHAAwABQAJNFM4UwCF/wgAAgAACKoC3gYA
+AK4Ahf8IAAIAAAg=
+</rawitemdata></item></note>
+

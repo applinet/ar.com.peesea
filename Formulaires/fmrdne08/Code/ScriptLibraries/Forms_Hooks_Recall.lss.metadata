@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004968DB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="906" sequence="87" unid="C5A47D72799907B1C125753D002C9E80">
+<created><datetime dst="true">20090113T100721,60+02</datetime></created>
+<modified><datetime>20171029T102159,83-03</datetime></modified>
+<revised><datetime>20170307T090547,29-03</datetime></revised>
+<lastaccessed><datetime>20171029T102155,28-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102155,28-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE" sign="true"><text>Forms_Hooks_Recall</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+
+
+<item name="$POID"><datetime>20170307T090547,29-03</datetime></item></note>

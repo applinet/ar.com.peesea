@@ -1,0 +1,1960 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800498301'>
+<noteinfo noteid='77a' unid='F886A3D96A1324F8C1256C2F0042A5D4' sequence='51'>
+<created><datetime dst='true'>20020909T140758,28+02</datetime></created>
+<modified><datetime>20171029T102304,83-03</datetime></modified>
+<revised><datetime>20170606T011406,93-03</datetime></revised>
+<lastaccessed><datetime>20171029T102301,40-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102301,40-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=CHRISTOPHE LAZZARO - E278731/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatSoumis' summary='false' sign='true'><number>0</number></item>
+<item name='f_EtatRefus' summary='false' sign='true'><number>0</number></item>
+<item name='f_ProchainEtat' summary='false' sign='true'><number>0</number></item>
+<item name='DateCreate' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='TID_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVC_DateDeman_1' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVC_HeureDeman_1' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='f_DateSoumetre' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVC_NombreP' summary='false' sign='true'><number>0</number></item>
+<item name='RVC_DeparPrevu' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVC_HeureDepar' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVC_RetourPrevu' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVC_HeureRetour' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVC_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVC_Dateapprob_1' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVC_DateDeman' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVC_HeureDeman' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVP_DateDeman' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVP_HeureDeman' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVP_DateDemande' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVP_DeparPrevu' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVP_HeureDepar' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVP_RetourPrevu' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVP_HeureRetour' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVP_NombreP' summary='false' sign='true'><number>0</number></item>
+<item name='RVP_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVP_Dateapprob_1' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVM_DeparPrevu' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVM_HeureDepar' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVM_RetourPrevu' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVM_HeureRetour' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVM_NombreP' summary='false'><number>0</number></item>
+<item name='RVM_Dateapprob' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DRD_Dateapprob' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVM_DateDeman' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='RVM_HeureDeman' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DRD_DateaDeman' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DRD_MontantR' summary='false'><number>0</number></item>
+<item name='DRD_MontantT' summary='false'><number>0</number></item>
+<item name='DRD_DateaCloture' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DRD_Interne' summary='false'><number>0</number></item>
+<item name='DRD_Externe' summary='false'><number>0</number></item>
+<item name='DRD_Interne1' summary='false'><number>0</number></item>
+<item name='DRD_Externe1' summary='false'><number>0</number></item>
+<item name='DRD_Interne2' summary='false'><number>0</number></item>
+<item name='DRD_Externe2' summary='false'><number>0</number></item>
+<item name='DRD_Interne3' summary='false'><number>0</number></item>
+<item name='DRD_Externe3' summary='false'><number>0</number></item>
+<item name='DRD_Interne4' summary='false'><number>0</number></item>
+<item name='DRD_Externe4' summary='false'><number>0</number></item>
+<item name='DRD_Interne5' summary='false'><number>0</number></item>
+<item name='DRD_Externe5' summary='false'><number>0</number></item>
+<item name='DRD_Interne6' summary='false'><number>0</number></item>
+<item name='DRD_Externe6' summary='false'><number>0</number></item>
+<item name='DRD_Interne7' summary='false'><number>0</number></item>
+<item name='DRD_Externe7' summary='false'><number>0</number></item>
+<item name='DRD_InterneT' summary='false'><number>0</number></item>
+<item name='DRD_ExterneT' summary='false'><number>0</number></item>
+<item name='DRD_Dateapprob1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DRD_Dateapprob2' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DRD_Dateapprob3' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DRD_Dateapprob4' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQACQ4AAAAAAAAAAAAAAAAAAAAAAADc/xwO+f8KDiBOAAAAAAAAAAB2YXIgc2lf
+ZW52b3llID0gZmFsc2UNDWZ1bmN0aW9uIFNvdW1ldHRyZSgpIHsNCS8vY29udHKTbGUgdmFsaWRp
+dIINDWlmIChzaV9lbnZveWUpe3JldHVybiBmYWxzZX0NICAgZWxlZ2lkbz1mYWxzZTsNICBmb3Ig
+KGkgPSAwOyBpIDwgY3VyRm9ybSgpLmZfRXRhdDVBdmlzLmxlbmd0aDsgaSArKykgew0gICBpZiAo
+Y3VyRm9ybSgpLmZfRXRhdDVBdmlzW2ldLmNoZWNrZWQpIHsNICAgICBpbmQgPSBpOw0gICAgZWxl
+Z2lkbyA9IHRydWU7DSAgfQ0gIH0NICAgaWYgKGVsZWdpZG8gPT0gZmFsc2UpICB7DSAgICBhbGVy
+dCAoSV9FcnJFdGF0MUF2aXMpOw0gICAgY3VyRm9ybSgpLmZfRXRhdDVBdmlzWzBdLmZvY3VzKCk7
+IA0gICByZXR1cm4gZmFsc2U7IA0gIH0NICAgICBpZiAoY3VyRm9ybSgpLmZfRXRhdDVDb21tZW50
+YWlyZXMudmFsdWUgPT0gIiIgJiYgaW5kID09IDEgKSB7DSAgICBhbGVydCAobF9FcnJFdGF0MUNv
+bW1lbnRhaXJlcyk7DSAgICAgIGN1ckZvcm0oKS5mX0V0YXQ1Q29tbWVudGFpcmVzLmZvY3VzKCk7
+IA0gICByZXR1cm4gZmFsc2U7DSAgfQ0gIGlmKGluZD09MCl7DSAgIA0gICBpZiAoY3VyRm9ybSgp
+LkRBSV9ORmFuMV81LnZhbHVlID09ICIiICkgew0gICAgYWxlcnQgKGxfRXJyREFJX05GYW4xXzUp
+Ow0gICAgICBjdXJGb3JtKCkuREFJX05GYW4xXzUuZm9jdXMoKTsgDSAgIHJldHVybiBmYWxzZTsN
+ICB9DSAgDSAgICAgaWYgKGN1ckZvcm0oKS5EQUlfTklubW8xXzUudmFsdWUgPT0gIiIgKSB7DSAg
+ICBhbGVydCAobF9FcnJEQUlfTklubW8xXzUpOw0gICAgICBjdXJGb3JtKCkuREFJX05Jbm1vMV81
+LmZvY3VzKCk7IA0gICByZXR1cm4gZmFsc2U7DSAgfQ0gICAgIGlmIChjdXJGb3JtKCkuREFJX1Zl
+bnRpMV81LnZhbHVlID09ICIiICkgew0gICAgYWxlcnQgKGxfRXJyREFJX1ZlbnRpMV81KTsNICAg
+ICAgY3VyRm9ybSgpLkRBSV9WZW50aTFfNS5mb2N1cygpOyANICAgcmV0dXJuIGZhbHNlOw0gIH0N
+ICAgICANICAgICAgIGlmICggIGJlczE9PSJPIikgeyAgDSAgICAgICAgICBpZiAoY3VyRm9ybSgp
+LkRBSV9ORmFuMV82LnZhbHVlID09ICIiICkgew0gICAgICAgICBhbGVydCAobF9FcnJEQUlfTkZh
+bjFfNik7DSAgICAgICAgIGN1ckZvcm0oKS5EQUlfTkZhbjFfNi5mb2N1cygpOyANICAgICAgICAg
+cmV0dXJuIGZhbHNlOw0gICAgICAgICB9DSAgDSAgICAgICAgaWYgKGN1ckZvcm0oKS5EQUlfTklu
+bW8xXzYudmFsdWUgPT0gIiIgKSB7DSAgICAgICAgICBhbGVydCAobF9FcnJEQUlfTklubW8xXzYp
+Ow0gICAgICAgICAgY3VyRm9ybSgpLkRBSV9OSW5tbzFfNi5mb2N1cygpOyANICAgICAgICByZXR1
+cm4gZmFsc2U7DSAgICAgICAgIH0NICAgICAgICAgDSAgICAgICAgICAgaWYgKGN1ckZvcm0oKS5E
+QUlfVmVudGkxXzYudmFsdWUgPT0gIiIgKSB7DSAgICBhbGVydCAobF9FcnJEQUlfVmVudGkxXzYp
+Ow0gICAgICBjdXJGb3JtKCkuREFJX1ZlbnRpMV82LmZvY3VzKCk7IA0gICByZXR1cm4gZmFsc2U7
+DSAgfQ0gfQ0gICAgICAgIGlmICggYmVzMiA9PSAiTyIpIHsNICAgICAgICAgICBpZiAoY3VyRm9y
+bSgpLkRBSV9ORmFuMV83LnZhbHVlID09ICIiICkgew0gICAgICAgICAgICAgYWxlcnQgKGxfRXJy
+REFJX05GYW4xXzcpOw0gICAgICAgICAgICAgY3VyRm9ybSgpLkRBSV9ORmFuMV83LmZvY3VzKCk7
+IA0gICAgICAgICAgICAgcmV0dXJuIGZhbHNlOw0gICAgICAgICAgICAgfQ0gICAgICAgICAgIGlm
+IChjdXJGb3JtKCkuREFJX05Jbm1vMV83LnZhbHVlID09ICIiICkgew0gICAgICAgICAgICAgIGFs
+ZXJ0IChsX0VyckRBSV9OSW5tbzFfNyk7DSAgICAgICAgICAgICAgIGN1ckZvcm0oKS5EQUlfTklu
+bW8xXzcuZm9jdXMoKTsgDSAgICAgICAgICAgICAgIHJldHVybiBmYWxzZTsNICAgICAgICAgICAg
+fQ0gICAgICAgICAgICANICAgICAgICAgICAgICBpZiAoY3VyRm9ybSgpLkRBSV9WZW50aTFfNy52
+YWx1ZSA9PSAiIiApIHsNICAgIGFsZXJ0IChsX0VyckRBSV9WZW50aTFfNyk7DSAgICAgIGN1ckZv
+cm0oKS5EQUlfVmVudGkxXzcuZm9jdXMoKTsgDSAgIHJldHVybiBmYWxzZTsNICB9DSAgICAgfQ0g
+ICAgICAgICAgaWYgKCAgYmVzMz09Ik8iKSB7DSAgICAgICAgICAgICBpZiAoY3VyRm9ybSgpLkRB
+SV9ORmFuMV84LnZhbHVlID09ICIiICkgew0gICAgICAgICAgICAgICAgIGFsZXJ0IChsX0VyckRB
+SV9ORmFuMV84KTsNICAgICAgICAgICAgICAgICBjdXJGb3JtKCkuREFJX05GYW4xXzguZm9jdXMo
+KTsgDSAgICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlOw0gICAgICAgICAgICAgICAgfQ0gICAN
+ICAgICAgICAgICAgICAgIGlmIChjdXJGb3JtKCkuREFJX05Jbm1vMV84LnZhbHVlID09ICIiICkg
+ew0gICAgICAgICAgICAgICAgICBhbGVydCAobF9FcnJEQUlfTklubW8xXzgpOw0gICAgICAgICAg
+ICAgICAgICBjdXJGb3JtKCkuREFJX05Jbm1vMV84LmZvY3VzKCk7IA0gICAgICAgICAgICAgICBy
+ZXR1cm4gZmFsc2U7DSAgICAgICAgICAgICAgIH0NICAgICAgICAgICAgICAgDSAgICAgICAgICAg
+ICAgICAgaWYgKGN1ckZvcm0oKS5EQUlfVmVudGkxXzgudmFsdWUgPT0gIiIgKSB7DSAgICBhbGVy
+dCAobF9FcnJEQUlfVmVudGkxXzgpOw0gICAgICBjdXJGb3JtKCkuREFJX1ZlbnRpMV84LmZvY3Vz
+KCk7IA0gICByZXR1cm4gZmFsc2U7DSAgfQ0gICAgICAgfQ0gICAgICAgICAgICAgICBpZiAoICBi
+ZXM0ID09ICJPIikgeyAgDSAgICAgICAgICAgICAgICAgICBpZiAoY3VyRm9ybSgpLkRBSV9ORmFu
+MV85LnZhbHVlID09ICIiICkgew0gICAgICAgICAgICAgICAgICAgICAgYWxlcnQgKGxfRXJyREFJ
+X05GYW4xXzkpOw0gICAgICAgICAgICAgICAgICAgICAgY3VyRm9ybSgpLkRBSV9ORmFuMV85LmZv
+Y3VzKCk7IA0gICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlOw0gICAgICAgICAgICAg
+ICAgICAgICB9DSAgDSAgICAgICAgICAgICAgICAgICAgaWYgKGN1ckZvcm0oKS5EQUlfTklubW8x
+XzkudmFsdWUgPT0gIiIgKSB7DSAgICAgICAgICAgICAgICAgICAgICBhbGVydCAobF9FcnJEQUlf
+TklubW8xXzkpOw0gICAgICAgICAgICAgICAgICAgICAgY3VyRm9ybSgpLkRBSV9OSW5tbzFfOS5m
+b2N1cygpOyANICAgICAgICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7DSAgICAgICAgICAgICAg
+ICAgICAgfQ0gICAgICAgICAgICAgICAgICAgIA0gICAgICAgICAgICAgICAgICAgICAgaWYgKGN1
+ckZvcm0oKS5EQUlfVmVudGkxXzkudmFsdWUgPT0gIiIgKSB7DSAgICBhbGVydCAobF9FcnJEQUlf
+VmVudGkxXzkpOw0gICAgICBjdXJGb3JtKCkuREFJX1ZlbnRpMV85LmZvY3VzKCk7IA0gICByZXR1
+cm4gZmFsc2U7DSAgfQ0gICAgICAgICAgICAgICAgfQ0gICAgICAgIA0gICAgfQ0gDSAgICAgICAg
+IA0JLy9maW4gY29udHKTbGUgZGUgdmFsaWRpdIIJCQ0JLy9vbiBlc3QgYXJyaXaCIGljaSBkb25j
+IG9uIHNvdW1ldA0Jc2lfZW52b3llID0gdHJ1ZQ0JY29uZmlybWVyRXRFeGVjdXRlcignU291bWV0
+dHJlJywgbF9Db25mU291bWV0dHJlKQ0JDQ19DWZ1bmN0aW9uIEFubnVsYXRpb24oKSB7DWNvbmZp
+cm1lckV0RXhlY3V0ZXIoJ0FubnVsYXRpb24nLCBsX0NvbmZBbm51bGF0aW9uKQ19DQ0NAA9m/yAA
+AAAAAA8ABAAJDgAAAAAAAAAAAAAAAAAAAAAAAGX/HA5m/woOIE4AAAAAAAAAAHZhciBzaV9lbnZv
+eWUgPSBmYWxzZQ0NZnVuY3Rpb24gU291bWV0dHJlKCkgew0JLy9jb250cpNsZSB2YWxpZGl0gg0N
+aWYgKHNpX2Vudm95ZSl7cmV0dXJuIGZhbHNlfQ0gICBlbGVnaWRvPWZhbHNlOw0gIGZvciAoaSA9
+IDA7IGkgPCBjdXJGb3JtKCkuZl9FdGF0NUF2aXMubGVuZ3RoOyBpICsrKSB7DSAgIGlmIChjdXJG
+b3JtKCkuZl9FdGF0NUF2aXNbaV0uY2hlY2tlZCkgew0gICAgIGluZCA9IGk7DSAgICBlbGVnaWRv
+ID0gdHJ1ZTsNICB9DSAgfQ0gICBpZiAoZWxlZ2lkbyA9PSBmYWxzZSkgIHsNICAgIGFsZXJ0IChJ
+X0VyckV0YXQxQXZpcyk7DSAgICBjdXJGb3JtKCkuZl9FdGF0NUF2aXNbMF0uZm9jdXMoKTsgDSAg
+IHJldHVybiBmYWxzZTsgDSAgfQ0gICAgIGlmIChjdXJGb3JtKCkuZl9FdGF0NUNvbW1lbnRhaXJl
+cy52YWx1ZSA9PSAiIiAmJiBpbmQgPT0gMSApIHsNICAgIGFsZXJ0IChsX0VyckV0YXQxQ29tbWVu
+dGFpcmVzKTsNICAgICAgY3VyRm9ybSgpLmZfRXRhdDVDb21tZW50YWlyZXMuZm9jdXMoKTsgDSAg
+IHJldHVybiBmYWxzZTsNICB9DSAgaWYoaW5kPT0wKXsNICAgDSAgIGlmIChjdXJGb3JtKCkuREFJ
+X05GYW4xXzUudmFsdWUgPT0gIiIgKSB7DSAgICBhbGVydCAobF9FcnJEQUlfTkZhbjFfNSk7DSAg
+ICAgIGN1ckZvcm0oKS5EQUlfTkZhbjFfNS5mb2N1cygpOyANICAgcmV0dXJuIGZhbHNlOw0gIH0N
+ICANICAgICBpZiAoY3VyRm9ybSgpLkRBSV9OSW5tbzFfNS52YWx1ZSA9PSAiIiApIHsNICAgIGFs
+ZXJ0IChsX0VyckRBSV9OSW5tbzFfNSk7DSAgICAgIGN1ckZvcm0oKS5EQUlfTklubW8xXzUuZm9j
+dXMoKTsgDSAgIHJldHVybiBmYWxzZTsNICB9DSAgICAgaWYgKGN1ckZvcm0oKS5EQUlfVmVudGkx
+XzUudmFsdWUgPT0gIiIgKSB7DSAgICBhbGVydCAobF9FcnJEQUlfVmVudGkxXzUpOw0gICAgICBj
+dXJGb3JtKCkuREFJX1ZlbnRpMV81LmZvY3VzKCk7IA0gICByZXR1cm4gZmFsc2U7DSAgfQ0gICAg
+IA0gICAgICAgaWYgKCAgYmVzMT09Ik8iKSB7ICANICAgICAgICAgIGlmIChjdXJGb3JtKCkuREFJ
+X05GYW4xXzYudmFsdWUgPT0gIiIgKSB7DSAgICAgICAgIGFsZXJ0IChsX0VyckRBSV9ORmFuMV82
+KTsNICAgICAgICAgY3VyRm9ybSgpLkRBSV9ORmFuMV82LmZvY3VzKCk7IA0gICAgICAgICByZXR1
+cm4gZmFsc2U7DSAgICAgICAgIH0NICANICAgICAgICBpZiAoY3VyRm9ybSgpLkRBSV9OSW5tbzFf
+Ni52YWx1ZSA9PSAiIiApIHsNICAgICAgICAgIGFsZXJ0IChsX0VyckRBSV9OSW5tbzFfNik7DSAg
+ICAgICAgICBjdXJGb3JtKCkuREFJX05Jbm1vMV82LmZvY3VzKCk7IA0gICAgICAgIHJldHVybiBm
+YWxzZTsNICAgICAgICAgfQ0gICAgICAgICANICAgICAgICAgICBpZiAoY3VyRm9ybSgpLkRBSV9W
+ZW50aTFfNi52YWx1ZSA9PSAiIiApIHsNICAgIGFsZXJ0IChsX0VyckRBSV9WZW50aTFfNik7DSAg
+ICAgIGN1ckZvcm0oKS5EQUlfVmVudGkxXzYuZm9jdXMoKTsgDSAgIHJldHVybiBmYWxzZTsNICB9
+DSB9DSAgICAgICAgaWYgKCBiZXMyID09ICJPIikgew0gICAgICAgICAgIGlmIChjdXJGb3JtKCku
+REFJX05GYW4xXzcudmFsdWUgPT0gIiIgKSB7DSAgICAgICAgICAgICBhbGVydCAobF9FcnJEQUlf
+TkZhbjFfNyk7DSAgICAgICAgICAgICBjdXJGb3JtKCkuREFJX05GYW4xXzcuZm9jdXMoKTsgDSAg
+ICAgICAgICAgICByZXR1cm4gZmFsc2U7DSAgICAgICAgICAgICB9DSAgICAgICAgICAgaWYgKGN1
+ckZvcm0oKS5EQUlfTklubW8xXzcudmFsdWUgPT0gIiIgKSB7DSAgICAgICAgICAgICAgYWxlcnQg
+KGxfRXJyREFJX05Jbm1vMV83KTsNICAgICAgICAgICAgICAgY3VyRm9ybSgpLkRBSV9OSW5tbzFf
+Ny5mb2N1cygpOyANICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlOw0gICAgICAgICAgICB9DSAg
+ICAgICAgICAgIA0gICAgICAgICAgICAgIGlmIChjdXJGb3JtKCkuREFJX1ZlbnRpMV83LnZhbHVl
+ID09ICIiICkgew0gICAgYWxlcnQgKGxfRXJyREFJX1ZlbnRpMV83KTsNICAgICAgY3VyRm9ybSgp
+LkRBSV9WZW50aTFfNy5mb2N1cygpOyANICAgcmV0dXJuIGZhbHNlOw0gIH0NICAgICB9DSAgICAg
+ICAgICBpZiAoICBiZXMzPT0iTyIpIHsNICAgICAgICAgICAgIGlmIChjdXJGb3JtKCkuREFJX05G
+YW4xXzgudmFsdWUgPT0gIiIgKSB7DSAgICAgICAgICAgICAgICAgYWxlcnQgKGxfRXJyREFJX05G
+YW4xXzgpOw0gICAgICAgICAgICAgICAgIGN1ckZvcm0oKS5EQUlfTkZhbjFfOC5mb2N1cygpOyAN
+ICAgICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7DSAgICAgICAgICAgICAgICB9DSAgIA0gICAg
+ICAgICAgICAgICAgaWYgKGN1ckZvcm0oKS5EQUlfTklubW8xXzgudmFsdWUgPT0gIiIgKSB7DSAg
+ICAgICAgICAgICAgICAgIGFsZXJ0IChsX0VyckRBSV9OSW5tbzFfOCk7DSAgICAgICAgICAgICAg
+ICAgIGN1ckZvcm0oKS5EQUlfTklubW8xXzguZm9jdXMoKTsgDSAgICAgICAgICAgICAgIHJldHVy
+biBmYWxzZTsNICAgICAgICAgICAgICAgfQ0gICAgICAgICAgICAgICANICAgICAgICAgICAgICAg
+ICBpZiAoY3VyRm9ybSgpLkRBSV9WZW50aTFfOC52YWx1ZSA9PSAiIiApIHsNICAgIGFsZXJ0IChs
+X0VyckRBSV9WZW50aTFfOCk7DSAgICAgIGN1ckZvcm0oKS5EQUlfVmVudGkxXzguZm9jdXMoKTsg
+DSAgIHJldHVybiBmYWxzZTsNICB9DSAgICAgICB9DSAgICAgICAgICAgICAgIGlmICggIGJlczQg
+PT0gIk8iKSB7ICANICAgICAgICAgICAgICAgICAgIGlmIChjdXJGb3JtKCkuREFJX05GYW4xXzku
+dmFsdWUgPT0gIiIgKSB7DSAgICAgICAgICAgICAgICAgICAgICBhbGVydCAobF9FcnJEQUlfTkZh
+bjFfOSk7DSAgICAgICAgICAgICAgICAgICAgICBjdXJGb3JtKCkuREFJX05GYW4xXzkuZm9jdXMo
+KTsgDSAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7DSAgICAgICAgICAgICAgICAg
+ICAgIH0NICANICAgICAgICAgICAgICAgICAgICBpZiAoY3VyRm9ybSgpLkRBSV9OSW5tbzFfOS52
+YWx1ZSA9PSAiIiApIHsNICAgICAgICAgICAgICAgICAgICAgIGFsZXJ0IChsX0VyckRBSV9OSW5t
+bzFfOSk7DSAgICAgICAgICAgICAgICAgICAgICBjdXJGb3JtKCkuREFJX05Jbm1vMV85LmZvY3Vz
+KCk7IA0gICAgICAgICAgICAgICAgICAgIHJldHVybiBmYWxzZTsNICAgICAgICAgICAgICAgICAg
+ICB9DSAgICAgICAgICAgICAgICAgICAgDSAgICAgICAgICAgICAgICAgICAgICBpZiAoY3VyRm9y
+bSgpLkRBSV9WZW50aTFfOS52YWx1ZSA9PSAiIiApIHsNICAgIGFsZXJ0IChsX0VyckRBSV9WZW50
+aTFfOSk7DSAgICAgIGN1ckZvcm0oKS5EQUlfVmVudGkxXzkuZm9jdXMoKTsgDSAgIHJldHVybiBm
+YWxzZTsNICB9DSAgICAgICAgICAgICAgICB9DSAgICAgICAgDSAgICB9DSANICAgICAgICAgDQkv
+L2ZpbiBjb250cpNsZSBkZSB2YWxpZGl0ggkJDQkvL29uIGVzdCBhcnJpdoIgaWNpIGRvbmMgb24g
+c291bWV0DQlzaV9lbnZveWUgPSB0cnVlDQljb25maXJtZXJFdEV4ZWN1dGVyKCdTb3VtZXR0cmUn
+LCBsX0NvbmZTb3VtZXR0cmUpDQkNDX0NZnVuY3Rpb24gQW5udWxhdGlvbigpIHsNY29uZmlybWVy
+RXRFeGVjdXRlcignQW5udWxhdGlvbicsIGxfQ29uZkFubnVsYXRpb24pDX0NDQ0AAF//EAACAA8A
+BwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$TITLE'><text>m_DFCP03Etat5</text></item>
+<item name='$Comment' sign='true'><text>attent validation niveau5</text></item>
+<item name='$NoBackgroundOverride'><text>1</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAJEAAAAIgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$SubForms'><textlist><text>sm_DFCP03LngsDispos</text><text>sm_ToutFormToutEtat</text><text
+>sm_ToutFormToutEtat</text><text>sm_ToutEtat</text><text>sm_Reengager</text><text
+>sm_EnTeteVisu</text><text>sm_Annul</text><text>sm_MsgReengager</text><text
+>sm_DFCP03Sections</text><text>sm_CalendrierCSS</text><text>sm_Calendar_</text><text
+>sm_AttachmentsEdit</text><text>sm_FaireSuivre</text></textlist></item>
+<item name='$SubForm_RepIDs' sign='true'><textlist><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text><text>0000000000000000</text></textlist></item>
+<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=\"0\" marginwidth=\"0\" marginheight=\"0\" leftmargin=\"0\""</formula></item>
+<item name='$WEBQuerySave' sign='true'><formula>@If(f_ActionAFaire="UtiliserModele";@Command([Compose];Form);
+@Command([ToolsRunMacro];"(DFCP03-Etat5ActionsLS)"))</formula></item>
+<item name='$WEBQueryOpen' sign='true'><formula>@SetHTTPHeader("Cache-Control";"no-store")</formula></item>
+<item name='$Flags'><text>CD</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='f_TypeForm' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat' summary='false'><number>0</number></item>
+<item name='f_EtatIcone' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EtatNoms' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_TypeEtat' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_TitresForm' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_AuteursAdmin' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_LecteursPotentiels' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_AuteursPotentiels' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EstModele' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActionAFaire' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowGroupes' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowIndividus' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='F_ENREGDATE' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='F_ENREGACTEUR' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='F_ADETRUIRE' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_CompterUtilisation' summary='false'><number>0</number></item>
+<item name='f_EtatTerminal' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='server_name' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='HTTP_Referer' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='URL' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_BalFon' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='IDDoc' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Reengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='URLReengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='AutorReengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_MailAnnul' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Destinataires' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Auteur_POA' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='COM_Annul' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_MsgReengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='ImportarQuestion' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='ImportarGMetiers' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_user' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='ImportarAprob3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='BalAprob3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_groupesUser' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='ImportarDev' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateDeman' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Titre' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_MOeuvre' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Site' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_LibSite' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_DAI_Ndai' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NInves' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Societ' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateCredit' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Comande' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Question' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_GMetier' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_LibGMetier' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Projet' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Appli' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TypeInfor' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NomPilot' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Service' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_MotifCom' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_MaterielA' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_MaterielB' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_MaterielC' summary='false'><number>0</number></item>
+<item name='DAI_Reference' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateDevis' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Fournis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Lieu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Batiment' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_PerPrendCharge' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TelPer' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_ResProjet' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DestiLib' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DepSogedac' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_FamAchats' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Observa' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Modele1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Devise' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Qte1' summary='false'><number>0</number></item>
+<item name='DAI_Construc1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte2' summary='false'><number>0</number></item>
+<item name='DAI_Construc2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv2' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte3' summary='false'><number>0</number></item>
+<item name='DAI_Construc3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv3' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte4' summary='false'><number>0</number></item>
+<item name='DAI_Construc4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv4' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte5' summary='false'><number>0</number></item>
+<item name='DAI_Construc5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv5' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte6' summary='false'><number>0</number></item>
+<item name='DAI_Construc6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv6' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte7' summary='false'><number>0</number></item>
+<item name='DAI_Construc7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv7' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte8' summary='false'><number>0</number></item>
+<item name='DAI_Construc8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv8' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Total1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NFan1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NInmo1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Venti1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_et1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Besoin1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TotGlob1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TotLogi1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Modele2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Devise_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Qte1_1' summary='false'><number>0</number></item>
+<item name='DAI_Construc1_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference1_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle1_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix1_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv1_1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte2_1' summary='false'><number>0</number></item>
+<item name='DAI_Construc2_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference2_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle2_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix2_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv2_1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte3_1' summary='false'><number>0</number></item>
+<item name='DAI_Construc3_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference3_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle3_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix3_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv3_1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte4_1' summary='false'><number>0</number></item>
+<item name='DAI_Construc4_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference4_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle4_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix4_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv4_1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte5_1' summary='false'><number>0</number></item>
+<item name='DAI_Construc5_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference5_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle5_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix5_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv5_1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte6_1' summary='false'><number>0</number></item>
+<item name='DAI_Construc6_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference6_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle6_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix6_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv6_1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte7_1' summary='false'><number>0</number></item>
+<item name='DAI_Construc7_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference7_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle7_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix7_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv7_1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte8_1' summary='false'><number>0</number></item>
+<item name='DAI_Construc8_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference8_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle8_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix8_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv8_1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Total1_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NFan1_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NInmo1_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Venti1_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_et1_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Besoin2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TotGlob2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TotLogi2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Modele3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Devise_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Qte1_2' summary='false'><number>0</number></item>
+<item name='DAI_Construc1_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference1_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle1_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix1_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv1_2' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte2_2' summary='false'><number>0</number></item>
+<item name='DAI_Construc2_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference2_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle2_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix2_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv2_2' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte3_2' summary='false'><number>0</number></item>
+<item name='DAI_Construc3_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference3_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle3_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix3_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv3_2' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte4_2' summary='false'><number>0</number></item>
+<item name='DAI_Construc4_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference4_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle4_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix4_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv4_2' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte5_2' summary='false'><number>0</number></item>
+<item name='DAI_Construc5_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference5_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle5_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix5_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv5_2' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte6_2' summary='false'><number>0</number></item>
+<item name='DAI_Construc6_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference6_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle6_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix6_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv6_2' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte7_2' summary='false'><number>0</number></item>
+<item name='DAI_Construc7_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference7_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle7_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix7_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv7_2' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte8_2' summary='false'><number>0</number></item>
+<item name='DAI_Construc8_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference8_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle8_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix8_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv8_2' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Total1_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NFan1_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NInmo1_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Venti1_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_et1_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Besoin3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TotGlob3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TotLogi3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Modele4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Devise_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Qte1_3' summary='false'><number>0</number></item>
+<item name='DAI_Construc1_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference1_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle1_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix1_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv1_3' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte2_3' summary='false'><number>0</number></item>
+<item name='DAI_Construc2_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference2_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle2_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix2_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv2_3' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte3_3' summary='false'><number>0</number></item>
+<item name='DAI_Construc3_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference3_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle3_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix3_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv3_3' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte4_3' summary='false'><number>0</number></item>
+<item name='DAI_Construc4_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference4_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle4_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix4_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv4_3' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte5_3' summary='false'><number>0</number></item>
+<item name='DAI_Construc5_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference5_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle5_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix5_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv5_3' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte6_3' summary='false'><number>0</number></item>
+<item name='DAI_Construc6_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference6_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle6_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix6_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv6_3' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte7_3' summary='false'><number>0</number></item>
+<item name='DAI_Construc7_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference7_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle7_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix7_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv7_3' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte8_3' summary='false'><number>0</number></item>
+<item name='DAI_Construc8_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference8_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle8_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix8_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv8_3' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Total1_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NFan1_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NInmo1_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Venti1_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_et1_3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Besoin4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TotGlob4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TotLogi4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Modele5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Devise_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Qte1_4' summary='false'><number>0</number></item>
+<item name='DAI_Construc1_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference1_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle1_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix1_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv1_4' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte2_4' summary='false'><number>0</number></item>
+<item name='DAI_Construc2_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference2_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle2_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix2_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv2_4' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte3_4' summary='false'><number>0</number></item>
+<item name='DAI_Construc3_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference3_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle3_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix3_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv3_4' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte4_4' summary='false'><number>0</number></item>
+<item name='DAI_Construc4_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference4_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle4_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix4_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv4_4' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte5_4' summary='false'><number>0</number></item>
+<item name='DAI_Construc5_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference5_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle5_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix5_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv5_4' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte6_4' summary='false'><number>0</number></item>
+<item name='DAI_Construc6_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference6_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle6_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix6_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv6_4' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte7_4' summary='false'><number>0</number></item>
+<item name='DAI_Construc7_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference7_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle7_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix7_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv7_4' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Qte8_4' summary='false'><number>0</number></item>
+<item name='DAI_Construc8_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference8_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle8_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix8_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv8_4' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='DAI_Total1_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NFan1_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NInmo1_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Venti1_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_et1_4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TotGlob5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_TotLogi5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat1ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat1ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Dateapprob' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='f_Etat1Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat1Commentaires' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat2ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat2ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Dateapprob1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='f_Etat2Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat2Commentaires' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat3ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat3ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Dateapprob2' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='f_Etat3Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat3Commentaires' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat4ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat4ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Dateapprob3' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='f_Etat4Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat4Commentaires' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat5ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat5ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Dateapprob4' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='f_Etat5Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat5Commentaires' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Modele1_5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Devise1_5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Qte1_5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Construc1_5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference1_5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle1_5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix1_5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv1_5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NFan1_5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NInmo1_5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Venti1_5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Modele1_6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Devise1_6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Qte1_6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Construc1_6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference1_6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle1_6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix1_6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv1_6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NFan1_6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NInmo1_6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Venti1_6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Modele1_7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Devise1_7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Qte1_7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Construc1_7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference1_7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle1_7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix1_7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv1_7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NFan1_7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NInmo1_7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Venti1_7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Modele1_8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Devise1_8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Qte1_8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Construc1_8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference1_8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle1_8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix1_8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv1_8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NFan1_8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NInmo1_8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Venti1_8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Modele1_9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Devise1_9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Qte1_9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Construc1_9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Reference1_9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Libelle1_9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Prix1_9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_DateLiv1_9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NFan1_9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_NInmo1_9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Venti1_9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Resp1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Resp2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Resp3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='DAI_Resp4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Untitled_Section2_1_2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Destin' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Destinf' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='AuteursFS' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='CFSuivre' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='NoSubmit' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>NoSubmit</text><text>CFSuivre</text><text
+>AuteursFS</text><text>Destinf</text><text>Destin</text><text>Untitled_Section2_1_2</text><text
+>DAI_Resp4</text><text>DAI_Resp3</text><text>DAI_Resp2</text><text>DAI_Resp1</text><text
+>DAI_Venti1_9</text><text>DAI_NInmo1_9</text><text>DAI_NFan1_9</text><text
+>DAI_DateLiv1_9</text><text>DAI_Prix1_9</text><text>DAI_Libelle1_9</text><text
+>DAI_Reference1_9</text><text>DAI_Construc1_9</text><text>DAI_Qte1_9</text><text
+>DAI_Devise1_9</text><text>DAI_Modele1_9</text><text>DAI_Venti1_8</text><text
+>DAI_NInmo1_8</text><text>DAI_NFan1_8</text><text>DAI_DateLiv1_8</text><text
+>DAI_Prix1_8</text><text>DAI_Libelle1_8</text><text>DAI_Reference1_8</text><text
+>DAI_Construc1_8</text><text>DAI_Qte1_8</text><text>DAI_Devise1_8</text><text
+>DAI_Modele1_8</text><text>DAI_Venti1_7</text><text>DAI_NInmo1_7</text><text
+>DAI_NFan1_7</text><text>DAI_DateLiv1_7</text><text>DAI_Prix1_7</text><text
+>DAI_Libelle1_7</text><text>DAI_Reference1_7</text><text>DAI_Construc1_7</text><text
+>DAI_Qte1_7</text><text>DAI_Devise1_7</text><text>DAI_Modele1_7</text><text
+>DAI_Venti1_6</text><text>DAI_NInmo1_6</text><text>DAI_NFan1_6</text><text
+>DAI_DateLiv1_6</text><text>DAI_Prix1_6</text><text>DAI_Libelle1_6</text><text
+>DAI_Reference1_6</text><text>DAI_Construc1_6</text><text>DAI_Qte1_6</text><text
+>DAI_Devise1_6</text><text>DAI_Modele1_6</text><text>DAI_Venti1_5</text><text
+>DAI_NInmo1_5</text><text>DAI_NFan1_5</text><text>DAI_DateLiv1_5</text><text
+>DAI_Prix1_5</text><text>DAI_Libelle1_5</text><text>DAI_Reference1_5</text><text
+>DAI_Construc1_5</text><text>DAI_Qte1_5</text><text>DAI_Devise1_5</text><text
+>DAI_Modele1_5</text><text>f_Etat5Commentaires</text><text>f_Etat5Avis</text><text
+>DAI_Dateapprob4</text><text>f_Etat5ActeursGroupe</text><text>f_Etat5ActeursIndividu</text><text
+>f_Etat4Commentaires</text><text>f_Etat4Avis</text><text>DAI_Dateapprob3</text><text
+>f_Etat4ActeursGroupe</text><text>f_Etat4ActeursIndividu</text><text>f_Etat3Commentaires</text><text
+>f_Etat3Avis</text><text>DAI_Dateapprob2</text><text>f_Etat3ActeursGroupe</text><text
+>f_Etat3ActeursIndividu</text><text>f_Etat2Commentaires</text><text>f_Etat2Avis</text><text
+>DAI_Dateapprob1</text><text>f_Etat2ActeursGroupe</text><text>f_Etat2ActeursIndividu</text><text
+>f_Etat1Commentaires</text><text>f_Etat1Avis</text><text>DAI_Dateapprob</text><text
+>f_Etat1ActeursGroupe</text><text>f_Etat1ActeursIndividu</text><text>DAI_TotLogi5</text><text
+>DAI_TotGlob5</text><text>DAI_et1_4</text><text>DAI_Venti1_4</text><text>DAI_NInmo1_4</text><text
+>DAI_NFan1_4</text><text>DAI_Total1_4</text><text>DAI_DateLiv8_4</text><text
+>DAI_Prix8_4</text><text>DAI_Libelle8_4</text><text>DAI_Reference8_4</text><text
+>DAI_Construc8_4</text><text>DAI_Qte8_4</text><text>DAI_DateLiv7_4</text><text
+>DAI_Prix7_4</text><text>DAI_Libelle7_4</text><text>DAI_Reference7_4</text><text
+>DAI_Construc7_4</text><text>DAI_Qte7_4</text><text>DAI_DateLiv6_4</text><text
+>DAI_Prix6_4</text><text>DAI_Libelle6_4</text><text>DAI_Reference6_4</text><text
+>DAI_Construc6_4</text><text>DAI_Qte6_4</text><text>DAI_DateLiv5_4</text><text
+>DAI_Prix5_4</text><text>DAI_Libelle5_4</text><text>DAI_Reference5_4</text><text
+>DAI_Construc5_4</text><text>DAI_Qte5_4</text><text>DAI_DateLiv4_4</text><text
+>DAI_Prix4_4</text><text>DAI_Libelle4_4</text><text>DAI_Reference4_4</text><text
+>DAI_Construc4_4</text><text>DAI_Qte4_4</text><text>DAI_DateLiv3_4</text><text
+>DAI_Prix3_4</text><text>DAI_Libelle3_4</text><text>DAI_Reference3_4</text><text
+>DAI_Construc3_4</text><text>DAI_Qte3_4</text><text>DAI_DateLiv2_4</text><text
+>DAI_Prix2_4</text><text>DAI_Libelle2_4</text><text>DAI_Reference2_4</text><text
+>DAI_Construc2_4</text><text>DAI_Qte2_4</text><text>DAI_DateLiv1_4</text><text
+>DAI_Prix1_4</text><text>DAI_Libelle1_4</text><text>DAI_Reference1_4</text><text
+>DAI_Construc1_4</text><text>DAI_Qte1_4</text><text>DAI_Devise_4</text><text
+>DAI_Modele5</text><text>DAI_TotLogi4</text><text>DAI_TotGlob4</text><text
+>DAI_Besoin4</text><text>DAI_et1_3</text><text>DAI_Venti1_3</text><text>DAI_NInmo1_3</text><text
+>DAI_NFan1_3</text><text>DAI_Total1_3</text><text>DAI_DateLiv8_3</text><text
+>DAI_Prix8_3</text><text>DAI_Libelle8_3</text><text>DAI_Reference8_3</text><text
+>DAI_Construc8_3</text><text>DAI_Qte8_3</text><text>DAI_DateLiv7_3</text><text
+>DAI_Prix7_3</text><text>DAI_Libelle7_3</text><text>DAI_Reference7_3</text><text
+>DAI_Construc7_3</text><text>DAI_Qte7_3</text><text>DAI_DateLiv6_3</text><text
+>DAI_Prix6_3</text><text>DAI_Libelle6_3</text><text>DAI_Reference6_3</text><text
+>DAI_Construc6_3</text><text>DAI_Qte6_3</text><text>DAI_DateLiv5_3</text><text
+>DAI_Prix5_3</text><text>DAI_Libelle5_3</text><text>DAI_Reference5_3</text><text
+>DAI_Construc5_3</text><text>DAI_Qte5_3</text><text>DAI_DateLiv4_3</text><text
+>DAI_Prix4_3</text><text>DAI_Libelle4_3</text><text>DAI_Reference4_3</text><text
+>DAI_Construc4_3</text><text>DAI_Qte4_3</text><text>DAI_DateLiv3_3</text><text
+>DAI_Prix3_3</text><text>DAI_Libelle3_3</text><text>DAI_Reference3_3</text><text
+>DAI_Construc3_3</text><text>DAI_Qte3_3</text><text>DAI_DateLiv2_3</text><text
+>DAI_Prix2_3</text><text>DAI_Libelle2_3</text><text>DAI_Reference2_3</text><text
+>DAI_Construc2_3</text><text>DAI_Qte2_3</text><text>DAI_DateLiv1_3</text><text
+>DAI_Prix1_3</text><text>DAI_Libelle1_3</text><text>DAI_Reference1_3</text><text
+>DAI_Construc1_3</text><text>DAI_Qte1_3</text><text>DAI_Devise_3</text><text
+>DAI_Modele4</text><text>DAI_TotLogi3</text><text>DAI_TotGlob3</text><text
+>DAI_Besoin3</text><text>DAI_et1_2</text><text>DAI_Venti1_2</text><text>DAI_NInmo1_2</text><text
+>DAI_NFan1_2</text><text>DAI_Total1_2</text><text>DAI_DateLiv8_2</text><text
+>DAI_Prix8_2</text><text>DAI_Libelle8_2</text><text>DAI_Reference8_2</text><text
+>DAI_Construc8_2</text><text>DAI_Qte8_2</text><text>DAI_DateLiv7_2</text><text
+>DAI_Prix7_2</text><text>DAI_Libelle7_2</text><text>DAI_Reference7_2</text><text
+>DAI_Construc7_2</text><text>DAI_Qte7_2</text><text>DAI_DateLiv6_2</text><text
+>DAI_Prix6_2</text><text>DAI_Libelle6_2</text><text>DAI_Reference6_2</text><text
+>DAI_Construc6_2</text><text>DAI_Qte6_2</text><text>DAI_DateLiv5_2</text><text
+>DAI_Prix5_2</text><text>DAI_Libelle5_2</text><text>DAI_Reference5_2</text><text
+>DAI_Construc5_2</text><text>DAI_Qte5_2</text><text>DAI_DateLiv4_2</text><text
+>DAI_Prix4_2</text><text>DAI_Libelle4_2</text><text>DAI_Reference4_2</text><text
+>DAI_Construc4_2</text><text>DAI_Qte4_2</text><text>DAI_DateLiv3_2</text><text
+>DAI_Prix3_2</text><text>DAI_Libelle3_2</text><text>DAI_Reference3_2</text><text
+>DAI_Construc3_2</text><text>DAI_Qte3_2</text><text>DAI_DateLiv2_2</text><text
+>DAI_Prix2_2</text><text>DAI_Libelle2_2</text><text>DAI_Reference2_2</text><text
+>DAI_Construc2_2</text><text>DAI_Qte2_2</text><text>DAI_DateLiv1_2</text><text
+>DAI_Prix1_2</text><text>DAI_Libelle1_2</text><text>DAI_Reference1_2</text><text
+>DAI_Construc1_2</text><text>DAI_Qte1_2</text><text>DAI_Devise_2</text><text
+>DAI_Modele3</text><text>DAI_TotLogi2</text><text>DAI_TotGlob2</text><text
+>DAI_Besoin2</text><text>DAI_et1_1</text><text>DAI_Venti1_1</text><text>DAI_NInmo1_1</text><text
+>DAI_NFan1_1</text><text>DAI_Total1_1</text><text>DAI_DateLiv8_1</text><text
+>DAI_Prix8_1</text><text>DAI_Libelle8_1</text><text>DAI_Reference8_1</text><text
+>DAI_Construc8_1</text><text>DAI_Qte8_1</text><text>DAI_DateLiv7_1</text><text
+>DAI_Prix7_1</text><text>DAI_Libelle7_1</text><text>DAI_Reference7_1</text><text
+>DAI_Construc7_1</text><text>DAI_Qte7_1</text><text>DAI_DateLiv6_1</text><text
+>DAI_Prix6_1</text><text>DAI_Libelle6_1</text><text>DAI_Reference6_1</text><text
+>DAI_Construc6_1</text><text>DAI_Qte6_1</text><text>DAI_DateLiv5_1</text><text
+>DAI_Prix5_1</text><text>DAI_Libelle5_1</text><text>DAI_Reference5_1</text><text
+>DAI_Construc5_1</text><text>DAI_Qte5_1</text><text>DAI_DateLiv4_1</text><text
+>DAI_Prix4_1</text><text>DAI_Libelle4_1</text><text>DAI_Reference4_1</text><text
+>DAI_Construc4_1</text><text>DAI_Qte4_1</text><text>DAI_DateLiv3_1</text><text
+>DAI_Prix3_1</text><text>DAI_Libelle3_1</text><text>DAI_Reference3_1</text><text
+>DAI_Construc3_1</text><text>DAI_Qte3_1</text><text>DAI_DateLiv2_1</text><text
+>DAI_Prix2_1</text><text>DAI_Libelle2_1</text><text>DAI_Reference2_1</text><text
+>DAI_Construc2_1</text><text>DAI_Qte2_1</text><text>DAI_DateLiv1_1</text><text
+>DAI_Prix1_1</text><text>DAI_Libelle1_1</text><text>DAI_Reference1_1</text><text
+>DAI_Construc1_1</text><text>DAI_Qte1_1</text><text>DAI_Devise_1</text><text
+>DAI_Modele2</text><text>DAI_TotLogi1</text><text>DAI_TotGlob1</text><text
+>DAI_Besoin1</text><text>DAI_et1</text><text>DAI_Venti1</text><text>DAI_NInmo1</text><text
+>DAI_NFan1</text><text>DAI_Total1</text><text>DAI_DateLiv8</text><text>DAI_Prix8</text><text
+>DAI_Libelle8</text><text>DAI_Reference8</text><text>DAI_Construc8</text><text
+>DAI_Qte8</text><text>DAI_DateLiv7</text><text>DAI_Prix7</text><text>DAI_Libelle7</text><text
+>DAI_Reference7</text><text>DAI_Construc7</text><text>DAI_Qte7</text><text
+>DAI_DateLiv6</text><text>DAI_Prix6</text><text>DAI_Libelle6</text><text>DAI_Reference6</text><text
+>DAI_Construc6</text><text>DAI_Qte6</text><text>DAI_DateLiv5</text><text>DAI_Prix5</text><text
+>DAI_Libelle5</text><text>DAI_Reference5</text><text>DAI_Construc5</text><text
+>DAI_Qte5</text><text>DAI_DateLiv4</text><text>DAI_Prix4</text><text>DAI_Libelle4</text><text
+>DAI_Reference4</text><text>DAI_Construc4</text><text>DAI_Qte4</text><text
+>DAI_DateLiv3</text><text>DAI_Prix3</text><text>DAI_Libelle3</text><text>DAI_Reference3</text><text
+>DAI_Construc3</text><text>DAI_Qte3</text><text>DAI_DateLiv2</text><text>DAI_Prix2</text><text
+>DAI_Libelle2</text><text>DAI_Reference2</text><text>DAI_Construc2</text><text
+>DAI_Qte2</text><text>DAI_DateLiv1</text><text>DAI_Prix1</text><text>DAI_Libelle1</text><text
+>DAI_Reference1</text><text>DAI_Construc1</text><text>DAI_Qte1</text><text
+>DAI_Devise</text><text>DAI_Modele1</text><text>DAI_Observa</text><text>DAI_FamAchats</text><text
+>DAI_DepSogedac</text><text>DAI_DestiLib</text><text>DAI_ResProjet</text><text
+>DAI_TelPer</text><text>DAI_PerPrendCharge</text><text>DAI_Batiment</text><text
+>DAI_Lieu</text><text>DAI_Fournis</text><text>DAI_DateDevis</text><text>DAI_Reference</text><text
+>DAI_MaterielC</text><text>DAI_MaterielB</text><text>DAI_MaterielA</text><text
+>DAI_MotifCom</text><text>DAI_Service</text><text>DAI_NomPilot</text><text
+>DAI_TypeInfor</text><text>DAI_Appli</text><text>DAI_Projet</text><text>DAI_LibGMetier</text><text
+>DAI_GMetier</text><text>DAI_Question</text><text>DAI_Comande</text><text
+>DAI_DateCredit</text><text>DAI_Societ</text><text>DAI_NInves</text><text
+>f_DAI_Ndai</text><text>DAI_LibSite</text><text>DAI_Site</text><text>DAI_MOeuvre</text><text
+>DAI_Titre</text><text>DAI_DateDeman</text><text>ImportarDev</text><text>f_groupesUser</text><text
+>BalAprob3</text><text>ImportarAprob3</text><text>f_user</text><text>ImportarGMetiers</text><text
+>ImportarQuestion</text><text>f_MsgReengager</text><text>COM_Annul</text><text
+>Auteur_POA</text><text>f_Destinataires</text><text>f_MailAnnul</text><text
+>AutorReengager</text><text>URLReengager</text><text>Reengager</text><text
+>IDDoc</text><text>f_BalFon</text><text>URL</text><text>HTTP_Referer</text><text
+>Server_Name</text><text>f_EtatTerminal</text><text>f_CompterUtilisation</text><text
+>f_ADetruire</text><text>f_EnregActeur</text><text>f_EnregDate</text><text
+>f_ActeursWorkflowIndividus</text><text>f_ActeursWorkflowGroupes</text><text
+>f_ActeursGroupe</text><text>f_ActeursIndividu</text><text>f_ActionAFaire</text><text
+>f_EstModele</text><text>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text
+>f_AuteursAdmin</text><text>f_TitresForm</text><text>f_TypeEtat</text><text
+>f_EtatNoms</text><text>f_EtatIcone</text><text>f_Etat</text><text>f_TypeForm</text></textlist></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwBAAAAAQABAAAAAwAAAAAAAAABAAAYCAACAHn/bAABAP///wABAAAAAAABAAAAAAABAAAgYAAA
+ADEAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUH
+AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
+AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
+BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
+AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIHBgA+fA==
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwBAAAAAQABAAAAAwAAAAAAAAABAAAYCAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZQABAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcgAGAD58
+</rawitemdata></item>
+<item name='$PublicAccess'><text>1</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_DFCP03Etat5</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+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
+</rawitemdata></item></note>
+

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004968DB'>
+<noteinfo noteid='e7a' unid='73C13128A6C4A2FAC1257CB40031C214' sequence='20'>
+<created><datetime dst='true'>20140408T110329,48+02</datetime></created>
+<modified><datetime>20171029T102206,35-03</datetime></modified>
+<revised><datetime>20170307T090551,07-03</datetime></revised>
+<lastaccessed><datetime>20171029T102159,24-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102159,24-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+DgECADAAEgBaT05QUk9fSW50ZXJuYWxSZWYFABIAWk9OUFJPX0ludGVybmFsUmVmAwACACYAAgAk
+MwIABgAAAAAAAAAFAAsAZl9EZW1hbmRldXIAtAIDAAIADgACACQwkABWAQMABQA2ADEABQASAAIA
+AgAJAAQAWk9OUFJPX0ludGVybmFsUmVmJDMkMCRDb25mbGljdCRSRUYABAAEAAAAUAAFAAoAZl9U
+eXBlRm9ybQEABgBaT05QUk8KAgQABQAGAGZfRXRhdAAAAAAAAAAAAAAPAgQAHAIFAAkAJENvbmZs
+aWN0AGgBHgEcAgMABwAeABcACUwxUzNTNFM2UzdTOVMxMFMxMlMxM1MA
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+MQADAABEgGYAAAASAIBmABIAAgAAZgAUAAIAWk9OUFJPX0ludGVybmFsUmVmJDMkMA==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAQACAAAAFZDAQASABEAMgAAAHQAAQAACgAAAAAAAAAAAAICAAAAVkMBAAIACQAyAAAAtQAB
+AAAKAAAAAAAAAAAAAgIAAABWQwEAAgAQABwAAABlAAEAAAoAAAAAAAAAAAACAgAAAFpPTlBST19J
+bnRlcm5hbFJlZlKCZoJyZW5jZSBpbnRlcm5lMgACADAAEgBaT05QUk9fSW50ZXJuYWxSZWYFABIA
+Wk9OUFJPX0ludGVybmFsUmVmAwAkM0RlbWFuZGV1cjIAAgAmAAIAJDMCAAYAAAAAAAAABQALAGZf
+RGVtYW5kZXVyALQCAwAHAAoAAwAJNFMAJDBEb2N1bWVudFVuaXF1ZUlEHAACAA4AAgAkMJAAVgED
+AAcADAAFAAkwUzBFACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQABAAAAAAAAAAAAV0MBAQAJ
+AAAAAAAAAAAAAAAAAAAAAAEABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAA
+AAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAQAAAAAA
+AAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wAB
+AP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
+</rawitemdata></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$TITLE' sign='true'><text>(v_ZONPRO_Export_old)|v_ZONPRO_Export_old</text></item>
+<item name='$Comment' sign='true'><text>Pre v14.5</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

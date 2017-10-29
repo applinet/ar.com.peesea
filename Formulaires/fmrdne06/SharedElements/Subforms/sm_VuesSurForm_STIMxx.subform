@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='976' unid='EFA54FF2CA753994C125750B002E004E' sequence='84'>
+<created><datetime dst='true'>20081124T102227,34+02</datetime></created>
+<modified><datetime>20171029T101954,00-03</datetime></modified>
+<revised><datetime>20170911T114744,19-03</datetime></revised>
+<lastaccessed><datetime>20171029T101950,59-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101950,59-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SYLVAIN DIDELOT - U330711/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=ANNE ANDRIANOFF - E282952/OU=users/O=PSA</name><name
+>CN=JEAN MARC FULCRAND - E370612/OU=users/O=PSA</name><name>CN=CEDRIC FRANCAIS - E288949/OU=users/O=PSA</name><name
+>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAPgEAAAAAAAAAAAAAAAAAAAAAAADc/1AB+f8+ASBOAAAAAAAAAAAvLyAqICog
+KiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKg0vLwlMYWJl
+bHMgc3CCY2lmaXF1ZXMgYXV4IHZ1ZXMgU1RJTXh4DS8vICogKiAqICogKiAqICogKiAqICogKiAq
+ICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqDQ0vLyBTVElNMDENbF9Ob21Tb2NpZXRlID0g
+Ik5vbSBkZSBsYSBzb2NpgnSCIjsNbF9EYXRlRmluVmFsID0gIkRhdGUgZGUgZmluIGRlIHZhbGlk
+aXSCIjsNDS8vIFNUSU0wMw1sX1NlcnZldXJOb20gPSAiTm9tIGR1IHNlcnZldXIiOw0NLy9TVElN
+MDQNbF9FeHBvcnQgPSAiRXhwb3J0ZXIiOwBf/xAAAgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_VuesSurForm_STIMxx</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion' sign='true'><text>7</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_VuesSurForm_STIMxx</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAYAAACDBAEA3QYAAIX/hf9EAAEAAghUcmFk
+dWN0aW9ucyBzcIJjaWZpcXVlcyCFIGxhIHZ1ZSBwb3VyIGxlcyBmb3JtdWxhaXJlcyBTVElNeHjS
+CAEA/wAAAN4GAACF/w==
+</rawitemdata></item></note>
+

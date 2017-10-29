@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8004968DB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="99a" sequence="65" unid="D72C79506551BC19C1257552004BDA24">
+<created><datetime dst="true">20090203T154830,44+02</datetime></created>
+<modified><datetime>20171029T102200,57-03</datetime></modified>
+<revised><datetime>20170307T090545,37-03</datetime></revised>
+<lastaccessed><datetime>20171029T102155,65-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102155,65-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+
+<item name="$MimeType" sign="true"><text>image/gif</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20090203T154801,22+02</datetime></item>
+<item name="$ImageNames" sign="true"><text>grippie.gif</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$TITLE" sign="true"><textlist><text>ui-helper\grippie.gif</text><text>grippie.gif</text></textlist></item>
+<item name="$DesignerVersion" sign="true"><text>7</text></item></note>

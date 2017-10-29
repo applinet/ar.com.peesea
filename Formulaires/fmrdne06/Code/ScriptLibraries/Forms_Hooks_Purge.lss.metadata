@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="dba" sequence="26" unid="929CA2AA169564D2C1257D7E00280BB5">
+<created><datetime dst="true">20141027T091724,37+02</datetime></created>
+<modified><datetime>20171029T101959,22-03</datetime></modified>
+<revised><datetime>20170911T114754,69-03</datetime></revised>
+<lastaccessed><datetime>20171029T101953,62-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101953,62-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=ALEXANDRE AUGEN - U251305/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=JEAN MARC FULCRAND - E370612/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>7</text></item>
+<item name="$TITLE" sign="true"><text>Forms_Hooks_Purge</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$Comment"><text>Procédures permettant l'injection de code dans le LotusScript</text></item>
+
+
+<item name="$POID"><datetime>20170911T114754,69-03</datetime></item></note>

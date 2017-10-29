@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="e42" sequence="22" unid="AED25C8904B362E3C1257D58002455A1">
+<created><datetime dst="true">20140919T083652,17+02</datetime></created>
+<modified><datetime>20171029T101959,90-03</datetime></modified>
+<revised><datetime>20170911T114754,11-03</datetime></revised>
+<lastaccessed><datetime>20171029T101954,07-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101954,07-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>STIM04_VPNTIERS.png</text></item>
+<item name="$Flags"><text>345CgQ</text></item>
+<item name="$FlagsExt"><text>D</text></item>
+
+<item name="$FileModDT" sign="true"><datetime dst="true">20140916T090616,97+02</datetime></item>
+
+
+
+
+
+
+
+
+
+
+<item name="$FileNames" sign="true"><text>STIM04_VPNTIERS.png</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item></note>

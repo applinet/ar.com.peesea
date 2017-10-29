@@ -1,0 +1,326 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+Use "ProcessingTools"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Public Type VPNSSLActor
+Declare Sub GetActors(pFormCode As String, pFormStep As Integer, pStepIndex As String, ActorsList List As VPNSSLActor)
+Declare Sub SaveParamDoc(pSrcDocument As NotesDocument, pFields As Variant, pParamFormType As String, pUniqueKey As String)
+Declare Function ParamExists(pParamType As String, pParamValue As String) As Boolean
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Type de donnée symbolisant un valideur
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Public Type VPNSSLActor
+	
+	Name As String				' Nom, pour champs lecteurs/auteurs
+	Type As Integer				' Personne, groupe ou boite fonctionnelle. Voir bibliothèque "Const" pour les valeurs
+	SendMail As Boolean
+	
+End Type
+
+'++LotusScript Development Environment:2:2:GetActors:6:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure renvoie la liste des acteurs (groupes et individus)
+' pour une étape d'une formulaire VPNSSL
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub GetActors(pFormCode As String, pFormStep As Integer, pStepIndex As String, ActorsList List As VPNSSLActor)
+	
+	' Gestion d'erreur	
+	On Error Goto ErrorHandler
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																INITIALISATION
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Variables locales
+	Dim Formule As String
+	Dim Res As Variant
+	Dim i As Integer
+	
+	
+	' Ouverture de la base de paramétrage
+	Dim ParamDB As New NotesDatabase(ProfileDoc.f_Serveur_Parametre(0), ProfileDoc.f_Path_Parametre(0))
+	If Not ParamDB.IsOpen() Then Error ERROR_CANT_OPEN_PARAMDB%, "Impossible d'ouvir la base de paramétrage !"
+	
+	
+	' Ouverture de la vue "v_VPNSSLLookupActeurs"
+	Dim ActorsView As NotesView
+	Set ActorsView = ParamDB.GetView("v_VPNSSLLookupActeurs")
+	If ActorsView Is Nothing Then Error ERROR_CANT_OPEN_VIEW%, "Impossible d'ouvrir la vue ""v_VPNSSLLookupActeurs"""
+	
+	
+	' Collection des documents "Valideur" correspondant au formulaire et à l'étape
+	Dim ActorsCollection As NotesDocumentCollection
+	Set ActorsCollection = ActorsView.GetAllDocumentsByKey(Trim(Ucase(pFormCode)) + "##" + Cstr(pFormStep) + "##" + Trim(Lcase(pStepIndex)), True)
+	
+	
+	' Document "Valideur"
+	Dim ActorDoc As NotesDocument
+	
+	
+	Dim TempActor As VPNSSLActor
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																TRAITEMENT
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	
+	' On boucle sur les documents trouvés
+	Set ActorDoc = ActorsCollection.GetFirstDocument
+	While Not ActorDoc Is Nothing
+		
+		' Nom de l'acteur
+		TempActor.Name = ActorDoc.VPNSSL_Acteur(0)
+		
+		' Personne, groupe ou boite fonctionnelle
+		If (Trim(Ucase(ActorDoc.VPNSSL_ActeurType(0))) = "B") Then
+			TempActor.Type = VPNSSL_ACTOR_BALFON%
+		Elseif (Trim(Ucase(ActorDoc.VPNSSL_ActeurType(0))) = "G") Then
+			TempActor.Type = VPNSSL_ACTOR_GROUP%
+		Else
+			TempActor.Type = VPNSSL_ACTOR_PERSON%
+		End If
+		
+		' Envoi de mails		
+		TempActor.SendMail = (ActorDoc.VPNSSL_EnvoiMail(0) = "O")
+		
+		' Ajout à la liste à renvoyer
+		ActorsList(TempActor.Name) = TempActor
+		
+		
+		' On passe au document suivant
+		Set ActorDoc = ActorsCollection.GetNextDocument(ActorDoc)
+		
+	Wend		
+	
+	
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 														GESTION D'ERREURS
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *	
+ErrorHandler:
+	
+	' On ne s'occupe pas des erreurs traitées plus bas
+	If(Err <> ERROR_PROCESSED%) Then
+		' On log l'erreur
+		Call CurrentLogEntry.Clear
+		CurrentLogEntry.LogType		= LOGTYPE_ERROR$
+		CurrentLogEntry.FormCode 	= CurrentDoc.f_TypeForm(0)
+		CurrentLogEntry.SubName		= "GetActors"
+		CurrentLogEntry.ErrLine 			= Erl
+		CurrentLogEntry.ErrCode		= Err
+		CurrentLogEntry.ErrMsg			= Error$
+		
+		Call CurrentLogEntry.Save
+		
+		' On ajoute l'erreur à la liste des erreurs
+		Call CurrentProcessStatus.AddErr(Err, True)
+		
+	End If
+	
+	
+	' En revanche, on signale toujours que l'erreur a été traitée, soit ici, soit dans les procédures appelées
+	Error ERROR_PROCESSED%
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:SaveParamDoc:9:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge de créer un document de paramétrage VPNSSL
+' "pFields" est un tableau contenant les noms des champs dans le document
+' source et dans le documet de paramétrage
+' "pUniqueKey" est une clé unique permettant l'identification du document de
+' paramétrage (en plus de "pParamFormType"
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub SaveParamDoc(pSrcDocument As NotesDocument, pFields As Variant, pParamFormType As String, pUniqueKey As String)
+	
+	' Gestion d'erreur	
+	On Error Goto ErrorHandler
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																INITIALISATION
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Variables locales
+	Dim Formule As String
+	Dim Res As Variant
+	Dim i As Integer
+	
+	
+	' Ouverture de la base de paramétrage
+	Dim ParamDB As New NotesDatabase(ProfileDoc.f_Serveur_Parametre(0), ProfileDoc.f_Path_Parametre(0))
+	If Not ParamDB.IsOpen() Then Error ERROR_CANT_OPEN_PARAMDB%, "Impossible d'ouvir la base de paramétrage !"
+	
+	
+	' Ouverture de la vue "v_VPNSSLLookupUnicite"
+	Dim ParamView As NotesView
+	Set ParamView = ParamDB.GetView("v_VPNSSLLookupUnicite")
+	If ParamView Is Nothing Then Error ERROR_CANT_OPEN_VIEW, "Impossible d'ouvir la vue ""v_VPNSSLLookupUnicite"""
+	
+	
+	' Document de paramétrage
+	Dim ParamDocument As NotesDocument
+	
+	Dim TempItem As NotesItem
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																TRAITEMENT
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Récupération du document de paramétrage, si il existe, sinon on le créé
+	Set ParamDocument = ParamView.GetDocumentByKey(Trim(Ucase(pParamFormType)) + "##" + Trim(Ucase(pUniqueKey)))
+	If ParamDocument Is Nothing Then
+		Set ParamDocument = New NotesDocument(ParamDB)
+	End If
+	
+	
+	' Masque du document	
+	ParamDocument.form = Trim(pParamFormType)
+	
+	' Affectation des champs
+	If (Isarray(pFields)) Then	
+		For i = 0 To Ubound(pFields)
+			
+			Set TempItem = pSrcDocument.GetFirstItem(pFields(i, 0))
+			If Not TempItem Is Nothing Then
+				Call ParamDocument.ReplaceItemValue(pFields(i, 1), TempItem.Values)
+			End If
+			
+		Next
+	End If
+	
+	Set TempItem = New NotesItem(ParamDocument, "f_AuteursTous", "*", AUTHORS)
+	
+	
+	' Enregistrement du document
+	Call ParamDocument.Save(True, False)
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 														GESTION D'ERREURS
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *	
+ErrorHandler:
+	
+	' On ne s'occupe pas des erreurs traitées plus bas
+	If(Err <> ERROR_PROCESSED%) Then
+		' On log l'erreur
+		Call CurrentLogEntry.Clear
+		CurrentLogEntry.LogType		= LOGTYPE_ERROR$
+		CurrentLogEntry.FormCode 	= "VPNSSL"
+		CurrentLogEntry.SubName		= "SaveParamDoc"
+		CurrentLogEntry.ErrLine 			= Erl
+		CurrentLogEntry.ErrCode		= Err
+		CurrentLogEntry.ErrMsg			= Error$
+		
+		
+		
+		Call CurrentLogEntry.Save
+		
+		' On ajoute l'erreur à la liste des erreurs
+		Call CurrentProcessStatus.AddErr(Err, True)
+		
+	End If
+	
+	
+	' En revanche, on signale toujours que l'erreur a été traitée, soit ici, soit dans les procédures appelées
+	Error ERROR_PROCESSED%
+	Exit Sub
+End Sub
+'++LotusScript Development Environment:2:1:ParamExists:5:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette fonction se charge de vérifier l'existance d'un paramétre VPNSSL
+' (partenaire, protocole, serveur sécurisé...)
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function ParamExists(pParamType As String, pParamValue As String) As Boolean
+	
+	' Gestion d'erreur	
+	On Error Goto ErrorHandler
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																INITIALISATION
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Variables locales
+	Dim Formule As String
+	Dim Res As Variant
+	Dim i As Integer
+	
+	
+	' Ouverture de la base de paramétrage
+	Dim ParamDB As New NotesDatabase(ProfileDoc.f_Serveur_Parametre(0), ProfileDoc.f_Path_Parametre(0))
+	If Not ParamDB.IsOpen() Then Error ERROR_CANT_OPEN_PARAMDB%, "Impossible d'ouvir la base de paramétrage !"
+	
+	
+	' Ouverture de la vue "v_VPNSSLLookupUnicite"
+	Dim ParamView As NotesView
+	Set ParamView = ParamDB.GetView("v_VPNSSLLookupUnicite")
+	If ParamView Is Nothing Then Error ERROR_CANT_OPEN_VIEW, "Impossible d'ouvir la vue ""v_VPNSSLLookupUnicite"""
+	
+	
+	' Document "Partenaire/Protocole/Serveur"
+	Dim ParamDoc As NotesDocument
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																TRAITEMENT
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	Set ParamDoc = ParamView.GetDocumentByKey(Trim(Ucase(pParamType)) + "##" + Trim(Ucase(pParamValue)))
+	
+	
+	If ParamDoc Is Nothing Then
+		ParamExists = False
+	Else
+		ParamExists = True
+	End If
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 														GESTION D'ERREURS
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *	
+ErrorHandler:
+	
+	' On ne s'occupe pas des erreurs traitées plus bas
+	If(Err <> ERROR_PROCESSED%) Then
+		' On log l'erreur
+		Call CurrentLogEntry.Clear
+		CurrentLogEntry.LogType		= LOGTYPE_ERROR$
+		CurrentLogEntry.FormCode 	= CurrentDoc.f_TypeForm(0)
+		CurrentLogEntry.SubName		= "ParamExists"
+		CurrentLogEntry.ErrLine 			= Erl
+		CurrentLogEntry.ErrCode		= Err
+		CurrentLogEntry.ErrMsg			= Error$
+		
+		Call CurrentLogEntry.Save
+		
+		' On ajoute l'erreur à la liste des erreurs
+		Call CurrentProcessStatus.AddErr(Err, True)
+		
+	End If
+	
+	
+	' En revanche, on signale toujours que l'erreur a été traitée, soit ici, soit dans les procédures appelées
+	Error ERROR_PROCESSED%
+	Exit Function
+End Function

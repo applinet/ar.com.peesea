@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800498301'>
+<noteinfo noteid='be6' unid='1736639534D4D52BC12573AD00434B0A' sequence='24'>
+<created><datetime dst='true'>20071210T141501,22+02</datetime></created>
+<modified><datetime>20171029T102309,83-03</datetime></modified>
+<revised><datetime>20170606T011408,55-03</datetime></revised>
+<lastaccessed><datetime>20171029T102304,79-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102304,79-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=CHRISTOPHE LAZZARO - E278731/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAFAMAAAAAAAAAAAAAAAAAAAAAAADc/yYD+f8UAyBOAAAAAAAAAABsX1ZpZGVf
+bV9NZXNNb2RlbGVzVG1wID0gIlZvdXMgblwnYXZleiBwYXMgZGUgbW9kimxlLiI7DWxfVmlkZV9t
+X01lc0Jyb3VpbGxvbnNUbXAgPSAiVm91cyBuXCdhdmV6IHBhcyBkZSBicm91aWxsb24uIjsNbF9W
+aWRlX21fQVRyYWl0ZXJQYXJNb2lUbXAgPSAiVm91cyBuXCdhdmV6IHBhcyBkZSBmb3JtdWxhaXJl
+IIUgdHJhaXRlci4iOw1sX1ZpZGVfbV9BVHJhaXRlclBhck1lc0dyb3VwZXNUbXAgPSAiTGVzIGdy
+b3VwZXMgZG9udCB2b3VzIGZhaXRlcyBwYXJ0aWUgblwnb250IHBhcyBkZSBmb3JtdWxhaXJlIIUg
+dHJhaXRlci4iOw1sX1ZpZGVfbV9FbWlzUGFyTW9pVG1wID0gIlZvdXMgblwnYXZleiBwYXMgZGUg
+Zm9ybXVsYWlyZSCCbWlzIGV0IGVuIGNvdXJzIGRlIHRyYWl0ZW1lbnQuIjsNbF9WaWRlX21fVHJh
+aXRlc1Bhck1lc0dyb3VwZXNUbXAgPSAiSWwgblwneSBhIHBhcyBkZSBmb3JtdWxhaXJlIHRyYWl0
+giBwYXIgdW4gZ3JvdXBlIGRvbnQgdm91cyBmYWl0ZXMgcGFydGllLiI7DWxfVmlkZV9tX1RyYWl0
+ZXNQYXJNb2lUbXAgPSAiSWwgblwneSBhIHBhcyBkZSBmb3JtdWxhaXJlIHRyYWl0giBwYXIgdm91
+cy4iOw1sX1ZpZGVfbV9BVHJhaXRlclBhclBPQVRtcCA9ICJWb3VzIG5cJ2F2ZXogcGFzIGRlIGZv
+cm11bGFpcmUghSB0cmFpdGVyLiI7DWxfVmlkZV9tX0Vudm9pZXNUbXAgPSAiVm91cyBuXCdhdmV6
+IHBhcyByZYd1IGRlcyBkb2N1bWVudHMuIjsNbF9WaWRlX21fQVRyYWl0ZXJUbXAgPSAiVm91cyBu
+XCdhdmV6IHBhcyBkZSBmb3JtdWxhaXJlcyCFIHRyYWl0ZXIuIjsNAF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_RechercheMultiDBSK</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_RechercheMultiDBSK</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAo=
+</rawitemdata></item></note>
+

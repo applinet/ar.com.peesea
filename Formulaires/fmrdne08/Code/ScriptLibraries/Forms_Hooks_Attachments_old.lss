@@ -1,0 +1,286 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+Use "Forms_Constants"
+
+Use "LogEntry"
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Initialize
+Declare Private Sub Hooks_HandleError(pSubName As String)
+Declare Sub Hook_Attachment_Init(pDocument As NotesDocument)
+Declare Sub Hook_Attachment_BeforeAttachRemove(pDocument As NotesDocument, pAttachment As NotesEmbeddedObject)
+Declare Sub Hook_Attachment_AfterAttachRemove(pDocument As NotesDocument, pAttachment As NotesEmbeddedObject)
+Declare Sub Hook_Attachment_AttachProcess(pDocument As NotesDocument, pAttachment As NotesEmbeddedObject)
+Declare Function Hook_Attachment_GetRedirectPath(pDocument As NotesDocument) As String
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+End Sub
+'++LotusScript Development Environment:2:2:Hooks_HandleError:5:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+'	Cette procédure se charge d'enregistrer les messages d'erreur. Elle ne sert qu'a allèger les codes
+' 										en regroupant les lignes identiques
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Private Sub Hooks_HandleError(pSubName As String)
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.LibName			= "PerfRHCore_Hooks_Attachments"
+		LogEntry.SubName		= pSubName
+		LogEntry.Erl					= Erl
+		LogEntry.Err					= Err
+		LogEntry.Msg				= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:Hook_Attachment_Init:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Initialisation de l'agent
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub Hook_Attachment_Init(pDocument As NotesDocument)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Attachments_Init")
+	Exit Sub
+	
+End Sub
+'++LotusScript Development Environment:2:2:Hook_Attachment_BeforeAttachRemove:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Avant suppression d'une pièce jointe
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub Hook_Attachment_BeforeAttachRemove(pDocument As NotesDocument, pAttachment As NotesEmbeddedObject)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim TempItem As NotesItem
+	Dim TempVar As Variant
+	Dim i As Integer
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' les pièces jointes sont référencées dans le champs "Forms_AttachAssociation"
+	' sous la forme "clé de transmission#date du rattachement#nom du fichier"
+	' Récupération du champ des références		
+	Set TempItem = pDocument.GetFirstItem("Forms_AttachAssociation")
+	If Not TempItem Is Nothing Then
+		
+		' On ne peut pas manipuler une valeur d'un NotesItem, mais on peut manipuler une valeur d'un tableau
+		TempVar = TempItem.Values
+		
+		' On boucle sur les pièces jointes référencées
+		For i = 0 To Ubound(TempItem.Values)
+			
+			' Si on trouve la pièce jointe, on supprime sa référence
+			If (Trim(Ucase(Strrightback(TempVar(i), "#"))) = Trim(Ucase(pAttachment.Source))) Then
+				TempVar(i) = ""
+			End If
+			
+		Next
+		
+		' On remet les informations, moins la pièce jointe supprimée			
+		TempItem.Values = Fulltrim(TempVar)
+		
+	End If	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Attachments_BeforeAttachRemove")
+	Exit Sub
+	
+End Sub
+'++LotusScript Development Environment:2:2:Hook_Attachment_AfterAttachRemove:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Après suppression d'une pièce jointe
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub Hook_Attachment_AfterAttachRemove(pDocument As NotesDocument, pAttachment As NotesEmbeddedObject)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Attachments_AfterAttachRemove")
+	Exit Sub
+	
+End Sub
+'++LotusScript Development Environment:2:2:Hook_Attachment_AttachProcess:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Actions sur chaque pièce jointe
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub Hook_Attachment_AttachProcess(pDocument As NotesDocument, pAttachment As NotesEmbeddedObject)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim TempString As String	
+	Dim TempItem As NotesItem
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' on référence les pièces jointes dans le champs "Forms_AttachAssociation"
+	' sous la forme "clé de transmission#date du rattachement#nom du fichier"
+	If ((Trim(pDocument.Forms_AttachTransmissionKey(0)) <> "")) Then
+		
+		' Si on a reçu une clé de transmission, cela signifie que l'on doit ajouter une pièce jointe
+		' On vérifie donc si la pièce jointe que l'on analyse est présente parmi celles déjà référencées
+		
+		TempString = Trim(pDocument.Forms_AttachTransmissionKey(0)) + "#" + Format(Now, "dd/mm/yyyy hh:nn:ss") + "#" + Trim(pAttachment.Source)
+		
+		' Récupération du champ des références		
+		Set TempItem = pDocument.GetFirstItem("Forms_AttachAssociation")
+		If Not TempItem Is Nothing Then
+			
+			' On boucle sur les pièces jointes référencées
+			Forall AttachmentInfo In TempItem.Values
+				
+				' Si on trouve la pièce jointe, on quitte
+				If (Trim(Ucase(Strrightback(AttachmentInfo, "#"))) = Trim(Ucase(pAttachment.Source))) Then
+					Exit Sub
+				End If
+				
+			End Forall
+			
+			
+			' Si on arrive ici, c'est que la pièce jointe n'est pas référencée. On l'ajoute
+			Call TempItem.AppendToTextList(TempString)
+			
+			
+		' Si le champ n'existe pas, on le créé et on ajoute la pièce jointe en cour
+		Else
+			Set TempItem = New NotesItem(pDocument, "Forms_AttachAssociation", TempString)
+			
+		End If
+		
+		
+	End If
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Attachments_AttachProcess")
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:Hook_Attachment_GetRedirectPath:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Retourne l'URL de redirection
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function Hook_Attachment_GetRedirectPath(pDocument As NotesDocument) As String
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	Select Case Ucase(Trim(pDocument.f_TypeForm(0)))
+	Case "DMINFO"
+		Hook_Attachment_GetRedirectPath = pDocument.URL(0) + "#ANCHOR_Attach_DMINFO"
+	Case Else
+		Hook_Attachment_GetRedirectPath = pDocument.URL(0) + "#Anchor_" + Trim(Ucase(pDocument.f_TypeForm(0))) + "_" + Trim(Ucase(pDocument.Forms_AttachTransmissionKey(0))) + "_Attach"
+	End Select
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Attachment_GetRedirectPath")
+	Exit Function
+	
+End Function

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800498301'>
+<noteinfo noteid='bce' unid='AC8FFF6FF3B87527C12573AD00434B04' sequence='24'>
+<created><datetime dst='true'>20071210T141501,16+02</datetime></created>
+<modified><datetime>20171029T102309,71-03</datetime></modified>
+<revised><datetime>20170606T011408,43-03</datetime></revised>
+<lastaccessed><datetime>20171029T102304,73-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102304,73-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=CHRISTOPHE LAZZARO - E278731/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQATQIAAAAAAAAAAAAAAAAAAAAAAADc/2AC+f9OAiBOAAAAAAAAAABsX1ZpZGVf
+bV9NZXNNb2RlbGVzVG1wICA9ICJObyBtb2RlbCBleGlzdHMiOw1sX1ZpZGVfbV9NZXNCcm91aWxs
+b25zVG1wICA9ICJObyBkcmFmdCBleGlzdHMiOw1sX1ZpZGVfbV9BVHJhaXRlclBhck1vaVRtcCAg
+PSAiTm8gZm9ybSB0byBwcm9jZXNzIjsNbF9WaWRlX21fQVRyYWl0ZXJQYXJNZXNHcm91cGVzVG1w
+ICA9ICJObyBmb3JtIHRvIHByb2Nlc3MgZm9yIHRoZSBncm91cHMgeW91IGJlbG9uZyB0byI7DWxf
+VmlkZV9tX0VtaXNQYXJNb2lUbXAgID0gIllvdSBoYXZlIG5vdCBzZW50IGFueSBmb3JtcyI7DWxf
+VmlkZV9tX1RyYWl0ZXNQYXJNZXNHcm91cGVzVG1wICA9ICJObyBmb3JtIHByb2Nlc3NlZCBieSBh
+IGdyb3VwIHlvdSBiZWxvbmcgdG8iOw1sX1ZpZGVfbV9UcmFpdGVzUGFyTW9pVG1wICA9ICJObyBm
+b3JtIHByb2Nlc3NlZCBieSB5b3UiOw1sX1ZpZGVfbV9BVHJhaXRlclBhclBPQVRtcCAgPSAiTm8g
+Zm9ybSB0byBwcm9jZXNzIjsNbF9WaWRlX21fRW52b2llc1RtcCAgPSAiWW91IGhhdmUgbm90IHJl
+Y2VpdmVkIGFueSBkb2N1bWVudHMiOw1sX1ZpZGVfbV9BVHJhaXRlclRtcCAgPSAiTm8gZm9ybSB0
+byBwcm9jZXNzIjsAAF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_RechercheMultiDBEN</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_RechercheMultiDBEN</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAo=
+</rawitemdata></item></note>
+

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800498301'>
+<noteinfo noteid='c4e' unid='8C74BBFF79981B35C12574DC004F271F' sequence='23'>
+<created><datetime dst='true'>20081008T162433,59+02</datetime></created>
+<modified><datetime>20171029T102310,31-03</datetime></modified>
+<revised><datetime>20170606T011408,83-03</datetime></revised>
+<lastaccessed><datetime>20171029T102305,07-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102305,07-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQA1wIAAAAAAAAAAAAAAAAAAAAAAADc/+oC+f/YAiBOAAAAAAAAAABsX1RpdHJl
+ID0gIlVtIGVycm8gZm9pIGVuY29udHJhZG8iOw1sX0V4Y3VzZSA9ICJQZWRpbW9zIGRlc2N1bHBh
+cyI7DWxfTXNnSW1wcmVzc2lvbkVjcmFuID0gIlBhcmEgYWp1ZGFyIGEgY29ycmlnaXIgZXN0ZSBl
+cnJvLCB2b2NlIHBvZGUgcmVhbGl6YXIgdW0gUHJpbnRTY3JlZW4gZGVzdGEgcGFnaW5hIGUgcmVw
+YXNzYXIgcGFyYSBhcyBwZXNzb2FzIGluZGljYWRhcyBuYSBwoGdpbmEgPGhyZWY9JyMnIG9uQ2xp
+Y2s9XCdvcGVuQ29udGFjdCgpXCc+Y29udGFjdDwvYT4iOw1sX0VycmV1ckRvbWlubyA9ICJQYXJh
+IGluZm9ybWGHxm8sIG8gc2Vydmlkb3IgcmV0b3Jub3UgbyBzZWd1aW50ZSBlcnJvOiAiOw0NLy8g
+T24gYWZmaWNoZSB1bmUgcG9wLXVwIGVuIGxhIGNlbnRyYW50IIUgbCeCY3Jhbg1mdW5jdGlvbiBv
+cGVuQ29udGFjdCgpew0JdmFyIHVybCA9IHNlbGYud2luZG93LmxvY2F0aW9uLmhyZWY7DQl2YXIg
+b3B0czIgPSAnc3RhdHVzPW5vLHJlc2l6YWJsZT1ubyxzY3JvbGxiYXJzPU5vLHdpZHRoPTU5MCxo
+ZWlnaHQ9MTkwIGxlZnQ9JyArDQkJKChzY3JlZW4ud2lkdGggLSA1OTApLzIpICsgIix0b3A9IiAr
+ICgoc2NyZWVuLmhlaWdodCAtIDE5MCkvMik7DQl2YXIgd2luPXdpbmRvdy5vcGVuKHVybC5zdWJz
+dHJpbmcoMCwodXJsLmxhc3RJbmRleE9mKCcubnNmJykrNSkpKydwX2NvbnRhY3Q/T3BlblBhZ2Un
+LCdDb250YWN0JyxvcHRzMik7CQ0Jd2luLmZvY3VzKCk7DX0AAF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_MsgErreurPT</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAqBAoMEAQCF/wgA
+AQAACg==
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_MsgErreurPT</text><text
+>sm_MsgErreurPT</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

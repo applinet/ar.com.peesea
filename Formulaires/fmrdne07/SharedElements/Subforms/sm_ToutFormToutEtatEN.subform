@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800495382'>
+<noteinfo noteid='5be' unid='2804507D1B20ABA0C1256BCD00451671' sequence='36'>
+<created><datetime dst='true'>20020603T143437,29+02</datetime></created>
+<modified><datetime>20171029T102101,12-03</datetime></modified>
+<revised><datetime>20140609T101027,01-03</datetime></revised>
+<lastaccessed><datetime>20171029T102058,32-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102058,32-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatText' summary='false' sign='true'><number>0</number></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='$Fields'><textlist><text>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text
+>f_AuteursAdmin</text><text>f_Etat</text><text>f_Lng</text></textlist></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAOQgAAAAAAAAAAAAAAAAAAAAAAADc/0wI+f86CCBOAAAAAAAAAABsX01vZGVs
+ZT0nTW9kimxlJzsNbF9TYXV2ZXI9ICdTYXV2ZXInOw1sX1NhdXZlckV0YXRJbml0aWFsID0gJ1Nh
+dXZlcic7DWxfU2F1dmVyQ29tbWVNb2RlbGU9J1NhdXZlciBjb21tZSBtb2SKbGUnOw1sX1NhdXZl
+ckNvbW1lTW9kZWxlTWF4QXR0ZWludD0nU2F1dmVyIGNvbW1lIG1vZIpsZSAoTmIgbWF4IGF0dGVp
+bnQpJzsNbF9TYXV2ZXJDb21tZUJyb3VpbGxvbj0nU2F1dmVyIGNvbW1lIEJyb3VpbGxvbic7DWxf
+UHJvbXB0VGl0cmVFdGF0SW5pdGlhbD0nRW50cmV6IGxlIHRpdHJlIGR1IGZvcm11bGFpcmUgKG6C
+Y2Vzc2FpcmUgcG91ciBsYSBzYXV2ZWdhcmRlIGRhbnMgY2V0IIJ0YXQpJzsNbF9Qcm9tcHRUaXRy
+ZU1vZGVsZT0nRW50cmV6IGxlIHRpdHJlIGR1IG1vZGVsZSc7DWxfQ29uZlNhdXZlck1vZGVsZT0n
+Q29uZmlybWV6IHZvdXMgbGEgc2F1dmVnYXJkZSBlbiB0YW50IHF1ZSBtb2SKbGU/JzsNbF9Db25m
+U291bWV0dHJlPSAnRXRlcyB2b3VzIHN1ciBkZSB2b3Vsb2lyIHNvdW1ldHRyZSBjZSBmb3JtdWxh
+aXJlID8nOw1sX1NvdW1ldHRyZT0nU291bWV0dHJlJzsNbF9EZW1hbmRldXIgPSAnUmVxdWVzdGVy
+JzsNbF9Tb2NpZXRlID0gJ0NvbXBhbnknOw1sX0F1dGV1ciA9ICdEZW1hbmRlIGVmZmVjdHWCZSBw
+YXInIDsNbF9SZWZlcmVuY2U9ICdSZWZlcmVuY2UnOw1sX0RhdGVDcmVhdGlvbj0nQ3JlYXRpb24g
+ZGF0ZSc7DWxfRXRhdCA9ICdTdGF0dXMnOw1sX0hpc3RvcmlxdWUgPSdIaXN0b3J5JzsNbF9TaXRl
+PSdTaXRlJzsNbF9UZWxEZW1hbmRldXIgPSAnVGVsZXBob25lIG51bWJlcicNbF9EZW1hbmRldXJF
+bnRpdGUgPSAnU2VydmljZSc7DWxfVGl0cmU9ICdUaXRsZSc7DWxfVXRpbGlzZXJNb2RlbGU9J1V0
+aWxpc2VyIG1vZIpsZSc7DWxfTW9kaWZpZXI9J01vZGlmaWVyJzsNbF9EZXRydWlyZT0nRIJ0cnVp
+cmUnOw1sX0NvbmZkZXRydWlyZT0nRXRlcyB2b3VzIHN1cihlKSBkZSB2b3Vsb2lyIGSCdHJ1aXJl
+IGNlIGZvcm11bGFpcmUgPyc7DWxfSEVucmVnPSdTYXV2gic7DWxfSFNvdW1ldHRyZSA9ICdTb3Vt
+aXMnOw1sX0hBY2NlcHRlID0nQWNjZXB0gic7DWxfSFJlZnVzZSA9ICdSZWZ1c4InOw1sX0hBbm51
+bD0nQW5udWyCJzsNbF9IVmFsaWRlRmluYWw9J1ZhbGlkYXRpb24gZmluYWxlJzsNbF9IVmFsaWRl
+PSAnVmFsaWRhdGlvbiBpbnRlcm2CZGlhaXJlJzsNbF9BY2NlcHRlcj0nQWNjZXB0ZXInOw1sX1Jl
+ZnVzZXI9J1JlZnVzZXInOw1sX0VsZW1lbnRzRGVtYW5kZT0nRWyCbWVudHMgZGUgbGEgZGVtYW5k
+ZSc7DWxfQVRyYWl0ZXJQYXI9J1RvIHZhbGlkYXRlIGJ5JzsNbF9EZWZhdWx0PSdDaG9pc2lzc2V6
+IHVuIGNyaXSKcmUnOw1sX0Rvc3NpZXI9J0Rvc3NpZXInOw1sX0VUPSdFVCc7DWxfT1U9J09VJzsN
+bF9TQVVGPSdTQVVGJzsNDWxfUmVjaGVyY2hlQm91dG9uPSdBZGQgdGhpcyBjcml0ZXJpYSc7DWxf
+UmVjaGVyY2hlR289J1N0YXJ0IHNlYXJjaCc7DWxfTXNnVmFsVmlkZT0nVG8gYWRkIHRoaXMgY3Jp
+dGVyaWEsIHlvdSBtdXN0IHR5cGUgYSB2YWx1ZSc7DWxfVm90cmVSZXF1ZXRlPSdZb3VyIHJlcXVl
+c3QgOiAnOw1sX05vdXZlbGxlUmVjaGVyY2hlPSdOZXcgc2VhcmNoJzsNbF9Ucmk9J0Nob29zZSBo
+b3cgdG8gc29ydCA6ICc7DWxfVHJpUGVydGluZW5jZT0nQnkgcmVsZXZhbmNlJzsNbF9Nc2dFcnJS
+ZWNoZXJjaGVHbG9iYWxlPSdUaGFua3MgZm9yIG5vdCB1c2luZyB0aGUgZm9sbG93aW5nIHJlc2Vy
+dmVkIHdvcmRzIDogXG5cbiBOT1QgLSBBTkQgLSBPUic7DWxfVHJpRGF0ZT0nQnkgbW9kaWZpY2F0
+aW9uIGRhdGUnOw1sX1RyaUV0YXQ9J0J5IHN0YXRlJzsNDWxfQ29uZkZhaXJlU3VpdnJlPSdFdGVz
+IHZvdXMgc3VyIGRlIHZvdWxvaXIgRmFpcmUgU3VpdnJlIGNlIGZvcm11bGFpcmUgPyc7DWxfQ29u
+ZlJlZW5nYWdlcj0nRXRlcyB2b3VzIHN1ciBkZSB2b3Vsb2lyIFJlZW5nYWdlciBjZSBmb3JtdWxh
+aXJlID8nOw0NbF9BZmZpY2hlckdyb3VwZT0nVGhlIG1lbWJlcnMgb2YgdGhlIGdyb3VwIGFyZSA6
+ICc7DWxfQWZmaWNoZXJQYXNHcm91cGU9J1RoZXJlIGlzIG5vIGdyb3VwIGluIHRoaXMgbGlzdC4n
+Ow0NbF9JbmZvID0gJ0luZm9ybWF0aW9ucyBzdXIgbGUgZm9ybXVsYWlyZSc7AABf/xAAAgAPAAcA
+AAAAAAAA
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_ToutFormToutEtatEN</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEA3QYAAIX/hf8dAAEAAghzbV9U
+b3V0Rm9ybVRvdXRFdGF0RU4A0ggBAP8AAADeBgAAhf8=
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_ToutFormToutEtatEN</text><text
+>sm_ToutFormToutEtatEN</text></textlist></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

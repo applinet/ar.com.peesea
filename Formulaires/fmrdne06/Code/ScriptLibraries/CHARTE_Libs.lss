@@ -1,0 +1,127 @@
+'++LotusScript Development Environment:2:5:(Options):0:72
+Option Public
+Option Declare
+
+Use "Forms_Libs"
+Use "LogEntry"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Function CHARTE_Export_GetDocumentLine(docProcessed As NotesDocument, dbParam As NotesDatabase, strLang As String) As String
+Declare Function CHARTE_Export_GetHeaders(strLang As String) As String
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+'++LotusScript Development Environment:2:1:CHARTE_Export_GetDocumentLine:1:8
+Function CHARTE_Export_GetDocumentLine(docProcessed As NotesDocument, dbParam As NotesDatabase, strLang As String) As String
+	
+	' Gestion d'erreurs	
+	On Error GoTo ErrorHandler
+	
+	Dim vPays As NotesView
+	Dim docPays As NotesDocument
+	Dim strPays As String, strPaysTranslated As String
+	Dim intIndex As Integer
+	Dim strLine As String, strTemp As String, strKey As string
+	Dim varTemp As Variant
+	Dim nameTemp As NotesName
+	Dim i As Integer
+	Dim LogEntry As LogEntry
+	
+	
+	Set vPays = dbParam.Getview("v_Pays_Lookup_By3Code")
+	If vPays Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_Pays_Lookup_By3Code"""
+	
+	' Etat du formulaire (en français)
+	varTemp = Evaluate(|@Trim(@Right(f_EtatNoms;"_FR:"))|, docProcessed)
+	strLine = FormatForCSV(varTemp(0))
+	
+	' Annee
+	strLine = strLine + ";" + CStr(docProcessed.CHARTE_Annee(0))
+	
+	' Référence
+	strLine = strLine + ";" + docProcessed.f_Reference(0)
+	
+	'PAYS
+	strPays = docProcessed.CHARTE_Pays(0)
+	Set docPays = vPays.Getdocumentbykey(strPays, True)
+	If docPays Is Nothing Then Error 9999, "Country not found: " + strPays
+	ForAll py In docPays.Getitemvalue("Pays_Trad")
+		intIndex = InStr (CStr(py), strLang + ":")
+		If (intIndex > 0) Then
+			strPaysTranslated = Right$ (CStr(py), Len (CStr(py)) - intIndex - Len (strLang))
+			Exit forall
+		End If
+	End ForAll
+	strLine = strLine + ";" + strPaysTranslated
+	
+	' Demandeur
+	Set nameTemp = New NotesName(docProcessed.f_Demandeur(0))
+	strLine = strLine + ";" + FormatForCSV(nameTemp.Common)
+	
+	' Collaborateur
+	Set nameTemp = New NotesName(docProcessed.CHARTE_Collaborateur(0))
+	strLine = strLine + ";" + FormatForCSV(nameTemp.Common)
+	
+	' Hierarchique
+	Set nameTemp = New NotesName(docProcessed.CHARTE_Hierarchique(0))
+	strLine = strLine + ";" + FormatForCSV(nameTemp.Common)
+	
+	' Date d'arrivée dans l'état
+	strLine = strLine + ";" + Format(docProcessed.f_DateArriveeEtat(0), "dd/mm/yyyy")	
+	
+	' Date de création
+	strLine = strLine + ";" + Format(docProcessed.f_DateSortieEtatInit(0), "dd/mm/yyyy")
+
+	' Renvoi de la ligne	
+	CHARTE_Export_GetDocumentLine = strLine	
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+
+' Gestion d'erreurs lors de la récupération du site Reflex
+GetReflexSiteErrorHandler:
+	Set LogEntry = New LogEntry
+	If (Err = ERROR_PROPAGATE%) Then
+		LogEntry.FromString(Error$)
+	Else
+		LogEntry.LogType = LOGLEVEL_EMERG%
+		LogEntry.SubName = "CHARTE_Export_GetDocumentLine"
+		LogEntry.Erl = Erl
+		LogEntry.Err = Err
+		LogEntry.Msg = Error$
+	End If
+	LogEntry.Component = "CHARTE"
+	If Not docProcessed Is Nothing Then LogEntry.DocID = docProcessed.Universalid
+	Call LogEntry.Save("", "")
+	Resume next
+	
+' Gestion d'erreurs
+ErrorHandler:
+	set LogEntry = New LogEntry
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+	Else
+		LogEntry.LogType = LOGLEVEL_EMERG%
+		LogEntry.SubName = "CHARTE_Export_GetDocumentLine"
+		LogEntry.Erl = Erl
+		LogEntry.Err = Err
+		LogEntry.Msg = Error$
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+	End If
+	Exit Function
+End Function
+
+
+'++LotusScript Development Environment:2:1:CHARTE_Export_GetHeaders:1:8
+Function CHARTE_Export_GetHeaders(strLang As String) As String
+	If strLang = "ES" Then
+		CHARTE_Export_GetHeaders = "Estado;Año;Referencia;País;Demandante;Colaborador;Jerarquico;Fecha el Estado;Fecha de Demanda"
+	ElseIf strLang = "PT" Then
+		CHARTE_Export_GetHeaders = "Estado;Ano;Referência;País;Requerente;Colaborador;Jerarquico;Data do Estado;Data da Requisição"
+	Else
+		CHARTE_Export_GetHeaders = "Etat;Année;Référence;Pays;Emis par;Collaborateur;Hierarchique;Date d'arrivée dans l'état;Emis le"
+	End If
+End Function
+

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800495382'>
+<noteinfo noteid='5ba' unid='CE74C614E83435E7C1256BC900531000' sequence='27'>
+<created><datetime dst='true'>20020530T170715,84+02</datetime></created>
+<modified><datetime>20171029T102101,10-03</datetime></modified>
+<revised><datetime>20140609T101027,37-03</datetime></revised>
+<lastaccessed><datetime>20171029T102058,32-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102058,32-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_Anulee</text></item>
+<item name='Annule' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><text>Annule</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJUHAAAAAAAAAAAAAAAAgwQBAN0GAACF/4X/KwABAAIIKiBBdXRvciBkdSBk
+b2N1bWVudCwgb3AuIHBhciBhbnVsIDoA0ggBAP8AAADeBgAAhf/dBgAAiv/+/1AAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAIr/TACOAAAHADACAAAAAAAAAgEAAggiAAAAAAAAAAYAAAAAACIAAAAUAAIABQAA
+AAAAAAD0ALQCAwAHAAwABQAJMFMwRQBBbm51bGXeBgAAiv/dBgAAhf+F/wgAAQACCNIIAQD/AAAA
+3gYAAIX/
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_Anulee</text><text>sm_Anulee</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

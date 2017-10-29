@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800495382'>
+<noteinfo noteid='8fa' unid='882CD4F45A9BDEF2C12576EA00520B22' sequence='25'>
+<created><datetime dst='true'>20100318T165608,02+02</datetime></created>
+<modified><datetime>20171029T102104,76-03</datetime></modified>
+<revised><datetime>20140609T101029,63-03</datetime></revised>
+<lastaccessed><datetime>20171029T102100,68-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102100,68-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_DRRH16_Export)|v_DRRH16_Export</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+DgECADAAEgBEUlJIMTZfSW50ZXJuYWxSZWYFABIARFJSSDE2X0ludGVybmFsUmVmAwACACYAAgAk
+MwIABgAAAAAAAAAFAAsAZl9EZW1hbmRldXIAtAIDAAIADgACACQwkABWAQMABQA2ADEABQASAAIA
+AgAJAAQARFJSSDE2X0ludGVybmFsUmVmJDMkMCRDb25mbGljdCRSRUYABAAEAAAAUAAFAAoAZl9U
+eXBlRm9ybQEABgBEUlJIMTYKAgQABQAGAGZfRXRhdAAAAAAAAAAACEAKAgQAHAIFAAkAJENvbmZs
+aWN0AGgBHgEcAgMABwAeABcACUwxUzNTNFM2UzdTOVMxMFMxMlMxM1MA
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+MQADAABEgGYAAAASAIBmABIAAgAAZgAUAAIARFJSSDE2X0ludGVybmFsUmVmJDMkMA==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAQACAAAAFZDAQASABEAMgAAAHQAAQAACgAAAAAAAAAAAAICAAAAVkMBAAIACQAyAAAAtQAB
+AAAKAAAAAAAAAAAAAgIAAABWQwEAAgAQABwAAABlAAEAAAoAAAAAAAAAAAACAgAAAERSUkgxNl9J
+bnRlcm5hbFJlZlKCZoJyZW5jZSBpbnRlcm5lMgACADAAEgBEUlJIMTZfSW50ZXJuYWxSZWYFABIA
+RFJSSDE2X0ludGVybmFsUmVmAwAkM0RlbWFuZGV1cjIAAgAmAAIAJDMCAAYAAAAAAAAABQALAGZf
+RGVtYW5kZXVyALQCAwAHAAoAAwAJNFMAJDBEb2N1bWVudFVuaXF1ZUlEHAACAA4AAgAkMJAAVgED
+AAcADAAFAAkwUzBFACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQABAAAAAAAAAAAAV0MBAQAJ
+AAAAAAAAAAAAAAAAAAAAAAEABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAA
+AAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAQAAAAAA
+AAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wAB
+AP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>DRRH16 - Vue des documents pour l'export</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

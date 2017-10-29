@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800495382'>
+<noteinfo noteid='5c2' unid='8AE516EDABA405B1C1256BCE002D5539' sequence='47'>
+<created><datetime dst='true'>20020604T101509,37+02</datetime></created>
+<modified><datetime>20171029T102101,14-03</datetime></modified>
+<revised><datetime>20140609T101027,03-03</datetime></revised>
+<lastaccessed><datetime>20171029T102058,34-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102058,34-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAwQcAAAAAAAAAAAAAAAAAAAAAAADc/9QH+f/CByBOAAAAAAAAAABsX1R5cGVE
+ZUZvcm09J0Zvcm0gbmFtZSA6JzsNbF9NZXNCcm91aWxsb25zID0gJ015IGRyYWZ0IGZvcm1zIChp
+biBwcm9ncmVzcyknOw1sX01lc01vZGVsZXMgPSAnTXkgbW9kZWxzJzsNbF9FbWlzUGFyTW9pPSdG
+b3JtcyB0aGF0IEkgc2VudCc7DWxfQVRyYWl0ZXJQYXJNb2k9J0Zvcm1zIHRoYXQgSSBoYXZlIHRv
+IHByb2Nlc3MnOw1sX0FUcmFpdGVyID0gIkZvcm1zIHRvIGJlIHByb2Nlc3NlZCI7DWxfQVRyYWl0
+ZXJQYXJNZXNHcm91cGVzPSdGb3JtcyB0aGF0IHNob3VsZCBiZSBwcm9jZXNzZWQgYnkgbXkgZ3Jv
+dXBzJzsNbF9UcmFpdGVzUGFyTW9pPSdGb3JtcyBwcm9jZXNzZWQgYnkgbXlzZWxmJzsNbF9UcmFp
+dGVzUGFyTWVzR3JvdXBlcz0nRm9ybXMgcHJvY2Vzc2VkIGJ5IG15IGdyb3Vwcyc7DWxfRXRhdD0n
+U3RhdGUnOw1sX0RhdGVBcnJpdmVlRXRhdD0nQXJyaXZhbCBkYXRlIGluIHN0YXRlJzsNbF9FbWlz
+TGU9J1NlbnQgb24nOw1sX0FUcmFpdGVyUGFyPSdUbyBiZSBwcm9jZXNzZWQgYnknOw1sX1RyYWl0
+ZVBhcj0nUHJvY2Vzc2VkIGJ5JzsNbF9SZWZlcmVuY2U9J1JlZmVyZW5jZSc7DWxfUmVmZXJlbmNl
+TW9kaWY9J06nIEltbWF0Lic7DWxfRW1pc1Bhcj0nU2VudCBieSc7DWxfRW1pc0xlPSdTZW50IG9u
+JzsNbF9EYXRlTW9kaWY9J01vZGlmaWNhdGlvbiBkYXRlJzsNbF9Hcm91cGU9J0dyb3VwJzsNbF9Q
+Z1ByZWM9J1ByZXZpb3VzIHBhZ2UnOw1sX1BnU3Vpdj0nTmV4dCBwYWdlJzsNbF9EYXRlQ3JlYXQ9
+J0NyZWF0aW9uIGRhdGUnOw1sX1RpdHJlPSdUaXRsZSc7DWxfTWVzQnJvdWlsbG9ucz0nTXkgZHJh
+ZnRzJzsNbF9NZXNNb2RlbGVzPSdNeSBtb2RlbHMnOw1sX0dyb3VwZT0nR3JvdXAnOw1sX0NvbmZp
+cm1lU3VwcHJlc3Npb249J0RvIHlvdSByZWFseSB3YW50IHRvIGRlbGV0ZSB0aGlzIGRvY3VtZW50
+Pyc7DWxfTkJSZXN1bHRhdHM9J1RvdGFsIG51bWJlciBvZiByZXN1bHRzIDonOw1sX0RhdEVIZXVy
+ZSA9ICdEYXRlIGRlIGSCcGFydCc7DWxfRGVzdGluYXRpb24gPSAnRGVzdGluYXRpb24nOw1sX0Rh
+dGVSZXNlcnZhdGlvbiA9ICJEYXRlIGRlIHKCc2VydmF0aW9uIg1sX0JsYW5jID0gJyc7DWxfQmxh
+bmNsPScgJzsNbF9sPSdsJzsNbF9OVmVoaWN1bGUgPSAnTqd2ZWhpY3VsZScNbF9SZWN1PSdGb3Jt
+dWxhaXJlcyBxdWUgalwnYWkgcmWHdV9FTl8nOw0NbF9FcnJEb2NzID0gICdObyBkb2N1bWVudHMg
+YXZhaWxhYmxlIC4nOw1sX0VyckJyb3VpbGxvbiA9ICAnTm8gZHJhZnQgYXZhaWxhYmxlIGZvciAn
+Ow1sX0Vyck1vZGVsZSA9ICAnTm8gbW9kZWwgYXZhaWxhYmxlIGZvciAnOw0NbF9TdWl2cmVQT0FB
+dWxuYXkgPSAnQWNjinMgZGVzIHBlcnNvbm5lcyBleHSCcmlldXJlcyBhdSBncm91cGUsIGRldmFu
+dCB0cmF2YWlsbGVyIHN1ciBsZSBzaXRlIGRcJ0F1bG5heSBlbiBjb3Vycyc7DWxfVHJhaXRlc1BP
+QUF1bG5heSA9ICdBY2OKcyBkZXMgcGVyc29ubmVzIGV4dIJyaWV1cmVzIGF1IGdyb3VwZSwgZGV2
+YW50IHRyYXZhaWxsZXIgc3VyIGxlIHNpdGUgZFwnQXVsbmF5IHZhbGlkgnMnOw1sX1ZhbGlkZXI9
+J1ZhbGlkYXRpb24gZmluYWxlJzsNbF9Ob21WPSdOb20nOw1sX05vbVNvY2lldGVWPSdOb20gU29j
+aYJ0gic7DWxfVmFsaWRldXI9J1ZhbGlkZXVyJzsNbF9Db25mVmFsaWQgPSAnRXRlcyB2b3VzIHN1
+ciBkZSB2b3Vsb2lyIFZBTElERVIgY2VzIGRvY3VtZW50cz8nOw1sX05CUmVzdWx0YXRzPSdOb21i
+cmUgdG90YWwgZGUgcoJzdWx0YXRzIDogJzsNbF9FcnJfU2VsZWNjID0gJ1NlbGVjdGlvbiBhdSBt
+b2lucyBkXCd1bmUgZGVtYW5kgic7DWxfRXJyX05vRG9jcyA9ICdWb3VzIG5cJ2F2ZXogcGFzIGRl
+cyBkb2N1bWVudHMgc4JsZWN0aW9uboJzJzsNbF9IaXN0b3JpcSA9J0hpc3RvcmlxdWUnOw1sX1Bh
+cmtpbmcgPSAnVlZBIFBhcmtpbmcnOw1sX091ZXN0ID0gJ091ZXN0IC0gRW50coJlIHByaW5jaXBh
+bGUnOw1sX0VzdCA9ICdFc3QgLSBFbnRygmUgZGUgSVwnQUROJzsNACdf/xAAAgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_VuesSurFormsEN</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAo=
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_VuesSurFormsEN</text><text
+>sm_VuesSurFormsEN</text></textlist></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

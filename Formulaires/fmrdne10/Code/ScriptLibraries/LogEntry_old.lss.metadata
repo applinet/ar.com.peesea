@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C800498301" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="b5a" sequence="26" unid="97624DE5F5393CA4C12572C200357349">
+<created><datetime dst="true">20070419T114349,21+02</datetime></created>
+<modified><datetime>20171029T102309,27-03</datetime></modified>
+<revised><datetime>20170606T011408,07-03</datetime></revised>
+<lastaccessed><datetime>20171029T102304,37-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102304,37-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$TITLE" sign="true"><text>LogEntry_old</text></item>
+<item name="$Comment" sign="true"><text>deprecated</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+
+
+<item name="$POID"><datetime>20170606T011408,07-03</datetime></item></note>

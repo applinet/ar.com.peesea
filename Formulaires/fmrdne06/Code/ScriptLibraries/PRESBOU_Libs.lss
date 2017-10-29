@@ -1,0 +1,368 @@
+'++LotusScript Development Environment:2:5:(Options):0:72
+Option Public
+Option Declare
+
+Use "Forms_Libs"
+Use "LogEntry"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Function PRESBOU_Export_GetHeaders() As String
+Declare Function PRESBOU_Export_GetPrestation(strKey As String, dbParam As NotesDatabase, docProcessed As NotesDocument) As String
+Declare Function PRESBOU_Export_GetDocumentLine(docProcessed As NotesDocument, dbParam As NotesDatabase) As String
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Dim PRESBOU_Export_GetPrestation_Prestations List As String
+
+
+'++LotusScript Development Environment:2:1:PRESBOU_Export_GetHeaders:1:8
+Function PRESBOU_Export_GetHeaders() As String
+	PRESBOU_Export_GetHeaders = "Demandeur;Référence;Date de création;Etat;Pays;Site - usine;Marché (Flotte/Pays...);"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "CAF (Commande Affectée Filiale);Date de livraison PDV;Silhouette;Version;"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "Code FRR client livraison;Code adresse livraison;Nom concessionnaire livraison;"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "Ville livraison;Code FRR client facturation;Code adresse facturation;"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "Nom concessionnaire facturation;Ville facturation;Commentaires"	
+
+	Dim i As Integer
+	For i = 1 To 20
+		PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + ";Désignation prestation " + CStr(i) 
+		PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + ";Référence prestation " + CStr(i)
+		PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + ";Temps indicatif prestation " + CStr(i)
+		PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "; Prix indicatif prestation " + CStr(i) + " (€ HT)"
+		PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "; Prix retenu prestation " + CStr(i) + " (€ HT)"
+	Next
+
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + ";Avis réception usine;Date réception usine;Commentaires réception usine;"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "Date de saisie de la date mise à disposition;Date mise à disposition;VIS;"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "Commentaires saisie date mise à disposition;"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "Date de saisie de la date de fin de transformation;Date de fin de transformation;"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "VIN;Commentaires saisie date de fin de transformation;"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "Date de saisie emission facturation;Numéro de facture;"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "Commentaires saisie emission facturation;Date de saisie réception réglement;"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + "Numéro de bordereau;Commentaires saisie réception réglement"
+	PRESBOU_Export_GetHeaders = PRESBOU_Export_GetHeaders + ";Lien"
+End Function
+
+
+
+'++LotusScript Development Environment:2:1:PRESBOU_Export_GetPrestation:1:8
+Function PRESBOU_Export_GetPrestation(strKey As String, dbParam As NotesDatabase, docProcessed As NotesDocument) As String
+
+	' Gestion d'erreurs	
+	On Error GoTo ErrorHandler
+	
+	' Validation de la clé
+	strKey = Trim(LCase(strKey))
+
+	' Réponse mémoisée ?
+	Dim strTemp As String
+	If IsElement(PRESBOU_Export_GetPrestation_Prestations(strKey)) Then
+		strTemp = Trim(UCase(PRESBOU_Export_GetPrestation_Prestations(strKey)))
+		If strTemp <> "" Then
+			PRESBOU_Export_GetPrestation = strTemp
+			Exit Function
+		End If
+	End If
+
+
+	' Vue des prestations
+	Dim viewPrestations As NotesView
+	Set viewPrestations = dbParam.Getview("v_PRESBOU_Prestation_Lookup_ByKeyNRef")
+	If viewPrestations Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_PRESBOU_Prestation_Lookup_ByKeyNRef"" sur la base de paramétrage !"
+	
+	' Document prestation
+	Dim docPrestation As NotesDocument
+	Set docPrestation = viewPrestations.Getdocumentbykey(strKey, True)
+	If docPrestation Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Prestation"" dans la vue ""v_PRESBOU_Prestation_Lookup_ByKeyNRef"" pour la clé """ + strKey + """ !"			
+	
+	'Analysis of TempsIndi or Price1
+	Dim strTempsIndi As String
+	Dim strPrice1 As String
+	If (docProcessed.Hasitem("PRESBOU_DispTempsIndi")) Then
+		If (docProcessed.Getitemvalue("PRESBOU_DispTempsIndi")(0) = "1") Then
+			strPrice1 = "0"
+			strTempsIndi = CStr(docPrestation.PRESBOU_Prestation_TempsIndi(0))
+		Else
+			strPrice1 = CStr(docPrestation.PRESBOU_Prestation_Price1(0))
+			strTempsIndi = "0"
+		End If
+	Else
+		If (docProcessed.Getitemvalue("f_Etat")(0) > 90) Then
+			strPrice1 = CStr(docPrestation.PRESBOU_Prestation_Price1(0))
+			strTempsIndi = "0"
+		Else
+			strPrice1 = "0"
+			strTempsIndi = CStr(docPrestation.PRESBOU_Prestation_TempsIndi(0))
+		End If
+	End If
+	
+	' Mémoization et renvoi
+	strTemp = Trim(docPrestation.PRESBOU_Prestation_Label(0)) + ";"
+	strTemp = strTemp + Trim(docPrestation.PRESBOU_Prestation_Ref(0)) + ";"
+	strTemp = strTemp + strTempsIndi + ";"
+	strTemp = strTemp + strPrice1 + ";"
+	strTemp = strTemp + CStr(docPrestation.PRESBOU_Prestation_Price2(0))
+	
+	PRESBOU_Export_GetPrestation_Prestations(strKey) = strTemp
+	PRESBOU_Export_GetPrestation = strTemp
+
+
+	' C'est fini, on sort	
+	Exit Function
+
+	
+' Gestion d'erreur
+ErrorHandler:
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType = LOGLEVEL_EMERG%
+		LogEntry.SubName = "PRESBOU_Export_GetPrestation"
+		LogEntry.Erl = Erl
+		LogEntry.Err = Err
+		LogEntry.Msg = Error$
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+	End If
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:PRESBOU_Export_GetDocumentLine:1:8
+Function PRESBOU_Export_GetDocumentLine(docProcessed As NotesDocument, dbParam As NotesDatabase) As String
+	
+	' Gestion d'erreurs	
+	On Error GoTo ErrorHandler
+	
+	
+	Dim strLine As String, strTemp As String, strKey As String
+	Dim varTemp As Variant
+	Dim nameTemp As NotesName
+	Dim i As Integer
+	Dim LogEntry As LogEntry
+	
+	' Demandeur
+	Set nameTemp = New NotesName(docProcessed.f_Demandeur(0))
+	strLine = FormatForCSV(nameTemp.Common)
+	
+	' Référence
+	strLine = strLine + ";" + docProcessed.f_Reference(0)
+	
+	' Date de création
+	strLine = strLine + ";" + Format(docProcessed.f_DateSortieEtatInit(0), "dd/mm/yyyy")
+
+	' Etat du formulaire (en français)
+	varTemp = Evaluate(|@Trim(@Right(f_EtatNoms;"_FR:"))|, docProcessed)
+	strLine = strLine + ";" + FormatForCSV(varTemp(0))
+
+	' Pays
+	strTemp = Trim(UCase(docProcessed.PRESBOU_Country(0)))
+	strKey = strTemp
+	strLine = strLine + ";" + strTemp 
+		
+	' Site - usine
+	strTemp = Trim(UCase(docProcessed.PRESBOU_Site(0)))
+	strKey = strKey + "§" + strTemp
+	strLine = strLine + ";" + strTemp
+
+	' Marché (Flotte/Pays...)
+	strTemp = Trim(docProcessed.PRESBOU_Marche(0))
+	strKey = strKey + "§" + strTemp
+	strLine = strLine + ";" + strTemp
+	
+	' CAF (Commande Affectée Filiale)
+	strline = strLine + ";" + Trim(docProcessed.PRESBOU_CAF(0))
+	
+	' Date de livraison PDV
+	strLine = strLine + ";" + Format(docProcessed.PRESBOU_PDVDeliveryDate(0), "dd/mm/yyyy")
+	
+	' Silhouette
+	strTemp = Trim(docProcessed.PRESBOU_Silhouette(0))
+	strKey = strKey + "§" + strTemp
+	strLine = strLine + ";" + strTemp
+	
+	' Version
+	strline = strLine + ";" + Trim(docProcessed.PRESBOU_Version(0))
+	
+	' Code FRR client livraison
+	strline = strLine + ";" + UCase(Trim(docProcessed.PRESBOU_DlvrDealer_FRRCode(0)))
+	
+	' Code adresse livraison
+	strline = strLine + ";" + UCase(Trim(docProcessed.PRESBOU_DlvrDealer_AdrCode(0)))
+	
+	' Nom concessionnaire livraison
+	strline = strLine + ";" + Trim(docProcessed.PRESBOU_DlvrDealer_Name(0))
+	
+	' Ville livraison
+	strline = strLine + ";" + Trim(docProcessed.PRESBOU_DlvrDealer_City(0))
+	
+	' Code FRR client facturation
+	strline = strLine + ";" + UCase(Trim(docProcessed.PRESBOU_FctrtDealer_FRRCode(0)))
+		
+	' Code adresse facturation
+	strline = strLine + ";" + UCase(Trim(docProcessed.PRESBOU_FctrtDealer_AdrCode(0)))
+	
+	' Nom concessionnaire facturation
+	strline = strLine + ";" + Trim(docProcessed.PRESBOU_FctrtDealer_Name(0))
+	
+	' Ville facturation
+	strline = strLine + ";" + Trim(docProcessed.PRESBOU_FctrtDealer_City(0))
+	
+	' Commentaires	
+	strLine = strLine + ";" + FormatForCSV(Implode(docProcessed.GetItemValue("PRESBOU_Comments"), " "))
+	
+	' Prestation
+	If docProcessed.HasItem("PRESBOU_Prestations_Ref") Then
+		For i = 0 To 19
+			If(UBound(docProcessed.PRESBOU_Prestations_Ref) >= i) Then
+				strLine = strLine + ";" + PRESBOU_Export_GetPrestation(strKey + "§" + docProcessed.PRESBOU_Prestations_Ref(i), dbParam, docProcessed)
+			Else
+				strLine = strLine + ";-;-;-;-;-"
+			End If
+		Next
+	Else
+		For i = 0 To 19
+			strLine = strLine + ";-;-;-;-;-"
+		Next
+	End If
+
+	
+	' Réception usine
+	strTemp = Trim(UCase(docProcessed.Forms_E1_Avis(0)))
+	If strTemp = "0" Or strTemp = "1" Then
+
+		' Avis
+		If strTemp = "0" Then
+			strLine = strLine + ";Refus"
+		Else
+			strLine = strLine + ";Validation"
+		End If
+
+		' Date
+		strLine = strLine + ";" + Format(docProcessed.Forms_E1_DateApprob(0), "dd/mm/yyyy hh:nn:ss")
+
+		' Commentaire
+		strLine = strLine + ";" + FormatForCSV(Implode(docProcessed.GetItemValue("Forms_E1_Comments"), " "))		
+		
+	Else
+		strLine = strLine + ";;;"		
+	End If
+
+
+	' Saisie date de mise à disposition
+	strTemp = Trim(UCase(docProcessed.Forms_E2_Avis(0)))
+	If strTemp <> "" Then
+
+		' Date
+		strLine = strLine + ";" + Format(docProcessed.Forms_E2_DateApprob(0), "dd/mm/yyyy hh:nn:ss")
+
+		' Date de mise à disposition
+		strLine = strLine + ";" + Format(docProcessed.PRESBOU_AvailDate(0), "dd/mm/yyyy hh:nn:ss")
+
+		' VIS
+		strline = strLine + ";" + Trim(docProcessed.PRESBOU_VIS(0))
+
+		' Commentaire
+		strLine = strLine + ";" + FormatForCSV(Implode(docProcessed.GetItemValue("Forms_E2_Comments"), " "))		
+		
+	Else
+		strLine = strLine + ";;;;"		
+	End If
+
+
+	' Saisie date de fin de transformation
+	If Trim(UCase(docProcessed.Forms_E3_Avis(0))) <> "" Then
+
+		' Date
+		strLine = strLine + ";" + Format(docProcessed.Forms_E3_DateApprob(0), "dd/mm/yyyy hh:nn:ss")
+
+		' Date de fin de transformation
+		strLine = strLine + ";" + Format(docProcessed.PRESBOU_EndOfTransformationDate(0), "dd/mm/yyyy hh:nn:ss")
+
+		' VIS
+		strline = strLine + ";" + Trim(docProcessed.PRESBOU_VIN(0))
+
+		' Commentaire
+		strLine = strLine + ";" + FormatForCSV(Implode(docProcessed.GetItemValue("Forms_E3_Comments"), " "))		
+		
+	Else
+		strLine = strLine + ";;;;"		
+	End If
+
+
+	' Saisie émission facturation
+	If Trim(UCase(docProcessed.Forms_E4_Avis(0))) <> "" Then
+
+		' Date
+		strLine = strLine + ";" + Format(docProcessed.Forms_E4_DateApprob(0), "dd/mm/yyyy hh:nn:ss")
+
+		' Numéro de facture
+		strline = strLine + ";" + Trim(docProcessed.PRESBOU_BillNumber(0))
+
+		' Commentaire
+		strLine = strLine + ";" + FormatForCSV(Implode(docProcessed.GetItemValue("Forms_E4_Comments"), " "))		
+		
+	Else
+		strLine = strLine + ";;;"		
+	End If
+
+
+	' Saisie réception réglement
+	If Trim(UCase(docProcessed.Forms_E5_Avis(0))) <> "" Then
+
+		' Date
+		strLine = strLine + ";" + Format(docProcessed.Forms_E5_DateApprob(0), "dd/mm/yyyy hh:nn:ss")
+
+		' Numéro de bordereau
+		strline = strLine + ";" + Trim(docProcessed.PRESBOU_SlipNumber(0))
+
+		' Commentaire
+		strLine = strLine + ";" + FormatForCSV(Implode(docProcessed.GetItemValue("Forms_E5_Comments"), " "))		
+		
+	Else
+		strLine = strLine + ";;;"		
+	End If
+	
+	' URL
+	strLine = strLine + ";" + FormatForCSV(docProcessed.GetItemValue("URL")(0))
+	
+
+	' Renvoi de la ligne	
+	PRESBOU_Export_GetDocumentLine = strLine	
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+
+' Gestion d'erreurs lors de la récupération du site Reflex
+GetReflexSiteErrorHandler:
+	Set LogEntry = New LogEntry
+	If (Err = ERROR_PROPAGATE%) Then
+		LogEntry.FromString(Error$)
+	Else
+		LogEntry.LogType = LOGLEVEL_EMERG%
+		LogEntry.SubName = "PRESBOU_Export_GetDocumentLine"
+		LogEntry.Erl = Erl
+		LogEntry.Err = Err
+		LogEntry.Msg = Error$
+	End If
+	LogEntry.Component = "PRESBOU"
+	If Not docProcessed Is Nothing Then LogEntry.DocID = docProcessed.Universalid
+	Call LogEntry.Save("", "")
+	Resume Next
+	
+' Gestion d'erreurs
+ErrorHandler:
+	Set LogEntry = New LogEntry
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+	Else
+		LogEntry.LogType = LOGLEVEL_EMERG%
+		LogEntry.SubName = "PRESBOU_Export_GetDocumentLine"
+		LogEntry.Erl = Erl
+		LogEntry.Err = Err
+		LogEntry.Msg = Error$
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+	End If
+	Exit Function
+End Function

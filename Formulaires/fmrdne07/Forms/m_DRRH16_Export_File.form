@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800495382'>
+<noteinfo noteid='8ee' unid='42DCF8B5E86DB41DC12576EB0032507F' sequence='19'>
+<created><datetime dst='true'>20100319T110934,07+02</datetime></created>
+<modified><datetime>20171029T102104,72-03</datetime></modified>
+<revised><datetime>20140609T101029,73-03</datetime></revised>
+<lastaccessed><datetime>20171029T102100,65-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102100,65-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ANNE ANDRIANOFF - E282952/OU=users/O=PSA</name><name>CN=CEDRIC FRANCAIS - E288949/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>C</text></item>
+<item name='$ConflictAction' sign='true'><text>2</text></item>
+<item name='$DesignerVersion' sign='true'><text>7</text></item>
+<item name='$TITLE' sign='true'><textlist><text>m_DRRH16_Export_File</text><text
+>m_DRRH16_Export_File</text></textlist></item>
+<item name='$Comment' sign='true'><text>DRRH16 - Masque de stockage du fichier d'export</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_DRRH16_Export_File</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAYAAACDBAEA3QYAAIX/hf8IAAEAAgrSCAEA
+/wAAAN4GAACF/4ECgv9aAAIAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAQAAAACUhwAAAAAAAAAAAAAAAAEAAAAEAAAAgwQCAN0GAACF/4X/
+aQABAAIKQ2UgbWFzcXVlIHNlcnQghSBsYSBjcoJhdGlvbiBkJ3VuIGRvY3VtZW50IGNvbnRlbmFu
+dCBsZSBmaWNoaWVyIGQnZXhwb3J0IHBsYW5pZmmCLCBhdHRhY2iCIGVuIFBKLgDSCAEA/wAAAN4G
+AACF/w==
+</rawitemdata></item></note>
+

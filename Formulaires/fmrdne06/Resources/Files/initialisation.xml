@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReflexVideo xmlns="http://xml.inetpsa.com/Reflex/Video">
+  <Partage>string</Partage>
+  <Code>string</Code>
+  <RespMaj>string</RespMaj>
+  <Action>Initialisation</Action>
+  <Etat>EnAttente</Etat>
+  <Demandeur>string</Demandeur>
+</ReflexVideo>

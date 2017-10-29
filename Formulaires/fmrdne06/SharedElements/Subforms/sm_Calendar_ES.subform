@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='5ca' unid='7097FB79077F107EC125722F0050651F' sequence='96'>
+<created><datetime dst='true'>20061123T163807,67+02</datetime></created>
+<modified><datetime>20171029T101950,56-03</datetime></modified>
+<revised><datetime>20170911T114740,99-03</datetime></revised>
+<lastaccessed><datetime>20171029T101947,74-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101947,74-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQA9AIAAAAAAAAAAAAAAAAAAAAAAADc/wYD+f/0AiBOAAAAAAAAAAB2YXIgY2Fs
+ZW5kcmllcl9kYXRlam91ID0gbmV3IENhbGVuZGFyUG9wdXAoImNhbF9kYXRqb3UiKTsNY2FsZW5k
+cmllcl9kYXRlam91LnNldE1vbnRoTmFtZXMoJ0VuZXJvJywnRmVicmVybycsJ01hcnpvJywnQWJy
+aWwnLCdNYXlvJywnSnVuaW8nLCdKdWxpbycsJ0Fnb3N0bycsJ1NlcHRpZW1icmUnLCdPY3R1YnJl
+JywnTm92aWVtYnJlJywnRGljaWVtYnJlJyk7DWNhbGVuZHJpZXJfZGF0ZWpvdS5zZXREYXlIZWFk
+ZXJzKCdEbycsJ0x1JywnTWEnLCdNaScsICdKdScsJ1ZpJywnU2EnKTsNY2FsZW5kcmllcl9kYXRl
+am91LnNldFdlZWtTdGFydERheSgxKTsNY2FsZW5kcmllcl9kYXRlam91LnNldFRvZGF5VGV4dCgi
+SG95Iik7DWNhbGVuZHJpZXJfZGF0ZWpvdS5zZXRDc3NQcmVmaXgoIkNBTCIpOw1jYWxlbmRyaWVy
+X2RhdGVqb3Uub2Zmc2V0WCA9IC0xODA7DWNhbGVuZHJpZXJfZGF0ZWpvdS5vZmZzZXRZID0wOw1j
+YWxlbmRyaWVyX2RhdGVqb3UuYXV0b0hpZGUoKTsNDXZhciBjYWxlbmRyaWVyX2hldXJlID0gbmV3
+IENhbGVuZGFyUG9wdXAoImNhbF90aW1lIik7DWNhbGVuZHJpZXJfaGV1cmUuc2V0Q3NzUHJlZml4
+KCJDQUwiKTsNY2FsZW5kcmllcl9oZXVyZS5vZmZzZXRYID0gMTIwOw1jYWxlbmRyaWVyX2hldXJl
+Lm9mZnNldFkgPSAwOw1jYWxlbmRyaWVyX2hldXJlLnNldERpc3BsYXlUeXBlKCJob3JhIik7DWNh
+bGVuZHJpZXJfaGV1cmUuc2V0VGltZVRleHQoIkhvcmEiKTsNY2FsZW5kcmllcl9oZXVyZS5hdXRv
+SGlkZSgpOwBf/xAAAgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_Calendar_ES</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_Calendar_ES</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAo=
+</rawitemdata></item></note>
+

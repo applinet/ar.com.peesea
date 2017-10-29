@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="b1a" sequence="54" unid="2F0C693ECCB3D838C125780E0056615D">
+<created><datetime dst="true">20110104T174330,21+02</datetime></created>
+<modified><datetime>20171029T101956,00-03</datetime></modified>
+<revised><datetime>20170911T114749,93-03</datetime></revised>
+<lastaccessed><datetime>20171029T101951,71-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101951,71-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$Comment" sign="true"><text>Interfacage avec la log applicative</text></item>
+<item name="$TITLE" sign="true"><text>LogEntry</text></item>
+<item name="$DesignerVersion" sign="true"><text>7</text></item>
+
+
+<item name="$POID"><datetime>20170911T114749,93-03</datetime></item></note>

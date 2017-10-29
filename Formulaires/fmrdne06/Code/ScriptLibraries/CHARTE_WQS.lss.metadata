@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="fea" sequence="16" unid="5F0545BA026374C9C1257E7B007095E3">
+<created><datetime dst="true">20150707T222944,03+02</datetime></created>
+<modified><datetime>20171029T102001,54-03</datetime></modified>
+<revised><datetime>20170911T114755,85-03</datetime></revised>
+<lastaccessed><datetime>20171029T101955,42-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101955,42-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE" sign="true"><text>CHARTE_WQS</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+
+<item name="$POID"><datetime>20170911T114755,85-03</datetime></item></note>

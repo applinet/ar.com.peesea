@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800495382'>
+<noteinfo noteid='312' unid='FB53533B3D80C2EEC1256B68005DDC37' sequence='27'>
+<created><datetime dst='true'>20020222T190512,23+02</datetime></created>
+<modified><datetime>20171029T102057,72-03</datetime></modified>
+<revised><datetime>20140609T101023,91-03</datetime></revised>
+<lastaccessed><datetime>20171029T102056,51-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102056,51-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name
+>CN=FRANCK NUWENDAM - E100441/OU=users/O=PSA</name><name>CN=BERNARD ALLAINE - C010578/OU=users/O=PSA</name><name
+>CN=CEDRIC FRANCAIS - E288949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Fields'><text>f_NomEtat</text></item>
+<item name='$DesignerVersion' sign='true'><text>5</text></item>
+<item name='$TITLE'><text>f_NomEtat</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$Body' summary='true' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAACK/24AgAEABQAwAgAAAAAAAAIBAAAKQAAAAAAAAAAJAAAAAABAAAAAMgAFAAoA
+Zl9FdGF0Tm9tcwEAAQBfAAUABQBmX0xuZwAiAgEAAQA6ACICYAJeAQMABwAMAAUACTBTMEUAZl9O
+b21FdGF0AHr/HgAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAZXRhdN4GAACK/4X/CAABAAAK
+</rawitemdata></item></note>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="108e" sequence="4" unid="C4840BBF3AB6B848C125810C0068F216">
+<created><datetime dst="true">20170424T210617,18+02</datetime></created>
+<modified><datetime>20171029T102002,20-03</datetime></modified>
+<revised><datetime>20170911T114756,43-03</datetime></revised>
+<lastaccessed><datetime>20171029T101955,90-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101955,90-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MARCELO GUSTAVO HUERTA - E500756/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$TITLE" sign="true"><text>TELEFON_VALID_E3_v1.0.1_cacheable.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$POID"><datetime>20170911T114756,43-03</datetime></item></note>

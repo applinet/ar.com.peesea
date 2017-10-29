@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C800495382" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="36a" sequence="18" unid="EA4566B05733861EC1256B88005F7448">
+<created><datetime dst="true">20020326T192236,88+02</datetime></created>
+<modified><datetime>20171029T102058,16-03</datetime></modified>
+<revised><datetime>20140609T101024,37-03</datetime></revised>
+<lastaccessed><datetime>20171029T102056,74-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102056,74-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Xavier Daguet/OU=France/O=IBM</name><name>CN=FRANCK NUWENDAM - E100441/OU=users/O=PSA</name><name>CN=BERNARD ALLAINE - C010578/OU=users/O=PSA</name><name>CN=CEDRIC FRANCAIS - E288949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>puceBleu.gif</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>puceBleu.gif</text></item>
+<item name="$DesignerVersion" sign="true"><text>5</text></item></note>

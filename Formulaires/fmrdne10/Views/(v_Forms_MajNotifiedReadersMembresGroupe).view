@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800498301'>
+<noteinfo noteid='cfe' unid='8ECFE7C239925DA8C125780F002D80C2' sequence='19'>
+<created><datetime dst='true'>20110105T101700,82+02</datetime></created>
+<modified><datetime>20171029T102311,03-03</datetime></modified>
+<revised><datetime>20170606T011409,13-03</datetime></revised>
+<lastaccessed><datetime>20171029T102305,57-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102305,57-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_Forms_MajNotifiedReadersMembresGroupe)|v_Forms_MajNotifiedReadersMembresGroupe</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+YgECADAAAwAkMTAABQAYAGZfTm90aWZpZWRSZWFkZXJzR3JvdXBlcwEAAgAjI4UCAwACAEIAAgAk
+NgIABgAAAAAAAAAFAB8AZl9Ob3RpZmllZFJlYWRlcnNNZW1icmVzR3JvdXBlcwC0AgEAAgAjI4UC
+AwACACYAAgAkOQIABgAAAAAAAAAFAAsAZl9EZW1hbmRldXIAtAIDAAIAFAAEAEZvcm0FAAQARm9y
+bQMAAgAkAAIAJDcFAAoAZl9FdGF0Tm9tcwEAAwBGUjoAYAJeAQMABQAwACwABwADAAIAAgAEAAIA
+CQAEACQxMCQ2JDlGb3JtJDckQ29uZmxpY3QkUkVGBAAEAAAAQgAFABgAZl9Ob3RpZmllZFJlYWRl
+cnNHcm91cGVzXgEBAAAACwIFAAYAZl9FdGF0AAAAAAAAAAAAAA8CHAIDAAcAGgATAAlMMVM1UzZT
+N1M4UzJFOVMxMFMA
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+NgAFAABECGYAAAADAIBmAAMAAgCAZgAFAAIAgGYABwAEAIBmAAsAAgAkMTAkNiQ5Rm9ybSQ3
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAFAAsAiAAAAFZDAQADAA0APAAAAOYAAQACCIABAAAAAAAAAAICAAAAVkMBAAIAFABQAAAAoQEB
+AAQIgAAAAAAAAAAAAgIAAABWQwEAAgAJADIAAACiAAEAAAiAAAAAAAAAAAACAgAAAFZDAQAEAAQA
+FgAAAF4AAQAJCIAAAAAAAAAAAAICAAAAVkMBAAIABAAwAAAAhwABAAAIgAAAAAAAAAAAAgIAAAAk
+MTBBY3RldXJzR3JvdXBlPAACADAAAwAkMTAABQAYAGZfTm90aWZpZWRSZWFkZXJzR3JvdXBlcwEA
+AgAjI4UCAwAHAAoAAwAJNFMAJDZBY3RldXJzTWVtYnJlc0dyb3VwZVAAAgBCAAIAJDYCAAYAAAAA
+AAAABQAfAGZfTm90aWZpZWRSZWFkZXJzTWVtYnJlc0dyb3VwZXMAtAIBAAIAIyOFAgMABwAMAAUA
+CTZTOVMAJDlEZW1hbmRldXIyAAIAJgACACQ5AgAGAAAAAAAAAAUACwBmX0RlbWFuZGV1cgC0AgMA
+BwAKAAMACTRTAEZvcm1Gb3JtFgACABQABABGb3JtBQAEAEZvcm0DACQ3RXRhdDAAAgAkAAIAJDcF
+AAoAZl9FdGF0Tm9tcwEAAwBGUjoAYAJeAQMABwAKAAMACTZTACYAAQAAAAEBAAkBAAAKAQEOCgAA
+LwCtKwEAAQABAAAAAAAAAAAAV0MBAAoJAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA//8AAAAAAAAA
+AAAAAAAAAFdDAQAKCQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEA
+CgkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAoJAAAAAAAAAAAA
+AAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAKCQAAAAAAAAAAAAAAAAAAAAAAAAQA
+AAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wABAPf39wABAAAAAAAAAAAAAAAAAAEA////
+AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Vue des groupes et de leurs membrespour les NotifiedReaders afin de pouvoir recalculer avec le form_cron</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

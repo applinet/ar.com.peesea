@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="8d2" sequence="65" unid="D42686C00932E8C7C12573700032D6B4">
+<created><datetime dst="true">20071010T111517,64+02</datetime></created>
+<modified><datetime>20171029T101953,24-03</datetime></modified>
+<revised><datetime>20170911T114743,43-03</datetime></revised>
+<lastaccessed><datetime>20171029T101950,15-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101950,15-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>vwicn077.gif</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+
+<item name="$MimeType" sign="true"><text>image/gif</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20071010T111506,43+02</datetime></item>
+<item name="$ImageNames" sign="true"><text>vwicn077.gif</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$Comment" sign="true"><text>deprecated</text></item>
+<item name="$DesignerVersion" sign="true"><text>7</text></item></note>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='aa2' unid='33B50530EE35EBE2C125755C0047A2B8' sequence='67'>
+<created><datetime dst='true'>20090213T150227,12+02</datetime></created>
+<modified><datetime>20171029T101955,44-03</datetime></modified>
+<revised><datetime>20170911T114745,51-03</datetime></revised>
+<lastaccessed><datetime>20171029T101951,39-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101951,39-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAfQEAAAAAAAAAAAAAAAAAAAAAAADc/5AB+f9+ASBOAAAAAAAAAAAvLyAgKiAq
+ICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICoN
+Ly8gVGl0cmVzDWxfU3VpdnJlU1RJTTA0ID0gIlZ1ZSBzcIJjaWZpcXVlIEFjY3VlaWwgZGVzIEV2
+YWwuIGRlcyByaXNxdWVzIjsNDQ0vL1Z1ZSBTdGltMDQgU3VpdnJlDWxfU1RJTTA0X0V0YXQgPSAi
+RXRhdCINbF9TVElNMDRfUmVmZXJlbmNlID0gIlKCZoJyZW5jZSINbF9TVElNMDRfQVRyYWl0ZXJQ
+YXIgPSAityB0cmFpdGVyIHBhciINbF9TVElNMDRfU29jaWV0ZSA9ICJOb20gZGUgbGEgc29jaYJ0
+giINbF9TVElNMDRfRGF0ZURlYnV0ID0gIkRhdGUgZGUgbGEgZGVtYW5kZSINbF9TVElNMDRfRGF0
+ZUZpbiA9ICJEYXRlIGRlIGxhIGZlcm1ldHVyZSINDQA9X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_STIM04VuesNL</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_STIM04VuesNL</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEA3QYAAIX/hf8XAAEAAghzbV9T
+VElNMDRWdWVzUFQA0ggBAP8AAADeBgAAhf8=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

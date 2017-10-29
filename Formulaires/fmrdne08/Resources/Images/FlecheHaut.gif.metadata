@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8004968DB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="37a" sequence="67" unid="6950F98F6ADA7821C1256B8900353BBA">
+<created><datetime dst="true">20020327T114126,98+02</datetime></created>
+<modified><datetime>20171029T102152,87-03</datetime></modified>
+<revised><datetime>20170307T090542,03-03</datetime></revised>
+<lastaccessed><datetime>20171029T102151,45-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102151,45-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=FRANCK NUWENDAM - E100441/OU=users/O=PSA</name><name>CN=BERNARD ALLAINE - C010578/OU=users/O=PSA</name><name>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>vwicn109.gif</text></item>
+<item name="$TITLE" sign="true"><text>FlecheHaut.gif</text></item>
+<item name="$DesignerVersion" sign="true"><text>5</text></item></note>

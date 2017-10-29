@@ -1,0 +1,3365 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004968DB'>
+<noteinfo noteid='9d2' unid='FBDAB2935D154F8AC12575B40052BB6C' sequence='239'>
+<created><datetime dst='true'>20090512T170339,32+02</datetime></created>
+<modified><datetime>20171029T102200,71-03</datetime></modified>
+<revised><datetime>20170307T090550,17-03</datetime></revised>
+<lastaccessed><datetime>20171029T102155,82-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102155,82-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=LEANDRO PESTRIN - E418054/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$TITLE' sign='true'><text>(GAMBPS_WebQuerySave)|GAMBPS_ActionsLS|GAMBPS_Suivre_Import</text></item>
+<item name='$AssistType' sign='true'><number>65413</number></item>
+<item name='$AssistLastRun' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$AssistDocCount' sign='true'><number>0</number></item>
+<item name='$FlagsExt' sign='true'><text/></item>
+<item name='$AssistFlags' sign='true'><text>EHu</text></item>
+<item name='$AssistTrigger'><text>4</text></item>
+<item name='$AssistInfo' sign='true'>
+<rawitemdata type='11'>
+AQAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</rawitemdata></item>
+<item name='$AssistQuery' sign='true'>
+<rawitemdata type='f'>
+gQYAAAAA
+</rawitemdata></item>
+<item name='$Restricted' sign='true'><number>0</number></item>
+<item name='$Flags'><text>fL3u</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$AssistRunInfo' summary='true'>
+<rawitemdata type='3'>
+BgAAAgAACADOCQAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAA7gAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAsDVTAKB6JcEAAAAABn1kAJx6JcEQs0gARm4lwQAAAAAAAAAAAAAAAAAAAAAAAAAAU3RhcnRl
+ZCBydW5uaW5nIGFnZW50ICcoR0FNQlBTX1dlYlF1ZXJ5U2F2ZSl8R0FNQlBTX0FjdGlvbnNMU3xH
+QU1CUFNfU3VpdnJlX0ltcG9ydCcgb24gMjMvMTAvMjAxMiAxNzowODo1Mg0KUmFuIExvdHVzU2Ny
+aXB0IGNvZGUNCkRvbmUgcnVubmluZyBhZ2VudCAnKEdBTUJQU19XZWJRdWVyeVNhdmUpfEdBTUJQ
+U19BY3Rpb25zTFN8R0FNQlBTX1N1aXZyZV9JbXBvcnQnIG9uIDIzLzEwLzIwMTIgMTc6MDg6NTIN
+CgANCqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqq
+</rawitemdata></item>
+<item name='$AssistAction' sign='true'>
+<rawitemdata type='10'>
+gQKF/wwAAAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$AgentHScript' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+Use "Forms_Libs"
+Use "Forms_Class_Process"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Initialize	
+Declare Sub GAMBPS_StepUpDocument(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pUserName As NotesName)
+Declare Sub GAMBPS_DenyDocument(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pUserName As NotesName)
+Declare Sub GAMBPS_CancelDocument(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pUserName As NotesName)
+Declare Sub GAMBPS_NotifDocument(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pUserName As NotesName)
+Declare Sub GAMBPS_ComplementerDocument(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pUserName As NotesName)
+Declare Function CalculeNumeroOrdre(nOrdre As Long) As String
+Declare Sub InitializeImport( Database As notesDatabase, ProfileDocument As NotesDocument, ContextDocument As notesdocument, Process As Process)
+Declare Sub InitializeDocument( CurrentDB As notesDatabase, ProfileDocument As NotesDocument, CurrentDoc As NotesDocument, ContextDoc As NotesDocument, Process As Process)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+'This case determines whether it is a manual approval or from the file
+Dim ApproveReject_File As Boolean
+
+'++LotusScript Development Environment:2:2:Initialize:0:10
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Procédure principale
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub Initialize	
+	' Gestion d'erreurs	
+	On Error Goto ErrorHandler
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																INITIALISATION
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' Init environnement
+	Dim CurrentSession As New NotesSession
+	Dim CurrentDoc As NotesDocument
+	Dim CurrentDB As NotesDatabase
+	Dim Process As New Process
+	Dim ProfileDocument As NotesDocument
+	
+	Set CurrentDoc = CurrentSession.DocumentContext
+	Set CurrentDB = CurrentSession.CurrentDatabase
+	
+	' Document de profil
+	Set ProfileDocument = CurrentDB.GetProfileDocument("m_ProfileParam")
+	If ProfileDocument Is Nothing Then Error lsERR_NOTES_NOSUCH_PROFILE, "Impossible d'ouvrir le document de profil !"
+	
+	' Conflit d'enregistrement
+	If CurrentDoc.IsResponse Then
+		Error ERROR_SAVECONFLICT%,"Conflit d'enregistrement"
+		
+	End If
+	
+	'Initialize case
+	ApproveReject_File = False
+	If CurrentDoc.GetItemValue("Form")(0) = "m_UIImportDialog" Then
+		'Approval/Reject from file
+		ApproveReject_File = True
+		' We have a set of documents from an imported CSV file to process
+		Call InitializeImport( CurrentDB, ProfileDocument, CurrentDoc, Process )
+	Else
+		' We have a single GAMBPS document to process
+		Call InitializeDocument( CurrentDB, ProfileDocument, CurrentDoc, CurrentDoc, Process )
+		Call Process.DisplayStatus()
+	End If
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 														GESTION D'ERREURS
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *	
+ErrorHandler:
+	
+	Dim LogEntry As New LogEntry
+		
+	' Erreur propagée
+	If (Err = ERROR_PROPAGATE%) Then
+		
+		' On charge les valeurs depuis le message d'erreur
+		LogEntry.FromString(Error$)
+		
+		
+	' Autres erreurs
+	Else
+		
+		' On log l'erreur
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.SubName		= "Initialize"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+	End If
+	
+	LogEntry.Component = "GAMBPS"	
+	
+	' Si l'erreur n'a pas déjà été loggée (répétition de l'erreur)
+	If Not Process.IsErrLogged(LogEntry) Then
+		
+		Call LogEntry.Save(ProfileDocument.f_Serveur_Log(0), ProfileDocument.f_Path_Log(0))
+		
+		' On ajoute l'erreur à la liste
+		Call Process.AddLogEntry(LogEntry)		
+	End If
+	
+	
+	' Warning, on continue
+	If Not LogEntry.IsFatal Then
+		Resume Next
+		
+	' Sinon, on affiche le résultat
+	Else
+		Call Process.DisplayStatus()		
+	End If
+	
+	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:GAMBPS_StepUpDocument:0:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge de placer le document dans l'état suivant
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub GAMBPS_StepUpDocument(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pUserName As NotesName)
+	
+	' Gestion d'erreurs	
+	On Error Goto ErrorHandler
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																INITIALISATION
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Variables locales
+	Dim Formule As String
+	Dim Res As Variant
+	Dim strKey As String
+	Dim dtTemp As NotesDateTime
+	Dim strTemp As String	
+	Dim listTemp List As String
+	Dim boolRefuse As Boolean
+	Dim boolTemp As Boolean
+	Dim strCodePays As String
+	Dim varPays As Variant
+	
+	'Add by: Juan Bautista Cabral. JIRA 720
+	'Date: 19/04/2011
+	Dim TypeMarque$
+	
+	'Attribuée: (FMR-602) GAMBPS : Validation d'étape par "import" 07/10/2010 by Juan Bautista Cabral.
+	Dim UserApprovalFile As NotesName
+	
+	Dim ParentDocUID As Variant
+	Dim ParentDoc As NotesDocument
+	
+	Dim CurrentStep As Integer
+	
+	Dim SendToActors List As NotesName
+	Dim CopyToActors List As NotesName
+	
+	Dim itemAuthors As NotesItem
+	Dim itemGAMBPSAuthorsByPays As NotesItem
+	Dim TempItem As NotesItem, LectPotItem As NotesItem, AutPotItem As NotesItem
+	Dim TempName As NotesName
+	Dim AutreName As NotesName
+	Dim iAutre As NotesItem
+	Dim TempString As String
+	Dim sNumOrdre As String
+	Dim rol_Marque As String
+	Dim rol_Admin As String
+	Dim TempDocument As NotesDocument
+	Dim Found As Boolean
+	
+	' Base de paramétrage
+	Dim ParamDB As New NotesDatabase(pProfileDocument.f_Serveur_Parametre(0), pProfileDocument.f_Path_Parametre(0))
+	If Not ParamDB.IsOpen Then Error lsERR_NOTES_DBOPEN_FAILED, "Impossible d'ouvrir la base """ +_
+	pProfileDocument.f_Path_Parametre(0) +_
+	""" sur le serveur """ + pProfileDocument.f_Serveur_Parametre(0) + """ !"
+	
+	' Vues de documents de paramétrage
+	Dim ValidMarcheView As NotesView, ValidDPMXView As NotesView
+	Dim ValidPDSTView As NotesView, ValidCRView As NotesView
+	Dim ValidVehiculesZoneView As NotesView, vNumeros  As NotesView
+	Dim vVehicules As NotesView
+	
+	'Add elements: Jira 720 by: Juan Bautista Cabral.
+	Dim ValidGammeView As NotesView
+	Dim validFRISCOView As NotesView
+	
+	
+	'Documents de paramétrage
+	Dim ValidGammeDocument As NotesDocument 'Add elements: Jira 720 by: Juan Bautista Cabral.
+	Dim ValidMarcheDocument As NotesDocument, ValidDPMXDocument As NotesDocument
+	Dim ValidPDSTDocument As NotesDocument, ValidCRDocument As NotesDocument
+	Dim ValidVehiculeZoneDocument As NotesDocument, dNumero  As NotesDocument
+	Dim DVehicule As Notesdocument
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																TRAITEMENT
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Etat de la demande	
+	CurrentStep = Cint(pDocument.f_Etat(0))
+	
+	
+	' Initialisation
+	If CurrentStep = 0 Then
+		pDocument.f_CompterUtilisation = 1
+		pDocument.IDDoc = pDocument.Universalid
+	End If
+	
+	' Historique-
+	'This case determines whether it is a manual approval or from the file
+	'(Exception: Validation d'étape par "import" 07/10/2010 by Juan Bautista Cabral)
+	'NL 29/02/2012: Fiche FMR-912 : This exception is no longer wanted
+	%REM
+	If ApproveReject_File Then
+		Set vVehicules = ParamDB.GetView("(v_GAMBPS_Lookup_Vehicules)")		
+		Set dVehicule = vVehicules.GetDocumentByKey(pDocument.GAMBPS_Vehicule(0), True)
+		If Not dVehicule Is Nothing Then
+			'RB 30/01/2012: Fiche FMR-912 : Indiquer l'utilisateur qui fait l'import
+			set UserApprovalFile = New NotesName(pDocument.GAMBPS_Import_User(0))
+			If Not UserApprovalFile Is Nothing Then
+				Call AddHistLine(pDocument, "l_GAMBPS_Histo_E" + Cstr(CurrentStep), UserApprovalFile.Abbreviated)
+			End If
+		Else
+			Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Vehicule"" !"
+		End If
+	Else	
+		Call AddHistLine(pDocument, "l_GAMBPS_Histo_E" + Cstr(CurrentStep), pUserName.Abbreviated)
+	End If
+	%END REM
+	
+	'NL 29/02/2012: Fiche FMR-912 : Back to the original (one line) version of Historique
+	Call AddHistLine(pDocument, "l_GAMBPS_Histo_E" + CStr(CurrentStep), pUserName.Abbreviated)
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	' E0: Première soumission
+	If (CurrentStep = 0) Then
+		' Mettre à jour le champs du periode pour la recherche
+		pDocument.GAMBPS_debut = pDocument.GAMBPS_moisDebut(0)+"/"+pDocument.GAMBPS_anneDebut(0)		
+		pDocument.GAMBPS_fin = pDocument.GAMBPS_moisFin(0)+"/"+pDocument.GAMBPS_anneFin(0)
+		
+		TypeMarque$ = pDocument.GAMBPS_Marque(0)
+		
+		'Calcul du numero de demande
+		If pDocument.A_Complementer(0) &lt;&gt; "O" Then
+			'Set vNumeros = ParamDB.GetView("(v_GAMBPS_Lookup_Numeros)")
+			'Set dNumero = vNumeros.GetDocumentByKey(TypeMarque$	+ pDocument.GAMBPS_Pays(0), True)
+			'If dNumero Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Numéros de demandes"" !"
+			
+			If pFormParamsDocument.GAMBPS_Numero_Ordre(0) &lt;&gt; "" Then
+				sNumOrdre = CalculeNumeroOrdre(Clng(pFormParamsDocument.GAMBPS_Numero_Ordre(0))+1)
+				varPays = Evaluate("@Elements(GAMBPS_Pays)", pDocument)
+				If varPays(0) &gt; 1 Then
+					strCodePays = "XXX"
+				Else
+					strCodePays = pDocument.GAMBPS_Pays(0)
+				End If
+				pDocument.GAMBPS_NumeroDemande = TypeMarque$ + strCodePays + sNumOrdre
+			End If
+			
+			pFormParamsDocument.GAMBPS_Numero_Ordre = sNumOrdre
+			Call pFormParamsDocument.save(True, False)
+		End If
+		
+		Call GAMBPS_NotifDocument(pDB, pFormParamsDocument, pProfileDocument, pDocument, pUsername)
+		
+		' -------------------------------
+		' Marque: AP=Peugeot / AC=Citroen
+		' -------------------------------
+		If UCase(TypeMarque$) = "AP" Then
+			' Ouverture de la vue contenant le document "Chef de Marche"
+			Set ValidMarcheView = ParamDB.GetView("v_GAMBPS_ValidMarche_Lookup_ByKey")
+			If ValidMarcheView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidMarche_Lookup_ByKey"" sur la base de paramétrage !"
+			
+			' Auteurs
+			Set itemAuthors = pDocument.ReplaceItemValue("f_AuteursPotentiels", "")
+			
+			' Auteurs par pays
+			Set itemGAMBPSAuthorsByPays = pDocument.ReplaceItemValue("GAMBPS_AuthorsByPays_E1", "")
+			
+			' Resets parallel validation fields
+			Call pDocument.ReplaceItemValue("GAMBPS_ValidatedPays_E1", "")
+			Call pDocument.ReplaceItemValue("GAMBPS_SubmittedPays_E1", "")
+			
+			' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+			ForAll strTemp1 In pDocument.GAMBPS_Pays
+				strKey = "AP-"+strTemp1
+
+				' Document "Chef de Marché" (en théorie, un seul document de ce type existe)
+				Set ValidMarcheDocument = ValidMarcheView.GetDocumentbykey(strKey, True)
+				If ValidMarcheDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Marche"" !"
+				
+				' Responsable de pays en auteur
+				' Correspondant Chef de marché
+				Set TempItem = ValidMarcheDocument.GetFirstItem("GAMBPS_ValidMarche_Name")
+				If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidMarche_Name"" !"
+				Call itemAuthors.AppendToTextList(TempItem.Values)
+				
+				' Auteurs par pays
+				Call itemGAMBPSAuthorsByPays.AppendToTextList(strTemp1 + "§" + Implode(TempItem.Values, "§"))
+				
+				' Envoi du mail (BAL nominative ou fonctionnelle)
+				If Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Name, Null, "VALID")
+					Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidMarcheDocument.GAMBPS_ValidMarche_Name)
+				ElseIf Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Balfon, Null, "VALID")
+					Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidMarcheDocument.GAMBPS_ValidMarche_Balfon)
+				End If
+				
+			End ForAll
+			
+			' Mise en forme des auteurs et derniers destinataires des mails de validation
+			pDocument.f_AuteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_AuteursPotentiels)))|, pDocument)
+			pDocument.Forms_LastValidSendTo = Evaluate(|@Sort(@Unique(@Trim(Forms_LastValidSendTo)))|, pDocument)
+			
+			'Modified 24/11/2010 By: Juan Bautista Cabral JIRA 662
+			'Lecteurs: ajout des valideurs et des personnes en copie
+			pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : GAMBPS_PeopleToInform : f_AuteursPotentiels)))|, pDocument)
+		
+			'Changement d'état, etat 1
+			Call ChangeState(pDocument, pFormParamsDocument, 1, "Intermediaire")
+			
+			'Dispaching des acteurs (groupes ou individus)
+			Call DispatchActors(pDocument)
+			
+		ElseIf UCase(TypeMarque$) = "AC" Then
+			'Ouverture de la vue contenant le document "Chef de Gamme"
+			Set ValidGammeView = ParamDB.GetView("v_GAMBPS_ValidGamme")
+			If ValidGammeView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidGamme"" sur la base de paramétrage !"
+				
+			'Document "Chef de Gamme" (en théorie, un seul document de ce type existe)
+			Set ValidGammeDocument = ValidGammeView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+			If ValidGammeDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Gamme"" !"
+
+			'Correspondant Chef de Gamme
+			Set TempItem = ValidGammeDocument.GetFirstItem("GAMBPS_ValidGamme_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING,_
+			"Impossible de trouver le champ de paramétrage ""GAMBPS_ValidGamme_Name"" !"
+			
+			Call pDocument.ReplaceItemValue("f_AuteursPotentiels", TempItem.Values)
+				
+			'Lecteurs: ajout des valideurs
+			rol_Marque = "[GAMBPS_Reader"+TypeMarque$+"]"
+			rol_Admin = "[GAMBPS_RESP]"
+			
+			If (pDocument.GAMBPS_Autre_per_hab(0) &lt;&gt; "" ) Then
+				Set AutreName = New NotesName(pDocument.GAMBPS_Autre_per_hab(0))
+				pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim("|+_
+				rol_Admin+|":"|+rol_Marque+|":f_LecteursPotentiels:"|+AutreName.Canonical+|": f_AuteursPotentiels)))|, pDocument)
+			Else
+				pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim("|+_
+				rol_Admin+|":"|+rol_Marque+|":f_LecteursPotentiels : f_AuteursPotentiels)))|, pDocument)
+			End If
+			
+			'Modified 24/11/2010 By: Juan Bautista Cabral JIRA 662
+			'Lecteurs: ajout des valideurs et des personnes en copie 
+			pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : GAMBPS_PeopleToInform)))|, pDocument)
+			
+			'Changement d'état, etat 2
+			Call ChangeState(pDocument, pFormParamsDocument, 2, "Intermediaire")
+			
+			'Dispaching des acteurs (groupes ou individus)
+			Call DispatchActors(pDocument)
+			
+			'Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(UCase(ValidGammeDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidGammeDocument.GAMBPS_ValidGamme_Name, Null, "VALID")
+				Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidGammeDocument.GAMBPS_ValidGamme_Name)
+			ElseIf Trim(UCase(ValidGammeDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidGammeDocument.GAMBPS_ValidGamme_Balfon(0), Null, "VALID")
+				Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidGammeDocument.GAMBPS_ValidGamme_Balfon(0))
+			End If
+		End If
+		
+		' Modified 24/11/2010 By: Juan Bautista Cabral JIRA 662
+		' Envoi d'un mail de notification aux personnes en copie
+		If Trim(pDocument.GAMBPS_PeopleToInform(0)) &lt;&gt; "" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, pDocument.GAMBPS_PeopleToInform, Null, "OK")
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, pDocument.GAMBPS_PeopleToInform)	
+		End If
+
+
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	' E1: Valideur autorisé =&gt; Chef de Marché
+	Elseif (CurrentStep = 1) Then
+
+		' Ajout des pays nouvellements validées/refusées à la liste de toutes les pays validées/refusées
+		Set TempItem = pDocument.GetFirstItem("GAMBPS_ValidatedPays_E1")
+		If TempItem Is Nothing Then Set TempItem = New NotesItem(pDocument, "GAMBPS_ValidatedPays_E1", "")
+		Call TempItem.AppendToTextList(pDocument.GetItemValue("GAMBPS_SubmittedPays_E1"))
+		TempItem.IsSummary = True
+		
+		' Construction de la liste des pays validées/refusées
+		ForAll Pays In TempItem.Values
+			strTemp = UCase(Trim(StrLeft(Pays, "§", 0, 1)))
+			listTemp(strTemp) = strTemp
+		End ForAll
+		
+		' Auteurs
+		Set itemAuthors = pDocument.ReplaceItemValue("f_AuteursPotentiels", "")
+		
+		' Auteurs par pays
+		Set itemGAMBPSAuthorsByPays = pDocument.ReplaceItemValue("GAMBPS_AuthorsByPays_E1", "")
+		
+		' Ouverture de la vue contenant le document "Chef de Marche"
+		Set ValidMarcheView = ParamDB.GetView("v_GAMBPS_ValidMarche_Lookup_ByKey")
+		If ValidMarcheView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidMarche"" sur la base de paramétrage !"
+		
+		' Boucle sur les pays sélectionnés par le demandeur
+		boolTemp = False
+		ForAll strTemp1 In pDocument.GAMBPS_Pays
+			strKey = "AP-"+strTemp1
+			' Si le pays n'a pas déjà été traitée
+			If Not IsElement(listTemp(UCase(Trim(strTemp1)))) Then
+				boolTemp = True
+		
+				' Document "Chef de Marché" (en théorie, un seul document de ce type existe)
+				Set ValidMarcheDocument = ValidMarcheView.GetDocumentbykey(strKey, True)
+				If ValidMarcheDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Marche"" !"
+				
+				' Responsable de pays en auteur
+				' Correspondant Chef de marché
+				Set TempItem = ValidMarcheDocument.GetFirstItem("GAMBPS_ValidMarche_Name")
+				If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidMarche_Name"" !"
+				Call itemAuthors.AppendToTextList(TempItem.Values)
+				
+				' Auteurs par pays
+				Call itemGAMBPSAuthorsByPays.AppendToTextList(strTemp1 + "§" + Implode(TempItem.Values, "§"))
+				
+			End If
+			
+		End ForAll
+		
+		' Si il reste des pays à traiter,
+		If boolTemp Then
+			' Mise en forme des auteurs
+			pDocument.f_AuteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_AuteursPotentiels)))|, pDocument)
+			
+			' Lecteurs: ajout des valideurs
+			pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : f_AuteursPotentiels)))|, pDocument)
+			
+			' Dispaching des acteurs (groupes ou individus)
+			Call DispatchActors(pDocument)
+			
+		' Si il ne reste aucune pays à traiter
+		Else
+			Call GAMBPS_NotifDocument(pDB, pFormParamsDocument, pProfileDocument, pDocument, pUsername)
+
+			'Ouverture de la vue contenant le document "Chef produit DPMX"
+			Set ValidDPMXView = ParamDB.GetView("v_GAMBPS_ValidDPMX")
+			If ValidDPMXView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidDPMX"" sur la base de paramétrage !"
+			
+			'Document "Chef produit DPMX" (en théorie, un seul document de ce type existe)
+			Set ValidDPMXDocument = ValidDPMXView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+			If ValidDPMXDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef produit DPMX"" !"
+			
+			'Correspondant Chef produit DPMX
+			Set TempItem = ValidDPMXDocument.GetFirstItem("GAMBPS_ValidDPMX_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING,_
+			"Impossible de trouver le champ de paramétrage ""GAMBPS_ValidDPMX_Name"" !"
+			
+			Call pDocument.ReplaceItemValue("f_AuteursPotentiels", TempItem.Values)
+			
+			'Lecteurs: ajout des valideurs et des personnes en copie 
+			pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : f_AuteursPotentiels)))|, pDocument)
+			
+			'Changement d'état, etat 3
+			Call ChangeState(pDocument, pFormParamsDocument, 3, "Intermediaire")
+						
+			'Dispaching des acteurs (groupes ou individus)
+			Call DispatchActors(pDocument)
+			
+			'Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(UCase(ValidDPMXDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Name, Null, "VALID")
+				Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidDPMXDocument.GAMBPS_ValidDPMX_Name)
+			ElseIf Trim(UCase(ValidDPMXDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Balfon(0), Null, "VALID")
+				Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidDPMXDocument.GAMBPS_ValidDPMX_Balfon(0))
+			End If				
+			
+		End If		' Si il ne reste aucune pays à traiter
+
+
+
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	' E2: Valideur autorisé =&gt; Chef de Gamme
+	ElseIf (CurrentStep = 2) Then
+
+		'Ouverture de la vue contenant le document "Chef de Marche"
+		Set ValidMarcheView = ParamDB.GetView("v_GAMBPS_ValidMarche_Lookup_ByKey")
+		If ValidMarcheView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidMarche_Lookup_ByKey"" sur la base de paramétrage !"
+		
+		' Auteurs
+		Set itemAuthors = pDocument.ReplaceItemValue("f_AuteursPotentiels", "")
+		
+		' Auteurs par pays
+		Set itemGAMBPSAuthorsByPays = pDocument.ReplaceItemValue("GAMBPS_AuthorsByPays_E4", "")
+		
+		' Resets parallel validation fields
+		Call pDocument.ReplaceItemValue("GAMBPS_ValidatedPays_E4", "")
+		Call pDocument.ReplaceItemValue("GAMBPS_SubmittedPays_E4", "")
+			
+		' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+		ForAll strTemp1 In pDocument.GAMBPS_Pays
+			strKey = "AC-"+strTemp1
+
+			' Document "Chef de Marché" (en théorie, un seul document de ce type existe)
+			Set ValidMarcheDocument = ValidMarcheView.GetDocumentbykey(strKey, True)
+			If ValidMarcheDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Marche"" !"
+			
+			' Responsable de pays en auteur
+			' Correspondant Chef de marché
+			Set TempItem = ValidMarcheDocument.GetFirstItem("GAMBPS_ValidMarche_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidMarche_Name"" !"
+			Call itemAuthors.AppendToTextList(TempItem.Values)
+			
+			' Auteurs par pays
+			Call itemGAMBPSAuthorsByPays.AppendToTextList(strTemp1 + "§" + Implode(TempItem.Values, "§"))
+			
+			' Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Name, Null, "VALID")
+				Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidMarcheDocument.GAMBPS_ValidMarche_Name)
+			ElseIf Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Balfon, Null, "VALID")
+				Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidMarcheDocument.GAMBPS_ValidMarche_Balfon)
+			End If
+			
+		End ForAll
+		
+		' Mise en forme des auteurs et derniers destinataires des mails de validation
+		pDocument.f_AuteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_AuteursPotentiels)))|, pDocument)
+		pDocument.Forms_LastValidSendTo = Evaluate(|@Sort(@Unique(@Trim(Forms_LastValidSendTo)))|, pDocument)
+		
+		'Lecteurs: ajout des valideurs et des personnes en copie
+		pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : f_AuteursPotentiels)))|, pDocument)
+		
+		'Changement d'état, etat 4
+		Call ChangeState(pDocument, pFormParamsDocument, 4, "Intermediaire")
+		
+		'Dispaching des acteurs (groupes ou individus)
+		Call DispatchActors(pDocument)
+		
+		' Envoi d'un mail de notification aux personnes en copie
+		If Trim(pDocument.Forms_E2_CopyTo(0)) &lt;&gt; "" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, pDocument.Forms_E2_CopyTo, Null, "OK")
+			
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, pDocument.Forms_E2_CopyTo)
+		End If
+
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	' E3: Valideur autorisé =&gt; Chef produit DPMX
+	Elseif (CurrentStep = 3) Then
+
+		' Ouverture de la vue contenant le document "PDST"
+		Set ValidPDSTView = ParamDB.GetView("v_GAMBPS_ValidPDST")
+		If ValidPDSTView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidPDST"" sur la base de paramétrage !"
+		
+		' Document "PDST" (en théorie, un seul document de ce type existe)
+		Set ValidPDSTDocument = ValidPDSTView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+		If ValidPDSTDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""PDST"" !"
+		
+		' Correspondant PDST
+		Set TempItem = ValidPDSTDocument.GetFirstItem("GAMBPS_ValidPDST_Name")
+		If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidPDST_Name"" !"
+		Call pDocument.ReplaceItemValue("f_AuteursPotentiels", TempItem.Values)
+		
+		' Lecteurs: ajout des valideurs 
+		pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : f_AuteursPotentiels)))|, pDocument)
+		
+		' Changement d'état, etat 5
+		Call ChangeState(pDocument, pFormParamsDocument, 5, "Intermediaire")
+		
+		' Dispaching des acteurs (groupes ou individus)
+		Call DispatchActors(pDocument)
+		
+		' Envoi du mail (BAL nominative ou fonctionnelle)
+		If Trim(Ucase(ValidPDSTDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Name, Null, "VALID")
+			Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidPDSTDocument.GAMBPS_ValidPDST_Name)
+		Elseif Trim(Ucase(ValidPDSTDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Balfon(0), Null, "VALID")
+			Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidPDSTDocument.GAMBPS_ValidPDST_Balfon(0))
+		End If	
+		
+		' Modified 24/11/2010 By: Juan Bautista Cabral JIRA 662
+		' Envoi d'un mail de notification aux personnes en copie
+		If Trim(pDocument.Forms_E3_CopyTo(0)) &lt;&gt; "" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, pDocument.Forms_E3_CopyTo, Null, "OK")
+			
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, pDocument.Forms_E3_CopyTo)
+		End If
+
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	' E4: Valideur autorisé =&gt; Chef de Marche
+	Elseif (CurrentStep = 4) Then
+	
+	
+	MsgBox "Estado:Comentario e4"+Str(pDocument.f_Etat(0))+"s"
+	
+	
+		' Ajout des pays nouvellements validées/refusées à la liste de toutes les pays validées/refusées
+		Set TempItem = pDocument.GetFirstItem("GAMBPS_ValidatedPays_E4")
+		If TempItem Is Nothing Then Set TempItem = New NotesItem(pDocument, "GAMBPS_ValidatedPays_E4", "")
+		Call TempItem.AppendToTextList(pDocument.GetItemValue("GAMBPS_SubmittedPays_E4"))
+		TempItem.IsSummary = True
+		
+		' Construction de la liste des pays validées/refusées
+		ForAll Pays In TempItem.Values
+			strTemp = UCase(Trim(StrLeft(Pays, "§", 0, 1)))
+			listTemp(strTemp) = strTemp
+		End ForAll
+		
+		' Auteurs
+		Set itemAuthors = pDocument.ReplaceItemValue("f_AuteursPotentiels", "")
+		
+		' Auteurs par pays
+		Set itemGAMBPSAuthorsByPays = pDocument.ReplaceItemValue("GAMBPS_AuthorsByPays_E4", "")
+		
+		' Ouverture de la vue contenant le document "Chef de Marche"
+		Set ValidMarcheView = ParamDB.GetView("v_GAMBPS_ValidMarche_Lookup_ByKey")
+		If ValidMarcheView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidMarche"" sur la base de paramétrage !"
+		
+		' Boucle sur les pays sélectionnés par le demandeur
+		boolTemp = False
+		ForAll strTemp1 In pDocument.GAMBPS_Pays
+			strKey = "AC-"+strTemp1
+			' Si le pays n'a pas déjà été traitée
+			If Not IsElement(listTemp(UCase(Trim(strTemp1)))) Then
+				boolTemp = True
+		
+				' Document "Chef de Marché" (en théorie, un seul document de ce type existe)
+				Set ValidMarcheDocument = ValidMarcheView.GetDocumentbykey(strKey, True)
+				If ValidMarcheDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Marche"" !"
+				
+				' Responsable de pays en auteur
+				' Correspondant Chef de marché
+				Set TempItem = ValidMarcheDocument.GetFirstItem("GAMBPS_ValidMarche_Name")
+				If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidMarche_Name"" !"
+				Call itemAuthors.AppendToTextList(TempItem.Values)
+				
+				' Auteurs par pays
+				Call itemGAMBPSAuthorsByPays.AppendToTextList(strTemp1 + "§" + Implode(TempItem.Values, "§"))
+				
+			End If
+			
+		End ForAll
+		
+		' Si il reste des pays à traiter,
+		If boolTemp Then
+			' Mise en forme des auteurs
+			pDocument.f_AuteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_AuteursPotentiels)))|, pDocument)
+			
+			' Lecteurs: ajout des valideurs
+			pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : f_AuteursPotentiels)))|, pDocument)
+			
+			' Dispaching des acteurs (groupes ou individus)
+			Call DispatchActors(pDocument)
+			
+		' Si il ne reste aucune pays à traiter
+		Else
+			Call GAMBPS_NotifDocument(pDB, pFormParamsDocument, pProfileDocument, pDocument, pUsername)	
+			
+			' Ouverture de la vue contenant le document "PDST"
+			Set ValidPDSTView = ParamDB.GetView("v_GAMBPS_ValidPDST")
+			If ValidPDSTView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidPDST"" sur la base de paramétrage !"
+			
+			' Document "PDST" (en théorie, un seul document de ce type existe)
+			Set ValidPDSTDocument = ValidPDSTView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+			If ValidPDSTDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""PDST"" !"
+			
+			' Correspondant PDST
+			Set TempItem = ValidPDSTDocument.GetFirstItem("GAMBPS_ValidPDST_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidPDST_Name"" !"
+			Call pDocument.ReplaceItemValue("f_AuteursPotentiels", TempItem.Values)
+			
+			' Lecteurs: ajout des valideurs et des personnes en copie 
+			pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : f_AuteursPotentiels)))|, pDocument)
+			
+			' Changement d'état, etat 5
+			Call ChangeState(pDocument, pFormParamsDocument, 5, "Intermediaire")
+			
+			' Dispaching des acteurs (groupes ou individus)
+			Call DispatchActors(pDocument)
+			MsgBox "Estado antes sendmail"+Str(pDocument.f_Etat(0))+"s"
+			' Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(Ucase(ValidPDSTDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Name, Null, "VALID")
+				Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidPDSTDocument.GAMBPS_ValidPDST_Name)
+			Elseif Trim(Ucase(ValidPDSTDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Balfon(0), Null, "VALID")
+				Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidPDSTDocument.GAMBPS_ValidPDST_Balfon(0))
+			End If	
+			
+			MsgBox "Estado despues  sendmail"+Str(pDocument.f_Etat(0))+"s"
+
+		End If		' Si il ne reste aucune pays à traiter
+
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	' E5: Valideur autorisé =&gt; PDST
+	Elseif (CurrentStep = 5) Then
+		MsgBox "Estado:"+Str(pDocument.f_Etat(0))
+		' Ouverture de la vue contenant le document "Véhicules"
+		Set ValidVehiculesZoneView = ParamDB.GetView("v_GAMBPS_Lookup_Vehicules")
+		If ValidVehiculesZoneView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED,_
+		"Impossible d'ouvrir la vue ""v_GAMBPS_Lookup_Vehicules"" sur la base de paramétrage !"
+		
+		' Document "Véhicules" (en théorie, un seul document de ce type existe)
+		Set ValidVehiculeZoneDocument = ValidVehiculesZoneView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+		If ValidVehiculeZoneDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Véhicules"" !"
+		
+		' Correspondant Véhicules
+		Set TempItem = ValidVehiculeZoneDocument.GetFirstItem("GAMBPS_ValidVeh_Name")
+		If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidVeh_Name"" !"
+		
+		Call pDocument.ReplaceItemValue("f_AuteursPotentiels", TempItem.Values)
+		
+		' Lecteurs: ajout des valideurs
+		pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels : f_AuteursPotentiels)))|, pDocument)
+		
+		' Changement d'état, etat 6
+		Call ChangeState(pDocument, pFormParamsDocument, 6, "Intermediaire")
+		
+		' Dispaching des acteurs (groupes ou individus)
+		Call DispatchActors(pDocument)
+		
+		' Envoi du mail (BAL nominative ou fonctionnelle)
+		If Trim(Ucase(ValidVehiculeZoneDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidVehiculeZoneDocument.GAMBPS_ValidVeh_Name, Null, "VALID")
+			Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidVehiculeZoneDocument.GAMBPS_ValidVeh_Name)
+		Elseif Trim(Ucase(ValidVehiculeZoneDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidVehiculeZoneDocument.GAMBPS_ValidVeh_Balfon(0), Null, "VALID")
+			Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", ValidVehiculeZoneDocument.GAMBPS_ValidVeh_Balfon(0))
+		End If
+		
+		' Envoi d'un mail de notification aux personnes en copie
+		If Trim(pDocument.Forms_E5_CopyTo(0)) &lt;&gt; "" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, pDocument.Forms_E5_CopyTo, Null, "OK")
+			
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, pDocument.Forms_E5_CopyTo)
+		End If
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	- - - - - - - - - - - - - - - - - - - -
+		
+	' E6: Valideur autorisé =&gt; Véhicules
+	Elseif (CurrentStep = 6) Then
+				
+		Call GAMBPS_NotifDocument(pDB, pFormParamsDocument, pProfileDocument, pDocument, pUsername)
+		
+		' Envoi d'un mail de notification aux personnes en copie
+		If Trim(pDocument.Forms_E6_CopyTo(0)) &lt;&gt; "" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, pDocument.Forms_E6_CopyTo, Null, "OK")
+			
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, pDocument.Forms_E6_CopyTo)
+		End If
+		
+		' Changement d'état, etat 97
+		Call ChangeState(pDocument, pFormParamsDocument, 97, "Terminal")
+		
+		
+		
+	End If
+	
+	
+	If (CurrentStep = 0) Then
+		' Equipements.... déplacer dans les premières cases
+		Dim aRegTemp() As String, aPlusTemp() As String, aMoinsTemp() As String
+		Dim stemp As String
+		Dim index As Integer, k1 As Integer, k2 As Integer, k3 As Integer
+		k1 = 0		
+		k2 = 0
+		k3 = 0
+		For index=1 To 16
+			' Réglementaires...			
+			stemp = pDocument.GetItemValue("GAMBPS_reg_" + Cstr(index))(0)
+			If (stemp &lt;&gt; "")Then
+				k1 = k1 +1
+				Redim Preserve aRegTemp(1 To k1) As String
+				aRegTemp(k1)= pDocument.GetItemValue("GAMBPS_reg_"+Cstr(index))(0)	
+			End If
+			' Equipements en plus 
+			stemp = pDocument.GetItemValue("GAMBPS_equiplus_" + Cstr(index))(0)
+			If (stemp &lt;&gt; "")Then
+				k2 = k2 +1		
+				Redim Preserve aPlusTemp(1 To k2) As String
+				aPlusTemp(k2)= pDocument.GetItemValue("GAMBPS_equiplus_"+Cstr(index))(0)	
+			End If
+			' Equipements en moins 
+			stemp = pDocument.GetItemValue("GAMBPS_equimoins_" + Cstr(index))(0)
+			If (stemp &lt;&gt; "")Then
+				k3 = k3 +1		
+				Redim Preserve aMoinsTemp(1 To k3) As String
+				aMoinsTemp(k3)= pDocument.GetItemValue("GAMBPS_equimoins_"+Cstr(index))(0)	
+			End If
+		Next
+		
+		For index=1 To 16
+			' Réglementaires...
+			If index &gt; k1 Then
+				Call pDocument.ReplaceItemValue("GAMBPS_reg_"+Cstr(index),"")	
+			Else
+				Call pDocument.ReplaceItemValue("GAMBPS_reg_"+Cstr(index),aRegTemp(index))
+			End If
+'Equipements en plus 	
+			If index &gt; k2 Then
+				Call pDocument.ReplaceItemValue("GAMBPS_equiplus_"+Cstr(index),"")	
+			Else
+				Call pDocument.ReplaceItemValue("GAMBPS_equiplus_"+Cstr(index),aPlusTemp(index))
+			End If
+'Equipements en moins 	
+			If index &gt; k3 Then
+				Call pDocument.ReplaceItemValue("GAMBPS_equimoins_"+Cstr(index),"")	
+			Else
+				Call pDocument.ReplaceItemValue("GAMBPS_equimoins_"+Cstr(index),aMoinsTemp(index))
+			End If
+		Next
+		
+		' Réengagement (au sens classique Formulaires)
+		'If pDocument.A_Complementer(0) &lt;&gt; "O" Then
+		'	On Error lsERR_NOTES_BAD_UNID Resume Next
+		'	If(pDocument.ParentDocUNID(0) &lt;&gt;"") Then
+		'		Set ParentDoc = pDB.GetDocumentByUNID(pDocument.ParentDocUNID(0))
+		'		If Not ParentDoc Is Nothing Then
+					'Call ParentDoc.Remove(True)
+		'		End If
+		'	End If		
+		'End If
+		
+	End If
+	
+	Exit Sub
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 															GESTION D'ERREUR
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType		= LOGLEVEL_EMERG%
+		LogEntry.SubName		= "GAMBPS_StepUpDocument"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:GAMBPS_DenyDocument:0:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge de refuser le document
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub GAMBPS_DenyDocument(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pUserName As NotesName)
+	
+	' Gestion d'erreurs	
+	On Error Goto ErrorHandler
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																INITIALISATION
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Variables locales
+	Dim CurrentStep As Integer
+	Dim TempItem As NotesItem, iLect As NotesItem
+	Dim TypeMarque As String
+	Dim strKey As String
+	
+	'Attribuée: (FMR-602) GAMBPS : Validation d'étape par "import" 07/10/2010 by Juan Bautista Cabral.
+	Dim vVehicules As NotesView
+	Dim dVehicule As NotesDocument
+	Dim UserRejectFile As NotesName
+	
+	' Base de paramétrage
+	Dim ParamDB As New NotesDatabase(pProfileDocument.f_Serveur_Parametre(0), pProfileDocument.f_Path_Parametre(0))
+	If Not ParamDB.IsOpen Then Error lsERR_NOTES_DBOPEN_FAILED, "Impossible d'ouvrir la base """ + pProfileDocument.f_Path_Parametre(0) + """ sur le serveur """ + pProfileDocument.f_Serveur_Parametre(0) + """"
+	
+	
+	' Etat de la demande	
+	CurrentStep = Cint(pDocument.f_Etat(0))
+	
+	' Vues de documents de paramétrage
+	Dim ValidMarcheView As NotesView, ValidDPMXView As NotesView, ValidPDSTView As NotesView, ValidGammeView As NotesView
+	
+	' Documents de paramétrage
+	Dim ValidMarcheDocument As NotesDocument, ValidDPMXDocument As NotesDocument, ValidPDSTDocument As NotesDocument, ValidGammeDocument As NotesDocument
+	
+	' Construction du demandeur	
+	Dim Demandeur As NotesName
+	Set Demandeur = New NotesName(pDocument.f_Demandeur(0))
+	
+	' Construction du Autre Personne habilitée
+	Dim AutrePersonneHab As NotesName
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																TRAITEMENT
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Historique-
+	'This case determines whether it is a manual approval or from the file
+	'(Exception: Validation d'étape par "import" 07/10/2010 by Juan Bautista Cabral)
+	'NL 29/02/2012: Fiche FMR-912 : This exception is no longer wanted
+	%REM
+	If ApproveReject_File Then
+		Set vVehicules = ParamDB.GetView("(v_GAMBPS_Lookup_Vehicules)")		
+		Set dVehicule = vVehicules.GetDocumentByKey(pDocument.GAMBPS_Vehicule(0), True)
+		If Not dVehicule Is Nothing Then
+			'RB 30/01/2012: Fiche FMR-912 : Indiquer l'utilisateur qui fait l'import
+			Set UserRejectFile = New NotesName(pDocument.GAMBPS_Import_User(0))
+			If Not UserRejectFile Is Nothing Then
+				Call AddHistLine(pDocument, "l_HRefuse", UserRejectFile.Abbreviated)
+			End If
+		Else
+			Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Vehicule"" !"
+		End If
+	Else	
+		Call AddHistLine(pDocument, "l_HRefuse", pUserName.Abbreviated)
+	End If
+	%END REM
+	
+	'NL 29/02/2012: Fiche FMR-912 : Back to the original (one line) version of Historique
+	Call AddHistLine(pDocument, "l_HRefuse", pUserName.Abbreviated)
+	
+	Set iLect = pDocument.GetFirstItem("f_LecteursPotentiels")
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	' E1: Valideur autorisé =&gt; Chef de Marché OR Chef de Gamme
+	If (CurrentStep &gt;= 1) Then
+		
+		' Lecteurs: ajout des valideurs
+		Call iLect.AppendToTextList(Demandeur.Canonical)	
+		' Envoi du mail (Demandeur)
+		Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, 	Demandeur.Canonical, Null, "KO")
+		
+		If (pDocument.GAMBPS_Autre_per_hab(0) &lt;&gt; "" ) Then
+			Set AutrePersonneHab = New NotesName(pDocument.GAMBPS_Autre_per_hab(0))
+			' Lecteurs: ajout des valideurs
+			Call iLect.AppendToTextList(AutrePersonneHab.Canonical)	
+			' Envoi du mail (Autre Personne habilitée)
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, AutrePersonneHab.Canonical, Null, "KO")
+		End If
+		
+		pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+	End If
+	
+	TypeMarque$ = pDocument.GAMBPS_Marque(0)
+		
+	' Marque: AP=Peugeot / AC=Citroen
+	If UCase(TypeMarque$) = "AP" Then
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+		' E3: Valideur autorisé =&gt; Chef produit DPMX
+		If (CurrentStep &gt;= 3) Then
+			
+			' Ouverture de la vue contenant le document "Chef de Marche"
+			Set ValidMarcheView = ParamDB.GetView("v_GAMBPS_ValidMarche_Lookup_ByKey")
+			If ValidMarcheView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidMarche_Lookup_ByKey"" sur la base de paramétrage !"
+			
+			' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+			ForAll strTemp1 In pDocument.GAMBPS_Pays
+				strKey = "AP-"+strTemp1
+				
+				' Document "Chef de Marché" (en théorie, un seul document de ce type existe)
+				Set ValidMarcheDocument = ValidMarcheView.GetDocumentbykey(strKey, True)
+				If ValidMarcheDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Marche"" !"
+				
+				' Correspondant Chef de marché
+				Set TempItem = ValidMarcheDocument.GetFirstItem("GAMBPS_ValidMarche_Name")
+				If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidMarche_Name"" !"
+				
+				' Lecteurs: ajout des valideurs
+				Call iLect.AppendToTextList(TempItem.Values)
+				pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+				
+				' Envoi du mail (BAL nominative ou fonctionnelle)
+				If Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Name, Null, "ADD4")
+				ElseIf Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Balfon(0), Null, "ADD4")
+				End If	
+			End ForAll
+		End If
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+		' E5: Valideur autorisé =&gt; PDST
+		If (CurrentStep &gt;= 5) Then
+			
+			' Ouverture de la vue contenant le document "chef produit DPMX"
+			Set ValidDPMXView = ParamDB.GetView("v_GAMBPS_ValidDPMX")
+			If ValidDPMXView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidDPMX"" sur la base de paramétrage !"
+			
+			' Document "Chef produit DPMX" (en théorie, un seul document de ce type existe)
+			Set ValidDPMXDocument = ValidDPMXView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+			If ValidDPMXDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef produit DPMX"" !"
+			
+			' Correspondant Chef produit DPMX
+			Set TempItem = ValidDPMXDocument.GetFirstItem("GAMBPS_ValidDPMX_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidDPMX_Name"" !"
+			
+			' Lecteurs: ajout des valideurs
+			Call iLect.AppendToTextList(TempItem.Values)	
+			pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+			
+			' Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(UCase(ValidDPMXDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Name, Null, "ADD4")
+			ElseIf Trim(UCase(ValidDPMXDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Balfon(0), Null, "ADD4")
+			End If		
+		End If
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	ElseIf UCase(TypeMarque$) = "AC" Then
+	
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		' E4: Valideur autorisé =&gt; Chef de Marché
+		If (CurrentStep &gt;= 4) Then
+			
+			'Ouverture de la vue contenant le document "Chef de Gamme"
+			Set ValidGammeView = ParamDB.GetView("v_GAMBPS_ValidGamme")
+			If ValidGammeView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidGamme"" sur la base de paramétrage !"
+
+			'Document "Chef de Gamme" (en théorie, un seul document de ce type existe)
+			Set ValidGammeDocument = ValidGammeView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+			If ValidGammeDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Gamme"" !"
+
+			'Correspondant Chef de Gamme
+			Set TempItem = ValidGammeDocument.GetFirstItem("GAMBPS_ValidGamme_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING,_
+			"Impossible de trouver le champ de paramétrage ""GAMBPS_ValidGamme_Name"" !"
+			
+			' Lecteurs: ajout des valideurs
+			Call iLect.AppendToTextList(TempItem.Values)	
+			pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+			
+			' Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(UCase(ValidGammeDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidGammeDocument.GAMBPS_ValidGamme_Name, Null, "ADD4")
+			ElseIf Trim(UCase(ValidGammeDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidGammeDocument.GAMBPS_ValidGamme_Balfon(0), Null, "ADD4")
+			End If
+		End If
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+		' E5: Valideur autorisé =&gt; PDST
+		If (CurrentStep &gt;= 5) Then
+			
+			' Ouverture de la vue contenant le document "Chef de Marche"
+			Set ValidMarcheView = ParamDB.GetView("v_GAMBPS_ValidMarche_Lookup_ByKey")
+			If ValidMarcheView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidMarche_Lookup_ByKey"" sur la base de paramétrage !"
+			
+			' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+			ForAll strTemp1 In pDocument.GAMBPS_Pays
+				strKey = "AC-"+strTemp1
+				
+				' Document "Chef de Marché" (en théorie, un seul document de ce type existe)
+				Set ValidMarcheDocument = ValidMarcheView.GetDocumentbykey(strKey, True)
+				If ValidMarcheDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Marche"" !"
+				
+				' Correspondant Chef de marché
+				Set TempItem = ValidMarcheDocument.GetFirstItem("GAMBPS_ValidMarche_Name")
+				If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidMarche_Name"" !"
+				
+				' Lecteurs: ajout des valideurs
+				Call iLect.AppendToTextList(TempItem.Values)	
+				pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+				
+				' Envoi du mail (BAL nominative ou fonctionnelle)
+				If Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Name, Null, "ADD4")
+				ElseIf Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Balfon(0), Null, "ADD4")
+				End If
+			End ForAll
+		End If
+	End If
+	
+	'- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	'E6: Valideur autorisé =&gt; Service BPS
+	If (CurrentStep &gt;= 6) Then
+		
+
+		' Ouverture de la vue contenant le document "PDST"
+		Set ValidPDSTView = ParamDB.GetView("v_GAMBPS_ValidPDST")
+		If ValidPDSTView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidPDST"" sur la base de paramétrage !"
+		
+		' Document "PDST" (en théorie, un seul document de ce type existe)
+		Set ValidPDSTDocument = ValidPDSTView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+		If ValidPDSTDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""PDST"" !"
+		
+		' Correspondant PDST
+		Set TempItem = ValidPDSTDocument.GetFirstItem("GAMBPS_ValidPDST_Name")
+		If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidPDST_Name"" !"
+		
+		' Lecteurs: ajout des valideurs
+		Call iLect.AppendToTextList(TempItem.Values)	
+		pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+		
+		' Envoi du mail (BAL nominative ou fonctionnelle)
+		If Trim(Ucase(ValidPDSTDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Name, Null, "ADD4")
+		Elseif Trim(Ucase(ValidPDSTDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Balfon(0), Null, "ADD4")
+		End If
+		
+	End If
+	
+	'Valideur autorisé
+	pDocument.f_AuteursPotentiels = "[AdminForms]"
+	
+	'Changement d'état, état 98
+	Call ChangeState(pDocument, pFormParamsDocument, 98, "Terminal")
+	pDocument.f_EtatTerminal = "O"
+	
+	'Dispaching des acteurs (groupes ou individus)
+	pDocument.f_ActeursIndividu = ""
+	pDocument.f_ActeursGroupe = ""
+	pDocument.ActeursMembresGroupe = ""
+	
+	'C'est fini, on sort
+	Exit Sub
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 															GESTION D'ERREUR
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType		= LOGLEVEL_EMERG%
+		LogEntry.SubName		= "GAMBPS_DenyDocument"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:GAMBPS_CancelDocument:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge de traiter un document
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub GAMBPS_CancelDocument(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pUserName As NotesName)
+	' Gestion d'erreurs	
+	On Error Goto ErrorHandler
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																INITIALISATION
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Variables locales
+	Dim CurrentStep As Integer
+	Dim TempItem As NotesItem, iLect As NotesItem
+	Dim TypeMarque As String
+	Dim strKey As String
+	
+	' Base de paramétrage
+	Dim ParamDB As New NotesDatabase(pProfileDocument.f_Serveur_Parametre(0), pProfileDocument.f_Path_Parametre(0))
+	If Not ParamDB.IsOpen Then Error lsERR_NOTES_DBOPEN_FAILED, "Impossible d'ouvrir la base """ + pProfileDocument.f_Path_Parametre(0) + """ sur le serveur """ + pProfileDocument.f_Serveur_Parametre(0) + """"
+	
+	' Etat de la demande	
+	CurrentStep = CInt(pDocument.f_Etat(0))
+	
+	' Vues de documents de paramétrage
+	Dim vVehicules As NotesView, ValidMarcheView As NotesView, ValidDPMXView As NotesView, ValidGammeView As NotesView, ValidPDSTView As NotesView, ValidCRView As NotesView
+	
+	' Documents de paramétrage
+	Dim dVehicule As NotesDocument, ValidMarcheDocument As NotesDocument, ValidGammeDocument As NotesDocument, ValidDPMXDocument As NotesDocument, ValidPDSTDocument As NotesDocument, ValidCRDocument As NotesDocument
+	
+	' Construction du demandeur	
+	Dim Demandeur As NotesName
+	Set Demandeur = New NotesName(pDocument.f_Demandeur(0))
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																TRAITEMENT
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Historique
+	Call AddHistLine(pDocument, "l_HAnnul", pUserName.Abbreviated)
+	
+	Set iLect = pDocument.GetFirstItem("f_LecteursPotentiels")
+	
+	TypeMarque$ = pDocument.GAMBPS_Marque(0)
+		
+	' Marque: AP=Peugeot / AC=Citroen
+	If UCase(TypeMarque$) = "AP" Then
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+		' E3: Valideur autorisé =&gt; Chef produit DPMX
+		If (CurrentStep &gt;= 3) Then
+			
+			' Ouverture de la vue contenant le document "Chef de Marche"
+			Set ValidMarcheView = ParamDB.GetView("v_GAMBPS_ValidMarche_Lookup_ByKey")
+			If ValidMarcheView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidMarche_Lookup_ByKey"" sur la base de paramétrage !"
+			
+			' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+			ForAll strTemp1 In pDocument.GAMBPS_Pays
+				strKey = "AP-"+strTemp1
+				
+				' Document "Chef de Marché" (en théorie, un seul document de ce type existe)
+				Set ValidMarcheDocument = ValidMarcheView.GetDocumentbykey(strKey, True)
+				If ValidMarcheDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Marche"" !"
+				
+				' Correspondant Chef de marché
+				Set TempItem = ValidMarcheDocument.GetFirstItem("GAMBPS_ValidMarche_Name")
+				If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidMarche_Name"" !"
+				
+				' Lecteurs: ajout des valideurs
+				Call iLect.AppendToTextList(TempItem.Values)	
+				pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+				
+				' Envoi du mail (BAL nominative ou fonctionnelle)
+				If Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Name, Null, "CANCEL")
+				ElseIf Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Balfon(0), Null, "CANCEL")
+				End If
+			End ForAll
+		End If
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+		' E5: Valideur autorisé =&gt; PDST
+		If (CurrentStep &gt;= 5) Then
+			
+			' Ouverture de la vue contenant le document "chef produit DPMX"
+			Set ValidDPMXView = ParamDB.GetView("v_GAMBPS_ValidDPMX")
+			If ValidDPMXView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidDPMX"" sur la base de paramétrage !"
+			
+			' Document "Chef produit DPMX" (en théorie, un seul document de ce type existe)
+			Set ValidDPMXDocument = ValidDPMXView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+			If ValidDPMXDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef produit DPMX"" !"
+			
+			' Correspondant Chef produit DPMX
+			Set TempItem = ValidDPMXDocument.GetFirstItem("GAMBPS_ValidDPMX_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidDPMX_Name"" !"
+			
+			' Lecteurs: ajout des valideurs
+			Call iLect.AppendToTextList(TempItem.Values)	
+			pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+			
+			' Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(UCase(ValidDPMXDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Name, Null, "CANCEL")
+			ElseIf Trim(UCase(ValidDPMXDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Balfon(0), Null, "CANCEL")
+			End If		
+		End If
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	ElseIf UCase(TypeMarque$) = "AC" Then
+	
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+		' E4: Valideur autorisé =&gt; Chef de Marché
+		If (CurrentStep &gt;= 4) Then
+			
+			'Ouverture de la vue contenant le document "Chef de Gamme"
+			Set ValidGammeView = ParamDB.GetView("v_GAMBPS_ValidGamme")
+			If ValidGammeView Is Nothing Then Error </text></item>
+<item name='$AgentHScript' summary='false' sign='true'><text>lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidGamme"" sur la base de paramétrage !"
+				
+			'Document "Chef de Gamme" (en théorie, un seul document de ce type existe)
+			Set ValidGammeDocument = ValidGammeView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+			If ValidGammeDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Gamme"" !"
+
+			'Correspondant Chef de Gamme
+			Set TempItem = ValidGammeDocument.GetFirstItem("GAMBPS_ValidGamme_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING,_
+			"Impossible de trouver le champ de paramétrage ""GAMBPS_ValidGamme_Name"" !"
+			
+			' Lecteurs: ajout des valideurs
+			Call iLect.AppendToTextList(TempItem.Values)	
+			pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+			
+			' Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(UCase(ValidGammeDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidGammeDocument.GAMBPS_ValidGamme_Name, Null, "CANCEL")
+			ElseIf Trim(UCase(ValidGammeDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidGammeDocument.GAMBPS_ValidGamme_Balfon(0), Null, "CANCEL")
+			End If	
+		End If
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+		' E5: Valideur autorisé =&gt; PDST
+		If (CurrentStep &gt;= 5) Then
+			
+			' Ouverture de la vue contenant le document "Chef de Marche"
+			Set ValidMarcheView = ParamDB.GetView("v_GAMBPS_ValidMarche_Lookup_ByKey")
+			If ValidMarcheView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidMarche_Lookup_ByKey"" sur la base de paramétrage !"
+			
+			' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+			ForAll strTemp1 In pDocument.GAMBPS_Pays
+				strKey = "AC-"+strTemp1
+				MsgBox "GAMBPS: strKey = "+strKey
+				' Document "Chef de Marché" (en théorie, un seul document de ce type existe)
+				Set ValidMarcheDocument = ValidMarcheView.GetDocumentbykey(strKey, True)
+				If ValidMarcheDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Marche"" !"
+				
+				' Correspondant Chef de marché
+				Set TempItem = ValidMarcheDocument.GetFirstItem("GAMBPS_ValidMarche_Name")
+				If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidMarche_Name"" !"
+				
+				' Lecteurs: ajout des valideurs
+				Call iLect.AppendToTextList(TempItem.Values)	
+				pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+				
+				' Envoi du mail (BAL nominative ou fonctionnelle)
+				If Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Name, Null, "CANCEL")
+				ElseIf Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Balfon(0), Null, "CANCEL")
+				End If
+			End ForAll
+		End If
+	End If
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	' E6: Valideur autorisé =&gt; Service BPS
+	If (CurrentStep &gt;= 6) Then
+		
+		' Ouverture de la vue contenant le document "PDST"
+		Set ValidPDSTView = ParamDB.GetView("v_GAMBPS_ValidPDST")
+		If ValidPDSTView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidPDST"" sur la base de paramétrage !"
+		
+		' Document "PDST" (en théorie, un seul document de ce type existe)
+		Set ValidPDSTDocument = ValidPDSTView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+		If ValidPDSTDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""PDST"" !"
+		
+		' Correspondant PDST
+		Set TempItem = ValidPDSTDocument.GetFirstItem("GAMBPS_ValidPDST_Name")
+		If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidPDST_Name"" !"
+		
+		' Lecteurs: ajout des valideurs
+		Call iLect.AppendToTextList(TempItem.Values)	
+		pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+		
+		' Envoi du mail (BAL nominative ou fonctionnelle)
+		If Trim(UCase(ValidPDSTDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Name, Null, "CANCEL")
+		ElseIf Trim(UCase(ValidPDSTDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Balfon(0), Null, "CANCEL")
+		End If
+		
+	End If
+	
+	' Valideur autorisé
+	pDocument.f_AuteursPotentiels = "[AdminForms]"
+	
+	' Changement d'état, état 99
+	Call ChangeState(pDocument, pFormParamsDocument, 99, "Terminal")
+	pDocument.f_EtatTerminal = "O"
+	
+	' Dispaching des acteurs (groupes ou individus)
+	pDocument.f_ActeursIndividu = ""
+	pDocument.f_ActeursGroupe = ""
+	pDocument.ActeursMembresGroupe = ""
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 															GESTION D'ERREUR
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType		= LOGLEVEL_EMERG%
+		LogEntry.SubName		= "GAMBPS_CancelDocument"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:GAMBPS_NotifDocument:1:8
+Sub GAMBPS_NotifDocument(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pUserName As NotesName)
+	
+	' Gestion d'erreurs	
+	On Error Goto ErrorHandler
+	
+	Dim CurrentStep As Integer
+	
+	Dim TempItem As NotesItem
+	Dim iLect As NotesItem	
+	
+	Dim ParamDB As New NotesDatabase(pProfileDocument.f_Serveur_Parametre(0), pProfileDocument.f_Path_Parametre(0))
+	
+	' Vues de documents de paramétrage
+	Dim ValidMarcheView As NotesView, ValidDPMXView As NotesView, ValidPDSTView As NotesView, ValidCRView As NotesView, ValidCZoneView As NotesView, ValidAPView As NotesView, ValidRAPAZView As NotesView
+	
+	' Documents de paramétrage
+	Dim ValidMarcheDocument As NotesDocument, ValidDPMXDocument As NotesDocument, ValidPDSTDocument As NotesDocument, ValidCRDocument As NotesDocument, ValidCZoneDocument As NotesDocument, ValidAPDocument As NotesDocument, ValidRAPAZDocument As NotesDocument
+	
+	' Construction du demandeur
+	Dim Demandeur As NotesName
+	Set Demandeur = New NotesName(pDocument.f_Demandeur(0))
+	
+	' Construction du Autre Personne habilitée
+	Dim AutrePersonneHab As NotesName
+		
+	' Etat de la demande	
+	CurrentStep = Cint(pDocument.f_Etat(0))
+	Set iLect = pDocument.GetFirstItem("f_LecteursPotentiels")
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	' E0: 
+	If (CurrentStep = 0) Then
+		If (pDocument.GAMBPS_Autre_per_hab(0) &lt;&gt; "" ) Then
+			Set AutrePersonneHab = New NotesName(pDocument.GAMBPS_Autre_per_hab(0))
+	
+			' Envoi du mail (Autre Personne habilitée)
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, AutrePersonneHab.Canonical, Null, "ADD2")
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, AutrePersonneHab.Canonical)
+		End if
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	' E1: 
+	ElseIf (CurrentStep = 1) Then
+		
+		'Ouverture de la vue contenant le document "Chef de zone"
+		Set ValidCZoneView = ParamDB.GetView("v_GAMBPS_ValidCZone")
+		If ValidCZoneView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidCZone"" sur la base de paramétrage !"
+		
+		' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+		ForAll strTemp1 In pDocument.GAMBPS_Pays
+			'Document "Chef de zone" (en théorie, un seul document de ce type existe)
+			Set ValidCZoneDocument = ValidCZoneView.GetDocumentbykey(strTemp1, True)
+			If ValidCZoneDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de zone"" !"
+			
+			'Correspondant Chef de zone
+			Set TempItem = ValidCZoneDocument.GetFirstItem("GAMBPS_ValidCZone_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidCZone_Name"" !"
+			
+			'Envoi du mail (Sauf si Demandeur = Chef de Zone)
+			If TempItem.text &lt;&gt; Demandeur.Canonical Then
+				'Lecteurs: ajout des valideurs
+				Call iLect.AppendToTextList(TempItem.Values)
+				
+				' BAL nominative ou fonctionnelle
+				If Trim(UCase(ValidCZoneDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Name, Null, "ADD2")
+					
+					'Ajout pour la vue ce que j'ai recu
+					Call AddNotifiedReaders(pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Name)				
+				ElseIf Trim(UCase(ValidCZoneDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Balfon(0), Null, "ADD2")
+					
+					'Ajout pour la vue ce que j'ai recu
+					Call AddNotifiedReaders(pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Balfon(0))
+				End If
+			End If
+		End ForAll
+	 	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+		
+		' Ouverture de la vue contenant le document "Contrôle rentabilité"
+		Set ValidCRView = ParamDB.GetView("v_GAMBPS_ValidCR")
+		If ValidCRView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidCR"" sur la base de paramétrage !"
+		
+		' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+		ForAll strTemp1 In pDocument.GAMBPS_Pays
+			' Document "Contrôle rentabilité" (en théorie, un seul document de ce type existe)
+			Set ValidCRDocument = ValidCRView.GetDocumentbykey(strTemp1, True)
+			If ValidCRDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Contrôle rentabilité"" !"
+			
+			' Correspondant Contrôle rentabilité
+			Set TempItem = ValidCRDocument.GetFirstItem("GAMBPS_ValidCR_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidCR_Name"" !"
+			
+			' Lecteurs: ajout des valideurs
+			Call iLect.AppendToTextList(TempItem.Values)
+			
+			' Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(UCase(ValidCRDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidCRDocument.GAMBPS_ValidCR_Name, Null, "ADD2")
+				
+				'Ajout pour la vue ce que j'ai recu
+				Call AddNotifiedReaders(pDocument, ValidCRDocument.GAMBPS_ValidCR_Name)	
+			ElseIf Trim(UCase(ValidCRDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidCRDocument.GAMBPS_ValidCR_Balfon(0), Null, "ADD2")
+				
+				'Ajout pour la vue ce que j'ai recu
+				Call AddNotifiedReaders(pDocument, ValidCRDocument.GAMBPS_ValidCR_Balfon(0))	
+			End If
+		End ForAll
+		
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+	' E4:
+	ElseIf (CurrentStep = 4) Then
+		
+		'Ouverture de la vue contenant le document "Chef de zone"
+		Set ValidCZoneView = ParamDB.GetView("v_GAMBPS_ValidCZone")
+		If ValidCZoneView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidCZone"" sur la base de paramétrage !"
+		
+		' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+		ForAll strTemp1 In pDocument.GAMBPS_Pays
+			'Document "Chef de zone" (en théorie, un seul document de ce type existe)
+			Set ValidCZoneDocument = ValidCZoneView.GetDocumentbykey(strTemp1, True)
+			If ValidCZoneDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de zone"" !"
+			
+			'Correspondant Chef de zone
+			Set TempItem = ValidCZoneDocument.GetFirstItem("GAMBPS_ValidCZone_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidCZone_Name"" !"
+			
+			'Envoi du mail (Sauf si Demandeur = Chef de Zone)
+			If TempItem.text &lt;&gt; Demandeur.Canonical Then
+				'Lecteurs: ajout des valideurs
+				Call iLect.AppendToTextList(TempItem.Values)
+				
+				' BAL nominative ou fonctionnelle
+				If Trim(UCase(ValidCZoneDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Name, Null, "ADD2")
+					
+					'Ajout pour la vue ce que j'ai recu
+					Call AddNotifiedReaders(pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Name)				
+				ElseIf Trim(UCase(ValidCZoneDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Balfon(0), Null, "ADD2")
+					
+					'Ajout pour la vue ce que j'ai recu
+					Call AddNotifiedReaders(pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Balfon(0))
+				End If
+			End If
+		End ForAll
+	 	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
+		
+		' Ouverture de la vue contenant le document "Contrôle rentabilité"
+		Set ValidCRView = ParamDB.GetView("v_GAMBPS_ValidCR")
+		If ValidCRView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidCR"" sur la base de paramétrage !"
+		
+		' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+		ForAll strTemp1 In pDocument.GAMBPS_Pays
+			' Document "Contrôle rentabilité" (en théorie, un seul document de ce type existe)
+			Set ValidCRDocument = ValidCRView.GetDocumentbykey(strTemp1, True)
+			If ValidCRDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Contrôle rentabilité"" !"
+			
+			' Correspondant Contrôle rentabilité
+			Set TempItem = ValidCRDocument.GetFirstItem("GAMBPS_ValidCR_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidCR_Name"" !"
+			
+			' Lecteurs: ajout des valideurs
+			Call iLect.AppendToTextList(TempItem.Values)
+			
+			' Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(UCase(ValidCRDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidCRDocument.GAMBPS_ValidCR_Name, Null, "ADD2")
+				
+				'Ajout pour la vue ce que j'ai recu
+				Call AddNotifiedReaders(pDocument, ValidCRDocument.GAMBPS_ValidCR_Name)	
+			ElseIf Trim(UCase(ValidCRDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidCRDocument.GAMBPS_ValidCR_Balfon(0), Null, "ADD2")
+				
+				'Ajout pour la vue ce que j'ai recu
+				Call AddNotifiedReaders(pDocument, ValidCRDocument.GAMBPS_ValidCR_Balfon(0))	
+			End If
+		End ForAll
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		'Ouverture de la vue contenant le document "Chef produit DPMX"
+		Set ValidDPMXView = ParamDB.GetView("v_GAMBPS_ValidDPMX")
+		If ValidDPMXView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidDPMX"" sur la base de paramétrage !"
+		
+		'Document "Chef produit DPMX" (en théorie, un seul document de ce type existe)
+		Set ValidDPMXDocument = ValidDPMXView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+		If ValidDPMXDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef produit DPMX"" !"
+		
+		'Correspondant Chef produit DPMX
+		Set TempItem = ValidDPMXDocument.GetFirstItem("GAMBPS_ValidDPMX_Name")
+		If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidDPMX_Name"" !"
+		
+		'Lecteurs: ajout des valideurs
+		Call iLect.AppendToTextList(TempItem.Values)
+		
+		'Envoi du mail (BAL nominative ou fonctionnelle)
+		If Trim(UCase(ValidDPMXDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Name, Null, "ADD2")
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Name)
+		ElseIf Trim(UCase(ValidDPMXDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Balfon(0), Null, "ADD2")
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Balfon(0))
+		End If
+		
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	'E6:
+	ElseIf (CurrentStep = 6) Then
+		'////////////////////////////////////////////////////////////
+		'CHEF DE MARCHE
+		'////////////////////////////////////////////////////////////
+		Dim strKey As String
+		
+		'Ouverture de la vue contenant le document "Chef de Marche"
+		Set ValidMarcheView = ParamDB.GetView("v_GAMBPS_ValidMarche_Lookup_ByKey")
+		If ValidMarcheView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidMarche_Lookup_ByKey"" sur la base de paramétrage !"
+		
+		' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+		ForAll strTemp1 In pDocument.GAMBPS_Pays
+			strKey = pDocument.GAMBPS_Marque(0) + "-" + strTemp1
+
+			' Document "Chef de Marché" (en théorie, un seul document de ce type existe)
+			Set ValidMarcheDocument = ValidMarcheView.GetDocumentbykey(strKey, True)
+			If ValidMarcheDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de Marche"" !"
+			
+			' Responsable de pays en auteur
+			' Correspondant Chef de marché
+			Set TempItem = ValidMarcheDocument.GetFirstItem("GAMBPS_ValidMarche_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidMarche_Name"" !"
+
+			'Lecteurs: ajout des valideurs
+			Call iLect.AppendToTextList(TempItem.Values)
+			
+			' Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Name, Null, "OK")
+				'Ajout pour la vue ce que j'ai recu
+				Call AddNotifiedReaders(pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Name)	
+			ElseIf Trim(UCase(ValidMarcheDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Balfon(0), Null, "OK")
+				'Ajout pour la vue ce que j'ai recu
+				Call AddNotifiedReaders(pDocument, ValidMarcheDocument.GAMBPS_ValidMarche_Balfon(0))
+			End If
+			
+		End ForAll
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		'////////////////////////////////////////////////////////////
+		'CHEF DE ZONE
+		'////////////////////////////////////////////////////////////
+		'Ouverture de la vue contenant le document "Chef de zone"
+		Set ValidCZoneView = ParamDB.GetView("v_GAMBPS_ValidCZone")
+		If ValidCZoneView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidCZone"" sur la base de paramétrage !"
+		
+		' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+		ForAll strTemp1 In pDocument.GAMBPS_Pays
+			'Document "Chef de zone" (en théorie, un seul document de ce type existe)
+			Set ValidCZoneDocument = ValidCZoneView.GetDocumentbykey(strTemp1, True)
+			If ValidCZoneDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef de zone"" !"
+			
+			'Correspondant Chef de zone
+			Set TempItem = ValidCZoneDocument.GetFirstItem("GAMBPS_ValidCZone_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidCZone_Name"" !"
+			
+			'Envoi du mail (Sauf si Demandeur = Chef de Zone)
+			If TempItem.text &lt;&gt; Demandeur.Canonical Then
+				'Lecteurs: ajout des valideurs
+				Call iLect.AppendToTextList(TempItem.Values)
+				
+				'Envoi du mail (BAL nominative ou fonctionnelle)
+				If Trim(UCase(ValidCZoneDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Name, Null, "OK")
+					'Ajout pour la vue ce que j'ai recu
+					Call AddNotifiedReaders(pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Name)	
+				ElseIf Trim(UCase(ValidCZoneDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+					Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Balfon(0), Null, "OK")
+					'Ajout pour la vue ce que j'ai recu
+					Call AddNotifiedReaders(pDocument, ValidCZoneDocument.GAMBPS_ValidCZone_Balfon(0))	
+				End If	
+			End If	
+		End ForAll
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		'////////////////////////////////////////////////////////////
+		'DPMX
+		'////////////////////////////////////////////////////////////
+		'Ouverture de la vue contenant le document "Chef produit DPMX"
+		Set ValidDPMXView = ParamDB.GetView("v_GAMBPS_ValidDPMX")
+		If ValidDPMXView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidDPMX"" sur la base de paramétrage !"
+		
+		'Document "Chef produit DPMX" (en théorie, un seul document de ce type existe)
+		Set ValidDPMXDocument = ValidDPMXView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+		If ValidDPMXDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Chef produit DPMX"" !"
+		
+		'Correspondant Chef produit DPMX
+		Set TempItem = ValidDPMXDocument.GetFirstItem("GAMBPS_ValidDPMX_Name")
+		If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidDPMX_Name"" !"
+		
+		'Lecteurs: ajout des valideurs
+		Call iLect.AppendToTextList(TempItem.Values)
+		
+		'Envoi du mail (BAL nominative ou fonctionnelle)
+		If Trim(Ucase(ValidDPMXDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Name, Null, "OK")
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Name)
+		ElseIf Trim(Ucase(ValidDPMXDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Balfon(0), Null, "OK")
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, ValidDPMXDocument.GAMBPS_ValidDPMX_Balfon(0))
+		End If
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		'////////////////////////////////////////////////////////////
+		'PDST
+		'////////////////////////////////////////////////////////////
+		'Ouverture de la vue contenant le document "PDST"
+		Set ValidPDSTView = ParamDB.GetView("v_GAMBPS_ValidPDST")
+		If ValidPDSTView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidPDST"" sur la base de paramétrage !"
+		
+		'Document "PDST" (en théorie, un seul document de ce type existe)
+		Set ValidPDSTDocument = ValidPDSTView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+		If ValidPDSTDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""PDST"" !"
+		
+		'Correspondant PDST
+		Set TempItem = ValidPDSTDocument.GetFirstItem("GAMBPS_ValidPDST_Name")
+		If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidPDST_Name"" !"
+		
+		'Lecteurs: ajout des valideurs
+		Call iLect.AppendToTextList(TempItem.Values)
+		
+		'Envoi du mail (BAL nominative ou fonctionnelle)
+		If Trim(Ucase(ValidPDSTDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Name, Null, "OK")
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Name)
+		ElseIf Trim(Ucase(ValidPDSTDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Balfon(0), Null, "OK")
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, ValidPDSTDocument.GAMBPS_ValidPDST_Balfon(0))
+		End If
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		'////////////////////////////////////////////////////////////
+		'FRISCO
+		'////////////////////////////////////////////////////////////
+		'Ouverture de la vue contenant le document "l'approvisionnement"
+		Set ValidAPView = ParamDB.GetView("v_GAMBPS_ValidAP")
+		If ValidAPView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidAP"" sur la base de paramétrage !"
+		
+		'Document "l'approvisionnement" (en théorie, un seul document de ce type existe)
+		Set ValidAPDocument = ValidAPView.GetDocumentbykey(pDocument.GAMBPS_Vehicule(0), True)
+		If ValidAPDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""l'approvisionnement"" !"
+		
+		'Correspondant l'approvisionnement
+		Set TempItem = ValidAPDocument.GetFirstItem("GAMBPS_ValidAP_Name")
+		If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidAP_Name"" !"
+		
+		'Lecteurs: ajout des valideurs
+		Call iLect.AppendToTextList(TempItem.Values)
+		
+		'Envoi du mail (BAL nominative ou fonctionnelle)
+		If Trim(Ucase(ValidAPDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidAPDocument.GAMBPS_ValidAP_Name, Null, "OK")
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, ValidAPDocument.GAMBPS_ValidAP_Name)
+		ElseIf Trim(Ucase(ValidAPDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidAPDocument.GAMBPS_ValidAP_Balfon(0), Null, "OK")
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, ValidAPDocument.GAMBPS_ValidAP_Balfon(0))
+		End If
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		'////////////////////////////////////////////////////////////
+		'RAPAZ
+		'////////////////////////////////////////////////////////////
+		'Ouverture de la vue contenant le document "RAPAZ"
+		Set ValidRAPAZView = ParamDB.GetView("v_GAMBPS_ValidRAPAZ")
+		If ValidRAPAZView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_ValidRAPAZ"" sur la base de paramétrage !"
+		
+		' Boucle sur les pays/bâtiments sélectionnés par le demandeur
+		ForAll strTemp1 In pDocument.GAMBPS_Pays
+			'Document "RAPAZ" (en théorie, un seul document de ce type existe)
+			Set ValidRAPAZDocument = ValidRAPAZView.GetDocumentbykey(strTemp1, True)
+			If ValidRAPAZDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage ""Resp. Appro Pays OU Assistant Zone (RAPAZ)"" !"
+			
+			'Correspondant RAPAZ
+			Set TempItem = ValidRAPAZDocument.GetFirstItem("GAMBPS_ValidRAPAZ_Name")
+			If TempItem Is Nothing Then Error lsERR_NOTES_ITEM_MISSING, "Impossible de trouver le champ de paramétrage ""GAMBPS_ValidRAPAZ_Name"" !"
+			
+			'Lecteurs: ajout des valideurs
+			Call iLect.AppendToTextList(TempItem.Values)
+			
+			'Envoi du mail (BAL nominative ou fonctionnelle)
+			If Trim(UCase(ValidRAPAZDocument.GAMBPS_SendMail(0))) = "BALNOM" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidRAPAZDocument.GAMBPS_ValidRAPAZ_Name, Null, "OK")
+				'Ajout pour la vue ce que j'ai recu
+				Call AddNotifiedReaders(pDocument, ValidRAPAZDocument.GAMBPS_ValidRAPAZ_Name)
+			ElseIf Trim(UCase(ValidRAPAZDocument.GAMBPS_SendMail(0))) = "BALFON" Then
+				Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, ValidRAPAZDocument.GAMBPS_ValidRAPAZ_Balfon(0), Null, "OK")
+				'Ajout pour la vue ce que j'ai recu
+				Call AddNotifiedReaders(pDocument, ValidRAPAZDocument.GAMBPS_ValidRAPAZ_Balfon(0))
+			End If
+		End ForAll
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		'////////////////////////////////////////////////////////////
+		'DEMANDEUR
+		'////////////////////////////////////////////////////////////
+		' Envoi du mail (Demandeur)
+		Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, Demandeur.Canonical, Null, "OK")
+		'Ajout pour la vue ce que j'ai recu
+		Call AddNotifiedReaders(pDocument, Demandeur.Canonical)
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		'////////////////////////////////////////////////////////////
+		'Autre Personne habilitée
+		'////////////////////////////////////////////////////////////
+		If (pDocument.GAMBPS_Autre_per_hab(0) &lt;&gt; "" ) Then
+			Set AutrePersonneHab = New NotesName(pDocument.GAMBPS_Autre_per_hab(0))
+			
+			' Envoi du mail (Autre Personne habilitée)
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, AutrePersonneHab.Canonical, Null, "OK")
+			'Ajout pour la vue ce que j'ai recu
+			Call AddNotifiedReaders(pDocument, AutrePersonneHab.Canonical)
+		End if
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+	End If
+	
+	pDocument.f_LecteursPotentiels = Evaluate(|@Sort(@Unique(@Trim(f_LecteursPotentiels)))|, pDocument)
+	
+	Exit Sub
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 															GESTION D'ERREUR
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType		= LOGLEVEL_EMERG%
+		LogEntry.SubName		= "GAMBPS_NotifDocument"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:GAMBPS_ComplementerDocument:1:8
+Sub GAMBPS_ComplementerDocument(pDB As NotesDatabase, pFormParamsDocument As NotesDocument, pProfileDocument As NotesDocument, pDocument As NotesDocument, pUserName As NotesName)
+	' Gestion d'erreurs	
+	On Error Goto ErrorHandler
+	
+	Dim CurrentStep As Integer
+	' Construction du demandeur	
+	Dim Demandeur As NotesName
+	Set Demandeur = New NotesName(pDocument.f_Demandeur(0))
+	
+	' Autre Personne habilitée
+	Dim AutrePersonneHab As NotesName
+	Dim iAutre As NotesItem
+	
+	' Etat de la demande	
+	CurrentStep = Cint(pDocument.f_Etat(0))
+	
+	If pDocument.f_TypeEtat(0) = "Intermediaire" Then
+		' Historique
+		Call AddHistLine(pDocument, "l_GAMBPS_Histo_E96", pUserName.Abbreviated)
+		
+		' Correspondant Demandeur
+		Call pDocument.ReplaceItemValue("f_AuteursPotentiels", Demandeur.Canonical)
+		
+		' Correspondant Autre Personne habilitée		
+		If (pDocument.GAMBPS_Autre_per_hab(0) &lt;&gt; "" ) Then
+			Set AutrePersonneHab = New NotesName(pDocument.GAMBPS_Autre_per_hab(0))
+			Set iAutre = pDocument.GetFirstItem("f_AuteursPotentiels")
+			Call iAutre.AppendToTextList(AutrePersonneHab.Canonical)
+			
+			' Envoi du mail (Autre Personne habilitée)
+			Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, AutrePersonneHab.Canonical, Null, "ADD3")
+		End If
+				
+		' Changement d'état, etat 96
+		Call ChangeState(pDocument, pFormParamsDocument, 96, "Intermediaire")
+		' Dispaching des acteurs (groupes ou individus)
+		Call DispatchActors(pDocument)
+		
+		pDocument.A_Complementer = "O"
+		Call pDocument.ReplaceItemValue("Forms_E" + Cstr(CurrentStep) + "_Avis", "")
+		
+		' Envoi du mail (Demandeur)
+		Call SendPresetMail(pDB, pFormParamsDocument, pProfileDocument, pDocument, Demandeur.Canonical, Null, "ADD3")	
+		Call pDocument.ReplaceItemValue("Forms_LastValidSendTo", pDocument.f_Demandeur(0))
+	End If
+	
+	Exit Sub
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 															GESTION D'ERREUR
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ErrorHandler:
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType		= LOGLEVEL_EMERG%
+		LogEntry.SubName		= "GAMBPS_StepUpDocument"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:CalculeNumeroOrdre:1:8
+Function CalculeNumeroOrdre(nOrdre As Long) As String
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	If (nOrdre&lt;10)Then
+		CalculeNumeroOrdre = "000000" + Cstr(nOrdre)			
+	Elseif (nOrdre&lt;100)Then		
+		CalculeNumeroOrdre = "00000" + Cstr(nOrdre)	
+	Elseif (nOrdre&lt;1000)Then		
+		CalculeNumeroOrdre = "0000" + Cstr(nOrdre)	
+	Elseif (nOrdre&lt;10000)Then		
+		CalculeNumeroOrdre = "000" + Cstr(nOrdre)	
+	Elseif (nOrdre&lt;100000)Then		
+		CalculeNumeroOrdre = "00" + Cstr(nOrdre)	
+	Elseif (nOrdre&lt;1000000)Then		
+		CalculeNumeroOrdre = "0" + Cstr(nOrdre)	
+	Elseif (nOrdre&lt;10000000)Then		
+		CalculeNumeroOrdre = Cstr(nOrdre)			
+	Else
+		CalculeNumeroOrdre = ""
+	End If
+	
+	Exit Function
+	
+	
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 											Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.SubName		= "CalculeNumeroOrdre"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	Exit Function
+	
+	
+End Function
+
+'++LotusScript Development Environment:2:2:InitializeImport:1:8
+Sub InitializeImport( Database As notesDatabase, ProfileDocument As NotesDocument, ContextDocument As notesdocument, Process As Process)
+%REM		Created by N. Laurenzano - 16.09.2010 - FMR-602
+Gets the imported CSV file and loops through all its lines.
+For each valid line calls the InitializeDocument sub, to make the proper changes to the workflow.
+	- A valid line has a value in column 66 (BN) that is either "SUCCÈS" or "ECHEC".
+	- A second validation is that the Reference number in colunm 5 (E) must correspond to a document of type GAMBPS with status equal to 6.
+%END REM
+	
+	' Gestion d'erreurs	
+	On Error Goto ErrorHandler
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 										INITIALISATION
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Vue des documents à importer
+	Dim view As NotesView
+	Set view = Database.GetView("v_GAMBPS_Lookup_ByNumber")
+	If view Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_GAMBPS_Lookup_ByNumber"""
+	
+	Dim docParamProfileDocument As NotesDocument
+	Dim TempDocument As NotesDocument
+	Dim TempItem As NotesItem
+	
+	Dim AttachmentNames As Variant
+	Dim AttachmentItem As NotesEmbeddedObject
+	
+	Dim FileName As String
+	Dim FileNum As Integer
+	Dim LineStr As String
+	Dim TempVar As Variant
+	Dim TempName As NotesName
+	Dim i As Integer
+	Dim strReference, strAction, strComment As String
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 										TRAITEMENT
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	
+	' On récupère la liste des pièces jointes
+	AttachmentNames = Evaluate(|@AttachmentNames|, ContextDocument)
+	
+	' On boucle sur les pièces jointes
+	Forall AttachmentName In AttachmentNames
+		
+		' On récupère la pièce jointe
+		Set AttachmentItem = ContextDocument.GetAttachment(Cstr(AttachmentName))
+		If Not AttachmentItem Is Nothing Then
+			
+			' On extrait la pièce jointe dans le dossier temporaire
+			
+			' Base de paramétrage
+			Dim ParamDB As New NotesDatabase(ProfileDocument.f_Serveur_Parametre(0), ProfileDocument.f_Path_Parametre(0))
+			If Not ParamDB.IsOpen Then Error lsERR_NOTES_DBOPEN_FAILED, "Impossible d'ouvrir la base """ + ProfileDocument.f_Path_Parametre(0) + """ sur le serveur """ + ProfileDocument.f_Serveur_Parametre(0) + """ !"
+			
+			Set docParamProfileDocument = ParamDB.GetProfileDocument("m_ProfileParam")
+			If docParamProfileDocument Is Nothing Then Error lsERR_NOTES_NOSUCH_PROFILE, "Impossible d'ouvrir le document de profil de la base """ + ProfileDocument.f_Path_Parametre(0) + """ sur le serveur """ + ProfileDocument.f_Serveur_Parametre(0) + """ !"
+			
+			
+'			FileName = "/usersdev/fmr00/agent" + "/" + AttachmentItem.Source
+			FileName = docParamProfileDocument.Forms_TempDir(0) + "/" + AttachmentItem.Source
+			Call AttachmentItem.ExtractFile(FileName)
+			
+			' Ouverture du fichier
+			FileNum = Freefile
+			Open FileName For Input As FileNum
+			
+			' Si le fichier contient une ligne d'entête, on la lit (juste pour déplacer le pointeur de fichier à la ligne suivante)
+	'		If Trim(Ucase(ContextDocument.UIImportDialog_Header(0))) = "Y" Then
+			' This type of form always has a header in the .csv file
+			Line Input #FileNum%, LineStr
+	'		End If
+			
+			Call view.Refresh
+			view.AutoUpdate = False
+			
+			' Lecture du fichier ligne par ligne
+			Do While Not Eof(FileNum%)
+				' Récupération d'une ligne
+				Line Input #FileNum%, LineStr
+				
+				' On découpe la ligne
+				TempVar = Split(LineStr, ";")
+				
+				' On doit avoir 66 éléments
+				If (Ubound(TempVar) &gt;= 65) Then
+					strReference = Ucase(Trim(TempVar(4)))
+					' If there is no reference number, the line is not processed
+					If strReference &lt;&gt; "" Then
+						' Si besoin, on vérifie que le code n'existe pas pour ne pas l'écraser
+						Set TempDocument = view.GetDocumentByKey(strReference, True)	' Column 5 = Reference
+						
+						' If the document is not found, the line is not processed
+						If Not TempDocument Is Nothing Then
+							'If the document status is not "Waiting for Mise à jour BPS verification" and the form is not of GAMBPS type, the line is not processed
+							If (TempDocument.GetItemValue("f_Etat")(0) = 6 And TempDocument.GetItemValue("f_TypeForm")(0) = "GAMBPS") Then
+								strAction = Ucase(Trim(TempVar(65)))
+							
+								If (strAction &lt;&gt; "") And (strAction = "SUCCÈS" Or strAction = "ECHEC") Then
+									TempDocument.Forms_E6_DateApprob = Now
+							
+									' Checks the column with the comments
+									If (Ubound(TempVar) &gt;= 66) Then
+										strComment = TempVar(66)
+									Else
+										strComment = ""
+									End If
+									
+									If strAction = "SUCCÈS" Then
+										TempDocument.f_ActionAFaire = "soumettre"
+										TempDocument.Forms_E6_Avis = "1"
+										TempDocument.Forms_E6_Comments = strComment
+									Elseif strAction = "ECHEC" Then
+										TempDocument.f_ActionAFaire = "refuser"
+										TempDocument.Forms_E6_Avis = "0"
+										
+										If Trim(strComment) = "" Then
+											TempDocument.Forms_E6_Comments = "LA DEMANDE N'A PAS PU ETRE TRAITEE EN BPS"
+										Else
+											TempDocument.Forms_E6_Comments = strComment
+										End If
+									End If
+									
+									Call InitializeDocument( Database, ProfileDocument, TempDocument, ContextDocument, Process )
+								End If
+								
+							End If		' (TempDocument.GetItemValue("f_Etat")(0) = 6 And TempDocument.GetItemValue("f_TypeForm")(0) = "GAMBPS")
+						End If	' Not TempDocument Is Nothing
+					End If		' strReference &lt;&gt; ""
+				End If			' (Ubound(TempVar) &gt;= 65)
+				
+			Loop
+			
+			' Fermeture et suppression du fichier
+			Close FileNum
+			Kill FileName
+			
+		End If
+		
+	End Forall	
+	
+	
+	' Redirection
+	Print "&lt;script&gt;"
+	Print "var url = window.location.href;"
+	Print "window.location.href = url.substring(0,(url.lastIndexOf('.nsf')+5)) + 'v_GAMBPS_Suivre?OpenView'"
+	Print "&lt;/script&gt;"
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 										GESTION D'ERREURS
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+ErrorHandler:
+	
+	Dim LogEntry As New LogEntry
+	
+	' Erreur propagée
+	If (Err = ERROR_PROPAGATE%) Then
+		
+		' On charge les valeurs depuis le message d'erreur
+		LogEntry.FromString(Error$)
+		
+	Else
+		
+		' On log l'erreur
+		LogEntry.LogType			= LOGLEVEL_EMERG
+		LogEntry.SubName		= "InitializeImport"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+	End If
+	
+	' Fermeture et suppression du fichier
+	Close FileNum
+	Kill FileName
+	
+	LogEntry.Component = "GAMBPS"
+	Call LogEntry.Save(ProfileDocument.f_Serveur_Log(0), ProfileDocument.f_Path_Log(0))
+	
+	Print "Une ou plusieurs erreurs critiques se sont produites !&lt;br&gt;Les erreurs ont été loguées.";
+	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:InitializeDocument:1:8
+Sub InitializeDocument( CurrentDB As notesDatabase, ProfileDocument As NotesDocument, CurrentDoc As NotesDocument, ContextDoc As NotesDocument, Process As Process)
+%REM		Created by N. Laurenzano - 16.09.2010 - FMR-602
+Manages the workflow changes for a single document.
+This code was originally in the Initialize sub, but was moved here so the agent could be
+used for manually submitting a single document and for making status changes based on an imported CSV file.
+%END REM
+	
+	Dim CurrentUser As NotesName
+	Dim CurrentLng As String
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	Set CurrentUser = New NotesName(ContextDoc.Remote_User(0))
+	
+	
+	CurrentLng = CurrentDoc.f_lng(0)
+	
+	' Processus de traitement
+	Process.Status = PROCESSSTATUS_SUCCESS%
+	
+	' Vue des documents de paramétrage
+	Dim ParamsView As NotesView
+	Set ParamsView = CurrentDB.GetView("v_FormsParams")
+	If ParamsView Is Nothing Then Error lsERR_NOTES_VIEWOPEN_FAILED, "Impossible d'ouvrir la vue ""v_FormsParams"" !"
+	
+	' Document de paramétrage pour le type du formulaire
+	Dim ParamsDocument As NotesDocument
+	Set ParamsDocument = ParamsView.GetDocumentbyKey(Trim(Ucase(CurrentDoc.f_TypeForm(0))))
+	If ParamsDocument Is Nothing Then Error lsERR_NOTES_DOC_NOTINVIEW, "Impossible d'ouvrir le document de paramétrage du formulaire """ + Trim(Ucase(CurrentDoc.f_TypeForm(0))) + """ !"
+	
+	
+	Dim TempItem As NotesItem
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																TRAITEMENT
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *	
+	
+	' Soumettre/Confirmer
+	If Trim(Lcase(CurrentDoc.f_ActionAFaire(0))) = "soumettre" Then
+		Process.Action = PROCESSACTION_SUBMIT%
+		Call GAMBPS_StepUpDocument(CurrentDB, ParamsDocument, ProfileDocument, CurrentDoc, CurrentUser)
+		
+	' Refuser
+	Elseif Trim(Lcase(CurrentDoc.f_ActionAFaire(0))) = "refuser" Then
+		Process.Action = PROCESSACTION_DENY%
+		Call GAMBPS_DenyDocument(CurrentDB, ParamsDocument, ProfileDocument, CurrentDoc, CurrentUser)
+		
+		
+	' Annuler
+	Elseif Trim(Lcase(CurrentDoc.f_ActionAFaire(0))) = "annuler" Then
+		Process.Action = PROCESSACTION_CANCEL%
+		Call GAMBPS_CancelDocument(CurrentDB, ParamsDocument, ProfileDocument, CurrentDoc, CurrentUser)		
+		
+		
+	' Sauvegarde modèle
+	Elseif Trim(Lcase(CurrentDoc.f_ActionAFaire(0))) = "saveasmodel" Then
+		Process.Action= PROCESSACTION_MODEL%
+		
+		' Si c'est un modèle déjà existant, on le sauvegarde
+		If Cstr(CurrentDoc.f_EstModele(0)) = "1" Then
+			Call SaveModel(CurrentDoc, CurrentUser)
+			
+		' Sinon, on vérifie que l'utilisateur peut sauver un nouveau modèle
+		Elseif (CanUserSaveNewModel(CurrentDB, CurrentUser, CurrentDoc.f_TypeForm(0)))Then
+			Call SaveModel(CurrentDoc, CurrentUser)
+			
+		' Sinon, on affiche le message "Vous ne pouvez pas enregistrer de nouveau modèle"			
+		Else
+			Process.Status = PROCESSSTATUS_FORBIDDEN%
+		End If
+		
+		
+	' Sauvegarde brouillon
+	Elseif Trim(Lcase(CurrentDoc.f_ActionAFaire(0))) = "saveasdraft" Then
+		Process.Action= PROCESSACTION_DRAFT%
+		
+		' Si c'est un brouillon déjà existant, on le sauvegarde
+		If Cstr(CurrentDoc.f_EstBrouillon(0)) = "1" Then
+			Call SaveDraft(CurrentDoc, CurrentUser)
+			
+		' Sinon, on vérifie que l'utilisateur peut sauver un nouveau brouillon
+		Elseif (CanUserSaveNewDraft(CurrentDB, CurrentUser, CurrentDoc.f_TypeForm(0)))Then
+			Call SaveDraft(CurrentDoc, CurrentUser)
+			
+		' Sinon, on affiche le message "Vous ne pouvez pas enregistrer de nouveau brouillon"			
+		Else
+			Process.Status = PROCESSSTATUS_FORBIDDEN%
+		End If
+		
+	' A complémenter
+	Elseif Trim(Lcase(CurrentDoc.f_ActionAFaire(0))) = "complementer" Then		
+		Process.Action = PROCESSACTION_SUBMIT%
+		Call GAMBPS_ComplementerDocument(CurrentDB, ParamsDocument, ProfileDocument, CurrentDoc, CurrentUser)		
+		
+	End If
+	
+	
+	' On marque le document comme formulaire valide/non temporaire.
+	CurrentDoc.Forms_TempDocument = "0"
+	
+	' On enregistre le document
+	' /!\ l'utilisateur éxécutant l'agent est toujours auteur sur le document de contexte.
+	' Mais quand on passe un document en paramètre (dans les sous-procédures de cet agent), et donc par valeur, 
+	' les seuls auteurs sont définis dans les champs auteurs...
+	Call CurrentDoc.Save(True, False)
+	
+	
+	' On affiche le résultat
+	Process.DocumentID = CurrentDoc.UniversalID
+	'Call Process.DisplayStatus()
+	
+	Exit Sub
+	
+		' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 														GESTION D'ERREURS
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *	
+ErrorHandler:
+	
+	Dim LogEntry As New LogEntry
+	
+	' Erreur propagée
+	If (Err = ERROR_PROPAGATE%) Then
+		
+		' On charge les valeurs depuis le message d'erreur
+		LogEntry.FromString(Error$)
+		
+		
+	' Autres erreurs
+	Else
+		
+		' On log l'erreur
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.SubName		= "InitializeDocument"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+	End If
+	
+	LogEntry.Component = "GAMBPS"
+	
+	' Si l'erreur n'a pas déjà été loggée (répétition de l'erreur)
+	If Not Process.IsErrLogged(LogEntry) Then
+		
+		Call LogEntry.Save(ProfileDocument.f_Serveur_Log(0), ProfileDocument.f_Path_Log(0))
+		
+		' On ajoute l'erreur à la liste
+		Call Process.AddLogEntry(LogEntry)
+		
+	End If
+	
+	' Warning, on continue
+	If Not LogEntry.IsFatal Then
+		Resume Next
+		
+	' Sinon, on affiche le résultat
+	Else
+'		Call Process.DisplayStatus()
+		
+	End If
+	
+	Exit Sub
+	
+End Sub<break/></text></item>
+<item name='$AssistAction_Ex' sign='true'>
+<rawitemdata type='14'>
+gQKF/xbOAAAAAArOAAABAAACTFNPQgQAFAhmcgAABADhAfpFAgBAB+g1CEg8AAAAnATUAGQsyDUA
+ACwAkAAgAEAAAABYAVwAAAAAAAAAGQAAACwAGC1oGSgqaBIYLTwHiBssAGgqQBzIKuAW4BYwEDAQ
+PAD4LMghiCoIFqgqAAAAAMAUwBRAG2AiCQAAAFggsC04IzgjsC2wLQAAAAAAJgAmMCUwJbgkuCQA
+AAAAYCtgKwAAAAAAAAAA/Cr8KgAAAABYIEwtDQAAAOAAZCywATQeAAAAAGQsZCzUK9QrdAIQBuQj
+5CMAAAAAVAhUCAAAAAAAAAAA4ACsC4AF9AkIGAgYAgAAAGADuAQAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAC4BLgEAAAAAAAAAAAAAAAAAAAAAAAAAABgA2ADAQAFAExvdHVzIFByb2R1Y3QAAABWMC4w
+AAAAAAAAAAAAAAAAAAAAAAIAAAD6RQAAAAAAAOg1AAAISAAAAAAAAAAAAAABAAAAAAAAAAEAAAAA
+AAAAAQAAAAAAAAAAAAAADAAAAFczMkkkAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAIAAgAAAAAAAhIAAADAPwPAAAAAKwADQAkAEEAUwBTAEkAUwBUAEEA
+QwBUAEkATwBOAAAAdAADAE4ARQBXAAAAiAAGAEQARQBMAEUAVABFAAAAAAAsAQoASQBOAEkAVABJ
+AEEATABJAFoARQAAAAAA9AAJAFQARQBSAE0ASQBOAEEAVABFAAAAIAEGAE8AQgBKAEUAQwBUAAAA
+AADIAAAAAAAAAIABCgBGAG8AcgBtAHMAXwBMAGkAYgBzAAAAAACwAQoARgBPAFIATQBTAF8ATABJ
+AEIAUwAAAAAAbAITAEYAbwByAG0AcwBfAEMAbABhAHMAcwBfAFAAcgBvAGMAZQBzAHMAAAAAAhMA
+RgBPAFIATQBTAF8AQwBMAEEAUwBTAF8AUABSAE8AQwBFAFMAUwAAANwBAwBQAEQAQgAAABgDEwBQ
+AEYATwBSAE0AUABBAFIAQQBNAFMARABPAEMAVQBNAEUATgBUAAAAJAIQAFAAUABSAE8ARgBJAEwA
+RQBEAE8AQwBVAE0ARQBOAFQAAAAAAJgBCQBQAEQATwBDAFUATQBFAE4AVAAAANQCCQBQAFUAUwBF
+AFIATgBBAE0ARQAAAMQBBgBOAE8AUgBEAFIARQAAAAAAkAMIAEQAQQBUAEEAQgBBAFMARQAAAAAA
+UAIPAFAAUgBPAEYASQBMAEUARABPAEMAVQBNAEUATgBUAAAALAMPAEMATwBOAFQARQBYAFQARABP
+AEMAVQBNAEUATgBUAAAAOAIHAFAAUgBPAEMARQBTAFMAAACIAgkAQwBVAFIAUgBFAE4AVABEAEIA
+AAAEBAoAQwBVAFIAUgBFAE4AVABEAE8AQwAAAAAAQAQKAEMATwBOAFQARQBYAFQARABPAEMAAAAA
+ALQCEgBBAFAAUABSAE8AVgBFAFIARQBKAEUAQwBUAF8ARgBJAEwARQAAAAAA+AIMAEUAUgBSAE8A
+UgBIAEEATgBEAEwARQBSAAAAAADgAw4AQwBVAFIAUgBFAE4AVABTAEUAUwBTAEkATwBOAAAAAACc
+BAwATgBPAFQARQBTAFMARQBTAFMASQBPAE4AAAAAADwFBgAlAEwAUwBYAEIARQAAAAAATAMNAE4A
+TwBUAEUAUwBEAE8AQwBVAE0ARQBOAFQAAABsAw0ATgBPAFQARQBTAEQAQQBUAEEAQgBBAFMARQAA
+ALQDDwBEAE8AQwBVAE0ARQBOAFQAQwBPAE4AVABFAFgAVAAAANwGDwBDAFUAUgBSAEUATgBUAEQA
+QQBUAEEAQgBBAFMARQAAAOgFEgBHAEUAVABQAFIATwBGAEkATABFAEQATwBDAFUATQBFAE4AVAAA
+AAAAAAYOAG0AXwBQAHIAbwBmAGkAbABlAFAAYQByAGEAbQAAAAAAuAQaAEwAUwBFAFIAUgBfAE4A
+TwBUAEUAUwBfAE4ATwBTAFUAQwBIAF8AUABSAE8ARgBJAEwARQAAAAAAnAUrAEkAbQBwAG8AcwBz
+AGkAYgBsAGUAIABkACcAbwB1AHYAcgBpAHIAIABsAGUAIABkAG8AYwB1AG0AZQBuAHQAIABkAGUA
+IABwAHIAbwBmAGkAbAAgACEAAAAYBwoASQBTAFIARQBTAFAATwBOAFMARQAAAAAA5AQSAEUAUgBS
+AE8AUgBfAFMAQQBWAEUAQwBPAE4ARgBMAEkAQwBUAAAAAAAcBRgAQwBvAG4AZgBsAGkAdAAgAGQA
+JwBlAG4AcgBlAGcAaQBzAHQAcgBlAG0AZQBuAHQAAAAAAEwFDABHAEUAVABJAFQARQBNAFYAQQBM
+AFUARQAAAAAAyAUEAEYAbwByAG0AAAAAAHQFEABtAF8AVQBJAEkAbQBwAG8AcgB0AEQAaQBhAGwA
+bwBnAAAAAAAsBxAASQBOAEkAVABJAEEATABJAFoARQBJAE0AUABPAFIAVAAAAAAA9AYSAEkATgBJ
+AFQASQBBAEwASQBaAEUARABPAEMAVQBNAEUATgBUAAAAAACIBg0ARABJAFMAUABMAEEAWQBTAFQA
+QQBUAFUAUwAAABwGCABMAE8ARwBFAE4AVABSAFkAAAAAAPQHCgBOAE8AVABFAFMAQQBHAEUATgBU
+AAAAAAA0BgkATgBPAFQARQBTAE4AQQBNAEUAAABYBg8ARQBSAFIATwBSAF8AUABSAE8AUABBAEcA
+QQBUAEUAAAB0BgoARgBSAE8ATQBTAFQAUgBJAE4ARwAAAAAArAYHAEwATwBHAFQAWQBQAEUAAADA
+Bg4ATABPAEcATABFAFYARQBMAF8ARQBNAEUAUgBHAAAAAADoBgcAUwBVAEIATgBBAE0ARQAAAEgH
+CgBJAG4AaQB0AGkAYQBsAGkAegBlAAAAAACICAMARQBSAEwAAACUBwMARQBSAFIAAAAABwMATQBT
+AEcAAAB4BwkAQwBPAE0AUABPAE4ARQBOAFQAAABYBwYARwBBAE0AQgBQAFMAAAAAALAHCwBJAFMA
+RQBSAFIATABPAEcARwBFAEQAAADEBwQAUwBBAFYARQAAAAAA4AkNAEYAXwBTAEUAUgBWAEUAVQBS
+AF8ATABPAEcAAABcCAoARgBfAFAAQQBUAEgAXwBMAE8ARwAAAAAApAgLAEEARABEAEwATwBHAEUA
+TgBUAFIAWQAAAAgIBwBJAFMARgBBAFQAQQBMAAAAPAgVAEcAQQBNAEIAUABTAF8AUwBUAEUAUABV
+AFAARABPAEMAVQBNAEUATgBUAAAAFAgHAEYATwBSAE0AVQBMAEUAAABwCAMAUgBFAFMAAAAoCAYA
+UwBUAFIASwBFAFkAAAAAANgIBgBEAFQAVABFAE0AUAAAAAAAfAoNAE4ATwBUAEUAUwBEAEEAVABF
+AFQASQBNAEUAAABYCwcAUwBUAFIAVABFAE0AUAAAALwICABMAEkAUwBUAFQARQBNAFAAAAAAADAJ
+CgBCAE8ATwBMAFIARQBGAFUAUwBFAAAAAAD4CQgAQgBPAE8ATABUAEUATQBQAAAAAACECQsAUwBU
+AFIAQwBPAEQARQBQAEEAWQBTAAAA7AgHAFYAQQBSAFAAQQBZAFMAAAAICQoAVABZAFAARQBNAEEA
+UgBRAFUARQAAAAAAxAkQAFUAUwBFAFIAQQBQAFAAUgBPAFYAQQBMAEYASQBMAEUAAAAAAFAJDABQ
+AEEAUgBFAE4AVABEAE8AQwBVAEkARAAAAAAAaAkJAFAAQQBSAEUATgBUAEQATwBDAAAApAkLAEMA
+VQBSAFIARQBOAFQAUwBUAEUAUAAAAEQKDABTAEUATgBEAFQATwBBAEMAVABPAFIAUwAAAAAAYAoM
+AEMATwBQAFkAVABPAEEAQwBUAE8AUgBTAAAAAACUCgsASQBUAEUATQBBAFUAVABIAE8AUgBTAAAA
+LAoJAE4ATwBUAEUAUwBJAFQARQBNAAAArAoXAEkAVABFAE0ARwBBAE0AQgBQAFMAQQBVAFQASABP
+AFIAUwBCAFkAUABBAFkAUwAAAOAMCABUAEUATQBQAEkAVABFAE0AAAAAACgLCwBMAEUAQwBUAFAA
+TwBUAEkAVABFAE0AAADcCgoAQQBVAFQAUABPAFQASQBUAEUATQAAAAAAmAsIAFQARQBNAFAATgBB
+AE0ARQAAAAAAwAoJAEEAVQBUAFIARQBOAEEATQBFAAAA9AoGAEkAQQBVAFQAUgBFAAAAAABICwoA
+VABFAE0AUABTAFQAUgBJAE4ARwAAAAAAbAsJAFMATgBVAE0ATwBSAEQAUgBFAAAAEAsKAFIATwBM
+AF8ATQBBAFIAUQBVAEUAAAAAAKgMCQBSAE8ATABfAEEARABNAEkATgAAAMALDABUAEUATQBQAEQA
+TwBDAFUATQBFAE4AVAAAAAAAJA4FAEYATwBVAE4ARAAAAEwMBwBQAEEAUgBBAE0ARABCAAAA1AsT
+AEYAXwBTAEUAUgBWAEUAVQBSAF8AUABBAFIAQQBNAEUAVABSAEUAAADADBAARgBfAFAAQQBUAEgA
+XwBQAEEAUgBBAE0ARQBUAFIARQAAAAAADAwGAEkAUwBPAFAARQBOAAAAAABQDRkATABTAEUAUgBS
+AF8ATgBPAFQARQBTAF8ARABCAE8AUABFAE4AXwBGAEEASQBMAEUARAAAAHgMHQBJAG0AcABvAHMA
+cwBpAGIAbABlACAAZAAnAG8AdQB2AHIAaQByACAAbABhACAAYgBhAHMAZQAgACIAAACEDBIAIgAg
+AHMAdQByACAAbABlACAAcwBlAHIAdgBlAHUAcgAgACIAAAAAAAANAwAiACAAIQAAAHQODwBWAEEA
+TABJAEQATQBBAFIAQwBIAEUAVgBJAEUAVwAAAGgNCQBOAE8AVABFAFMAVgBJAEUAVwAAABwNDQBW
+AEEATABJAEQARABQAE0AWABWAEkARQBXAAAAqA0NAFYAQQBMAEkARABQAEQAUwBUAFYASQBFAFcA
+AADkDgsAVgBBAEwASQBEAEMAUgBWAEkARQBXAAAAUA8WAFYAQQBMAEkARABWAEUASABJAEMAVQBM
+AEUAUwBaAE8ATgBFAFYASQBFAFcAAAAAAMwNCABWAE4AVQBNAEUAUgBPAFMAAAAAAIQNCgBWAFYA
+RQBIAEkAQwBVAEwARQBTAAAAAAD4DQ4AVgBBAEwASQBEAEcAQQBNAE0ARQBWAEkARQBXAAAAAABM
+Dg8AVgBBAEwASQBEAEYAUgBJAFMAQwBPAFYASQBFAFcAAAD8DhIAVgBBAEwASQBEAEcAQQBNAE0A
+RQBEAE8AQwBVAE0ARQBOAFQAAAAAABAPEwBWAEEATABJAEQATQBBAFIAQwBIAEUARABPAEMAVQBN
+AEUATgBUAAAA0A4RAFYAQQBMAEkARABEAFAATQBYAEQATwBDAFUATQBFAE4AVAAAABQQEQBWAEEA
+TABJAEQAUABEAFMAVABEAE8AQwBVAE0ARQBOAFQAAACYDg8AVgBBAEwASQBEAEMAUgBEAE8AQwBV
+AE0ARQBOAFQAAADsDxkAVgBBAEwASQBEAFYARQBIAEkAQwBVAEwARQBaAE8ATgBFAEQATwBDAFUA
+TQBFAE4AVAAAAMwPBwBEAE4AVQBNAEUAUgBPAAAAbA8JAEQAVgBFAEgASQBDAFUATABFAAAA9BAG
+AEYAXwBFAFQAQQBUAAAAAABADxQARgBfAEMATwBNAFAAVABFAFIAVQBUAEkATABJAFMAQQBUAEkA
+TwBOAAAAAAAcEAUASQBEAEQATwBDAAAAiA8LAFUATgBJAFYARQBSAFMAQQBMAEkARAAAAIQQCwBB
+AEQARABIAEkAUwBUAEwASQBOAEUAAACwDxAAbABfAEcAQQBNAEIAUABTAF8ASABpAHMAdABvAF8A
+RQAAAAAArBILAEEAQgBCAFIARQBWAEkAQQBUAEUARAAAAKgQDABHAEEATQBCAFAAUwBfAEQARQBC
+AFUAVAAAAAAAyBAQAEcAQQBNAEIAAwD8D/gPAABQAFMAXwBNAE8ASQBTAEQARQBCAFUAVAAAAAAA
+RBABAC8AAABMERAARwBBAE0AQgBQAFMAXwBBAE4ATgBFAEQARQBCAFUAVAAAAAAAYBAKAEcAQQBN
+AEIAUABTAF8ARgBJAE4AAAAAABQSDgBHAEEATQBCAFAAUwBfAE0ATwBJAFMARgBJAE4AAAAAAOwQ
+DgBHAEEATQBCAFAAUwBfAEEATgBOAEUARgBJAE4AAAAAACgSDQBHAEEATQBCAFAAUwBfAE0AQQBS
+AFEAVQBFAAAAgBEOAEEAXwBDAE8ATQBQAEwARQBNAEUATgBUAEUAUgAAAAAAWBQBAE8AAAAgERMA
+RwBBAE0AQgBQAFMAXwBOAFUATQBFAFIATwBfAE8AUgBEAFIARQAAAIwREgBDAEEATABDAFUATABF
+AE4AVQBNAEUAUgBPAE8AUgBEAFIARQAAAAAAcBIWAEAARQBsAGUAbQBlAG4AdABzACgARwBBAE0A
+QgBQAFMAXwBQAGEAeQBzACkAAAAAAAgSAwBYAFgAWAAAAKgRCwBHAEEATQBCAFAAUwBfAFAAQQBZ
+AFMAAADYERQARwBBAE0AQgBQAFMAXwBOAFUATQBFAFIATwBEAEUATQBBAE4ARABFAAAAAADwFRQA
+RwBBAE0AQgBQAFMAXwBOAE8AVABJAEYARABPAEMAVQBNAEUATgBUAAAAAADwEwIAQQBQAAAAAABo
+EwcARwBFAFQAVgBJAEUAVwAAAJATIQB2AF8ARwBBAE0AQgBQAFMAXwBWAGEAbABpAGQATQBhAHIA
+YwBoAGUAXwBMAG8AbwBrAHUAcABfAEIAeQBLAGUAeQAAALwTGwBMAFMARQBSAFIAXwBOAE8AVABF
+AFMAXwBWAEkARQBXAE8AUABFAE4AXwBGAEEASQBMAEUARAAAALgVWwBJAG0AcABvAHMAcwBpAGIA
+bABlACAAZAAnAG8AdQB2AHIAaQByACAAbABhACAAdgB1AGUAIAAiAHYAXwBHAEEATQBCAFAAUwBf
+AFYAYQBsAGkAZABNAGEAcgBjAGgAZQBfAEwAbwBvAGsAdQBwAF8AQgB5AEsAZQB5ACIAIABzAHUA
+cgAgAGwAYQAgAGIAYQBzAGUAIABkAGUAIABwAGEAcgBhAG0A6QB0AHIAYQBnAGUAIAAhAAAAzBYQ
+AFIARQBQAEwAQQBDAEUASQBUAEUATQBWAEEATABVAEUAAAAAAHAUEwBmAF8AQQB1AHQAZQB1AHIA
+cwBQAG8AdABlAG4AdABpAGUAbABzAAAAJBQXAEcAQQBNAEIAUABTAF8AQQB1AHQAaABvAHIAcwBC
+AHkAUABhAHkAcwBfAEUAMQAAAHwUFwBHAEEATQBCAFAAUwBfAFYAYQBsAGkAZABhAHQAZQBkAFAA
+YQB5AHMAXwBFADEAAACIFhcARwBBAE0AQgBQAFMAXwBTAHUAYgBtAGkAdAB0AGUAZABQAGEAeQBz
+AF8ARQAxAAAAKBcIAFMAVABSAFQARQBNAFAAMQAAAAAApBQDAEEAUAAtAAAA3BQQAEcARQBUAEQA
+TwBDAFUATQBFAE4AVABCAFkASwBFAFkAAAAAAGQVGQBMAFMARQBSAFIAXwBOAE8AVABFAFMAXwBE
+AE8AQwBfAE4ATwBUAEkATgBWAEkARQBXAAAAhBVBAEkAbQBwAG8AcwBzAGkAYgBsAGUAIABkACcA
+bwB1AHYAcgBpAHIAIABsAGUAIABkAG8AYwB1AG0AZQBuAHQAIABkAGUAIABwAGEAcgBhAG0A6QB0
+AHIAYQBnAGUAIAAiAEMAaABlAGYAIABkAGUAIABNAGEAcgBjAGgAZQAiACAAIQAAALAWDABHAEUA
+VABGAEkAUgBTAFQASQBUAEUATQAAAAAAbBcXAEcAQQBNAEIAUABTAF8AVgBhAGwAaQBkAE0AYQBy
+AGMAaABlAF8ATgBhAG0AZQAAAAQXGABMAFMARQBSAFIAXwBOAE8AVABFAFMAXwBJAFQARQBNAF8A
+TQBJAFMAUwBJAE4ARwAAAAAASBpJAEkAbQBwAG8AcwBzAGkAYgBsAGUAIABkAGUAIAB0AHIAbwB1
+AHYAZQByACAAbABlACAAYwBoAGEAbQBwACAAZABlACAAcABhAHIAYQBtAOkAdAByAGEAZwBlACAA
+IgBHAEEATQBCAFAAUwBfAFYAYQBsAGkAZABNAGEAcgBjAGgAZQBfAE4AYQBtAGUAIgAgACEAAADE
+FhAAQQBQAFAARQBOAEQAVABPAFQARQBYAFQATABJAFMAVAAAAAAAVBoGAFYAQQBMAFUARQBTAAAA
+AADwFgEApwAAAFwXDwBHAEEATQBCAFAAUwBfAFMARQBOAEQATQBBAEkATAAAAOgXBgBCAEEATABO
+AE8ATQAAAAAAFBgOAFMARQBOAEQAUABSAEUAUwBFAFQATQBBAEkATAAAAAAAsBcXAEcAQQBNAEIA
+UABTAF8AVgBBAEwASQBEAE0AQQBSAEMASABFAF8ATgBBAE0ARQAAAHAYBQBWAEEATABJAEQAAACc
+FxUARgBvAHIAbQBzAF8ATABhAHMAdABWAGEAbABpAGQAUwBlAG4AZABUAG8AAAAwGQYAQgBBAEwA
+RgBPAE4AAAAAAKAYGQBHAEEATQBCAFAAUwBfAFYAQQBMAEkARABNAEEAUgBDAEgARQBfAEIAQQBM
+AEYATwBOAAAABBoTAEYAXwBBAFUAVABFAFUAUgBTAFAATwBUAEUATgBUAEkARQBMAFMAAAAgGyoA
+QABTAG8AcgB0ACgAQABVAG4AaQBxAHUAZQAoAEAAVAByAGkAbQAoAGYAXwBBAHUAdABlAHUAcgBz
+AFAAbwB0AGUAbgB0AGkAZQBsAHMAKQApACkAAAAAAEQbFQBGAE8AUgBNAFMAXwBMAEEAUwBUAFYA
+QQBMAEkARABTAEUATgBEAFQATwAAAAAZLABAAFMAbwByAHQAKABAAFUAbgBpAHEAdQBlACgAQABU
+AHIAaQBtACgARgBvAHIAbQBzAF8ATABhAHMAdABWAGEAbABpAGQAUwBlAG4AZABUAG8AKQApACkA
+AAAAAOgZFABGAF8ATABFAEMAVABFAFUAUgBTAFAATwBUAEUATgBUAEkARQBMAFMAAAAAAJgcWQBA
+AFMAbwByAHQAKABAAFUAbgBpAHEAdQBlACgAQABUAHIAaQBtACgAZgBfAEwAZQBjAHQAZQB1AHIA
+cwBQAG8AdABlAG4AdABpAGUAbABzACAAOgAgAEcAQQBNAEIAUABTAF8AUABlAG8AcABsAGUAVABv
+AEkAbgBmAG8AcgBtACAAOgAgAGYAXwBBAHUAdABlAHUAcgBzAFAAbwB0AGUAbgB0AGkAZQBsAHMA
+KQApACkAAAAkGgsAQwBIAEEATgBHAEUAUwBUAEEAVABFAAAA5BwNAEkAbgB0AGUAcgBtAGUAZABp
+AGEAaQByAGUAAAC8HA4ARABJAFMAUABBAFQAQwBIAEEAQwBUAE8AUgBTAAAAAACAGgIAQQBDAAAA
+AABQHRMAdgBfAEcAQQBNAEIAUABTAF8AVgBhAGwAaQBkAEcAYQBtAG0AZQAAABwhTQBJAG0AcABv
+AHMAcwBpAGIAbABlACAAZAAnAG8AdQB2AHIAaQByACAAbABhACAAdgB1AGUAIAAiAHYAXwBHAEEA
+TQBCAFAAUwBfAFYAYQBsAGkAZABHAGEAbQBtAGUAIgAgAHMAdQByACAAbABhACAAYgBhAHMAZQAg
+AGQAZQAgAHAAYQByAGEAbQDpAHQAcgBhAGcAZQAgACEAAADMGw8ARwBBAE0AQgBQAFMAXwBWAEUA
+SABJAEMAVQBMAEUAAAAUHUAASQBtAHAAbwBzAHMAaQBiAGwAZQAgAGQAJwBvAHUAdgByAGkAcgAg
+AGwAZQAgAGQAbwBjAHUAbQBlAG4AdAAgAGQAZQAgAHAAYQByAGEAbQDpAHQAcgBhAGcAZQAgACIA
+QwBoAGUAZgAgAGQAZQAgAEcAYQBtAG0AZQAiACAAIQAAAAAAABwWAEcAQQBNAEIAUABTAF8AVgBh
+AGwAaQBkAEcAYQBtAG0AZQBfAE4AYQBtAGUAAAAAAMQcSABJAG0AcABvAHMAcwBpAGIAbABlACAA
+ZABlACAAdAByAG8AdQB2AGUAcgAgAGwAZQAgAGMAaABhAG0AcAAgAGQAZQAgAHAAYQByAGEAbQDp
+AHQAcgBhAGcAZQAgACIARwBBAE0AQgBQAFMAXwBWAGEAbABpAGQARwBhAG0AbQBlAF8ATgBhAG0A
+ZQAiACAAIQAAAAAA2B0OAFsARwBBAE0AQgBQAFMAXwBSAGUAYQBkAGUAcgAAAAAAxB8BAF0AAACg
+HQ0AWwBHAEEATQBCAFAAUwBfAFIARQBTAFAAXQAAAMgeFABHAEEATQBCAFAAUwBfAEEAVQBUAFIA
+RQBfAFAARQBSAF8ASABBAEIAAAAAAEQdFQBAAFMAbwByAHQAKABAAFUAbgBpAHEAdQBlACgAQABU
+AHIAaQBtACgAIgAAAIgdAwAiADoAIgAAAJwfGAAiADoAZgBfAEwAZQBjAHQAZQB1AHIAcwBQAG8A
+dABlAG4AdABpAGUAbABzADoAIgAAAAAAPB4JAEMAQQBOAE8ATgBJAEMAQQBMAAAAZB8ZACIAOgAg
+AGYAXwBBAHUAdABlAHUAcgBzAFAAbwB0AGUAbgB0AGkAZQBsAHMAKQApACkAAAD8Hi8AIgA6AGYA
+XwBMAGUAYwB0AGUAdQByAHMAUABvAHQAZQBuAHQAaQBlAGwAcwAgADoAIABmAF8AQQB1AHQAZQB1
+AHIAcwBQAG8AdABlAG4AdABpAGUAbABzACkAKQApAAAANB9DAEAAUwBvAHIAdAAoAEAAVQBuAGkA
+cQB1AGUAKABAAFQAcgBpAG0AKABmAF8ATABlAGMAdABlAHUAcgBzAFAAbwB0AGUAbgB0AGkAZQBs
+AHMAIAA6ACAARwBBAE0AQgBQAFMAXwBQAGUAbwBwAGwAZQBUAG8ASQBuAGYAbwByAG0AKQApACkA
+AABwHxYARwBBAE0AQgBQAFMAXwBWAEEATABJAEQARwBBAE0ATQBFAF8ATgBBAE0ARQAAAAAATCIY
+AEcAQQBNAEIAUABTAF8AVgBBAEwASQBEAEcAQQBNAE0ARQBfAEIAQQBMAEYATwBOAAAAAADwIBUA
+RwBBAE0AQgBQAFMAXwBQAEUATwBQAEwARQBUAE8ASQBOAEYATwBSAE0AAADMJgIATwBLAAAAAAC8
+IRIAQQBEAEQATgBPAFQASQBGAEkARQBEAFIARQBBAEQARQBSAFMAAAAAALQfCQBJAFMAUwBVAE0A
+TQBBAFIAWQAAAEQmBABQAEEAWQBTAAAAAABoIE4ASQBtAHAAbwBzAHMAaQBiAGwAZQAgAGQAJwBv
+AHUAdgByAGkAcgAgAAMA/A/wHwAAbABhACAAdgB1AGUAIAAiAHYAXwBHAEEATQBCAFAAUwBfAFYA
+YQBsAGkAZABNAGEAcgBjAGgAZQAiACAAcwB1AHIAIABsAGEAIABiAGEAcwBlACAAZABlACAAcABh
+AHIAYQBtAOkAdAByAGEAZwBlACAAIQAAAAAAdCNBAEAAUwBvAHIAdAAoAEAAVQBuAGkAcQB1AGUA
+KABAAFQAcgBpAG0AKABmAF8ATABlAGMAdABlAHUAcgBzAFAAbwB0AGUAbgB0AGkAZQBsAHMAIAA6
+ACAAZgBfAEEAdQB0AGUAdQByAHMAUABvAHQAZQBuAHQAaQBlAGwAcwApACkAKQAAAHwiEgB2AF8A
+RwBBAE0AQgBQAFMAXwBWAGEAbABpAGQARABQAE0AWAAAAAAAECNMAEkAbQBwAG8AcwBzAGkAYgBs
+AGUAIABkACcAbwB1AHYAcgBpAHIAIABsAGEAIAB2AHUAZQAgACIAdgBfAEcAQQBNAEIAUABTAF8A
+VgBhAGwAaQBkAEQAUABNAFgAIgAgAHMAdQByACAAbABhACAAYgBhAHMAZQAgAGQAZQAgAHAAYQBy
+AGEAbQDpAHQAcgBhAGcAZQAgACEAAAAAAHQmRABJAG0AcABvAHMAcwBpAGIAbABlACAAZAAnAG8A
+dQB2AHIAaQByACAAbABlACAAZABvAGMAdQBtAGUAbgB0ACAAZABlACAAcABhAHIAYQBtAOkAdABy
+AGEAZwBlACAAIgBDAGgAZQBmACAAcAByAG8AZAB1AGkAdAAgAEQAUABNAFgAIgAgACEAAAAAAOQo
+FQBHAEEATQBCAFAAUwBfAFYAYQBsAGkAZABEAFAATQBYAF8ATgBhAG0AZQAAANgpRwBJAG0AcABv
+AHMAcwBpAGIAbABlACAAZABlACAAdAByAG8AdQB2AGUAcgAgAGwAZQAgAGMAaABhAG0AcAAgAGQA
+ZQAgAHAAYQByAGEAbQDpAHQAcgBhAGcAZQAgACIARwBBAE0AQgBQAFMAXwBWAGEAbABpAGQARABQ
+AE0AWABfAE4AYQBtAGUAIgAgACEAAABAIxUARwBBAE0AQgBQAFMAXwBWAEEATABJAEQARABQAE0A
+WABfAE4AQQBNAEUAAACoIxcARwBBAE0AQgBQAFMAXwBWAEEATABJAEQARABQAE0AWABfAEIAQQBM
+AEYATwBOAAAAHCQXAEcAQQBNAEIAUABTAF8AQQB1AHQAaABvAHIAcwBCAHkAUABhAHkAcwBfAEUA
+NAAAANwjFwBHAEEATQBCAFAAUwBfAFYAYQBsAGkAZABhAHQAZQBkAFAAYQB5AHMAXwBFADQAAAAQ
+JBcARwBBAE0AQgBQAFMAXwBTAHUAYgBtAGkAdAB0AGUAZABQAGEAeQBzAF8ARQA0AAAAgCUDAEEA
+QwAtAAAAQCQPAEYATwBSAE0AUwBfAEUAMgBfAEMATwBQAFkAVABPAAAAbCQSAHYAXwBHAEEATQBC
+AFAAUwBfAFYAYQBsAGkAZABQAEQAUwBUAAAAAAAMJUwASQBtAHAAbwBzAHMAaQBiAGwAZQAgAGQA
+JwBvAHUAdgByAGkAcgAgAGwAYQAgAHYAdQBlACAAIgB2AF8ARwBBAE0AQgBQAFMAXwBWAGEAbABp
+AGQAUABEAFMAVAAiACAAcwB1AHIAIABsAGEAIABiAGEAcwBlACAAZABlACAAcABhAHIAYQBtAOkA
+dAByAGEAZwBlACAAIQAAAAAAsCU3AEkAbQBwAG8AcwBzAGkAYgBsAGUAIABkACcAbwB1AHYAcgBp
+AHIAIABsAGUAIABkAG8AYwB1AG0AZQBuAHQAIABkAGUAIABwAGEAcgBhAG0A6QB0AHIAYQBnAGUA
+IAAiAFAARABTAFQAIgAgACEAAACoJhUARwBBAE0AQgBQAFMAXwBWAGEAbABpAGQAUABEAFMAVABf
+AE4AYQBtAGUAAACoKUcASQBtAHAAbwBzAHMAaQBiAGwAZQAgAGQAZQAgAHQAcgBvAHUAdgBlAHIA
+IABsAGUAIABjAGgAYQBtAHAAIABkAGUAIABwAGEAcgBhAG0A6QB0AHIAYQBnAGUAIAAiAEcAQQBN
+AEIAUABTAF8AVgBhAGwAaQBkAFAARABTAFQAXwBOAGEAbQBlACIAIAAhAAAAMCoVAEcAQQBNAEIA
+UABTAF8AVgBBAEwASQBEAFAARABTAFQAXwBOAEEATQBFAAAABCcXAEcAQQBNAEIAUABTAF8AVgBB
+AEwASQBEAFAARABTAFQAXwBCAEEATABGAE8ATgAAAGwqDwBGAE8AUgBNAFMAXwBFADMAXwBDAE8A
+UABZAFQATwAAAPwmFABFAHMAdABhAGQAbwA6AEMAbwBtAGUAbgB0AGEAcgBpAG8AIABlADQAAAAA
+AIAnAQBzAAAANCcVAEUAcwB0AGEAZABvACAAYQBuAHQAZQBzACAAcwBlAG4AZABtAGEAaQBsAAAA
+bCcYAEUAcwB0AGEAZABvACAAZABlAHMAcAB1AGUAcwAgACAAcwBlAG4AZABtAGEAaQBsAAAAAAAU
+KQcARQBzAHQAYQBkAG8AOgAAALgnGQB2AF8ARwBBAE0AQgBQAFMAXwBMAG8AbwBrAHUAcABfAFYA
+ZQBoAGkAYwB1AGwAZQBzAAAAZChTAEkAbQBwAG8AcwBzAGkAYgBsAGUAIABkACcAbwB1AHYAcgBp
+AHIAIABsAGEAIAB2AHUAZQAgACIAdgBfAEcAQQBNAEIAUABTAF8ATABvAG8AawB1AHAAXwBWAGUA
+aABpAGMAdQBsAGUAcwAiACAAcwB1AHIAIABsAGEAIABiAGEAcwBlACAAZABlACAAcABhAHIAYQBt
+AOkAdAByAGEAZwBlACAAIQAAAIQqPABJAG0AcABvAHMAcwBpAGIAbABlACAAZAAnAG8AdQB2AHIA
+aQByACAAbABlACAAZABvAGMAdQBtAGUAbgB0ACAAZABlACAAcABhAHIAYQBtAOkAdAByAGEAZwBl
+ACAAIgBWAOkAaABpAGMAdQBsAGUAcwAiACAAIQAAAAAADCoUAEcAQQBNAEIAUABTAF8AVgBhAGwA
+aQBkAFYAZQBoAF8ATgBhAG0AZQAAAAAAVCpGAEkAbQBwAG8AcwBzAGkAYgBsAGUAIABkAGUAIAB0
+AHIAbwB1AHYAZQByACAAbABlACAAYwBoAGEAbQBwACAAZABlACAAcABhAHIAYQBtAOkAdAByAGEA
+ZwBlACAAIgBHAEEATQBCAFAAUwBfAFYAYQBsAGkAZABWAGUAaABfAE4AYQBtAGUAIgAgACEAAAAA
+ANQuFABHAEEATQBCAFAAUwBfAFYAQQBMAEkARABWAEUASABfAE4AQQBNAEUAAAAAAJgrFgBHAEEA
+TQBCAFAAUwBfAFYAQQBMAEkARABWAEUASABfAEIAQQBMAEYATwBOAAAAAAAwLA8ARgBPAFIATQBT
+AF8ARQA1AF8AQwBPAFAAWQBUAE8AAACcKg8ARgBPAFIATQBTAF8ARQA2AF8AQwBPAFAAWQBUAE8A
+AADIKggAVABlAHIAbQBpAG4AYQBsAAAAAAC4KggAQQBSAEUARwBUAEUATQBQAAAAAADkKgkAQQBQ
+AEwAVQBTAFQARQBNAFAAAACwKwoAQQBNAE8ASQBOAFMAVABFAE0AUAAAAAAA8CoFAFMAVABFAE0A
+UAAAANgqBQBJAE4ARABFAFgAAAD8KgIASwAxAAAAAAAYKwIASwAyAAAAAABoKwIASwAzAAAAAABA
+KwsARwBBAE0AQgBQAFMAXwByAGUAZwBfAAAAjCwQAEcAQQBNAEIAUABTAF8AZQBxAHUAaQBwAGwA
+dQBzAF8AAAAAABAsEQBHAEEATQBCAFAAUwBfAGUAcQB1AGkAbQBvAGkAbgBzAF8AAAB0LBUARwBB
+AE0AQgBQAFMAXwBTAHQAZQBwAFUAcABEAG8AYwB1AG0AZQBuAHQAAADcKwgAVABPAFMAVABSAEkA
+TgBHAAAAAADsKxMARwBBAE0AQgBQAFMAXwBEAEUATgBZAEQATwBDAFUATQBFAE4AVAAAAMgsBQBJ
+AEwARQBDAFQAAAAkLQ4AVQBTAEUAUgBSAEUASgBFAEMAVABGAEkATABFAAAAAAAYLAEAIgAAAFAu
+CQBEAEUATQBBAE4ARABFAFUAUgAAAEwsCwBGAF8ARABFAE0AQQBOAEQARQBVAFIAAAC8LBAAQQBV
+AFQAUgBFAFAARQBSAFMATwBOAE4ARQBIAEEAQgAAAAAAIC4JAGwAXwBIAFIAZQBmAHUAcwBlAAAA
+oC0UAGYAXwBMAGUAYwB0AGUAdQByAHMAUABvAHQAZQBuAHQAaQBlAGwAcwAAAAAANC0CAEsATwAA
+AAAAVC0rAEAAUwBvAHIAdAAoAEAAVQBuAGkAcQB1AGUAKABAAFQAcgBpAG0AKABmAF8ATABlAGMA
+dABlAHUAcgBzAFAAbwB0AGUAbgB0AGkAZQBsAHMAKQApACkAAADELQQAQQBEAEQANAAAAAAAeC0M
+AFsAQQBkAG0AaQBuAEYAbwByAG0AcwBdAAAAAAD0LQ4ARgBfAEUAVABBAFQAVABFAFIATQBJAE4A
+QQBMAAAAAAD4LhEARgBfAEEAQwBUAEUAVQBSAFMASQBOAEQASQBWAEkARABVAAAAaC4PAEYAXwBB
+AEMAVABFAFUAUgBTAEcAUgBPAFUAUABFAAAAfC4UAEEAQwBUAEUAVQBSAFMATQBFAE0AQgBSAEUA
+UwBHAFIATwBVAFAARQAAAAAAOC8TAEcAQQBNAEIAUABTAF8ARABlAG4AeQBEAG8AYwB1AG0AZQBu
+AHQAAADUNBUARwBBAE0AQgBQAFMAXwBDAEEATgBDAEUATABEAE8AQwBVAE0ARQBOAFQAAAC0LwgA
+bABfAEgAQQBuAG4AdQBsAAAAAABcMgYAQwBBAE4AQwBFAEwAAAAAAKQuEQBHAEEATQBCAFAAUwA6
+ACAAcwB0AHIASwBlAHkAIAA9ACAAAABkLxUARwBBAE0AQgBQAFMAXwBDAGEAbgBjAGUAbABEAG8A
+YwB1AG0AZQBuAHQAAACEMg4AVgBBAEwASQBEAEMAWgBPAE4ARQBWAEkARQBXAAAAAAAULwsAVgBB
+AEwASQBEAEEAUABWAEkARQBXAAAA8DEOAFYAQQBMAEkARABSAEEAUABBAFoAVgBJAEUAVwAAAAAA
+kDASAFYAQQBMAEkARABDAFoATwBOAEUARABPAEMAVQBNAEUATgBUAAAAAACILw8AVgBBAEwASQBE
+AEEAUABEAE8AQwBVAE0ARQBOAFQAAADwLxIAVgBBAEwASQBEAFIAQQBQAEEAWgBEAE8AQwBVAE0A
+RQBOAFQAAAAAAMQvBABBAEQARAAyAAAAAADoNhMAdgBfAEcAQQBNAEIAUABTAF8AVgBhAGwAaQBk
+AEMAWgADAPwP6C8AAG8AbgBlAAAA4DFNAEkAbQBwAG8AcwBzAGkAYgBsAGUAIABkACcAbwB1AHYA
+cgBpAHIAIABsAGEAIAB2AHUAZQAgACIAdgBfAEcAQQBNAEIAUABTAF8AVgBhAGwAaQBkAEMAWgBv
+AG4AZQAiACAAcwB1AHIAIABsAGEAIABiAGEAcwBlACAAZABlACAAcABhAHIAYQBtAOkAdAByAGEA
+ZwBlACAAIQAAABQxPwBJAG0AcABvAHMAcwBpAGIAbABlACAAZAAnAG8AdQB2AHIAaQByACAAbABl
+ACAAZABvAGMAdQBtAGUAbgB0ACAAZABlACAAcABhAHIAYQBtAOkAdAByAGEAZwBlACAAIgBDAGgA
+ZQBmACAAZABlACAAegBvAG4AZQAiACAAIQAAAEgxFgBHAEEATQBCAFAAUwBfAFYAYQBsAGkAZABD
+AFoAbwBuAGUAXwBOAGEAbQBlAAAAAAAkMkgASQBtAHAAbwBzAHMAaQBiAGwAZQAgAGQAZQAgAHQA
+cgBvAHUAdgBlAHIAIABsAGUAIABjAGgAYQBtAHAAIABkAGUAIABwAGEAcgBhAG0A6QB0AHIAYQBn
+AGUAIAAiAEcAQQBNAEIAUABTAF8AVgBhAGwAaQBkAEMAWgBvAG4AZQBfAE4AYQBtAGUAIgAgACEA
+AAAAAHA7BABUAEUAWABUAAAAAAC0MxYARwBBAE0AQgBQAFMAXwBWAEEATABJAEQAQwBaAE8ATgBF
+AF8ATgBBAE0ARQAAAAAAWDYYAEcAQQBNAEIAUABTAF8AVgBBAEwASQBEAEMAWgBPAE4ARQBfAEIA
+QQBMAEYATwBOAAAAAABwNBAAdgBfAEcAQQBNAEIAUABTAF8AVgBhAGwAaQBkAEMAUgAAAAAAIDNK
+AEkAbQBwAG8AcwBzAGkAYgBsAGUAIABkACcAbwB1AHYAcgBpAHIAIABsAGEAIAB2AHUAZQAgACIA
+dgBfAEcAQQBNAEIAUABTAF8AVgBhAGwAaQBkAEMAUgAiACAAcwB1AHIAIABsAGEAIABiAGEAcwBl
+ACAAZABlACAAcABhAHIAYQBtAOkAdAByAGEAZwBlACAAIQAAAAAA4DNHAEkAbQBwAG8AcwBzAGkA
+YgBsAGUAIABkACcAbwB1AHYAcgBpAHIAIABsAGUAIABkAG8AYwB1AG0AZQBuAHQAIABkAGUAIABw
+AGEAcgBhAG0A6QB0AHIAYQBnAGUAIAAiAEMAbwBuAHQAcgD0AGwAZQAgAHIAZQBuAHQAYQBiAGkA
+bABpAHQA6QAiACAAIQAAAPw0EwBHAEEATQBCAFAAUwBfAFYAYQBsAGkAZABDAFIAXwBOAGEAbQBl
+AAAAmDVFAEkAbQBwAG8AcwBzAGkAYgBsAGUAIABkAGUAIAB0AHIAbwB1AHYAZQByACAAbABlACAA
+YwBoAGEAbQBwACAAZABlACAAcABhAHIAYQBtAOkAdAByAGEAZwBlACAAIgBHAEEATQBCAFAAUwBf
+AFYAYQBsAGkAZABDAFIAXwBOAGEAbQBlACIAIAAhAAAAnDQTAEcAQQBNAEIAUABTAF8AVgBBAEwA
+SQBEAEMAUgBfAE4AQQBNAEUAAADMNBUARwBBAE0AQgBQAFMAXwBWAEEATABJAEQAQwBSAF8AQgBB
+AEwARgBPAE4AAADQOAEALQAAACw2EAB2AF8ARwBBAE0AQgBQAFMAXwBWAGEAbABpAGQAQQBQAAAA
+AAAUN0oASQBtAHAAbwBzAHMAaQBiAGwAZQAgAGQAJwBvAHUAdgByAGkAcgAgAGwAYQAgAHYAdQBl
+ACAAIgB2AF8ARwBBAE0AQgBQAFMAXwBWAGEAbABpAGQAQQBQACIAIABzAHUAcgAgAGwAYQAgAGIA
+YQBzAGUAIABkAGUAIABwAGEAcgBhAG0A6QB0AHIAYQBnAGUAIAAhAAAAAAAEOUYASQBtAHAAbwBz
+AHMAaQBiAGwAZQAgAGQAJwBvAHUAdgByAGkAcgAgAGwAZQAgAGQAbwBjAHUAbQBlAG4AdAAgAGQA
+ZQAgAHAAYQByAGEAbQDpAHQAcgBhAGcAZQAgACIAbAAnAGEAcABwAHIAbwB2AGkAcwBpAG8AbgBu
+AGUAbQBlAG4AdAAiACAAIQAAAAAARDcTAEcAQQBNAEIAUABTAF8AVgBhAGwAaQBkAEEAUABfAE4A
+YQBtAGUAAACcOUUASQBtAHAAbwBzAHMAaQBiAGwAZQAgAGQAZQAgAHQAcgBvAHUAdgBlAHIAIABs
+AGUAIABjAGgAYQBtAHAAIABkAGUAIABwAGEAcgBhAG0A6QB0AHIAYQBnAGUAIAAiAEcAQQBNAEIA
+UABTAF8AVgBhAGwAaQBkAEEAUABfAE4AYQBtAGUAIgAgACEAAADgOhMARwBBAE0AQgBQAFMAXwBW
+AEEATABJAEQAQQBQAF8ATgBBAE0ARQAAAHA3FQBHAEEATQBCAFAAUwBfAFYAQQBMAEkARABBAFAA
+XwBCAEEATABGAE8ATgAAABA4EwB2AF8ARwBBAE0AQgBQAFMAXwBWAGEAbABpAGQAUgBBAFAAQQBa
+AAAAODpNAEkAbQBwAG8AcwBzAGkAYgBsAGUAIABkACcAbwB1AHYAcgBpAHIAIABsAGEAIAB2AHUA
+ZQAgACIAdgBfAEcAQQBNAEIAUABTAF8AVgBhAGwAaQBkAFIAQQBQAEEAWgAiACAAcwB1AHIAIABs
+AGEAIABiAGEAcwBlACAAZABlACAAcABhAHIAYQBtAOkAdAByAGEAZwBlACAAIQAAANA5XQBJAG0A
+cABvAHMAcwBpAGIAbABlACAAZAAnAG8AdQB2AHIAaQByACAAbABlACAAZABvAGMAdQBtAGUAbgB0
+ACAAZABlACAAcABhAHIAYQBtAOkAdAByAGEAZwBlACAAIgBSAGUAcwBwAC4AIABBAHAAcAByAG8A
+IABQAGEAeQBzACAATwBVACAAQQBzAHMAaQBzAHQAYQBuAHQAIABaAG8AbgBlACAAKABSAEEAUABB
+AFoAKQAiACAAIQAAAAQ7FgBHAEEATQBCAFAAUwBfAFYAYQBsAGkAZABSAEEAUABBAFoAXwBOAGEA
+bQBlAAAAAAB0OkgASQBtAHAAbwBzAHMAaQBiAGwAZQAgAGQAZQAgAHQAcgBvAHUAdgBlAHIAIABs
+AGUAIABjAGgAYQBtAHAAIABkAGUAIABwAGEAcgBhAG0A6QB0AHIAYQBnAGUAIAAiAEcAQQBNAEIA
+UABTAF8AVgBhAGwAaQBkAFIAQQBQAEEAWgBfAE4AYQBtAGUAIgAgACEAAAAAAAg6FgBHAEEATQBC
+AFAAUwBfAFYAQQBMAEkARABSAEEAUABBAFoAXwBOAEEATQBFAAAAAADwOhgARwBBAE0AQgBQAFMA
+XwBWAEEATABJAEQAUgBBAFAAQQBaAF8AQgBBAEwARgBPAE4AAAAAAJA6FABHAEEATQBCAFAAUwBf
+AE4AbwB0AGkAZgBEAG8AYwB1AG0AZQBuAHQAAAAAALw6GwBHAEEATQBCAFAAUwBfAEMATwBNAFAA
+TABFAE0ARQBOAFQARQBSAEQATwBDAFUATQBFAE4AVAAAAIA8CgBGAF8AVABZAFAARQBFAFQAQQBU
+AAAAAADMOhIAbABfAEcAQQBNAEIAUABTAF8ASABpAHMAdABvAF8ARQA5ADYAAAAAAEQ7BABBAEQA
+RAAzAAAAAACUPgcARgBvAHIAbQBzAF8ARQAAABQ7BQBfAEEAdgBpAHMAAAAkOwYAMAAwADAAMAAw
+ADAAAAAAADA7BQAwADAAMAAwADAAAAA8OwQAMAAwADAAMAAAAAAAgDsDADAAMAAwAAAA0DwCADAA
+MAAAAAAAKDwBADAAAAD8PBIAQwBhAGwAYwB1AGwAZQBOAHUAbQBlAHIAbwBPAHIAZAByAGUAAAAA
+AKQ8BABWAEkARQBXAAAAAAC4OxgAdgBfAEcAQQBNAEIAUABTAF8ATABvAG8AawB1AHAAXwBCAHkA
+TgB1AG0AYgBlAHIAAAAAAFw8NQBJAG0AcABvAHMAcwBpAGIAbABlACAAZAAnAG8AdQB2AHIAaQBy
+ACAAbABhACAAdgB1AGUAIAAiAHYAXwBHAEEATQBCAFAAUwBfAEwAbwBvAGsAdQBwAF8AQgB5AE4A
+dQBtAGIAZQByACIAAADsPRcARABPAEMAUABBAFIAQQBNAFAAUgBPAEYASQBMAEUARABPAEMAVQBN
+AEUATgBUAAAAeEIPAEEAVABUAEEAQwBIAE0ARQBOAFQATgBBAE0ARQBTAAAA6DwOAEEAVABUAEEA
+QwBIAE0ARQBOAFQASQBUAEUATQAAAAAALD0TAE4ATwBUAEUAUwBFAE0AQgBFAEQARABFAEQATwBC
+AEoARQBDAFQAAAAkPQgARgBJAEwARQBOAEEATQBFAAAAAABkPQcARgBJAEwARQBOAFUATQAAABA9
+BwBMAEkATgBFAFMAVABSAAAATD0HAFQARQBNAFAAVgBBAFIAAACwPgEASQAAAGA+DABTAFQAUgBS
+AEUARgBFAFIARQBOAEMARQAAAAAAzD0JAFMAVABSAEEAQwBUAEkATwBOAAAAgD0KAFMAVABSAEMA
+TwBNAE0ARQBOAFQAAAAAAKg9EABAAEEAdAB0AGEAYwBoAG0AZQBuAHQATgBhAG0AZQBzAAAAAADE
+Pg4AQQBUAFQAQQBDAEgATQBFAE4AVABOAEEATQBFAAAAAACAPg0ARwBFAFQAQQBUAFQAQQBDAEgA
+TQBFAE4AVAAAAIRBNgBJAG0AcABvAHMAcwBpAGIAbABlACAAZAAnAG8AdQB2AHIAaQByACAAbABl
+ACAAZABvAGMAdQBtAGUAbgB0ACAAZABlACAAcAByAG8AZgBpAGwAIABkAGUAIABsAGEAIABiAGEA
+cwBlACAAIgAAAAAAeEANAEYATwBSAE0AUwBfAFQARQBNAFAARABJAFIAAAAsPwYAUwBPAFUAUgBD
+AEUAAAAAAOg+CwBFAFgAVABSAEEAQwBUAEYASQBMAEUAAADgPgcAUgBFAEYAUgBFAFMASAAAAPw+
+CgBBAFUAVABPAFUAUABEAEEAVABFAAAAAAAYPwEAOwAAADw/BgBmAF8ARQB0AGEAdAAAAAAAjD8K
+AGYAXwBUAHkAcABlAEYAbwByAG0AAAAAAMRBBgBTAFUAQwBDAMgAUwAAAAAApD8FAEUAQwBIAEUA
+QwAAAGg/EwBGAE8AUgBNAFMAXwBFADYAXwBEAEEAVABFAEEAUABQAFIATwBCAAAAzD8OAEYAXwBB
+AEMAVABJAE8ATgBBAEYAQQBJAFIARQAAAAAA3EIJAHMAbwB1AG0AZQB0AHQAcgBlAAAAxD8NAEYA
+TwBSAE0AUwBfAEUANgBfAEEAVgBJAFMAAABgQAEAMQAAAPQ/EQBGAE8AUgBNAFMAXwBFADYAAwAs
+COA/AABfAEMATwBNAE0ARQBOAFQAUwAAAAhABwByAGUAZgB1AHMAZQByAAAAvEApAEwAQQAgAEQA
+RQBNAEEATgBEAEUAIABOACcAQQAgAFAAQQBTACAAUABVACAARQBUAFIARQAgAFQAUgBBAEkAVABF
+AEUAIABFAE4AIABCAFAAUwAAACxGCAA8AHMAYwByAGkAcAB0AD4AAAAAALBCHwB2AGEAcgAgAHUA
+cgBsACAAPQAgAHcAaQBuAGQAbwB3AC4AbABvAGMAYQB0AGkAbwBuAC4AaAByAGUAZgA7AAAA8EJg
+AHcAaQBuAGQAbwB3AC4AbABvAGMAYQB0AGkAbwBuAC4AaAByAGUAZgAgAD0AIAB1AHIAbAAuAHMA
+dQBiAHMAdAByAGkAbgBnACgAMAAsACgAdQByAGwALgBsAGEAcwB0AEkAbgBkAGUAeABPAGYAKAAn
+AC4AbgBzAGYAJwApACsANQApACkAIAArACAAJwB2AF8ARwBBAE0AQgBQAFMAXwBTAHUAaQB2AHIA
+ZQA/AE8AcABlAG4AVgBpAGUAdwAnAAAAAACcQQkAPAAvAHMAYwByAGkAcAB0AD4AAAA8QxAASQBu
+AGkAdABpAGEAbABpAHoAZQBJAG0AcABvAHIAdAAAAAAAlEJWAFUAbgBlACAAbwB1ACAAcABsAHUA
+cwBpAGUAdQByAHMAIABlAHIAcgBlAHUAcgBzACAAYwByAGkAdABpAHEAdQBlAHMAIABzAGUAIABz
+AG8AbgB0ACAAcAByAG8AZAB1AGkAdABlAHMAIAAhADwAYgByAD4ATABlAHMAIABlAHIAcgBlAHUA
+cgBzACAAbwBuAHQAIADpAHQA6QAgAGwAbwBnAHUA6QBlAHMALgAAAAAAvEMLAEMAVQBSAFIARQBO
+AFQAVQBTAEUAUgAAAMxCCgBDAFUAUgBSAEUATgBUAEwATgBHAAAAAADgQwsAUgBFAE0ATwBUAEUA
+XwBVAFMARQBSAAAA/EMFAEYAXwBMAE4ARwAAAIBEBgBTAFQAQQBUAFUAUwAAAAAAIEMVAFAAUgBP
+AEMARQBTAFMAUwBUAEEAVABVAFMAXwBTAFUAQwBDAEUAUwBTAAAAUEUKAFAAQQBSAEEATQBTAFYA
+SQBFAFcAAAAAAFxDDQB2AF8ARgBvAHIAbQBzAFAAYQByAGEAbQBzAAAAlEYsAEkAbQBwAG8AcwBz
+AGkAYgBsAGUAIABkACcAbwB1AHYAcgBpAHIAIABsAGEAIAB2AHUAZQAgACIAdgBfAEYAbwByAG0A
+cwBQAGEAcgBhAG0AcwAiACAAIQAAAAAAlEQOAFAAQQBSAEEATQBTAEQATwBDAFUATQBFAE4AVAAA
+AAAA8EQKAEYAXwBUAFkAUABFAEYATwBSAE0AAAAAAMREPgBJAG0AcABvAHMAcwBpAGIAbABlACAA
+ZAAnAG8AdQB2AHIAaQByACAAbABlACAAZABvAGMAdQBtAGUAbgB0ACAAZABlACAAcABhAHIAYQBt
+AOkAdAByAGEAZwBlACAAZAB1ACAAZgBvAHIAbQB1AGwAYQBpAHIAZQAgACIAAAAAADRFBgBBAEMA
+VABJAE8ATgAAAAAABEUUAFAAUgBPAEMARQBTAFMAQQBDAFQASQBPAE4AXwBTAFUAQgBNAEkAVAAA
+AAAAfEUSAFAAUgBPAEMARQBTAFMAQQBDAFQASQBPAE4AXwBEAEUATgBZAAAAAADARgcAYQBuAG4A
+dQBsAGUAcgAAANxFFABQAFIATwBDAEUAUwBTAEEAQwBUAEkATwBOAF8AQwBBAE4AQwBFAEwAAAAA
+ALBFCwBzAGEAdgBlAGEAcwBtAG8AZABlAGwAAACYRRMAUABSAE8AQwBFAFMAUwBBAEMAVABJAE8A
+TgBfAE0ATwBEAEUATAAAAP//CwBGAF8ARQBTAFQATQBPAEQARQBMAEUAAADkRwkAUwBBAFYARQBN
+AE8ARABFAEwAAAAQRhMAQwBBAE4AVQBTAEUAUgBTAEEAVgBFAE4ARQBXAE0ATwBEAEUATAAAAHxG
+FwBQAFIATwBDAEUAUwBTAFMAVABBAFQAVQBTAF8ARgBPAFIAQgBJAEQARABFAE4AAABYRgsAcwBh
+AHYAZQBhAHMAZAByAGEAZgB0AAAA//8TAFAAUgBPAEMARQBTAFMAQQBDAFQASQBPAE4AXwBEAFIA
+QQBGAFQAAABURw4ARgBfAEUAUwBUAEIAUgBPAFUASQBMAEwATwBOAAAAAAD//wkAUwBBAFYARQBE
+AFIAQQBGAFQAAAAMRxMAQwBBAE4AVQBTAEUAUgBTAEEAVgBFAE4ARQBXAEQAUgBBAEYAVAAAAOBG
+DABjAG8AbQBwAGwAZQBtAGUAbgB0AGUAcgAAAAAAfEcSAEYATwBSAE0AUwBfAFQARQBNAFAARABP
+AEMAVQBNAEUATgBUAAAAAAAoRwoARABPAEMAVQBNAEUATgBUAEkARAAAAAAA//8SAEkAbgBpAHQA
+aQBhAGwAaQB6AGUARABvAGMAdQBtAGUAbgB0AAAAAAC4RxEATgBPAFQARQBTAFIASQBDAEgAVABF
+AFgAVABJAFQARQBNAAAA//8bAE4ATwBUAEUAUwBSAEkAQwBIAFQARQBYAFQAUABBAFIAQQBHAFIA
+QQBQAEgAUwBUAFkATABFAAAA//8SAE4ATwBUAEUAUwBWAEkARQBXAE4AQQBWAEkARwBBAFQATwBS
+AAAAAAD//w4ATgBPAFQARQBTAFYASQBFAFcARQBOAFQAUgBZAAAAAAANAAgAAAAAAOg1AAAFAPwP
+AAAAAIiCPp8YAAAAAACwABDFwxUAAAAAAAAAABgAAAAEAPgAeNHDFQAAAAAAAAAAAwAQADwAaCqM
+Ag0AAAAAAAgAAAA8B/gsRAAAAAAAAAAGAAAAoAEsBwAAAAA4AzgDAAAAAKABoAEAAAAAAAAAACwH
+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
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAGAAkCsAEJAhAGCQS4
+BCEABACgDAAABwBAAEwtAAC0RQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAEgAAAAkCdAIJAhAGBgAJAqwLCQKwAQkCrAsJ
+AtQrCQJkLAkEuAQQAAAAZCwAALxHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALBQTKe0uaRC/XQDdARGGtwAAAAAAAAAAAAAA
+AAAAAABkAAAAAAAAAAAAAAAAAAAAAgDUAAAAAADkIwAAAgABAP//AAAQAAAAAAAAAOhHAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAGxQTKe0uaRC/XQDdARGGtwAAAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAAAAAAAAgDUAAAA
+AADUKwAAAgABAP//AAAZABkABAAAABgtAADgRQEAAAAAAAQAAAAAAAAAAgAAAAAAAAAEAAAAAAAA
+ADBGAQAAAAAABQAAAAAAAAACAAAAAAAAABYAAABcRn6JAAAZACEABADwCgAACABAALAtAACARgAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAIABgAJArABCQIQBgkEuAQhAAQAsBoAAAcAQAAAAAAAmEYAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADABIAAAAJ
+AnQCCQIQBgYACQKsCwkCsAEJAqwLCQLUKwkCZCwJBLgEFgAAAORGsZEAABkAHABgA5gFAAADAFMA
+AAAAABBHBgAUAAAAJgAAChkAGQACAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAACAFAuAAAAAAAAAAAA
+AAAAAYAAAAAAAAAUACgAOAAAChQAYAA6AAAKFACcAHIAAAoUAAAAAAAAChQAAAAAAAAKFAAQAVQA
+AAoCAGguAAAAAAAAAAAAAAAAAYAAAAAAAAACALAuAAAAAAAAAAAAAAAAAYAAAAAAAAACAMguAAAA
+AAAAAAAAAAAAAYAAAAAAAAAUAGQBOAAAChQAnAFSAAAKFADwAVIAAAoCAOAuAAAAAAAAAAAAAAAA
+AYAAAAAAAAACABAvAAAAAAAAAAAAAAAAAYAAAAAAAAACACgvAAAAAAAAAAAAAAAAAYAAAAAAAAAC
+AEAvAAAAAAAAAAAAAAAAAYAAAAAAAAAUAEQCOAAAChQAfAI6AAAKFAC4AlIAAAoCAFgvAAAAAAAA
+AAAAAAAAAYAAAAAAAAAUAAwDUgAACgIAiC8AAAAAAAAAAAAAAAABgAAAAAAAAAIAqC8AAAAAAAAA
+AAAAAAABgAAAAAAAAAIAwC8AAAAAAAAAAAAAAAAFAAQG6C8AAAGAAAAAAAAAFABgAzgAAAoUAJgD
+UgAAChQA7ANSAAAKAgDYLwAAAAAAAAAAAAAAAAGAAAAAAAAAAgAIMAAAAAAAAAAAAAAAAAGAAAAA
+AAAAFABABFIAAAoCACAwAAAAAAAAAAAAAAAAAYAAAAAAAAACAEAwAAAAAAAAAAAAAAAAAYAAAAAA
+AAACAFgwAAAAAAAAAAAAAAAAAYAAAAAAAAACAHAwAAAAAAAAAAAAAAAAAYAAAAAAAAACAIgwAAAA
+AAAAAAAAAAAAAYAAAAAAAAACAKAwAAAAAAAAAAAAAAAAAYAAAAAAAAAUAJQEOAAAChQAzAQ4AAAK
+AgC4MAAAAAAAAAAAAAAAAAGAAAAAAAAAAgDgMAAAAAAAAAAAAAAAAAGAAAAAAAAAFAAEBTgAAAoC
+APgwAAAAAAAAAAAAAAAAAYAAAAAAAAACABgxAAAAAAAAAAAAAAAAAYAAAAAAAAAUADwFOAAACgIA
+MDEAAAAAAAAAAAAAAAABgAAAAAAAAAIAUDEAAAAAAAAAAAAAAAABgAAAAAAAABQAdAU4AAAKAgBo
+MQAAAAAAAAAAAAAAAAGAAAAAAAAAAgCIMQAAAAAAAAAAAAAAAAGAAAAAAAAAFACsBTgAAAoCAKAx
+AAAAAAAAAAAAAAAAAYAAAAAAAAACAMAxAAAAAAAAAAAAAAAAAYAAAAAAAAAUAOQFOAAACgIA2DEA
+AAAAAAAAAAAAAAABgAAAAAAAAAIA+DEAAAAAAAAAAAAAAAABgAAAAAAAABQAHAY4AAAKAgAQMgAA
+AAAAAAAAAAAAAAGAAAAAAAAAAgAwMgAAAAAAAAAAAAAAAAGAAAAAAAAAFABUBjgAAAoCAEgyAAAA
+AAAAAAAAAAAAAYAAAAAAAAACAGgyAAAAAAAAAAAAAAAAAYAAAAAAAAAUAIwGOAAACgIAgDIAAAAA
+AAAAAAAAAAABgAAAAAAAAAIAoDIAAAAAAAAAAAAAAAABgAAAAAAAABQAxAY4AAAKAgC4MgAAAAAA
+AAAAAAAAAAGAAAAAAAAAAgDYMgAAAAAAAAAAAAAAAAGAAAAAAAAAAgDwMgAAAAAAAAAAAAAAAAGA
+AAAAAAAAAgAIMwAAAAAAAAAAAAAAAAGAAAAAAAAAAgAgMwAAAAAAAAAAAAAAAAGAAAAAAAAAAgA4
+MwAAAAAAAAAAAAAAAAGAAAAAAAAAAgBQMwAAAAAAAAAAAAAAAAGAAAAAAAAAAgBoMwAAAAAAAAAA
+AAAAAAGAAAAAAAAAAgCAMwAAAAAAAAAAAAAAAAGAAAAAAAAAAgCYMwAAAAAAAAAAAAAAAAGAAAAA
+AAAAAgCwMwAAAAAAAAAAAAAAAAGAAAAAAAAAAgDIMwAAAAAAAAAAAAAAAAGAAAAAAAAAAgDgMwAA
+AAAAAAAAAAAAAAGAAAAAAAAAAgD4MwAAAAAAAAAAAAAAAAGAAAAAAAAAAgAQNAAAAAAAAAAAAAAA
+AAGAAAAAAAAAAgAoNAAAAAAAAAAAAAAAAAGAAAAAAAAAAgBANAAAAAAAAAAAAAAAAAGAAAAAAAAA
+AgBYNAAAAAAAAAAAAAAAAAGAAAAAAAAAAgBwNAAAAAAAAAAAAAAAAAGAAAAAAAAAAgCINAAAAAAA
+AAAAAAAAAAGAAAAAAAAAAgCgNAAAAAAAAAAAAAAAAAGAAAAAAAAAAgC4NAAAAAAAAAAAAAAAAAGA
+AAAAAAAAAgDQNAAAAAAAAAAAAAAAAAGAAAAAAAAAAgDoNAAAAAAAAAAAAAAAAAGAAAAAAAAAAgAA
+NQAAAAAAAAAAAAAAAAGAAAAAAAAAAgAYNQAAAAAAAAAAAAAAAAGAAAAAAAAAAgAwNQAAAAAAAAAA
+AAAAAAGAAAAAAAAAFAD8BjgAAAoCAEg1AAAAAAAAAAAAAAAAAYAAAAAAAAACAGg1AAAAAAAAAAAA
+AAAAAYAAAAAAAAACAIA1AAAAAKCGAQAAAAAAAwAAAAAAAAACAJg1AAAAAEBCDwAAAAAAAwAAAAAA
+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
+XgGrAfsBPAEDAAcAEAAKAAk3UzhTOVMxMFPNzVQACgAEAAAAQgAFABQAZl9MZWN0ZXVyc1BvdGVu
+dGllbHMFABUAR0FNQlBTX1Blb3BsZVRvSW5mb3JtAB8CXgGrAfsBPAEDAAcADAAFAAk3UzhTADgA
+CgAEAAAAJgAFABMAZl9BdXRldXJzUG90ZW50aWVscwBeAasB+wE8AQMABwAMAAUACTBTMEUAUgAK
+AAQAAABAAAUAFABmX0xlY3RldXJzUG90ZW50aWVscwUAEwBmX0F1dGV1cnNQb3RlbnRpZWxzAB8C
+XgGrAfsBPAEDAAcADAAFAAk3UzhTAM3NUgAKAAQAAABAAAUAFABmX0xlY3RldXJzUG90ZW50aWVs
+cwUAEwBmX0F1dGV1cnNQb3RlbnRpZWxzAB8CXgGrAfsBPAEDAAcADAAFAAk3UzhTAM3NOAAKAAQA
+AAAmAAUAEwBmX0F1dGV1cnNQb3RlbnRpZWxzAF4BqwH7ATwBAwAHAAwABQAJMFMwRQA6AAoABAAA
+ACgABQAVAEZvcm1zX0xhc3RWYWxpZFNlbmRUbwBeAasB+wE8AQMABwAMAAUACTBTMEUAzc1SAAoA
+BAAAAEAABQAUAGZfTGVjdGV1cnNQb3RlbnRpZWxzBQATAGZfQXV0ZXVyc1BvdGVudGllbHMAHwJe
+AasB+wE8AQMABwAMAAUACTdTOFMAzc1SAAoABAAAAEAABQAUAGZfTGVjdGV1cnNQb3RlbnRpZWxz
+BQATAGZfQXV0ZXVyc1BvdGVudGllbHMAHwJeAasB+wE8AQMABwAMAAUACTdTOFMApRo4AAoABAAA
+ACYABQATAGZfQXV0ZXVyc1BvdGVudGllbHMAXgGrAfsBPAEDAAcADAAFAAkwUzBFAFIACgAEAAAA
+QAAFABQAZl9MZWN0ZXVyc1BvdGVudGllbHMFABMAZl9BdXRldXJzUG90ZW50aWVscwAfAl4BqwH7
+ATwBAwAHAAwABQAJN1M4UwBeSFIACgAEAAAAQAAFABQAZl9MZWN0ZXVyc1BvdGVudGllbHMFABMA
+Zl9BdXRldXJzUG90ZW50aWVscwAfAl4BqwH7ATwBAwAHAAwABQAJN1M4UwCgF1IACgAEAAAAQAAF
+ABQAZl9MZWN0ZXVyc1BvdGVudGllbHMFABMAZl9BdXRldXJzUG90ZW50aWVscwAfAl4BqwH7ATwB
+AwAHAAwABQAJN1M4UwAAADgACgAEAAAAJgAFABQAZl9MZWN0ZXVyc1BvdGVudGllbHNeAasB+wE8
+AQMABwAMAAUACTBTMEUAOAAKAAQAAAAmAAUAFABmX0xlY3RldXJzUG90ZW50aWVsc14BqwH7ATwB
+AwAHAAwABQAJMFMwRQA4AAoABAAAACYABQAUAGZfTGVjdGV1cnNQb3RlbnRpZWxzXgGrAfsBPAED
+AAcADAAFAAkwUzBFADgACgAEAAAAJgAFABQAZl9MZWN0ZXVyc1BvdGVudGllbHNeAasB+wE8AQMA
+BwAMAAUACTBTMEUAOAAKAAQAAAAmAAUAFABmX0xlY3RldXJzUG90ZW50aWVsc14BqwH7ATwBAwAH
+AAwABQAJMFMwRQA4AAoABAAAACYABQAUAGZfTGVjdGV1cnNQb3RlbnRpZWxzXgGrAfsBPAEDAAcA
+DAAFAAkwUzBFADgACgAEAAAAJgAFABQAZl9MZWN0ZXVyc1BvdGVudGllbHNeAasB+wE8AQMABwAM
+AAUACTBTMEUAOAAKAAQAAAAmAAUAFABmX0xlY3RldXJzUG90ZW50aWVsc14BqwH7ATwBAwAHAAwA
+BQAJMFMwRQA4AAoABAAAACYABQAUAGZfTGVjdGV1cnNQb3RlbnRpZWxzXgGrAfsBPAEDAAcADAAF
+AAkwUzBFADgACgAEAAAAJgAFABQAZl9MZWN0ZXVyc1BvdGVudGllbHNeAasB+wE8AQMABwAMAAUA
+CTBTMEUAOAAKAAQAAAAmAAUAFABmX0xlY3RldXJzUG90ZW50aWVsc14BqwH7ATwBAwAHAAwABQAJ
+MFMwRQA4AAoABAAAACYABQAUAGZfTGVjdGV1cnNQb3RlbnRpZWxzXgGrAfsBPAEDAAcADAAFAAkw
+UzBFAAoAAAAIAHMAAwAAAAsACAAAAAAAAgAAAAIAAAARADQAAAAAAP//AQADAAgAAAATAEQAFwDI
+B3wAtCtqAyQulgTcEY0FPDpcByQRqAd4Bd0HoAWfCAoAAAA=
+</rawitemdata></item>
+<item name='$AssistVersion'><datetime>20170307T090543,99-03</datetime></item>
+<item name='$POID'><datetime>20170307T090550,17-03</datetime></item></note>
+

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004968DB'>
+<noteinfo noteid='e26' unid='654D452E590B5220C1257C8A00555E87' sequence='19'>
+<created><datetime dst='true'>20140225T173227,59+02</datetime></created>
+<modified><datetime>20171029T102205,99-03</datetime></modified>
+<revised><datetime>20170307T090550,57-03</datetime></revised>
+<lastaccessed><datetime>20171029T102158,99-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102158,99-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='PSAC03_ExportXML_3GCard_Delay' summary='false' sign='true'><number
+>0</number></item>
+<item name='PSAC03_MAJReflex_AgentTimeout' summary='false' sign='true'><number
+>0</number></item>
+<item name='MOBILE_MAJReflex_AgentTimeout' summary='false' sign='true'><number
+>0</number></item>
+<item name='MOBILE_MAJLDAPReflex_Timeout' summary='false' sign='true'><number
+>0</number></item>
+<item name='TELETRA_AttachE0C1_RecallDelay' summary='false' sign='true'><number
+>0</number></item>
+<item name='TELETRA_AttachE0C1_RecallFreq' summary='false' sign='true'><number
+>0</number></item>
+<item name='TELETRA_AttachE0C2_RecallDelay' summary='false' sign='true'><number
+>0</number></item>
+<item name='TELETRA_AttachE0C2_RecallFreq' summary='false' sign='true'><number
+>0</number></item>
+<item name='TELETRA_E1_RecallDelay' summary='false' sign='true'><number>0</number></item>
+<item name='TELETRA_E1_RecallFreq' summary='false' sign='true'><number>0</number></item>
+<item name='TELETRA_E2_RecallDelay' summary='false' sign='true'><number>0</number></item>
+<item name='TELETRA_E2_RecallFreq' summary='false' sign='true'><number>0</number></item>
+<item name='TELETRA_E3_RecallDelay' summary='false' sign='true'><number>0</number></item>
+<item name='TELETRA_E3_RecallFreq' summary='false' sign='true'><number>0</number></item>
+<item name='TELETRA_E4_RecallDelay' summary='false' sign='true'><number>0</number></item>
+<item name='TELETRA_E4_RecallFreq' summary='false' sign='true'><number>0</number></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>sm_DACARE_FormParams</text><text>sm_DACARE_FormParams</text></textlist></item>
+<item name='$Comment' sign='true'><text>Paramétrage client spécifique au formulaire</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text> sm_FLOTTES_FormParams</text></item>
+<item name='DACARE_CharteConfid_URL' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><text>DACARE_CharteConfid_URL</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAqBAoL/WgACAAAA
+AAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA
+AAAAlISgBQAAoAUMAAAAAAABAAAABAAAAIMEAgDdBgEA+//7/ywAIAAAAAICAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAEAoeL/AAAAAAAAAFz/PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAOAAAAAAAAAAEAAAoAAAAAAQAAAAAA3gYBAPv/ow6gBSgAPAAAAAAAAgCkEgAAoAWzEAAA
+VScREQEBPwCBAoL/WgADAAAAAAAAAAAArwWzEK8FAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAhgEAAAAAVIcAAAAAAAAAAAAAAAABAAAABAAAAIMEAwDdBgAAhf+F/wgA
+BQABCdIIAQD///8A3gYAAIX/0wgBAO/v7wCkEgABsxDrMQAAVSMREQECPwCBAoL/WgAEAAAAAAAA
+AAAAFwfrMRcHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgUAAAAA
+VJR3AQAAdwEAAAAAAAABAAAABAAAAIMEBACF/yEABQEACkNoYXJ0ZSBkZSBjb25maWRlbnRpYWxp
+dIIA0wgBAO/v7wCkEgEAoAWzEAAAVSMREQEBVwCBAoL/WgAFAAAAAAAAAAAAEQazEBEGAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVIRxAAAAcQAAAAAAAAAB
+AAAABAAAAIMEBQDdBgAAhf+F/x4ABQEBCExpZW4gdmVycyBsZSBkb2N1bWVudDrSCAEA////AN4G
+AACF/9MIAQAAmtYApBIBAbMQ6zEAAFUiEREBAQAAgQKC/1oABgAAAAAAAAAAAMIQ6zHCEAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYBAAAAAFSHAAAAAAAAAAAAAAAA
+AQAAAAQAAACDBAYAhf8IAAEAAArdBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/PACKAAAF
+ADACAAAAAAAAAgUAAAgAAAAAAAAAABcAAAAAAERBQ0FSRV9DaGFydGVDb25maWRfVVJMAHr/MgAX
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAREFDQVJFX0NoYXJ0ZUNvbmZpZF9VUkwAYg4BAIQAAAAAAAAA
+AADeBgAAiv+F/wgAAQAACqUGAAAAAIECgwQCAIX/CAABAAAK
+</rawitemdata></item></note>
+

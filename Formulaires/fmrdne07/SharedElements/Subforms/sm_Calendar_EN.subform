@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C800495382'>
+<noteinfo noteid='76e' unid='436D08E46ED0AF7AC12572360054F3BB' sequence='23'>
+<created><datetime dst='true'>20061130T172754,19+02</datetime></created>
+<modified><datetime>20171029T102103,18-03</datetime></modified>
+<revised><datetime>20140609T101028,71-03</datetime></revised>
+<lastaccessed><datetime>20171029T102059,53-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102059,53-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQASgUAAAAAAAAAAAAAAAAAAAAAAADc/1wF+f9KBSBOAAAAAAAAAAAvLyBDYWxl
+bmRyaWVycw0NLy8gLS0gRGF0ZSBkdSBqb3VyDXZhciBjYWxlbmRyaWVyX2RhdGVqb3UgPSBuZXcg
+Q2FsZW5kYXJQb3B1cCgiY2FsX2RhdGpvdSIpOw12YXIgY2FsZW5kcmllcl9oZXVyZSA9IG5ldyBD
+YWxlbmRhclBvcHVwKCJjYWxfdGltZSIpOw12YXIgY2FsZW5kcmllcl9kYXRlbG9pbiA9IG5ldyBD
+YWxlbmRhclBvcHVwKCJjYWxfZGF0bG9pbiIpOw0NY2FsZW5kcmllcl9kYXRlam91LnNldE1vbnRo
+TmFtZXMoJ0phbnVhcnknLCdGZWJydWFyeScsJ01hcmNoJywnQXByaWwnLCdNYXknLCdKdW5lJywn
+SnVseScsJ0F1Z3VzdCcsJ1NlcHRlbWJlcicsJ09jdG9iZXInLCdOb3ZlbWJlcicsJ0RlY2VtYmVy
+Jyk7DWNhbGVuZHJpZXJfZGF0ZWpvdS5zZXREYXlIZWFkZXJzKCdTdScsICdNbycsJ1R1JywnV2Un
+LCAnVGgnLCdGcicsJ1NhJyk7DWNhbGVuZHJpZXJfZGF0ZWpvdS5zZXRXZWVrU3RhcnREYXkoMCk7
+DWNhbGVuZHJpZXJfZGF0ZWpvdS5zZXRUb2RheVRleHQoIlRvZGF5Iik7DWNhbGVuZHJpZXJfZGF0
+ZWpvdS5zZXRDc3NQcmVmaXgoIkNBTCIpOw1jYWxlbmRyaWVyX2RhdGVqb3Uub2Zmc2V0WCA9IDA7
+DWNhbGVuZHJpZXJfZGF0ZWpvdS5vZmZzZXRZID0gMjU7DWNhbGVuZHJpZXJfZGF0ZWpvdS5hdXRv
+SGlkZSgpOw0NDS8vIC0tIEhldXJlDWNhbGVuZHJpZXJfaGV1cmUuc2V0Q3NzUHJlZml4KCJDQUwi
+KTsNY2FsZW5kcmllcl9oZXVyZS5vZmZzZXRYID0gMDsNY2FsZW5kcmllcl9oZXVyZS5vZmZzZXRZ
+ID0gMjU7DWNhbGVuZHJpZXJfaGV1cmUuc2V0RGlzcGxheVR5cGUoImhvdXIiKTsNY2FsZW5kcmll
+cl9oZXVyZS5zZXRUaW1lVGV4dCgiSGV1cmUiKTsNY2FsZW5kcmllcl9oZXVyZS5hdXRvSGlkZSgp
+Ow0NY2FsZW5kcmllcl9kYXRlbG9pbi5zaG93TmF2aWdhdGlvbkRyb3Bkb3ducygpOw1jYWxlbmRy
+aWVyX2RhdGVsb2luLnNldE1vbnRoTmFtZXMoJ0phbnVhcnknLCdGZWJydWFyeScsJ01hcmNoJywn
+QXByaWwnLCdNYXknLCdKdW5lJywnSnVseScsJ0F1Z3VzdCcsJ1NlcHRlbWJlcicsJ09jdG9iZXIn
+LCdOb3ZlbWJlcicsJ0RlY2VtYmVyJyk7DWNhbGVuZHJpZXJfZGF0ZWxvaW4uc2V0RGF5SGVhZGVy
+cygnU3UnLCAnTW8nLCdUdScsJ1dlJywgJ1RoJywnRnInLCdTYScpOw1jYWxlbmRyaWVyX2RhdGVs
+b2luLnNldFdlZWtTdGFydERheSgwKTsNY2FsZW5kcmllcl9kYXRlbG9pbi5zZXRUb2RheVRleHQo
+IlRvZGF5Iik7DWNhbGVuZHJpZXJfZGF0ZWxvaW4uc2V0Q3NzUHJlZml4KCJDQUwiKTsNY2FsZW5k
+cmllcl9kYXRlbG9pbi5vZmZzZXRYID0gMDsNY2FsZW5kcmllcl9kYXRlbG9pbi5vZmZzZXRZID0g
+MjU7DWNhbGVuZHJpZXJfZGF0ZWxvaW4uYXV0b0hpZGUoKTsAX/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_Calendar_EN</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAo=
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_Calendar_EN</text><text
+>sm_Calendar_EN</text></textlist></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

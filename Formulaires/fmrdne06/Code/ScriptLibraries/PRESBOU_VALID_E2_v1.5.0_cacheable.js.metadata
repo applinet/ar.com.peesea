@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1002" sequence="20" unid="A3FEA04DE0020C68C1257F03004B1FB0">
+<created><datetime dst="true">20151120T154033,12+02</datetime></created>
+<modified><datetime>20171029T102001,64-03</datetime></modified>
+<revised><datetime>20170911T114755,91-03</datetime></revised>
+<lastaccessed><datetime>20171029T101955,49-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101955,49-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$TITLE" sign="true"><text>PRESBOU_VALID_E2_v1.5.0_cacheable.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$POID"><datetime>20170911T114755,91-03</datetime></item></note>

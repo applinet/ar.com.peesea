@@ -1,0 +1,35 @@
+'++LotusScript Development Environment:2:5:(Options):0:66
+Option Public
+Option Declare
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Initialize
+Declare Sub startTicksClock(strTicksClockName)
+Declare Sub stopTicksClock(strTicksClockName)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+' Liste des ticks
+Dim dblTicksClocks List As Double
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:startTicksClock:2:8
+' Création d'un compteur de ticks
+Sub startTicksClock(strTicksClockName)
+	dblTicksClocks(strTicksClockName) = Getthreadinfo(6)
+End Sub
+'++LotusScript Development Environment:2:2:stopTicksClock:2:8
+' Arret d'un compteur de ticks
+Sub stopTicksClock(strTicksClockName)
+	
+	' (Nombre de ticks de fin - Nombre de ticks de début) / (Nombre de ticks par seconde)
+	Dim t As Double
+	t = (Getthreadinfo(6) - dblTicksClocks(strTicksClockName)) / Getthreadinfo(7)
+	
+	' Affichage du résultat
+	Msgbox "Compteur de ticks """ + strTicksClockName + """: " + Cstr(t)
+	
+End Sub

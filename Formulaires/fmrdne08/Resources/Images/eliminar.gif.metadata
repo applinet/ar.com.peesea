@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8004968DB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="5de" sequence="30" unid="1AFA3CE140774F1FC1256C72005007FA">
+<created><datetime dst="true">20021115T163409,22+02</datetime></created>
+<modified><datetime>20171029T102155,89-03</datetime></modified>
+<revised><datetime>20170307T090544,83-03</datetime></revised>
+<lastaccessed><datetime>20171029T102153,12-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102153,12-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ANGEL GARCIA PUJALTE - E168524/OU=users/O=PSA</name><name>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name>CN=NICOLAS ENRICO LAURENZANO - E363578/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>eliminar.gif</text></item>
+<item name="$ImagesWide"><number>1</number></item>
+<item name="$ImagesHigh"><number>1</number></item>
+<item name="$ImagesColorize"><number>0</number></item>
+
+<item name="$ImageNames"><text>eliminar.gif</text></item>
+<item name="$DesignerVersion"><text>5</text></item>
+<item name="$EditFilePath"><text>C:\Users\E363578\AppData\Local\Temp\notes4A3670\~eliminar.gif</text></item>
+<item name="$Flags"><text>34CiQ</text></item></note>

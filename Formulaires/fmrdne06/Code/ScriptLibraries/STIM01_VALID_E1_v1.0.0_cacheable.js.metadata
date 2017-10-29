@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="e1a" sequence="24" unid="6A5A466C9E795737C1257D190049FD1D">
+<created><datetime dst="true">20140718T152809,25+02</datetime></created>
+<modified><datetime>20171029T101959,70-03</datetime></modified>
+<revised><datetime>20170911T114753,23-03</datetime></revised>
+<lastaccessed><datetime>20171029T101953,90-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101953,90-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$TITLE" sign="true"><text>STIM01_VALID_E1_v1.0.0_cacheable.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$POID"><datetime>20170911T114753,23-03</datetime></item></note>

@@ -1,0 +1,340 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Public Class LogEntry
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette classe représente une entrée dans la base de log applicative
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Public Class LogEntry
+	
+	' - - - - - - - - - -
+	' Membres
+	' - - - - - - - - - -
+	Private myLogDB As NotesDatabase 
+	
+	Public LogType As String
+	
+	Public DBName	As String
+	Public FormCode As String
+	Public AgentName As String
+	Public LibName As String
+	Public ClassName As String
+	Public SubName As String
+	Public DocID As String
+	Public UserName As String
+	
+	Public ErrCode As Integer
+	Public ErrLine As Integer
+	
+	Public ErrMsg As String
+	
+	Private ErrDebugArray() As String
+	
+	
+	' - - - - - - - - - -
+	' Méthodes
+	' - - - - - - - - - -
+	
+	' - - - - - - - - - - 
+	' Constructeur
+	' - - - - - - - - - -
+	Public Sub New(paramLogServer As String, paramLogDBPath As String, paramLocal As Boolean)
+		
+		' Gestion d'erreur
+		On Error Goto NewErrorManagement
+		
+		' Initialisation
+		Dim CurrentSession As New NotesSession
+		Dim CurrentDB As NotesDatabase		
+		Dim CurrentAgent As NotesAgent	
+		Dim CurrentDoc As NotesDocument
+		Dim CurrentUser As NotesName
+		
+		Set CurrentDB = CurrentSession.CurrentDatabase		
+		Set CurrentAgent = CurrentSession.CurrentAgent
+		Set CurrentDoc = CurrentSession.DocumentContext
+		Set CurrentUser = New NotesName(CurrentSession.EffectiveUserName)
+		
+		Me.DBName = CurrentDB.Title
+		Me.AgentName = CurrentAgent.Name
+		
+		If Not CurrentDoc Is Nothing Then
+			Me.DocID = CurrentDoc.UniversalID	
+		End If
+		
+		If Not CurrentUser Is Nothing Then
+			Me.UserName = CurrentUser.Canonical
+		End If
+		
+		
+		Redim Me.ErrDebugArray(0) As String
+		
+		
+		' Si on ne spécifie ni le serveur, ni la base de log,
+		' cela signifie que l'on appelle depuis un agent de la base de log
+		If((paramLogServer = "") And (paramLogDBPath = "") And (paramLocal)) Then
+			Dim Session As New NotesSession	
+			Set Me.myLogDB = Session.CurrentDatabase
+			Me.DBName = myLogDB.Title
+			
+		' On est dans une base différente de la base de log
+		Else
+			
+			' On ouvre la base de log
+			Set Me.myLogDB = New NotesDatabase(paramLogServer, paramLogDBPath)
+			
+			' Si la base n'a pas pu être ouverte, on envoie un message dans le journal
+			If(Not Me.myLogDB.IsOpen) Then
+				Messagebox(Me.DBName + ": Impossible d'ouvrir la base de log '" + paramLogDBPath + "' sur le serveur '" + paramLogServer + "'")			
+			End If
+		End If		
+		
+		
+		' C'est fini, on sort		
+		Exit Sub
+		
+		
+		' - - - - - - - - - - - - - - -
+		' Gestion d'erreurs
+		' - - - - - - - - - - - - - - -
+NewErrorManagement:
+		Messagebox(Me.DBName + " - Bibliothèque LogEntry - Class LogEntry - New - Erreur " + Str(Err) + " - Ligne " + Str(Erl) + " - " + Error$)		
+		Exit Sub	
+	End Sub		
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' Cette procédure ce charge d'enregistrer le document de log	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Sub Save
+		
+		' Gestion d'erreur		
+		On Error Goto SaveErrorManagement
+		
+		' On nettoye les chaines de caratères
+		Me.LogType			= Trim(Me.LogType)
+		Me.DBName			= Trim(Me.DBName)
+		Me.FormCode		= Trim(Me.FormCode)
+		Me.AgentName		= Trim(Me.AgentName)
+		Me.LibName			= Trim(Me.LibName)
+		Me.ClassName		= Trim(Me.ClassName)
+		Me.SubName		= Trim(Me.SubName)
+		Me.DocID				= Trim(Me.DocID)
+		
+		Me.ErrMsg			= Trim(Me.ErrMsg)
+		
+		
+		' Si l'objet représentant la base à été créé et que la base a été ouverte sans problème
+		If((Not Me.myLogDB Is Nothing) And Me.myLogDB.IsOpen)Then
+			' On créé un nouveau document
+			Dim LogEntry As New NotesDocument(Me.myLogDB)
+			LogEntry.Form = "LogEntry"
+			
+			LogEntry.f_LogType		= Me.LogType
+			
+			logEntry.f_LogTime		= Now
+			LogEntry.f_DBName		= Me.DBName
+			LogEntry.f_FormCode		= Me.FormCode
+			logEntry.f_AgentName	= Me.AgentName
+			logEntry.f_LibName		= Me.LibName
+			logEntry.f_ClassName	= Me.ClassName
+			LogEntry.f_SubName		= Me.SubName
+			LogEntry.f_DocID			= Me.DocID
+			LogEntry.f_User				= Me.UserName
+			
+			LogEntry.f_ErrCode		= Me.ErrCode
+			LogEntry.f_ErrLine			= Me.ErrLine			
+			LogEntry.f_LogMsg		= Me.ErrMsg
+			LogEntry.f_ErrDebug		= Fulltrim(Me.ErrDebugArray)
+			
+			' On enregistre le document
+			Call LogEntry.Save(False, False)
+			
+			
+		' Si la base n'a pas été ouverte
+		Else
+			
+			' On créé une chaine de caractères à retourner
+			Dim MessageString As String
+			
+			' C'est soit une erreur, soit une alerte
+			Select Case Trim(Me.LogType)
+			Case "Error":			MessageString = "LogEntry - Erreur"				
+			Case "Warning":		MessageString = "LogEntry - Alerte"
+			Case "Message":	MessageString = "LogEntry - Message"
+			Case Else:				MessageString = "LogEntry"
+			End Select
+			
+			' Si possible on ajoute le nom de la base			
+			If(Me.DBName <> "") Then
+				MessageString = MessageString	 + " - Base " + Me.DBName
+			End If
+			
+			' Si possible on ajoute le nom du formulaire
+			If(Me.FormCode <> "") Then
+				MessageString = MessageString + " - Formulaire " + Me.FormCode
+			End If
+			
+			' Si possible on ajoute le nom de l'agent
+			If(Me.AgentName <> "") Then
+				MessageString = MessageString + " - Agent " + Me.AgentName
+			End If
+			
+			' Si possible on ajoute le nom de la bibliothèque
+			If(Me.LibName <> "") Then
+				MessageString = MessageString + " - Bibliothèque " + Me.LibName
+			End If
+			
+			' Si possible on ajoute le nom de la classe
+			If(Me.ClassName <> "") Then
+				MessageString = MessageString + " - Classe " + Me.ClassName
+			End If
+			
+			' Si possible on ajoute le nom de la procédure/fonction
+			If(Me.SubName <> "") Then
+				MessageString = MessageString + " - Procédure " +Me.SubName
+			End If
+			
+			' Si possible on ajoute l'ID du document
+			If(Me.DocID <> "") Then
+				MessageString = MessageString + " - Document " +Me.DocID
+			End If
+			
+			' Si possible on ajoute le nom de l'utilisateur
+			If(Me.UserName <> "") Then
+				MessageString = MessageString + " - Utilisateur " +Me.UserName
+			End If
+			
+			' Si possible on ajoute la ligne de l'erreur
+			If(Me.ErrLine > 0) Then
+				MessageString = MessageString + " - Ligne " + Str(Me.ErrLine)
+			End If
+			
+			' Si possible on ajoute le code de l'erreur
+			If(Me.ErrCode > 0) Then
+				MessageString = MessageString + " - Code " + Str(Me.ErrCode)
+			End If
+			
+			' Si possible on ajoute le texte du message
+			If(Me.ErrMsg <> "") Then
+				MessageString = MessageString + " - " + Me.ErrMsg
+			Else
+				MessageString = MessageString + " - Aucun message défini !"
+			End If
+			
+			' On affiche le message			
+			Messagebox(MessageString)
+			
+		End If
+		
+		
+		' C'est fini, on sort
+		Exit Sub		
+		
+		
+		' - - - - - - - - - - - - - - 
+		' Gestion d'erreurs
+		' - - - - - - - - - - - - - - 
+SaveErrorManagement:
+		Messagebox(Me.DBName + " - Bibliothèque LogEntry - Class LogEntry - Save - Erreur " + Str(Err) + " - Ligne " + Str(Erl) + " - " + Error$)		
+		Exit Sub	
+	End Sub
+	
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' Cette procédure ce charge d'effacer les valeurs 
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Sub Clear
+		
+		' Gestion d'erreur		
+		On Error Goto ClearErrorManagement
+		
+		' Initialisation		
+		Dim CurrentSession As New NotesSession		
+		Dim CurrentDB As NotesDatabase		
+		Dim CurrentAgent As NotesAgent	
+		Dim CurrentDoc As NotesDocument
+		Dim CurrentUser As NotesName
+		
+		Set CurrentDB = CurrentSession.CurrentDatabase		
+		Set CurrentAgent = CurrentSession.CurrentAgent
+		Set CurrentDoc = CurrentSession.DocumentContext
+		Set CurrentUser = New NotesName(CurrentSession.EffectiveUserName)
+		
+		
+		' On réinitialise
+		Me.LogType		= ""
+		Me.DBName		= CurrentDB.Title
+		Me.FormCode	= ""
+		Me.AgentName	= CurrentAgent.Name
+		Me.LibName		= ""
+		Me.ClassName	= ""
+		Me.SubName	= ""
+		
+		If Not CurrentDoc Is Nothing Then
+			Me.DocID 		= CurrentDoc.UniversalID			
+		Else
+			Me.DocID		= ""
+		End If
+		
+		If Not CurrentUser Is Nothing Then
+			Me.UserName	= CurrentUser.Canonical
+		Else
+			Me.UserName	= ""
+		End If
+		
+		Me.ErrCode		= 0
+		Me.ErrLine		= 0
+		Me.ErrMsg		= ""
+		
+		Redim Me.ErrDebugArray(0) As String
+		Me.ErrDebugArray(0) = ""
+		
+		
+		' C'est fini, on sort
+		Exit Sub		
+		
+		
+		' - - - - - - - - - - - - - - 
+		' Gestion d'erreurs
+		' - - - - - - - - - - - - - - 
+ClearErrorManagement:
+		Messagebox(Me.DBName + " - Bibliothèque LogEntry - Class LogEntry - Clear - Erreur " + Str(Err) + " - Ligne " + Str(Erl) + " - " + Error$)		
+		Exit Sub	
+	End Sub
+	
+	
+	
+	
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' Cette procédure ce charge d'ajouter une ligne au texte de debug
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Sub AddDebugLine(paramLine As String)
+		
+		' Gestion d'erreur		
+		On Error Goto AddDebugLineErrorManagement
+		
+		' On redimensionne le tableau
+		Redim Preserve Me.ErrDebugArray(Ubound(Me.ErrDebugArray) + 1) As String
+		Me.ErrDebugArray(Ubound(Me.ErrDebugArray)) = paramLine
+		
+		' C'est fini, on sort
+		Exit Sub		
+		
+		
+		' - - - - - - - - - - - - - - 
+		' Gestion d'erreurs
+		' - - - - - - - - - - - - - - 
+AddDebugLineErrorManagement:
+		Messagebox(Me.DBName + " - Bibliothèque LogEntry - Class LogEntry - AddDebugLine - Erreur " + Str(Err) + " - Ligne " + Str(Erl) + " - " + Error$)		
+		Exit Sub	
+	End Sub	
+End Class

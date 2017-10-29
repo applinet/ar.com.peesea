@@ -1,0 +1,96 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+Use "Forms_Constants"
+
+Use "LogEntry"
+Use "Forms_Libs"
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Initialize
+Declare Private Sub Hooks_HandleError(pSubName As String)
+Declare Function Hook_Recall_GetDate(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+End Sub
+'++LotusScript Development Environment:2:2:Hooks_HandleError:5:8
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+'	Cette procédure se charge d'enregistrer les messages d'erreur. Elle ne sert qu'a allèger les codes
+' 										en regroupant les lignes identiques
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Private Sub Hooks_HandleError(pSubName As String)
+	
+	' On propage les erreurs si neccessaire
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+		
+	Else
+		Dim LogEntry As New LogEntry
+		LogEntry.LogType			= LOGLEVEL_EMERG%
+		LogEntry.LibName			= "PerfRHCore_Hooks_Recall"
+		LogEntry.SubName		= pSubName
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$
+		
+		' On fait remonter l'erreur
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+		
+	End If
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:Hook_Recall_GetDate:5:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Retourne la date de début de relance d'un document
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function Hook_Recall_GetDate(pDocument As NotesDocument, pParamDocument As NotesDocument) As Variant
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 								Variables, initialisation
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Dim TempVar As Variant
+	Dim TempItem As NotesItem
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Traitement
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	' Récupération du paramètre de délai d'attente
+	Set TempItem = pParamDocument.GetFirstItem("Recall_StartAfter")
+	If TempItem Is Nothing Then
+		Error lsERR_NOTES_ITEM_MISSING, "Champ de paramétrage introuvable ! (""Recall_StartAfter"")"
+	Elseif Trim(TempItem.Text) = "" Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage vide ! (""Recall_StartAfter"")"
+	Elseif Cint(Trim(TempItem.Text)) < 0 Then
+		Error lsERR_NOTES_ERROR, "Champ de paramétrage mal renseigné ! (""Recall_StartAfter"")"
+	End If
+	
+	TempVar = Cdat(Left(pDocument.F_HISTODATES(0),10)) + Cint(pParamDocument.Recall_StartAfter(0))
+	
+	Hook_Recall_GetDate = TempVar
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 											Gestion d'erreurs
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+	Hooks_HandleError("Hook_Recall_GetDate")
+	Exit Function
+	
+End Function

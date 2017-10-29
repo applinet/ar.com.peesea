@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8004937EB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="d06" sequence="35" unid="42BBF96A8E538020C1257A010040B59D">
+<created><datetime dst="true">20120517T134647,97+02</datetime></created>
+<modified><datetime>20171029T101958,40-03</datetime></modified>
+<revised><datetime>20170911T114752,51-03</datetime></revised>
+<lastaccessed><datetime>20171029T101953,12-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101953,12-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$TITLE" sign="true"><text>VLIVE_VALID_E2_v1.0_cacheable.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$POID"><datetime>20170911T114752,51-03</datetime></item></note>

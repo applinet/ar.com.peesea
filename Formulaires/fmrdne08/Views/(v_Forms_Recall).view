@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004968DB'>
+<noteinfo noteid='c46' unid='5360F2A2C6F2572DC12577970032EC4D' sequence='51'>
+<created><datetime dst='true'>20100907T111612,93+02</datetime></created>
+<modified><datetime>20171029T102203,65-03</datetime></modified>
+<revised><datetime>20170307T090547,85-03</datetime></revised>
+<lastaccessed><datetime>20171029T102157,60-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102157,60-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_Forms_Recall)|v_Forms_Recall</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+GAECACAACgBmX1R5cGVGb3JtBQAKAGZfVHlwZUZvcm0DAAIADAACACQypAADAAIADgACACQzkABW
+AQMABQAuACkABQAKAAIAAgAJAAQAZl9UeXBlRm9ybSQyJDMkQ29uZmxpY3QkUkVGAAQABAAAAIAA
+BQAEAEZvcm0BAAwAbV9Gb3JtUGFyYW1zCwIEAAUAEgBGb3Jtc19UZW1wRG9jdW1lbnQBAAEAMQAL
+AgQAHAIFAAoAZl9UeXBlRXRhdGIBAQANAElOVEVSTUVESUFJUkUACgIEABwCBQAJACRDb25mbGlj
+dABoAR4BHAIDAAcAKgAjAAlMMVMzUzRTNlM3UzlTMTBTMTJTMTNTMThTMTlTMjFTMjJTAA==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+KQADAABEAGYAAAAKAIBmAAoAAgCAZgAMAAIAZl9UeXBlRm9ybSQyJDM=
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAUAiAAAAFZDAQAKAAQAIgAAADMABQAOCIIAAAAAAAAAAAICAAAAVkMBAAIAFQAOAAAAdQAG
+AA4IggAAAAAAAAAAAgIAAABWQwEAAgAQABwAAADQAAcADgiAAAAAAAAAAAACAgAAAGZfVHlwZUZv
+cm1Gb3JtIgACACAACgBmX1R5cGVGb3JtBQAKAGZfVHlwZUZvcm0DACQyRGVybmmKcmUgbW9kaWZp
+Y2F0aW9uDgACAAwAAgAkMqQAAwAkM0RvY3VtZW50VW5pcXVlSUQcAAIADgACACQzkABWAQMABwAM
+AAUACTBTMEUAJgABAAAAAQEACQEAAAoBAQ4KAAAvAK0rAQABAAEAAAAAAAAAAABXQwEACggAAAAA
+AAAAAAAAAAAAAAAAAQAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAoIAAAAAAAAAAAAAAAAAAAA
+AAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAKCAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//
+AAAAAAAAAAAAAAAAAABCABAAAAABAP///wABAPf39wABAAAAAAAAAAAAAAAAAAEA////AAEA////
+AAAAAQAAAAAAAQCAgIAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Tahoma</text><text>6</text><text>38</text><text>Tahoma</text><text>7</text><text
+>38</text><text>Tahoma</text></textlist></item>
+<item name='$Comment' sign='true'><text>Vue des documents pour la relance des valideurs</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

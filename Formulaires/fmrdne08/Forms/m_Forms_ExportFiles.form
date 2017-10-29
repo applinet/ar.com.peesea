@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004968DB'>
+<noteinfo noteid='e22' unid='DE8F3F981FF5B957C1257C930051E15A' sequence='17'>
+<created><datetime dst='true'>20140306T165421,06+02</datetime></created>
+<modified><datetime>20171029T102205,97-03</datetime></modified>
+<revised><datetime>20170307T090550,87-03</datetime></revised>
+<lastaccessed><datetime>20171029T102158,99-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102158,99-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><text>m_Forms_ExportFiles</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>C</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$ConflictAction'><text>2</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_Forms_ExportFiles</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAYAAACDBAEA3QYAAIX/hf8IAAEAAgrSCAEA
+/wAAAN4GAACF/4ECgv9aAAIAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAQAAAACUhwAAAAAAAAAAAAAAAAEAAAAEAAAAgwQCAN0GAACF/4X/
+ZwABAAIKQ2UgbWFzcXVlIHNlcnQghSBsYSBjcoJhdGlvbiBkZSBkb2N1bWVudCBjb250ZW5hbnQg
+dW4gZmljaGllciBkJ2V4cG9ydCBwbGFuaWZpgiwgYXR0YWNogiBlbiBQSi4A0ggBAP8AAADeBgAA
+hf8=
+</rawitemdata></item></note>
+

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='e52' unid='B82D01842EE7A6B0C1257D1700328208' sequence='22'>
+<created><datetime dst='true'>20140716T111140,88+02</datetime></created>
+<modified><datetime>20171029T101959,94-03</datetime></modified>
+<revised><datetime>20170911T114752,99-03</datetime></revised>
+<lastaccessed><datetime>20171029T101954,12-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101954,12-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FlagsExt' sign='true'><text/></item>
+<item name='$JavaCompilerSource' sign='true'><text>1.3</text></item>
+<item name='$JavaCompilerTarget' sign='true'><text>1.2</text></item>
+<item name='$Flags'><text>sj34Q</text></item>
+<item name='$PublicAccess' sign='true'><text>1</text></item>
+<item name='$AssistAction' sign='true'>
+<rawitemdata type='10'>
+k/9hAA8AIAAfAAEAAAAAAAAAVVJMUmVhZGVyLmNsYXNzQzpcVXNlclxFMjk3Nzk4XExvdHVzXE5v
+dGVzXERhdGElJXNvdXJjZSUlLmphcgAlJW9iamVjdCUlLmphcgAAAAA=
+</rawitemdata></item>
+<item name='$FILE' summary='true' sign='true' seal='true'><object><file hosttype='msdos'
+ compression='none' flags='sign' encoding='none' name='%%source%%.jar' size='650'>
+<created><datetime dst='true'>20090320T101957,68+02</datetime></created>
+<modified><datetime dst='true'>20140428T155800,84+02</datetime></modified><filedata
+>
+UEsDBBQACAAIADV/nEQAAAAAAAAAAAAAAAAOAAAAVVJMUmVhZGVyLmphdmHtVLFu2zAQnTnoHw5Z
+SgEBk7FF4KFw06ZACxh2vXVhqbNFVCYF8hTHKPLvPYmSrTRV0gztVAOWjuR7p3ePR9pd7QOBD1ul
+a21KVCVRrW74ce3I0uEqs9OQJcbau4iTIN1Qqd7yY2V8/QxsHTE4vcOFjnHvQzEPWCBr0FWcJJrK
+MkTtkEpfxE7TB6RJOE9XA+cdbnRTUUuZdzOTrIZspZIbaw5ZTVY33yprwFSsFdbLT0vUBQb4kWXi
+4gLee2fIegcB3a0/aEdQYYTCO/e1ubzENzwIKTJNnYJwXCleNQ7bpCC1Md306wjaeXfYYZ6J/tsr
+CtZtgcuVfVgzJ2cNQtiNbAcwm8HZWc4yqAmOQ1YuxKPCoa0yuQIzcLiHRxCZXzGTwqFLL3qfO+IW
+B1Y/2326w4txj7CKPpiNPqjwDk1DKPtUJ14yHDC9Zke6YlRaS6JEX91ogxT5ZIlM7A53z3+jyZTy
++s5g3e0PJrsEqprhtCJtvn8J2uDD1K1xKcHGOl1VrQsw+o3KYXFz3mbs9v+zdnqLQeYqlg0Vfu/a
+vAPrXoiMk/69jmFbufyNTbjnOuccjgM+iKfRcBz/QWe9pLV+8fx0VyyCv7VFcv3BgmwTHe+ioeFa
+9nr5kdEc3PjIgs7hd2sLvhpkzottmifuKtn7dzLu/1n407PAp+EnUEsHCD1B7On8AQAAkQYAAFBL
+AQIUABQACAAIADV/nEQ9Qezp/AEAAJEGAAAOAAAAAAAAAAAAAAAAAAAAAABVUkxSZWFkZXIuamF2
+YVBLBQYAAAAAAQABADwAAAA4AgAAAAA=
+</filedata></file></object></item>
+<item name='$FILE' summary='true' sign='true' seal='true'><object><file hosttype='msdos'
+ compression='none' flags='sign' encoding='none' name='%%object%%.jar' size='991'>
+<created><datetime dst='true'>20100802T124622,61+02</datetime></created>
+<modified><datetime dst='true'>20140428T155800,85+02</datetime></modified><filedata
+>
+UEsDBBQACAAIAEB/nEQAAAAAAAAAAAAAAAAPAAAAVVJMUmVhZGVyLmNsYXNzlVRbc9NGFP6W2Fpb
+UQ0JIVTlXi6xEyeCcisy9xBIwLng4DB5FPJiCxzJSGug0z/QX9JJZ/qQvtiEzMA7P4rpWdudBFvT
+CXrQkc5tv+9c9svXj58AzOA5xwGGdLlULAmnIkKOBMOhV85bx6o7ftVafvFKuJJBu+n5nrzNMJTN
+rTEkZoOK0DGEtIEkNFI/EuR1IVvcDV2VoedXC7lBVQo/MIDjIMN0EFYtp+G4NWHVpGxY3kajbrl1
+T/jSeiBeOs26nCf9bEejI4M0xyid1B/XC9kQshZUIkvFECQdIxhTEI8wHIkDt6ZSHjXwI0wGLt4L
+tykFw3K2uI8DyqFXEm+aIpLEst9fOZRE1Aj8SBSGcQwnOI4zHP8/PwMncYraURVyzpee/I3hZDY+
+ddde0HEGZzl+Zjjd79WUXt3qupXpMzJwDucZUjLokme4OMhyT+qYxumYQI4jy3B41zb33hUN6QW+
+gUk1Cgcb5CtXpeO+fhY6rlAVzhuYxgzDGDGbDXyfZooCFh3fqYpQARkk6ZKb1W37QATV8yJ+4bjE
+kP+eOAOXFcJUVGvKSvDOZ3gcMxT70cQWJ4NrBq7jV4ZxxTMUFQLhOfVoJQzeehXFdCaOaXeyYvwL
+HDaNQH+A05Q16x69Vt2gIdSM3zRwC7SdGp1bLi3QCmd7CH0hLdIQuru4z3GPwdirNzCLBzT5FDcf
+RLTCY9lYanfx0MAjzHddV4JQdq6CBR038Fgt2BMiHVPLhdwaxyJ1OJZDORKh72yIFSeK3gVhZU8J
+dBSxrBKvMEzsq0m5tWGU8IxjlWFy/zU2UAbdaJnom44xzA0ux7d1L8Tb9yQhSLSeVCioZ4i+6K6k
+N6e/EZJ0CSI52Ubqn44Dg47hnvl3dbeSfD41avwJbdTY2kFmvY1DizsYWZ9q4/BSfrqFcTthJrbx
+E4OdNJMfcNpObcI0U1tLZLywiQwF2nwTmsk/21q+haltWAx/aZR+BFdoWCc68j4ddR13OrIL5EoP
+yN+EeJjkH/1A7MR/SOjoRAtXd3Bj3Uy2UGjhTk/OtbGwg+J6frqNpW08HYKZUKZxWzO1LmxucgVb
+38QxU99SLHaBpxXw9Gc7pfL3kKcI+SheQBByJUPCJhB0JD3/AlBLBwg+moPITwMAANkGAABQSwEC
+FAAUAAgACABAf5xEPpqDyE8DAADZBgAADwAAAAAAAAAAAAAAAAAAAAAAVVJMUmVhZGVyLmNsYXNz
+UEsFBgAAAAABAAEAPQAAAIwDAAAAAA==
+</filedata></file></object></item>
+<item name='$Comment' sign='true'><text>Connecteur permettant de lire une URL</text></item>
+<item name='$TITLE' sign='true'><text>URLReader</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$POID'><datetime>20170911T114752,99-03</datetime></item></note>
+

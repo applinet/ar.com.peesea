@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8004968DB" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="bae" sequence="47" unid="280A4A399D2FF31AC125775400226BEF">
+<created><datetime dst="true">20100702T081558,55+02</datetime></created>
+<modified><datetime>20171029T102202,89-03</datetime></modified>
+<revised><datetime>20170307T090547,81-03</datetime></revised>
+<lastaccessed><datetime>20171029T102157,17-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T102157,17-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrig Droumaguet/OU=France/O=IBM</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=Admin/O=Lactee</name><name>CN=Franck Nuwendam/OU=France/O=IBM</name><name>CN=Francois Foultier/OU=France/O=IBM</name><name>CN=FABRICE COLIN - E088316/OU=users/O=PSA</name><name>CN=francois FOULTIER - E103333/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=PASCAL LECONTE - P525489/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>PSA.jpg</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>PSA.jpg</text></item>
+<item name="$DesignerVersion" sign="true"><text>5</text></item>
+<item name="$Flags"><text>34CiQ</text></item></note>

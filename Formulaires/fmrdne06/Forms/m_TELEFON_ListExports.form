@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004937EB'>
+<noteinfo noteid='1026' unid='04EE88ECB5BFABFDC125802800538D74' sequence='6'>
+<created><datetime dst='true'>20160908T171237,00+02</datetime></created>
+<modified><datetime>20171029T102001,76-03</datetime></modified>
+<revised><datetime>20170911T114756,33-03</datetime></revised>
+<lastaccessed><datetime>20171029T101955,60-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101955,60-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>m_TELEFON_ListExports</text><text>m_TELEFON_ListExports</text></textlist></item>
+<item name='$Comment' sign='true'><text>Masque pour afficher les liens vers les documents à exporter</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$SubForms'><textlist><text>sm_TELEFON_LngsDispos | sm_TELEFON_LngsDispos</text><text
+>sm_Forms_Includes | sm_Forms_Includes</text><text>sm_Forms_JavaScript | sm_Forms_JavaScript</text><text
+>sm_Forms_Trads_</text></textlist></item>
+<item name='$SubForm_RepIDs' sign='true'><textlist><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text><text>0000000000000000</text></textlist></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_TELLYNC_ListExports</text></item>
+<item name='f_TypeForm' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_TitresForm' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat' summary='false'><number>0</number></item>
+<item name='f_EtatIcone' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EtatNoms' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EtatTerminal' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_TypeEtat' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_AuteursAdmin' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_LecteursPotentiels' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_AuteursPotentiels' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursMembresGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowIndividus' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowGroupes' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowMembresGroupes' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EstModele' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='F_ENREGDATE' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='F_ENREGACTEUR' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='F_ADETRUIRE' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_CompterUtilisation' summary='false'><number>0</number></item>
+<item name='URL' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_NotifiedReadersIndividus' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_NotifiedReadersGroupes' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_NotifiedReadersMembresGroupes' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Forms_TempDocument' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='IDDoc' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='ParentDocUNID' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>ParentDocUNID</text><text>IDDoc</text><text
+>Forms_TempDocument</text><text>f_NotifiedReadersMembresGroupes</text><text
+>f_NotifiedReadersGroupes</text><text>f_NotifiedReadersIndividus</text><text
+>URL</text><text>f_CompterUtilisation</text><text>f_ADetruire</text><text
+>f_EnregActeur</text><text>f_EnregDate</text><text>f_EstModele</text><text
+>f_ActeursWorkflowMembresGroupes</text><text>f_ActeursWorkflowGroupes</text><text
+>f_ActeursWorkflowIndividus</text><text>f_ActeursMembresGroupe</text><text
+>f_ActeursGroupe</text><text>f_ActeursIndividu</text><text>f_AuteursPotentiels</text><text
+>f_LecteursPotentiels</text><text>f_AuteursAdmin</text><text>f_TypeEtat</text><text
+>f_EtatTerminal</text><text>f_EtatNoms</text><text>f_EtatIcone</text><text
+>f_Etat</text><text>f_TitresForm</text><text>f_TypeForm</text></textlist></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAADgEAAA4BAgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEOAQKADgECgAAAGQAAQAAAAYAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAIr/QgCAAAEFBjACAAgAAAAAAgEAAggUAAAAAAAAAAoAAAAAABQA
+AAASAAEABwBURUxFRk9OAAMAZl9UeXBlRm9ybWIOAQCEAAAAAAAAAAAA3gYAAIr/hf8IAAEAAAqB
+AoL/WgACAAAAAAAAAAAAOAQAADgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAIEAAAAAlYQ4BAAAOAQAAAAAAAABAAAABAAAAIMEAgDM/wgAAAAAAIX/CAABAAAKzf8I
+AAAAAADdBgAArf9x/zcAAAAAAAMAGAAVAAAAAAAAAAAAAAAAAAAAAAAAAAAAc21fVEVMRUZPTl9M
+bmdzRGlzcG9zAK3/OgAOAAgAAAAuAHNtX1RFTEVGT05fTG5nc0Rpc3BvcyB8IHNtX1RFTEVGT05f
+TG5nc0Rpc3BvcwCuAt4GAACuAMz/CAAAAAAAhf8IAAEAAAqBAoMEAgCF/wgAAQAACoECgwQBAN0G
+AACF/4X/CAABAAIK0ggBAP8AAADeBgAAhf/dBgAArf9x/zMAAAAAAAMAGAARAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAc21fRm9ybXNfSW5jbHVkZXMArf8yAA4ACAAAACYAc21fRm9ybXNfSW5jbHVkZXMg
+fCBzbV9Gb3Jtc19JbmNsdWRlcwCuAt4GAACuAN0GAACF/4X/CAABAAIK0ggBAP8AAADeBgAAhf/N
+/wgAAAAAAIECgv9aAAMAAAAAAAAAAACgBQAAoAUIANACoAVwCEALEA7gELATgBYAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAgQAAAACVhKAFCgCgBQoAAABkAAEAAAAGAAAAgwQDAIX/CAABAAAKgQKC
+/1oABAAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAABAAAAAJSEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAQAzP8IAAAAAADdBgAAhf+F/w8AAQAF
+CDxzdHlsZT4A0ggBAP8A/wDeBgAAhf+BAoMEBADdBgAAhf+F/wgAAQAFCNIIAQD/AP8A3gYAAIX/
+gQKC/1oABQAAAAAAAAAAAAgHAAAIBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSECAcAAAgHAAAAAAAAAQAAAAQAAACDBAUA3QYAAIX/hf9WAAEABQhoMiB7
+IGZvbnQtc2l6ZTogMmVtOyBjb2xvcjogIzAwNjZDNjsgdGV4dC1hbGlnbjogY2VudGVyOyBmb250
+LXN0eWxlOiBpdGFsaWM7IH3SCAEA/wD/AN4GAACF/4ECgwQFAN0GAACF/4X/CAABAAUI0ggBAP8A
+/wDeBgAAhf+BAoL/WgAGAAAAAAAAAAAACAcAAAgHCADQAqAFcAhACxAO4BCwE4AWAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAEAAAAAlIQIBwoACAcKAAAAZAABAAAABAAAAIMEBgDdBgAAhf+F/zQA
+AQAFCC8qIFRhYmxlYXV4IGRlIGRvbm6CZXMgZGFucyB1biBmb3JtdWxhaXJlICov0ggBAP8A/wDe
+BgAAhf+BAoMEBQDdBgAAhf+F/4MAAQAFCHRhYmxlLkRhdGFEaXNwbGF5CQl7IGJvcmRlci1jb2xs
+YXBzZTogY29sbGFwc2U7IHRleHQtYWxpZ246IGNlbnRlcjsgZm9udC1mYW1pbHk6IEFyaWFsOyBm
+b250LXNpemU6IDEwcHQ7IG1hcmdpbjogMC41ZW0gMDsgfQDSCAEA/wD/AN4GAACF/4ECgwQFAN0G
+AACF/4X/CAABAAUI0ggBAP8A/wDeBgAAhf+BAoMEBQDdBgAAhf+F/yAAAQAFCHRhYmxlLkRhdGFE
+aXNwbGF5IHRyIHRoLNIIAQD/AP8A3gYAAIX/gQKDBAUA3QYAAIX/hf+iAAEABQh0YWJsZS5EYXRh
+RGlzcGxheSB0aGVhZCB0ciB0aAl7IGJvcmRlcjogMXB4IHNvbGlkICNDQ0M7IGJhY2tncm91bmQt
+Y29sb3I6ICNGRjk7IHRleHQtYWxpZ246IGNlbnRlcjsgcGFkZGluZzogMXB4IDVweDsgZm9udC13
+ZWlnaHQ6IGJvbGQ7IGZvbnQtc2l6ZTogOXB0OyB90ggBAP8A/wDeBgAAhf+BAoMEBQDdBgAAhf+F
+/wgAAQAFCNIIAQD/AP8A3gYAAIX/gQKDBAUA3QYAAIX/hf8gAAEABQh0YWJsZS5EYXRhRGlzcGxh
+eSB0ciB0ZCzSCAEA/wD/AN4GAACF/4ECgwQFAN0GAACF/4X/ZQABAAUIdGFibGUuRGF0YURpc3Bs
+YXkgdGJvZHkgdHIgdGQJeyBib3JkZXI6IDFweCBzb2xpZCAjQ0NDOyBwYWRkaW5nOiAxcHggNXB4
+OyB0ZXh0LWFsaWduOiBsZWZ0OyB9ANIIAQD/AP8A3gYAAIX/gQKDBAUA3QYAAIX/hf8IAAEABQjS
+CAEA/wD/AN4GAACF/4ECgwQFAN0GAACF/4X/KgABAAUIdGFibGUuRGF0YURpc3BsYXkgdHIgdGQu
+Tm9QYWRkaW5nLNIIAQD/AP8A3gYAAIX/gQKDBAUA3QYAAIX/hf9ZAAEABQh0YWJsZS5EYXRhRGlz
+cGxheSB0Ym9keSB0ciB0ZC5Ob1BhZGRpbmcJeyBib3JkZXI6IDFweCBzb2xpZCAjQ0NDOyBwYWRk
+aW5nOiAxcHg7IH0A0ggBAP8A/wDeBgAAhf+BAoMEBQDdBgAAhf+F/wgAAQAFCNIIAQD/AP8A3gYA
+AIX/gQKDBAUA3QYAAIX/hf8pAAEABQh0YWJsZS5EYXRhRGlzcGxheSB0ciB0ZC5Ob0JvcmRlciwA
+0ggBAP8A/wDeBgAAhf+BAoMEBQDdBgAAhf+F/z4AAQAFCHRhYmxlLkRhdGFEaXNwbGF5IHRib2R5
+IHRyIHRkLk5vQm9yZGVyIAl7IGJvcmRlcjogMDsgfdIIAQD/AP8A3gYAAIX/gQKDBAUA3QYAAIX/
+hf8IAAEABQjSCAEA/wD/AN4GAACF/4ECgwQFAN0GAACF/4X/KQABAAUIdGFibGUuRGF0YURpc3Bs
+YXkgdHIgdGguTm9Cb3JkZXIsANIIAQD/AP8A3gYAAIX/gQKDBAUA3QYAAIX/hf9XAAEABQh0YWJs
+ZS5EYXRhRGlzcGxheSB0aGVhZCB0ciB0aC5Ob0JvcmRlciAJeyBib3JkZXI6IDA7IGJhY2tncm91
+bmQ6IHRyYW5zcGFyZW50OyB9ANIIAQD/AP8A3gYAAIX/gQKC/1oABwAAAAAAAAAAAKAFAACgBQAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAJSEoAUMAKAFDADf
+L2QAAQAAAAQAAACDBAcA3QYAAIX/hf8QAAEABQg8L3N0eWxlPtIIAQD/AP8A3gYAAIX/gQKC/1oA
+CAAAAAAAAAAAAKAFAACgBQEA5BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAABAAAAAJSEoAUAAKAFAAAAAAAAAQAAAAQAAACDBAgA3QYAAIX/hf8NAAEABAg8YnIvPgDSCAEA
+AAD/AN4GAACF/4ECgwQIAN0GAACF/4X/RAABAAQIPGgyPjxzY3JpcHQ+UHJpbnQobF9URUxFRk9O
+X0V4cG9ydF9QYWdlVGl0bGUpOzwvc2NyaXB0PjwvaDI+0ggBAAAA/wDeBgAAhf+BAoMECADdBgAA
+hf+F/wgAAQAECNIIAQAAAP8A3gYAAIX/gQKDBAgA3QYAAIX/hf8cAAEABAg8ZGl2IGFsaWduPSJj
+ZW50ZXIiPtIIAQAAAP8A3gYAAIX/gQKC/1oACQAAAAAAAAAAAAgHAAAIBwEA5BwAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAJSECAcAAAgHAAAAAAAAAQAAAAQAAAC7
+/1YACQAYADI9nWMUAEgAAAA2AAEADABbQWRtaW5Gb3Jtc13nAHQCHgEBAA4AW1RFTEVGT05fUkVT
+UF3nAHQCHgEcAgMABwAQAAoACTVTN1M4UjEzU4MECQDdBgAAhf+F/1wAAQAECDx0YWJsZSBib3Jk
+ZXI9IjAiIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCIgd2lkdGg9IjQ1MHB4IiBjbGFz
+cz0iRGF0YURpc3BsYXkiPtIIAQAAAP8A3gYAAIX/gQKC/1oACgAAAAAAAAAAAHAIAABwCAEA5BwA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAJSEcAgAAHAIAAAAAAAA
+AQAAAAQAAACDBAoAvAYJAAoA3QYAAIX/hf8MAAEABAg8dHI+0ggBAAAA/wDeBgAAhf+BAoL/WgAL
+AAAAAAAAAAAA2AkAANgJCADQAqAFcAhACxAO4BCwE4AWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAkAAAAAlITYCQoA2AkKAAAAZAABAAAABAAAAIMECwC8BgkACwDdBgAAhf+F/1EAAQAECDx0aCBj
+b2xzcGFuPSIyIj48c2NyaXB0PlByaW50KGxfVEVMRUZPTl9FeHBvcnRfQWRtaW5IZWFkZXIpPC9z
+Y3JpcHQ+PC90aD4A0ggBAAAA/wDeBgAAhf+BAoL/WgAMAAAAAAAAAAAAcAgAAHAICADQAqAFcAhA
+CxAO4BCwE4AWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAlIRwCAoAcAgKAAAAZAABAAAA
+BAAAAIMEDAC8BgkADADdBgAAhf+F/w0AAQAECDwvdHI+ANIIAQAAAP8A3gYAAIX/gQKDBAwAvAYJ
+AAwA3QYAAIX/hf8MAAEABAg8dHI+0ggBAAAA/wDeBgAAhf+BAoMECwC8BgkACwDdBgAAhf+F/0gA
+AQAECDx0aD48c2NyaXB0PlByaW50KGxfVEVMRUZPTl9FeHBvcnRfQXR0YWNoRmlsZW5hbWUpPC9z
+Y3JpcHQ+PC90aD7SCAEAAAD/AN4GAACF/4ECgwQLALwGCQALAN0GAACF/4X/IwABAAQIPHRoIHdp
+ZHRoPSIxMjUiPiZuYnNwOzwvdGg+ANIIAQAAAP8A3gYAAIX/gQKDBAoAvAYJAAoA3QYAAIX/hf8N
+AAEABAg8L3RyPgDSCAEAAAD/AN4GAACF/4ECgwQKALwGCQAKAN0GAACF/4X/CAABAAQI0ggBAAAA
+/wDeBgAAhf/dBgAArf+p/4YBAQAYAAQAegF6AQEAZgAFAGRibGtwAAEAAAABAAAAAQATAHZfRm9y
+bXNfRXhwb3J0RmlsZXMAAQATAFRFTEVGT05fRXhwb3J0QWRtaW4AAQAZAEZvcm1zX0V4cG9ydEZp
+bGVfRmlsZU5hbWUAgwUDAAcAFgAPAAkxUzJTNlM4UzEwUzEyUwAAANIAAQAIADx0cj48dGQ+BQAF
+AGRibGtwACICAQAmADwvdGQ+PHRkPjxhIGhyZWY9InZfRm9ybXNfRXhwb3J0RmlsZXMvIgIFAAUA
+ZGJsa3AAAQABAF8AoQIiAgEABwAvJEZpbGUvACICBQAFAGRibGtwACICAQBTACIgdGFyZ2V0PSJf
+YmxhbmsiPjxzY3JpcHQ+UHJpbnQobF9URUxFRk9OX0V4cG9ydF9DbGlja0hlcmUpOzwvc2NyaXB0
+PjwvYT48L3RkPjwvdHI+ACICAwAHACoAJAAJMFIxUzJTM1M0UzVTNlMxMFMxMlMxM1MxNFMxNVMx
+NlMxN1PdBgAAhf+F/wgAAQAECNIIAQAAAP8A3gYAAIX/qgLeBgAArgDdBgAAhf+F/wgAAQAECNII
+AQAAAP8A3gYAAIX/gQKDBAkA3QYAAIX/hf8QAAEABAg8L3RhYmxlPtIIAQAAAP8A3gYAAIX/gQKD
+BAkA3QYAAIX/hf8NAAEABAg8YnIvPgDSCAEAAAD/AN4GAACF/4ECgwQIAN0GAACF/4X/DgABAAQI
+PC9kaXY+0ggBAAAA/wDeBgAAhf/N/wgAAAAAAA==
+</rawitemdata></item></note>
+
