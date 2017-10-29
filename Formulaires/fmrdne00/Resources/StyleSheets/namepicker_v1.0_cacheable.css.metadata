@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048A097" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="23e" sequence="40" unid="F3802712181A1CECC125786200445E36">
+<created><datetime dst="true">20110329T142645,66+02</datetime></created>
+<modified><datetime>20171029T101318,53-03</datetime></modified>
+<revised><datetime>20150112T140931,73-03</datetime></revised>
+<lastaccessed><datetime>20171029T101318,12-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101318,12-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$FileNames" sign="true"><text>NamePicker_CSS.css</text></item>
+
+<item name="$FileModDT" sign="true"><datetime dst="true">20110210T135030,31+02</datetime></item>
+
+<item name="$Flags"><text>34C=Q</text></item>
+<item name="$TITLE" sign="true"><text>namepicker_v1.0_cacheable.css</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item></note>

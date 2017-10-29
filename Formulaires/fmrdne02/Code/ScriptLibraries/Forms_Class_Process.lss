@@ -1,0 +1,269 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+Use "Forms_Constants"
+
+Use "LogEntry"
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Public Class Process
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette classe représente un traitement d'un formulaire
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Public Class Process
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	'																	MEMBRES
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	Public LogEntries List As LogEntry		' Liste des messages de logs
+	
+	Public Action As Integer						' Action du processus
+	Public Status As Integer						' Etat du processus
+	
+	Public DisplayLng As String
+	Public DocumentId As String
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	'															METHODES PUBLIQUES
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	'																	Constructeur
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Sub New()
+		
+		' Gestion d'erreurs
+		On Error Goto ErrorHandler
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 											Traitement
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		' Action du processus
+		Me.Action = PROCESSACTION_UNKNOWN%
+		
+		' Etat du processus
+		Me.Status = PROCESSSTATUS_UNKNOWN%
+		
+		
+		' C'est fini, on sort
+		Exit Sub
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 											Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+		Call Me.HandleError("New")
+		Exit Sub		
+		
+	End Sub
+	
+	
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	'														Ajout d'un message de log à la liste
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Sub AddLogEntry(pLogEntry As LogEntry)
+		
+		' Gestion d'erreurs
+		On Error Goto ErrorHandler
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 											Traitement
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		
+		' Si l'erreur n'à pas déjà été logguée
+		If Not Me.IsErrLogged(pLogEntry) Then
+			
+			' On ajoute la log a la liste (on utilise l'instant présent comme clé, garanti l'unicité)
+			Set Me.LogEntries(Now) = pLogEntry
+			
+			
+			' Selon la gravité de l'erreur, on place le processus dans le bon status
+			If (pLogEntry.LogType = LOGLEVEL_EMERG%)Then
+				
+				' Erreur fatale, on ne se pose pas de question
+				Me.Status = PROCESSSTATUS_FAILURE%
+				
+			Else
+				
+				' Erreur non fatale, on s'assure que l'on ne va pas diminuer la gravité
+				If (Me.Status <> PROCESSSTATUS_FAILURE%) Then
+					Me.Status = PROCESSSTATUS_WARNING%
+				End If
+				
+			End If
+			
+		End If
+		
+		
+		' C'est fini, on sort
+		Exit Sub
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 											Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+		Call Me.HandleError("AddLog")
+		Exit Sub		
+		
+	End Sub
+	
+	
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	'													Test de l'unicité d'un message d'erreur
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Function IsErrLogged(pLogEntry As LogEntry) As Boolean
+		
+		' Gestion d'erreurs
+		On Error Goto ErrorHandler
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 											Traitement
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		' On fait le tour des messages déjà loggés
+		Forall LogEntry In Me.LogEntries
+			' On test d'abord les codes d'erreurs (cela évite de faire les conversions "ToString", consommatrices, inutilement)
+			If LogEntry.Err = pLogEntry.Err Then			
+				If LogEntry.ToString = pLogEntry.ToString Then
+					IsErrLogged = True
+					Exit Function
+				End If
+			End If
+		End Forall
+		
+		IsErrLogged = False
+		
+		' C'est fini, on sort
+		Exit Function
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 											Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+		Call Me.HandleError("IsErrLogged")
+		Exit Function		
+		
+	End Function
+	
+	
+	
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	'									Affichage du status du traitement à l'utilisateur
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Sub DisplayStatus()
+		
+		'Gestion d'erreurs
+		On Error Goto ErrorHandler
+		
+		' Chaine pour la liste des erreurs, en paramètres de l'URL	
+		Dim stringErrorsParam As String
+		stringErrorsParam = ""
+		
+		' Chaine pour l'identifiant du document, en paramètre de l'URL
+		Dim stringDocID As String
+		stringDocID = ""
+		
+		' Chaine pour le forçage de la langue d'affichage
+		Dim stringForceLng As String
+		stringForceLng = ""
+		
+		
+		' On boucle sur la liste des codes d'erreurs
+		Forall LogEntry In Me.LogEntries
+			stringErrorsParam = stringErrorsParam + Trim(Str(LogEntry.Err)) + "/"
+		End Forall
+		
+		' On devrait supprimer ici le dernier "/", la boucle en ajoute un de trop
+		
+		' On ajoute le début de la chaine de paramètres
+		If (stringErrorsParam <> "") Then
+			stringErrorsParam = "&ErrCode=" + stringErrorsParam
+		End If
+		
+		
+		' On créé la chaine pour l'identifiant du document
+		If (Me.DocumentID <> "") Then
+			stringDocID = "&DocID=" + Me.DocumentID
+		End If
+		
+		
+		' On créé la chaine pour le forçage de la langue d'affichage
+		If (Me.DisplayLng <> "") Then
+			stringForceLng = "&ForceLng=" + Me.DisplayLng
+		End If
+		
+		' On affiche la redirection JavaScript
+		Print "<script>"
+		Print "var url = self.window.location.href;"
+		Print "window.location = url.substring(0,(url.lastIndexOf('.nsf')+5))+'m_ProcessResult?OpenForm&Action=" & Me.Action & "&Status=" & Me.Status & stringErrorsParam & stringDocID & stringForceLng & "'"
+		Print "</script>"
+		
+		
+		' C'est fini, on sort
+		Exit Sub
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 											Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+		Call Me.HandleError("DisplayStatus")
+		Exit Sub		
+		
+	End Sub
+	
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	'															METHODES PRIVEES
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	'	Cette procédure se charge d'enregistrer les messages d'erreur. Elle ne sert qu'a allèger les codes
+	' 										en regroupant les lignes identiques
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Private Sub HandleError(pSubName As String)
+		
+		' On propage les erreurs si neccessaire
+		If (Err = ERROR_PROPAGATE%) Then
+			Error ERROR_PROPAGATE%, Error$
+			
+		Else
+			Dim LogEntry As New LogEntry
+			LogEntry.LogType			= LOGLEVEL_EMERG%
+			LogEntry.LibName			= "class_Process"
+			LogEntry.ClassName		= "Process"
+			LogEntry.SubName		= pSubName
+			LogEntry.Erl 			= Erl
+			LogEntry.Err			= Err
+			LogEntry.Msg			= Error$
+			
+			' On fait remonter l'erreur
+			Error ERROR_PROPAGATE%, LogEntry.ToString
+			
+		End If
+		
+	End Sub
+	
+End Class

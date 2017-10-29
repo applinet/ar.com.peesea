@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C80048DE00" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1982" sequence="24" unid="1770F393C22F4B49C1257DFC00669272">
+<created><datetime dst="true">20150302T204021,62+02</datetime></created>
+<modified><datetime>20171029T101623,50-03</datetime></modified>
+<revised><datetime>20170904T113526,87-03</datetime></revised>
+<lastaccessed><datetime>20171029T101612,04-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101612,04-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$TITLE" sign="true"><text>Forms_Class_Process</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+
+
+<item name="$POID"><datetime>20170904T113526,87-03</datetime></item></note>

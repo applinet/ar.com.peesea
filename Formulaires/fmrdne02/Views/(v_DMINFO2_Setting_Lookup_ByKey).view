@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='1c0e' unid='6C3D7D6D74F1D04FC12576B0005333CF' sequence='26'>
+<created><datetime dst='true'>20100119T170847,51+02</datetime></created>
+<modified><datetime>20171029T101626,48-03</datetime></modified>
+<revised><datetime>20170904T113516,31-03</datetime></revised>
+<lastaccessed><datetime>20171029T101613,93-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101613,93-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_DMINFO2_Setting_Lookup_ByKey)|v_DMINFO2_Setting_Lookup_ByKey</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+mAACAEoAAwAkMzYABQASAERNSU5GT19TZXR0aW5nX0Rpcl4BAQABAPUAIgIFABMARE1JTkZPX1Nl
+dHRpbmdfU2l0ZQBeASICYgEDAAUAGAAUAAIAAwAJACQzNiRDb25mbGljdAQABAAAACYABQAEAGZv
+cm0BABEAbV9ETUlORk8yX1NldHRpbmcACgIDAAcACgAEAAlMMVM=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABEiGYHAAADACQzNg==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABACUACkAAAFZDAwADAAsAngAAAKoAAQAACAABAAAAAAAAAAICAAAAJDM2RU5USVRF9VNJVEWe
+AAcANgAvACBDbGVmIGRlIHRyYWl0ZW1lbnQgcG91ciBsZXMgZGlmZoJyZW50cyBhZ2VudHMgAAcA
+CgADAAkxUwACAEoAAwAkMzYABQASAERNSU5GT19TZXR0aW5nX0Rpcl4BAQABAPUAIgIFABMARE1J
+TkZPX1NldHRpbmdfU2l0ZQBeASICYgEDAAcAEgALAAkwUjZTN1M4UzlTACYAAQAAAAEBAAkBAAAK
+AQEOCgAAAQCtKwEAAQABAQAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8A
+AAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8A
+AAABAAAAAAABAICAgAABAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>DMINFO - Vue des Settings du formulaire pour Agent</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAABAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemVA
+AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
+AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
+BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
+AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIABgA+fA==
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZQABAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcoQGAD58
+</rawitemdata></item></note>
+

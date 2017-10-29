@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='516' unid='8F4D4923B5EFA35DC12572660042213A' sequence='118'>
+<created><datetime dst='true'>20070117T140218,82+02</datetime></created>
+<modified><datetime>20171029T101456,35-03</datetime></modified>
+<revised><datetime>20170904T113505,80-03</datetime></revised>
+<lastaccessed><datetime>20171029T101454,15-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101454,15-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQApwQAAAAAAAAAAAAAAAAAAAAAAADc/7oE+f+oBCBOAAAAAAAAAAAvLyBzaSBs
+YSBygmaCcmVuY2UgbidleGlzdGUgcGFzLCBvbiBsYSBjcoKCDWlmKHRvcC5JRlBvcHVwID0gdW5k
+ZWZpbmVkKSB0b3AuSUZQb3B1cCA9IG5ldyBPYmplY3Q7DQ0vLyBjZXR0ZSBmb25jdGlvbiBhZmZp
+Y2hlIG91IG1hc3F1ZSBsYSBwb3B1cCBJbmZvRmxhc2gNZnVuY3Rpb24gSUZUb2dnbGVQb3B1cERp
+c3BsYXkoT25PZmYpIHsNCXRyeSB7DQkJaWYoT25PZmYudG9Mb3dlckNhc2UoKT09Im9uIikgew0J
+CQl2YXIgSUZQb3B1cEhlaWdodCA9IE1hdGguZmxvb3IoTWF0aC5tYXgoMjAwLCBzY3JlZW4uaGVp
+Z2h0LzMpKTsNCQkJdmFyIElGUG9wdXBXaWR0aCA9IE1hdGguZmxvb3IoTWF0aC5tYXgoNTAwLCBz
+Y3JlZW4ud2lkdGgvMikpOw0JCQl2YXIgSUZQb3B1cFRvcCA9IChzY3JlZW4uaGVpZ2h0IC0gSUZQ
+b3B1cEhlaWdodCkvMjsNCQkJdmFyIElGUG9wdXBMZWZ0ID0gKHNjcmVlbi53aWR0aCAtIElGUG9w
+dXBXaWR0aCkvMjsNCQkJaWYodG9wLklGUG9wdXAgIT0gdW5kZWZpbmVkKSB7DQkJCQl0b3AuSUZQ
+b3B1cC5jbG9zZSgpOw0JCQkJdG9wLklGUG9wdXAgPSB1bmRlZmluZWQNCQkJfQ0JCQl0b3AuSUZQ
+b3B1cCA9IHdpbmRvdy5vcGVuKElGUG9wdXBVUkwsICIiLCAidG9vbGJhcj1ubywgbG9jYXRpb249
+bm8sIGRpcmVjdG9yaWVzPW5vLCBtZW51YmFyPW5vLCBzY3JvbGxiYXJzPW5vLCByZXNpemFibGU9
+bm8sIGhlaWdodD0iICsgSUZQb3B1cEhlaWdodCArIiwgd2lkdGg9IiArIElGUG9wdXBXaWR0aCAr
+ICIsIHRvcD0iICsgSUZQb3B1cFRvcCArIiwgbGVmdD0iICsgSUZQb3B1cExlZnQpOw0JCX0NCQll
+bHNlIHsNCQkJdG9wLklGUG9wdXAuY2xvc2UoKTsNCQkJdG9wLklGUG9wdXAgPSB1bmRlZmluZWQ7
+DQkJfQ0JfQ0JY2F0Y2goRXJyKSB7IHJldHVybiBmYWxzZTsgfQ19DQ0vLyBjZXR0ZSBmb25jdGlv
+biBjYXB0dXJlIGwngnaCbmVtZW50IE1vdXNlVXAgcG91ciBtYXNxdWVyIGxhIHBvcHVwIEluZm9G
+bGFzaA1mdW5jdGlvbiBJRlBvcHVwTW91c2VVcEV2ZW50KGV2KQ17DQl0cnkgew0JCWlmKHRvcC5J
+RlBvcHVwICE9IHVuZGVmaW5lZCkgew0JCQl0b3AuSUZQb3B1cC5jbG9zZSgpOw0JCQl0b3AuSUZQ
+b3B1cCA9IHVuZGVmaW5lZA0JCX0JCQ0JfQ0JY2F0Y2goRXJyKSB7IHJldHVybiBmYWxzZTsgfQ19
+DQ1kb2N1bWVudC5vbm1vdXNldXAgPSBJRlBvcHVwTW91c2VVcEV2ZW50OwBmX/8QAAIADwAHAAAA
+AAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_InfoFlashDisplayPopup_JS</text></item>
+<item name='$Comment' sign='true'><text>Fonction d'affichage, masquage de la popup InfoFlash</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_InfoFlashDisplayPopup_JS</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEA3QYAAIX/hf8jAAEAAghzbV9J
+bmZvRmxhc2hEaXNwbGF5UG9wdXBfSlMA0ggBAP8AAADeBgAAhf8=
+</rawitemdata></item></note>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048A097" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="182" sequence="43" unid="6F18FC327C68A62EC12576F000331AE7">
+<created><datetime dst="true">20100324T111812,23+02</datetime></created>
+<modified><datetime>20171029T101317,61-03</datetime></modified>
+<revised><datetime>20150112T140930,20-03</datetime></revised>
+<lastaccessed><datetime>20171029T101317,49-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101317,49-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>triangleSelect.gif</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$TITLE" sign="true"><text>PICTO_selecttriangle.gif</text></item>
+<item name="$DesignerVersion" sign="true"><text>7</text></item></note>

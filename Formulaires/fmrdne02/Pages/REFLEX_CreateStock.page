@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='150a' unid='3ED3BD30EA4EA8DFC1257C29002FF823' sequence='50'>
+<created><datetime dst='true'>20131120T104357,15+02</datetime></created>
+<modified><datetime>20171029T101618,62-03</datetime></modified>
+<revised><datetime>20170904T113521,99-03</datetime></revised>
+<lastaccessed><datetime>20171029T101608,71-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101608,71-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>REFLEX_CreateStock</text><text>REFLEX_CreateStock</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>C34WQ</text></item>
+<item name='$MimeType' sign='true'><text>text/xml</text></item>
+<item name='$MimeCharSet' sign='true'><text>UTF-8</text></item>
+<item name='$WebFlags' sign='true'><text>H</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>REFLEX_CreateStock</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAzP8IAAAAAACF/1wABQAACjxD
+cmVhdGVTdG9ja1Jlc3AgeG1sbnM9Imh0dHA6Ly90ZW1wdXJpLm9yZy8iPgA8UkM+MDwvUkM+ADxM
+YWJlbD5zdHJpbmc8L0xhYmVsPgA8RmFuPt0GAACt/6n/UgABABgABABGAEYAAAAwAAAAAAAAAH6E
+LkEAAAAAAAAAavhAIwIEANMAJAIAAAAAAAAAavhAIgKnAQMABwAUAA4ACTRTNVM3UzhTOVMxMFOF
+/wgABQAACqoC3gYAAK4Ahf8hAAUAAAo8L0Zhbj4APC9DcmVhdGVTdG9ja1Jlc3A+AM3/CAAAAAAA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Pre v14.1</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='1b06' unid='5A1E8F0008B58F87C1257E85004D0436' sequence='23'>
+<created><datetime dst='true'>20150717T160113,50+02</datetime></created>
+<modified><datetime>20171029T101625,30-03</datetime></modified>
+<revised><datetime>20170904T113528,17-03</datetime></revised>
+<lastaccessed><datetime>20171029T101613,18-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101613,18-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Fields'><textlist><text>Path_Info_Decoded</text><text>Lngs</text></textlist></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Listes des sites</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$WEBQueryOpen' sign='true'><formula>@SetHTTPHeader("Cache-Control"; "max-age=3600")</formula></item>
+<item name='$Flags'><text>C</text></item>
+<item name='$MimeType' sign='true'><text>text/javascript</text></item>
+<item name='$MimeCharSet' sign='true'><text>UTF-8</text></item>
+<item name='$WebFlags' sign='true'><text>H</text></item>
+<item name='$TITLE' sign='true'><textlist><text>fmr_sites_v1.0_cacheable.js_old</text><text
+>fmr_sites_v1.0_cacheable.js_old</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>fmr_sites_v1.0_cacheable.js_old</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAYAAACDBAEA3QYAAIX/hf8/AAEAAghDZSBt
+YXNxdWUgZG9pdCCIdHJlIGFwcGVsbIIgY29tbWUgdW4gZmljaGllciBKYXZhU2NyaXB0ANIIAQD/
+AAAA3gYAAIX/gQKDBAEA3QYAAIX/hf9GAAEAAghJbCByZW52b2kgZGVzIHRhYmxlYXV4IGRlIGxp
+YmVsbIJzIHBvdXIgbGUgcoJmgnJlbmNpZWwgIlNpdGVzItIIAQD/AAAA3gYAAIX/gQKDBAEA3QYA
+AIX/hf8IAAEAAgjSCAEA/wAAAN4GAACF/4ECgwQBAN0GAACF/4X/IwABAAIISW5pdGlhbGlzYXRp
+b24gZGVzIHRhYmxlYXV4ANIIAQD/AAAA3gYAAIX/gQKC/1oAAgAAAAAAAAAAAKAFAACgBQgA0AKg
+BXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAJSEoAUKAKAFCgAAAGQA
+AQAAAAQAAACDBAIA3QYAAIX/hf8sAAEACQh2YXIgRk1SX1NpdGVzX0J5M0NvZGUgPSBuZXcgQXJy
+YXkoKTvSCAEAAIAAAN4GAACF/4ECgwQCAN0GAACF/4X/LAABAAkIdmFyIEZNUl9TaXRlc19CeTVD
+b2RlID0gbmV3IEFycmF5KCk70ggBAACAAADeBgAAhf+BAoMEAQDdBgAAhf+F/wgAAQACCNIIAQD/
+AAAA3gYAAIX/gQKDBAEA3QYAAIX/hf8dAAEAAghQb3B1bGF0aW9uIGR1IHRhYmxlYXUA0ggBAP8A
+AADeBgAAhf+BAoL/WgADAAAAAAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAEAAAAAlIcAAAAAAAAAAAAAAAABAAAABAAAAIMEAwDM/wgAAAAAAN0G
+AACF/4X/CAABAAkI0ggBAACAAADeBgAAhf/N/wgAAAAAAN0GAACt/6n/zgEBABgABADCAcIBCgAE
+AAEALgAGAFZhbHVlcwEAAAABAAAAAQAHAHZfU2l0ZXMAAAAAAAAAAAAcQKoEAwAHABIADAAJMVMy
+UzZTOFMxMFMAAPQABQAGAFZhbHVlcwEABQBWYWx1ZQABABMARk1SX1NpdGVzX0J5M0NvZGVbIgAF
+AAYAVmFsdWVzAQACACMjAAAAAAAAAAAAQG0DIgIBAAYAIl0gPSAiIgIFAAYAVmFsdWVzAQACACMj
+AAAAAAAAAAAIQG0DIgIBAAIAIjsiAooAIgIBABMARk1SX1NpdGVzX0J5NUNvZGVbIgAiAgUABgBW
+YWx1ZXMBAAIAIyNfAiICAQAGACJdID0gIiICBQAGAFZhbHVlcwEAAgAjIwAAAAAAAAAACEBtAyIC
+AQACACI7IgL7AzcB+wE8AasBigCFAgMABwCIAIEACTBSUjJSVDRSVFQ2UlRUVDEwUzEyUlRUVFQx
+M1MxNFMxOFMyMFMyMlMyM1MyNFMyNVMyOVMzMVMzM1MzNFMzNVMzNlMzN1MzOFMzOVM0MFM0NFM0
+NlM0N1M0OFM0OVM1M1M1NVM1N1M1OFM1OVJUVFQ2MFJUVDYxUlQ2M1JUNjRSAN0GAACF/4X/CAAB
+AAkI0ggBAACAAADeBgAAhf+qAt4GAACuAN0GAACF/4X/CAABAAkI0ggBAACAAADeBgAAhf8=
+</rawitemdata></item></note>
+

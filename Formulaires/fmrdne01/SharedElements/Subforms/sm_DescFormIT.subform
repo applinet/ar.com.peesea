@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='7b6' unid='2482A23A15D9B593C125738B00506C04' sequence='105'>
+<created><datetime dst='true'>20071106T163825,32+02</datetime></created>
+<modified><datetime>20171029T101459,71-03</datetime></modified>
+<revised><datetime>20170904T113508,18-03</datetime></revised>
+<lastaccessed><datetime>20171029T101455,99-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101455,99-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=JULIEN ADAM - U160830/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$TITLE'><text>sm_DescFormIT</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAQgEAAAAAAAAAAAAAAAAAAAAAAADc/1QB+f9CASBOAAAAAAAAAABsX05vbUZv
+cm0gPSAiVGl0b2xvIGRlbCBmb3JtdWxhcmlvIjsNbF9BbGlhc0Zvcm0gPSAiQWxpYXMiOw1sX0lu
+Zm9zRm9ybSA9ICJJbmZvcm1hemlvbmkgc3VsIGZvcm11bGFyaW8iOw1sX0Rlc2NGb3JtID0gIkRl
+c2NyaXppb25lIGRlbCBmb3JtdWxhcmlvIjsNbF9EZXNjUHVyZzEgPSAiRWxpbWluYXppb25lIGRl
+aSBkb2N1bWVudGkgaW4gY29yc28gZGkgdmFsaWRhemlvbmUiOw1sX0Rlc2NQdXJnMiA9ICJFbGlt
+aW5hemlvbmUgZGVsbGUgYm96emUiOw1sX0Rlc2NQdXJnMyA9ICJFbGltaW5hemlvbmUgZGVpIGRv
+Y3VtZW50aSB2YWxpZGF0aS9yaWZpdXRhdGkiOwAAX/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_DescFormFR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEA3QYAAIX/hf8VAAEAAghzbV9E
+ZXNjRm9ybUlUANIIAQD/AAAA3gYAAIX/
+</rawitemdata></item></note>
+

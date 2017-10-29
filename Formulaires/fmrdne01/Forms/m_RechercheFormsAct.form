@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='216' unid='ADE3F92586AA4CF0C1256BC3004DDE5D' sequence='130'>
+<created><datetime dst='true'>20020524T161031,97+02</datetime></created>
+<modified><datetime>20171029T101452,59-03</datetime></modified>
+<revised><datetime>20170904T113502,84-03</datetime></revised>
+<lastaccessed><datetime>20171029T101452,03-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101452,03-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Fields'><textlist><text>f_ChoixTriPT</text><text>f_ChoixTriDE</text><text
+>f_ChoixTriEN</text><text>f_ChoixTriES</text><text>f_ChoixTriFR</text></textlist></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAYgIAAAAAAAAAAAAAAAAAAAAAAADc/3QC+f9iAiBOAAAAAAAAAABGUj0nPGNl
+bnRlcj5SZWNoZXJjaGUgOiBDaG9pc2lyIHVuIGZvcm11bGFpcmUgcGFyIGFjdGl2aXSCPC9jZW50
+ZXI+JzsNRVM9JzxjZW50ZXI+QqNzcXVlZGEgOiBTZWxlY2Npb25hciB1biBmb3JtdWxhcmlvIHBv
+ciBhY3RpdmlkYWQ8L2NlbnRlcj4nOw1FTj0nPGNlbnRlcj5TZWFyY2ggOiBDaG9zZSBhIGZvcm0g
+YnkgYWN0aXZpdHk8L2NlbnRlcj4nOw1ERT0nPGNlbnRlcj5TdWNoZSA6IEF1c3dhaGwgZWluZXMg
+Rm9ybXVsYXJzIG5hY2ggQWt0aXZpdIR0PC9jZW50ZXI+JzsNUFQ9JzxjZW50ZXI+QnVzY2EgOiBF
+c2NvbGhlIHVtIGZvcm11bGFyaW8gcG9yIGF0aXZpZGFkZTwvY2VudGVyPic7DVNLPSc8Y2VudGVy
+PlJlY2hlcmNoZSA6IENob2lzaXIgdW4gZm9ybXVsYWlyZSBwYXIgYWN0aXZpdIJfU0tfPC9jZW50
+ZXI+JzsNTkw9JzxjZW50ZXI+T3B6b2VraW5nIDogS2llcyBlZW4gZm9ybXVsaWVyIHBlciBhY3Rp
+dml0ZWl0PC9jZW50ZXI+JzsNSVQ9JzxjZW50ZXI+UmljZXJjYSA6IHNlbGV6aW9uYXJlIHVuIGZv
+cm11bGFyaW8gcGVyIGF0dGl2aXSFPC9jZW50ZXI+JzsNUlU9JzxjZW50ZXI+U2VhcmNoIDogQ2hv
+c2UgYSBmb3JtIGJ5IGFjdGl2aXR5PC9jZW50ZXI+JzsAX/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$SubForms' sign='true'><textlist><text>sm_TouteVueDescAdmin</text><text
+>sm_VuesUtilisateur</text><text>sm_Styles</text></textlist></item>
+<item name='$SubForm_RepIDs' sign='true'><textlist><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text></textlist></item>
+<item name='$Flags'><text>CD</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_RechercheFormsAct</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gv9GAAEAAAAAAAAAAACgBZ0PoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAACUAKYwAwAAAAEASmF2YXNjcmlwdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AQAJCIECgv9aAAIAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAgQAAAACVhwAAAAAAAAAAAAAAAAEAAAAEAAAAgwQCAIX/CAABAAAK3QYAAK3/
+cf82AAAAAAADABgAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAHNtX1RvdXRlVnVlRGVzY0FkbWlurf8h
+AA4ACAAAABUAc21fVG91dGVWdWVEZXNjQWRtaW4AAK4C3gYAAK4Ahf8IAAEAAAqBAoL/WgADAAAA
+AAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA
+AAAAlIcAAAAAAAAAAAAAAAABAAAABAAAAIMEAwDM/wgAAAAAAN0GAACF/4X/FAABAAQIPGJyPjxj
+ZW50ZXI+0ggBAAAA/wDeBgAAhf/dBgAAhf+F/xIAAQAJCDxzY3JpcHQ+bCjSCAEAAIAAAN4GAACF
+/90GAACt/6n/HgABABgABAASABIAAAAQAAUABQBmX2xuZwADAIX/CAABAAAKqgLeBgAArgDdBgAA
+hf+F/xwAAQAJCCwgJ1RpdHJlJyk7PC9zY3JpcHQ+0ggBAACAAADeBgAAhf/dBgAAhf+F/xUAAQAE
+CDwvY2VudGVyPjxicj4A0ggBAAAA/wDeBgAAhf+BAoMEAwDdBgAAhf+F/wgAAQAECNIIAQAAAP8A
+3gYAAIX/gQKDBAMA3QYAAIX/hf8MAAEABAg8YnI+0ggBAAAA/wDeBgAAhf/N/wgAAAAAAIECgwQD
+AN0GAACF/4X/CAABAAQI0ggBAAAA/wDeBgAAhf/dBgAArf9x/zgAAAAAAAMAAgAWAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAdl9SZWNoZXJjaGVGb3Jtc0FjdFBUAK3/QgATABgAAAA2ADYAAAAoAAEAEgB2
+UmVjaGVyY2hlRm9ybXNBY3QFAAUAZl9MbmcAIgIDAAcADAAFAAkwUzBFAPL/EwAHAAAAAAAAAENv
+bnRlbnUA6v8+ABMAKUQAAGQAoAUBAAAKAAAAAAAAAAABAAAKAQAACgAABQD///8AAQAAAAAAAAAA
+AAAAAAAAAAAAAADt/yAACAAAAAAAAAAAAMgAAAAAAAAAAAAAAAAAAAAAAK4C3gYAAK4A3QYAAIX/
+hf8IAAEABAjSCAEAAAD/AN4GAACF/4ECgwQDAN0GAACF/4X/CAABAAQI0ggBAAAA/wDeBgAAhf8=
+</rawitemdata></item>
+<item name='$PublicAccess' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><textlist><text>m_RechercheFormsAct</text><text
+>m_RechercheFormsAct</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

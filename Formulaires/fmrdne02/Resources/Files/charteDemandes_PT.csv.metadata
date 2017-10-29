@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048DE00" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1aea" sequence="19" unid="390C736CF9ECDC7EC1257E7B0068DE9F">
+<created><datetime dst="true">20150707T210527,35+02</datetime></created>
+<modified><datetime>20171029T101625,16-03</datetime></modified>
+<revised><datetime>20170904T113528,15-03</datetime></revised>
+<lastaccessed><datetime>20171029T101613,10-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101613,10-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=LEANDRO FALANGA - E470363/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$FlagsExt"><text>D</text></item>
+<item name="$TITLE" sign="true"><textlist><text>charteDemandes_PT.csv</text><text>charteDemandes_PT.csv</text></textlist></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+<item name="$FileNames" sign="true"><text>charteDemandes_PT.csv</text></item>
+
+<item name="$FileModDT" sign="true"><datetime>20150722T051519,33-03</datetime></item>
+
+<item name="$Flags"><text>345CgQ$</text></item>
+<item name="$EditFilePath"><text>C:\Users\P659234\AppData\Local\Temp\notes464DAB\~charteDemandes_PT2.csv</text></item></note>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='13c2' unid='326DAC10776D41D3C12579E30026FE71' sequence='58'>
+<created><datetime dst='true'>20120417T090555,05+02</datetime></created>
+<modified><datetime>20171029T101617,20-03</datetime></modified>
+<revised><datetime>20170904T113520,67-03</datetime></revised>
+<lastaccessed><datetime>20171029T101607,78-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101607,78-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_MOBILE_DomFact_Lookup_ForImplant)|v_MOBILE_DomFact_Lookup_ForImplant</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+9gACAEQAAwAkMjcABQAOAE1PQklMRV9Db3VudHJ5YgFeAQEAAQD1ACICBQAPAE1PQklMRV9GbG90
+dGVJRABiAV4BIgIDAAUAGAAUAAIAAwAJACQyNyRDb25mbGljdAQABAAAAHQABQAEAGZvcm0BABAA
+bV9NT0JJTEVfRG9tRmFjdAoCBAAFABUATU9CSUxFX0RvbUZhY3RfU3RhdHVzAGIBXgEBAAIAT04K
+AgQAHAIFABIATU9CSUxFX0RvbUZhY3RfRGlyYgFeAQEAAAALAgQAHAIDAAcAIAAaAAlMMVM2UzdT
+MTVTMTZTMThTMTlTMjdTMjhT
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABEiGYAAAADACQyNw==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAB4ACkEAAFZDAQADAAQAVgAAAP8ABQAACAAhAAAIAAAAAAICAAAAJDI3UGF5c1YAAgBEAAMA
+JDI3AAUADgBNT0JJTEVfQ291bnRyeWIBXgEBAAEA9QAiAgUADwBNT0JJTEVfRmxvdHRlSUQAYgFe
+ASICAwAHABAACgAJN1M4UzlTMTBTJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAEBAAAAAAAA
+AABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAQDEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD/
+//8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEAgICAAAEAAAAAAAAA
+CAAAAAAAAQBYQwBMgAMAAAAAAAECAgIBAQEBBwQDAAAAAAAAAAAgLy86WUMAAAgAAAABAAAAAQAA
+AAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAACwuFCCsAA==
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Arial</text></textlist></item>
+<item name='$Comment' sign='true'><text>MOBILE - Vue des domaines de facturation actifs pour l'implant</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAABAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUA
+AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
+AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
+BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
+AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXJlBgA+fA==
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZRYBAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcgAGAD58
+</rawitemdata></item></note>
+

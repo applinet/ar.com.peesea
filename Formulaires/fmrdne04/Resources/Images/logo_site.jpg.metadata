@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048FC18" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="c62" sequence="2" unid="6C38620C6539FF37C1257467003219C2">
+<created><datetime dst="true">20080613T110713,94+02</datetime></created>
+<modified><datetime>20171029T101725,40-03</datetime></modified>
+<revised><datetime dst="true">20090120T121227,88+02</datetime></revised>
+<lastaccessed><datetime>20171029T101719,29-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101719,29-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=JEAN MARC FULCRAN - E229430/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>logo_site.jpg</text></item>
+<item name="$Flags"><text>34CiQP</text></item>
+<item name="$FlagsExt"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+
+<item name="$MimeType" sign="true"><text>image/jpeg</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20080613T110620,11+02</datetime></item>
+<item name="$ImageNames" sign="true"><text>logo_site.jpg</text></item>
+<item name="$DesignerVersion"><text>7</text></item></note>

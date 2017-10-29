@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='cf6' unid='79D1CAE8C726A298C125758B002C558B' sequence='96'>
+<created><datetime dst='true'>20090401T100414,83+02</datetime></created>
+<modified><datetime>20171029T101609,18-03</datetime></modified>
+<revised><datetime>20170904T113512,17-03</datetime></revised>
+<lastaccessed><datetime>20171029T101602,74-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101602,74-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatText' summary='false' sign='true'><number>0</number></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='$Fields'><textlist><text>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text
+>f_AuteursAdmin</text><text>f_Etat</text><text>f_Lng</text></textlist></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAeAIAAAAAAAAAAAAAAAAAAAAAAADc/4oC+f94AiBOAAAAAAAAAAAvLyAqICog
+KiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICoNLy8gR3JvdXBlcyBEb21pbm8NbF9U
+YWJsZUdyb3VwZXNEb21pbm89J0dyb3VwZXMgRG9taW5vJzsNbF9UaXRyZUdyb3VwZXM9J1RhYmxl
+IEdyb3VwZXMgRG9taW5vJzsNDWxfQ29kZUZvcm09J0NvZGUgRm9ybSc7DWxfRXRhdEZvcm09J0V0
+YXQgRm9ybSc7DWxfQ29kZT0nQ29kZSBGb3JtdWxhaXJlJzsNbF9FdGF0PSdFdGF0JzsNbF9DbGF2
+ZT0nQ2yCICc7DWxfR0RvbWlubz0nR3JvdXBlIERvbWlubyAnOw1sX0dEb21pbm9BPSdHcm91cGUg
+RG9taW5vJzsNbF9HRG9taW5vMj0nR3JvdXBlIERvbWlubyAyJzsNbF9HRG9taW5vMz0nR3JvdXBl
+IERvbWlubyAzJzsNbF9CYWxGb249J0JBTCBGb25jdGlvbm5lbGxlJzsNbF9CYWxGb24yPSdCQUwg
+Rm9uY3Rpb25uZWxsZSAyJzsNbF9CYWxGb24zPSdCQUwgRm9uY3Rpb25uZWxsZSAzJzsNDWxfRXJy
+TUdEX0NvZEZvcm09J1JlbnNlaWduZXIgbGUgRm9ybXVsYWlyZSc7DWxfRXJyTUdEX0V0YXRGb3Jt
+PSdSZW5zZWlnbmVyIGxcJ0V0YXQnOw1sX0Vyck1HRF9FdGF0Rm9ybTI9J2xcJ0V0YXQgZG9pdCCI
+dHJlIG51bWVyaXF1ZSc7DWxfRXJyTUdEX0V0YXRGb3JtMz0nRXRhdCA+IDAgZXQgPCA5JzsNAF//
+EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$Script_O' sign='true'>
+<rawitemdata type='14'>
+AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AP////8A
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAEABABMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
+AAAAAABXMzJJNAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAwCMAAAAAABUAAgAKgA1ADYAMQBDADMAQQAwAAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
+RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
+AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAAAIfdZ1BAAHAAAAAAAdAAAC
+AAAACgAAAA==
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_ToutFormToutEtatFR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEA3QYAAIX/hf8ZAAEAAghzbV9H
+RG9taW5vX0xuZ19GUgDSCAEA/wAAAN4GAACF/w==
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_GDomino_Trads_FR</text><text
+>sm_GDomino_Trads_FR</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

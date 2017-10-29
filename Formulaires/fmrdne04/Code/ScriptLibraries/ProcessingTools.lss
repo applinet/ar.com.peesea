@@ -1,0 +1,927 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+Use "ErrConst"
+Use "LogEntry_old"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Public Class ProcessStatus
+Declare Sub Initialize
+Declare Sub DisplayStatus(paramProcessStatus As ProcessStatus)
+Declare Sub ChangeState(paramDoc As NotesDocument, paramTargetState As Integer, paramActionName As String, paramStateType As String)
+Declare Sub BuildMail(paramMailDoc As NotesDocument, paramDoc As NotesDocument, paramMailBodyField As String, paramMailLinkField As String)
+Declare Function CanSaveNewModel() As Variant 
+Declare Sub SaveDraft
+Declare Sub SaveModel
+Declare Sub FollowMail(paramDestinItemName As String, paramDestinfItemName As String, paramMailTitle As Variant)
+Declare Sub CancelDoc(paramDoc As NotesDocument, paramTargetState As Integer, paramMailTitle As Variant)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Constantes
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Const action_UNKNOWN%	=	0	' Inconnu
+Const action_SUBMIT%		=	1	' Soumettre
+Const action_DENY% 			=	2	' Refus
+Const action_CANCEL%		=	3	' Annulation
+Const action_MODEL%		=	4	' Modèle
+Const action_DRAFT%		=	5	' Brouillon
+Const action_FOLLOW%		=	6	' Faire suivre
+
+Const status_UNKNOWN%				=	0	' Inconnu
+Const status_SUCCESS%				=	1	' Terminé, avec succes. Document soumis
+Const status_FAILURE%					=	2	' Echec complet, avec erreur(s)
+Const status_PARTIALFAILURE%	=	3	' Echec partiel, avec erreur(s). Document enregistré
+Const status_DENIAL%					=	4	' Refus de la soumission (par exemple, refus d'enregistrer un nouveau modèle car nombre max atteind)
+
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Variables
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Dim CurrentSession As NotesSession
+Dim CurrentDB As NotesDatabase
+Dim CurrentDoc As NotesDocument
+Dim CurrentUser As NotesName
+Dim CurrentAgent As NotesAgent
+Dim CurrentLng As String
+
+Dim CurrentLogEntry As LogEntry
+
+Dim CurrentProcessStatus As ProcessStatus
+
+Dim RichTextItem As NotesRichTextItem
+Dim RichTextItem2 As NotesRichTextItem
+
+Dim ParamsView As NotesView
+Dim ParamsDoc As NotesDocument	
+Dim ProfileDoc As NotesDocument
+
+
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+' Cette classe représente l'état du traitement d'un formulaire
+'
+' Elle permet de définir une liste de messages d'erreur, qui seront
+' affichés à l'utilisateur
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Public Class ProcessStatus
+	
+	' - - - - - - - - - -
+	' Membres
+	' - - - - - - - - - -
+	
+	' Tableau des erreurs retournés
+	Public Errors List As Integer	
+	
+	Public Step As Integer
+	
+	' Action du processus
+	Public ProcessAction As Integer
+	' Etat du processus
+	Public ProcessStatus As Integer
+	
+	' Langue à utiliser pour l'affichage
+	Public ForceLng As String
+	
+	
+	' - - - - - - - - - -
+	' Méthodes
+	' - - - - - - - - - -
+	
+	' Constructeur
+	Public Sub New(paramProcessAction As Integer)
+		
+		' Action du processus
+		Me.ProcessAction = paramProcessAction
+		' Etat du processus
+		Me.ProcessStatus = status_UNKNOWN%
+		
+		' Etape du processus
+		Me.Step = 0
+		
+	End Sub
+	
+	
+	' Ajout d'une erreur à la liste
+	Public Sub AddErr(paramFormError As Integer, paramErrFatal As Boolean)
+		
+		' On ajoute l'erreur
+		Me.Errors(Str(paramFormError)) = paramFormError
+		
+		' Selon la gravité de l'erreur, on place le processus dans le bon status
+		If(paramErrFatal)Then
+			' Erreur fatale, on ne se pose pas de question
+			Me.ProcessStatus = status_FAILURE%
+		Else
+			' Erreur non fatale, on s'assure que l'on ne va pas diminuer la gravité
+			If(Me.ProcessStatus <> status_FAILURE%) Then
+				Me.ProcessStatus = status_PARTIALFAILURE%
+			End If
+		End If
+		
+	End Sub
+	
+	
+	
+	' Passage à l'étape suivante
+	Public Sub NextStep
+		Me.Step = Me.Step + 1	
+	End Sub
+	
+	
+	' Passage à l'étape précédente
+	Public Sub PrevStep
+		Me.Step = Me.Step - 1	
+	End Sub
+	
+End Class
+'++LotusScript Development Environment:2:2:Initialize:0:10
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge d'initialiser les différentes variables et les objets
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub Initialize
+	
+	' gestion d'erreur
+	On Error Goto InitializeErrorManagement
+	
+	Set CurrentSession = New NotesSession
+	Set CurrentDB = CurrentSession.CurrentDatabase
+	Set CurrentAgent = CurrentSession.CurrentAgent
+	
+	' On récupère le document du profil
+	Set ProfileDoc = CurrentDB.GetProfileDocument("m_ProfileParam")
+	Dim LogPathItem As NotesItem
+	Set LogPathItem = ProfileDoc.GetFirstItem("f_Path_Log")
+	
+	' Si on a trouvé le champ contenant le chemin vers la base de parametrage	
+	If Not LogPathItem Is Nothing Then	
+		Set CurrentLogEntry = New LogEntry("", LogPathItem.Text, False)
+	' Sinon, la classe "LogEntry" se chargera elle même d'afficher dans les logs classiques
+	Else
+		Set CurrentLogEntry = New LogEntry("", "", False)
+	End If
+	
+	' C'est fini, on sort	
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - -
+	' Gestion d'erreurs
+	' - - - - - - - - - - - - - - -
+InitializeErrorManagement:	
+	Messagebox("Formulaires - ProcessingTools - Initialize - Erreur " + Str(Err) + " à la ligne " + Str(Erl) + " - " + Error$)
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:DisplayStatus:8:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge d'afficher le status du traitement à l'utilisateur
+'
+' Particularité: procédure appelée même dans la gestion d'erreur d'Initialize
+' Elle ne doit donc pas faire remonter d'erreurs
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub DisplayStatus(paramProcessStatus As ProcessStatus)
+	
+	'Gestion d'erreurs
+	On Error Goto DisplayStatusErrorManagement
+	
+	' Chaine pour la liste des erreurs, en paramètres de l'URL	
+	Dim stringErrorsParam As String
+	stringErrorsParam = ""
+	
+	' Chaine pour l'identifiant du document, en paramètre de l'URL
+	Dim stringDocID As String
+	stringDocID = ""
+	
+	' Cahine pour le forçage de la langue d'affichage
+	Dim stringForceLng As String
+	stringForceLng = ""
+	
+	
+	' On boucle sur la liste des codes d'erreurs
+	Forall ErrCode In paramProcessStatus.Errors
+		stringErrorsParam = stringErrorsParam + Trim(Str(ErrCode)) + "/"
+	End Forall
+	
+	' On devrait supprimer ici le dernier "/", la boucle en ajoute un de trop
+	
+	' On ajoute le début de la chaine de paramètres
+	If(stringErrorsParam <> "") Then
+		stringErrorsParam = "&ErrCode=" + stringErrorsParam
+	End If
+	
+	
+	' On créé la chaine pour l'identifiant du document
+	If(CurrentDoc.Created <> "") Then	
+		stringDocID = "&DocID=" + CurrentDoc.UniversalID
+	End If
+	
+	
+	' On créé la chaine pour le forçage de la langue d'affichage
+	If(paramProcessStatus.ForceLng <> "") Then
+		stringForceLng = "&ForceLng=" + paramProcessStatus.ForceLng
+	End If
+	
+	' On affiche la redirection JavaScript
+	Print "<script>"
+	Print "var url = self.window.location.href;"
+	Print "window.location = url.substring(0,(url.lastIndexOf('.nsf')+5))+'m_ProcessResult?OpenForm&Action=" & paramProcessStatus.ProcessAction & "&Status=" & paramProcessStatus.ProcessStatus & stringErrorsParam & stringDocID & stringForceLng & "'"
+	Print "</script>"
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	Exit Sub
+	' - - - - - - - - - - - - - - -
+	' Gestion d'erreurs
+	' - - - - - - - - - - - - - - -
+DisplayStatusErrorManagement:
+	
+	' On log l'erreur		
+	Call CurrentLogEntry.Clear	
+	CurrentLogEntry.LogType		= LOGTYPE_ERROR$
+	CurrentLogEntry.LibName		= "ProcessingTools"
+	CurrentLogEntry.SubName		= "DisplayStatus"		
+	CurrentLogEntry.ErrLine 			= Erl
+	CurrentLogEntry.ErrCode		= Err
+	CurrentLogEntry.ErrMsg			= Error$
+	CurrentLogEntry.Save
+	
+	Resume Next	
+End Sub
+
+'++LotusScript Development Environment:2:2:ChangeState:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge de changer l'état d'un document
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub ChangeState(paramDoc As NotesDocument, paramTargetState As Integer, paramActionName As String, paramStateType As String)
+	
+	' Gestion d'erreurs
+	On Error Goto ChangeStateErrorManagement
+	
+	' - - - - - - - - - -
+	' Initialisation
+	' - - - - - - - - - -
+	
+	' Variables locales
+	Dim Res As Variant
+	Dim Formule As String
+	Dim stEtatCible As String
+	Dim itemActeursWorkflowMembresGroupes As NotesItem
+	
+	' Nettoyage et conversion en chaine de l'état dans lequel on souhaitese placer
+	stEtatCible = Trim(Cstr(paramTargetState))
+	
+	' On récupère la vue des documents de paramétrages
+	Dim ParamsView As NotesView
+	Set ParamsView = CurrentDB.GetView("v_FormsParams")
+	
+	' On récupère le document de paramétrage pour le modèle du document traité
+	Dim ParamsDoc As NotesDocument
+	Set ParamsDoc = ParamsView.GetDocumentbyKey(paramDoc.f_TypeForm(0))
+	
+	
+	' - - - - - - - - - -
+	' Traitement
+	' - - - - - - - - - -
+	
+	' Si on sort d'un état initial
+	' i.e. : utilisation d'un modèle ou d'un brouillon. On supprime le titre
+	If paramTargetState <> 0 Then
+		paramDoc.f_EstModele = 0
+		paramDoc.f_EstBrouillon = 0
+		paramDoc.removeItem("f_Titre")
+	End If
+	
+	' Récupération du nom de l'état cible dans le paramétrage
+	' Les noms sont sous la forme "_X_Nom", ou X est le numéro de l'état cible
+	' Cette formule récupère le nom, à droite du numéro d'état
+	Formule = |"_"+@Trim(@Right(f_EtatsNoms;"_|+stEtatCible+|_"))|
+	paramDoc.f_EtatNoms = Evaluate(Formule,ParamsDoc)
+	
+	' Récupération du nom du masque à utiliser pour l'état cible
+	Formule = |@Trim(@Right(f_EtatsForms;"|+stEtatCible+|:"))|
+	Res = Evaluate(Formule,ParamsDoc)
+	paramDoc.Form = Res(0)
+	
+	' Mise à jour de l'historique
+	' On place les date et heure actuelles au début de la liste du champs "f_HistoDates"
+	Formule = |@Trim(@text(@Now;"Z2"):f_HistoDates)|
+	paramDoc.f_HistoDates = Evaluate(Formule,paramDoc)
+	
+	' Mise à jour de l'historique
+	' On place le code JavaScript représentant le nom de l'action effectuée au début de la liste du champs "f_HistoActions"
+	Formule = |@Trim("|+paramActionName+|":f_HistoActions)|
+	paramDoc.f_HistoActions = Evaluate(Formule,paramDoc)
+	
+	' Mise à jour de l'historique
+	' On place le nom de l'utilisateur au début de la liste du champs "f_HistoActeurs"
+	Formule =|@Trim(Remote_User:f_HistoActeurs)|
+	paramDoc.f_HistoActeurs = Evaluate(Formule,paramDoc)
+	
+	' On force f_AuteursPotentiels à une forme de type cn=...,ou=... (cannonique) pour que le contrôle d'accès au sections fonctionne correctement
+	Formule =|@Name([Canonicalize];f_AuteursPotentiels)|
+	paramDoc.f_AuteursPotentiels = Evaluate(Formule,paramDoc)
+	
+	' Calcul de l'intersection @UserNamesList et f_ActeursGroupe
+	' Le champ f_ActeursWorkflowGroupes contient la liste de tous les groupes qui sont intervenu dans le workflow après l'état initial jusqu'à l'instant présent
+	If (paramDoc.f_TypeEtat(0)<>"Initial") Then
+		Formule = |@Trim(@Unique(f_ActeursWorkflowGroupes:@Keywords(f_ActeursGroupe;@UserNamesList;"")))|
+		paramDoc.f_ActeursWorkflowGroupes = Evaluate(Formule,paramDoc)
+		
+		' On s'occupe de remplir le champ f_ActeursWorkflowMembresGroupes en "explosant" les groupes du champ f_ActeursWorkflowGroupes
+		' Récupération du champ devant contenir la liste des personnes appartenant aux groupes du workflow (création si il n'existe pas)
+		Set itemActeursWorkflowMembresGroupes = paramDoc.GetFirstItem("f_ActeursWorkflowMembresGroupes")
+		If itemActeursWorkflowMembresGroupes Is Nothing Then Set itemActeursWorkflowMembresGroupes = New NotesItem(paramDoc, "f_ActeursWorkflowMembresGroupes", "", READERS)
+		
+		Forall nomGroupe In paramDoc.f_ActeursWorkflowGroupes
+			' Ajout des membres du groupe à la liste des noms			
+			itemActeursWorkflowMembresGroupes.AppendToTextList(Evaluate(|@Sort(@Unique(@Name([Canonicalize]; @DBLookup("":"NoCache"; "":"names.nsf"; "($VIMGroups)" ; "| + Cstr(nomGroupe) + |"; "Members"; [FAILSILENT]))))|))
+		End Forall
+		
+		'Format canonique
+		paramDoc.f_ActeursWorkflowMembresGroupes = Evaluate(|@Sort(@Unique(@Trim(@Name([Canonicalize]; f_ActeursWorkflowMembresGroupes))))|, paramDoc)
+		
+		itemActeursWorkflowMembresGroupes.IsNames = True
+		itemActeursWorkflowMembresGroupes.IsSummary = True
+	End If
+	
+	' Le champ f_ActeursWorkflowIndividus contient la liste de tous les individus qui sont intervenu dans le workflow après l'état initial jusqu'à l'instant présent
+	If (paramDoc.f_TypeEtat(0)<>"Initial") Then
+		Formule = |@Trim(@Unique(f_ActeursWorkflowIndividus:Remote_User))|
+		paramDoc.f_ActeursWorkflowIndividus = Evaluate(Formule,paramDoc)
+	End If
+	
+	' On efface date et acteur, pour le cas où le document serait un modèle/brouillon
+	paramDoc.f_EnregDate = ""
+	paramDoc.f_EnregActeur = ""
+	
+	' On récupère l'icone de l'état dans le paramétrage
+	Formule = |r := @Trim(@Right(f_EtatsIcones;"_|+Trim(Cstr(paramTargetState))+|_"));@Right(r;":")|
+	Res = Evaluate(Formule,ParamsDoc)
+	paramDoc.f_EtatIcone = Res(0)
+	
+	' On renseigne la date d'arrivé dans l'état cible
+	paramDoc.f_DateArriveeEtat = Now
+	
+	' Si le document est dans un état "Initial", mais que l'on souhaite le placer dans un autre état,
+	' on renseigne la date de sortie de l'état "Initial"
+	If  (paramDoc.f_TypeEtat(0)="Initial")  And (paramStateType <>"Initial") Then
+		paramDoc.f_DateSortieEtatInit = paramDoc.f_DateArriveeEtat
+	End If
+	
+	' On change le numéro de l'état courant. On le met à la valeur du numéro de l'état cible
+	paramDoc.f_Etat = paramTargetState
+	' On change le type de l'état courant. On le met à la valeur du type de l'état cible
+	paramDoc.f_TypeEtat = paramStateType
+	
+	' Pour gestion attachements - fonctionnement incertain: à revoir
+	paramDoc.f_TempSaved="0"
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - -
+	' Gestion d'erreurs
+	' - - - - - - - - - - - - - - -
+ChangeStateErrorManagement:
+	
+	' On log l'erreur
+	Call CurrentLogEntry.Clear
+	CurrentLogEntry.LogType		= LOGTYPE_ERROR$
+	CurrentLogEntry.DBName 		= CurrentDB.Title
+	CurrentLogEntry.AgentName	= CurrentAgent.Name
+	CurrentLogEntry.LibName		= "ProcessingTools"
+	CurrentLogEntry.SubName		= "ChangeState"	
+	CurrentLogEntry.ErrLine 			= Erl
+	CurrentLogEntry.ErrCode		= Err
+	CurrentLogEntry.ErrMsg			= Error$
+	CurrentLogEntry.Save
+	
+	' On ajoute l'erreur à la liste des erreurs
+	Call CurrentProcessStatus.AddErr(Err, True)
+	
+	Error errPROCESSED%
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:BuildMail:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge d'ajouter les onglets et  le lien à un mail
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub BuildMail(paramMailDoc As NotesDocument, paramDoc As NotesDocument, paramMailBodyField As String, paramMailLinkField As String)
+	
+	' Gestion d'erreurs
+	On Error Goto BuildMailErrorManagement
+	
+	' - - - - - - - - - -
+	' Initialisation
+	' - - - - - - - - - -
+	
+	' Variables locales
+	
+	' On récupère la vue des documents de paramétrages
+	Set ParamsView = CurrentDB.GetView("v_FormsParams")
+	
+	' On récupère le document de paramétrage pour le modèle du document traité
+	Set ParamsDoc = ParamsView.GetDocumentbyKey(paramDoc.f_TypeForm(0))
+	
+	' On récupère le document du profil
+	Set ProfileDoc = CurrentDB.GetProfileDocument("m_ProfileParam")
+	
+	
+	' - - - - - - - - - -
+	' Traitement
+	' - - - - - - - - - -
+	
+	' On récupère le corps du mail	
+	Set RichTextItem = paramMailDoc.GetFirstItem("Body")
+	
+	Call RichTextItem.AddNewLine(1)
+	
+	' On récupère le contenu du mail dans le document de paramètrage
+	Set RichTextItem2 = ParamsDoc.GetFirstItem(paramMailBodyField)
+	Call RichTextItem.AppendRTItem(RichTextItem2)
+	
+	Call RichTextItem.AddNewLine(1)
+	
+	' On ajoute le champs "URL" au mail.
+	paramMailDoc.URL = paramDoc.URL(0)
+	
+	If(paramMailLinkField <> "") Then
+		' On récupère le lien dans le document de profil		
+		Set RichTextItem2 = ProfileDoc.getFirstItem(paramMailLinkField)
+		Call RichTextItem.AppendRTItem(RichTextItem2)
+	End If	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - -
+	' Gestion d'erreurs
+	' - - - - - - - - - - - - - - -
+BuildMailErrorManagement:
+	
+	' On log l'erreur		
+	Call CurrentLogEntry.Clear
+	CurrentLogEntry.LogType		= LOGTYPE_ERROR$
+	CurrentLogEntry.LibName		= "ProcessingTools"
+	CurrentLogEntry.SubName		= "BuildMail"
+	CurrentLogEntry.ErrLine 			= Erl
+	CurrentLogEntry.ErrCode		= Err
+	CurrentLogEntry.ErrMsg			= Error$
+	CurrentLogEntry.Save
+	
+	' On ajoute l'erreur à la liste des erreurs
+	Call CurrentProcessStatus.AddErr(Err, True)
+	
+	Error errPROCESSED%
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:1:CanSaveNewModel:6:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette fonction renvoie True si l'utilisateur à le droit de sauvegarder
+' un nouveau modèle, False sinon
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Function CanSaveNewModel() As Variant 
+	
+	' Gestion d'erreurs
+	On Error Goto CanSaveNewModelErrorManagement
+	
+	' - - - - - - - - - -
+	' Initialisation
+	' - - - - - - - - - -
+	
+	' Variables locales
+	Dim ModelsCount As Integer
+	Dim Entry As NotesViewEntry
+	Dim Key As String
+	
+	' On récupère la vue des documents de paramétrages
+	Dim ParamsView As NotesView
+	Set ParamsView = CurrentDB.GetView("v_FormsParams")
+	
+	' On récupère le document de paramétrage pour le modèle du document traité
+	Dim ParamsDoc As NotesDocument
+	Set ParamsDoc = ParamsView.GetDocumentbyKey(CurrentDoc.f_TypeForm(0))
+	
+	' Nombre maximum de modèles autorisés
+	Dim MaxModelCount As Integer
+	MaxModelCount = ParamsDoc.f_NbMaxModeles(0)
+	
+	' On récupère la vue affichant le nombre de modèle par formulaire	
+	Dim ModelCountView As NotesView
+	Set ModelCountView = CurrentDB.getView("v_NbModeles")
+	Call ModelCountView.Refresh
+	
+	' Navigateur de vue
+	Dim Nav As NotesViewNavigator
+	Set Nav = ModelCountView.CreateViewNav
+	
+	
+	' - - - - - - - - - -
+	' Traitement
+	' - - - - - - - - - -
+	
+	' Si le nombre de modèles autorisés est positif, on peut éventuellement créer de nouveaux modèles	
+	If(MaxModelCount > 0)Then
+		
+		' On recherche une entrée dans la vue correspondant au formulaire et à l'utilisateur en cour
+		Key = CurrentDoc.f_TypeForm(0) + "\" + CurrentUser.Abbreviated 
+		Set Entry = ModelCountView.GetEntryByKey(Key,True )
+		
+		' Si on n'a pas trouvé de document correspondant, on autorise	
+		If Entry Is Nothing Then
+			CanSaveNewModel = True
+		Else
+			
+			' On remonte à la catégorie contenant le document.
+			' La ligne contient le nombre total de modèles autorisés		
+			Set Entry = Nav.getPrevCategory(Entry)
+			ModelsCount = Cint(Entry.ColumnValues(1))
+			
+			' Si le nombre de modèle stockés est supérieur ou égale au nombre de modeles autorisé, on refuse		
+			If ModelsCount >= MaxModelCount Then
+				CanSaveNewModel=False
+			Else
+				CanSaveNewModel = True
+			End If
+			
+		End If
+		
+	' Si le nombre de modèles autorisés est nul ou négatif, on refuse
+	Else
+		CanSaveNewModel = False
+	End If
+	
+	
+	' C'est fini, on sort
+	Exit Function
+	
+	
+	' - - - - - - - - - - - - - - -
+	' Gestion d'erreurs
+	' - - - - - - - - - - - - - - -
+CanSaveNewModelErrorManagement:
+	
+	' On log l'erreur		
+	Call CurrentLogEntry.Clear	
+	CurrentLogEntry.LogType		= LOGTYPE_ERROR$
+	CurrentLogEntry.LibName		= "ProcessingTools"
+	CurrentLogEntry.SubName		= "CanSaveNewModel"
+	CurrentLogEntry.ErrLine 			= Erl
+	CurrentLogEntry.ErrCode		= Err
+	CurrentLogEntry.ErrMsg			= Error$
+	CurrentLogEntry.Save
+	
+	' On ajoute l'erreur à la liste des erreurs
+	Call CurrentProcessStatus.AddErr(Err, True)		
+	
+	Error errPROCESSED%
+	Exit Function
+End Function
+
+'++LotusScript Development Environment:2:2:SaveDraft:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge de sauver un brouillon
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub SaveDraft
+	
+	' Gestion d'erreurs
+	On Error Goto SaveDraftErrorManagement
+	
+	CurrentDoc.f_EstBrouillon = 1
+	CurrentDoc.f_EstModele = 0
+	CurrentDoc.f_EnregActeur = CurrentUser.Canonical
+	CurrentDoc.f_EnregDate = Now
+	Call CurrentDoc.Save(False, False)
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - -
+	' Gestion d'erreurs
+	' - - - - - - - - - - - - - - -
+SaveDraftErrorManagement:
+	' On ne s'occupe pas des erreurs traitées plus bas
+	If(Err <> 1000) Then
+		' On log l'erreur
+		Call CurrentLogEntry.Clear	
+		CurrentLogEntry.LogType		= LOGTYPE_ERROR$
+		CurrentLogEntry.FormCode 	= CurrentDoc.f_TypeForm(0)
+		CurrentLogEntry.LibName		= "ProcessingTools"
+		CurrentLogEntry.SubName		= "SaveDraft"
+		CurrentLogEntry.ErrLine 			= Erl
+		CurrentLogEntry.ErrCode		= Err
+		CurrentLogEntry.ErrMsg			= Error$
+		CurrentLogEntry.Save
+		
+		' On ajoute l'erreur à la liste des erreurs
+		Call CurrentProcessStatus.AddErr(Err, True)
+	End If
+	
+	' En revanche, on signale toujours que l'erreur a été traitée, soit ici, soit dans les procédures appelées
+	Error errPROCESSED%
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:SaveModel:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge de sauver un modèle
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub SaveModel
+	
+	' Gestion d'erreurs
+	On Error Goto SaveModelErrorManagement
+	
+	CurrentDoc.f_EstBrouillon = 0
+	CurrentDoc.f_EstModele = 1
+	CurrentDoc.f_EnregActeur = CurrentUser.Canonical
+	CurrentDoc.f_EnregDate = Now
+	Call CurrentDoc.Save(False, False)
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - -
+	' Gestion d'erreurs
+	' - - - - - - - - - - - - - - -
+SaveModelErrorManagement:
+	' On ne s'occupe pas des erreurs traitées plus bas
+	If(Err <> 1000) Then
+		' On log l'erreur
+		Call CurrentLogEntry.Clear
+		CurrentLogEntry.LogType		= LOGTYPE_ERROR$
+		CurrentLogEntry.FormCode 	= CurrentDoc.f_TypeForm(0)
+		CurrentLogEntry.LibName		= "ProcessingTools"
+		CurrentLogEntry.SubName		= "SaveModel"
+		CurrentLogEntry.ErrLine 			= Erl
+		CurrentLogEntry.ErrCode		= Err
+		CurrentLogEntry.ErrMsg			= Error$
+		CurrentLogEntry.Save
+		
+		' On ajoute l'erreur à la liste des erreurs
+		Call CurrentProcessStatus.AddErr(Err, True)
+	End If
+	
+	' En revanche, on signale toujours que l'erreur a été traitée, soit ici, soit dans les procédures appelées
+	Error errPROCESSED%
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:FollowMail:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge de faire suivre un mail
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub FollowMail(paramDestinItemName As String, paramDestinfItemName As String, paramMailTitle As Variant)
+	
+	' Gestion d'erreur	
+	On Error Goto FollowMailErrorManagement
+	
+	' - - - - - - - - - -
+	' Initialisation
+	' - - - - - - - - - -
+	
+	' Variables locales
+	Dim Formule As String
+	Dim Res As Variant
+	
+	Dim MailDoc As NotesDocument
+	Dim MailTitle As Variant
+	
+	Dim DestinItem As NotesItem
+	Dim DestinfItem As NotesItem
+	Dim Destinataires() As Variant
+	
+	Dim x As Variant
+	Dim i As Variant
+	
+	' - - - - - - - - - -
+	' Traitement
+	' - - - - - - - - - -
+	
+	
+	' Destinataires
+	Set DestinItem = CurrentDoc.GetFirstItem(paramDestinItemName)
+	i = 0
+	
+	' On compte le nombre de destinataires
+	Forall m In DestinItem.Values
+		i = i+1
+	End Forall
+	Redim Destinataires(i)
+	
+	x = 0	
+	
+	' On place les destinataire dans le tableau	
+	Forall m In DestinItem.Values
+		Destinataires(x) = m
+		x = x+1
+	End Forall
+	
+	' On ajoute les destinataire à la liste des lecteurs
+	Set DestinfItem = CurrentDoc.GetFirstItem(paramDestinfItemName)
+	For x=0 To i
+		If Destinataires(x)<>"" Then
+			Call DestinfItem.AppendToTextList(Destinataires(x))
+		End If
+	Next
+	
+	CurrentDoc.Destin=""
+	
+	' On enregistre le document	
+	Call CurrentDoc.Save(False, False)
+	
+	
+	' Titre du mail	
+	MailTitle = paramMailTitle
+	
+	
+	' Envoie des mails aux destinataires
+	For x = 0 To i 
+		If(Destinataires(x) <> "") Then
+			
+			' Création du mail
+			Set MailDoc = New NotesDocument(CurrentDB)
+			MailDoc.Form = "Memo"
+			
+			' Titre du mail	
+			MailDoc.Subject = MailTitle
+			
+			' Destinataire du mail
+			MailDoc.SendTo = Destinataires(x)		
+			
+			' Corps du mail
+			Set RichTextItem = New NotesRichTextItem(MailDoc,"Body")
+			
+			' Ajout du contenu (onglets) et du lien au mail
+			Call BuildMail(MailDoc, CurrentDoc, "f_message04", "f_Lien")
+			
+			' Envoie du message	
+			Call MailDoc.Send(False)
+			
+		End If
+	Next
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - -
+	' Gestion d'erreurs
+	' - - - - - - - - - - - - - - -
+FollowMailErrorManagement:
+	
+	' On ne s'occupe pas des erreurs traitées plus bas
+	If(Err <> 1000) Then
+		' On log l'erreur
+		Call CurrentLogEntry.Clear
+		CurrentLogEntry.LogType		= LOGTYPE_ERROR$
+		CurrentLogEntry.FormCode 	= CurrentDoc.f_TypeForm(0)
+		CurrentLogEntry.LibName		= "ProcessingTools"
+		CurrentLogEntry.SubName		= "FollowMail"
+		CurrentLogEntry.ErrLine 			= Erl
+		CurrentLogEntry.ErrCode		= Err
+		CurrentLogEntry.ErrMsg			= Error$
+		
+		' Cas particuliers
+		If((Err = 4294) Or (Err = 4295))Then
+			CurrentLogEntry.AddDebugLine("Destinataire: " + MailDoc.SendTo(0))
+		End If
+		
+		Call CurrentLogEntry.Save
+		
+		' On ajoute l'erreur à la liste des erreurs
+		Call CurrentProcessStatus.AddErr(Err, True)
+	End If
+	
+	
+	' En revanche, on signale toujours que l'erreur a été traitée, soit ici, soit dans les procédures appelées
+	Error errPROCESSED%
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:CancelDoc:0:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge d'annuler un document
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub CancelDoc(paramDoc As NotesDocument, paramTargetState As Integer, paramMailTitle As Variant)
+	
+	' Gestion d'erreurs
+	On Error Goto CancelDocErrorManagement
+	
+	' - - - - - - - - - -
+	' Initialisation
+	' - - - - - - - - - -
+	
+	' Variables locales	
+	Dim Formule As String
+	Dim Res As Variant
+	
+	Dim MailDoc As NotesDocument	
+	Dim MailTitle As Variant
+	
+	Dim RichTextItem As NotesRichTextItem
+	Dim MailAnnulItem As NotesItem
+	
+	
+	' - - - - - - - - - -
+	' Traitement
+	' - - - - - - - - - -
+	
+	
+	' Création du mail
+	Set MailDoc = New NotesDocument(CurrentDB)
+	MailDoc.Form = "Memo"
+	
+	
+	' On change les auteurs potentiels pour que le formulaire ne puisse plus être modifié (autrement que par purge par exemple)
+	paramDoc.f_AuteursPotentiels = "[AdminForms]"
+	
+	
+	' Titre du mail		
+	MailDoc.Subject = paramMailTitle
+	
+	' Destinataire	du mail
+	Set MailAnnulItem = paramDoc.GetfirstItem("f_MailAnnul")
+	Call MailDoc.CopyItem(MailAnnulItem, "SendTo" )
+	
+	' Corps du mail
+	Set RichTextItem = New NotesRichTextItem(MailDoc,"Body")
+	
+	' Ajout du contenu (onglets) et du lien au mail
+	Call BuildMail(MailDoc, paramDoc, "f_message06", "f_Lien")
+	
+	' Envoie du message
+	Call MailDoc.Send(False)
+	
+	
+	' On considère que le formulaire est arrivé dans état terminal
+	Call ChangeState(paramDoc, paramTargetState, "l_HAnnul","Terminal")
+	paramDoc.f_ActeursIndividu =""
+	paramDoc.f_ActeursGroupe = ""
+	paramDoc.f_ActeursMembresGroupe = ""
+	
+	paramDoc.f_EtatTerminal = "A"
+	
+	
+	' On sauvegarde le document
+	Call paramDoc.Save(False,False)
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' - - - - - - - - - - - - - - -
+	' Gestion d'erreurs
+	' - - - - - - - - - - - - - - -
+CancelDocErrorManagement:
+	
+	' On ne s'occupe pas des erreurs traitées plus bas
+	If(Err <> 1000) Then
+		' On log l'erreur
+		Call CurrentLogEntry.Clear
+		CurrentLogEntry.LogType		= LOGTYPE_ERROR$
+		CurrentLogEntry.LibName		= "ProcessingTools"
+		CurrentLogEntry.SubName		= "CancelDoc"
+		CurrentLogEntry.ErrLine 			= Erl
+		CurrentLogEntry.ErrCode		= Err
+		CurrentLogEntry.ErrMsg			= Error$
+		
+		' Cas particuliers
+		If(Err = 4294)Then
+			CurrentLogEntry.AddDebugLine("Destinataire du mail introuvable: " + MailDoc.SendTo(0))
+		End If
+		
+		Call CurrentLogEntry.Save
+		
+		' On ajoute l'erreur à la liste des erreurs
+		Call CurrentProcessStatus.AddErr(Err, True)
+	End If
+	
+	
+	' En revanche, on signale toujours que l'erreur a été traitée, soit ici, soit dans les procédures appelées
+	Error errPROCESSED%
+	Exit Sub
+End Sub
+
+

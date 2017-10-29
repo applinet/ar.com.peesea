@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048C55E" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="98a" sequence="77" unid="FC3088799BC31E52C1257846005D1725">
+<created><datetime dst="true">20110301T185647,73+02</datetime></created>
+<modified><datetime>20171029T101501,93-03</datetime></modified>
+<revised><datetime>20170904T113509,96-03</datetime></revised>
+<lastaccessed><datetime>20171029T101457,31-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101457,31-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+
+<item name="$MimeType" sign="true"><text>image/gif</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20100104T170652,32+02</datetime></item>
+<item name="$ImageNames" sign="true"><text>LngsBar-Corner.gif</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$TITLE" sign="true"><textlist><text>Barre de langues\Coin</text><text>lngsbar_corner_cacheable.gif</text></textlist></item>
+<item name="$Comment" sign="true"><text> </text></item>
+<item name="$DesignerVersion" sign="true"><text>7</text></item></note>

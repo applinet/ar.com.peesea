@@ -1,0 +1,17 @@
+#NamePicker_Layout_Cell11        { text-align: left; }
+#NamePicker_Layout_Cell11 input  { margin: 0px 8px; }
+
+#NamePicker_Layout_Cell13        { text-align: left; }
+#NamePicker_Layout_Cell21 select { width: 334px; margin: 8px 0px; }
+
+#NamePicker_Layout_Cell22        { text-align: center; }
+#NamePicker_Layout_Cell22 button { margin: 4px 0px; }
+
+#NamePicker_Layout_Cell23 select { width: 334px; margin: 8px 0px; }
+
+#NamePicker_Layout_Cell31        { text-align: center; }
+#NamePicker_Layout_Cell31 button { margin: 0px 4px; }
+
+#NamePicker_Layout_Cell33        { text-align: center; }
+
+#NamePicker .small-help	{ font-weight: normal; font-style: italic; font-size: 0.8em; color: #CC3535; }

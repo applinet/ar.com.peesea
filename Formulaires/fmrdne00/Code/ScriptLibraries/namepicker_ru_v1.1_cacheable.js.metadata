@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C80048A097" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="2d6" sequence="34" unid="A500D04C578B5AEEC1257906002AFBC3">
+<created><datetime dst="true">20110909T094929,63+02</datetime></created>
+<modified><datetime>20171029T101319,29-03</datetime></modified>
+<revised><datetime>20150112T140932,09-03</datetime></revised>
+<lastaccessed><datetime>20171029T101318,53-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101318,53-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$TITLE" sign="true"><text>namepicker_ru_v1.1_cacheable.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$POID"><datetime>20150112T140932,09-03</datetime></item></note>

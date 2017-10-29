@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048A097" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="262" sequence="43" unid="C9243F49E4B5E05EC125785E002FC272">
+<created><datetime dst="true">20110325T104139,70+02</datetime></created>
+<modified><datetime>20171029T101318,71-03</datetime></modified>
+<revised><datetime>20150112T140931,51-03</datetime></revised>
+<lastaccessed><datetime>20171029T101318,21-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101318,21-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>views_v1.0_cacheable.css</text></item>
+<item name="$Flags"><text>34C=Q</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+
+<item name="$FileModDT" sign="true"><datetime dst="true">20110325T104121,77+02</datetime></item>
+
+<item name="$FileNames" sign="true"><text>views_v1.0_cacheable.css</text></item>
+<item name="$Comment" sign="true"><text>Feuille de style des vues</text></item>
+<item name="$DesignerVersion" sign="true"><text>7</text></item></note>

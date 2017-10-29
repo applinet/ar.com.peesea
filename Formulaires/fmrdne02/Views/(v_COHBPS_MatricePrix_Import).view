@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='193e' unid='A1C3C8822CC0765EC1257DAA004CA76F' sequence='30'>
+<created><datetime dst='true'>20141210T155715,99+02</datetime></created>
+<modified><datetime>20171029T101623,22-03</datetime></modified>
+<revised><datetime>20170904T113517,37-03</datetime></revised>
+<lastaccessed><datetime>20171029T101611,84-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101611,84-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=NICOLAS LAURENZANO - E462253/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_COHBPS_MatricePrix_Import)|v_COHBPS_MatricePrix_Import</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+wgACAGoAAwAkMjQABQASAENPSEJQU19Qcml4X01hcnF1ZQEAAQD1ACICBQAUAENPSEJQU19Qcml4
+X0NvZGVQYXlzIgIBAAEA9QAiAgUAFwBDT0hCUFNfUHJpeF9Db2RlRmFtaWxsZQAiAgMABQAeABoA
+AwADAAkABAAkMjQkQ29uZmxpY3QkUkVGBAAEAAAAKgAFAAQAZm9ybQEAFQBtX0NPSEJQU19NYXRy
+aWNlX1ByaXgACgIDAAcACgAEAAlMMVM=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABECGYAAAADACQyNA==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABABkACAAAAFZDAQADAB0AhAAAALIAAQAACoABAAAAAAAAAAICAAAAJDI0TWFycXVl9UNvZGUg
+UGF5c/VDb2RlIEZhbWlsbGWEAAIAagADACQyNAAFABIAQ09IQlBTX1ByaXhfTWFycXVlAQABAPUA
+IgIFABQAQ09IQlBTX1ByaXhfQ29kZVBheXMiAgEAAQD1ACICBQAXAENPSEJQU19Qcml4X0NvZGVG
+YW1pbGxlACICAwAHABgAEQAJMVMyUzNTNFM1UzZTN1M4UwAmAAEAAAABAQAJAQAACgEBDgoAAAEA
+rSsBAAEAAQEAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAA
+AAAAAABCAAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAA
+AQAAAAAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8004919E1" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="36e" sequence="24" unid="58084855E5FE39B9C1256B87005A72CA">
+<created><datetime dst="true">20020325T182756,26+02</datetime></created>
+<modified><datetime>20171029T101830,65-03</datetime></modified>
+<revised><datetime dst="true">20160509T212252,70+02</datetime></revised>
+<lastaccessed><datetime>20171029T101829,24-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101829,24-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Franck Nuwendam/OU=France/O=IBM</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=Patrig Droumaguet/OU=France/O=IBM</name><name>CN=Admin/O=Lactee</name><name>CN=Thomas Bailleul/OU=France/O=IBM</name><name>CN=Thomas Bailleul/O=Marseille</name><name>CN=OM/O=Marseille</name><name>CN=Thomas Bailleul/O=Marseille</name><name>CN=Franck Nuwendam/O=TESTDOM</name><name>CN=BRUNO LAURENT - P053591/OU=users/O=PSA</name><name>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name>CN=FRANCK NUWENDAM - E100441/OU=users/O=PSA</name><name>CN=Franck Nuwendam/OU=France/O=IBM</name><name>CN=FRANCK NUWENDAM - E100441/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=CEDRIC FRANCAIS - E288949/OU=users/O=PSA</name><name>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>triangleSelect.gif</text></item>
+<item name="$TITLE" sign="true"><text>PICTO_selecttriangle.gif</text></item>
+<item name="$DesignerVersion" sign="true"><text>5</text></item>
+<item name="$Flags"><text>34CiQ</text></item></note>

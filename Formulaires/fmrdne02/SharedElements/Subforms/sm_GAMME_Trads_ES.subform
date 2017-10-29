@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='d3e' unid='4414BF26AA84111AC125758B00479425' sequence='95'>
+<created><datetime dst='true'>20090401T150149,81+02</datetime></created>
+<modified><datetime>20171029T101609,54-03</datetime></modified>
+<revised><datetime>20170904T113512,45-03</datetime></revised>
+<lastaccessed><datetime>20171029T101602,96-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101602,96-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatText' summary='false' sign='true'><number>0</number></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='$Fields'><textlist><text>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text
+>f_AuteursAdmin</text><text>f_Etat</text><text>f_Lng</text></textlist></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAEAMAAAAAAAAAAAAAAAAAAAAAAADc/yID+f8QAyBOAAAAAAAAAAAvLyAqICog
+KiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICoNLy8gR4JugnJpcXVlcw1sX01lbnVU
+YWJsZXNHYW1tZT0nTWVudSBUYWJsZXMgR0FNTUVfRVMnOw0NLy8gKiAqICogKiAqICogKiAqICog
+KiAqICogKiAqICogKiAqICogKiAqDS8vIExpYmVsbIIgVoJoaWN1bGUNDWxfVGl0cmVWZWhpY3U9
+J1RhYmxhIFZlaGljdWxvcyc7DWxfVGFibGVWZWhpY3U9J1ZlaGljdWxvcyc7DWxfVmVoQ29kZT0n
+Q29kaWdvIHZlaGljdWxvJzsNbF9WZWhDaGVmUD0nR3J1cG8gZG9taW5vIEplZmUgZGUgUHJvZHVj
+dG8nOw1sX1ZlaERlc3RpPSdHcnVwbyBkb21pbm8gRGVzdGluYXRhcmlvcyc7DWxfRXJyVmVoQ29k
+ZT0nQ29kaWdvIHZlaGljdWxvIGVzIG9ibGlnYXRvcmlvJzsNbF9FcnJWZWhDaGVmUD0nR3J1cG8g
+ZG9taW5vIEplZmUgZGUgUHJvZHVjdG8gZXMgb2JsaWdhdG9yaW8nOw1sX0VyclZlaERlc3RpPSdH
+cnVwbyBkb21pbm8gRGVzdGluYXRhcmlvcyBlcyBvYmxpZ2F0b3Jpbyc7DQ0NLy8gKiAqICogKiAq
+ICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqDS8vIExpYmVsbIIgUGF5cw0NbF9UaXRyZVBh
+eXNHYW1tZT0nVGFibGEgUGFpc2VzJzsNbF9UYWJsZVBheXNHYW1tZT0nUGFpc2VzJzsNbF9QYXlz
+TGliPSdMaXRlcmFsIGRlbCBwYWlzJzsNbF9QYXlzQ29kZT0nQ29kaWdvIGRlbCBwYWlzJzsNbF9F
+cnJQYXlzTGliPSdMaXRlcmFsIGRlbCBwYWlzIGVzIG9ibGlnYXRvcmlvJzsNbF9FcnJQYXlzQ29k
+ZT0nQ29kaWdvIGRlbCBwYWlzIGVzIG9ibGlnYXRvcmlvJzsAX/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$Script_O' sign='true'>
+<rawitemdata type='14'>
+AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AP////8A
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAEABABMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
+AAAAAABXMzJJNAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAwCMAAAAAABUAAgAKgA1ADYAMQBDADMAQQAwAAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
+RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
+AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAAAIfdZ1BAAHAAAAAAAdAAAC
+AAAACgAAAA==
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_ToutFormToutEtatFR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEA3QYAAIX/hf8XAAEAAghzbV9H
+QU1NRV9MbmdfRVMA0ggBAP8AAADeBgAAhf8=
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_GAMME_Trads_ES</text><text
+>sm_GAMME_Trads_ES</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

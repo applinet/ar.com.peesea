@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='cbe' unid='2F1500289C702B56C1257583004CF9B8' sequence='95'>
+<created><datetime dst='true'>20090324T160046,64+02</datetime></created>
+<modified><datetime>20171029T101608,90-03</datetime></modified>
+<revised><datetime>20170904T113511,89-03</datetime></revised>
+<lastaccessed><datetime>20171029T101602,59-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101602,59-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatText' summary='false' sign='true'><number>0</number></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='$Fields'><textlist><text>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text
+>f_AuteursAdmin</text><text>f_Etat</text><text>f_Lng</text></textlist></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQA9gIAAAAAAAAAAAAAAAAAAAAAAADc/wgD+f/2AiBOAAAAAAAAAAAvLyAqICog
+KiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICoNLy8gR4JugnJpcXVlcw1sX01lbnVU
+YWJsZXNHYW1tZT0nTWVudSBUYWJsZXMgR0FNTUUnOw0NLy8gKiAqICogKiAqICogKiAqICogKiAq
+ICogKiAqICogKiAqICogKiAqDS8vIExpYmVsbIIgVoJoaWN1bGUNbF9UaXRyZVZlaGljdT0nVGFi
+bGUgVoJoaWN1bGVzJzsNbF9UYWJsZVZlaGljdT0nVoJoaWN1bGVzJzsNbF9WZWhDb2RlPSdDb2Rl
+IHaCaGljdWxlJzsNbF9WZWhDaGVmUD0nR3JvdXBlIGRvbWlubyBDaGVmIGRlIHByb2R1aXQnOw1s
+X1ZlaERlc3RpPSdHcm91cGUgZG9taW5vIERlc3RpbmF0YWlyZXMnOw1sX0VyclZlaENvZGU9J0Nv
+ZGUgdoJoaWN1bGUgZXN0IG9ibGlnYXRvaXJlJzsNbF9FcnJWZWhDaGVmUD0nR3JvdXBlIGRvbWlu
+byBDaGVmIGRlIHByb2R1aXQgZXN0IG9ibGlnYXRvaXJlJzsNbF9FcnJWZWhEZXN0aT0nR3JvdXBl
+IGRvbWlubyBEZXN0aW5hdGFpcmVzIGVzdCBvYmxpZ2F0b2lyZSc7DQ0NLy8gKiAqICogKiAqICog
+KiAqICogKiAqICogKiAqICogKiAqICogKiAqDS8vIExpYmVsbIIgUGF5cw1sX1RpdHJlUGF5c0dh
+bW1lPSdUYWJsZSBQYXlzJzsNbF9UYWJsZVBheXNHYW1tZT0nUGF5cyc7DWxfUGF5c0xpYj0nTGli
+ZWxsgiBwYXlzJzsNbF9QYXlzQ29kZT0nQ29kZSBwYXlzJzsNbF9FcnJQYXlzTGliPSdMaWJlbGyC
+IHBheXMgZXN0IG9ibGlnYXRvaXJlJzsNbF9FcnJQYXlzQ29kZT0nQ29kZSBwYXlzIGVzdCBvYmxp
+Z2F0b2lyZSc7AF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$Script_O' sign='true'>
+<rawitemdata type='14'>
+AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AP////8A
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAEABABMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
+AAAAAABXMzJJNAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAwCMAAAAAABUAAgAKgA1ADYAMQBDADMAQQAwAAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
+RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
+AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAAAIfdZ1BAAHAAAAAAAdAAAC
+AAAACgAAAA==
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_ToutFormToutEtatFR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEA3QYAAIX/hf8XAAEAAghzbV9H
+QU1NRV9MbmdfRlIA0ggBAP8AAADeBgAAhf8=
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_GAMME_Trads_FR</text><text
+>sm_GAMME_Trads_FR</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

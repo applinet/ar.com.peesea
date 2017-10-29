@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048C55E" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="30a" sequence="1" unid="846979D0387FC729C1256C100032B0FF">
+<created><datetime dst="true">20020809T111341,11+02</datetime></created>
+<modified><datetime>20171029T101453,79-03</datetime></modified>
+<revised><datetime dst="true">20020809T111353,78+02</datetime></revised>
+<lastaccessed><datetime>20171029T101452,71-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101452,71-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MARCIA CEBALLOS ALVAREZ - E125506/OU=users/O=PSA</name></updatedby>
+<item name="$TITLE"><textlist><text>logo_psa.jpg</text></textlist></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide"><number>1</number></item>
+<item name="$ImagesHigh"><number>1</number></item>
+<item name="$ImagesColorize"><number>0</number></item>
+
+<item name="$ImageNames"><textlist><text>logo_psa.jpg</text></textlist></item>
+<item name="$DesignerVersion"><text>5</text></item></note>

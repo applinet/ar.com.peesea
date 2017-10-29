@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004919E1'>
+<noteinfo noteid='13b2' unid='15EDA90DF0F23964C12574DC004EACD7' sequence='23'>
+<created><datetime dst='true'>20081008T161920,55+02</datetime></created>
+<modified><datetime>20171029T101851,21-03</datetime></modified>
+<revised><datetime dst='true'>20160509T212257,68+02</datetime></revised>
+<lastaccessed><datetime>20171029T101840,24-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101840,24-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQA3AIAAAAAAAAAAAAAAAAAAAAAAADc/+4C+f/cAiBOAAAAAAAAAABsX1RpdHJl
+ID0gIkFuIGVycm9yIG9jY3VycmVkIjsNbF9FeGN1c2UgPSAiV2UgYXBvbG9naXNlIGZvciBhbnkg
+aW5jb252ZW5pZW5jZSBjYXVzZWQiOw1sX01zZ0ltcHJlc3Npb25FY3JhbiA9ICJJbiBvcmRlciBm
+b3IgdXMgdG8gaGVscCB3aXRoIHRoaXMgZXJyb3IsIHBsZWFzZSBzZW5kIGEgc2NyZWVuIHByaW50
+IHRvIHRoZSBwZW9wbGUgaW5kaWNhdGVkIG9uIHRoaXMgcGFnZS48YSBocmVmPVwnI1wnIG9uQ2xp
+Y2s9XCdvcGVuQ29udGFjdCgpXCc+Y29udGFjdDwvYT4uIjsNbF9FcnJldXJEb21pbm8gPSAiRm9y
+IGluZm9ybWF0aW9uLCB0aGUgc2VydmVyIHJldHVybmVkIHRoZSBmb2xsb3dpbmcgbWVzc2FnZSI7
+DQ0vLyBPbiBhZmZpY2hlIHVuZSBwb3AtdXAgZW4gbGEgY2VudHJhbnQghSBsJ4JjcmFuDWZ1bmN0
+aW9uIG9wZW5Db250YWN0KCl7DQl2YXIgdXJsID0gc2VsZi53aW5kb3cubG9jYXRpb24uaHJlZjsN
+CXZhciBvcHRzMiA9ICdzdGF0dXM9bm8scmVzaXphYmxlPW5vLHNjcm9sbGJhcnM9Tm8sd2lkdGg9
+NTkwLGhlaWdodD0xOTAgbGVmdD0nICsNCQkoKHNjcmVlbi53aWR0aCAtIDU5MCkvMikgKyAiLHRv
+cD0iICsgKChzY3JlZW4uaGVpZ2h0IC0gMTkwKS8yKTsNCXZhciB3aW49d2luZG93Lm9wZW4odXJs
+LnN1YnN0cmluZygwLCh1cmwubGFzdEluZGV4T2YoJy5uc2YnKSs1KSkrJ3BfY29udGFjdD9PcGVu
+UGFnZScsJ0NvbnRhY3QnLG9wdHMyKTsJDQl3aW4uZm9jdXMoKTsNfQBf/xAAAgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_MsgErreurEN</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAqBAoMEAQCF/wgA
+AQAACg==
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_MsgErreurEN</text><text
+>sm_MsgErreurEN</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

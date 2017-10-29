@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='4be' unid='ABA57A483225CC59C1256EE40050F7F1' sequence='112'>
+<created><datetime dst='true'>20040802T164423,53+02</datetime></created>
+<modified><datetime>20171029T101558,94-03</datetime></modified>
+<revised><datetime>20170904T113508,27-03</datetime></revised>
+<lastaccessed><datetime>20171029T101556,93-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101556,93-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ANGEL GARCIA PUJALTE - E168524/OU=users/O=PSA</name><name
+>CN=BERNARD ALLAINE - C010578/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(Ver Indisponibilite)|v_VuInd</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+egACACwAAgAkNgUADQBmX0RhdGVJbmRpc3BvAFYBAQABAC8AAQABAF8AhAMDAAUAGAATAAIAAgAJ
+ACQ2JENvbmZsaWN0AAQABAAAACYABQAEAGZvcm0BABEAbV9JbmRpc3BvbmliaWxpdGUACgIDAAcA
+CgAEAAlMMVM=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEAWYAAAACACQ2
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAcACkAAAFZDBQACAAQAOgAAAJIAAQEACgAAAAAAAAAAAAICAAAAJDZEYXRlOgACACwAAgAk
+NgUADQBmX0RhdGVJbmRpc3BvAFYBAQABAC8AAQABAF8AhAMDAAcADAAFAAkwUzBFACYAAQAAAAEB
+AAkBAAAKAQEOCgAAAQCtKwEAAQABAQAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAEAAAAA
+AAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8A
+AQD///8AAAABAAAAAAABAICAgAAAAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$FormFormula' summary='true' sign='true'><formula>"m_VuInd"</formula></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>6</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAABAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUA
+AQBOfL7/ggAAAAEAgAAfAQAADwAoAAAAAABJbmRpc3BvbmliaWxpdGUANAAAACgAAgDoAwAAAAAA
+AAEAEQBtX0luZGlzcG9uaWJpbGl0ZQDtAgMABwAKAAMACTRTACgAAAAaAOcAAQAMAFtBZG1pbkZv
+cm1zXQsCAwAHAAwABQAJMFMwRQC+/ygAAAAFAAAAnQEAAA4AAAAAAAAAX0VkaXQgRG9jdW1lbnQD
+AAIKvv8oAAAABQAAAJ0BAAAOAAAAAAAAAFNlbmQgRG9jdV9tZW50BAADCr7/IgAAAAUAAACdAQAA
+CAAAAAAAAABfRm9yd2FyZAUABAq+/ywAAAAFAAAAnQEAABIAAAAAAAAAX01vdmUgVG8gRm9sZGVy
+Li4uBgA9fL7/LgAAAAUAAACdAQAAEwAAAAAAAABfUmVtb3ZlIEZyb20gRm9sZGVyoQcAPnw=
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZRYBAE58vv+CAAAAAQCAAB8BAAAPACgAAAAAAEluZGlzcG9uaWJpbGl0ZQA0AAAAKAACAOgD
+AAAAAAAAAQARAG1fSW5kaXNwb25pYmlsaXRlAO0CAwAHAAoAAwAJNFMAKAAAABoA5wABAAwAW0Fk
+bWluRm9ybXNdCwIDAAcADAAFAAkwUzBFAL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1
+bWVudAMAAgq+/ygAAAAFAAAAnQEAAA4AAAAAAAAAU2VuZCBEb2N1X21lbnQEAAMKvv8iAAAABQAA
+AJ0BAAAIAAAAAAAAAF9Gb3J3YXJkBQAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBG
+b2xkZXIuLi4GAD18vv8uAAAABQAAAJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIABwA+
+fA==
+</rawitemdata></item></note>
+

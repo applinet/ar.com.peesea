@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048FC18'>
+<noteinfo noteid='742' unid='985EE1DC8B2D64DFC1256BC300541909' sequence='53'>
+<created><datetime dst='true'>20020524T171834,33+02</datetime></created>
+<modified><datetime>20171029T101719,30-03</datetime></modified>
+<revised><datetime>20170904T113524,08-03</datetime></revised>
+<lastaccessed><datetime>20171029T101715,68-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101715,68-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_Reengager</text></item>
+<item name='IDDoc' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Reengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='URLReengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='AutorReengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>AutorReengager</text><text>URLReengager</text><text
+>Reengager</text><text>IDDoc</text></textlist></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEA3QYAAIX/hf8IAAEAAgjSCAEA
+/wAAAN4GAACF/90GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv88AIAAAAUAMAIAAAAAAAAC
+AQACCBIAAAAAAAAABQAAAAAAEgAAABAABQAFAElERG9jAAMASUREb2MA3gYAAIr/3QYAAIX/hf8I
+AAEAAgjSCAEA/wAAAN4GAACF/90GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv9AAIIAAAUA
+MAIAAAAAAAACAQACCBIAAAAAAAAACQAAAAAAEgAAABAABQAFAElERG9jAAMAUmVlbmdhZ2VyAN4G
+AACK/4X/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/wIBiAEABQAwAgAAAAAA
+AAIBAAII0gAAAAAAAAAMAAAAAADSAAEAHgAGAGJkcGF0aIsAAAAAAAAAAADwPxABawIDAAcACgAD
+AAk5UwABAC4ABABmb3JtAQACAG1fBQAKAGZfVHlwZUZvcm0iAgEABQBFdGF0MAAiAgMABwAKAAMA
+CTBSAAEADgACAGlkkABWAQMABwAKAAMACTBSAAAATgABAAEALwAFAAYAYmRwYXRoIgIBAAEALwAi
+AgUABABmb3JtIgIBABUAP09wZW5Gb3JtJlBhcmVudFVOSUQ9ACICBQACAGlkIgIDAAcACgADAAkw
+UgBVUkxSZWVuZ2FnZXLeBgAAiv+F/wgAAQAACt0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+iv9UAIYAAAcAMAIAAAAAAAACAQACCCIAAAAAAAAADgAAAAAAIgAAABQAAgAFAAAAAAAAAPQAtAID
+AAcADAAFAAkwUzBFAEF1dG9yUmVlbmdhZ2Vy3gYAAIr/hf8IAAEAAAo=
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_Reengager</text><text>sm_Reengager</text></textlist></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='9d2' unid='4FEFD2BC0A2B4C91C125737E003ECA83' sequence='108'>
+<created><datetime dst='true'>20071024T132550,75+02</datetime></created>
+<modified><datetime>20171029T101605,28-03</datetime></modified>
+<revised><datetime>20170904T113509,93-03</datetime></revised>
+<lastaccessed><datetime>20171029T101600,56-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101600,56-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$TITLE' sign='true'><text>(v_VPNSSLLookupActeurs)|v_VPNSSLLookupActeurs</text></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAA4ACAAAAFZDAQACAAMAfgAAAFwAAQAACoAAAAAAAAAAAAICAAAAJDVLRVl+AAIAYAACACQ1
+BQARAFZQTlNTTF9Gb3JtdWxhaXJlAGIBXgEBAAIAIyMiAgUADABWUE5TU0xfRXRhcGVWASICAQAC
+ACMjIgIFAA0AVlBOU1NMX0luZGljZQBhAV4BIgIDAAcAHAAWAAk3UzhTOVMxMFMxNFMxNVMxNlMx
+N1MmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAA
+AAAAAAABAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wAFAP///wABAAAAAAAAAAAA
+AAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+zAAFAB4AGQADAAIACQAEACQ1JENvbmZsaWN0JFJFRgACAGAAAgAkNQUAEQBWUE5TU0xfRm9ybXVs
+YWlyZQBiAV4BAQACACMjIgIFAAwAVlBOU1NMX0V0YXBlVgEiAgEAAgAjIyICBQANAFZQTlNTTF9J
+bmRpY2UAYQFeASICAwAHABwAFgAJN1M4UzlTMTBTMTRTMTVTMTZTMTdTBAAEAAAAIgAFAAQAZm9y
+bQEADgBtX1ZQTlNTTEFjdGV1cgoCAwAHAAoABAAJTDFT
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEgGYAAAACACQ1
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Pre v14.9</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

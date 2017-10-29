@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048C55E" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="8ca" sequence="98" unid="16E9D46BCAE0C374C12574F80048407B">
+<created><datetime dst="true">20081105T150910,99+02</datetime></created>
+<modified><datetime>20171029T101501,09-03</datetime></modified>
+<revised><datetime>20170904T113509,34-03</datetime></revised>
+<lastaccessed><datetime>20171029T101456,76-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101456,76-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+
+<item name="$FileModDT" sign="true"><datetime dst="true">20081105T143937,31+02</datetime></item>
+
+<item name="$FileNames" sign="true"><text>easing.js</text></item>
+<item name="$TITLE" sign="true"><textlist><text>easing.js</text><text>easing.js</text></textlist></item>
+<item name="$EditFilePath" sign="true"><text>C:\DOCUME~1\E297798\LOCALS~1\Temp\notes319EDE\~easing.js</text></item>
+<item name="$Flags"><text>345CgQ</text></item>
+<item name="$Comment" sign="true"><text>deprecated</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item></note>

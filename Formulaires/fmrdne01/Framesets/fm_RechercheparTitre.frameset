@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='246' unid='683A74CAC9EE3BBCC1256BC3004DF53D' sequence='98'>
+<created><datetime dst='true'>20020524T161130,53+02</datetime></created>
+<modified><datetime>20171029T101452,83-03</datetime></modified>
+<revised><datetime>20170904T113503,08-03</datetime></revised>
+<lastaccessed><datetime>20171029T101452,17-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101452,17-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name
+>CN=FRANCK NUWENDAM - E100441/OU=users/O=PSA</name><name>CN=ANGEL GARCIA PUJALTE - E168524/OU=users/O=PSA</name><name
+>CN=BERNARD ALLAINE - C010578/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$TITLE' sign='true'><text>fm_RechercheparTitre</text></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$FrameSet' sign='true'>
+<rawitemdata type='1'>
+7/8YAAEAAwAAAAAAAAAAAAAAAAAAAAAA8P8+AAUAAAAAAAAAAAAAAAAAAAAAAAUAwMDAAAUAwMDA
+AAIAAQAAAAAABQDAwMAAAAABAGQAAgBIAAMAAQDx/0YAFwAAAAAAAAECAAAAAAAAAAAAEQAAABEA
+AQDAwMAAAABSZWNoZXJjaGVwYXJUaXRyZVJlc3VsdGF0c3BhclRpdHJl9v83AAAAAAADAAMAFQAA
+AAAAAAAAAAAAAAAAAAAAAAAAAG1fUmVjaGVyY2hlRm9ybXNUaXRyZT/x/zwAFwAAAAAAAAEDAAAA
+AAAAAAAAEQAAAAcAAQDAwMAAAABSZXN1bHRhdHNwYXJUaXRyZUNvbnRlbnU=
+</rawitemdata></item>
+<item name='$Flags'><text>#34CQ</text></item></note>
+

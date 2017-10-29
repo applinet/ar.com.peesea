@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='1382' unid='EB44915C1FDF898EC125799D004F4378' sequence='54'>
+<created><datetime dst='true'>20120207T162546,16+02</datetime></created>
+<modified><datetime>20171029T101616,90-03</datetime></modified>
+<revised><datetime>20170904T113520,27-03</datetime></revised>
+<lastaccessed><datetime>20171029T101607,59-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101607,59-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=NICOLAS ENRICO LAURENZANO - E363578/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_COHBPS_Metier_Peinture)|v_COHBPS_Metier_Peinture</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+VgAFABoAFQACAAkABAAkQ29uZmxpY3QkUkVGAAQABAAAACwABQAEAGZvcm0BABgAbV9DT0hCUFNf
+TWV0aWVyX1BlaW50dXJlCgIDAAcACgAEAAlMMVM=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABEgGYAAAADACQ0NA==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAA8ACAAAAFZDAQADAAYAGAAMAFAAAQAACgAAAAAAAAAAAAICAAAAJDQ0Q09IQlBTGAACABYA
+AwAkNDQAAQAGAENPSEJQUwMAAQUBAAYAQ09IQlBTJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQAB
+AAEBAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAA
+QgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEAAAAA
+AAEAAAAAAAAACAAAAAAAAQA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

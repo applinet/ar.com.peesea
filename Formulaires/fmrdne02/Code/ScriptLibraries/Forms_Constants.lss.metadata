@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C80048DE00" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="a66" sequence="98" unid="F82E600CC545E400C12574D5002CA98F">
+<created><datetime dst="true">20081001T100749,91+02</datetime></created>
+<modified><datetime>20171029T101606,00-03</datetime></modified>
+<revised><datetime>20170904T113515,35-03</datetime></revised>
+<lastaccessed><datetime>20171029T101600,98-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101600,98-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>7</text></item>
+<item name="$TITLE" sign="true"><text>Forms_Constants</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$Comment"><text>Constantes</text></item>
+
+
+
+<item name="$POID"><datetime>20170904T113515,35-03</datetime></item></note>

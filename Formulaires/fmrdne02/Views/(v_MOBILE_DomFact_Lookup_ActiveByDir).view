@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='13ee' unid='EE52658AF1DDF743C1257A05002F43D4' sequence='58'>
+<created><datetime dst='true'>20120521T103615,56+02</datetime></created>
+<modified><datetime>20171029T101617,38-03</datetime></modified>
+<revised><datetime>20170904T113520,97-03</datetime></revised>
+<lastaccessed><datetime>20171029T101607,90-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101607,90-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_MOBILE_DomFact_Lookup_ActiveByDir)|v_MOBILE_DomFact_Lookup_ActiveByDir</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+2AACACYAAwAkMjUABQASAE1PQklMRV9Eb21GYWN0X0RpcmIBXgEDAAUAGAAUAAIAAwAJACQyNSRD
+b25mbGljdAQABAAAAHQABQAEAGZvcm0BABAAbV9NT0JJTEVfRG9tRmFjdAoCBAAFABUATU9CSUxF
+X0RvbUZhY3RfU3RhdHVzAGIBXgEBAAIAT04KAgQAHAIFABIATU9CSUxFX0RvbUZhY3RfRGlyYgFe
+AQEAAAALAgQAHAIDAAcAIAAaAAlMMVM2UzdTMTVTMTZTMThTMTlTMjdTMjhT
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABEiGYAAAADACQyNQ==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABABsAC0AAAFZDAQADAAMANAAAAP8ABQAACAAhAAAIAAAAAAICAAAAJDI1RElSNAACACYAAwAk
+MjUABQASAE1PQklMRV9Eb21GYWN0X0RpcmIBXgEDAAcADAAFAAkwUzBFACYAAQAAAAEBAAkBAAAK
+AQEOCgAAAQCtKwEAAQABAQAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAEAxAAAAAAA//8A
+AAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8A
+AAABAAAAAAABAICAgAABAAAAAAAAAAgAAAAAAAEAWEMATIADAAAAAAABAgICAQEBAQcEAwAAAAAA
+AAAAIC8vOllDAAAIAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAA
+AAAsLhQgrAA=
+</rawitemdata></item>
+<item name='$Fonts'><textlist><text>5</text><text>38</text><text>Arial</text></textlist></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAABAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUA
+AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
+AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
+BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
+AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIABgA+fA==
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZQABAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcgAGAD58
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>MOBILE - Vue des domaines de facturation actifs par périmètres</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

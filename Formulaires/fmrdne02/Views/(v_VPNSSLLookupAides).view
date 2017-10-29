@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='9ea' unid='BC1063A36A40A6CCC125738A004EE202' sequence='106'>
+<created><datetime dst='true'>20071105T162136,66+02</datetime></created>
+<modified><datetime>20171029T101605,40-03</datetime></modified>
+<revised><datetime>20170904T113510,05-03</datetime></revised>
+<lastaccessed><datetime>20171029T101600,62-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101600,62-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_VPNSSLLookupAides)|v_VPNSSLLookupAides</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+jAACAD4AAgAkNQUAEQBWUE5TU0xfRm9ybXVsYWlyZQABAAIAIyMiAgUADwBWUE5TU0xfQ29kZUFp
+ZGUAIgIDAAUAHgAZAAMAAgAJAAQAJDUkQ29uZmxpY3QkUkVGAAQABAAAACAABQAEAGZvcm0BAAwA
+bV9WUE5TU0xBaWRlCgIDAAcACgAEAAlMMVM=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEgGYAAAACACQ1
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAA4ACAAAAFZDAQACAAMAUAAAAHIAAQAACoAAAAAAAAAAAAICAAAAJDVLRVlQAAIAPgACACQ1
+BQARAFZQTlNTTF9Gb3JtdWxhaXJlAAEAAgAjIyICBQAPAFZQTlNTTF9Db2RlQWlkZQAiAgMABwAQ
+AAkACTFTMlMzUzRTACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQABAAAAAAAAAAAAV0MBAQAJ
+AAAAAAAAAAAAAAAAAAAAAAEABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAUA////
+AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAAAAAAABAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$Comment' sign='true'><text>Pre v14.9</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

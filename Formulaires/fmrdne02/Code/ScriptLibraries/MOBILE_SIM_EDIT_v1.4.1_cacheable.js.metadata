@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C80048DE00" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1c86" sequence="12" unid="3899BD71E7CE29B7C1257FA800416739">
+<created><datetime dst="true">20160503T135422,65+02</datetime></created>
+<modified><datetime>20171029T101627,06-03</datetime></modified>
+<revised><datetime>20170904T113529,99-03</datetime></revised>
+<lastaccessed><datetime>20171029T101614,28-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101614,28-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$TITLE" sign="true"><text>MOBILE_SIM_EDIT_v1.4.1_cacheable.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$POID"><datetime>20170904T113529,99-03</datetime></item></note>

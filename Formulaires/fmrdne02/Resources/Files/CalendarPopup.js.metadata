@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048DE00" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="a76" sequence="90" unid="DAEE882652B97B28C12574D50050F1B8">
+<created><datetime dst="true">20081001T164407,60+02</datetime></created>
+<modified><datetime>20171029T101606,08-03</datetime></modified>
+<revised><datetime>20170904T113510,49-03</datetime></revised>
+<lastaccessed><datetime>20171029T101601,03-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101601,03-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$FileNames" sign="true"><text>CalendarPopup.js</text></item>
+
+<item name="$FileModDT" sign="true"><datetime dst="true">20090619T094327,85+02</datetime></item>
+
+
+
+
+<item name="$EditFilePath" sign="true"><text>C:\Users\e354419\AppData\Local\Temp\notes27650D\~CalendarPopup.js</text></item>
+<item name="$Comment" sign="true"><text>deprecated</text></item>
+<item name="$Flags"><text>345CgQ</text></item>
+<item name="$TITLE" sign="true"><textlist><text>CalendarPopup.js</text><text>CalendarPopup.js</text></textlist></item>
+<item name="$DesignerVersion"><text>8.5</text></item></note>

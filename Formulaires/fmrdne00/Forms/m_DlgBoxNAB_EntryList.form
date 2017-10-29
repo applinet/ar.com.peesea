@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048A097'>
+<noteinfo noteid='152' unid='61D7C4F5752DFC62C12576570035076A' sequence='59'>
+<created><datetime dst='true'>20091022T113913,06+02</datetime></created>
+<modified><datetime>20171029T101317,41-03</datetime></modified>
+<revised><datetime>20150112T140929,98-03</datetime></revised>
+<lastaccessed><datetime>20171029T101317,35-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101317,35-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='EntryList' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>m_DlgBoxNAB_EntryList</text><text>m_DlgBoxNAB_EntryList</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAwAAAA
+</rawitemdata></item>
+<item name='$WEBQueryOpen' sign='true'><formula>@SetField(
+	"EntryListIndex";
+	@If(	@UrlQueryString("Find") != "";
+		@DbCommand("Domino"; "LoadAddressListByName"; "names.nsf"; "EntryList"; "20"; @UrlQueryString("Find"));
+		@UrlQueryString("Start") != "";
+		@DbCommand("Domino"; "LoadAddressListByIndex"; "names.nsf"; "EntryList"; "20"; @UrlQueryString("Start"));
+		@DbCommand("Domino"; "LoadAddressListByIndex"; "names.nsf"; "EntryList"; "20"; "1")
+	)
+)</formula></item>
+<item name='$Flags'><text>CD</text></item>
+<item name='$Fields'><textlist><text>EntryListIndex</text><text>EntryList</text></textlist></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_DlgBoxNAB_EntryList</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAYAAACDBAEA3QYAAIX/hf94AAEBAgpDZSBt
+YXNxdWUgbmUgZG9pdCCIdHJlIGFwcGVsgiBxdWUgcGFyIEFKQVggcGFyIGxlcyBwb3B1cHMgZGUg
+c4JsZWN0aW9uIGRhbnMgbGUgY2FybmV0IGQnYWRyZXNzZSwgdmlhICI/UmVhZEZvcm0i0ggBAP8A
+AADeBgAAhf+BAoMEAQDdBgAAhf+F/z0AAQECClN1ciAiV2ViUXVlcnlPcGVuLCBvbiByZW5zZWln
+bmUgbGUgY2hhbXBzICJFbnRyeUxpc3QiANIIAQD/AAAA3gYAAIX/gQKDBAEA3QYAAIX/hf8IAAEA
+AgrSCAEA/wAAAN4GAACF/4ECgwQBAN0GAACF/4X/KgABAAIKTCdVUkwgcHJlbmQgMiBwYXJhbYp0
+cmVzIGF1IGNob2l4OtIIAQD/AAAA3gYAAIX/gQKC/1oAAgAAAAAAAAAAAAgHAAAIBwAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAJWECAcAAAgHAAAAAAAAAQAA
+AAYAAACDBAIA3QYAAIX/hf8kAAEAAgotICJGaW5kIjogdGV4dGUghSByZWNoZXJjaGVy0ggBAP8A
+AADeBgAAhf+BAoMEAgDdBgAAhf+F/y4AAQACCi0gIlN0YXJ0IjogaW5kaWNlIGRlIGSCYnV0IGRl
+IGxhIGxpc3Rl0ggBAP8AAADeBgAAhf+BAoMEAgDdBgAAhf+F/wgAAQECCtIIAQD/AAAA3gYAAIX/
+gQKC/1oAAwAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAMAzP8IAAAAAACF/wgAAQAACt0G
+AACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv8uAIoAAAUAMAIAAAAAAAACAQAACgAAAAAAAAAA
+CQAAAAAARW50cnlMaXN0AN4GAACK/4X/CAABAAAKgQKDBAMAhf8YAAEAAAo8RW50cnlMaXN0SW5k
+ZXg+3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/zIAigAABQAwAgAAAAAAAAIBAAAKAAAA
+AAAAAAAOAAAAAABFbnRyeUxpc3RJbmRleN4GAACK/4X/GQABAAAKPC9FbnRyeUxpc3RJbmRleD4A
+zf8IAAAAAAA=
+</rawitemdata></item></note>
+

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='1a9e' unid='983553D815458101C1257E5A004969CE' sequence='38'>
+<created><datetime dst='true'>20150604T152152,14+02</datetime></created>
+<modified><datetime>20171029T101624,82-03</datetime></modified>
+<revised><datetime>20170904T113527,61-03</datetime></revised>
+<lastaccessed><datetime>20171029T101612,89-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101612,89-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatText' summary='false' sign='true'><number>0</number></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='$Fields'><textlist><text>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text
+>f_AuteursAdmin</text><text>f_Etat</text><text>f_Lng</text></textlist></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAkAQAAAAAAAAAAAAAAAAAAAAAAADc/6IE+f+QBCBOAAAAAAAAAAB2YXIgbF9S
+RVRBSUxfUG9pbnRWZW50ZV9Eb2NfVGl0bGUgPSAiUG9pbnQgZGUgdmVudGUiDXZhciBsX1JFVEFJ
+TF9Qb2ludFZlbnRlX1ZpZXdfVGl0bGUgPSAiUG9pbnRzIGRlIHZlbnRlcyINdmFyIGxfUkVUQUlM
+X1BhcmFtX1RpdGxlID0gIlZhbGlkYXRpb24gRmxvdHRlcyBQQ1IgLSBQYXJhbYp0cmVzIjsNdmFy
+IGxfUkVUQUlMX1BvaW50VmVudGVfTWVudV9UaXRsZSA9ICJQb2ludHMgZGUgdmVudGVzIg12YXIg
+bF9SRVRBSUxfUG9pbnRWZW50ZV9NZW51X0Rlc2MgPSAiQ29uZmlndXJhdGlvbiBkZXMgUG9pbnRz
+IGRlIHZlbnRlcyI7DXZhciBsX1JFVEFJTF9Qb2ludFZlbnRlX0ZSUkNvZGUgPSAiQ29kZSBGUlIi
+DXZhciBsX1JFVEFJTF9Qb2ludFZlbnRlX0FkckNvZGUgPSAiQ29kZSBhZHJlc3NlIg12YXIgbF9S
+RVRBSUxfUG9pbnRWZW50ZV9OYW1lID0gIk5vbSAtIFJhaXNvbiBzb2NpYWxlIg12YXIgbF9SRVRB
+SUxfUG9pbnRWZW50ZV9WaWxsZSA9ICJWaWxsZSINdmFyIGxfUkVUQUlMX1ZhbGlkZXVyX01lbnVf
+VGl0bGUgPSAiVmFsaWRldXJzIHBhciBtYXJxdWUgLyBwYXlzIg12YXIgbF9SRVRBSUxfVmFsaWRl
+dXJfTWVudV9EZXNjID0gIkNvbmZpZ3VyYXRpb24gZGVzIFZhbGlkZXVycyBwYXIgbWFycXVlIC8g
+cGF5cyI7DXZhciBsX1JFVEFJTF9WYWxpZE1hcmNoZVBheXNfVmlld19UaXRsZSA9ICJWYWxpZGV1
+cnMgcGFyIG1hcnF1ZSAvIHBheXMiDXZhciBsX1JFVEFJTF9WYWxpZE1hcmNoZVBheXNfRG9jX1Rp
+dGxlID0gIlZhbGlkZXVyIHBhciBtYXJxdWUgLyBwYXlzIg12YXIgbF9SRVRBSUxfTWFycXVlID0g
+Ik1hcnF1ZSINdmFyIGxfUkVUQUlMX1BheXMgPSAiUGF5cyINdmFyIGxfUkVUQUlMX1BpbG90RWNv
+bm9taXF1ZV9OYW1lID0gIlBpbG90ZSCCY29ub21pcXVlIg12YXIgbF9SRVRBSUxfU2VuZE1haWwg
+PSAiRW52b2kgZGVzIG1haWxzIg12YXIgbF9SRVRBSUxfQmFsZm9uID0gIkJvaXRlIGZvbmN0aW9u
+bmVsbGUiDXZhciBsX1JFVEFJTF9EaXJlY3RldXJSZXRhaWxfTmFtZSA9ICJEaXJlY3RldXIiDXZh
+ciBsX1JFVEFJTF9TZW5kTWFpbF9ObyA9ICJOb24iDXZhciBsX1JFVEFJTF9TZW5kTWFpbF9CYWxu
+b20gPSAiQm9pdGUgcGVyc29ubmVsbGUiDXZhciBsX1JFVEFJTF9TZW5kTWFpbF9CYWxmb24gPSAi
+Qm9pdGUgZm9uY3Rpb25uZWxsZSIAX/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>sm_RETAIL_Trads_FR</text><text>sm_RETAIL_Trads_FR</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_RETAIL_Trads_FR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEA3QYAAIX/hf8aAAEAAghzbV9S
+RVRBSUxfVHJhZHNfRlLSCAEA/wAAAN4GAACF/w==
+</rawitemdata></item></note>
+

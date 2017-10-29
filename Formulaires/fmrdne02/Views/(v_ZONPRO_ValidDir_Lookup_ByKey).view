@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='eea' unid='5EDEEE2ED4C752CAC125763C003EA01D' sequence='103'>
+<created><datetime dst='true'>20090925T132402,21+02</datetime></created>
+<modified><datetime>20171029T101611,68-03</datetime></modified>
+<revised><datetime>20170904T113514,67-03</datetime></revised>
+<lastaccessed><datetime>20171029T101604,21-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101604,21-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_ZONPRO_ValidDir_Lookup_ByKey)|v_ZONPRO_ValidDir_Lookup_ByKey</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+kgACAD4AAwAkMjAABQALAFpPTlBST19TaXRlAAEAAQD1ACICBQATAFpPTlBST19WYWxpZERpcl9E
+aXIAIgIDAAUAHgAaAAMAAwAJAAQAJDIwJENvbmZsaWN0JFJFRgQABAAAACYABQAEAGZvcm0BABEA
+bV9aT05QUk9fVmFsaWREaXIACgIDAAcACgAEAAlMMVM=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABECGYAAAADACQyMA==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABABUACAAAAFZDAQADAAkAUAAAAG8AAQAACoAhAAAAAAAAAAICAAAAJDIwRGlyZWN0aW9uUAAC
+AD4AAwAkMjAABQALAFpPTlBST19TaXRlAAEAAQD1ACICBQATAFpPTlBST19WYWxpZERpcl9EaXIA
+IgIDAAcAEAAJAAkxUzJTM1M0UwAmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQEAAAAAAAAA
+AFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP//
+/wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAI
+AAAAAAABAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>ZONPRO - Vue des valideurs de directions par sites/directions</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

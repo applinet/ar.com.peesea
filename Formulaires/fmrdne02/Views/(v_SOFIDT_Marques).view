@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='f3a' unid='9669F71A25BD81E4C12576540060C55D' sequence='89'>
+<created><datetime dst='true'>20091019T193659,81+02</datetime></created>
+<modified><datetime>20171029T101612,06-03</datetime></modified>
+<revised><datetime>20170904T113515,01-03</datetime></revised>
+<lastaccessed><datetime>20171029T101604,43-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101604,43-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E357377/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_SOFIDT_Marques)|v_SOFIDT_Marques</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+pgACADQAEwBTT0ZJRFRfTWFycXVlX09yZGVyAAUAEwBTT0ZJRFRfTWFycXVlX09yZGVyAAMABQA+
+ADkABAATAA0ACQAEAFNPRklEVF9NYXJxdWVfT3JkZXJTT0ZJRFRfTWFycXVlJENvbmZsaWN0JFJF
+RgAEAAQAAAAkAAUABABmb3JtAQAPAG1fU09GSURUX01hcnF1ZQAKAgMABwAKAAQACUwxUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+NAACAABEAGYAAAATAABmABMADQBTT0ZJRFRfTWFycXVlX09yZGVyU09GSURUX01hcnF1ZQ==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAA8ACAAAAFZDAQATADkANgAAAFcAAQAACoAgAAEAAAAAAAICAAAAVkMAAAAAAQASAAcABwAB
+AAAKggAAAAAAAAAAAgIAAABWQwEADQAzAAAAAABXAAEAAAqAIAAAAAAAAAACAgAAAFNPRklEVF9N
+YXJxdWVfT3JkZXJbPHNjcmlwdD5QcmludChsX1NPRklEVF9NYXJxdWVfT3JkZXIsJ0NvbG9ubmUn
+KTwvc2NyaXB0Pl02AAIANAATAFNPRklEVF9NYXJxdWVfT3JkZXIABQATAFNPRklEVF9NYXJxdWVf
+T3JkZXIAAwB8EgACABAAAgAkOAEAAQB8AAMAAQUBAAEAfFNPRklEVF9NYXJxdWVbPHNjcmlwdD5Q
+cmludChsX1NPRklEVF9NYXJxdWUsJ0NvbG9ubmUnKTwvc2NyaXB0Pl0mAAEAAAABAQAJAQAACgEB
+DgoAAAEArSsBAAEAAQEAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAABAIAAAAAAAP//AAAA
+AAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAA
+V0MBAQAJAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////
+AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAAAAAAABAAAAAAAAAAgA
+AAAAAAEAWUMAAQAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAA
+ACwuFCCsAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='392' unid='0B77C5C85A4F2941C1256C7E002F3B08' sequence='100'>
+<created><datetime dst='true'>20021127T103553,04+02</datetime></created>
+<modified><datetime>20171029T101454,47-03</datetime></modified>
+<revised><datetime>20170904T113504,26-03</datetime></revised>
+<lastaccessed><datetime>20171029T101453,07-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101453,07-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$TITLE' sign='true'><text>fm_Portail</text></item>
+<item name='$WindowTitle' sign='true'><formula>"Formulaires"</formula></item>
+<item name='$FrameSet' sign='true'>
+<rawitemdata type='1'>
+7/8YAAIACQAAAAAAAAAAAAAAAAAAAAAA8P9CAA0AAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAUAAAAA
+AAMAAQAAAAAABQAAAAAAAAABADIAAQAoAAMAAQADAAEA8f85ABcAAAAAQAABAgAAAAAAAAAAAAUA
+AAAAAAEAAAAAAAAAVGl0cmUBAP///9gBAAAJAQD////YP/b/KgAAAAAAAwADAAgAAAAAAAAAAAAA
+AAAAAAAAAAAAAABtX1RvcEJhcvH/PQAXAAAAAEAAAQIAAAAAAAAAAAAJAAAAAAABAAAAAAAAAGxh
+bmd1YWdlcwEA////2AEAAAkBAP///9g/9v8rAAAAAAADAAcACQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AHBfTG5nc0Jhcj/w/z4AAQAAAAAAAAAAAAAAAAAAAAAABQAAAAAABQAAAAAAAQACAAAAAAAFAAAA
+AAAAAAMAAQABAKUAAwABAPD/QgABAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAFAAAAAAADAAEAAAAA
+AAUAAAAAAAAAAwABAAEAAAABAAAAAwABAPH/PwAXAAAAAEAAAQMAAAAAAAAAAAAEAAAABwABAAAA
+AAAAAE1lbnVDb250ZW51AQD////YAQAACQEA////2D/2/ygAAAAAAAMAAwAGAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAbV9NZW518f9DABcAAAAAQAABAgAAAAAAAAAAAA8AAAAAAAEAAAAAAAAAVnVlc1Rl
+bXBvcmFpcmVzAQD////YAQAACQEA////2D/x/zoAFwAAAABAAAECAAAAAAAAAAAABgAAAAAAAQAA
+AAAAAABNb3RldXIBAP///9gBAAAJAQD////Y8f87ABcAAAAAQAABAwAAAAAAAAAAAAcAAAAAAAEA
+AAAAAAAAQ29udGVudQEA////2AEAAAkBAP///9g/9v8uAAAAAAADAAcADAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAHBfSW52YWxpZFVSTA==
+</rawitemdata></item>
+<item name='$Flags'><text>#34CQ</text></item>
+<item name='$Comment' sign='true'><text>A désengager quand il n'y aura plus de hits</text></item>
+<item name='$DesignerVersion' sign='true'><text>7</text></item></note>
+

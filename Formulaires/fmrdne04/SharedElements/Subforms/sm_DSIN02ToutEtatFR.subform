@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048FC18'>
+<noteinfo noteid='716' unid='CAF58C73B5D19049C1256BC3005418E4' sequence='48'>
+<created><datetime dst='true'>20020524T171833,96+02</datetime></created>
+<modified><datetime>20171029T101719,08-03</datetime></modified>
+<revised><datetime>20170904T113524,12-03</datetime></revised>
+<lastaccessed><datetime>20171029T101715,56-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101715,56-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAmQcAAAAAAAAAAAAAAAAAAAAAAADc/6wH+f+aByBOAAAAAAAAAABsX0V0YXQx
+TGliU2VjdGlvbiA9ICdEZW1hbmRlX0VTXyc7DWxfRXRhdFN1aXZBY3RldXJJbmRpdmlkdSA9ICdE
+ZXN0aW5hdGFpcmUgKEFNUyknOw1sX0VyckFFdGF0U3VpdkFjdGV1ckluZGl2aWR1ID0gJ01lbW9J
+RCBkdSBEZXN0aW5hdGFpcmUgKEFNUyksb2JsaWdhdG9pcmUnOw1sX0VyckJFdGF0U3VpdkFjdGV1
+ckluZGl2aWR1ID0gJ1JlbnNlaWduZXIgdW4gc2V1bCBEZXN0aW5hdGFpcmUnOw1sX0VyckNFdGF0
+U3VpdkFjdGV1ckluZGl2aWR1PSdWb3VzIG5lIHBvdXZleiBwYXMgiHRyZSBsZSBkZXN0aW5hdGFp
+cmUgZGUgdm90cmUgZGVtYW5kZSc7DWxfRXRhdFN1aXZBY3RldXJHcm91cGUgPSAnRXRhcGUgc3Vp
+dmFudGUghSB0cmFpdGVyIHBhciAoZ3JvdXBlKSc7DWxfQWNjdWVpbEZvcm11bGFpcmVzID0gJ1Bh
+Z2UgZFwnYWNjdWVpbCBkZXMgZm9ybXVsYWlyZXMnOw1sX0NPRF9MaWJlbGxlID0gJ0xpYmVsbIIg
+ZHUgcHJvamV0ICc7DWxfRXJyQ09EX0xpYmVsbGUgPSAnUmVuc2VpZ25lciBsYSBsaWJlbGyCIGR1
+IHByb2pldCAnOw1sX0NPRF9QUkQ9ICdDb2RlIFBSRCBkdSBwcm9qZXQgJzsNbF9FcnJDT0RfUFJE
+PSAnUmVuc2VpZ25lciBsZSBjb2RlIFBSRCBzdXIgMyBwb3NpdGlvbiAnOw1sX0FpZGVDT0RfUFJE
+PSAnQ29kZSBQUkQsIDMgcG9zaXRpb25zLiAnOw1sX0NPRF9JQk1HUk9VUD0gJ1ZvdHJlIElCTUdS
+T1VQICAnOw1sX0VyckNPRF9JQk1HUk9VUD0gJ1JlbnNlaWduZXIgbGUgY29kZSBJQk1HUk9VUCAg
+JzsNbF9DT0RfRGF0YWJhc2U9ICdEYXRhYmFzZSAnOw1sX0FpZGVDT0RfRGF0YWJhc2U9J01vZGlm
+aWVyIGxhIHZhbGV1ciBzaSBugmNlc3NhaXJlJzsNbF9DT0RfQWxpYXM9ICdBTElBUyBkZXMgZmlj
+aGllcnMgJzsNbF9FcnJDT0RfQWxpYXM9ICdSZW5zZWlnbmVyIGxlIGNvZGUgQUxJQVMgc3VyIDQg
+cG9zaXRpb25zJzsNbF9BaWRlQ09EX0FsaWFzPSAnQ29kZSBBTElBUywgNCBwb3NpdGlvbnMuICAn
+Ow1sX0NPRF9TdG91Z3JvdXA9ICdTdG9ncm91cCAnOw1sX0FpZGVDT0RfU3RvdWdyb3VwPSdNb2Rp
+ZmllciBsYSB2YWxldXIgc2kgboJjZXNzYWlyZSc7DWxfQ09EX01VRD0gJ01VRCc7DWxfRXJyQ09E
+X01VRD0gJ1JlbnNlaWduZXIgbGEgTVVEJzsNbF9DT0RfQVBQSUVGPSAnQXBwbGljYXRpb24gSUVG
+ID8nOw1sX0VyckNPRF9BUFBJRUY9ICdSZW5zZWlnbmVyIE8gIG91ICBOJzsNbF9DT0RfRGF0ZWFw
+cHJvYj0nQSBsYSBkYXRlIGR1JzsNbF9DT0RfVW5pY29kZSA9J0RhdGFiYXNlIFVOSUNPREUnOw1s
+X0NPRF9OWU1VRCA9J1NpIE5ZTVVELCBub20gZHUgREIyJzsNbF9FcnJDT0RfTllNVUQgPSAnUmVu
+c2VpZ25lciBTaSBOWU1VRCwgbm9tIGR1IERCMiBzdXIgMyBwb3NpdGlvbiAnOw0NbF9EZW1hbmRl
+Q2hhbXBzID0gJ0Vsgm1lbnRzIGRlIGxhIGRlbWFuZGUnOw1sX0FjY2VwdGU9J1ZhbGlkgmUnOw1s
+X1JlZnVzZT0nUmVmdXOCZSc7DWxfRXJyRXRhdDFDb21tZW50YWlyZXM9J0NvbW1lbnRhaXJlcywg
+b2JsaWdhdG9pcmUgc2kgcmVmdXOCZSAnOw1sX0ZhaXJlU3VpdnJlPSdGYWlyZSBTdWl2cmUnOw1s
+X1JlZW5nYWdlcj0nUmVlbmdhZ2VyJzsNbF9RdWl0dGVyPSdRdWl0dGVyJzsNbF9BdmlzPSd2b3Ry
+ZSBkZW1hbmRlIGEggnSCJzsNSV9FcnJFdGF0MUF2aXM9J1JlbnNlaWduZXIgb3B0aW9uIGRlIHZh
+bGlkYXRpb24nOw1sX0NvbW1lbnRhaXJlcz0nQ29tbWVudGFpcmVzJzsNbF9TZWN0RXRhdDE9J1Zh
+bGlkYXRpb24gbml2ZWF1IDEnOw1sX1NlY3RFdGF0Mj0nU2VjdGlvbiBkXCdpbmZvcm1hdGlvbic7
+DWxfQ29uZkZhaXJlU3VpdnJlPSdFdGVzIHZvdXMgc3VyIGRlIHZvdWxvaXIgRmFpcmUgU3VpdnJl
+IGNlIGZvcm11bGFpcmUgPyc7DWxfQ29uZlJlZW5nYWdlcj0nRXRlcyB2b3VzIHN1ciBkZSB2b3Vs
+b2lyIFJlZW5nYWdlciBjZSBmb3JtdWxhaXJlID8nOw0NbF9MZT0nbGUnOw1sX1Bhcj0ncGFyJzsA
+cl//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_DSIN02ToutEtatFR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQEADhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEA3QYAAIX/hf8bAAEAAghzbV9E
+U0lOMDJUb3V0RXRhdEZSANIIAQD/AAAA3gYAAIX/
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_DSIN02ToutEtatFR</text><text
+>sm_DSIN02ToutEtatFR</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

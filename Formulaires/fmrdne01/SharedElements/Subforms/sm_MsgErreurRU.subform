@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='a0e' unid='1A48EB744AAB9C13C125792200374AB1' sequence='51'>
+<created><datetime dst='true'>20111007T120356,01+02</datetime></created>
+<modified><datetime>20171029T101502,57-03</datetime></modified>
+<revised><datetime>20170904T113510,94-03</datetime></revised>
+<lastaccessed><datetime>20171029T101457,67-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101457,67-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAWQMAAAAAAAAAAAAAAAAAAAAAAADc/2wD+f9aAyBOAAAAAAAAAABsX1RpdHJl
+ID0gIgXOBfgF6AXhBeoF4CI7DWxfRXhjdXNlID0gIgXPBfAF6AXtBe4F8QXoBewgBegF5wXiBegF
+7QXlBe0F6AX/IAXnBeAgBeQF7gXxBfIF4AXiBesF5QXtBe0F+wXlIAXtBeUF8wXkBe4F4QXxBfIF
+4gXgIjsNbF9Nc2dJbXByZXNzaW9uRWNyYW4gPSAiBdcF8gXuBeEF+yAF7wXuBewF7gX3BfwgBe0F
+4AXsIAXzBfEF8gXwBeAF7QXoBfIF/CAF/QXyBfMgBe4F+AXoBeEF6gXzLCAF7wXuBeYF4AXrBfMF
+6QXxBfIF4CwgBe4F8gXvBfAF4AXiBfwF8gXlIFByaW50U2NyZWVuIAXrBegF9gXgBewsIAXzBeoF
+4AXnBeAF7QXtBfsF7CAF7QXgIAX9BfIF7gXpIAXxBfIF8AXgBe0F6AX2BeUuIjsNbF9FcnJldXJE
+b21pbm8gPSAiBcgF7QX0Be4F8AXsBeAF9gXoBe4F7QXtBe4F5SAF8QXuBe4F4QX5BeUF7QXoBeU6
+IAXxBeUF8AXiBegF5QXwIAXiBeUF8AXtBfMF6yAF8QXrBeUF5AXzBf4F+QXlBeUgBfEF7gXuBeEF
++QXlBe0F6AXlIjsNDS8vIE9uIGFmZmljaGUgdW5lIHBvcC11cCBlbiBsYSBjZW50cmFudCCFIGwn
+gmNyYW4NZnVuY3Rpb24gb3BlbkNvbnRhY3QoKXsNCXZhciB1cmwgPSBzZWxmLndpbmRvdy5sb2Nh
+dGlvbi5ocmVmOw0JdmFyIG9wdHMyID0gJ3N0YXR1cz1ubyxyZXNpemFibGU9bm8sc2Nyb2xsYmFy
+cz1Obyx3aWR0aD01OTAsaGVpZ2h0PTE5MCBsZWZ0PScgKw0JCSgoc2NyZWVuLndpZHRoIC0gNTkw
+KS8yKSArICIsdG9wPSIgKyAoKHNjcmVlbi5oZWlnaHQgLSAxOTApLzIpOw0JdmFyIHdpbj13aW5k
+b3cub3Blbih1cmwuc3Vic3RyaW5nKDAsKHVybC5sYXN0SW5kZXhPZignLm5zZicpKzUpKSsncF9j
+b250YWN0P09wZW5QYWdlJywnQ29udGFjdCcsb3B0czIpOwkNCXdpbi5mb2N1cygpOw19AABf/xAA
+AgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_MsgErreurRU</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_MsgErreurEN</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAqBAoMEAQCF/wgA
+AQAACg==
+</rawitemdata></item></note>
+

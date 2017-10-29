@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='7be' unid='C5CF348C219EBB9FC125738B00507FBC' sequence='106'>
+<created><datetime dst='true'>20071106T163915,80+02</datetime></created>
+<modified><datetime>20171029T101459,75-03</datetime></modified>
+<revised><datetime>20170904T113508,22-03</datetime></revised>
+<lastaccessed><datetime>20171029T101456,03-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101456,03-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQATAcAAAAAAAAAAAAAAAAAAAAAAADc/14H+f9MByBOAAAAAAAAAABsX0lGbGFz
+aFRpdHJlID0gIkluZm8gRmxhc2giOw1sX0lGVGl0cmUgPSAiSW5mbyBGbGFzaCI7DWxfSUZEYXRl
+ID0gIkRhdGEgLSBPcmEiOw1sX0lGSG91ciA9ICJPcmEiOw1sX0lGUHVibGlTdGFydCA9ICJJbml6
+aW8gZGkgcHViYmxpY2F6aW9uZSI7DWxfSUZQdWJsaUVuZCA9ICJGaW5lIGRpIHB1YmJsaWNhemlv
+bmUiOw1sX0lGRGF0ZUhvdXIgPSAiRGF0YSAtIE9yYSI7DWxfSUZUeXBlSW5mbyA9ICJUaXBvIGRp
+IGluZm8iOw1sX0lGTG5nRGlzcG8gPSAiTGluZ3VlIGRpc3BvbmliaWxpIjsNbF9JRkxuZyA9ICJM
+aW5ndWUiOw1sX0lGUHJldmlldyA9ICJBbnRlcHJpbWEiOw1sX0lGVGV4dGVGUiA9ICJUZXN0byBp
+biBmcmFuY2VzZSI7DWxfSUZUZXh0ZUVOID0gIlRlc3RvIGluIGluZ2xlc2UiOw1sX0lGVGV4dGVF
+UyA9ICJUZXN0byBpbiBzcGFnbm9sbyI7DWxfSUZUZXh0ZURFID0gIlRlc3RvIGluIHRlZGVzY28i
+Ow1sX0lGVGV4dGVQVCA9ICJUZXN0byBpbiAncG9ydHVnYWlzJyI7DWxfSUZUZXh0ZU5MID0gIlRl
+c3RvIGluICdugmVybGFuZGFpcyciOw1sX0lGVGV4dGVJVCA9ICJUZXN0byBpbiAnIGl0YWxpZW4n
+IjsNbF9JRlB1YmxpY2F0aW9uID0gIlB1YmJsaWNhemlvbmUiOw1sX0lGTGFiZWxQT0EgPSAiUmVz
+cG9uc2FiaWxlIjsNbF9JRkxhYmVsVXNlciA9ICJVdGVudGUiOw1sX0lGTGFiZWxBbGxJbmZvID0g
+IlR1dHRlIGxlIGluZm9ybWF6aW9uaSI7DWxfSUZIZWxwMSA9ICJJbCB0ZXN0byCKIGludGVycHJl
+dGF0byBjb21lIEhUTUwuPGJyPlB1lSBkdW5xdWUgY29udGVuZXJlIGRlZ2xpIGVsZW1lbnRpIEhU
+TUwsIGRlbGxlIGRlZmluaXppb25pIENTUyBlIGRlbCBKYXZhU2NyaXB0Ljxicj48c3BhbiBzdHls
+ZT0nY29sb3I6IHJlZDsgZm9udC13ZWlnaHQ6IGJvbGQ7Jz5BdHRlbnppb25lOiBnbGkgZXJyb3Jp
+IGRpIHNpbnRhc3NpIGluZmx1aXJhbm5vIHN1IFRVVFRJIGdsaSB1dGVudGkgZGVsbCdhcHBsaWNh
+emlvbmUgRm9ybXVsYXJpITwvc3Bhbj4iOw1sX0lGUHVibGlzaGVkID0gIlB1YmJsaWNhdG8iOw1s
+X0lGSGlkZGVuID0gIk5hc2Nvc3RvL0FyY2hpdmlhdG8iOw1sX0lGTm90WWV0UHVibGlzaGVkID0g
+Ik5vbiBhbmNvcmEgcHViYmxpY2F0byI7DWxfSUZEZWxldGVkID0gIkluZm8gRmxhc2ggY2FuY2Vs
+bGF0byI7DWxfSUZDb25mU3VwcHIgPSAiU2lldGUgc2ljdXJpIGRpIHZvbGVyIGNhbmNlbGxhcmUg
+cXVlc3RvIEluZm8gRmxhc2g/XG5MJ29wZXJhemlvbmUgbm9uIHBvdHKFIGVzc2VyZSBhbm51bGxh
+dGEuLiI7DWxfSUZFcnJFbXB0eUZpZWxkID0gIkNvbXBsZXRhcmUgaWwgY2FtcG8iOw1sX0lGRXJy
+SW52YWxpZERhdGVTdGFydCA9ICJDb21wbGV0YXJlIGxhIGRhdGEgZGkgaW5pemlvIHB1YmJsaWNh
+emlvbmUgbmVsIGZvcm1hdG8gSkovTU0vQUFBIjsNbF9JRkVyckludmFsaWRUaW1lU3RhcnQgPSAi
+Q29tcGxldGFyZSBsJ29yYSBkaSBpbml6aW8gcHViYmxpY2F6aW9uZSBuZWwgZm9ybWF0byBISDpN
+TSI7DWxfSUZFcnJJbnZhbGlkRGF0ZUVuZCA9ICJDb21wbGV0YXJlIGxhIGRhdGEgZGkgZmluZSBw
+dWJibGljYXppb25lIG5lbCBmb3JtYXRvIEpKL01NL0FBQSI7DWxfSUZFcnJJbnZhbGlkVGltZUVu
+ZCA9ICJDb21wbGV0YXJlIGwnb3JhIGRpIGZpbmUgcHViYmxpY2F6aW9uZSBuZWwgZm9ybWF0byBI
+SDpNTSI7DWxfSUZFcnJJbnZhbGlkU3RhcnRFbmQgPSAiTGEgZGF0YSBkaSBmaW5lIHB1YmJsaWNh
+emlvbmUgZGV2ZSBlc3NlcmUgcG9zdGVyaW9yZSBhbGxhIGRhdGEgZGkgaW5pemlvIjsNbF9JRkVy
+clR5cGVNaXNzaW5nID0gIlNlbGV6aW9uYXJlICdSZXNwb25zYWJpbGUnIG8gJ1V0ZW50ZSciOw1s
+X0lGRXJyTm9UZXh0ID0gIkluc2VyaXJlIGRlbCB0ZXN0byI7AF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_InfoFlashIT</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_InfoFlashFR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAADDjAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAcAAACDBAEA3QYAAIX/hf8WAAEAAgpzbV9J
+bmZvRmxhc2hJVNIIAQD/AAAA3gYAAIX/
+</rawitemdata></item></note>
+

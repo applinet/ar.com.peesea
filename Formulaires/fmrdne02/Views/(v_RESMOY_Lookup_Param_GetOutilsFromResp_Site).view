@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='bfe' unid='B69C6323D5148FA4C125753D00570963' sequence='123'>
+<created><datetime dst='true'>20090113T175040,35+02</datetime></created>
+<modified><datetime>20171029T101607,98-03</datetime></modified>
+<revised><datetime>20170904T113511,35-03</datetime></revised>
+<lastaccessed><datetime>20171029T101602,07-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101602,07-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SYLVAIN DIDELOT - U330711/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Arial</text></textlist></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$TITLE' sign='true'><text>(v_RESMOY_Lookup_Param_GetOutilsFromResp_Site)|v_RESMOY_Lookup_Param_GetOutilsFromResp_Site</text></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACACUACkIAAFZDAwMZAAsAAAAAAGQABQEACAAhAAAIAAAAAAICAAAAVkMAAAsABAAAAAAAWgAB
+AAAKAAAAAAAAAAAAAgIAAABNb3llbnNfUmVzcG9uc2FibGVzX091dGlsUmVzcG9uc2FibGVNb3ll
+bnNfU2l0ZVNpdGUmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQEAAAAAAAAAAFdDAQEACQAA
+AAAAAAAAAAAAAAAAAAAEAMAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAA
+AAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAQAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAA
+AAABAP///wABAP///wAAAAEAAAAAAAEAgICAAAEAAAAAAAAACAAAAAAAAQBYQwBMgAMAAAAAAAEC
+AgIBAQEBBwQDAAAAAAAAAAAgLy86WUMAAAgAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA
+AAAAAAAAAAAAAAAAAAAAACz/RgA=
+</rawitemdata></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+bgAFADwANwADABkACwAJAE1veWVuc19SZXNwb25zYWJsZXNfT3V0aWxNb3llbnNfU2l0ZSRDb25m
+bGljdAAEAAQAAAAiAAUABABmb3JtAQANAG1fUkVTTU9ZX1R5cGUACgIDAAcACgAEAAlMMVM=
+</formula></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZQABAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcgAGAD58
+</rawitemdata></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAABAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUA
+AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
+AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
+BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
+AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIABgA+fA==
+</rawitemdata></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+JgABAABECGYHAAAZAE1veWVuc19SZXNwb25zYWJsZXNfT3V0aWw=
+</rawitemdata></item>
+<item name='$Collation1' summary='true'>
+<rawitemdata type='2'>
+JgABAABECGYHAAAZAE1veWVuc19SZXNwb25zYWJsZXNfT3V0aWw=
+</rawitemdata></item>
+<item name='$Collation2' summary='true'>
+<rawitemdata type='2'>
+JgABAABECWYHAAAZAE1veWVuc19SZXNwb25zYWJsZXNfT3V0aWw=
+</rawitemdata></item></note>
+

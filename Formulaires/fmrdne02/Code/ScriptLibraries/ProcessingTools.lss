@@ -1,0 +1,230 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+Use "Const"
+Use "LogEntry"
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Public Class ProcessStatus
+Declare Sub DisplayStatus(paramProcessStatus As ProcessStatus)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Constantes
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Const action_UNKNOWN%	=	0	' Inconnu
+Const action_SUBMIT%		=	1	' Soumettre
+Const action_DENY% 		=	2	' Refus
+Const action_CANCEL%		=	3	' Annulation
+Const action_MODEL%		=	4	' Modèle
+Const action_DRAFT%		=	5	' Brouillon
+Const action_FOLLOW%	=	6	' Faire suivre
+
+Const status_UNKNOWN%				=	0	' Inconnu
+Const status_SUCCESS%				=	1	' Terminé, avec succes. Document enregistré
+Const status_FAILURE%					=	2	' Echec complet, avec erreur(s)
+Const status_PARTIALFAILURE%	=	3	' Echec partiel, avec erreur(s). Document enregistré
+Const status_DENIAL%					=	4	' Refus de la soumission (par exemple, refus d'enregistrer un nouveau modèle car nombre max atteind)
+
+
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+' Cette classe représente l'état du traitement d'un formulaire
+'
+' Elle permet de définir une liste de messages d'erreur, qui seront
+' affichés à l'utilisateur
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Public Class ProcessStatus
+	
+	' - - - - - - - - - -
+	' Membres
+	' - - - - - - - - - -
+	
+	' Tableau des erreurs retournés
+	Public Errors List As Integer	
+	
+	Public Step As Integer
+	
+	' Action du processus
+	Public ProcessAction As Integer
+	' Etat du processus
+	Public ProcessStatus As Integer
+	
+	' Langue à utiliser pour l'affichage
+	Public ForceLng As String
+	
+	
+	' - - - - - - - - - -
+	' Méthodes
+	' - - - - - - - - - -
+	
+	' Constructeur
+	Public Sub New(paramProcessAction As Integer)
+		
+		' Action du processus
+		Me.ProcessAction = paramProcessAction
+		' Etat du processus
+		Me.ProcessStatus = status_UNKNOWN%
+		
+		' Etape du processus
+		Me.Step = 0
+		
+	End Sub
+	
+	
+	' Ajout d'une erreur à la liste
+	Public Sub AddErr(paramFormError As Integer, paramErrFatal As Boolean)
+		
+		' On ajoute l'erreur
+		Me.Errors(Str(paramFormError)) = paramFormError
+		
+		' Selon la gravité de l'erreur, on place le processus dans le bon status
+		If(paramErrFatal)Then
+			' Erreur fatale, on ne se pose pas de question
+			Me.ProcessStatus = status_FAILURE%
+		Else
+			' Erreur non fatale, on s'assure que l'on ne va pas diminuer la gravité
+			If(Me.ProcessStatus <> status_FAILURE%) Then
+				Me.ProcessStatus = status_PARTIALFAILURE%
+			End If
+		End If
+		
+	End Sub
+	
+	
+	
+	' Passage à l'étape suivante
+	Public Sub NextStep
+		Me.Step = Me.Step + 1	
+	End Sub
+	
+	
+	' Passage à l'étape précédente
+	Public Sub PrevStep
+		Me.Step = Me.Step - 1	
+	End Sub
+	
+End Class
+
+
+'++LotusScript Development Environment:2:2:DisplayStatus:8:8
+
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Cette procédure se charge d'afficher le status du traitement à l'utilisateur
+'
+' Particularité: procédure appelée même dans la gestion d'erreur d'Initialize
+' Elle ne doit donc pas faire remonter d'erreurs
+' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Sub DisplayStatus(paramProcessStatus As ProcessStatus)
+	
+	' Gestion d'erreurs
+	On Error Goto ErrorHandler
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 																INITIALISATION
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Session
+	Dim CurrentSession As NotesSession
+	Set CurrentSession = New NotesSession
+	
+	
+	' Base	
+	Dim CurrentDB As NotesDatabase
+	Set CurrentDB = CurrentSession.CurrentDatabase
+	
+	
+	' Vue des documents de paramétrages
+	Dim ParamsView As NotesView
+	Set ParamsView = CurrentDB.GetView("v_FormsParams")
+	
+	' Document de paramétrage
+	Dim ParamsDocument As NotesDocument
+	Set ParamsDocument = ParamsView.GetDocumentbyKey("DRRH17")
+	
+	
+	' Document de profil
+	Dim ProfileDocument As NotesDocument
+	Set ProfileDocument = CurrentDB.GetProfileDocument("m_ProfileParam")
+	Dim LogPathItem As NotesItem
+	Set LogPathItem = ProfileDocument.GetFirstItem("LogDB_Path")
+	
+	
+	' Chemin de la base de Log Applicative
+	Dim DBLogPathItem As NotesItem
+	Set DBLogPathItem = ProfileDocument.GetFirstItem("LogDB_Path")
+	
+	Dim DBLogPath As String
+	If Not DBLogPathItem Is Nothing Then
+		DBLogPath = DBLogPathItem.Text
+	End If
+	
+	Dim LogEntry As New LogEntry
+	
+	
+	
+	' Chaine pour la liste des erreurs, en paramètres de l'URL	
+	Dim stringErrorsParam As String
+	stringErrorsParam = ""
+	
+	' Chaine pour l'identifiant du document, en paramètre de l'URL
+	Dim stringDocID As String
+	stringDocID = ""
+	
+	' Cahine pour le forçage de la langue d'affichage
+	Dim stringForceLng As String
+	stringForceLng = ""
+	
+	
+	' On boucle sur la liste des codes d'erreurs
+	Forall ErrCode In paramProcessStatus.Errors
+		stringErrorsParam = stringErrorsParam + Trim(Str(ErrCode)) + "/"
+	End Forall
+	
+	' On devrait supprimer ici le dernier "/", la boucle en ajoute un de trop
+	
+	' On ajoute le début de la chaine de paramètres
+	If(stringErrorsParam <> "") Then
+		stringErrorsParam = "&ErrCode=" + stringErrorsParam
+	End If
+	
+	
+	' On créé la chaine pour le forçage de la langue d'affichage
+	If(paramProcessStatus.ForceLng <> "") Then
+		stringForceLng = "&ForceLng=" + paramProcessStatus.ForceLng
+	End If
+	
+	' On affiche la redirection JavaScript
+	Print "<script>"
+	Print "var url = self.window.location.href;"
+	Print "window.location = url.substring(0,(url.lastIndexOf('.nsf')+5))+'m_ProcessResult?OpenForm&Action=" & paramProcessStatus.ProcessAction & "&Status=" & paramProcessStatus.ProcessStatus & stringErrorsParam & stringForceLng & "'"
+	Print "</script>"
+	
+	
+	' C'est fini, on sort
+	Exit Sub
+	
+	
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' 														GESTION D'ERREURS
+	' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ErrorHandler:
+	
+	Set LogEntry = New LogEntry
+	
+	' On log l'erreur
+	LogEntry.LogType		= LOGLEVEL_EMERG%
+	LogEntry.LibName 	= "ProcessingTools"
+	LogEntry.SubName	= "DisplayStatus"
+	LogEntry.Erl	 			= Erl
+	LogEntry.Err				= Err
+	LogEntry.Msg			= Error$
+	
+	' On enregistre l'erreur	
+	Call LogEntry.Save("", DBLogPath)
+	
+	
+	Resume Next	
+End Sub

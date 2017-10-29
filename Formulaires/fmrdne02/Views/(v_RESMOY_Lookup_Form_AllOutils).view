@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='baa' unid='53BDAB17093EE6C4C125750F00596E09' sequence='118'>
+<created><datetime dst='true'>20081128T181648,73+02</datetime></created>
+<modified><datetime>20171029T101607,56-03</datetime></modified>
+<revised><datetime>20170904T113511,13-03</datetime></revised>
+<lastaccessed><datetime>20171029T101601,87-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101601,87-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SYLVAIN DIDELOT - U330711/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion' sign='true'><text>7</text></item>
+<item name='$TITLE' sign='true'><text>(v_RESMOY_Lookup_Form_AllOutils)|v_RESMOY_Lookup_Form_AllOutils</text></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAB4ACkIAAFZDAAADAAUAfgAAAFAAAQAACgAAAAAAAAAAAAICAAAAJDI5T3V0aWx+AAIAcAAD
+ACQyOQAFAAsATW95ZW5zX1NpdGUAAQACACMjIgIFABAATW95ZW5zX0NhdGVnb3JpZSICAQACACMj
+IgIFAAsATW95ZW5zX1R5cGUAIgIBAAIAIyMiAgUACgBNb3llbnNfUmVmIgJeAWIBAwAHAAwABQAJ
+MFMwRQAmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQEAAAAAAAAAAFdDAQEACQAAAAAAAAAA
+AAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCABAAAAABAP///wAFAP///wABAAAAAAAA
+AAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQCAgIAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+xgAFABgAFAACAAMACQAkMjkkQ29uZmxpY3QCAHAAAwAkMjkABQALAE1veWVuc19TaXRlAAEAAgAj
+IyICBQAQAE1veWVuc19DYXRlZ29yaWUiAgEAAgAjIyICBQALAE1veWVuc19UeXBlACICAQACACMj
+IgIFAAoATW95ZW5zX1JlZiICXgFiAQMABwAMAAUACTBTMEUABAAEAAAAIgAFAAQAZm9ybQEADgBt
+X1JFU01PWV9PdXRpbAoCAwAHAAoABAAJTDFT
+</formula></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZQABAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcgAGAD58
+</rawitemdata></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAABAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUA
+AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
+AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
+BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
+AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIABgA+fA==
+</rawitemdata></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+BgAAAABE
+</rawitemdata></item></note>
+

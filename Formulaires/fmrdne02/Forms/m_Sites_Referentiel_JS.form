@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='e72' unid='4300F092519125DBC1257618005229D7' sequence='100'>
+<created><datetime dst='true'>20090820T165726,63+02</datetime></created>
+<modified><datetime>20171029T101611,08-03</datetime></modified>
+<revised><datetime>20170904T113514,35-03</datetime></revised>
+<lastaccessed><datetime>20171029T101603,89-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101603,89-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Fields'><textlist><text>Path_Info_Decoded</text><text>Lngs</text></textlist></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$WEBQueryOpen' sign='true'><formula>REM { On ne recharge le référentiel qu'une fois par heure };
+@SetHTTPHeader("Cache-Control";"max-age=3600")</formula></item>
+<item name='$Flags'><text>C</text></item>
+<item name='$MimeType' sign='true'><text>text/javascript</text></item>
+<item name='$MimeCharSet' sign='true'><text>UTF-8</text></item>
+<item name='$WebFlags' sign='true'><text>H</text></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$TITLE' sign='true'><textlist><text>m_Sites_Referentiel_JS</text><text
+>m_Sites_Referentiel_JS</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_Sites_Referentiel_JS</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAYAAACDBAEA3QYAAIX/hf8/AAEAAghDZSBt
+YXNxdWUgZG9pdCCIdHJlIGFwcGVsbIIgY29tbWUgdW4gZmljaGllciBKYXZhU2NyaXB0ANIIAQD/
+AAAA3gYAAIX/gQKDBAEA3QYAAIX/hf9EAAEAAghJbCByZW52b2kgdW4gdGFibGVhdSBkZSBsaWJl
+bGyCcyBwb3VyIGxlIHKCZoJyZW5jaWVsICJTaXRlcyLSCAEA/wAAAN4GAACF/4ECgwQBAN0GAACF
+/4X/CAABAAII0ggBAP8AAADeBgAAhf+BAoMEAQDdBgAAhf+F/yMAAQACCEluaXRpYWxpc2F0aW9u
+IGRlcyB0YWJsZWF1eADSCAEA/wAAAN4GAACF/4ECgv9aAAIAAAAAAAAAAACgBQAAoAUIANACoAVw
+CEALEA7gELATgBYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAACUhKAFCgCgBQoAAABkAAEA
+AAAEAAAAgwQCAN0GAACF/4X/JgABAAkIdmFyIEZvcm1zX1NpdGVzID0gbmV3IEFycmF5KCk70ggB
+AACAAADeBgAAhf+BAoMEAQDdBgAAhf+F/wgAAQACCNIIAQD/AAAA3gYAAIX/gQKDBAEA3QYAAIX/
+hf8dAAEAAghQb3B1bGF0aW9uIGR1IHRhYmxlYXUA0ggBAP8AAADeBgAAhf+BAoL/WgADAAAAAAAA
+AAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA
+lIcAAAAAAAAAAAAAAAABAAAABAAAAIMEAwDM/wgAAAAAAN0GAACF/4X/CAABAAkI0ggBAACAAADe
+BgAAhf/N/wgAAAAAAN0GAACt/6n/KgEBABgABAAeAR4BCgAEAAEALgAGAFZhbHVlcwEAAAABAAAA
+AQAHAHZfU2l0ZXMAAAAAAAAAAAAcQKoEAwAHABIADAAJMVMyUzZTOFMxMFMAAIAABQAGAFZhbHVl
+cwEABQBWYWx1ZQABAA0ARm9ybXNfU2l0ZXNbIgAFAAYAVmFsdWVzAQACACMjXwIiAgEABgAiXSA9
+ICIiAgUABgBWYWx1ZXMBAAIAIyMAAAAAAAAAAAhAbQMiAgEAAgAiOyIC+wM3AfsBPAGrAYoAhQID
+AAcAWABRAAkwUlIyUlQ0UlRUNlJUVFQxMFMxMlJUVFRUMTNTMTRTMThTMjBTMjFTMjJTMjNTMjdT
+MjlTMzFTMzJTMzNSVFRUMzRSVFQzNVJUMzdSVDM4UgDdBgAAhf+F/wgAAQAJCNIIAQAAgAAA3gYA
+AIX/qgLeBgAArgDdBgAAhf+F/wgAAQAJCNIIAQAAgAAA3gYAAIX/
+</rawitemdata></item></note>
+

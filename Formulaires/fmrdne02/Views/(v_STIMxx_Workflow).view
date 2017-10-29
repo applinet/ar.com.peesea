@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='16ce' unid='13497888FEFC47C5C1257D180052DBE5' sequence='40'>
+<created><datetime dst='true'>20140717T170502,45+02</datetime></created>
+<modified><datetime>20171029T101620,68-03</datetime></modified>
+<revised><datetime>20170904T113523,59-03</datetime></revised>
+<lastaccessed><datetime>20171029T101610,03-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101610,03-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_STIMxx_Workflow)|v_STIMxx_Workflow</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+nAACABQABABGb3JtBQAEAEZvcm0DAAUAIAAbAAMABAAJAAQARm9ybSRDb25mbGljdCRSRUYABAAE
+AAAAVgAFAAQAZm9ybQEAEQBtX1NUSU0wMV9Xb3JrZmxvdwABABEAbV9TVElNMDJfV29ya2Zsb3cA
+HwIBABEAbV9TVElNMDRfV29ya2Zsb3cAHwJ0AgMABwAMAAYACUwxUzVT
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EQABAABEgGYAAAAEAEZvcm0=
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABABEACAAAAFZDAQAEAAQAFgAAAIkAAQAACgAAAAAAAAAAAAICAAAARm9ybUZvcm0WAAIAFAAE
+AEZvcm0FAAQARm9ybQMAJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAEBAAAAAAAAAABXQwEB
+AAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD/
+//8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAA
+AQA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

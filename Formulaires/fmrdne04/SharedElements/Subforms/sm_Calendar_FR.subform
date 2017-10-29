@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048FC18'>
+<noteinfo noteid='80e' unid='7C377E28D5646180C125723500478B0E' sequence='34'>
+<created><datetime dst='true'>20061129T150126,54+02</datetime></created>
+<modified><datetime>20171029T101720,30-03</datetime></modified>
+<revised><datetime>20170904T113525,16-03</datetime></revised>
+<lastaccessed><datetime>20171029T101716,28-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101716,28-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAFAIAAAAAAAAAAAAAAAAAAAAAAADc/yYC+f8UAiBOAAAAAAAAAAAvLyBDYWxl
+bmRyaWVycw0NdmFyIGNhbGVuZHJpZXJfZGF0ZWpvdSA9IG5ldyBDYWxlbmRhclBvcHVwKCJjYWxf
+ZGF0am91Iik7DQ0vLyAtLSBEYXRlIGR1IGpvdXINY2FsZW5kcmllcl9kYXRlam91LnNldE1vbnRo
+TmFtZXMoJ0phbnZpZXInLCdGgnZyaWVyJywnTWFycycsJ0F2cmlsJywnTWFpJywnSnVpbicsJ0p1
+aWxsZXQnLCdBb5Z0JywnU2VwdGVtYnJlJywnT2N0b2JyZScsJ05vdmVtYnJlJywnRIJjZW1icmUn
+KTsNY2FsZW5kcmllcl9kYXRlam91LnNldERheUhlYWRlcnMoJ0RpJywnTHUnLCdNYScsJ01lJywg
+J0plJywnVmUnLCdTYScpOw1jYWxlbmRyaWVyX2RhdGVqb3Uuc2V0V2Vla1N0YXJ0RGF5KDEpOw1j
+YWxlbmRyaWVyX2RhdGVqb3Uuc2V0VG9kYXlUZXh0KCJBdWpvdXJkJ2h1aSIpOw1jYWxlbmRyaWVy
+X2RhdGVqb3Uuc2V0Q3NzUHJlZml4KCJDQUwiKTsNY2FsZW5kcmllcl9kYXRlam91Lm9mZnNldFgg
+PSAwOw1jYWxlbmRyaWVyX2RhdGVqb3Uub2Zmc2V0WSA9IDI1Ow1jYWxlbmRyaWVyX2RhdGVqb3Uu
+YXV0b0hpZGUoKTsAX/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_Calendar_FR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAo=
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_Calendar_FR</text><text
+>sm_Calendar_FR</text></textlist></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

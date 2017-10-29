@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='292' unid='CE973D839BD234CAC1256BC3004E5794' sequence='108'>
+<created><datetime dst='true'>20020524T161542,28+02</datetime></created>
+<modified><datetime>20171029T101453,19-03</datetime></modified>
+<revised><datetime>20170904T113503,44-03</datetime></revised>
+<lastaccessed><datetime>20171029T101452,39-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101452,39-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SYLVAIN DIDELOT - U330711/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$TITLE'><text>sm_DescFormFR</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAJgEAAAAAAAAAAAAAAAAAAAAAAADc/zgB+f8mASBOAAAAAAAAAABsX05vbUZv
+cm0gPSAiVGl0cmUgZHUgZm9ybXVsYWlyZSI7DWxfQWxpYXNGb3JtID0gIk5vbSBhYnKCZ4IiOw1s
+X0luZm9zRm9ybSA9ICJJbmZvcm1hdGlvbnMgc3VyIGxlIGZvcm11bGFpcmUiOw1sX0Rlc2NGb3Jt
+ID0gIkRlc2NyaXB0aW9uIGR1IGZvcm11bGFpcmUiOw1sX0Rlc2NQdXJnMSA9ICJQdXJnZSBkb2N1
+bWVudHMgZW4gY291cnMgZGUgdmFsaWRhdGlvbiI7DWxfRGVzY1B1cmcyID0gIlB1cmdlIGJyb3Vp
+bGxvbnMiOw1sX0Rlc2NQdXJnMyA9ICJQdXJnZSBkb2N1bWVudHMgdmFsaWSCcy9yZWZ1c4JzIjsN
+AABf/xAAAgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_DescFormFR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEA3QYAAIX/hf8VAAEAAghzbV9E
+ZXNjRm9ybUZSANIIAQD/AAAA3gYAAIX/
+</rawitemdata></item></note>
+

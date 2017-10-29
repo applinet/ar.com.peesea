@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048FC18" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="78a" sequence="25" unid="8586B84A985D715DC1256BD4004A3C94">
+<created><datetime dst="true">20020610T153051,72+02</datetime></created>
+<modified><datetime>20171029T101719,66-03</datetime></modified>
+<revised><datetime>20170904T113524,66-03</datetime></revised>
+<lastaccessed><datetime>20171029T101715,90-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101715,90-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name>CN=FRANCK NUWENDAM - E100441/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>logopsa.gif</text></item>
+<item name="$TITLE" sign="true"><textlist><text>logopsa.gif</text><text>logopsa.gif</text></textlist></item>
+<item name="$DesignerVersion"><text>8.5</text></item></note>

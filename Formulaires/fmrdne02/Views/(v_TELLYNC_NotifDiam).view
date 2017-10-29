@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='1ae2' unid='774B9F084B19B9D4C1257E600032711C' sequence='21'>
+<created><datetime dst='true'>20150610T111057,56+02</datetime></created>
+<modified><datetime>20171029T101625,12-03</datetime></modified>
+<revised><datetime>20170904T113527,83-03</datetime></revised>
+<lastaccessed><datetime>20171029T101613,07-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101613,07-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_TELLYNC_NotifDiam)|v_TELLYNC_NotifDiam</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+cAACABQABABGb3JtBQAEAEZvcm0DAAUAIAAbAAMABAAJAAQARm9ybSRDb25mbGljdCRSRUYABAAE
+AAAAKAAFAAQAZm9ybQEAEwBtX1RFTExZTkNfTm90aWZEaWFtAAoCAwAHAA4ACAAJTDFTMlMzUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EQABAABEgGYAAAAEAEZvcm0=
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABABEACAAAAFZDAQAEAAQAFgAAAIkAAQAACgAAAAAAAAAAAAICAAAARm9ybUZvcm0WAAIAFAAE
+AEZvcm0FAAQARm9ybQMAJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAEBAAAAAAAAAABXQwEB
+AAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD/
+//8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAA
+AQA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

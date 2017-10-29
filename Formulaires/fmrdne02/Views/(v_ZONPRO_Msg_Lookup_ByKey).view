@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='f4e' unid='56B158E0116639A5C125764F00521016' sequence='99'>
+<created><datetime dst='true'>20091014T165620,70+02</datetime></created>
+<modified><datetime>20171029T101612,16-03</datetime></modified>
+<revised><datetime>20170904T113514,97-03</datetime></revised>
+<lastaccessed><datetime>20171029T101604,49-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101604,49-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_ZONPRO_Msg_Lookup_ByKey)|v_ZONPRO_Msg_Lookup_ByKey</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+iAACAEAAAwAkMjYABQALAFpPTlBST19TaXRlAGIBXgEBAAEA9QAiAgUADgBaT05QUk9fQ3JpdGVy
+YWIBXgEiAgMABQAYABQAAgADAAkAJDI2JENvbmZsaWN0BAAEAAAAIAAFAAQAZm9ybQEADABtX1pP
+TlBST19Nc2cKAgMABwAKAAQACUwxUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABEgGYAAAADACQyNg==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAB8ACkAAAFZDAQADAAwAUgAAAGgABQAACAAgAAAIAAAAAAICAAAAJDI2U0lURfVDUklURVJF
+UgACAEAAAwAkMjYABQALAFpPTlBST19TaXRlAGIBXgEBAAEA9QAiAgUADgBaT05QUk9fQ3JpdGVy
+YWIBXgEiAgMABwAQAAoACTdTOFM5UzEwUyYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQABAQAA
+AAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAEAxAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAA
+AAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAICAgAABAAAA
+AAAAAAgAAAAAAAEAWEMATIADAAAAAAABAgICAQEBAQcEAwAAAAAAAAAAIC8vOllDAAAIAAAAAQAA
+AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAsLhQgrAA=
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Arial</text></textlist></item>
+<item name='$Comment' sign='true'><text>ZONPRO - Vue des messages d'information pour requètes AJAX</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAABAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemVH
+AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
+AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
+BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
+AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIABgA+fA==
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZQABAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcv8GAD58
+</rawitemdata></item></note>
+

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='1386' unid='243A1EAB9479CA67C125799D004F4379' sequence='54'>
+<created><datetime dst='true'>20120207T162546,17+02</datetime></created>
+<modified><datetime>20171029T101616,92-03</datetime></modified>
+<revised><datetime>20170904T113519,81-03</datetime></revised>
+<lastaccessed><datetime>20171029T101607,59-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101607,59-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=NICOLAS ENRICO LAURENZANO - E363578/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_COHBPS_PDST_Lookup_ByCode)|v_COHBPS_PDST_Lookup_ByCode</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+dgACACIAAwAkMzcABQANAENPSEJQU19NYXJxdWUAXgFiAQMABQAeABoAAwADAAkABAAkMzckQ29u
+ZmxpY3QkUkVGBAAEAAAAJgAFAAQAZm9ybQEAEgBtX0NPSEJQU19WYWxpZFBEU1QKAgMABwAKAAQA
+CUwxUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABEgGYAAAADACQzNw==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABABMACAAAAFZDAQADAAYAMAAAAK8ABQACCIAAAAAIAAAAAAICAAAAJDM3TWFycXVlMAACACIA
+AwAkMzcABQANAENPSEJQU19NYXJxdWUAXgFiAQMABwAMAAUACTBTMEUAJgABAAAAAQEACQEAAAoB
+AQ4KAAABAK0rAQABAAEBAAAAAAAAAABXQwEBAgkAAAAAAAAAAAAAAAAAAAAAAQDEAAAAAAD//wAA
+AAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAA
+AAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQBYQwBMgAMAAAAAAAECAgIBAQEBBwQDAAAAAAAA
+AAAgLy86WUMAAAgAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAA
+ACwuFCCsAA==
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Arial</text></textlist></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

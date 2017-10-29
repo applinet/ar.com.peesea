@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C80048FC18" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="d8a" sequence="12" unid="BB9AA2EBE29F28D8C12579B40037DEB0">
+<created><datetime dst="true">20120301T121014,88+02</datetime></created>
+<modified><datetime>20171029T101726,80-03</datetime></modified>
+<revised><datetime>20170904T113528,02-03</datetime></revised>
+<lastaccessed><datetime>20171029T101720,10-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101720,10-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$TITLE" sign="true"><text>Forms_Libs</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+
+
+<item name="$POID"><datetime>20170904T113528,02-03</datetime></item></note>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='1546' unid='86FC9340FBC1AC76C1257C3D004A47AD' sequence='50'>
+<created><datetime dst='true'>20131210T153120,13+02</datetime></created>
+<modified><datetime>20171029T101618,92-03</datetime></modified>
+<revised><datetime>20170904T113522,21-03</datetime></revised>
+<lastaccessed><datetime>20171029T101608,89-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101608,89-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_TELETRA_SLP)|v_TELETRA_SLP</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+igACACwAEABURUxFVFJBX1NMUF9OYW1lBQAQAFRFTEVUUkFfU0xQX05hbWUDAAUALAAnAAMAEAAJ
+AAQAVEVMRVRSQV9TTFBfTmFtZSRDb25mbGljdCRSRUYABAAEAAAAIgAFAAQAZm9ybQEADQBtX1RF
+TEVUUkFfU0xQAAoCAwAHAAoABAAJTDFT
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABEgGYAAAADACQ0NA==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACABAACAAAAFZDAQADAAcAGgANAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAABAAAwAuAAAADQEB
+AAAKAAAAAAAAAAAAAgIAAAAkNDRURUxFVFJBGgACABgAAwAkNDQAAQAHAFRFTEVUUkEAAwABBQEA
+BwBURUxFVFJBVEVMRVRSQV9TTFBfTmFtZVNMUC4AAgAsABAAVEVMRVRSQV9TTFBfTmFtZQUAEABU
+RUxFVFJBX1NMUF9OYW1lAwAmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQEAAAAAAAAAAFdD
+AQEACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAA
+AAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAA
+AAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

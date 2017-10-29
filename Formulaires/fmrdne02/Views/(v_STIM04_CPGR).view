@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='169e' unid='C53ABDB308D83F4DC1257D2300362853' sequence='36'>
+<created><datetime dst='true'>20140728T115132,67+02</datetime></created>
+<modified><datetime>20171029T101620,44-03</datetime></modified>
+<revised><datetime>20170904T113524,01-03</datetime></revised>
+<lastaccessed><datetime>20171029T101609,89-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101609,89-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_STIM04_CPGR)|v_STIM04_CPGR</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+3AACACwADwBTVElNMDRfQ1BHUl9EaXIABQAPAFNUSU0wNF9DUEdSX0RpcgADAAIAMgACACQ5AgAG
+AAAAAAAAAAUAEABTVElNMDRfQ1BHUl9OYW1ltAIBAAIALCCFAgMABQAuACoABAAPAAIACQAEAFNU
+SU0wNF9DUEdSX0RpciQ5JENvbmZsaWN0JFJFRgQABAAAADgABQAEAGZvcm0BAA0AbV9TVElNMDRf
+Q1BHUgAKAgQABQAJACRDb25mbGljdABoAR4BHAIDAAcAEgAMAAlMMVMzUzRTNlM3Uw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+LgADAABEAGYAAAAPAABmAA8AAgAAZgARAAIAU1RJTTA0X0NQR1JfRGlyJDgkOQ==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAoACAAAAFZDAQAPACsALgAAAFcAAQAACoAgAAAAAAAAAAICAAAAVkMBAAIAAQASAAcACAAB
+AAAKgAAAAAAAAAAAAgIAAABWQwEAAgAsAEAAAABXAAEAAAqAAAAAAAAAAAACAgAAAFNUSU0wNF9D
+UEdSX0Rpcls8c2NyaXB0PlByaW50KGxfU1RJTTA0X0NQR1JfRGlyKTwvc2NyaXB0Pl0uAAIALAAP
+AFNUSU0wNF9DUEdSX0RpcgAFAA8AU1RJTTA0X0NQR1JfRGlyAAMAJDh8EgACABAAAgAkOAEAAQB8
+AAMAAQUBAAEAfCQ5WzxzY3JpcHQ+UHJpbnQobF9TVElNMDRfQ1BHUl9OYW1lKTwvc2NyaXB0Pl1A
+AAIAMgACACQ5AgAGAAAAAAAAAAUAEABTVElNMDRfQ1BHUl9OYW1ltAIBAAIALCCFAgMABwAMAAUA
+CTZTOVMAJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAEBAAAAAAAAAABXQwEBAAkAAAAAAAAA
+AAAAAAAAAAAAAQAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAEA
+AAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAP//AAAA
+AAAAAAAAAAAAAABCAAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAA
+AQAAAAAAAQAAAAAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

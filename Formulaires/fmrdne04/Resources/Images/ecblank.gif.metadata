@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048FC18" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="786" sequence="26" unid="64BC5C315316E1F6C1256BCF0038BEDC">
+<created><datetime dst="true">20020605T121948,76+02</datetime></created>
+<modified><datetime>20171029T101719,64-03</datetime></modified>
+<revised><datetime>20170904T113524,64-03</datetime></revised>
+<lastaccessed><datetime>20171029T101715,90-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101715,90-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>ecblank.gif</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$Comment" sign="true"><text>deprecated</text></item>
+<item name="$TITLE" sign="true"><textlist><text>ecblank.gif</text><text>ecblank.gif</text></textlist></item>
+<item name="$DesignerVersion"><text>8.5</text></item></note>

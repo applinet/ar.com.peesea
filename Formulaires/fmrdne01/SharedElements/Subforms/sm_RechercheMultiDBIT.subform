@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='7ce' unid='30FA85E77F4F7A28C125738B00509971' sequence='105'>
+<created><datetime dst='true'>20071106T164021,61+02</datetime></created>
+<modified><datetime>20171029T101459,83-03</datetime></modified>
+<revised><datetime>20170904T113508,30-03</datetime></revised>
+<lastaccessed><datetime>20171029T101456,06-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101456,06-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=CHRISTOPHE LAZZARO - E278731/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$TITLE'><text>sm_RechercheMultiDBIT</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQA4gIAAAAAAAAAAAAAAAAAAAAAAADc//QC+f/iAiBOAAAAAAAAAABsX1ZpZGVf
+bV9NZXNNb2RlbGVzVG1wID0gIk5lc3N1biBtb2RlbGxvIGVzaXN0ZW50ZSI7DWxfVmlkZV9tX01l
+c0Jyb3VpbGxvbnNUbXAgPSAiTmVzc3VuYSBib3p6YSBlc2lzdGVudGUiOw1sX1ZpZGVfbV9BVHJh
+aXRlclBhck1vaVRtcCA9ICJOZXNzdW4gZm9ybXVsYXJpbyBkYSB0cmF0dGFyZSI7DWxfVmlkZV9t
+X0FUcmFpdGVyUGFyTWVzR3JvdXBlc1RtcCA9ICJJIGdydXBwaSBkaSBjdWkgZmF0ZSBwYXJ0ZSBu
+b24gaGFubm8gZm9ybXVsYXJpIGRhIHRyYXR0YXJlIjsNbF9WaWRlX21fRW1pc1Bhck1vaVRtcCA9
+ICJOZXNzdW4gZm9ybXVsYXJpbyBpbnZpYXRvIGluIGNvcnNvIGRpIHZhbGlkYXppb25lIjsNbF9W
+aWRlX21fVHJhaXRlc1Bhck1lc0dyb3VwZXNUbXAgPSAiTmVzc3VuIGZvcm11bGFyaW8gZGEgdHJh
+dHRhcmUgcGVyIGdydXBwaSBkaSBjdWkgZmF0ZSBwYXJ0ZSI7DWxfVmlkZV9tX1RyYWl0ZXNQYXJN
+b2lUbXAgPSAiTmVzc3VuIGZvcm11bGFyaW8gdHJhdHRhdG8iOw1sX1ZpZGVfbV9BVHJhaXRlclBh
+clBPQVRtcCA9ICJOZXNzdW4gZm9ybXVsYXJpbyBkYSB0cmF0dGFyZSI7DWxfVmlkZV9tX0FUcmFp
+dGVyUGFyUE9BREFJVG1wID0gIk5lc3N1biBmb3JtdWxhcmlvIGRhIHRyYXR0YXJlIjsNbF9WaWRl
+X21fRW52b2llc1RtcCA9ICJOb24gYXZldGUgcmljZXZ1dG8gZG9jdW1lbnRpIjsNbF9WaWRlX21f
+QVRyYWl0ZXJUbXAgPSAiTmVzc3VuIGZvcm11bGFyaW8gZGEgdHJhdHRhcmUiOwBf/xAAAgAPAAcA
+AAAAAAAA
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_RechercheMultiDBFR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAo=
+</rawitemdata></item></note>
+

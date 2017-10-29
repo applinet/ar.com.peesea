@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C80048DE00" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1616" sequence="32" unid="36786705A4584DC9C1257D0000239BB7">
+<created><datetime dst="true">20140623T082856,23+02</datetime></created>
+<modified><datetime>20171029T101619,82-03</datetime></modified>
+<revised><datetime>20170904T113529,93-03</datetime></revised>
+<lastaccessed><datetime>20171029T101609,48-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101609,48-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$TITLE" sign="true"><text>MOBILE_StockEquipments_v1.14_cacheable.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$POID"><datetime>20170904T113529,93-03</datetime></item></note>

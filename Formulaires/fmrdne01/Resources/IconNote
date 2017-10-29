@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.0' replicaid='032581C80048C55E'>
+<noteinfo noteid='116' unid='403144E6B8CB175AC1256B530034E2F5' sequence='383'>
+<created><datetime dst='true'>20020201T113739,73+02</datetime></created>
+<modified><datetime>20171029T101503,75-03</datetime></modified>
+<revised><datetime>20171029T101503,74-03</datetime></revised>
+<lastaccessed><datetime>20171029T101458,37-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101451,31-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=JEAN MARC FULCRAN - E229430/OU=users/O=PSA</name><name
+>CN=CHRISTOPHE LAZZARO - E278731/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=PIERRE BOUYSSY - U222599/OU=users/O=PSA</name><name>CN=ALEJANDRO MARIANO REYNAL OCONNOR - E355134/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=CLAUDIA SOLDANO - E355133/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=PIERRE BOUYSSY - U222599/OU=users/O=PSA</name><name
+>CN=ALEJANDRO MARIANO REYNAL OCONNOR - E355134/OU=users/O=PSA</name><name
+>CN=CLAUDIA SOLDANO - E355133/OU=users/O=PSA</name><name>CN=GUILLERMO PIRPIGNANI - E357111/OU=users/O=PSA</name><name
+>CN=CLAUDIA SOLDANO - E355133/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=GUILLERMO PIRPIGNANI - E357111/OU=users/O=PSA</name><name>CN=RUBEN DARIO GARCIA - E443968/OU=users/O=PSA</name><name
+>CN=GUILLERMO PIRPIGNANI - E357111/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=GUILLERMO PIRPIGNANI - E357111/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=GUILLERMO PIRPIGNANI - E357111/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=MARCELO GUSTAVO HUERTA - E500756/OU=users/O=PSA</name></updatedby>
+<item name='$TemplateModTime'><datetime>20100216T102406,54-03</datetime></item>
+<item name='$TemplateServerName'><text>CN=AdminSignFMR/OU=Programs/O=PSA</text></item>
+<item name='$TemplateFileName'><text>c:\User\E355133\Lotus\Notes\Data\Templates\FMR\fmrdne01.ntf</text></item>
+<item name='IconBitmap' summary='true'>
+<rawitemdata type='6'>
+AiAgAQAA///wAP//+AD///wA////+OAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAATgAAAG4AAA
+B+AAAAfgAAAH8AAAD/AAAA/wAAAP+AAAH/wAAD98AAA/PAAAPxwAAD8cAAA/HAAAPxwAAD8cAAA/
+HAAAPxwAAD8AP///AB///wAP//8AAAAAAAAAAAAAREREREREAAAAAAAAAAAAAARERERERAAAAAAA
+AAAAAAAAREREREQAAAAAAAAAAAAAAAAAAAqqAAAAAAAAAAAAAAAAAAAKqgAA9mZmZmZmZmZmZmZu
+CqoAAMIiIiIiIiIiIiIiJgqqAADAIiIiIAAAACIiIiYKqgAAwCIiIAAAAAACIiImCqoAAMAiIgDu
+7u7uACIiJgqqAADAIiIO/////+ACIiYAqgAAwAAADv/////wACImAAoAAB///+7u/////v/xEQAA
+AADwAmbu7u7u7u5mIA8AAAAA8gAmZmZmZmZmYiAmAAAAAAIAAAAAAAAAAAAAYAAAAAAOAAAAAAAA
+AAAAAGAAAAAADwERERERERERERDgAAAAAAABEREREREREREQAAAAAAAABPERTxFPTxFPEAAAAKAA
+AAT/8U8RT08U8RAAAACqAAABRE8U9PT0RPEQAAAAqqAAAU8RFPT09PFPEAAAAKqgAAEU//FPT09P
+FPAAAACqoAABFERPTxRPRETwAAAAqqAAAREREREREREREAAAAKqgAAERERERERERERAAAACqoAAB
+EREREREREREQAAAAqqAAAAAAAAAAAAAAAAAAAEREREREAAAAAAAAAAAAAABEREREREAAAAAAAAAA
+AAAAREREREREAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$DefaultWebLaunchPage'><text>pindisponibilite</text></item>
+<item name='$Flags'><text>JzRfS</text></item>
+<item name='$FlagsNoRefresh'><text/></item>
+<item name='$DefaultWebFrameset'><text>fm_Web</text></item>
+<item name='$Daos'><text>0</text></item>
+<item name='$TITLE'><text>Modèle FMRDNE01 05/12/2016
+#1fmrdne01
+#2fmrdne01_loc</text></item></note>
+

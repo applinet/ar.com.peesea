@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='17ba' unid='DF04CC65615A9195C1257D7E00550BDD' sequence='94'>
+<created><datetime dst='true'>20141027T172855,97+02</datetime></created>
+<modified><datetime>20171029T101621,70-03</datetime></modified>
+<revised><datetime>20170904T113525,65-03</datetime></revised>
+<lastaccessed><datetime>20171029T101610,71-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101610,71-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatText' summary='false' sign='true'><number>0</number></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='$Fields'><textlist><text>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text
+>f_AuteursAdmin</text><text>f_Etat</text><text>f_Lng</text></textlist></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQA1gMAAAAAAAAAAAAAAAAAAAAAAADc/+gD+f/WAyBOAAAAAAAAAAAvLyAqICog
+KiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICoNLy8gU2l0ZXMgU0lHRU8NbF9UYWJs
+ZVNpdGVzU0lHRU89J1NpdGVzIFNJR0VPJzsNbF9UaXRyZVNpdGVzID0gIlNpdGVzIFNJR0VPIjsN
+DWxfU2l0ZUNvZGU9IkNvZGUiOw1sX1NpdGVTaWdsZT0iU2lnbGUiOw1sX1NpdGVMaWJlbGxlQ291
+cnQ9IkxpYmVsbIIgY291cnQiOw1sX1NpdGVMaWJlbGxlTG9uZyA9ICJMaWJlbGyCIGxvbmciOw1s
+X1NpdGVSZWdpb24gPSAiUoJnaW9uIjsNbF9TaXRlUGF5cz0iUGF5cyI7DQ1sX0VyclNpdGVDb2Rl
+ID0gIkNvZGUgZHUgc2l0ZSBvYmxpZ2F0b2lyZS4iOw1sX0VyclNpdGVTaWdsZSA9ICJTaWdsZSBk
+dSBzaXRlIG9ibGlnYXRvaXJlLiI7DWxfRXJyU2l0ZUxpYmVsbGVDb3VydCA9ICJMaWJlbGyCIGNv
+dXJ0IGR1IHNpdGUgb2JsaWdhdG9pcmUuIjsNbF9FcnJTaXRlTGliZWxsZUxvbmcgPSAiTGliZWxs
+giBsb25nIGR1IHNpdGUgb2JsaWdhdG9pcmUuIjsNbF9FcnJTaXRlUmVnaW9uID0gIlKCZ2lvbiBk
+dSBzaXRlIG9ibGlnYXRvaXJlLiI7DWxfRXJyU2l0ZVBheXMgPSAiUGF5cyBkdSBzaXRlIG9ibGln
+YXRvaXJlLiI7DWxfRXJyU2l0ZURlamFQcmVzZW50ID0gIkxlIGNvZGUgZHUgc2l0ZSBlc3QgZIJq
+hSBwcoJzZW50IGRhbnMgbGEgdGFibGUuIjsNDS8vICogKiAqICogKiAqICogKiAqICogKiAqICog
+KiAqICogKiAqICogKg0vLyBTaXRlcyBSRUZMRVgNdmFyIGxfU2l0ZV9UcmFuc2NvZGlmUmVmbGV4
+X1ZpZXdfVGl0bGUgPSAiVHJhbnNjb2RpZmljYXRpb25zIFJFRkxFWCI7DXZhciBsX1NpdGVfVHJh
+bnNjb2RpZlJlZmxleF9Eb2NfVGl0bGUgPSAiVHJhbnNjb2RpZmljYXRpb24gUkVGTEVYIjsNdmFy
+IGxfU2l0ZV9UcmFuc2NvZGlmUmVmbGV4XzNDaGFycyA9ICJTaWdsZSBhbm51YWlyZSAoMyBjYXJh
+Y3SKcmVzKSI7DXZhciBsX1NpdGVfVHJhbnNjb2RpZlJlZmxleF9SRUZMRVggPSAiU2l0ZSBSRUZM
+RVgiOw0AX/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>sm_Sites_Trads_FR</text><text>sm_Sites_Trads_FR</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$Script_O' sign='true'>
+<rawitemdata type='14'>
+AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AP////8A
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAEABABMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
+AAAAAABXMzJJNAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAwCMAAAAAABUAAgAKgA1ADYAMQBDADMAQQAwAAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
+RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
+AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAAAIfdZ1BAAHAAAAAAAdAAAC
+AAAACgAAAA==
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_ToutFormToutEtatFR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEA3QYAAIX/hf8XAAEAAghzbV9T
+aXRlc19MbmdfRlIA0ggBAP8AAADeBgAAhf8=
+</rawitemdata></item></note>
+

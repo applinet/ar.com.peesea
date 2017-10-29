@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='7da' unid='F8DB7B0C13E4CB5CC125738B00509E4D' sequence='105'>
+<created><datetime dst='true'>20071106T164034,05+02</datetime></created>
+<modified><datetime>20171029T101459,89-03</datetime></modified>
+<revised><datetime>20170904T113508,36-03</datetime></revised>
+<lastaccessed><datetime>20171029T101456,09-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101456,09-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatText' summary='false' sign='true'><number>0</number></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$Script_O' sign='true'>
+<rawitemdata type='14'>
+AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AP////8A
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAEABABMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
+AAAAAABXMzJJNAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAwCMAAAAAABUAAgAKgA1ADYAMQBDADMAQQAwAAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
+RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
+AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAAAIfdZ1BAAHAAAAAAAdAAAC
+AAAACgAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_ToutFormToutEtatNL</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAdgEAAAAAAAAAAAAAAAAAAAAAAADc/4gB+f92ASBOAAAAAAAAAABsX1NhdXZl
+ciA9ICJCZXdhcmVuIjsNbF9RdWl0dGVyID0gIlZlcmxhdGVuIjsNbF9TdXBwcmltZXIgPSAiVmVy
+d2lqZGVyZW4iOw1sX01vZGlmaWVyID0gIldpanppZ2VuIjsNbF9Db250aW51ZXIgPSAiVmVyZGVy
+IGdhYW4iOw1sX0VucmVnaXN0cmVyID0gIlJlZ2lzdHJlcmVuIjsNbF9Tb3VtZXR0cmUgPSAiQWFu
+YmllZGVuIjsNbF9FeGVjdXRlciA9ICJVaXR2b2VyZW4iOw1sX05vdXZlYXUgPSAiTmlldXciOw1s
+X1BnUHJlYyA9ICJWb3JpZ2UgYmxhZHppamRlIjsNbF9QZ1N1aXYgPSAiVm9sZ2VuZGUgYmxhZHpp
+amRlIjsNbF9Tb2NpZXRlID0gIkJlZHJpamYiOw1sX1JldG91ck1lbnVUYWJsZXMgPSAiVGVydWcg
+bmFhciBkZSBNZW51IFRhYmVsbGVuIjsAAF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_ToutFormToutEtatFR</text></item>
+<item name='$Fields'><textlist><text>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text
+>f_AuteursAdmin</text><text>f_Etat</text><text>f_Lng</text></textlist></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEA3QYAAIX/hf8dAAEAAghzbV9U
+b3V0Rm9ybVRvdXRFdGF0TkwA0ggBAP8AAADeBgAAhf8=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

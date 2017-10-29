@@ -1,0 +1,106 @@
+'++LotusScript Development Environment:2:5:(Options):0:66
+Option Public
+Option Declare
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub DoQS( sA() As String, bottom As Long, top As Long )
+Declare Sub DoInsertSort ( sA() As String, Byval bottom As Long, Byval top As Long )	
+Declare Public Function QuickSort(sArray As Variant) As Variant
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+
+
+'++LotusScript Development Environment:2:2:DoQS:1:8
+Sub DoQS( sA() As String, bottom As Long, top As Long )
+     ' Called by QuickSort
+     ' Uses Public variable sA  (array of string)
+	Dim length As Long
+	Dim i As Long
+	Dim j As Long
+	Dim Pivot As Long
+	Dim PivotValue As String
+	Dim t As String
+	Dim LastSmall As Long
+	length = top - bottom + 1
+	
+     ' Only do the QuickSort if the sublist is at least 10 items long
+	If length > 10 Then
+          ' Pivot is chosen approx. halfway through sublist.
+          ' This gives us best speed if list is almost sorted already, and is no worse than any
+          ' other choice if the list is in random order.
+		Pivot = bottom + (length \ 2)   
+		
+          ' Move PivotValue out of the way
+		PivotValue = sA( Pivot )
+		sA ( Pivot ) = sA ( bottom )
+		sA ( bottom ) = PivotValue
+		
+          ' LastSmall is the location of the last value smaller than PivotValue
+		LastSmall = bottom
+		For i = bottom + 1 To top 
+			If sA ( i ) < PivotValue Then 
+				LastSmall = LastSmall + 1
+				t = sA ( i )
+				sA ( i ) = sA ( LastSmall )
+				sA ( LastSmall ) = t
+			End If
+		Next
+		
+          ' Move the PivotValue back
+		t = sA ( LastSmall )
+		sA ( LastSmall ) = sA ( bottom )
+		sA ( bottom ) = t
+		Pivot = LastSmall
+		
+          ' Now sort each side
+		Call DoQS ( sA, bottom, Pivot - 1 )
+		Call DoQS ( sA, Pivot + 1, top )
+	End If
+	
+End Sub
+'++LotusScript Development Environment:2:2:DoInsertSort:1:8
+Sub DoInsertSort ( sA() As String, Byval bottom As Long, Byval top As Long )	
+	Dim i As Long
+	Dim x As Long
+	Dim v As String
+	Dim Found As Integer
+	For i = bottom+1 To top
+		x = i
+		v = sA (i )
+		Do While (sA(x-1) > v)
+			sA ( x ) = sA ( x-1 )
+			x = x - 1
+			If x=0 Then
+				Exit Do
+			End If
+		Loop
+		sA (x) = v
+	Next
+End Sub
+'++LotusScript Development Environment:2:1:QuickSort:1:8
+Public Function QuickSort(sArray As Variant) As Variant
+	Dim sA() As String    
+	Dim j As Long
+	Dim bottom As Long
+	Dim top As Long
+	Dim vA As Variant
+	
+	bottom = Lbound ( sArray )
+	top = Ubound ( sArray )
+	Redim sA( bottom To top ) As String     
+	For j = bottom To top
+		sA ( j ) = sArray ( j )
+	Next
+     ' DoQS does a QuickSort if the Sublist is longer than 10 elements
+     ' Thus, when DoQS finishes, all elements are within 10 spots of their correct location.
+     ' For lists that are close to being in order, an Insertion Sort is much faster than a QuickSort, so we
+     ' run through the whole thing once doing an Insertion Sort to finish tidying up the order.
+	Call DoQS( sA, bottom, top )
+	Call DoInsertSort ( sA, bottom, top )
+	Redim vA(bottom To top) As Variant
+	For j = bottom To top
+		vA ( j ) = sA ( j )
+	Next	
+	QuickSort = vA
+End Function

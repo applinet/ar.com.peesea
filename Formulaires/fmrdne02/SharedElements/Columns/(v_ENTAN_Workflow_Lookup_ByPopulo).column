@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='fc2' unid='CF1AD00D604EF19EC125767A004C613D' sequence='84'>
+<created><datetime dst='true'>20091126T155416,29+02</datetime></created>
+<modified><datetime>20171029T101612,72-03</datetime></modified>
+<revised><datetime>20170904T113515,85-03</datetime></revised>
+<lastaccessed><datetime>20171029T101604,84-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101604,84-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormatNote' summary='true'>
+<rawitemdata type='4'>
+AQB109BQpJSIhyVhJgD6dSXB
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><text>(v_ENTAN_Workflow_Lookup_ByPopulo)</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+KAAFABoAFQACAAkABAAkQ29uZmxpY3QkUkVGAAQABAAAAAgAZgADAA==
+</formula></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+BgAAAABE
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAEACAAAAFZDAAACAAAA5gDIAHAAAQAACgAAAAAAAAAAAAICAAAAJDDmAAIA2AACACQwAQBf
+AFs8YSBocmVmPSIiPjxpbWcgc3JjPSJhZXN0aGV0aWNhX2VkaXRfMjQuZ2lmP09wZW5JbWFnZVJl
+c291cmNlIiBjbGFzcz0iQnV0dG9uIEJ1dHRvbkVkaXQiPjwvYT5dAAEAYwBbPGEgaHJlZj0iIj48
+aW1nIHNyYz0iYWVzdGhldGljYV9yZW1vdmVfMjQuZ2lmP09wZW5JbWFnZVJlc291cmNlIiBjbGFz
+cz0iQnV0dG9uIEJ1dHRvblJlbW92ZSI+PC9hPl0AIgIDAAcADAAFAAkxUzJSAAEFAQDCAFs8YSBo
+cmVmPSIiPjxpbWcgc3JjPSJhZXN0aGV0aWNhX2VkaXRfMjQuZ2lmP09wZW5JbWFnZVJlc291cmNl
+IiBjbGFzcz0iQnV0dG9uIEJ1dHRvbkVkaXQiPjwvYT5dWzxhIGhyZWY9IiI+PGltZyBzcmM9ImFl
+c3RoZXRpY2FfcmVtb3ZlXzI0LmdpZj9PcGVuSW1hZ2VSZXNvdXJjZSIgY2xhc3M9IkJ1dHRvbiBC
+dXR0b25SZW1vdmUiPjwvYT5dJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAEAAAAAAAAAAABX
+QwEBAAkAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAQAAAAAQD///8A
+BQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAA
+AAAAAQA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$ViewInheritedFrom'><text>Forms_StdActions</text></item>
+<item name='$Flags'><text>^Y</text></item></note>
+

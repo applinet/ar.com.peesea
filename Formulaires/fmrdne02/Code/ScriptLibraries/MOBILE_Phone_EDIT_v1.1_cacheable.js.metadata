@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C80048DE00" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1552" sequence="34" unid="3EC70D242715C75EC1257C6D0055F18E">
+<created><datetime dst="true">20140127T173843,98+02</datetime></created>
+<modified><datetime>20171029T101618,98-03</datetime></modified>
+<revised><datetime>20170904T113522,69-03</datetime></revised>
+<lastaccessed><datetime>20171029T101608,92-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101608,92-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=ELDA RENE DAMIANI - E480215/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$TITLE" sign="true"><text>MOBILE_Phone_EDIT_v1.1_cacheable.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$POID"><datetime>20170904T113522,69-03</datetime></item></note>

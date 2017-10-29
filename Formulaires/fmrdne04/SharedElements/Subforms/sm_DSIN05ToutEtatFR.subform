@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048FC18'>
+<noteinfo noteid='72a' unid='1C91EEEA2ABFE52FC1256BC3005418ED' sequence='44'>
+<created><datetime dst='true'>20020524T171834,05+02</datetime></created>
+<modified><datetime>20171029T101719,18-03</datetime></modified>
+<revised><datetime>20170904T113524,22-03</datetime></revised>
+<lastaccessed><datetime>20171029T101715,62-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101715,62-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQACAcAAAAAAAAAAAAAAAAAAAAAAADc/xoH+f8IByBOAAAAAAAAAABsX0V0YXQx
+TGliU2VjdGlvbiA9ICdEZW1hbmRlJzsNbF9FdGF0U3VpdkFjdGV1ckluZGl2aWR1ID0gJ0Rlc3Rp
+bmF0YWlyZSAoQU1TKSc7DWxfRXJyQUV0YXRTdWl2QWN0ZXVySW5kaXZpZHUgPSAnTWVtb0lEIGR1
+IERlc3RpbmF0YWlyZSAoQU1TKSxvYmxpZ2F0b2lyZSc7DWxfRXJyQkV0YXRTdWl2QWN0ZXVySW5k
+aXZpZHUgPSAnUmVuc2VpZ25lciB1biBzZXVsIERlc3RpbmF0YWlyZSc7DWxfRXJyQ0V0YXRTdWl2
+QWN0ZXVySW5kaXZpZHU9J1ZvdXMgbmUgcG91dmV6IHBhcyCIdHJlIGxlIGRlc3RpbmF0YWlyZSBk
+ZSB2b3RyZSBkZW1hbmRlJzsNbF9FdGF0U3VpdkFjdGV1ckdyb3VwZSA9ICdFdGFwZSBzdWl2YW50
+ZSCFIHRyYWl0ZXIgcGFyIChncm91cGUpJzsNbF9BY2N1ZWlsRm9ybXVsYWlyZXMgPSAnUGFnZSBk
+XCdhY2N1ZWlsIGRlcyBmb3JtdWxhaXJlcyc7DWxfVkRJX01VRD0nTVVEIGRcJ29yaWdpbmUnOw1s
+X1ZESV9TeXN0ZW1lPSdTeXN0im1lJzsNbF9BaWRlVkRJX1N5c3RlbWU9J0NvZGUgU3lzdIptZSwg
+MiBwb3NpdGlvbnMnOw1sX1ZESV9Tb3VzU3lzdGVtZT0nU291cy1TeXN0im1lJzsNbF9BaWRlX1Nv
+dXNTeXN0ZW1lPSdDb2RlIFNvdXMtc3lzdIptZSwgMyBwb3NpdGlvbnMnOw1sX1ZESV9DQ0lEPSdD
+Q0lEJzsNbF9BaWRlVkRJX0NDSUQ9J0NvZGUgQ0NJRCwgOSAgcG9zaXRpb25zLic7DWxfVkRJX0RC
+RD0nREJEcyCFIHZhbGlkZXInOw1sX0FpZGVWRElfREJEPSdEQkRzICwgOCBjYXJhY3RlcmVzIG1h
+eGltdW4nOw1sX1ZESV9UeXBlQWNjZXM9J1R5cGUgZFwnYWNjinMnOw1sX1ZESV9JbXNDaWNzPSdJ
+TVMgb3UgQ0lDUyc7DWxfVkRJX0Jhc2VzTm91PSdCYXNlcyBOb3V2ZWxsZXMnOw1sX1ZESV9EYXRl
+T2JqZXRpZj0nRGF0ZSBzb3VoYWl0gmUnOw1sX0VyclZESV9TeXN0ZW1lPSdSZW5zZWlnbmVyIGxl
+IGNvZGUgU1lTVEVNRSBzdXIgMiBwb3NpdGlvbnMnOw1sX0VyclZESV9Tb3VzU3lzdGVtZT0nUmVu
+c2VpZ25lciBsZSBjb2RlIFNvdXMtU3lzdGVtZSBzdXIgMyBwb3NpdGlvbnMnOw1sX0VyclZESV9D
+Q0lEPSdSZW5zZWlnbmVyIGxlIGNvZGUgQ0NJRCBzdXIgOSBwb3NpdGlvbnMnOw1sX0VyclZESV9E
+QkQ9J1JlbnNlaWduZXIgbGUgREJEIIUgdmFsaWRlcic7DWxfRXJyVkRJX0RhdGVPYmpldGlmPSdE
+YXRlIHNvdWhhaXSCZSAgaW5jb3JyZWN0JzsNbF9FcnJWRElfRGF0ZU9iamV0aWYyPSdSZW5zZWln
+bmVyIHVuZSBkYXRlIHN1cGVyaWV1cmUgYSBsYSBkYXRlIGR1IGpvdXInOw1sX1ZESV9EYXRlYXBw
+cm9iPSdBIGxhIGRhdGUgZHUnOw1sX0RlbWFuZGVDaGFtcHMgPSAnRWyCbWVudHMgZGUgbGEgZGVt
+YW5kZSc7DWxfQWNjZXB0ZT0nVmFsaWSCZSc7DWxfUmVmdXNlPSdSZWZ1c4JlJzsNbF9FcnJFdGF0
+MUNvbW1lbnRhaXJlcz0nQ29tbWVudGFpcmVzLCBvYmxpZ2F0b2lyZSBzaSByZWZ1c4JlICc7DWxf
+RmFpcmVTdWl2cmU9J0ZhaXJlIFN1aXZyZSc7DWxfUmVlbmdhZ2VyPSdSZWVuZ2FnZXInOw1sX0F2
+aXM9J3ZvdHJlIGRlbWFuZGUgYSCCdIInOw1JX0VyckV0YXQxQXZpcz0nUmVuc2VpZ25lciBvcHRp
+b24gZGUgdmFsaWRhdGlvbic7DWxfQ29tbWVudGFpcmVzPSdDb21tZW50YWlyZXMnOw1sX1NlY3RF
+dGF0MT0nVmFsaWRhdGlvbiBuaXZlYXUgMSc7DWxfQ29uZkZhaXJlU3VpdnJlPSdFdGVzIHZvdXMg
+c3VyIGRlIHZvdWxvaXIgRmFpcmUgU3VpdnJlIGNlIGZvcm11bGFpcmUgPyc7DWxfQ29uZlJlZW5n
+YWdlcj0nRXRlcyB2b3VzIHN1ciBkZSB2b3Vsb2lyIFJlZW5nYWdlciBjZSBmb3JtdWxhaXJlID8n
+Ow1sX0xlPSdsZSc7DWxfUGFyPSdwYXInOwBf/xAAAgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_DSIN05ToutEtatFR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQEADhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEA3QYAAIX/hf8bAAEAAghzbV9E
+U0lOMDVUb3V0RXRhdEZSANIIAQD/AAAA3gYAAIX/
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_DSIN05ToutEtatFR</text><text
+>sm_DSIN05ToutEtatFR</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

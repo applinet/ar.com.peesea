@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='e2e' unid='FC3AE7D19775CE12C12575F400471BD9' sequence='99'>
+<created><datetime dst='true'>20090715T145641,85+02</datetime></created>
+<modified><datetime>20171029T101610,74-03</datetime></modified>
+<revised><datetime>20170904T113513,81-03</datetime></revised>
+<lastaccessed><datetime>20171029T101603,68-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101603,68-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_DMIPPI_Raison)|v_DMIPPI_Raison</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+XAAFACgAJAADAA0ACQAEAERNSVBQSV9SYWlzb24kQ29uZmxpY3QkUkVGBAAEAAAAJAAFAAQAZm9y
+bQEADwBtX0RNSVBQSV9SYWlzb24ACgIDAAcACgAEAAlMMVM=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+GgABAABEAGYAAAANAERNSVBQSV9SYWlzb24=
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABABAACAAAAFZDAQANACkAAAAAAFcAAQAACoAAAAAAAAAAAAICAAAARE1JUFBJX1JhaXNvbls8
+c2NyaXB0PlByaW50KGxfRE1JUFBJX1JhaXNvbik8L3NjcmlwdD5dJgABAAAAAQEACQEAAAoBAQ4K
+AAABAK0rAQABAAEAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAA
+AAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEA
+AAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

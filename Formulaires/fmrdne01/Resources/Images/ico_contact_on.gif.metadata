@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048C55E" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="31a" sequence="1" unid="D553CF206AEE1FE5C1256C1000346F92">
+<created><datetime dst="true">20020809T113244,34+02</datetime></created>
+<modified><datetime>20171029T101453,87-03</datetime></modified>
+<revised><datetime dst="true">20020809T113300,05+02</datetime></revised>
+<lastaccessed><datetime>20171029T101452,74-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101452,74-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MARCIA CEBALLOS ALVAREZ - E125506/OU=users/O=PSA</name></updatedby>
+<item name="$TITLE"><textlist><text>ico_contact_on.gif</text></textlist></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide"><number>1</number></item>
+<item name="$ImagesHigh"><number>1</number></item>
+<item name="$ImagesColorize"><number>0</number></item>
+
+<item name="$ImageNames"><textlist><text>ico_contact_on.gif</text></textlist></item>
+<item name="$DesignerVersion"><text>5</text></item></note>

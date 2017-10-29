@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='1c3a' unid='3F457F5D62379FC2C1257F3200579C1C' sequence='65'>
+<created><datetime dst='true'>20160106T175655,96+02</datetime></created>
+<modified><datetime>20171029T101626,70-03</datetime></modified>
+<revised><datetime>20170904T113529,79-03</datetime></revised>
+<lastaccessed><datetime>20171029T101614,06-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101614,06-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAPgEAAAAAAAAAAAAAAAAAAAAAAADc/1AB+f8+ASBOAAAAAAAAAAAvLyAqICog
+KiAqICogKiAqICogKiAqICogKiAqICogKiAqICogKiAqICoNLy8gTGliZWxsZXMgRHJvaXRzDQ1m
+bXJfVGl0cmVNZW51VGFibGVzRHJvaXRzID0gIkdlc3Rpb24gZGVzIERyb2l0cyBkJ2FjY4pzIjsN
+Zm1yX1RpdHJlRGVjbGFyYXRpb25Sb2xlcyA9ICJEgmNsYXJhdGlvbiBkZXMgcpNsZXMiOw1mbXJf
+VGl0cmVBZmZlY3RhdGlvblJvbGVzID0gIkFmZmVjdGF0aW9uIGRlcyByk2xlcyI7DQ1mbXJfUm9s
+ZU5hbWUgPSAiTm9tIjsNZm1yX1JvbGVEZXNjID0gIkRlc2NyaXB0aW9uIjsNDWZtcl9Sb2xlTWVt
+YmVycyA9ICJNZW1icmVzIGR1IHKTbGUiOwBf/xAAAgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_AccessRight_Trads_FR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEA3QYAAIX/hf8gAAEAAghzbV9B
+Y2Nlc3NSaWdodHNfVHJhZHNfRlLSCAEA/wAAAN4GAACF/w==
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_AccessRight_Trads_FR</text><text
+>sm_AccessRight_Trads_FR</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

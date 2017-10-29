@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.0' replicaid='032581C8004919E1'>
+<noteinfo noteid='11a' unid='127C089955790959C1256B570032891E' sequence='225'>
+<created><datetime dst='true'>20020205T111159,02+02</datetime></created>
+<modified><datetime>20171029T101852,73-03</datetime></modified>
+<revised><datetime>20171029T101852,72-03</datetime></revised>
+<lastaccessed><datetime>20171029T101841,14-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101827,67-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=JEAN MARC FULCRAN - E229430/OU=users/O=PSA</name><name
+>CN=MIKAEL ANDRE - E342358/OU=users/O=PSA</name><name>CN=STEPHANE PINTO - E318365/OU=users/O=PSA</name><name
+>CN=PIERRE BOUYSSY - U222599/OU=users/O=PSA</name><name>CN=ALEJANDRO MARIANO REYNAL OCONNOR - E355134/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=PIERRE BOUYSSY - U222599/OU=users/O=PSA</name><name
+>CN=ALEJANDRO MARIANO REYNAL OCONNOR - E355134/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=ALEJANDRO MARIANO REYNAL OCONNOR - E355134/OU=users/O=PSA</name><name
+>CN=CLAUDIA SOLDANO - E355133/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=GUILLERMO PIRPIGNANI - E357111/OU=users/O=PSA</name><name>CN=MARCELO GUSTAVO HUERTA - E500756/OU=users/O=PSA</name></updatedby>
+<item name='$FlagsNoRefresh'><text/></item>
+<item name='$DefaultFrameset'><text>fs_notes</text></item>
+<item name='$TemplateModTime'><datetime dst='true'>20160509T212259,27+02</datetime></item>
+<item name='$TemplateServerName'><text>CN=GUILLERMO PIRPIGNANI - E357111/OU=users/O=PSA</text></item>
+<item name='$TemplateFileName'><text>C:\User\E357111\Notes 8\data\Templates\FMR\fmrdne05.ntf</text></item>
+<item name='IconBitmap' summary='true'>
+<rawitemdata type='6'>
+AiAgAQAA///wAP//+AD//jwA//gf+P/wHPj/wAB4/wAAcPwAACDwAAAA4AAAAAAAAAQAAAAOAAAA
+D4AAAAfAAAAH4AAAB/AAAAPwAAAD+AAAAfwAAAF+AAAAPwAAAB8AAAEfgAADH8AADx/gAH8f9wH/
+H/8H/x//v/8AP///AB///wAP//8AAAAAAAAAAAAAREREREREAAAAAAAAAAAAAARERERERAAAAAAA
+AAAO7gAAREREREQAAAAAAAAO4A7gAAAAAAqqAAAAAAAA4AEO4ADuAAAKqgAAAAAA7gEREO7gDuAA
+CqoAAAAA7gAREREABg7gAACqAAAA7gAREREAZmZg7gAiCgAA7gAREREAZmZmYO4CIKoADgARERAA
+ZmZmZmYAIgqq7uARERAGZmZmZmZmAiDgqgABEREGZmZmZmZmYCIOAAoBERHuBmZmZu7uZgIg7gAA
+ABHuERBmbu5mZmAiBg7gAAABERHgZuZmbu4CIGYO4AAAABHuEQZm7uZmDwZmDuAAAAABER4GYmZm
+7gBmZmDuAAAAAR7hEGZu7mZmbiZg7gAAAAARERBmJmZm7uZmZg7gAAAAARERBmZmbmZm4mYO4KAA
+AAARERBmZmZu7mZmYO6qAAAAAR7gZmZm5mZmZmDuqqAAAAEREQZmZmZmIiZmAKqgAAAAEe4GZmZm
+ImZmAACqoAAAAAEREGZmImZgAAAAqqAAAAAAEABiImZgAAAAAKqgAAAAAAAABmZgAAAAAACqoAAA
+AAAAAAYAAAAAAAAAqqAAAAAAAAAAAAAAAAAAAEREREREAAAAAAAAAAAAAABEREREREAAAAAAAAAA
+AAAAREREREREAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Flags'><text>JzRFf</text></item>
+<item name='$Daos'><text>0</text></item>
+<item name='$TITLE'><text>Modèle FMRDNE05 29/04/2016
+#1fmrdne05
+#2fmrdne05_loc</text></item></note>
+

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='48e' unid='154D566ABB15A471C125725A0042605B' sequence='112'>
+<created><datetime dst='true'>20070105T140500,43+02</datetime></created>
+<modified><datetime>20171029T101455,69-03</datetime></modified>
+<revised><datetime>20170904T113505,32-03</datetime></revised>
+<lastaccessed><datetime>20171029T101453,78-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101453,78-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatText' summary='false' sign='true'><number>0</number></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$TITLE'><text>sm_ToutFormToutEtatEN</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQASgEAAAAAAAAAAAAAAAAAAAAAAADc/1wB+f9KASBOAAAAAAAAAABsX1NhdXZl
+ciA9ICJTYXZlIjsNbF9RdWl0dGVyID0gIkxlYXZlICI7DWxfU3VwcHJpbWVyID0gIkRlbGV0ZSI7
+DWxfTW9kaWZpZXIgPSAiTW9kaWZ5IjsNbF9Db250aW51ZXIgPSAiQ29udGludWUiOw1sX0VucmVn
+aXN0cmVyID0gIlJlY29yZCI7DWxfU291bWV0dHJlID0gIlN1Ym1pdCI7DWxfRXhlY3V0ZXIgPSAi
+RXhlY3V0ZSI7DWxfTm91dmVhdSA9ICJOZXciOw1sX1BnUHJlYyA9ICJQcmV2aW91cyBwYWdlIjsN
+bF9QZ1N1aXYgPSAiRm9sbG93aW5nIHBhZ2UiOw1sX1NvY2lldGUgPSAiQ29tcGFueSI7DWxfUmV0
+b3VyTWVudVRhYmxlcyA9ICJSZXR1cm4gTWVudSB0YWJsZXMiOwBf/xAAAgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_ToutFormToutEtatEN</text></item>
+<item name='$Fields'><textlist><text>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text
+>f_AuteursAdmin</text><text>f_Etat</text><text>f_Lng</text></textlist></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEA3QYAAIX/hf8dAAEAAghzbV9U
+b3V0Rm9ybVRvdXRFdGF0RU4A0ggBAP8AAADeBgAAhf8=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

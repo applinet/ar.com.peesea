@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='ece' unid='AB0FB93AA4FF07CAC125761C002BF1EE' sequence='103'>
+<created><datetime dst='true'>20090824T095959,82+02</datetime></created>
+<modified><datetime>20171029T101611,54-03</datetime></modified>
+<revised><datetime>20170904T113514,41-03</datetime></revised>
+<lastaccessed><datetime>20171029T101604,14-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101604,14-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ALEXANDRE AUGEN - U251305/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_ZONPRO_ValidDir)|v_ZONPRO_ValidDir</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+vAACAFIAAwAkMjYAAQAcAFs8c2NyaXB0PlByaW50KEZvcm1zX1NpdGVzWyIFAAsAWk9OUFJPX1Np
+dGUAIgIBAA0AIl0pPC9zY3JpcHQ+XQAiAgMABQA0AC8ABAADABMACQAEACQyNlpPTlBST19WYWxp
+ZERpcl9EaXIkQ29uZmxpY3QkUkVGAAQABAAAACYABQAEAGZvcm0BABEAbV9aT05QUk9fVmFsaWRE
+aXIACgIDAAcACgAEAAlMMVM=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+KgACAABEiGYHAAADAAhmAAMAEwAkMjZaT05QUk9fVmFsaWREaXJfRGly
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAA8ACAAAAFZDAwADACcAZAAAADEBBQEACAAhAAAIAAAAAAICAAAAVkMAAAAAAQASAAYACAAB
+AAAKggAAAAAAAAAAAgIAAABWQwEAEwAvAAAAAABXAAEAAAqAIQAAAAAAAAACAgAAACQyNls8c2Ny
+aXB0PlByaW50KGxfWk9OUFJPX1NpdGUpPC9zY3JpcHQ+XWQAAgBSAAMAJDI2AAEAHABbPHNjcmlw
+dD5QcmludChGb3Jtc19TaXRlc1siBQALAFpPTlBST19TaXRlACICAQANACJdKTwvc2NyaXB0Pl0A
+IgIDAAcAEAAJAAkxUzJTM1M0UwB8EgACABAAAwAkMjcAAQAAAAMAAQUBAAAAWk9OUFJPX1ZhbGlk
+RGlyX0Rpcls8c2NyaXB0PlByaW50KGxfWk9OUFJPX1ZhbGlkRGlyX0Rpcik8L3NjcmlwdD5dJgAB
+AAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAEBAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAA
+AQDEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8A
+AAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAA
+AABCAAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAA
+AAAAAQAAAAAAAAAIAAAAAAABAFhDAEyAAwAAAAAAAQICAgEBAQEHBAMAAAAAAAAAACAvLzpZQwAA
+CAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAALC4UIKwA
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Arial</text></textlist></item>
+<item name='$Comment' sign='true'><text>ZONPRO - Vue des valideurs de directions</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

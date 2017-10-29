@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='4ce' unid='0ECE25D3E7094446C125725E00376319' sequence='121'>
+<created><datetime dst='true'>20070109T120458,49+02</datetime></created>
+<modified><datetime>20171029T101456,01-03</datetime></modified>
+<revised><datetime>20170904T113505,68-03</datetime></revised>
+<lastaccessed><datetime>20171029T101453,96-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101453,96-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SYLVAIN DIDELOT - U330711/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$TITLE'><text>sm_InfoFlashEN</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQACgcAAAAAAAAAAAAAAAAAAAAAAADc/xwH+f8KByBOAAAAAAAAAABsX0lGbGFz
+aFRpdHJlID0gIk5ld3NGbGFzaCI7DWxfSUZUaXRyZSA9ICJOZXdzRmxhc2giOw1sX0lGRGF0ZSA9
+ICJEYXRhIjsNbF9JRkhvdXIgPSAiVGltZSI7DWxfSUZQdWJsaVN0YXJ0ID0gIlN0YXJ0IG9mIHB1
+YmxpY2F0aW9uIjsNbF9JRlB1YmxpRW5kID0gIkVuZCBvZiBwdWJsaWNhdGlvbiI7DWxfSUZEYXRl
+SG91ciA9ICJEYXRlIC0gVGltZSI7DWxfSUZUeXBlSW5mbyA9ICJUeXBlIG9mIG5ld3MiOw1sX0lG
+TG5nRGlzcG8gPSAiTGFuZ3VhZ2UiOw1sX0lGTG5nID0gIkxhbmd1YWdlIjsNbF9JRlByZXZpZXcg
+PSAiUHJldmlldyI7DWxfSUZUZXh0ZUZSID0gIlRleHQgaW4gRnJlbmNoIjsNbF9JRlRleHRlRU4g
+PSAiVGV4dCBpbiBFbmdsaXNoIjsNbF9JRlRleHRlRVMgPSAiVGV4dCBpbiBTcGFuaXNoIjsNbF9J
+RlRleHRlREUgPSAiVGV4dCBpbiBHZXJtYW4iOw1sX0lGVGV4dGVQVCA9ICJUZXh0IGluIFBvcnR1
+Z3Vlc2UiOw1sX0lGVGV4dGVOTCA9ICJUZXh0IGluIEdlcm1hbiI7DWxfSUZUZXh0ZUlUID0gIlRl
+eHQgaW4gSXRhbGlhbiI7DWxfSUZQdWJsaWNhdGlvbiA9ICJQdWJsaXNoaW5nIjsNbF9JRkxhYmVs
+UE9BID0gIlBlcnNvbnMgaW4gY2hhcmdlIjsNbF9JRkxhYmVsVXNlciA9ICJVc2VyIjsNbF9JRkxh
+YmVsQWxsSW5mbyA9ICJBbGwgaW5mbyI7DWxfSUZIZWxwMSA9ICJUZXh0IGlzIGludGVycHJldGVk
+IGFzIEhUTUwgY29kZS48YnI+SXQgY2FuIGNvbnRhaW4gSFRNTCBlbGVtZW50cywgQ1NTIGRlZmlu
+aXRpb25zIGFuZCBKYXZhU2NyaXB0IGNvZGUuPGJyPjxzcGFuIHN0eWxlPSdjb2xvcjogcmVkOyBm
+b250LXdlaWdodDogYm9sZDsnPlBsZWFzZSBiZSBzdXJlIG5vdCB0byBkbyBzeW50YXggZXJyb3Jz
+OyB0aGlzIGNvdWxkIGltcGFjdCBBTEwgdGhlIHVzZXJzIG9mIHRoZSBhcHBsaWNhdGlvbiBGb3Jt
+cyAhPC9zcGFuPiI7DWxfSUZQdWJsaXNoZWQgPSAiUHVibGlzaGVkIjsNbF9JRkhpZGRlbiA9ICJI
+aWRkZW4vQXJjaGl2ZWQiOw1sX0lGTm90WWV0UHVibGlzaGVkID0gIk5vdCBwdWJsaXNoZWQgeWV0
+IjsNbF9JRkRlbGV0ZWQgPSAiRmxhc2ggZGVsZXRlZCI7DWxfSUZDb25mU3VwcHIgPSAiQXJlIHlv
+dSBzdXJlIHlvdSB3YW50IHRvIGRlbGV0ZSB0aGlzIG5ld3NmbGFzaCA/IFxuVGhlcmUgaXMgbm8g
+d2F5IHRvIHVuZG8gdGhpcyBvcGVyYXRpb24iOw1sX0lGRXJyRW1wdHlGaWVsZCA9ICJQbGVhc2Ug
+Z2l2ZSBhIHZhbHVlIHRvIHRoZSBmaWVsZCAiOw1sX0lGRXJySW52YWxpZERhdGVTdGFydCA9ICJQ
+bGVhc2UgZW50ZXIgdGhlIHN0YXJ0IGRhdGUgb2YgcHVibGljYXRpb24gdXNpbmcgZm9ybWF0IERE
+L01NL1lZWVkgIjsNbF9JRkVyckludmFsaWRUaW1lU3RhcnQgPSAiUGxlYXNlIGVudGVyIHRoZSBz
+dGFydCB0aW1lIG9mIHB1YmxpY2F0aW9uIHVzaW5nIGZvcm1hdCBISDpNTSAiOw1sX0lGRXJySW52
+YWxpZERhdGVFbmQgPSAiUGxlYXNlIGVudGVyIHRoZSBlbmQgZGF0ZSBvZiBwdWJsaWNhdGlvbiB1
+c2luZyBmb3JtYXQgREQvTU0vWVlZWSAiOw1sX0lGRXJySW52YWxpZFRpbWVFbmQgPSAiUGxlYXNl
+IGVudGVyIHRoZSBlbmQgdGltZSBvZiBwdWJsaWNhdGlvbiB1c2luZyBmb3JtYXQgSEg6TU0gIjsN
+bF9JRkVyckludmFsaWRTdGFydEVuZCA9ICJFbmQgZGF0ZS90aW1lIHJhbmdlIG11c3QgYmUgZ3Jl
+YXRlciB0aGFuIHN0YXJ0IGRhdGUvdGltZSByYW5nIjsNbF9JRkVyclR5cGVNaXNzaW5nID0gIlBs
+ZWFzZSBzZWxlY3QgJ1BlcnNvbnMgaW4gY2hhcmdlJyBvciAnVXNlcnMnICI7DWxfSUZFcnJOb1Rl
+eHQgPSAiUGxlYXNlIGVudGVyIGEgdGV4dCI7AF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_InfoFlashEN</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAADDjAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAcAAACDBAEA3QYAAIX/hf8WAAEAAgpzbV9J
+bmZvRmxhc2hFTtIIAQD/AAAA3gYAAIX/
+</rawitemdata></item></note>
+

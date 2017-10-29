@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C80048A097" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="38e" sequence="21" unid="12397654EA9CBE7BC1257ACD002CF6DC">
+<created><datetime dst="true">20121207T101107,80+02</datetime></created>
+<modified><datetime>20171029T101320,21-03</datetime></modified>
+<revised><datetime>20150112T140933,01-03</datetime></revised>
+<lastaccessed><datetime>20171029T101319,06-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101319,06-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE" sign="true"><text>views_sk_v1.3_cacheable.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$Comment" sign="true"><text>deprecated</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$POID"><datetime>20150112T140933,01-03</datetime></item></note>

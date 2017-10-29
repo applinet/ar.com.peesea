@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048A097" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1ce" sequence="41" unid="9FBDCF3ED890AE29C1257833005AF185">
+<created><datetime dst="true">20110210T183320,69+02</datetime></created>
+<modified><datetime>20171029T101317,97-03</datetime></modified>
+<revised><datetime>20150112T140930,56-03</datetime></revised>
+<lastaccessed><datetime>20171029T101317,73-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101317,73-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>345CgQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+
+<item name="$FileModDT" sign="true"><datetime dst="true">20110210T183245,80+02</datetime></item>
+
+
+
+
+<item name="$FileNames" sign="true"><text>jquery-1.5.min.js</text></item>
+<item name="$TITLE" sign="true"><textlist><text>jquery-1.5.min_cacheable.js</text><text>jquery-1.5.min_cacheable.js</text></textlist></item>
+<item name="$Comment" sign="true"><text>deprecated</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item></note>

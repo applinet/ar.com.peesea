@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='4de' unid='0155B624310FD86EC1257265004C415B' sequence='104'>
+<created><datetime dst='true'>20070116T155254,67+02</datetime></created>
+<modified><datetime>20171029T101456,09-03</datetime></modified>
+<revised><datetime>20170904T113505,76-03</datetime></revised>
+<lastaccessed><datetime>20171029T101453,99-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101453,99-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$TITLE' sign='true'><text>fm_InfoFlashPopup|fm_InfoFlashPopup</text></item>
+<item name='$Comment' sign='true'><text>Agencement pour la popup InfoFlash</text></item>
+<item name='$FrameSet' sign='true'>
+<rawitemdata type='1'>
+7/8YAAIAAwAAAAAAAAAAAAAAAAAAAAAA8P8+AA0AAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAUAAAAA
+AAIAAQAAAAAABQAAAAAAAAABACMAAgBQAAMAAQDx/0QAEQAAAABAAAECAAEAAQAAAAAAEAAAAAAA
+AQAAAAAAAABJRlBvcHVwRnJhbWVUYWJzAQD///8AAQAACgEAAAAAAPb/NgAAAAAAAwADABQAAAAA
+AAAAAAAAAAAAAAAAAAAAAABtX0luZm9GbGFzaFBvcHVwVGFic3r/KgAQAAAAAAAAAAAAAAAAAAAA
+AAAAAAAASUZQb3B1cEZyYW1lVGFic/H/RwAXAAAAAEAAAQMAAAAAAAAAAAATAAAAAAABAAAAAAAA
+AElGUG9wdXBGcmFtZUNvbnRlbnQBAP///wABAAAKAQAAAAAAP/b/OQAAAAAAAwADABcAAAAAAAAA
+AAAAAAAAAAAAAAAAAABtX0luZm9GbGFzaFBvcHVwQ29udGVudD96/y4AEwAAAAAAAAAAAAAAAAAA
+AAAAAAAAAElGUG9wdXBGcmFtZUNvbnRlbnQA
+</rawitemdata></item>
+<item name='$Flags'><text>#34CQ</text></item>
+<item name='$DesignerVersion'><text>6</text></item></note>
+

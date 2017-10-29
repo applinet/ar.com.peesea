@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='492' unid='7CC3F0D03AECB0B2C125725A004267C3' sequence='111'>
+<created><datetime dst='true'>20070105T140519,39+02</datetime></created>
+<modified><datetime>20171029T101455,71-03</datetime></modified>
+<revised><datetime>20170904T113505,34-03</datetime></revised>
+<lastaccessed><datetime>20171029T101453,79-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101453,79-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatText' summary='false' sign='true'><number>0</number></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='$Fields'><textlist><text>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text
+>f_AuteursAdmin</text><text>f_Etat</text><text>f_Lng</text></textlist></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAWQEAAAAAAAAAAAAAAAAAAAAAAADc/2wB+f9aASBOAAAAAAAAAABsX1NhdXZl
+ciA9ICJTYWx2YXIiOw1sX1F1aXR0ZXIgPSAiRGVqYXIiOw1sX1N1cHByaW1lciA9ICJCb3JyYXIi
+Ow1sX01vZGlmaWVyID0gIk1vZGlmaWNhciI7DWxfQ29udGludWVyID0gIlNlZ3VpciI7DWxfRW5y
+ZWdpc3RyZXIgPSAiUmVnaXN0cmFyIjsNbF9Tb3VtZXR0cmUgPSAiU29tZXRlciI7DWxfRXhlY3V0
+ZXIgPSAiRWplY3V0YXIiOw1sX05vdXZlYXUgPSAiTnVldm8iOw1sX1BnUHJlYyA9ICJQoGdpbmEg
+YW50ZXJpb3IiOw1sX1BnU3VpdiA9ICJTaWd1aWVudGUgcKBnaW5hIjsNbF9Tb2NpZXRlID0gIlNv
+Y2llZGFkIjsNbF9SZXRvdXJNZW51VGFibGVzID0gIlZ1ZWx0YSBNZW51ZGEgVGFibGEiOwA7X/8Q
+AAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_ToutFormToutEtatES</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_ToutFormToutEtatES</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEA3QYAAIX/hf8dAAEAAghzbV9U
+b3V0Rm9ybVRvdXRFdGF0RVMA0ggBAP8AAADeBgAAhf8=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

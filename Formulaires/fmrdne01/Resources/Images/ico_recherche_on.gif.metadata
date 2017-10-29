@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048C55E" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="36a" sequence="1" unid="B4940953245D2136C1256C13003A5995">
+<created><datetime dst="true">20020812T123720,21+02</datetime></created>
+<modified><datetime>20171029T101454,27-03</datetime></modified>
+<revised><datetime dst="true">20020812T123816,84+02</datetime></revised>
+<lastaccessed><datetime>20171029T101452,96-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101452,96-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name></updatedby>
+<item name="$TITLE"><textlist><text>ico_recherche_on.gif</text></textlist></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide"><number>1</number></item>
+<item name="$ImagesHigh"><number>1</number></item>
+<item name="$ImagesColorize"><number>0</number></item>
+
+<item name="$ImageNames"><textlist><text>ico_recherche_on.gif</text></textlist></item>
+<item name="$DesignerVersion"><text>5</text></item></note>

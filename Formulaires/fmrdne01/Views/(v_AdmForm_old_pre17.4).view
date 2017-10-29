@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='af6' unid='4E1B89C176A643BCC12580DF006729DE' sequence='6'>
+<created><datetime dst='true'>20170310T204649,26+02</datetime></created>
+<modified><datetime>20171029T101503,67-03</datetime></modified>
+<revised><datetime>20170904T113511,72-03</datetime></revised>
+<lastaccessed><datetime>20171029T101458,34-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101458,34-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MARCELO GUSTAVO HUERTA - E500756/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+RAECACQACwBmX0Zvcm1BbGlhcwAFAAsAZl9Gb3JtQWxpYXMAAwABAC4AEABfbm9tYnJlAONmTgCe
+ciUABQAKAGZfRm9ybU5vbXMBAAIAQECFAgMAAQA+ABAAX25vbWJyZQDjZk4AnnIlAAUAEABfbm9t
+YnJlAONmTgCeciUAAQACAEBAAAAAAAAAAADwP20DAwACACgAAwAkMTEABQAQAF9ub21icmUA42ZO
+AJ5yJQABAAEAOgBgAgMAAgAQAAIAJDmkAEsBVgEDAAUAMAArAAUACwADAAIACQAEAGZfRm9ybUFs
+aWFzJDExJDkkQ29uZmxpY3QkUkVGAAQABAAAADQABQAEAGZvcm0BAAoAbV9EZXNjRm9ybQoCBAAF
+AAkAJENvbmZsaWN0AGgBHgEcAgMABwASAAwACUwxUzNTNFM2UzdT
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+GAABAABEAGYAAAALAGZfRm9ybUFsaWFz
+</rawitemdata></item>
+<item name='$Collation1' summary='true'>
+<rawitemdata type='2'>
+EAABAABEgGYAAAADACQxMQ==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAFAAwACUAAAFZDAQALAAQAJgAAAG8ABQAACQAgAAAIAAAAAAICAAAAVkMAAAIAAAASAAcADQAG
+AAAJAAAAAAAAAAAAAgIAAABWQwABAwAKALYAAAD/AAcAAAkAAAAAAAAAAAACAgAAAFZDAAACAAAA
+EgAHAA0ACAAACQAAAAAAAAAAAAICAAAAVkMAAAIACgAeAAAAiQAJAAAJAAAAAAAAAAAAAgIAAABm
+X0Zvcm1BbGlhc0NvZGUmAAIAJAALAGZfRm9ybUFsaWFzAAUACwBmX0Zvcm1BbGlhcwADACQ4EgAC
+ABAAAgAkOAEAAQB8AAMAAQUBAAEAfCQxMUZvcm11bGFpcmW2AAEALgAQAF9ub21icmUA42ZOAJ5y
+JQAFAAoAZl9Gb3JtTm9tcwEAAgBAQIUCAwAHAAwABQAJMFMwRQABAD4AEABfbm9tYnJlAONmTgCe
+ciUABQAQAF9ub21icmUA42ZOAJ5yJQABAAIAQEAAAAAAAAAAAPA/bQMDAAcACgADAAkwUgACACgA
+AwAkMTEABQAQAF9ub21icmUA42ZOAJ5yJQABAAEAOgBgAgMABwAKAAMACTBSACQ4EgACABAAAgAk
+OAEAAQB8AAMAAQUBAAEAfCQ5RGF0ZSBtb2RpZh4AAgAQAAIAJDmkAEsBVgEDAAcADAAFAAkwUzBF
+ACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQABAQAAAAAAAAAAV0MKAQAKAAAAAAAAAAAAAAAA
+AAAAAAEAwAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDCwEACgAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA
+AP//AAAAAAAAAAAAAAAAAABXQwwBAAoAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAA
+AAAAAAAAV0MNAQAKAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDDgEA
+CgAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wAFAP//
+/wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQCAgIAAAQAAAAAAAAAIAAAAAAAB
+AFhDAEyAAwAAAAAAAQICAgEBAQEHBAMAAAAAAAAAACAvLzpZQwAACAAAAAEAAAABAAAAAAAAAAAA
+AAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAALC4UIKwA
+</rawitemdata></item>
+<item name='$Fonts'><textlist><text>5</text><text>38</text><text>Tahoma</text><text
+>6</text><text>38</text><text>Tahoma</text><text>7</text><text>38</text><text
+>Tahoma</text><text>8</text><text>38</text><text>Tahoma</text><text>9</text><text
+>38</text><text>Tahoma</text><text>10</text><text>38</text><text>Tahoma</text><text
+>11</text><text>38</text><text>Tahoma</text><text>12</text><text>38</text><text
+>Tahoma</text><text>13</text><text>38</text><text>Tahoma</text><text>14</text><text
+>38</text><text>Tahoma</text></textlist></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAABAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><text>(v_AdmForm_old_pre17.4)|v_AdmForm_old_pre17.4</text></item>
+<item name='$Comment' sign='true'><text>pre 17.4</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

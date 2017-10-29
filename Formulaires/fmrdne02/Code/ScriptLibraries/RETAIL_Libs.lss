@@ -1,0 +1,63 @@
+'++LotusScript Development Environment:2:5:(Options):0:72
+Option Public
+Option Declare
+
+Use "Forms_Libs"
+Use "LogEntry"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Function RETAIL_PointVente_Export_GetDocumentLine(docProcessed As NotesDocument) As String
+Declare Function RETAIL_PointVente_Export_GetHeaders() As String
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+'++LotusScript Development Environment:2:1:RETAIL_PointVente_Export_GetDocumentLine:1:8
+Function RETAIL_PointVente_Export_GetDocumentLine(docProcessed As NotesDocument) As String
+	
+	' Gestion d'erreurs	
+	On Error GoTo ErrorHandler
+	
+	Dim LogEntry As LogEntry
+	Dim strLine As String
+	
+	strLine = FormatForCSV(docProcessed.RETAIL_Code_pays(0))
+	strLine = strLine + ";"
+	strLine = strLine + FormatForCSV(docProcessed.RETAIL_PointVente_FRRCode(0))
+	strLine = strLine + ";"
+	strLine = strLine + FormatForCSV(docProcessed.RETAIL_PointVente_AdrCode(0))
+	strLine = strLine + ";"
+	strLine = strLine + FormatForCSV(docProcessed.RETAIL_PointVente_Name(0))
+	strLine = strLine + ";"
+	strLine = strLine + FormatForCSV(docProcessed.RETAIL_PointVente_Ville(0))
+
+	' Renvoi de la ligne	
+	RETAIL_PointVente_Export_GetDocumentLine =  strLine   	
+	
+	
+	' C'est fini, on sort
+	Exit Function
+		
+' Gestion d'erreurs
+ErrorHandler:
+	set LogEntry = New LogEntry
+	If (Err = ERROR_PROPAGATE%) Then
+		Error ERROR_PROPAGATE%, Error$
+	Else
+		LogEntry.LogType = LOGLEVEL_EMERG%
+		LogEntry.SubName = "RETAIL_PointVente_Export_GetDocumentLine"
+		LogEntry.Erl = Erl
+		LogEntry.Err = Err
+		LogEntry.Msg = Error$
+		Error ERROR_PROPAGATE%, LogEntry.ToString
+	End If
+	Exit Function
+End Function
+
+
+'++LotusScript Development Environment:2:1:RETAIL_PointVente_Export_GetHeaders:1:8
+Function RETAIL_PointVente_Export_GetHeaders() As String
+	
+	RETAIL_PointVente_Export_GetHeaders = "Pays;Code FRR;Code adresse;Nom - Raison sociale;Ville"
+	
+End Function
+

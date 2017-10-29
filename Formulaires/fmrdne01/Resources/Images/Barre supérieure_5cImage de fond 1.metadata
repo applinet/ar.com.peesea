@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048C55E" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="996" sequence="65" unid="ED29A96D334A8434C12578470057D3A1">
+<created><datetime dst="true">20110302T175918,09+02</datetime></created>
+<modified><datetime>20171029T101501,99-03</datetime></modified>
+<revised><datetime>20170904T113510,02-03</datetime></revised>
+<lastaccessed><datetime>20171029T101457,34-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101457,34-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>fond1.gif</text></item>
+<item name="$TITLE" sign="true"><textlist><text>Barre supérieure\Image de fond 1</text><text>topbar_background_1_cacheable.gif</text></textlist></item>
+<item name="$DesignerVersion" sign="true"><text>7</text></item></note>

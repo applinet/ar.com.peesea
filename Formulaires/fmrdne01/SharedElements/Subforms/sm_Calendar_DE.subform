@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='6b6' unid='7A9B354FECF8AC9BC12572F0003B4928' sequence='100'>
+<created><datetime dst='true'>20070604T124733,52+02</datetime></created>
+<modified><datetime>20171029T101458,43-03</datetime></modified>
+<revised><datetime>20170904T113507,28-03</datetime></revised>
+<lastaccessed><datetime>20171029T101455,31-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101455,31-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Fields'><textlist><text>LienAides</text><text>LibTitrePage</text><text
+>LibErreur</text><text>LibResult</text><text>LibDateDuree</text><text>LibTypeResult</text><text
+>LibTypeDde</text></textlist></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAEgMAAAAAAAAAAAAAAAAAAAAAAADc/yQD+f8SAyBOAAAAAAAAAAAvLyBDYWxl
+bmRyaWVycw12YXIgY2FsZW5kcmllcl9kYXRlam91ID0gbmV3IENhbGVuZGFyUG9wdXAoImNhbF9k
+YXRqb3UiKTsNdmFyIGNhbGVuZHJpZXJfaGV1cmUgPSBuZXcgQ2FsZW5kYXJQb3B1cCgiY2FsX3Rp
+bWUiKTsNDS8vIERhdGUNY2FsZW5kcmllcl9kYXRlam91LnNldE1vbnRoTmFtZXMoJ0phbnVhcics
+J0ZlYnJ1YXInLCcgTYRyeicsJ0FwcmlsJywnTWFpJywnSnVuaScsJ0p1bGknLCdBdWd1c3QnLCdT
+ZXB0ZW1iZXInLCdPa3RvYmVyJywnTm92ZW1iZXInLCdEZXplbWJlcicpOw1jYWxlbmRyaWVyX2Rh
+dGVqb3Uuc2V0RGF5SGVhZGVycygnU28nLCdNbycsJ0RpJywnTWknLCAnRG8nLCdGcicsJ1NhJyk7
+DWNhbGVuZHJpZXJfZGF0ZWpvdS5zZXRXZWVrU3RhcnREYXkoMSk7DWNhbGVuZHJpZXJfZGF0ZWpv
+dS5zZXRUb2RheVRleHQoIkhldXRlIik7DWNhbGVuZHJpZXJfZGF0ZWpvdS5zZXRDc3NQcmVmaXgo
+IkNBTCIpOw1jYWxlbmRyaWVyX2RhdGVqb3Uub2Zmc2V0WCA9IDA7DWNhbGVuZHJpZXJfZGF0ZWpv
+dS5vZmZzZXRZID0gMjU7DWNhbGVuZHJpZXJfZGF0ZWpvdS5hdXRvSGlkZSgpOw0NLy8gSGV1cmUN
+Y2FsZW5kcmllcl9oZXVyZS5zZXRDc3NQcmVmaXgoIkNBTCIpOw1jYWxlbmRyaWVyX2hldXJlLm9m
+ZnNldFggPSAwOw1jYWxlbmRyaWVyX2hldXJlLm9mZnNldFkgPSAyNTsNY2FsZW5kcmllcl9oZXVy
+ZS5zZXREaXNwbGF5VHlwZSgiaG91ciIpOw1jYWxlbmRyaWVyX2hldXJlLnNldFRpbWVUZXh0KCJI
+ZXVyZSIpOw1jYWxlbmRyaWVyX2hldXJlLmF1dG9IaWRlKCk7DQBf/xAAAgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_Calendar_DE</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_Calendar_DE</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAo=
+</rawitemdata></item></note>
+

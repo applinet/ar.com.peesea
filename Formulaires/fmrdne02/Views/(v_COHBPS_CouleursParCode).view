@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='1372' unid='73AC4F9ABDD34739C125799D004F4374' sequence='54'>
+<created><datetime dst='true'>20120207T162546,12+02</datetime></created>
+<modified><datetime>20171029T101616,82-03</datetime></modified>
+<revised><datetime>20170904T113520,19-03</datetime></revised>
+<lastaccessed><datetime>20171029T101607,54-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101607,54-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=NICOLAS ENRICO LAURENZANO - E363578/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_COHBPS_CouleursParCode)|v_COHBPS_CouleursParCode</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+ygACAGIAAwAkMjAABQARAENPSEJQU19Db2RlVGVpbnRlAAEAAQD1ACICBQAQAENPSEJQU19MaWJU
+ZWludGUiAgEAAQD1ACICBQATAENPSEJQU19Db2RlVHJhbnNjb2QAIgIDAAUAMgAtAAQAEQADAAkA
+BABDT0hCUFNfQ29kZVRlaW50ZSQyMCRDb25mbGljdCRSRUYABAAEAAAAJgAFAAQAZm9ybQEAEQBt
+X0NPSEJQU19Db3VsZXVycwAKAgMABwAKAAQACUwxUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+KAACAABEAGYAAAARAABmABEAAwBDT0hCUFNfQ29kZVRlaW50ZSQyMA==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACABUACAAAAFZDAQARAAsAAAAAAEkAAQEACgAAAAAAAAAAAAICAAAAVkMBAAMAIgB8AAAAkwAB
+AAAKAAAAAAAAAAAAAgIAAABDT0hCUFNfQ29kZVRlaW50ZUNvZGUgVGVpbnRlJDIwQ29kZSwgTGli
+ZWxsgiBldCBUcmFuc2NvZGlmaWNhdGlvbnwAAgBiAAMAJDIwAAUAEQBDT0hCUFNfQ29kZVRlaW50
+ZQABAAEA9QAiAgUAEABDT0hCUFNfTGliVGVpbnRlIgIBAAEA9QAiAgUAEwBDT0hCUFNfQ29kZVRy
+YW5zY29kACICAwAHABgAEQAJMVMyUzNTNFM1UzZTN1M4UwAmAAEAAAABAQAJAQAACgEBDgoAAAEA
+rSsBAAEAAQEAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAA
+AAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAA
+AQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEAAAAAAAEAAAAA
+AAAACAAAAAAAAQA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item></note>
+

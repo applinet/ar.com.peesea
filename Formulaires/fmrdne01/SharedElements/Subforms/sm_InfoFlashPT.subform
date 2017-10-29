@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='796' unid='8FE70D01137C1CDFC125736700327678' sequence='108'>
+<created><datetime dst='true'>20071001T111111,28+02</datetime></created>
+<modified><datetime>20171029T101459,55-03</datetime></modified>
+<revised><datetime>20170904T113508,02-03</datetime></revised>
+<lastaccessed><datetime>20171029T101455,92-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101455,92-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$TITLE'><text>sm_InfoFlashPT</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQA+AYAAAAAAAAAAAAAAAAAAAAAAADc/woH+f/4BiBOAAAAAAAAAABsX0lGbGFz
+aFRpdHJlID0gIkluZm8gRmxhc2giOw1sX0lGVGl0cmUgPSAiSW5mbyBGbGFzaCI7DWxfSUZEYXRl
+ID0gIkRhdGEiOw1sX0lGSG91ciA9ICJIb3JhIjsNbF9JRlB1YmxpU3RhcnQgPSAiSW5pY2lvIGRh
+IHB1YmxpY2GHxm8iOw1sX0lGUHVibGlFbmQgPSAiRmltIGRlIHB1YmxpY2GHxm8iOw1sX0lGRGF0
+ZUhvdXIgPSAiRGF0YSAtIEhvcmEiOw1sX0lGVHlwZUluZm8gPSAiVGlwbyBpbmZvIjsNbF9JRkxu
+Z0Rpc3BvID0gIklkaW9tYSBkaXNwb26hdmVsIjsNbF9JRkxuZyA9ICJJZGlvbWEgIjsNbF9JRlBy
+ZXZpZXcgPSAiVmlzdWFsaXphciI7DWxfSUZUZXh0ZUZSID0gIlRleHRvIGVtIEZyYW5jZXMiOw1s
+X0lGVGV4dGVFTiA9ICJUZXh0byBlbSBJbmdsZXMiOw1sX0lGVGV4dGVFUyA9ICJUZXh0byBlbSBl
+c3BhbmhvbCI7DWxfSUZUZXh0ZURFID0gIlRleHRvIGVtIEFsZW3GbyI7DWxfSUZUZXh0ZVBUID0g
+IlRleHRlIHBvcnR1Z2FpcyI7DWxfSUZUZXh0ZU5MID0gIlRleHRlIG6CZXJsYW5kYWlzIjsNbF9J
+RlRleHRlSVQgPSAiVGV4dGUgaXRhbGllbiI7DWxfSUZQdWJsaWNhdGlvbiA9ICJQdWJsaWNhh8Zv
+IjsNbF9JRkxhYmVsUE9BID0gIlJlc3BvbnNhdmVsIjsNbF9JRkxhYmVsVXNlciA9ICJVc3Vhcmlv
+IjsNbF9JRkxhYmVsQWxsSW5mbyA9ICJUb2RhcyBhcyBpbmZvcm1hh+RlcyI7DWxfSUZIZWxwMSA9
+ICJPcyB0ZXh0b3MgZXN0xm8gc2VuZG8gaW50ZXJwcmV0YWRvcyBjb21vIEhUTUwuPGJyPkVsZXMg
+cG9kZW0gIGNvbnRlciBlbGVtZW50b3MgSFRNTCwgZGVmaW5ph+RlcyBDU1MgZSBKYXZhU2NyaXB0
+Ljxicj48c3BhbiBzdHlsZT0nY29sb3I6IHJlZDsgZm9udC13ZWlnaHQ6IGJvbGQuJz5hc3NlZ3Vy
+ZS1zZSBkZSBuxm8gZmF6ZXIgZXJyb3MgZGUgc2ludGF4ZTsgZWxlcyBpbXBhY3RhcmlhbSBUT0RP
+UyBvcyB1c3VhcmlvcyBkbyBhcGxpY2GHxm88L3NwYW4+IjsNbF9JRlB1Ymxpc2hlZCA9ICJQdWJs
+aWNhZG8iOw1sX0lGSGlkZGVuID0gIk9jdWx0by9BcnF1aXZhZG8iOw1sX0lGTm90WWV0UHVibGlz
+aGVkID0gIkFpbmRhIG7GbyBwdWJsaWNhZG8iOw1sX0lGRGVsZXRlZCA9ICJJbmZvRmxhc2ggZXhj
+bHWhZG8iOw1sX0lGQ29uZlN1cHByID0gIlZvY2UgY29uZmlybWEgYSBleGNsdXPGbyBkZXN0ZSBJ
+bmZvRmxhc2g/IEEgb3BlcmGHxm8gbsZvIHBvZGVyoCBzZXIgY2FuY2VsYWRhIjsNbF9JRkVyckVt
+cHR5RmllbGQgPSAiUHJlZW5jaGVyIG8gY2FtcG8iOw1sX0lGRXJySW52YWxpZERhdGVTdGFydCA9
+ICJQcmVlbmNoZXIgYSBkYXRhIGRlIGluoWNpbyBkYSBwdWJsaWNhh8ZvIG5vIGZvcm1hdG8gSkov
+TU0vQUFBQSI7DWxfSUZFcnJJbnZhbGlkVGltZVN0YXJ0ID0gIlByZWVuY2hlciBhIGhvcmEgZGUg
+aW5pY2lvIGRhIHB1YmxpY2GHxm8gbm8gZm9ybWF0byBISDpNTSI7DWxfSUZFcnJJbnZhbGlkRGF0
+ZUVuZCA9ICJQcmVlbmNoZXIgYSBkYXRhIGRlIGZpbSBkYSBwdWJsaWNhh8ZvIG5vIGZvcm1hdG8g
+SkovTU0vQUFBQSI7DWxfSUZFcnJJbnZhbGlkVGltZUVuZCA9ICJQcmVuY2hlciBob3JhIGRlIGZp
+bSBkYSBwdWJsY2GHxm8gbm8gZm9ybWF0byBISDpNTSI7DWxfSUZFcnJJbnZhbGlkU3RhcnRFbmQg
+PSAiTyBmaW0gZGEgcHVibGljYYfGbyBkZXZlIHNlciAgcG9zdGVyaW9yIGFvIGluaWNpbyBkZSBw
+dWJsaWNhh8ZvIjsNbF9JRkVyclR5cGVNaXNzaW5nID0gIlNlbGVjaW9uYXIgJ1Jlc3BvbnNhdmVp
+cycgb3UgJ1VzdaByaW9zJyI7DWxfSUZFcnJOb1RleHQgPSAiUHJlZW5jaGVyIGFvIG1lbm9zIHVt
+IHRleHRvIjsAAF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_InfoFlashFR</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAADDjAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAcAAACDBAEA3QYAAIX/hf8WAAEAAgpzbV9J
+bmZvRmxhc2hQVNIIAQD/AAAA3gYAAIX/
+</rawitemdata></item></note>
+

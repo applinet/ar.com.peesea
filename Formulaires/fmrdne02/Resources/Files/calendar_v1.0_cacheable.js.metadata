@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048DE00" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1266" sequence="53" unid="934DAAB92AFF3326C12578FE002E6EE6">
+<created><datetime dst="true">20110901T102710,46+02</datetime></created>
+<modified><datetime>20171029T101615,50-03</datetime></modified>
+<revised><datetime>20170904T113519,01-03</datetime></revised>
+<lastaccessed><datetime>20171029T101606,76-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101606,76-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$FileNames" sign="true"><text>CalendarPopup.js</text></item>
+
+<item name="$FileModDT" sign="true"><datetime dst="true">20090622T082130,59+02</datetime></item>
+
+
+
+
+<item name="$Flags"><text>345CgQ</text></item>
+<item name="$TITLE" sign="true"><textlist><text>calendar_v1.0_cacheable.js</text><text>calendar_v1.0_cacheable.js</text></textlist></item>
+<item name="$DesignerVersion"><text>8.5</text></item></note>

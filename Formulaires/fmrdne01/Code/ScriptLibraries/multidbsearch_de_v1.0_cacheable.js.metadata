@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C80048C55E" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="9c6" sequence="55" unid="97B60576AF3845C5C125788E003C7529">
+<created><datetime dst="true">20110512T130021,53+02</datetime></created>
+<modified><datetime>20171029T101502,23-03</datetime></modified>
+<revised><datetime>20170904T113510,28-03</datetime></revised>
+<lastaccessed><datetime>20171029T101457,46-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101457,46-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE" sign="true"><text>multidbsearch_de_v1.0_cacheable.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$POID"><datetime>20170904T113510,28-03</datetime></item></note>

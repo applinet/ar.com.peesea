@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C80048C55E" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="906" sequence="92" unid="1279E56C74508D68C12575EE004413DF">
+<created><datetime dst="true">20090709T142335,35+02</datetime></created>
+<modified><datetime>20171029T101501,37-03</datetime></modified>
+<revised><datetime>20170904T113509,44-03</datetime></revised>
+<lastaccessed><datetime>20171029T101456,92-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101456,92-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE" sign="true"><text>FieldsFormatting</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$Comment"><text>Bibliothèques de formatage des champs</text></item>
+<item name="$POID"><datetime>20170904T113509,44-03</datetime></item></note>

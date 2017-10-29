@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048FC18'>
+<noteinfo noteid='6c6' unid='9563E92A44B6A6CEC1256BC30053856C' sequence='36'>
+<created><datetime dst='true'>20020524T171216,44+02</datetime></created>
+<modified><datetime>20171029T101718,68-03</datetime></modified>
+<revised><datetime>20170904T113523,86-03</datetime></revised>
+<lastaccessed><datetime>20171029T101715,34-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101715,34-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$PublicAccess' sign='true'><text>1</text></item>
+<item name='$Flags'><text>CD</text></item>
+<item name='$TITLE' sign='true'><textlist><text>m_MajListeFormsAliases</text><text
+>m_MajListeFormsAliases</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_MajListeFormsAliases</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAMz/CAAAAAAAhf88AAEAAAo8c2NyaXB0Pndp
+bmRvdy5wYXJlbnQuQ29udGVudS5NQUpMaXN0ZUZvcm1zQWxpYXNlcygn3QYAAK3/qf9iAAEAGAAE
+AFYAVgAAAEgAAQAAAAEABwBOb0NhY2hlAB8CAQAAAAEAAAAfAgEAEwB2X0xvb2t1cEZvcm1zUGFy
+YW1zAAAAAAAAAAAA8D+qBF4BAwAHAAwABQAJMFMwRQCF/wgAAQAACqoC3gYAAK4Ahf8TAAEAAAon
+KTwvc2NyaXB0PgDN/wgAAAAAAA==
+</rawitemdata></item></note>
+

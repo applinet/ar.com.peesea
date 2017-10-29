@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C80048DE00" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1b46" sequence="34" unid="383991E93CE10532C1257EE40033A502">
+<created><datetime dst="true">20151020T112405,78+02</datetime></created>
+<modified><datetime>20171029T101625,62-03</datetime></modified>
+<revised><datetime>20170904T113528,55-03</datetime></revised>
+<lastaccessed><datetime>20171029T101613,37-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101613,37-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=DIEGO LIBERMAN - E455758/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$TITLE" sign="true"><text>PRESTE_Libs</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+
+
+<item name="$POID"><datetime>20170904T113528,55-03</datetime></item></note>

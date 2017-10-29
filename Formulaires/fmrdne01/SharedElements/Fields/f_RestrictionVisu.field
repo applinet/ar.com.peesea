@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='2d2' unid='A1A89687C8D8F082C1256BC3004E6ADB' sequence='109'>
+<created><datetime dst='true'>20020524T161631,63+02</datetime></created>
+<modified><datetime>20171029T101453,51-03</datetime></modified>
+<revised><datetime>20170904T113503,76-03</datetime></revised>
+<lastaccessed><datetime>20171029T101452,56-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101452,56-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+</rawitemdata></item>
+<item name='$TITLE'><text>f_RestrictionVisu</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='f_RestrictionVisu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><text>f_RestrictionVisu</text></item>
+<item name='$Body' summary='true' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAALD/FAAAAAYgAAAAAAAAAAAAAAAAiv/GA4pCAQUCIAAACAAAAAAC
+AQAACkAAAAAAAAAAEQAAAFADQAAAADIABQALAEhUVFBfQ29va2llAAEAEABSZXN0cmljdGlvblZp
+c3U9AQABADsAZQMDAAcADAAFAAkwUzBFAGZfUmVzdHJpY3Rpb25WaXN1AABOAwAADgMFAAUAZl9M
+bmcAAQACAEZSCgKvAPQCSAABAD0ATW9udHJlciB1bmlxdWVtZW50IGxlcyBmb3JtdWxhaXJlcyBk
+aXNwb25pYmxlcyBlbiBmcmFuh2Fpc3xGUgCuAKwCBQAFAGZfTG5nAAEAAgBFUwoCrwCWAkYAAQA8
+AE1vc3RyYXIgdW5pY2FtZW50ZSBsb3MgZm9ybXVsYXJpb3MgZGlzcG9uaWJsZXMgZW4gZXNwYaRv
+bHxFU64AUAIFAAUAZl9MbmcAAQACAEVOCgKvADoCNgABACsAU2hvdyBvbmx5IHRoZSBmb3JtcyBh
+dmFpbGFibGUgaW4gRW5nbGlzaHxFTgCuAAQCBQAFAGZfTG5nAAEAAgBERQoCrwDuATwAAQAxAFpl
+aWdlIEZvcm11bGFyZSwgZGllIGluIGRldXRzY2ggdmVyZoFnYmFyIHNpbmR8REUArgCyAQUABQBm
+X0xuZwABAAIAUFQKAq8AnAFEAAEAOgBNb3N0cmFyIHNvbWVudGUgb3MgZm9ybXVsoHJpb3MgZGlz
+cG9uoXZlaXMgZW0gUG9ydHVndYhzfFBUrgBYAQUABQBmX0xuZwABAAIATkwKAq8AQgE6AAEALwBF
+bmtlbCBkZSBmb3JtdWxpZXJlbiBpbiBoZXQgbmVkZXJsYW5kcyB0b25lbnxOTACuAAgBBQAFAGZf
+TG5nAAEAAgBJVAoCrwDyAEQAAQA6AE1vc3RyYXJlIHVuaWNhbWVudGUgaSBmb3JtdWxhcmkgZGlz
+cG9uaWJpbGkgaW4gaXRhbGlhbm98SVSuAK4ABQAFAGZfTG5nAAEAAgBTSwoCrwCYAEAAAQA1AFpv
+YnJhemkGnCBpYmEgZm9ybXVsoHJlIGRpc3BvbmliaWxugiB2IHNsb3ZlbgafaW5lfFNLAK4AWAAF
+AAUAZl9MbmcAAQACAFJVCgKvAEIANgABACsAU2hvdyBvbmx5IHRoZSBmb3JtcyBhdmFpbGFibGUg
+aW4gUnVzc2lhbnxSVQCuAAwAAQAAAK4ABAC1EwMABwA+ADcACTJSNlM4UjEyUzE0UjE4UzIwUjI0
+UzI2UjMwUzMyUjM2UzM4UjQyUzQ0UjQ4UzUwUjU0UzU2UgAA+f8gAAAAAAABAAQADQIAAAAAAAAA
+AAAAAAAAAAAAAADc/yAC+f8OAiBOAAAAAAAAAABmdW5jdGlvbiBnZXREb21haW4oKSB7DQlzPWRv
+Y3VtZW50LmxvY2F0aW9uLmhvc3Q7DQlyZT0vLitcLiguK1wuLispLzsNCXJlcz1zLm1hdGNoKHJl
+KTsNCWlmIChyZXMhPW51bGwpIHtyZXR1cm4gcmVzWzFdO30gZWxzZSB7cmV0dXJuIG51bGw7fQ19
+DQ12YXIgRXhwaXJlID0gbmV3IERhdGUoKTsNRXhwaXJlLnNldFRpbWUoRXhwaXJlLmdldFRpbWUo
+KSArIDEwMDAqNjAqNjAqMjQqNTAwKTsNDWlmICghZG9jdW1lbnQuZm9ybXNbMF0uZl9SZXN0cmlj
+dGlvblZpc3UuY2hlY2tlZCkgew0JZG9jdW1lbnQuY29va2llID0gIlJlc3RyaWN0aW9uVmlzdT07
+IGV4cGlyZXM9IiArIEV4cGlyZS50b0dNVFN0cmluZygpICsgIjsgRE9NQUlOPS4iICsgZ2V0RG9t
+YWluKCkrICI7IHBhdGg9LyI7DX1lbHNlew0JZG9jdW1lbnQuY29va2llID0gIlJlc3RyaWN0aW9u
+VmlzdT0iICsgbG5nICsgIjsgZXhwaXJlcz0iICsgRXhwaXJlLnRvR01UU3RyaW5nKCkgKyAiOyBE
+T01BSU49LiIgKyBnZXREb21haW4oKSArICI7IHBhdGg9LyI7DX0NDQAAZv8gAAAAAAABAAQAtgEA
+AAAAAAAAAAAAAAAAAAAAAABl/8gBZv+2ASBOAAAAAAAAAABmdW5jdGlvbiBnZXREb21haW4oKSB7
+DQlzPWRvY3VtZW50LmxvY2F0aW9uLmhvc3Q7DQlyZT0vLitcLiguK1wuLispLzsNCXJlcz1zLm1h
+dGNoKHJlKTsNCWlmIChyZXMhPW51bGwpIHtyZXR1cm4gcmVzWzFdO30gZWxzZSB7cmV0dXJuIG51
+bGw7fQ19DQ1pZiAoIWRvY3VtZW50LmZvcm1zWzBdLmZfUmVzdHJpY3Rpb25WaXN1LmNoZWNrZWQp
+IHsNCWRvY3VtZW50LmNvb2tpZT0nUmVzdHJpY3Rpb25WaXN1PTsgZXhwaXJlcz1GcmlkYXksIDAx
+LUphbi0yMDEwIDA4OjAwOjAwIEdNVDsgRE9NQUlOPS4nK2dldERvbWFpbigpKyc7IHBhdGg9Lyc7
+DX1lbHNlew0JZG9jdW1lbnQuY29va2llPSdSZXN0cmljdGlvblZpc3U9JytsbmcrJzsgZXhwaXJl
+cz1GcmlkYXksIDAxLUphbi0yMDEwIDA4OjAwOjAwIEdNVDsgRE9NQUlOPS4nK2dldERvbWFpbigp
+Kyc7IHBhdGg9Lyc7DX0NAADeBgAAiv+F/wgAAQAACg==
+</rawitemdata></item></note>
+

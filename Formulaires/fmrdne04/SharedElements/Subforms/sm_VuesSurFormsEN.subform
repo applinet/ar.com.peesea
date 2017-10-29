@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048FC18'>
+<noteinfo noteid='752' unid='FC87BF30FF2BF635C1256BC300541910' sequence='41'>
+<created><datetime dst='true'>20020524T171834,40+02</datetime></created>
+<modified><datetime>20171029T101719,38-03</datetime></modified>
+<revised><datetime>20170904T113524,38-03</datetime></revised>
+<lastaccessed><datetime>20171029T101715,74-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101715,74-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAKQQAAAAAAAAAAAAAAAAAAAAAAADc/zwE+f8qBCBOAAAAAAAAAABsX1R5cGVE
+ZUZvcm09J0Zvcm0gbmFtZSA6JzsNbF9NZXNCcm91aWxsb25zID0gJ015IGRyYWZ0IGZvcm1zIChp
+biBwcm9ncmVzcyknOw1sX01lc01vZGVsZXMgPSAnTXkgbW9kZWxzJzsNbF9FbWlzUGFyTW9pPSdG
+b3JtcyB0aGF0IEkgc2VudCc7DWxfQVRyYWl0ZXJQYXJNb2k9J0Zvcm1zIHRoYXQgSSBoYXZlIHRv
+IHByb2Nlc3MnOw1sX0FUcmFpdGVyID0gIkZvcm1zIHRvIGJlIHByb2Nlc3NlZCI7DWxfQVRyYWl0
+ZXJQYXJNZXNHcm91cGVzPSdGb3JtcyB0aGF0IHNob3VsZCBiZSBwcm9jZXNzZWQgYnkgbXkgZ3Jv
+dXBzJzsNbF9UcmFpdGVzUGFyTW9pPSdGb3JtcyBwcm9jZXNzZWQgYnkgbXlzZWxmJzsNbF9UcmFp
+dGVzUGFyTWVzR3JvdXBlcz0nRm9ybXMgcHJvY2Vzc2VkIGJ5IG15IGdyb3Vwcyc7DWxfRXRhdD0n
+U3RhdGUnOw1sX0RhdGVBcnJpdmVlRXRhdD0nQXJyaXZhbCBkYXRlIGluIHN0YXRlJzsNbF9FbWlz
+TGU9J1NlbnQgb24nOw1sX0FUcmFpdGVyUGFyPSdUbyBiZSBwcm9jZXNzZWQgYnknOw1sX1RyYWl0
+ZVBhcj0nUHJvY2Vzc2VkIGJ5JzsNbF9SZWZlcmVuY2U9J1JlZmVyZW5jZSc7DWxfRW1pc1Bhcj0n
+U2VudCBieSc7DWxfRW1pc0xlPSdTZW50IG9uJzsNbF9EYXRlTW9kaWY9J01vZGlmaWNhdGlvbiBk
+YXRlJzsNbF9Hcm91cGU9J0dyb3VwJzsNbF9QZ1ByZWM9J1ByZXZpb3VzIHBhZ2UnOw1sX1BnU3Vp
+dj0nTmV4dCBwYWdlJzsNbF9EYXRlQ3JlYXQ9J0NyZWF0aW9uIGRhdGUnOw1sX1RpdHJlPSdUaXRs
+ZSc7DWxfTWVzQnJvdWlsbG9ucz0nTXkgZHJhZnRzJzsNbF9NZXNNb2RlbGVzPSdNeSBtb2RlbHMn
+Ow1sX0dyb3VwZT0nR3JvdXAnOw1sX0NvbmZpcm1lU3VwcHJlc3Npb249J0RvIHlvdSByZWFseSB3
+YW50IHRvIGRlbGV0ZSB0aGlzIGRvY3VtZW50Pyc7DWxfTkJSZXN1bHRhdHM9J1RvdGFsIG51bWJl
+ciBvZiByZXN1bHRzIDonOw1sX1JlY3U9J0Zvcm11bGFpcmVzIHF1ZSBqXCdhaSByZYd1X0VOXyc7
+DQ1sX0VyckJyb3VpbGxvbiA9ICAnTm8gZHJhZnQgYXZhaWxhYmxlIGZvciAnOw1sX0Vyck1vZGVs
+ZSA9ICAnTm8gbW9kZWwgYXZhaWxhYmxlIGZvciAnOwAAX/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_VuesSurFormsEN</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAo=
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_VuesSurFormsEN</text><text
+>sm_VuesSurFormsEN</text></textlist></item>
+<item name='$Comment' sign='true'><text>deprecated</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='a06' unid='DCFCE397AE1D5C71C125792200372C0C' sequence='51'>
+<created><datetime dst='true'>20111007T120237,56+02</datetime></created>
+<modified><datetime>20171029T101502,53-03</datetime></modified>
+<revised><datetime>20170904T113510,86-03</datetime></revised>
+<lastaccessed><datetime>20171029T101457,65-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101457,65-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAkgEAAAAAAAAAAAAAAAAAAAAAAADc/6QB+f+SASBOAAAAAAAAAABsX05vbUZv
+cm0gPSAiBc0F4AXnBeIF4AXtBegF5SAF5wXgBe8F8AXuBfEF4CI7DWxfQWxpYXNGb3JtID0gIgXK
+BfAF4AXyBeoF7gXlIAXtBeAF5wXiBeAF7QXoBeUiOw1sX0luZm9zRm9ybSA9ICIFyAXtBfQF7gXw
+BewF4AX2BegF/yAF7iAF5wXgBe8F8AXuBfEF5SI7DWxfRGVzY0Zvcm0gPSAiBc4F7wXoBfEF4AXt
+BegF5SAF5wXgBe8F8AXuBfEF4CI7DWxfRGVzY1B1cmcxICA9ICIFzwXwBe4F9gXlBfEF8SAF7gX3
+BegF8QXyBeoF6CAF5AXuBeoF8wXsBeUF7QXyBe4F4iI7DWxfRGVzY1B1cmcyICA9ICIFzgX3BegF
+8QXyBeoF4CAF9wXlBfAF7QXuBeIF6AXqBe4F4iI7DWxfRGVzY1B1cmczICA9ICIFzgX3BegF8QXy
+BeoF4CAF7gXhBfAF4AXhBe4F8gXgBe0F7QX7BfUgBeQF7gXqBfMF7AXlBe0F8gXuBeIiOwBf/xAA
+AgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_DescFormRU</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_DescFormEN</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEA3QYAAIX/hf8VAAEAAghzbV9E
+ZXNjRm9ybVJVANIIAQD/AAAA3gYAAIX/
+</rawitemdata></item></note>
+

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='206' unid='4E3E6E704244BB53C1256BC3004DDE4F' sequence='114'>
+<created><datetime dst='true'>20020524T161031,83+02</datetime></created>
+<modified><datetime>20171029T101452,51-03</datetime></modified>
+<revised><datetime>20170904T113502,76-03</datetime></revised>
+<lastaccessed><datetime>20171029T101451,98-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101451,98-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$Fields'><text>f_Lng</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAyQMAAAAAAAAAAAAAAAAAAAAAAADc/9wD+f/KAyBOAAAAAAAAAABsX1RpdHJl
+RlI9JzxjZW50ZXI+QSB0cmFpdGVyIHBhciBtb2k8L2NlbnRlcj4nOw1sX1RpdHJlRVM9JzxjZW50
+ZXI+QSB0cmF0YXIgcG9yIG1pPC9jZW50ZXI+JzsNbF9UaXRyZUVOPSc8Y2VudGVyPkZvcm1zIHRv
+IGJlIHByb2Nlc3NlZCBieSBteXNlbGY8L2NlbnRlcj4nOw1sX1RpdHJlREU9JzxjZW50ZXI+Vm9u
+IG1pciB6dSBiZWFyYmVpdGVuPC9jZW50ZXI+JzsNbF9UaXRyZVBUPSc8Y2VudGVyPkEgc2VyIHRy
+YXRhZG8gcG9yIG1pbTwvY2VudGVyPic7DWxfVGl0cmVTSz0nPGNlbnRlcj5BIHRyYWl0ZXIgcGFy
+IG1vaV9TS188L2NlbnRlcj4nOw1sX1RpdHJlTkw9JzxjZW50ZXI+RG9vciBtZXplbGYgdGUgYmVo
+YW5kZWxlbjwvY2VudGVyPic7DWxfVGl0cmVJVD0nPGNlbnRlcj5EYSB0cmF0dGFyZSBkYSBtZTwv
+Y2VudGVyPic7DWxfVGl0cmVSVT0nPGNlbnRlcj5Gb3JtcyB0byBiZSBwcm9jZXNzZWQgYnkgbXlz
+ZWxmPC9jZW50ZXI+JzsNDWZ1bmN0aW9uIGdhdGV3YXlVUkwodXJsKSB7DS8vY2FsY3VsZSBsJ3Vy
+bCBwb3VyIHBhc3NlciBpcGxhbmV0IHNpIGJlc29pbg0JaHJlZiA9IGRvY3VtZW50LmxvY2F0aW9u
+LmhyZWY7DQlwID0gaHJlZi5pbmRleE9mKCdcL2h0dHAnKTsNIAlpZiAocCAhPSAtMSkgew0gCS8v
+IGxhIHBhZ2UgY291cmFudGUgZXN0IHBhc3OCZSBwYXIgbGEgZ2F0ZXdheQ0JCXAyID0gdXJsLmlu
+ZGV4T2YoJ2h0dHA6XC9cLycpOw0JCWlmIChwMiA9PS0xKSAgew0JCQlpZiAodXJsLmluZGV4T2Yo
+J1wvJyk9PTApIHsNCQkJCXAzID0gaHJlZi5pbmRleE9mKCdcLycscCs4KTsNCQkJIAl0aG9zdCA9
+IGhyZWYuc2xpY2UocCsxLHAzKTsNCQkJIAlyZXR1cm4gaHJlZi5zbGljZSgwLHArMSkrdGhvc3Qr
+dXJsDQkJCX0gZWxzZSB7DQkJCXJldHVybiAgdXJsfX0NCQllbHNlDQkJCSB7cmV0dXJuIGhyZWYu
+c2xpY2UoMCxwKzEpK3VybH0gfQ0gICAgZWxzZQ0gICAgCXtyZXR1cm4gdXJsfQ19DQAAX/8QAAIA
+DwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Formulaires à traiter par moi</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$SubForms' sign='true'><textlist><text>sm_EnTeteVuesConsolidees</text><text
+>sm_Styles</text></textlist></item>
+<item name='$SubForm_RepIDs' sign='true'><textlist><text>0000000000000000</text><text
+>0000000000000000</text></textlist></item>
+<item name='$Flags'><text>CD</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSZWZXJkYW5hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_ATraiterParMoi</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAzP8IAAAAAADdBgAAhf+F/wgA
+BQEOCtIIAQCAgIAA3gYAAIX/zf8IAAAAAADdBgAArf9x/zoAAAAAAAMAGAAYAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAc21fRW5UZXRlVnVlc0NvbnNvbGlkZWVzrf8lAA4ACAAAABkAc21fRW5UZXRlVnVl
+c0NvbnNvbGlkZWVzAACuAt4GAACuAMz/CAAAAAAA3QYAAIX/hf8IAAEACQjSCAEAgICAAN4GAACF
+/4ECgv9aAAIAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAQAAAACUhwAAAAAAAAAAAAAAAAEAAAAEAAAAgwQCAN0GAACF/4X/FAABAAQIPGJy
+PjxjZW50ZXI+0ggBAAAA/wDeBgAAhf/dBgAAhf+F/xIAAQAJCDxzY3JpcHQ+bCjSCAEAAIAAAN4G
+AACF/90GAACt/6n/OAABABgABAAsACwAAAAeAAEABwBsX1RpdHJlAAUABQBmX0xuZwAiAgMABwAM
+AAUACTBTMEUAhf8IAAEAAAiqAt4GAACuAN0GAACF/4X/HAABAAkILCAnVGl0cmUnKTs8L3Njcmlw
+dD7SCAEAAIAAAN4GAACF/90GAACF/4X/FQABAAQIPC9jZW50ZXI+PGJyPgDSCAEAAAD/AN4GAACF
+/4ECgwQCAN0GAACF/4X/DAABAAQIPGJyPtIIAQAAAP8A3gYAAIX/gQKDBAIA3QYAAIX/hf8QAAEA
+CQg8c2NyaXB0PtIIAQAAgAAA3gYAAIX/gQKC/1oAAwAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAJSHoAUMAKAFDADfL2QAAQAAAAQA
+AACmMAMAAAADAEphdmFzY3JpcHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACQiDBAMA3QYA
+AIX/hf8jAAEACQhwYXJlbnQuTW90ZXVyLnNob3dSZXN1bHRzKCcA0ggBAACAAADeBgAAhf/dBgAA
+rf+p/x4AAQAYAAQAEgASAAAAEAAFAAUAZl9MbmcAAwCF/wgAAQAACKoC3gYAAK4A3QYAAIX/hf8S
+AAEACQgnLCBmYWxzZSk70ggBAACAAADeBgAAhf+BAoMEAwDdBgAAhf+F/xEAAQAJCDwvc2NyaXB0
+PgDSCAEAAIAAAN4GAACF/83/CAAAAAAA
+</rawitemdata></item>
+<item name='$PublicAccess' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><textlist><text>m_ATraiterParMoi</text><text
+>m_ATraiterParMoi</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8004919E1'>
+<noteinfo noteid='6c2' unid='8EDC5BA3F84D3646C1256C8C003F1105' sequence='25'>
+<created><datetime dst='true'>20021211T132851,25+02</datetime></created>
+<modified><datetime>20171029T101834,91-03</datetime></modified>
+<revised><datetime dst='true'>20160509T212256,72+02</datetime></revised>
+<lastaccessed><datetime>20171029T101831,57-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101831,57-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MANUEL UBALDO IGLESIAS MONTES - CV10273/OU=users/O=PSA</name><name
+>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name>CN=MANUEL GARCIA VELEZ - PG24295/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=CEDRIC FRANCAIS - E288949/OU=users/O=PSA</name><name
+>CN=NICOLAS HABERTHUR - E378808/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$TITLE' sign='true'><text>LDAP</text></item>
+<item name='$WindowTitle' sign='true'><formula>"LDAP"</formula></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$FrameSet' sign='true'>
+<rawitemdata type='1'>
+7/8YAAIAAwAAAAAAAAAAAAAAAAAAAAAA8P8+AAUAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAUAAAAA
+AAIAAQAAAAAABQAAAAAAAAACAA8AAgBQAAMAAQDx/zkAEQAAAABAAAECAAEAAQAAAAAABQAAAAAA
+AQAAAAAAAABMZGFwMQEA////AAEAAAkBAP///wA/9v8mAAAAAAADAAMABAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAExEQVDx/zkAEQAAAABAAAECAAEAAQAAAAAABQAAAAAAAQAAAAAAAABMZGFwMgEA////
+AAEAAAkBAP///wA/9v8oAAAAAAADAAcABgAAAAAAAAAAAAAAAAAAAAAAAAAAAEdyaXNwZw==
+</rawitemdata></item>
+<item name='$Flags'><text>#34CQ</text></item>
+<item name='$DesignerVersion'><text>6</text></item></note>
+

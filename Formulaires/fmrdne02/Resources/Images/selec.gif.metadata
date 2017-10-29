@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048DE00" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="59a" sequence="2" unid="CBE9DB4E827F05D8C1256F96004E08CE">
+<created><datetime dst="true">20050127T161220,62+02</datetime></created>
+<modified><datetime>20171029T101600,00-03</datetime></modified>
+<revised><datetime dst="true">20120309T122555,95+02</datetime></revised>
+<lastaccessed><datetime>20171029T101557,53-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101557,53-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=ANGEL GARCIA PUJALTE - E168524/OU=users/O=PSA</name><name>CN=ESTHER PRIETO DIAZ - PG30605/OU=users/O=PSA</name><name>CN=ANGEL GARCIA PUJALTE - E168524/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name></updatedby>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide"><number>1</number></item>
+<item name="$ImagesHigh"><number>1</number></item>
+<item name="$ImagesColorize"><number>0</number></item>
+
+<item name="$ImageNames"><textlist><text>selec.gif</text></textlist></item>
+<item name="$TITLE" sign="true"><textlist><text>selec.gif</text><text>selec.gif</text></textlist></item>
+<item name="$DesignerVersion"><text>8.5</text></item></note>

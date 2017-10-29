@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='2ca' unid='5262CCF0E31F277EC1256BC3004E57A7' sequence='129'>
+<created><datetime dst='true'>20020524T161542,47+02</datetime></created>
+<modified><datetime>20171029T101453,47-03</datetime></modified>
+<revised><datetime>20170904T113503,72-03</datetime></revised>
+<lastaccessed><datetime>20171029T101452,53-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101452,53-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAYgMAAAAAAAAAAAAAAAAAAAAAAADc/3QD+f9iAyBOAAAAAAAAAABsX0RpciA9
+ICJEaXJlh8ZvIjsNbF9TaXRlID0gIlNpdGUgZ2VvZ3KgZmljbyI7DWxfQWN0ID0gIkF0aXZpZGFk
+ZSI7DWxfU2NlID0gIlNlcnZph28iOw1sX05vbSA9ICJOb21lIGRvIGZvcm11bKByaW8iOw1sX05v
+dXZlYXUgPSAiTm92byI7DWxfQ2hvaXNpckZvcm1BY3QgPSAiU2VsZWNpb25hciB1bSBmb3JtdWyg
+cmlvIHBvciBhdGl2aWRhZGUiOw1sX0Nob2lzaXJGb3JtRGlyID0gIlNlbGVjaW9uYXIgdW0gZm9y
+bXVsYXJpbyBwb3IgZGlyZYfGbyI7DWxfQ2hvaXNpckZvcm1TaXRlID0gIlNlbGVjaW9uYXIgdW0g
+Zm9ybXVsYXJpbyBwb3Igc2l0ZSBnZW9ncqBmaWNvIjsNbF9DaG9pc2lyRm9ybVNlcnZpY2UgPSAi
+U2VsZWNpb25hciB1bSBmb3JtdWxhcmlvIHBvciBzZXJ2aYdvIGRlIGVtcHJlc2EiOw1sX0xpc3Rl
+Rm9ybXMgPSAiTGlzdGEgZG9zIGZvcm11bKByaW9zIjsNbF9SVGl0cmUgPSAiQnVzY2EgcG9yIHRp
+dHVsbyI7DWxfUkdsb2JhbGUgPSAiQnVzY2EgYXZhbodhZGEiOw1sX0xhbmNlciA9ICJMYW6HYXIg
+YnVzY2EiOw1sX05vdXZlbGxlID0gIk5vdmEgYnVzY2EiOw1sX01zZ0VyclJlY2hlcmNoZUdsb2Jh
+bGUgPSAiTsZvIHV0aWxpemFyIGFzIHBhbGF2cmFzIHJlc2VydmFkYXM6IE5PVCAtIEFORC0gT1Ii
+Ow1sX3NlcnZpY2VzID0gIlNlcnZph29zIGRlIGVtcHJlc2EiOw1sX3Byb2R1Y0Rlcm9nID0gIlBy
+b2R1h8ZvIC0gZGVycm9nYYfGbyI7DWxfTWFycXVlID0gIk1hcmNhIEFQIjsNbF9NYXJxdWVBQyA9
+ICJNYXJjYSBBQyI7DWxfQ2hvaXNpckFpZGUgPSAiRXNjb2xoZXIgdW1hIGFqdWRhIG5vIGZvcm11
+bGFyaW8iOw1sX0lGbGFzaFRpdHJlID0gIkluZm8gRmxhc2giOw1sX2RpdmVycyA9ICJEaXZlcnNv
+cyI7AF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_VuesUtilisateurPT</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_VuesUtilisateurPT</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gv9GAAEAAAAAAAAAAACgBTUYoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAACUAKYwAwAAAAEASmF2YXNjcmlwdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AQAJCIECgv9aAAIAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAgQAAAACVh6AFDACgBQwA3y9kAAEAAAAEAAAAgwQCAMz/CAAAAAAA3QYAAIX/
+hf8NAAEAAgpSRU0gOgDSCAEA/wAAAN4GAACF/90GAACF/4X/FgABAAIIdm9pciBKUyBIZWFkZXLS
+CAEA/wAAAN4GAACF/83/CAAAAAAA
+</rawitemdata></item></note>
+

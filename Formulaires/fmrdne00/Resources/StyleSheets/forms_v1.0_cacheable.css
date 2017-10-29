@@ -1,0 +1,125 @@
+body	{ font-size: 10pt; font-family: arial; text-align: left; background-color: #EFEFEF; }
+body *	{ font-size: 10pt; font-family: arial; }
+
+@media print {
+	body { margin: 0; }
+	.NoPrint { display: none; }
+}
+@media screen {
+	body { margin: 20pt; }
+}
+
+/* Titre */
+h1 { font-size: 12pt; font-family: arial; font-weight: bold; color: #001C7B; text-align: center; margin: 0; }
+div.SubTitle { font-size: 10pt; font-family: arial; color: #001C7B; text-align: center; }
+.lTIT { font-family: Arial; font-weight: bold; font-size: 11pt; text-align: left; }
+
+/* Tableau des boutons d'actions */
+.ActionsTable	{ margin: 15pt 0; }
+.ActionsTable a	{ font-size: 10pt; font-family: arial; color: #45458D; text-decoration: underline; }
+.ActionsTable a:hover { font-size: 10pt; font-family: arial; color: #318C8C; text-decoration: underline; }
+
+/* Sections */
+span.Section { font-weight: bold; font-size: 12pt; }
+
+/* Liens */
+a, a:link, a:visited { font-size: 1em; font-family: arial; color: #45458D; text-decoration: none; }
+a:hover { font-size: 1em; font-family: arial; color: #318C8C; text-decoration: underline; }
+
+/* Listes */
+ul { list-style-type: disc; padding: 0; margin: 0; }
+ul.NoBullets { list-style-type: none; }
+
+li { font-size: 1em; color: black; }
+li * { font-size: 1em; color: black; }
+li span.Bullet { color: #F90; font-weight: bold; margin-right: 0.4em; }
+
+/* Images */
+img	{ border: 0; }
+
+/* Affichage intelligent d'un nom d'utilisateur */
+.SmartUserName	{ }
+.SmartUserName img	{ vertical-align: middle; margin: 0 0 0 2px; }
+
+/* Entête des blocs de champs */
+td.FieldsTableHeader	{ font-size: 1.1em; font-weight: bold; padding: 1px 5px; background-color: #C2EFFF; }
+td.FieldsTableSubHeader	{ font-size: 1em; font-weight: bold; padding: 1px 5px; background-color: #C2FFFF; }
+
+/* Légendes/libellés des champs */
+td.FieldLegend	{ font-weight: bold; font-size: 0.9em; }
+label 			{ font-weight: bold; font-size: 0.9em; }
+label.class2	{ font-weight: bold; font-size: 0.8em; font-style: italic; }
+label.class3	{ font-weight: normal; font-size: 1em; }
+
+/* Textes d'aide sous les champs */
+.FieldHelp		{ padding: 0 0 0 17px; margin: 0 0 1em 0; font-size: 0.8em; background: url(/icons/vwicn011.gif) no-repeat center left; color: #CC3535; }
+.FieldHelp *	{ font-size: 1em; color: #CC3535; }
+
+/* Tableaux de données dans un formulaire */
+.DataDisplay		{ border-collapse: collapse; text-align: center; font-family: Arial; font-size: 10pt; margin: 0.5em 0; }
+.DataDisplay tr th,
+.DataDisplay thead tr th	{ border: 1px solid #CCC; background-color: #FF9; text-align: center; padding: 1px 5px; font-weight: bold; font-size: 9pt; }
+.DataDisplay tr td,
+.DataDisplay tbody tr td	{ border: 1px solid #CCC; padding: 1px 5px; text-align: left; }
+.DataDisplay tr td.NoPadding,
+.DataDisplay tbody tr td.NoPadding	{ border: 1px solid #CCC; padding: 1px; }
+.DataDisplay tr td.NoBorder,
+.DataDisplay tbody tr td.NoBorder 	{ border: 0; }
+.DataDisplay tr th.NoBorder,
+.DataDisplay thead tr th.NoBorder 	{ border: 0; background: transparent; }
+
+/* Sections de validation en parallèle */
+.ParallelStep		{ border: 1px solid #CCC; border-collapse: collapse; font-family: Arial; font-size: 10pt; margin: 1em 0 0 1em; }
+.ParallelStep th	{ background-color: #CCC; }
+
+/* Champs date / calendrier */
+input.CalUp		{ border-style: inset; cursor: pointer; font-family: Arial; font-weight: normal; font-size: 9pt; }
+input.CalDown	{ border-style: solid; border-color: #588FB6; background-color: #E6F0FF; cursor: pointer; text-align: center; font-family: Arial; font-weight: normal; font-size: 9pt; }
+
+/* jQuery ui - Resizable */
+.ui-resizable-s { background: #DDD url(grippie_h_cacheable.gif) no-repeat scroll center 2px; cursor: s-resize; height: 9px; overflow: hidden; width: 100%; }
+
+/* jQuery ui - Boutons */
+button { padding: 2px 8px 2px 8px; font-weight: bold; color: #F80; font-size: 8pt; cursor: pointer; margin: 0; }
+button.ui-state-default	{ background-color: #FFF; border: 1px solid #CCC; }
+button.ui-state-hover	{ background-color: #DFF8FD; border: 1px solid #088FE7; }
+button.ui-state-disable	{ background-color: #FFF; border: 1px solid #CCC; color: #ABABAB; }
+button.ui-state-disable:hover { cursor: default; }
+
+/* jQuery ui - Tabs */
+.ui-tabs { padding: 0; margin: 0; }
+.ui-tabs .ui-tabs-nav		{ padding: 0; text-align: left; margin: 0; }
+.ui-tabs .ui-tabs-nav li	{ background-color: #EFEFBC; float: left; margin: 0 5px 0 0; padding: 0; list-style: none; font-size: 9pt; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected	{ background-color: #FF9; font-weight: bold; font-size: 9pt; }
+.ui-tabs .ui-tabs-nav li a	{ display: block; text-decoration: none; padding: 1px 5px; border: 1px solid #CCC; font-size: 1em; border-bottom: 0 !important; color: #888; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a	{ color:#000; }
+.ui-tabs .ui-tabs-nav li.ui-state-disabled		{ background: transparent; }
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a	{ cursor: default; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs .ui-tabs-nav li a:active, .ui-tabs .ui-tabs-nav li a:focus, .ui-tabs .ui-tabs-nav li a:visited	{ outline: none; }
+.ui-tabs .ui-tabs-panel	{ background: transparent; padding: 8px; display: block; border: 1px solid #CCC; clear: both; margin: 0; }
+.ui-tabs .ui-tabs-hide	{ display: none !important; }
+.ui-tabs-buttonpane		{ padding: 8px 0 0 0; margin: 0; border-top: 1px solid #CCC; text-align: right; }
+
+/* jQuery ui - Dialog */
+.ui-dialog { background-color: #EFEFEF; border: 1px solid #088FE7; padding: 2px; }
+.ui-dialog-content		{ padding: 8px 6px; text-align: center; vertical-align: middle; }
+.ui-dialog .ui-icon		{ height: 16px; width: 16px; overflow: hidden; text-indent: -9999px; display: block; cursor: pointer; }
+.ui-dialog-titlebar		{ background-color: #4AB5F7; border: 1px solid #088FE7; padding: 2px; font-weight: bold; color: #FFF; font-size: 8pt; position: relative; cursor: move; }
+.ui-dialog-titlebar-close	{ background: url(ui-dialog-titlebar-close-out.gif) no-repeat; position: absolute; right: 4px; top: 2px; }
+.ui-dialog-titlebar-close:hover	{ background: url(ui-dialog-titlebar-close-over.gif) no-repeat; }
+.ui-dialog-buttonpane	{ padding: 8px 0 6px 0; margin: 0 6px; border-top: 1px solid #CCC; text-align: right; }
+.ui-dialog-buttonpane button	{ margin: 0 0 0 8px; }
+.ui-dialog fieldset		{ border: 1px solid #CCC; padding: 8px; margin: 0 0 8px 0; text-align: left; }
+.ui-dialog fieldset legend	{ padding: 1px 2px; background-color: #EFEFEF; color: #888; font-weight: bold; font-size: 8pt; margin: 0; }
+.ui-dialog hr	{ border-width: 1px 0 0 0; border-style: solid; border-color: #CCC; margin: 4px 0; }
+.ui-dialog p	{ margin: 8px 0; }
+
+/* jQuery ui - Overlay*/
+.ui-widget-overlay	{ background-color: black; position: absolute; top: 0; left: 0; opacity: 0.25; filter: Alpha(opacity=25); }
+
+/* Aide */
+div.small-help { padding: 0; font-size: 0.8em; }
+div.small-help * { font-size: 1em; }
+
+/* Divers */
+nobr { font-size: 1em; }

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048FC18'>
+<noteinfo noteid='6fe' unid='DBFB4A39C7CA56EDC1256BC30053B022' sequence='36'>
+<created><datetime dst='true'>20020524T171405,78+02</datetime></created>
+<modified><datetime>20171029T101718,96-03</datetime></modified>
+<revised><datetime>20170904T113523,98-03</datetime></revised>
+<lastaccessed><datetime>20171029T101715,49-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101715,49-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormatNote' summary='true' sign='true'>
+<rawitemdata type='4'>
+AQA8IB9Iu0WAY/TiNABTayXB
+</rawitemdata></item>
+<item name='$Readers' sign='true' readers='true'><textlist><text>CN=FRANCK NUWENDAM - E100441/OU=users/O=PSA</text><text
+>Administrators</text><text>Administrateurs</text><text>LocalDomainServers</text><text
+>_Dev_NOT_Developpeurs</text><text>[AdminForms]</text></textlist></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_Profile)|v_Profile</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+WAAFABoAFQACAAkABAAkQ29uZmxpY3QkUkVGAAQABAAAACYAZgBpAAEAAAAKAhwCBQAJACRDb25m
+bGljdABoAR4BHAIDAAcAEgAMAAlMMVMyUzNTNlM3Uw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+BgAAAABE
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAAAAUACUMAACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQABAAAAAAAAAAAAQgAQAAAAAQD/
+//8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEAgICAAAEAAAAAAAAA
+CAAAAAAAAQA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+i/8oAAEABSJNUyBTYW5zIFNlcmlmAAAAAAAAAAAAAAAAAAAAAAAAAL0cIwAAAAEAAQAAAAEAAAAA
+AAAABQAACAgAAgB5/2wAAQDU0MgAAQAAAAAAAQAAAAAAAQDU0MgAAAAfAAAAAAAAAAAAAwAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAD8/zoAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA
+AAAAAAAAvv+AAAAAAQBjAJ9BAAAQACgAAAAAAE1vZGlmaWVyIFByb2ZpbGUyAAAAJAACAA0YAAAA
+AAAAAQAOAG1fUHJvZmlsZVBhcmFt7QIDAAcADAAFAAkwUzBFACgAAAAaAOcAAQAMAFtBZG1pbkZv
+cm1zXQsCAwAHAAwABQAJMFMwRQA=
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAANAAAICAACAL7/gAAAAAEAYwCfQQAAEAAoAAAAAABNb2RpZmll
+ciBQcm9maWxlMgAAACQAAgANGAAAAAAAAAEADgBtX1Byb2ZpbGVQYXJhbe0CAwAHAAwABQAJMFMw
+RQAoAAAAGgDnAAEADABbQWRtaW5Gb3Jtc10LAgMABwAMAAUACTBTMEUA
+</rawitemdata></item></note>
+

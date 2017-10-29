@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='986' unid='E1D4CBF5EE5337C1C125736A00471B80' sequence='90'>
+<created><datetime dst='true'>20071004T145640,96+02</datetime></created>
+<modified><datetime>20171029T101604,92-03</datetime></modified>
+<revised><datetime>20170904T113509,75-03</datetime></revised>
+<lastaccessed><datetime>20171029T101600,34-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101600,34-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQANAcAAAAAAAAAAAAAAAAAAAAAAADc/0YH+f80ByBOAAAAAAAAAABsX1R5cGVE
+ZUZvcm0gPSAiTmFtZSBkZXMgRm9ybXVsYXJzIDogIjsNbF9NZXNCcm91aWxsb25zICA9ICJNZWlu
+ZSBFbnR3gXJmZSI7DWxfTWVzTW9kZWxlcyAgPSAiTWVpbmUgVm9ybGFnZW4iOw1sX0VtaXNQYXJN
+b2kgPSAiRXJzdGVsbHQgdm9uIjsNbF9BVHJhaXRlclBhck1vaSA9ICJadSBiZWFyYmVpdGVuIHZv
+biI7DWxfQVRyYWl0ZXJQYXJNZXNHcm91cGVzID0gIlp1IGJlYXJiZWl0ZW5kZSBGb3JtdWxhcmUg
+bWVpbmVyIEdydXBwZSI7DWxfVHJhaXRlc1Bhck1vaSA9ICJWb24gbWlyIGJlYXJiZWl0ZXRlIEZv
+cm11bGFyZSI7DWxfVHJhaXRlc1Bhck1lc0dyb3VwZXMgPSAiVm9uIG1laW5lciBHcnVwcGUgYmVh
+cmJlaXRldGUgRm9ybXVsYXJlIjsNbF9FdGF0ID0gIkxpc3RlIjsNbF9EYXRlQXJyaXZlZUV0YXQg
+PSAiRWluZ2FuZ3NkYXR1bSBpbiBkZXIgTGlzdGUiOw1sX0VtaXNMZSA9ICJFcnN0ZWxsdCBhbSI7
+DWxfQVRyYWl0ZXJQYXIgPSAiWnUgYmVoYW5kZWxuIHZvbiI7DWxfQVRyYWl0ZXJQYXJQT0EgPSAi
+WnUgYmVoYW5kZWxuIHZvbiBQT0EiOw1sX1RyaVBhckRhdGUgID0gIk5hY2ggd2FjaHNlbmRlcyBE
+YXR1bSBzb3J0aWVyZW4iOw1sX1RyaVBhckVtZXR0ZXVyICA9ICJOYWNoIHdhY2hzZW5kZXIgTmFj
+aHNlbmRlciBzb3J0aWVyZW4iOw1sX1RyYWl0ZVBhciA9ICJCZWFyYmVpdGV0IHZvbiI7DWxfUmVm
+ZXJlbmNlID0gIkJlYXJiZWl0dW5nc251bW1lciI7DWxfRW1pc1BhciA9ICJFcnN0ZWxsdCB2b24i
+Ow1sX0VtaXNMZSA9ICJFcnN0ZWxsdCBhbSI7DWxfRGF0ZU1vZGlmID0gIkRhdHVtIGRlciBsZXR6
+dGVuIFZlcoRuZGVydW5nIjsNbF9Hcm91cGUgPSAiR3J1cHBlIjsNbF9QZ1ByZWMgPSAiVm9yaWdl
+IFNlaXRlIjsNbF9QZ1N1aXYgPSAiRm9sZ2VuZGUgU2VpdGUiOw1sX0RhdGVDcmVhdCA9ICJFcnN0
+ZWxsdW5nc2RhdHVtIjsNbF9UaXRyZSA9ICJUaXRlbCI7DWxfTWVzQnJvdWlsbG9ucyA9ICJNZWlu
+ZSBFbnR3gXJmZSI7DWxfTWVzTW9kZWxlcyA9ICJNZWluZSBWb3JsYWdlbiI7DWxfR3JvdXBlID0g
+IkdydXBwZSI7DWxfQ29uZmlybWVTdXBwcmVzc2lvbiA9ICJXb2xsZW4gU2llIGRpZXNlcyBEb2t1
+bWVudCB3aXJrbGljaCBslHNjaGVuID8iOw1sX05CUmVzdWx0YXRzID0gIkdlc2FtdHphaGwgZGVy
+IEVyZ2Vibmlzc2UgOiI7DWxfRW1pc0xlQ29ycmVnaWRvICA9ICJBYnJlaXNlIGFtIjsNbF9SZWN1
+ID0gIkZvcm11bGFyZSwgZGllIGljaCBlcmhhbHRlbiBoYWJlIjsNbF9FcnJEb2NzICA9ICJTaWUg
+aGFiZW4ga2VpbiBGb3JtdWxhciBnZXNwZWljaGVydCI7DWxfRXJyQnJvdWlsbG9uICA9ICJTaWUg
+aGFiZW4ga2VpbmVuIEVudHd1cmYgZoFyIGRhcyBGb3JtdWxhciBnZXNwZWljaGVydCAiOw1sX0Vy
+ck1vZGVsZSAgPSAiU2llIGhhYmVuIGtlaW5lIFZvcmxhZ2UgZoFyIGRhcyBGb3JtdWxhciBnZXNw
+ZWljaGVydCAiOw1sX0V0YWJsaXNzZW1lbnQgID0gIk5pZWRlcmxhc3N1bmciOw1sX05hdHVyZVBy
+ZXQgID0gIkFydCBkZXMgQXVzbGVpaGVuIjsNbF9EZXBhcnRMZSAgPSAiQWJmYWhydCBhbSI7DWxf
+UmV0b3VyTGUgID0gIlKBY2trZWhyIGFtIjsNbF9EZXN0aW5hdGlvbiAgPSAiWmllbG9ydCI7DWxf
+Vm90cmVSZXF1ZXRlICA9ICJJaHJlIEFuZnJhZ2UiOw1sX05iclBhc3NhZ2VycyA9ICJaYWhsIGRl
+ciBNaXRmYWhyZXIiOw1sX05vcm1hbCAgPSAiTm9ybWFsIjsNbF9BcmNoaXZhZ2UgID0gIkFyY2hp
+diI7DWxfQVRyYWl0ZXJQYXJHZXN0ID0gIlZvbiBWZXJ3YWx0ZXIgenUgYmVhcmJlaXRlbiI7DWxf
+RW5BdHRlbnRlVmFsaWQgPSAiTm9jaCBuaWNodCByZWNodHNngWx0aWciOw1sX0xpZW5WZXJzID0g
+IkxpbmsgbmFjaCI7AF//EAACAA8ABwAAAAAAAAA=
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_VuesSurFormsPT</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAo=
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>sm_VuesSurFormsDE</text><text
+>sm_VuesSurFormsDE</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item></note>
+

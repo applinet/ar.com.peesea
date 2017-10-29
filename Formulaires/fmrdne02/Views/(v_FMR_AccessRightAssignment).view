@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='11b2' unid='49A7E6F9F4BDE556C125787A00363DB2' sequence='75'>
+<created><datetime dst='true'>20110422T115227,38+02</datetime></created>
+<modified><datetime>20171029T101614,68-03</datetime></modified>
+<revised><datetime>20170904T113518,55-03</datetime></revised>
+<lastaccessed><datetime>20171029T101606,26-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101606,26-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_FMR_AccessRightAssignment)|v_FMR_AccessRightAssignment</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+oAACADoAAwAkMTgAAgAGAAAAAAAAAAUADwBGTVJfUm9sZU1lbWJlcnMAtAIBAAcAWzxici8+XQCF
+AgMABQAmACIAAwAMAAMACQBGTVJfUm9sZU5hbWUkMTgkQ29uZmxpY3QEAAQAAAAwAAUABABmb3Jt
+AQAbAG1fRk1SX0FjY2Vzc1JpZ2h0QXNzaWdubWVudAAKAgMABwAKAAQACUwxUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABEAGYAAAADACQxOA==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADABMACkAAAFZDAAAMAEEAAAAAAFAABQAACAAgAAAAAAAAAAICAAAAVkMAAAAAAQAYAA0ADQAB
+AAAKgAAAAAAAAAAAAgIAAABWQwEAAwBEAEgAAAAKAQYAAAgAAAAAAAAAAAACAgAAAEZNUl9Sb2xl
+TmFtZVs8ZGl2IGNsYXNzPSJDb2xvbm5lIj48c2NyaXB0PlByaW50KGZtcl9Sb2xlTmFtZSk8L3Nj
+cmlwdD48L2Rpdj5dfBgAAgAWAAIAJDMBAAcAICAgfCAgIAADAAEFAQAHACAgIHwgICAkMThbPGRp
+diBjbGFzcz0iQ29sb25uZSI+PHNjcmlwdD5QcmludChmbXJfUm9sZU1lbWJlcnMpPC9zY3JpcHQ+
+PC9kaXY+XUgAAgA6AAMAJDE4AAIABgAAAAAAAAAFAA8ARk1SX1JvbGVNZW1iZXJzALQCAQAHAFs8
+YnIvPl0AhQIDAAcADAAFAAk2UzlTACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQABAQAAAAAA
+AAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAA
+AAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAA
+AAAAAQAAAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAA
+AAABAP///wABAP///wAAAAEAAAAAAAEAgICAAAEAAAAAAAAACAAAAAAAAQA=
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Arial</text><text>6</text><text>38</text><text>Arial</text></textlist></item>
+<item name='$Comment' sign='true'><text>Règlementaire</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAABAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUA
+AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
+AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
+BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
+AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIABgA+fA==
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZUIBAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcqUGAD58
+</rawitemdata></item></note>
+

@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048FC18'>
+<noteinfo noteid='69a' unid='87307DE8C0255B0AC1256BC300538556' sequence='44'>
+<created><datetime dst='true'>20020524T171216,22+02</datetime></created>
+<modified><datetime>20171029T101718,46-03</datetime></modified>
+<revised><datetime>20170904T113523,64-03</datetime></revised>
+<lastaccessed><datetime>20171029T101715,20-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101715,20-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='f_EtatSoumis' summary='false' sign='true'><number>0</number></item>
+<item name='f_EtatRefus' summary='false' sign='true'><number>0</number></item>
+<item name='f_ProchainEtat' summary='false' sign='true'><number>0</number></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='DateCreate' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='TID_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='VDI_Date' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='COD_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$NoBackgroundOverride' sign='true'><text>1</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIEAAAAIgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$SubForms' sign='true'><textlist><text>sm_DSIN05LngsDispos</text><text
+>sm_ToutFormToutEtat</text><text>sm_ToutFormToutEtat</text><text>sm_ToutEtat</text><text
+>sm_Reengager</text><text>sm_EnTeteVisu</text><text>sm_DSIN05Sections</text><text
+>sm_CalendrierCSS</text><text>sm_Calendar_</text></textlist></item>
+<item name='$SubForm_RepIDs' sign='true'><textlist><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text></textlist></item>
+<item name='$Flags'><text>CD</text></item>
+<item name='f_TypeForm' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat' summary='false' sign='true'><number>0</number></item>
+<item name='f_EtatIcone' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EtatNoms' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_TypeEtat' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_TitresForm' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_AuteursAdmin' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_LecteursPotentiels' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_AuteursPotentiels' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_EstModele' summary='false' sign='true'><number>0</number></item>
+<item name='f_ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowGroupes' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_ActeursWorkflowIndividus' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='F_ENREGDATE' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='F_ENREGACTEUR' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='F_ADETRUIRE' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_CompterUtilisation' summary='false' sign='true'><number>0</number></item>
+<item name='f_EtatTerminal' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='server_name' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='HTTP_Referer' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='URL' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_BalFon' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='IDDoc' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Reengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='URLReengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='AutorReengager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Demand' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_MUD' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_Systeme' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_SousSysteme' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_CCID' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs2' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs3' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs4' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs5' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs6' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs7' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs8' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs9' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs10' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs11' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DBDs12' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_TypeAcces' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_ImsCics' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_BasesNou' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_DateObjetif' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='f_Etat1ActeursIndividu' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat1ActeursGroupe' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VDI_Dateapprob' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='f_Etat1Avis' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='f_Etat1Commentaires' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$PublicAccess' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><textlist><text>m_DSIN05Etat2-3</text><text
+>m_DSIN05Etat2-3</text></textlist></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwBAAAAAQABAAAAAwAAAAAAAAABAAAYCAACAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
+aV96ZQABAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
+AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
+cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
+AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcgAGAD58
+</rawitemdata></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwBAAAAAQABAAAAAwAAAAAAAAABAAAYCAACAHn/bAABAP///wABAAAAAAABAAAAAAABAAAgYAAA
+ADEAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUA
+AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
+AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
+BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
+AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIABgA+fA==
+</rawitemdata></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAmgAAAAAAAAAAAAAAAAAAAAAAAADc/6wA+f+aACBOAAAAAAAAAABmdW5jdGlv
+biBSZWVuZ2FnZXIoKSB7DXZhciB1cmxyZWVuZz1kb2N1bWVudC5mb3Jtc1swXS5VUkxSZWVuZ2Fn
+ZXIudmFsdWUNICAgIGlmIChjb25maXJtKGxfQ29uZlJlZW5nYWdlcikpDSAgICAgCXt3aW5kb3cu
+bG9jYXRpb249Z2F0ZXdheVVSTCh1cmxyZWVuZyl9fQAAX/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=\"0\" marginwidth=\"0\" marginheight=\"0\" leftmargin=\"0\""</formula></item>
+<item name='$WEBQueryOpen' sign='true'><formula>@SetHTTPHeader("Cache-Control";"no-store")</formula></item>
+<item name='$Fields'><textlist><text>f_Etat1Commentaires</text><text>f_Etat1Avis</text><text
+>VDI_Dateapprob</text><text>f_Etat1ActeursGroupe</text><text>f_Etat1ActeursIndividu</text><text
+>VDI_DateObjetif</text><text>VDI_BasesNou</text><text>VDI_ImsCics</text><text
+>VDI_TypeAcces</text><text>VDI_DBDs12</text><text>VDI_DBDs11</text><text>VDI_DBDs10</text><text
+>VDI_DBDs9</text><text>VDI_DBDs8</text><text>VDI_DBDs7</text><text>VDI_DBDs6</text><text
+>VDI_DBDs5</text><text>VDI_DBDs4</text><text>VDI_DBDs3</text><text>VDI_DBDs2</text><text
+>VDI_DBDs1</text><text>VDI_CCID</text><text>VDI_SousSysteme</text><text>VDI_Systeme</text><text
+>VDI_MUD</text><text>f_Demand</text><text>AutorReengager</text><text>URLReengager</text><text
+>Reengager</text><text>IDDoc</text><text>f_BalFon</text><text>URL</text><text
+>HTTP_Referer</text><text>Server_Name</text><text>f_EtatTerminal</text><text
+>f_CompterUtilisation</text><text>f_ADetruire</text><text>f_EnregActeur</text><text
+>f_EnregDate</text><text>f_ActeursWorkflowIndividus</text><text>f_ActeursWorkflowGroupes</text><text
+>f_ActeursGroupe</text><text>f_ActeursIndividu</text><text>f_EstModele</text><text
+>f_AuteursPotentiels</text><text>f_LecteursPotentiels</text><text>f_AuteursAdmin</text><text
+>f_TitresForm</text><text>f_TypeEtat</text><text>f_EtatNoms</text><text>f_EtatIcone</text><text
+>f_Etat</text><text>f_TypeForm</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_DSIN05Etat2-3</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+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
+CAABAAAKgQKDBAgAhf8IAAEAAAo=
+</rawitemdata></item></note>
+

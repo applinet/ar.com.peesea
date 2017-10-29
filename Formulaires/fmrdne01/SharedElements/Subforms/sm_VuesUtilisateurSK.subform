@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048C55E'>
+<noteinfo noteid='6aa' unid='9F5A74985A1670ADC12572F0003B3201' sequence='101'>
+<created><datetime dst='true'>20070604T124634,25+02</datetime></created>
+<modified><datetime>20171029T101458,37-03</datetime></modified>
+<revised><datetime>20170904T113507,22-03</datetime></revised>
+<lastaccessed><datetime>20171029T101455,28-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101455,28-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAAPAAQAhAMAAAAAAAAAAAAAAAAAAAAAAADc/5YD+f+EAyBOAAAAAAAAAABsX0RpciA9
+ICJSaWFkZW5pZSI7DWxfU2l0ZSA9ICJHZW9ncmFmaWNroCBwb2xvaGEiOw1sX0FjdCA9ICIGrGlu
+bm9zBpwiOw1sX1NjZSA9ICJPZGRlbGVuaWUiOw1sX05vbSA9ICJOoHpvdiBmb3JtdWygcnUiOw1s
+X05vdXZlYXUgPSAiTm927CI7DWxfQ2hvaXNpckZvcm1BY3QgPSAiVnlicmEGnCBmb3JtdWygciBw
+b2QGlmEgBp9pbm5vc3RpIjsNbF9DaG9pc2lyRm9ybURpciA9ICJWeWJyYQacIGZvcm11bKByIHBv
+ZAaWYSByaWFkZW5pYSI7DWxfQ2hvaXNpckZvcm1TaXRlID0gIlZ5YnJhBpwgZm9ybXVsoHIgcG9k
+BpZhIGdlb2dyYWZpY2tlaiBwb2xvaHkiOw1sX0Nob2lzaXJGb3JtU2VydmljZSA9ICJWeWJyYQac
+IGZvcm11bKByIHBvZAaWYSBvZGRlbGVuaWEgcG9kbmlrdSI7DWxfTGlzdGVGb3JtcyA9ICJab3pu
+YW0gZm9ybXVsoHJvdiI7DWxfUlRpdHJlID0gIlZ5aAaWYWSgdmFuaWUgcG9kBpZhIG6genZ1IjsN
+bF9SR2xvYmFsZSA9ICJacuxjaGxlboIgdnloBpZhZKB2YW5pZSI7DWxfTGFuY2VyID0gIlNwdXN0
+aQacIHZ5aAaWYWSgdmFuaWUiOw1sX05vdXZlbGxlID0gIk5vdoIgdnloBpZhZKB2YW5pZSI7DWxf
+TXNnRXJyUmVjaGVyY2hlR2xvYmFsZSA9ICIG0mFrdWplbWUsIAanZSBuZXBvdQanoXZhdGUgbmFz
+bGVkdWqjY2UgdnlocmFkZW6CIHNsb3agOiBcblxuIE5PVCAtIEFORCAtIE9SIjsNbF9zZXJ2aWNl
+cyA9ICJPZGRlbGVuaWEgcG9kbmlrdSI7DWxfcHJvZHVjRGVyb2cgPSAiVuxyb2JhLSBvZGNo7Gxr
+YSI7DWxfTWFycXVlID0gIlpuYQafa2EgQVAiOw1sX01hcnF1ZUFDID0gIlpuYQafa2EgQUMiOw1s
+X0Nob2lzaXJBaWRlID0gIlZ5YnJhBpwgcG9tb2Mga3UgZm9ybXVsoHJ1IjsNbF9JRmxhc2hUaXRy
+ZSA9ICJJbmZvIEZsYXNoIjsNbF9kaXZlcnMgPSAiUpN6bmUiOwBf/xAAAgAPAAcAAAAAAAAA
+</rawitemdata></item>
+<item name='$TITLE'><text>sm_VuesUtilisateurSK</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sm_VuesUtilisateurSK</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gv9GAAEAAAAAAAAAAACgBdcZoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAACUAKYwAwAAAAEASmF2YXNjcmlwdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AQAJCIECgv9aAAIAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAgQAAAACVh6AFDACgBQwA3y9kAAEAAAAEAAAAgwQCAMz/CAAAAAAA3QYAAIX/
+hf8NAAEAAgpSRU0gOgDSCAEA/wAAAN4GAACF/90GAACF/4X/FgABAAIIdm9pciBKUyBIZWFkZXLS
+CAEA/wAAAN4GAACF/83/CAAAAAAA
+</rawitemdata></item></note>
+

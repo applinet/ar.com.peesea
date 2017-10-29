@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C80048C55E" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="98e" sequence="74" unid="834F286C0B265C3BC1257846005D6019">
+<created><datetime dst="true">20110301T185954,49+02</datetime></created>
+<modified><datetime>20171029T101501,95-03</datetime></modified>
+<revised><datetime>20170904T113509,98-03</datetime></revised>
+<lastaccessed><datetime>20171029T101457,31-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101457,31-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>filet_bas_b.gif</text></item>
+<item name="$TITLE" sign="true"><textlist><text>Barre de langues\Image de fond</text><text>lngsbar_background_cacheable.gif</text></textlist></item>
+<item name="$Comment" sign="true"><text> </text></item>
+<item name="$DesignerVersion" sign="true"><text>7</text></item></note>

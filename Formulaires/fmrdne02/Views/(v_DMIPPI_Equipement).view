@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='e46' unid='A4ED501BDFEE970CC12575FC004C619D' sequence='101'>
+<created><datetime dst='true'>20090723T155417,25+02</datetime></created>
+<modified><datetime>20171029T101610,86-03</datetime></modified>
+<revised><datetime>20170904T113513,99-03</datetime></revised>
+<lastaccessed><datetime>20171029T101603,74-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101603,74-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=AHMED RADJDI - U299991/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - P659234/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name><name
+>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(v_DMIPPI_Equipement)|v_DMIPPI_Equipement</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+lAACADAAEQBETUlQUElfRXF1aXBlbWVudAAFABEARE1JUFBJX0VxdWlwZW1lbnQAAwAFACwAKAAD
+ABEACQAEAERNSVBQSV9FcXVpcGVtZW50JENvbmZsaWN0JFJFRgQABAAAACgABQAEAGZvcm0BABMA
+bV9ETUlQUElfRXF1aXBlbWVudAAKAgMABwAKAAQACUwxUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+HgABAABEAGYAAAARAERNSVBQSV9FcXVpcGVtZW50
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABABAACAAAAFZDAQARAC0AMgAAAFcAAQAACoAAAAAAAAAAAAICAAAARE1JUFBJX0VxdWlwZW1l
+bnRbPHNjcmlwdD5QcmludChsX0RNSVBQSV9FcXVpcGVtZW50KTwvc2NyaXB0Pl0yAAIAMAARAERN
+SVBQSV9FcXVpcGVtZW50AAUAEQBETUlQUElfRXF1aXBlbWVudAADACYAAQAAAAEBAAkBAAAKAQEO
+CgAAAQCtKwEAAQABAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAA
+AAAAAAAAAAAAAEIAAAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAAB
+AAAAAAABAAAAAAABAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

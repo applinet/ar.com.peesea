@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C80048DE00'>
+<noteinfo noteid='1516' unid='516D089C7350E5B0C1257C290030C892' sequence='47'>
+<created><datetime dst='true'>20131120T105250,74+02</datetime></created>
+<modified><datetime>20171029T101618,68-03</datetime></modified>
+<revised><datetime>20170904T113522,01-03</datetime></revised>
+<lastaccessed><datetime>20171029T101608,74-03</datetime></lastaccessed>
+<addedtofile><datetime>20171029T101608,74-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name><name>CN=DENIS FLOERCHINGER - E487955/OU=users/O=PSA</name><name
+>CN=AdminSignFMR/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>REFLEX_UpdateStock</text><text>REFLEX_UpdateStock</text></textlist></item>
+<item name='$Comment' sign='true'><text>Pre v14.1</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>C34WQ</text></item>
+<item name='$MimeType'><text>text/xml</text></item>
+<item name='$MimeCharSet'><text>UTF-8</text></item>
+<item name='$WebFlags'><text>H</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>REFLEX_CreateStock</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAzP8IAAAAAACF/1cABQAACjxV
+cGRhdGVTdG9ja1Jlc3AgeG1sbnM9Imh0dHA6Ly90ZW1wdXJpLm9yZy8iPgA8UkM+MDwvUkM+ADxM
+YWJlbD5zdHJpbmc8L0xhYmVsPgAAhf8aAAUAAAo8L1VwZGF0ZVN0b2NrUmVzcD7N/wgAAAAAAA==
+</rawitemdata></item></note>
+
