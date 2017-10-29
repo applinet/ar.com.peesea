@@ -1,0 +1,581 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+' On force la déclaration des variables
+Option Declare
+
+' Pour fonctionner cette librairie a besoin de la librairie Commune et de la librairie
+' contenant les fonctions communes entre l'import et la migration
+Use "Lib_Commune"
+Use "Lib_ImpMig"
+
+' Pour utiliser la barre de progression nous avons besoin de cette librairie
+Use "BarreDeProgression"
+
+' pour log applicative
+Use "LogEntry"  
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Initialize
+Declare Function TraitementImportFic
+Declare Function TraitementImportRep
+Declare Function RecupRepertoireCible( report As LogEntry)
+Declare Function SelectionFichier (report As LogEntry)
+Declare Function TraitementRecursif()
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:TraitementImportFic:1:8
+Function TraitementImportFic
+	
+	On Error Goto ErrorHandler
+	
+	'recupération du nom de l'instance et de la base de log applicative
+	Dim CurrentSession 	As New NotesSession	
+	Dim CurrentDB 		As NotesDatabase
+	Dim docprofil		As notesdocument
+	Dim nom_baselog 	As String
+	
+	Set CurrentDB = CurrentSession.CurrentDatabase
+	Set docprofil = CurrentDB.GetProfileDocument("M_ChpProfil_FR")	
+	
+	nom_baselog = Cstr(docprofil.nom_baselog(0))
+	
+	'On log l'exécution
+	Dim Report 				As New LogEntry
+	Report.LogType			= LOGLEVEL_INFO%
+	Report.SubName			= "Initialize"
+	Report.Component    	= "Import de fiche par fichier"
+	Report.DocID		   	= ""
+	Report.LibName    		= "Lib_Import"
+	Report.ClassName		= "TraitementImportFic"
+	Report.Msg				= "Début traitement importation des fichiers sélectionnées "
+	
+	' Avant tout, on test si on fait bien une remontée de fichiers Tif ou Autocad
+	' La remontée de Xelec par cette méthode est interdite !!!
+	
+	If ChoixFormatFichier="format3" Then
+		Msgbox "Pour les fichiers Xelec, seule la méthode : " & Chr$(10) & """Importation de l'ensemble des fichiers d'un répertoire"" est possible !",48,"Avertissement"
+		Report.AddDebugLine( "Pour les fichiers Xelec, seule la méthode Importation de l'ensemble des fichiers d'un répertoire"" est possible !"  )
+		' Annulation du traitement	
+		End
+	End If
+	
+	' Importation depuis un ensemble de fichiers sélectionnés par l'utilisateur
+	
+	' On initialise la gestion des erreurs à vide
+	i_err = 0
+	i_err_p = 0
+	s_erreur = ""
+	i_flag_migr = 0
+	
+	' Appel de la fonction permettant la sélection des fichiers à traiter
+	
+	Call SelectionFichier(Report)
+	
+	' Traces pour afficher les fichiers sélectionnés
+	Dim messagelist As String
+	Report.AddDebugLine("Début de liste des fichiers non dat sélectionner." )
+	Forall filelist In l_liste_sel
+		Report.AddDebugLine( "   Fichier : " + filelist )
+	End Forall
+	Report.AddDebugLine( "Fin de liste ." )
+	
+	' On reboucle sur les fichiers qui ne sont pas .dat pour récupérer les fichiers associés
+	If ( i_err = 0 ) Then
+		Forall compose In l_liste_sel
+			
+			Dim s_dec_dat As String
+			Dim s_dec_pj As String
+			Dim s_dec_pj2 As String
+								
+			' On ne prend que le nom du fichier sans l'extension du fichier pj
+			s_dec_pj = strRightback(compose,"-")
+						
+			If Len(s_dec_pj) > 0 Then
+				s_dec_pj2 = StrRightBack(compose,"\")
+				If Len(s_dec_pj) > Len(s_dec_pj2) Then
+					s_dec_pj = Strleftback(compose,".")
+				else
+					s_dec_pj = StrLeftBack(compose,"-")
+				End If 
+			Else
+				s_dec_pj = StrLeftBack(compose,".")
+			End If
+					
+			If( Len(s_dec_pj) > 0 ) Then
+								
+				' Maintenant que l'on a le début du fichier on scrute le tableau de documents
+				' pour y ajouter un fichier associé
+				Forall objrech In l_listedoc
+					' On ne prend que le nom du fichier sans l'extension du fichier dat
+					s_dec_dat = StrLeftBack(objrech.NomFichier,".dat")
+					If s_dec_dat = s_dec_pj Then
+						If ( objrech.FlagNomFichier = 0 ) Then
+							' On ajoute le fichier dans la liste des fichiers associés
+							objrech.AjoutFicAsso(compose)
+						End If
+					End If
+				End Forall
+			End If
+		End Forall		
+	End If
+	
+	' Exploitation des fichiers et création des documents
+	If ( i_err = 0 ) Then
+		Call LectureCreation(Report)
+	End If
+	
+	' Affichage de l'erreur s'il y en a une
+	If ( i_err <> 0 ) Then
+		Report.AddDebugLine( "Erreur : "  + s_erreur )
+		Messagebox ( "Erreur : " + s_erreur )
+	End If
+	
+	' Affichage de l'erreur partielle s'il y en a une
+	If ( i_err_p <> 0 ) Then
+		Messagebox ( "Il y a eu des erreurs dans le traitement." & Chr$(10) & "Consulter le fichier de log" )
+	End If
+	
+	' Appel de la fonction de nettoyage
+	Nettoyage
+	
+	Report.AddDebugLine( "Fin traitement importation des fichiers sélectionnées." )
+	Call Report.Save(CurrentDB.server, nom_baselog)
+	
+	Exit Function
+	
+ErrorHandler:
+	
+	Dim LogEntry As New LogEntry
+	
+	' Erreur propagée
+	If (Err = ERROR_PROPAGATE%) Then
+		
+		' On charge les valeurs depuis le message d'erreur
+		LogEntry.FromString(Error$)
+		
+	' Autres erreurs
+	Else	
+		
+		' On log l'erreur
+		LogEntry.LogType			= LOGLEVEL_ERROR%
+		LogEntry.SubName		= "Initialize"
+		LogEntry.Erl 					= Erl
+		LogEntry.Err					= Err
+		LogEntry.Msg				= Error$ 
+		LogEntry.AddDebugLine("cle   : ")
+	End If
+	
+	If Not Report Is Nothing Then
+		Call Report.Save(CurrentDB.server, nom_baselog)
+	End If
+	
+	Call LogEntry.Save(CurrentDB.server, nom_baselog)
+	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:TraitementImportRep:1:8
+Function TraitementImportRep
+	
+	On Error Goto ErrorHandler
+	On Error 76 Goto TraiteErreur
+	
+'recupération du nom de l'instance et de la base de log applicative
+	Dim CurrentSession 	As New NotesSession	
+	Dim CurrentDB 			As NotesDatabase
+	Set CurrentDB = CurrentSession.CurrentDatabase
+	Dim docprofil				As notesdocument
+	Dim nom_baselog 	As String
+	
+	Set docprofil = CurrentDB.GetProfileDocument("M_ChpProfil_FR")	
+	Stop
+	
+	nom_baselog = Cstr(docprofil.nom_baselog(0))
+	
+'On log l'exécution
+	Dim Report 				As New LogEntry
+	Report.LogType			= LOGLEVEL_INFO%
+	Report.SubName		= "Initialize"
+	Report.Component    	= "Import de fiche d'un repertoire  en récursif"
+	Report.DocID		    		= "Selection utilisateur"
+	Report.LibName    		= "Lib_Import"
+	Report.ClassName		= "TraitementImportRep"
+	Report.Msg				= "Début traitement importation du repertoire sélectionnées en récursif"
+	
+	If ChoixFormatFichier<>"format3" Then
+		
+	' Cas des fichiers tif et autocad:
+	' ****************************************************************************************************************************************	
+		' On initialise la gestion des erreurs à vide
+		i_err = 0
+		i_err_p = 0
+		s_erreur = ""
+		i_flag_migr = 0
+		
+		' Appel de la fonction permettant la récupération des champs contenus dans le masque
+		Call RecupRepertoireCible(Report)
+		
+		' Appel de la fonction permettant la récupération de la liste des fichiers dans le répertoire cible
+		If ( i_err = 0 ) Then
+			Call ExploiteRep ( s_champ_repertoire,Report )
+		End If
+		
+		' Exploitation des fichiers et création des documents
+		If ( i_err = 0 ) Then
+			Call LectureCreation(Report)
+		End If
+		
+		' Appel de la fonction de nettoyage
+		Nettoyage
+		
+		Report.AddDebugLine( "Fin traitement importation d'un répertoire sélectionné." )
+		
+	' Fin traitement des tifs et autocad	
+	' ****************************************************************************************************************************************	
+		
+	Else
+	'	
+	' Cas des fichiers Xelec :
+	' ##############################################################################
+	'	
+		' Traitement de répertoires
+		
+		' On initialise la gestion des erreurs à vide
+		i_err = 0
+		i_err_p = 0
+		s_erreur = ""
+		i_flag_migr = 0
+		
+		' affectation du chemin du repertoire cible s_champ_repertoire:
+		Call RecupRepertoireCible(report)
+		
+		Dim filename As String
+		Dim err_NotDirectory As Integer
+		Dim PresencePointDat As String
+		
+		' Construction de la liste des sous-répertoires qui contiennent les fichier Xelec (ListeSousRep) 
+		fileName = Dir(s_champ_repertoire +"*.*",16) 
+		Dim cpt As Integer
+		cpt=0
+		Redim Preserve ListeSousRep(cpt)
+		Stop			
+		ListeSousRep(cpt)=""
+		Do While fileName <> ""
+			If fileName<>"." And fileName<>".." Then			
+				' Un répertoire: faisons un Chdir pour être sur....
+				'Msgbox "Chdir sur: " & s_champ_repertoire+fileName			
+				'Messagebox "goto traiterreur"
+				'On Error Goto TraiteErreur				
+				Chdir s_champ_repertoire+fileName
+				If err_NotDirectory=0 Then
+					Redim Preserve ListeSousRep(cpt)
+					ListeSousRep(cpt)=fileName
+					cpt=cpt+1	
+				Else
+					err_NotDirectory=0
+				End If
+				If cpt=100 Then End
+			End If
+			fileName= Dir()	
+		Loop		
+		Chdir s_champ_repertoire
+		
+		If ListeSousRep(0)="" Then
+			Messagebox "Pas de sous-répertoire dans le répertoire sélectionné !" & Chr$(10) & "Importation annulée...",16,"Avertissement"
+			End
+		End If
+		
+		' Balayage de chaque sous-répertoire pour construire l_listedoc et l_ficasso
+		i_nb_document = 0 		' représente le nb de *.dat
+		Forall sousRep In ListeSousRep
+		'	
+		'  1 ère passe: on récupère seulement le *.dat ---> construction de l_listedoc
+		'
+			fileName = Dir(s_champ_repertoire+"\"+sousRep + "\" +"*.*",0)
+			cpt=0
+			PresencePointDat="Non"
+			Do While fileName <> ""
+				If fileName<>"." And fileName<>".."  Then			
+					Dim pos As Integer
+					pos = Instr(1,Lcase(fileName),".dat")
+					If ( pos > 0 ) Then
+						PresencePointDat="Oui"
+						Redim Preserve l_listedoc(i_nb_document)
+						Dim obj_doc As Variant
+						Set obj_doc = New ClasseDocument2
+						obj_doc.i_nb_ficasso = 0
+						obj_doc.NomFichier = sousRep+"\"+fileName
+						Set l_listedoc ( i_nb_document ) = obj_doc
+						i_nb_document = i_nb_document +1
+					End If		
+					cpt=cpt+1
+					If cpt=100 Then End
+				End If
+				fileName= Dir()	
+			Loop		
+		'
+		' Test s'il y a un point dat, sinon erreur :
+		' 
+			If PresencePointDat="Non" Then
+				Report.AddDebugLine( "Pas de fichier .dat dans le sous-répertoire " & sousRep)
+				'Messagebox "goto traiterreur"
+				'Goto ForallSuivant
+			End If
+			
+		'	
+		'  2 ème passe: on récupère tous les fichiers Xelec à mettre en pièce jointe (tout SAUF le *.dat) 
+		' ---> construction de l_ficasso pour le l_listedoc en cours
+		'
+			fileName = Dir(s_champ_repertoire+"\"+sousRep + "\" +"*.*",0)
+			cpt=0
+			Do While fileName <> ""
+				If fileName<>"." And fileName<>".."  Then			
+					pos = Instr(1,Lcase(fileName),".dat")
+					If ( pos <= 0 ) Then
+					' On ajoute le fichier dans la liste des fichiers associés
+						obj_doc.AjoutFicAsso(s_champ_repertoire+ sousRep + "\"+fileName)			
+					End If		
+					cpt=cpt+1
+					If cpt=100 Then End
+				End If
+				fileName= Dir()	
+			Loop		
+			
+ForallSuivant:	
+		End Forall
+		
+		' Exploitation des fichiers et création des documents
+		If ( i_err = 0 ) Then
+			Call LectureCreation(Report)
+		End If
+		
+	End If
+	
+	Call Report.Save(CurrentDB.server, nom_baselog)
+	
+	Exit Function
+	
+TraiteErreur:
+	If Err=76 Then
+		'Messagebox "Error" & Str(Err) & ": " & Error$
+		err_NotDirectory=1
+	End If
+	Resume Next	
+	
+ErrorHandler:
+	
+	Dim LogEntry As New LogEntry
+	
+	' Erreur propagée
+	If (Err = ERROR_PROPAGATE%) Then
+		
+		' On charge les valeurs depuis le message d'erreur
+		LogEntry.FromString(Error$)
+		
+	' Autres erreurs
+	Else	
+		
+		' On log l'erreur
+		LogEntry.LogType			= LOGLEVEL_ERROR%
+		LogEntry.SubName		= "Initialize"
+		LogEntry.Erl 					= Erl
+		LogEntry.Err					= Err
+		LogEntry.Msg				= Error$ 
+		LogEntry.AddDebugLine("cle   : ")
+	End If
+	
+	If Not Report Is Nothing Then
+		Call Report.Save(CurrentDB.server, nom_baselog)
+	End If
+	
+	Call LogEntry.Save(CurrentDB.server, nom_baselog)
+	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:RecupRepertoireCible:1:8
+Function RecupRepertoireCible( report As LogEntry)
+	
+     ' on construit le répertoire temporaire en fonction de l'os du micro
+	Dim microtemp As String
+	Dim microsep As String
+	
+	microtemp= DefinirTempRep
+	microsep =  DefinirSeparateur
+	
+	' Récupération du répertoire à traiter
+	
+	Dim Reps As Variant
+	Dim uiws As New NotesUIWorkspace
+	
+	Reps=uiws.SaveFileDialog(True,"Choix du répertoire à traiter : ","",microtemp)
+	
+	If Isempty(Reps) Then
+		s_erreur = "Veuillez sélectionner un répertoire à traiter."
+		i_err = -1
+		Report.AddDebugLine( "Annulation lors de la sélection du dossier." )
+	Else
+		Forall Rep In Reps
+			s_champ_repertoire = Rep + microsep
+		End Forall
+		Report.AddDebugLine( "Répertoire sélectionné : " + s_champ_repertoire ) 
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:1:SelectionFichier:1:8
+Function SelectionFichier (report As LogEntry)
+	
+     ' on construit le répertoire temporaire en fonction de l'os du micro
+	Dim microtemp As String
+	Dim microsep As String
+	
+	microtemp= DefinirTempRep
+	microsep =  DefinirSeparateur
+	
+	' On demande à l'utilisateur de sélectionner les fichiers à traiter
+	Dim workspace As New NotesUIWorkspace
+	Dim files As Variant
+	files = workspace.OpenFileDialog(True, "Veuillez sélectionner les fichiers à importer dans SCANUP :", "", microtemp)
+	
+	If ( Isempty(files) = False ) Then
+		i_nb_document = 0
+		i_nb_sel = 0
+		
+		' Pour tous les fichiers .dat on va créé une instance d'objet ClasseDocument
+		Forall lecture In files
+			Dim pos As Integer
+			pos = Instr(1,Lcase(lecture),".dat")
+			
+			If ( pos > 0 ) Then
+				' On redimensionne le tableau des documents
+				Redim Preserve l_listedoc ( i_nb_document )
+				
+				' Creation d'une nouvelle instance d'objet
+				Dim obj_doc As Variant
+				Set obj_doc = New ClasseDocument2
+				obj_doc.i_nb_ficasso = 0
+				obj_doc.NomFichier = lecture
+				Set l_listedoc ( i_nb_document ) = obj_doc
+				i_nb_document = i_nb_document +1
+			Else
+				' On mémorise les fichiers sélectionnés qui ne sont pas .dat
+				Redim Preserve l_liste_sel (i_nb_sel) As Variant
+				l_liste_sel (i_nb_sel) = lecture
+				i_nb_sel = i_nb_sel + 1
+			End If		
+			
+		End Forall
+		
+		'Messagebox " nombre de fichier associes   1 : "  & Cstr(obj_doc.i_nb_ficasso)
+		
+		' On test si au moin un fichier .dat à traiter
+		If ( i_nb_document = 0 ) Then
+			s_erreur = "Vous devez sélectionner au moins un fichier .dat pour l'importation."
+			i_err = -1
+			Report.AddDebugLine( "Erreur : auncun fichier .dat sélectionné." )
+		End If
+	Else
+		s_erreur = "Vous devez sélectionner les fichiers à traiter. (Maxi 12)"
+		i_err = -1
+		Report.AddDebugLine( "Erreur : aucun fichier sélectionné ou sup à 12" )
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:1:TraitementRecursif:1:8
+Function TraitementRecursif()
+	
+	On Error Goto ErrorHandler
+	
+	'recupération du nom de l'instance et de la base de log applicative
+	Dim CurrentSession 	As New NotesSession	
+	Dim CurrentDB 			As NotesDatabase
+	Set CurrentDB = CurrentSession.CurrentDatabase
+	Dim docprofil				As notesdocument
+	Dim nom_baselog 	As String
+	
+	Set docprofil = CurrentDB.GetProfileDocument("M_ChpProfil_FR")	
+	
+	nom_baselog = Cstr(docprofil.nom_baselog(0))
+	
+	'On log l'exécution
+	Dim Report 				As New LogEntry
+	Report.LogType			= LOGLEVEL_INFO%
+	Report.SubName		= "Initialize"
+	Report.Component    	= "Import de fiche "
+	Report.DocID		    		= "traitement récurcif"
+	Report.LibName    		= "Lib_Import"
+	Report.ClassName		= "Traitementrecurcif"
+	Report.Msg				= "Début traitement recurcif "	
+'  
+	' Avant tout, on teste si on fait bien une remontée de fichiers Tif ou Autocad
+	' La remontée de Xelec par cette méthode est interdite !!!
+	
+	If ChoixFormatFichier="format3" Then
+		Msgbox "Pour les fichiers Xelec, seule la méthode : " & Chr$(10) & """Importation de l'ensemble des fichiers d'un répertoire"" est possible !",48,"Avertissement"
+		' Annulation du traitement	
+		End
+	End If
+	'
+	' On initialise la gestion des erreurs à vide
+	i_err = 0
+	i_err_p = 0
+	s_erreur = ""
+	i_flag_migr = 0
+	
+	Report.AddDebugLine( "Début traitement importation récursive." )
+	
+	' Appel de la fonction permettant la récupération du répertoire à traiter
+	Call RecupRepertoireCible(report)
+	
+	' Traitement récursif du répertoire sélectionné
+	If ( i_err = 0 ) Then
+		Call TraitRecursifRep ( s_champ_repertoire,Report )
+	End If
+	
+	' Appel de la fonction de nettoyage
+	Nettoyage
+	
+	Report.AddDebugLine( "Fin traitement importation récuirsive." )
+	
+ErrorHandler:
+	
+	Dim LogEntry As New LogEntry
+	
+	' Erreur propagée
+	If (Err = ERROR_PROPAGATE%) Then
+		
+		' On charge les valeurs depuis le message d'erreur
+		LogEntry.FromString(Error$)
+		
+	' Autres erreurs
+	Else	
+		
+		' On log l'erreur
+		LogEntry.LogType			= LOGLEVEL_ERROR%
+		LogEntry.SubName		= "Initialize"
+		LogEntry.Erl 					= Erl
+		LogEntry.Err					= Err
+		LogEntry.Msg				= Error$ 
+		LogEntry.AddDebugLine("cle   : ")
+	End If
+	
+	If Not Report Is Nothing Then
+		Call Report.Save(CurrentDB.server, nom_baselog)
+	End If
+	
+	Call LogEntry.Save(CurrentDB.server, nom_baselog)
+	
+	Exit Function
+	
+End Function

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='111e' unid='F354DD3B3F210AE6C12577260046BB72' sequence='24'>
+<created><datetime dst='true'>20100517T145235,06+02</datetime></created>
+<modified><datetime>20171028T233210,23-03</datetime></modified>
+<revised><datetime>20160721T105932,87-03</datetime></revised>
+<lastaccessed><datetime>20171028T233205,55-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233205,55-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$TITLE' sign='true'><text>Mise à jour Planche</text></item>
+<item name='$AssistType' sign='true'><number>65412</number></item>
+<item name='$AssistLastRun' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$AssistDocCount' sign='true'><number>0</number></item>
+<item name='$FlagsExt' sign='true'><text/></item>
+<item name='$AssistFlags' sign='true'><text>Es</text></item>
+<item name='$MachineName' sign='true'><text>CN=DEV025.DOMINO/OU=S/O=PSADEVDSIN</text></item>
+<item name='$AssistTrigger'><text>1</text></item>
+<item name='$AssistInfo' sign='true'>
+<rawitemdata type='11'>
+AQABAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</rawitemdata></item>
+<item name='$AssistQuery' sign='true'>
+<rawitemdata type='f'>
+gQYAAAAA
+</rawitemdata></item>
+<item name='$AssistAction' sign='true'>
+<rawitemdata type='10'>
+gQKE/+ABAAAAANYB1gEBAFQABwBwbGFuY2hlAAIADwAAAAAAAAABABMATWlzZSCFIGpvdXIgcGxh
+bmNoZQABABcARW50cmV6IGxlIG74IGRlIHBsYW5jaGUAAQAAALAEAwAHABgAEQAJNFM1UzZTN1M4
+UzEwUzExUwADADwAFwBEb2NfRmxhZ0Rlcm5pZXJlVmVyc2lvbgAFABcARG9jX0ZsYWdEZXJuaWVy
+ZVZlcnNpb24AAwAHAAwABQAJMFIxUwAIACoAAQAXAERvY19GbGFnRGVybmllcmVWZXJzaW9uAAEA
+AQAxAMQCAwAHAAoAAwAJMFIAAwAwABEARG9jX051bWVyb1ZlcnNpb24ABQARAERvY19OdW1lcm9W
+ZXJzaW9uAAMABwAMAAUACTBSMVMACAAkAAEAEQBEb2NfTnVtZXJvVmVyc2lvbgABAAEAMQDEAgMA
+BwAKAAMACTBSAAMAMAARAERvY19OdW1lcm9QbGFuY2hlAAUAEQBEb2NfTnVtZXJvUGxhbmNoZQAD
+AAcADAAFAAkwUjFTAAgAKgABABEARG9jX051bWVyb1BsYW5jaGUABQAHAHBsYW5jaGUAxAIDAAcA
+CgADAAkwUgAAAAgAZgADAAcACgAEAAlMMVM=
+</rawitemdata></item>
+<item name='$AssistAction_Ex' sign='true'>
+<rawitemdata type='14'>
+gQI=
+</rawitemdata></item>
+<item name='$Restricted' sign='true'><number>0</number></item>
+<item name='$Flags'><text>Sf3</text></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$AssistRunInfo' summary='true'>
+<rawitemdata type='3'>
+BgAAAgAACAAaEQAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAztMpAMN3JcEI9ykARXclwQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqq
+</rawitemdata></item>
+<item name='$AssistVersion'><datetime>20160721T105929,31-03</datetime></item>
+<item name='$POID'><datetime>20160721T105932,87-03</datetime></item></note>
+

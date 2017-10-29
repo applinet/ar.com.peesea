@@ -1,0 +1,59 @@
+'++LotusScript Development Environment:2:5:(Options):0:66
+Option Public
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Public Class LNProgressbar
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Declare Public Function NEMProgressBegin Lib "nnotesws.dll" ( Byval wFlags As Integer ) As Long
+Declare Public Sub NEMProgressDeltaPos Lib "nnotesws.dll" ( Byval hwnd As Long, Byval dwIncrement As Long )
+Declare Public Sub NEMProgressEnd Lib "nnotesws.dll" ( Byval hwnd As Long )
+Declare Public Sub NEMProgressSetBarPos Lib "nnotesws.dll" ( Byval hwnd As Long, Byval dwPos As Long)
+Declare Public Sub NEMProgressSetBarRange Lib "nnotesws.dll" ( Byval hwnd As Long, Byval dwMax As Long )
+Declare Public Sub NEMProgressSetText Lib "nnotesws.dll" ( Byval hwnd As Long, Byval pcszLine1 As String, Byval pcszLine2 As String )
+
+Const NPB_TWOLINE = 3
+Const NPB_ONELINE = 2
+
+Public Class LNProgressbar
+	
+	hwnd As Long
+	
+	Sub New(SecondLineVisible As Integer)
+ 'Set-up the progress bar on the screen 
+		If SecondLineVisible Then
+			hwnd = NEMProgressBegin(NPB_TWOLINE) 
+		Else
+			hwnd = NEMProgressBegin(NPB_ONELINE)
+		End If
+	End Sub
+	
+	Sub SetText(FirstLineText As String,SecondLineText As String)
+ 'Display the text in progress bar 
+		NemProgressSetText hwnd, FirstLineTExt,SecondLineText 
+	End Sub
+	
+	Sub SetProgressPos(Progresspos As Long)
+		NEMProgressSetBarPos hwnd, ProgressPos 
+	End Sub
+	
+	Sub SetProgressRange(ProgressMaxElements As Long)
+ 'Set-up the max elements in the progress bar, if you have 
+ 'a list with 230 elements then set the MAX to 230 elements.
+ 'For every element you proceed increase the SetProgressPos 
+ 'by one to reached 230 
+		
+		NEMProgressSetBarRange hwnd, ProgressMaxElements
+		
+	End Sub
+	
+	Sub DeltaPos(DPos As Long)
+ ' This function adds the number in DPOS to the current ProgressPos
+		NEMProgressDeltaPos hwnd, DPos
+	End Sub 
+	
+	Sub PBDelete
+ 'Terminate the progress bar on the screen 
+		NEMProgressEnd hwnd
+	End Sub
+End Class

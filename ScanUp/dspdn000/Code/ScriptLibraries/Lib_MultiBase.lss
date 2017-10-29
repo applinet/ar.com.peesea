@@ -1,0 +1,1374 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+
+' Pour fonctionner cette librairie a besoin de la librairie commune
+Use "Lib_Commune"
+
+' pour log applicative
+Use "LogEntry" 
+
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub CreationNouveauDocument
+Declare Sub SuppressionDocument(nom  As String, nodoc As String, CodeMabec As String)
+Declare Sub VisualisationPJSauvegarde
+Declare Sub SauvegardePieceJointe
+Declare Sub MiseADisposition
+Declare Sub FlagCreationBase
+Declare Function TestNomPiecesJointes( CurDoc As Notesdocument) As String
+Declare Sub VisualisationPJ
+Declare Sub ValiderConversionSEE
+Declare Function RemovePiecesJONITIES( curDocFirst As NotesDocument, db_base As NotesDatabase, NumFiche$) As Boolean
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Dim ss As NotesSession
+Dim ws As NotesUIWorkspace
+Dim uidoc_courant As NotesUIDocument
+Dim uivew_courant As NotesUIView
+Dim db As NotesDatabase
+Dim dbpj As NotesDatabase
+Dim db_base As NotesDatabase
+Dim docprofil As NotesDocument
+Dim curDoc As NotesDocument
+Dim newDoc As NotesDocument
+Dim doc_nouveau As NotesDocument
+Dim rtitem As NotesRichTextItem
+Dim nombasepj As Variant     
+Dim nomobject As Variant
+Dim path As String
+Dim v1 As Variant
+Dim v2 As Variant
+Dim existePJ As String
+
+'++LotusScript Development Environment:2:2:CreationNouveauDocument:1:8
+Sub CreationNouveauDocument
+	
+	' Instance du nouveau document : NotesDocument
+	Set doc_nouveau = New NotesDocument( db_base )
+	
+	' instance du doc profil
+	Set docProfil=db_base.GetProfileDocument("M_ChpProfil_FR")
+	
+	' Copie du document courant dans  un nouveau document
+	Call curDoc .CopyAllItems( doc_nouveau, True )
+	
+	' Affection du form suivant le type de la base (Scanup OU Outils Coupants)
+	If docProfil.IsBaseOutils(0)="Oui" Then
+		doc_nouveau.Form = "M_CreationOutil"		
+	Else
+		doc_nouveau.Form = "M_CreationDoc_FR"	
+	End If
+	
+	' On positionne le flag à création
+	doc_nouveau.Doc_FlagEtat = "1"
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:SuppressionDocument:1:8
+Sub SuppressionDocument(nom  As String, nodoc As String, CodeMabec As String)
+	' gestion de la suppression des pièces jointes dans le cas de 
+	' suppression d'un document
+	
+	On Error Goto erreurhandler
+	
+	Set ss = New NotesSession
+	Set db = ss.CurrentDatabase
+	Dim curDoc As NotesDocument
+	Dim view As NotesView
+	
+	' Ouverture de la base des pièces jointes
+	path = db.FilePath
+	v1 = Strleftback(path,"\")
+	v2 = v1 + "\" + nom
+	'Msgbox(v2)
+	Set dbpj = New NotesDatabase(db.server, v2)
+	
+	'Test de l'existence de la base, si non on arrête tout
+	If dbpj.IsOpen=False Then
+		Messagebox "Base d'enregistrement des pièces jointes non trouvée : prendre contact avec le PFA de ScanUp" _
+		& Chr$(10) & "Le doc " & CodeMabec & " ne sera pas supprimé.",16,"Avertissement"
+		End
+	End If
+	
+	' suppression de la pièce jointe
+	Set view=dbpj.GetView("V_ListePJ_FR")
+	Set curDoc=view.GetDocumentByKey(nodoc)	
+	
+	'Set curDoc = dbpj.GetDocumentByUNID(nodoc)
+	
+	If curDoc Is Nothing Then
+		'Messagebox "La piece jointe avec l'ID: " & nodoc & " a déjà été détruite ! " _
+		'& Chr$(10) & "Cependant le document principal sera bien supprimé",48,"Avertissement"
+	Else
+		Call curDoc.Remove( True )
+		Call view.Refresh
+	End If
+	
+	Exit Sub
+	
+erreurhandler:
+	Msgbox "erreur " + Cstr(Err) + "-ligne " + Cstr(Erl) + "-message : " + Error$ 
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:VisualisationPJSauvegarde:1:8
+Sub VisualisationPJSauvegarde
+	
+	' !!! Sauvegarde au cas ou, cette fonction n'est plus utilisée !!!
+	
+%REM
+
+	Ce sous-programme permet la visualisation directe des pièces jointes attachées au document,
+	 via le programme de visualisation associé à l'extension du fichier.
+	L'utilisateur ne peut visualiser que le fichier qu'il a sélectionner dans la boîte de dialogue
+	 qui s'affiche après le clic sur le bouton visualiser
+	
+	ATTENTION: pour fonctionner correctement, la visualisation des pièces jointes engendre la création et la sauvegarde de
+	documents m_LancementPJ, dont la destruction est gérée par l'agent "SupDocLancePJ"
+	Il est en effet inutile de conserver ces documents dans la base
+
+%END REM
+	
+     ' on construit le répertoire temporaire en fonction de l'os du micro
+	Dim microtemp As String
+	Dim microsep As String
+	
+	microtemp= DefinirTempRep
+	microsep =  DefinirSeparateur
+	
+	Dim session As New notesSession
+	Dim db As notesDatabase
+	Set db=session.currentDatabase
+	Dim doc As NotesDocument
+	Dim docPJ As NotesDocument
+	Dim uidoc As NotesUIDocument
+	Dim uiwks As New NotesUIWorkspace
+	Set uidoc=uiwks.CurrentDocument
+	Set doc=uidoc.document
+	Dim view As NotesView
+	
+	' Récupération du nom de la pièce jointe à visualiser
+	' Création de la boîte de dialogue permettant de choisir celle-ci
+	
+	' Test si le user en cours est un gestionnaire:
+	Dim level As Integer
+	level = db.CurrentAccessLevel	
+	' Par défaut :
+	IsGestionnaire="Non"
+	NotesMacro$ = "@If(@IsMember(""[admin]""; @UserRoles); ""Oui""; ""Non"")"
+	RoleAdmin = Evaluate(NotesMacro$)
+	NotesMacro$ = "@If(@IsMember(""[gestion]""; @UserRoles); ""Oui""; ""Non"")"
+	RoleGestion = Evaluate(NotesMacro$)
+	If RoleAdmin(0)="Oui" Or RoleGestion(0)="Oui" Or level=6 Then
+		IsGestionnaire="Oui"
+	End If
+	
+	' RAJOUT de la V2, si la personne connectée n'est pas gestionnaire (donc consultant) et que le format est Xelec, on n'affiche que le pdf
+	i=0
+	If IsGestionnaire="Non" And doc.FormatFichier(0)="format3" Then
+		' on affiche un seul fichier: le pdf !!!
+		Redim Preserve ChoixVisu(i)	
+	     'voir pour multipdf MG
+		
+		ChoixVisu(i)=doc.XelecListePdf(0)
+		i=1
+	Else
+		Forall item In doc.Nom_PJ
+			Redim Preserve ChoixVisu(i)			
+			ChoixVisu(i)=item
+			i=i+1
+		End Forall
+	End If
+	
+	' Affichage d'une boîte de dialogue seulement quand il y a plus d'une pièce jointe	
+	If i=1 Then
+		ChoixVisualisation=ChoixVisu(0)
+	Else
+		ChoixVisualisation=uiwks.prompt(PROMPT_OKCANCELCOMBO, _
+		"Choix du fichier","Veuillez choisir le fichier à visualiser : ",ChoixVisu(0),ChoixVisu)
+	End If
+	
+	' Si l'utilisateur ne clique pas sur annuler on continue le traitement :	
+	If ChoixVisualisation<>"" Then
+		
+	' Récupération du chemin de la base des pièces jointes associée au document en cours	
+	' Normalement les bases de stockage sont dans le même répertoire que ScanUp !
+		Dim dbpj As NotesDatabase
+		cheminBase = Strleftback(db.FilePath,"\") + "\" + doc.Base_PJ(0)
+		Set dbpj = New NotesDatabase(db.server, cheminBase)
+	' Test de l'existence de la base des pièces jointes
+		If doc.Nom_PJ(0)="" Then
+			Messagebox "Aucune pièce jointe n'est associée à ce document",16,"Avertissement !"
+			Exit Sub
+		Elseif dbpj.isOpen=False Then
+			Messagebox "Base d'enregistrement des pièces jointes non trouvée : avertir votre POA ScanUp",16,"Avertissement !"
+			Exit Sub
+		End If
+		
+	' Récupération du doc de la base des pièces Jointes
+		Set view=dbpj.GetView("V_ListePJ_FR")
+		Set DocPJ=view.GetDocumentByKey(doc.Unid_PJ(0))	
+		
+		If DocPJ Is Nothing Then
+			Messagebox "La piece jointe est introuvable ! ",16,"Avertissement"
+			Exit Sub
+		End If
+		
+	' Récupération de la pièce jointe en vue de son lancement
+		Dim rtitem As Variant	
+		Dim object As NotesEmbeddedObject
+		
+		Set rtitem = DocPJ.GetFirstItem("Doc_PJAssocies" )
+		If rtItem Is Nothing Then Exit Sub
+		If ( rtitem.Type = RICHTEXT ) Then
+			Forall o In rtitem.EmbeddedObjects
+				If ( o.Type = EMBED_ATTACHMENT ) Then
+				' On ouvre le fichier sélectionné par l'utilisateur:				
+					If o.Source=ChoixVisualisation Then
+						fileName = o.Source 
+						Set object = rtitem.GetEmbeddedObject( fileName )
+						If Not ( object Is Nothing ) Then 
+							Call o.ExtractFile ( microtemp & fileName )
+							Set launchDoc = db.CreateDocument
+							launchDoc.Form = "m_LancementPJ"
+							Set launchRtItem = launchDoc.CreateRichTextItem( "Body" )
+							Call launchRtItem.EmbedObject( EMBED_ATTACHMENT, "", microtemp & "\" & fileName )
+							Call launchDoc.Save( True, True )
+							Call uiwks.EditDocument( False, launchDoc )
+						End If
+					End If
+				End If
+			End Forall
+		End If
+	End If
+End Sub
+
+
+'++LotusScript Development Environment:2:2:SauvegardePieceJointe:1:8
+Sub SauvegardePieceJointe
+	
+	' *************************************************************************************************************************************
+	'	
+	'  BUT DU SOUS-PROGRAMME:
+	'
+	'    1 - Sauvegarder le document créé
+	'    2 - Sauvegarder la pièce jointe du document 
+	'   	     dans la base des pièces jointes (si existence d'une pièce jointe)
+	'
+	' *************************************************************************************************************************************
+	Set ws = New NotesUIWorkspace	
+	Set ss = New NotesSession
+	Set db = ss.CurrentDatabase	
+	Set uidoc_courant = ws.CurrentDocument
+	Set curDoc = uidoc_courant.document
+	Set db_base = ss.CurrentDatabase
+	Dim view As NotesView
+	Dim view2 As NotesView
+	Dim dc As NotesDocumentCollection
+	Dim dc2 As NotesDocumentCollection
+	
+	' ***********************************************************************************
+	' SEULEMENT EN PRESENCE D'UNE (ou plusieurs) PIECE JOINTE
+	' ---> Sauvegarde de la pièce jointe dans la base associée à ScanUp
+	' ***********************************************************************************
+	Dim rtitem As Variant	
+	Set rtitem = curDoc.GetFirstItem("Doc_FicAssocie" )
+	If ( rtitem.Type = RICHTEXT ) Then
+		' vide ou pas, on teste ce qu'il y a dans le texte riche:
+		If TestNomPiecesJointes( CurDoc )="1" Then
+	' ---------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		' Tout est OK: les fichiers remontés sont autorisés applicativement et les fichiers obligatoires sont renseignés	
+			
+			If (Isempty(rtitem.EmbeddedObjects)=False) Then 
+			' Cas ou le chp riche contient des pièces jointes:
+				
+				' Récupération des infos dans le masque ChampProfile
+				Set docprofil = db.GetProfileDocument("M_ChpProfil_FR")
+				nombasepj = docprofil.GetItemValue( "NomBasePJ" )
+				' Instanciation de la base des pièces jointes
+				v2 = Strleftback(db.FilePath,"\") + "\" + nombasepj(0)
+				Set dbpj = New NotesDatabase(db.server, v2)
+				' Test de l'existence de la base
+				If dbpj.isOpen=False Then
+					Msgbox("base d'enregistrement des pièces jointes non trouvée : avertir votre POA ScanUp")
+					Exit Sub
+				End If
+				' Creation d'un document PJ associée dans la base des pièces jointes
+				Set newDoc = dbpj.Createdocument
+				newDoc.form = "M_CreationPJ_FR"
+				Set rtitem = curDoc.GetFirstItem ( "Doc_FicAssocie" )
+				Call rtitem.CopyItemToDocument( newDoc, "Doc_PJAssocies" )
+				Call newDoc.computewithform ( True, False )
+				'on renseigne dans le doc piece jointe l'ID de la fiche
+				newDoc.f_parent_id = CurDoc.UniversalID
+				Call newDoc.save ( True, False )
+				' On affecte à "Nom_PJ" le(s) nom(s) de(s) fichier(s) joint(s)
+				Dim nompj As String
+				Dim item As NotesItem
+				Set item = CurDoc.ReplaceItemValue( "Nom_PJ","" )
+				Forall pj In rtitem.embeddedobjects	
+					Call item.AppendToTextList(pj.name)
+					' Cas d'un document Xelec où on stocke le nom du PDF dans le champ "XelecListePDF"
+					If CurDoc.FormatFichier(0)="format3" And Ucase(Strrightback(pj.name,"."))="PDF" Then
+						CurDoc.XelecListePDF=pj.name
+					End If
+				End Forall
+				 ' On affecte au champ "Unid_PJ" l'unique ID du doc de la base des pièces jointes
+				Dim id As String
+				id = newDoc.UniversalID
+				CurDoc.Unid_PJ=id
+				' On affecte au champ "Base_PJ" le nom de la base des PJ
+				CurDoc.Base_PJ=nombasepj(0)
+				' Destruction de la PJ du document
+				Call rtitem.Remove ( )
+				Call CurDoc.Createrichtextitem ( "Doc_FicAssocie" )
+				' Mise à jour du flag "OK pour les pièces jointes":
+				CurDoc.Doc_PJincorrectes="0"
+			Else
+			' Cas ou le chp riche NE contient PAS de pièces jointes:
+				Dim item2 As NotesItem
+				Set item2 = CurDoc.ReplaceItemValue( "Nom_PJ","" )
+			End If
+		Else
+	' ---------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		' Pb relevé dans les ficheirs remontés: fichiers non autorisés, absence de fichiers obligatoires
+		' On détruit les pièces jointes et les champs de gestion associés		
+			Question=Messagebox("Voulez-vous modifier vos pièces jointes ?" & Chr$(13) & "(Si vous cliquez sur non, le document sera définitivement perdu...)", 52, "Avertissement")
+			If Question=6 Then
+				' On reste sur le même document en enlevant les pièces jointes
+				' Pour cela positionnement du flag Doc_PJincorrectes
+				CurDoc.Doc_PJincorrectes="1"
+				' Destruction des pièces jointes
+				Call rtitem.Remove ( )
+				Call CurDoc.Createrichtextitem ( "Doc_FicAssocie" )
+			Else
+				' Le document doit être détruit, on le place dans la vue appropriée
+				' Positionnement du flag Doc_Asupprimer
+				'Call uidoc_courant.fieldSetText("Doc_Asupprimer","1")
+				CurDoc.Doc_Asupprimer="1"
+				CurDoc.Form="m_docSupprime"
+				Call CurDoc.save(True,False)
+				' refresh de la vue courante...
+				Call ws.viewRefresh
+				Exit Sub
+			End If	
+		End If
+	End If
+	
+	' ********************************************************************
+	' PIECE JOINTE OU PAS on exécute le code suivant :
+	' ********************************************************************
+	
+	' On affecte au champ l'id du user courant
+	CurDoc.Doc_Createur = Evaluate ( "@Name([CN];@Username)" )
+	
+	' Sauvegarde du document courant
+	Call CurDoc.save(True,False)
+	
+End Sub
+
+
+'++LotusScript Development Environment:2:2:MiseADisposition:1:8
+Sub MiseADisposition
+	
+	' *************************************************************************************************************************************
+	'	
+	'  BUT DU SOUS-PROGRAMME:
+	'
+	'    1 - Sauvegarder la mise à disposition par création d'un nouveau doc
+	'    2 - Sauvegarder la pièce jointe du document dans la base des pièces jointes (si existence d'une pièce jointe)
+	'
+	' *************************************************************************************************************************************
+	
+	Set ws = New NotesUIWorkspace	
+	Set ss = New NotesSession
+	Set db = ss.CurrentDatabase	
+	Set uidoc_courant = ws.CurrentDocument
+	Set curDoc = uidoc_courant.document
+	Set db_base = ss.CurrentDatabase
+	
+	' * * * * * RAJOUT EVOLUTION SCANUP AVRIL 2004 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	' Possibilité de changer le format lorsque le doc est récupéré pour modification
+	' (seulement lorsque le type de départ est tif)
+	If uidoc_courant.FieldGetText("FormatFichier")="format1" Then
+	AfficheBoite:		
+		Set tmpdoc=db.createDocument()
+		tmpdoc.Form="m_DialogBoxEvolutionFormat"
+		tmpdoc.SaveOptions="0"
+		flag=ws.DialogBox ( "m_DialogBoxEvolutionFormat",True, True, False,	False, False, False, "Choix du format de fichier",tmpdoc,False)
+		If flag=True Then
+			If tmpdoc.ChoixFormat(0)="Conserver au format tif" Then
+				' On ne fait rien --> pas de changement du format
+			Else	
+				' instanciation de la vue pour mettre à jour le champ SélectionFichier
+				Set view=db.GetView("v_TriRenverseParFormat")
+				If tmpdoc.ChoixFormat(0)="Evoluer vers le format Autocad (dwg)" Then
+				' On demande confirmation, par sécurité
+					If Messagebox ("Etes-vous sur de vouloir faire évoluer le type de fichier vers Autocad (dwg) ?",52,Avertissement)=7 Then
+					' Annulation du changement de format tif -->dwg
+						Goto AfficheBoite
+					Else
+					' Validation du changement de format tif -->dwg
+						Set docTypeFichier=view.getDocumentByKey("format2",True)
+						If Not docTypeFichier Is Nothing Then
+							Call uidoc_courant.fieldSetText("SelectionFormatFichier",docTypeFichier.Format(0) )
+							' Positionnement du flag pour indiquer un changement d'état
+							Call  uidoc_courant.fieldSetText("FlagEvolutionFormat","versFormat2" )
+						Else
+							Messagebox "Erreur, impossible de modifier le type du fichier. "&Chr$(10) & "Veuillez contacter l'administrateur...",48,"Avertissement"
+						End If
+					End If
+				Else
+				' On demande confirmation, par sécurité
+					If Messagebox ("Etes-vous sur de vouloir faire évoluer le type de fichier vers Xelec ?",52,Avertissement)=7 Then
+					' Annulation du changement de format tif -->dwg
+						Goto AfficheBoite
+					Else
+					' Validation du changement de format tif -->dwg
+						Set docTypeFichier=view.getDocumentByKey("format3",True)
+						If Not docTypeFichier Is Nothing Then
+							Call uidoc_courant.fieldSetText("SelectionFormatFichier",docTypeFichier.Format(0) )
+							' Positionnement du flag pour indiquer un changement d'état
+							Call  uidoc_courant.fieldSetText("FlagEvolutionFormat","versFormat3" )
+							' Call MiseAjourStats("evolutionFormat","versFormat3")							
+						Else
+							Messagebox "Erreur, impossible de modifier le type du fichier. "&Chr$(10) & "Veuillez contacter l'administrateur...",48,"Avertissement"
+						End If
+					End If
+				End If
+			End If
+		Else
+			Exit Sub
+		End If
+	End If	
+	' * * * * * FIN RAJOUT EVOLUTION SCANUP AVRIL 2004 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	' Sauvegarde du document courant pour pouvoir tester la présence de pièce jointe
+	uidoc_courant.editMode=True	
+	Call uidoc_courant.save
+	
+	' ***********************************************************************************
+	' SEULEMENT EN PRESENCE D'UNE (ou plusieurs) PIECE JOINTE
+	' ---> Sauvegarde de la pièce jointe dans la base associée à ScanUp
+	' ***********************************************************************************
+	Dim rtitem As Variant	
+	Set rtitem = curDoc.GetFirstItem("Doc_FicAssocie" )
+	If ( rtitem.Type = RICHTEXT ) Then
+	' vide ou pas, on teste ce qu'il y a dans le texte riche:
+		If TestNomPiecesJointes( CurDoc )="1" Then
+	' ---------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		' Tout est OK: les fichiers remontés sont autorisés applicativement et les fichiers obligatoires sont renseignés	
+			If (Isempty(rtitem.EmbeddedObjects)=False) Then
+		' Récupération des infos dans le masque ChampProfile
+				Set docprofil = db.GetProfileDocument("M_ChpProfil_FR")
+				nombasepj = docprofil.GetItemValue( "NomBasePJ" )
+		' Instanciation de la base des pièces jointes
+				v2 = Strleftback(db.FilePath,"\") + "\" + nombasepj(0)
+				Set dbpj = New NotesDatabase(db.server, v2)
+		' Test de l'existence de la base
+				If dbpj.isOpen=False Then
+					Msgbox("base d'enregistrement des pièces jointes non trouvée : avertir votre POA ScanUp")
+					Exit Sub
+				End If
+		' Creation d'un document PJ associée dans la base des pièces jointes
+				Set newDoc = dbpj.Createdocument
+				newDoc.form = "M_CreationPJ_FR"
+				Set rtitem = curDoc.GetFirstItem ( "Doc_FicAssocie" )
+				Call rtitem.CopyItemToDocument( newDoc, "Doc_PJAssocies" )
+				Call newDoc.computewithform ( True, False )
+				'on renseigne dans le doc piece jointe l'ID de la fiche
+				newDoc.f_parent_id = CurDoc.UniversalID
+				Call newDoc.save ( True, False )
+		' On affecte à "Nom_PJ" et "NomPiecesJointesSansSpaces"  le(s) nom(s) de(s) fichier(s) joint(s)
+				Dim nompj As String
+				Dim item As NotesItem
+				Set item = CurDoc.ReplaceItemValue( "Nom_PJ","" )
+				Forall pj In rtitem.embeddedobjects	
+					Call item.AppendToTextList(pj.name)
+				' Cas d'un document Xelec où on stocke le nom du PDF dans le champ "XelecListePDF"
+					If CurDoc.FormatFichier(0)="format3" And Ucase(Strrightback(pj.name,"."))="PDF" Then
+						CurDoc.XelecListePDF=pj.name
+					End If
+				End Forall
+%REM Supprimé car supposé inutile (V2)
+			Set item = CurDoc.ReplaceItemValue( "NomPiecesJointesSansSpaces","" )
+			Forall pj In rtitem.embeddedobjects	
+				Call item.AppendToTextList(pj.name)
+			End Forall
+%END REM
+				
+		 ' On affecte au champ "Unid_PJ" l'unique ID du doc de la base des pièces jointes
+				Dim id As String
+				id = newDoc.UniversalID
+				CurDoc.Unid_PJ=id
+		' On affecte au champ "Base_PJ" le nom de la base des PJ
+				CurDoc.Base_PJ=nombasepj(0)
+		' Destruction de la PJ du document
+				Call rtitem.Remove ( )
+				Call CurDoc.Createrichtextitem ( "Doc_FicAssocie" )
+			Else
+			' Pas de pièce jointe, il faut remettre Nom_PJ=""
+				Dim item2 As NotesItem
+				Set item2 = CurDoc.ReplaceItemValue( "Nom_PJ","" )
+			End If
+			
+			' ********************************************************************
+			' PIECE JOINTE OU PAS on exécute le code suivant :
+			' ********************************************************************
+			
+			' Récupération de l'état du document
+			Dim s_flag As String
+			s_flag = uidoc_courant.FieldGetText("Doc_FlagEtat")
+			
+			' Le document courant passe à l'état visualisation
+			Call uidoc_courant.FieldSetText ( "Doc_FlagEtat" , "0" )
+			
+			' Mise a jour des paramètres pour affichage du doc en mode normal	
+			DernierUser = uidoc_courant.fieldGetText("Doc_UserEnCoursDeModif")	
+			Call uidoc_courant.FieldSetText ( "Doc_DateEnCoursDeModif", "")
+			Call uidoc_courant.FieldSetText ( "Doc_DateDerniereModif", Cstr(Date))		
+			Call uidoc_courant.FieldSetText ( "Doc_UserEnCoursDeModif", "")	
+			Call uidoc_courant.FieldSetText ( "Doc_UserDerniereModif", DernierUser)	
+			
+			' * * * * * RAJOUT EVOLUTION SCANUP AVRIL 2004 * * * * * * * * * * * * * * * * * 
+			' on log l'évolution de format s'il y en a une
+			If uidoc_courant.fieldGetText("FlagEvolutionFormat")<>"" Then
+				If uidoc_courant.fieldGetText("FlagEvolutionFormat")="versFormat2" Then
+					Call MiseAjourStats("evolutionFormat","versFormat2", ss.EffectiveUserName, uidoc_courant.fieldGetText("Doc_CodeMabec"), uidoc_courant.fieldGetText("Doc_NumeroVersion"), uidoc_courant.fieldGetText("Doc_TypePlan"))	' évolution vers le format autocad
+				Else
+					Call MiseAjourStats("evolutionFormat","versFormat3", ss.EffectiveUserName, uidoc_courant.fieldGetText("Doc_CodeMabec"), uidoc_courant.fieldGetText("Doc_NumeroVersion"), uidoc_courant.fieldGetText("Doc_TypePlan"))	' évolution vers le format xelec
+				End If
+				' Réinit à vide du champ FlagEvolutionFormat
+				Call uidoc_courant.fieldSetText("FlagEvolutionFormat","")
+			End If
+			' * * * * * FIN RAJOUT EVOLUTION SCANUP AVRIL 2004 * * * * * * * * * * * * * * 
+			
+			' Sauvegarde du document courant
+			Call uidoc_courant.save
+			Call CurDoc.save(True,False)
+			Call uidoc_courant.close
+			' on log la création d'un nouveau document pour la base de stats
+			
+			' Mise à jour de la vue des statistiques de création
+			' modif par M.GIRARDOT le 02/11/2010
+			' pour etre coherent lors du comptage de doc, la stat de creation du doc est faite en meme temps que la creation du doc dans le bouton mise a dispo.
+			
+			'Call MiseAjourStats("creation",uidoc_courant.FieldGetText("FormatFichier"), ss.EffectiveUserName, uidoc_courant.fieldGetText("Doc_CodeMabec"), uidoc_courant.fieldGetText("Doc_NumeroVersion"), uidoc_courant.fieldGetText("Doc_TypePlan"))
+			
+			' *******************************************************
+			' Gestion de la destruction des versions inutiles
+			' *******************************************************
+			Dim view_version As NotesView	
+			Dim dc_version As NotesDocumentCollection
+			
+			Dim CodeMabecFiche As String
+			Dim VersionFiche As String
+			Dim TypeplanFiche As String
+			Dim FormatFiche As String
+			Dim VersionFicheASuppr As integer
+			Dim doc_versionx As NotesDocument
+			Dim doc_versionnext As NotesDocument
+						
+			Set view_version=db_base.GetView("V_RechVersion_FR")
+			Call view_version.Refresh()
+			view_version.Autoupdate = False
+			
+			' Création de la clef de recherche pour sélectionner les docs avec un Code Mabec & un N° de planche donné
+			Clef=uidoc_courant.fieldGetText("Doc_CodeMabec")+"#"+uidoc_courant.fieldGetText("Doc_NumeroPlanche")
+			Set dc_version=view_version.getAllDocumentsByKey(Clef,True)	
+						
+			' Dans la collection, les docs sont ordonnés par date de création, le n° 1 est le plus ancien
+			' Donc dès qu'on dépasse 3 documents, il faut détruire le 2nd, ainsi que le doc associé dans la base des PJ
+			
+			'Modif par MG le 30/11/2011
+			' le code est buggé on supprime la deuxieme fiche de la vue si on a 4 version
+			' cela ne tient pas compte des verrous !
+			' si on a deja plus de 4 versions le code est inactif !!
+			' la vue n'est pas trié par version on efface en aveugle !!!
+			' dorénavant on va parcourir toute les versions de la fiche et supprimé celle 
+			' après la version 1 jusqu'a la version -2 sasn effacer les fiches verouillés
+			 
+			' debut ancien code
+			' If dc_version.count > 3 Then
+				
+			'	Set doc_version=dc_version.GetNthDocument(2)
+			'	
+			'	CodeMabecFiche = doc_version.Doc_CodeMabec(0)
+		 	'	VersionFiche = doc_version.Doc_NumeroVersion(0)
+			'	TypelanFiche = doc_version.Doc_TypePlan(0)
+			'	FormatFiche  = doc_version.FormatFichier(0)
+			'	
+			'	If doc_version.Doc_UserVerrou(0) = "" then
+			'		Call SuppressionDocument(doc_version.Base_PJ(0),doc_version.Unid_PJ(0),doc_version.Doc_CodeMabec(0))		
+			'		Call doc_version.Remove(True)
+			'	End if
+			'	
+			'	' Appel de la fonction de mise à jour des stats de suppression pour la base de statistiques:
+			'	Call MiseAJourStats("suppression",FormatFiche, ss.EffectiveUserName, CodeMabecFiche, VersionFiche, TypeplanFiche)
+			' fin ancien code
+				
+			' End If
+			
+			' debut nouveau code
+			'on determine la plus ancienne version a conserver
+			VersionFicheASuppr = CInt(uidoc_courant.fieldGetText("Doc_NumeroVersion")) - 1
+			
+			If dc_version.count > 3 Then
+			
+				Set doc_versionx = dc_version.Getfirstdocument()
+							
+				While  Not doc_versionx  Is Nothing
+					Set doc_versionnext = dc_version.Getnextdocument(doc_versionx) 
+					CodeMabecFiche 	= doc_versionx.Doc_CodeMabec(0)
+		 			VersionFiche 	= doc_versionx.Doc_NumeroVersion(0)
+					TypelanFiche 	= doc_versionx.Doc_TypePlan(0)
+					FormatFiche  	= doc_versionx.FormatFichier(0)
+
+					If (VersionFiche <> "1") And (CInt(VersionFiche) < VersionFicheASuppr) then 
+						If doc_versionx.Doc_UserVerrou(0) = "" Then
+							'Appel de la fonction de mise à jour des stats de suppression pour la base de statistiques:
+							Call doc_versionx.Remove(True)
+							Call MiseAJourStats("suppression",FormatFiche, ss.EffectiveUserName, CodeMabecFiche, VersionFiche, TypeplanFiche)
+						End If
+					End if
+				 Set doc_versionx = doc_versionnext
+				wend
+				
+			End if
+			view_version.Autoupdate = True			
+			Call ws.ViewRefresh
+			
+		Else		
+	' ---------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		' Pb relevé dans les fichiers remontés: fichiers non autorisés, absence de fichiers obligatoires
+		' On détruit les pièces jointes et les champs de gestion associés		
+			
+			' On ne fait rien et on laisse le fichier en l'état ----> la mise à disposition est impossible
+			
+		End If
+	End If
+	
+	
+End Sub
+
+
+'++LotusScript Development Environment:2:2:FlagCreationBase:1:8
+Sub FlagCreationBase
+	'
+	' Ce sous-programme permet de créer un document de marquage dans la vue "v_FlagCreationBase" lorsque la taille de la base courante 
+	' des pièces jointes est dépassée.
+	' Ce ssp est appelé à chaque nouvelle création de document
+	' La présence du document "m_FlagCreationBase" dans cette vue indique à l'agent plannifié quotidiennement "a_CreationBase"
+	' qu'une nouvelle base des pièces jointes doit être créée
+	' 
+	' Déclaration des autres variables
+	Dim ss As NotesSession
+	Dim db,dbpj,newDb As NotesDatabase
+	Dim docprofile As NotesDocument
+	Dim view As NotesView	
+	Dim uiwks As NotesUIWorkspace
+	Dim uidoc As NotesUIDocument
+	Dim doc As NotesDocument	
+	Dim cheminBase, fichierBase, fichierNouvelleBase As String
+	Dim cptBase As Integer
+	Set ss = New NotesSession
+	Set uiwks=New NotesUIWorkspace	
+	Set uidoc=uiwks.currentDocument
+	
+	' db= la base ScanUp	
+	Set db = ss.CurrentDatabase	
+	
+	' Avant tout, on regarde si le document flag existe, si oui la base a déjà été marquée....
+	Set view=db.GetView("v_FlagCreationBase")
+	Set doc=view.GetFirstDocument
+	If doc Is Nothing Then
+		' Définition de la taille max de la base, en octets 
+		' Reprise de cette valeur depuis le doc d'admin. 		
+		Dim BaseTailleMax As Double
+		Set docprofil = db.GetProfileDocument("M_ChpProfil_FR")
+		BaseTailleMax=Cdbl(docprofil.BaseTailleMax(0))*1e6 	
+		
+		' Récupération dans le document d'administration du nom de la base (*.nsf) des PJ en cours 
+		fichierBase = docprofil.NomBasePJ(0)
+		
+		' Création du chemin permettant d'accéder à la base des PJ en cours
+		cheminBase=Strleftback(db.filePath,"\") + "\" + fichierBase
+		
+		' dbpj= la base des PJ en cours
+		Set dbpj= New NotesDatabase(db.server,cheminBase)	
+		
+		' Test de l'existence de la base	
+		If dbpj.isOpen=False Then
+			Messagebox "Impossible de trouver la base des pièces jointes" & Chr$(10) & _
+			"Veuillez contacter l'administrateur de l'application Domino ScanUP.",16,"Avertissement"
+			End
+		End If
+		
+		'Messagebox "Taille base : " & dbpj.size
+		' Test de la taille de la base des PJ en cours
+		' Si Taille > BaseTailleMax on crée un doc dans v_CreationBase
+		If dbpj.size>BaseTailleMax Then
+			
+		'Messagebox "Taille base dépassée - Création d'un doc dans la vue "v_FlagCreationBase"
+			Set doc = db.CreateDocument()
+			doc.Form = "m_FlagCreationBase"
+			Dim item As NotesItem
+			info="Créé par: " & ss.username & " - Date : " & Date & " - Heure : " & Time
+			Set item = doc.ReplaceItemValue( "InfoCreationBase", info )
+			Call doc.Save(True,False)
+			
+%REM	
+	' Appel de l'agent exécuté sur le serveur pour la création de la nouvelle base
+		Dim agent As NotesAgent
+		Set agent = db.GetAgent("a_CreationBase")
+		If agent.RunOnServer = 0 Then
+			' Messagebox "Creation Base OK"
+		Else
+			' Messagebox "Creation base : ECHEC"
+			End
+		End If
+		
+		' Destruction du doc dans la vue v_CreationBase pour autoriser de nouveau la sauvegarde des documents
+		Set viewEtatBase=db.GetView("v_CreationBase_FR")
+		Set docEtatBase=viewEtatBase.GetFirstDocument
+		Call docEtatBase.remove(True)
+%END REM		
+		Else
+			' Messagebox "Taille base OK"
+		End If 
+		
+		
+	End If
+	
+	
+End Sub
+
+
+
+
+
+'++LotusScript Development Environment:2:1:TestNomPiecesJointes:1:8
+Function TestNomPiecesJointes( CurDoc As Notesdocument) As String
+	'
+	' Function de contrôle du nom des pièces jointes (extensions...)
+	' Renvoie: 
+	'	- "1" si tout est OK
+	'	- "0" si un fichier obligatoire n'est pas remonté et/ou si des fichiers non autorisés sont remontés ...
+	'
+	' Si TestNomPiecesJointes="0" alors les pièces jointes sont détruites dans le document, pas de création dans la base des pièces jointes
+	'
+	' Note: Les messages d'erreurs sont renvoyés directement par cette fonction
+	'
+	Stop
+	' Instanciation du doc d'admin où sont répertoriés tous les fichiers autorisés et obligatoires suivant le format
+	Dim session As New NotesSession
+	Set db=session.currentDatabase
+	Set docParam=db.getProfileDocument("M_ChpProfil_FR")
+	
+	Dim TableFichiers() As String
+	
+	' Récupération du champ riche et du type de fichier sélectionné dans le document créé
+	Dim rtitem As Variant	
+	Set rtitem = curDoc.GetFirstItem("Doc_FicAssocie" )
+	TypeFichier=curDoc.FormatFichier(0)
+	
+	' Récupération de la liste des fichiers obligatoires dans le doc d'admin, suivant le type de fichier
+	NomChpFichierObligatoire="FichiersObligatoires"+TypeFichier
+	Dim FichiersObligatoires As Variant ' Extension des fichiers obligatoires du doc d'admin
+	FichiersObligatoires = docParam.GetItemValue( NomChpFichierObligatoire )
+	
+	If ( rtitem.Type = RICHTEXT ) Then
+		If Isempty(rtitem.EmbeddedObjects) Then 
+		' Aucun fichier n'a été remonté 
+			If FichiersObligatoires(0)<>"" Then
+				' il y a des fichiers obligatoires --> signaler l'erreur:
+				MsgObligatoires="- Aucun fichier n'a été remonté alors qu'il y a des fichiers obligatoires !" &  Chr$(13)			
+			Else
+				' pas de fichier obligatoire, dans ce cas pas d'erreur, on continue le traitement
+			End If
+		Else
+		' Des fichiers ont été remontés, on les teste:
+			cpt=0
+			cptunderscore=0
+			Forall o In rtitem.EmbeddedObjects ' contient tous les noms des fichiers du document....
+				
+			' On prend soin de mettre l'extension en majuscule...
+				If Ucase(Strrightback(o.name,"."))="" Then
+					' pas d'extension, il s'agit peut-être d'un fichier avec underscore spécifique au format XElec:
+					' On stocke ce qu'il y a après le underscore dans un tableau spécial:
+					Redim Preserve TableUnderscoreFichiers(cptunderscore)					
+					TableUnderscoreFichiers(cptunderscore)=Ucase(Strrightback(o.name,"_"))
+					cptunderscore=cptunderscore+1
+				Else
+					Redim Preserve TableFichiers(cpt)
+					Redim Preserve TableExtensionsFichiers(cpt)
+					TableExtensionsFichiers(cpt)=Ucase(Strrightback(o.name,"."))
+					TableFichiers(cpt)=Ucase(o.name)
+					cpt=cpt+1
+				End If
+				
+			End Forall
+			
+	' Test si le fichier est autorisé, donc s'il est dans la liste FichiersAutorisesFormatX
+			Forall fichier In TableFichiers
+				NomChpFichierAutorise="FichiersAutorises"+TypeFichier
+				Dim FichiersAutorises As Variant
+				FichiersAutorises = docParam.GetItemValue( NomChpFichierAutorise )
+				If Isnull(Arraygetindex(FichiersAutorises, Strrightback(fichier,"."))) Then
+					MsgNonAutorises=MsgNonAutorises & "- " & fichier & " n'est pas un fichier autorisé..." & Chr$(13)
+				End If
+			End Forall
+			
+	' pour le type XELEC (format 3), test s'il y a des fichiers sans extension mais avec un underscore sont autorisés:
+			If TypeFichier="format3" Then
+				Forall fichier2 In TableUnderscoreFichiers
+					NomChpFichierAutorise="UnderscoreAutorises"+TypeFichier
+'					Dim FichiersAutorises As Variant
+					FichiersAutorises = docParam.GetItemValue( NomChpFichierAutorise )
+					If Isnull(Arraygetindex(FichiersAutorises, fichier2)) Then
+						MsgUnderscoreNonAutorises=MsgUnderscoreNonAutorises & "- Le fichier sans extension se terminant par: _" & fichier2 & " n'est pas autorisé..." & Chr$(13)
+					End If
+				End Forall
+			End If
+			
+	' Test si le(s) fichier(s) obligatoire(s) est renseigné, bien sur si le chp FichiersObligatoiresFormat n'est pas vide...
+			If FichiersObligatoires(0)<>"" Then
+				Forall ExtensionOblig In FichiersObligatoires
+					If Isnull(Arraygetindex(TableExtensionsFichiers, ExtensionOblig)) Then
+						MsgObligatoires=MsgObligatoires & "- Le fichier obligatoire avec l'extension *." & ExtensionOblig & " n'a pas été remonté..." &  Chr$(13)
+					End If
+				End Forall		
+			End If	
+		End If
+	End If
+	
+	' Dans le cas des fichiers XELEC, test des fichiers Underscore:
+	
+	' Retour de la valeur de la fonction	 + message d'erreur
+	If MsgObligatoires="" And MsgNonAutorises="" And MsgUnderscoreNonAutorises="" Then
+		TestNomPiecesJointes="1"
+	Else
+		Msgbox "Veuillez vérifier vos fichiers, les erreurs suivantes ont été constatées: " & Chr$(13) & MsgNonAutorises & MsgunderscoreNonAutorises  & MsgObligatoires,48,"Avertissement"
+		TestNomPiecesJointes="0"
+	End If
+	
+	
+End Function
+
+'++LotusScript Development Environment:2:2:VisualisationPJ:1:8
+Sub VisualisationPJ
+	
+%REM
+
+	Ce sous-programme permet la visualisation directe des pièces jointes attachées au document,
+	 via le programme de visualisation associé à l'extension du fichier.
+	L'utilisateur ne peut visualiser que le fichier qu'il a sélectionner dans la boîte de dialogue
+	 qui s'affiche après le clic sur le bouton visualiser
+	
+	ATTENTION: pour fonctionner correctement, la visualisation des pièces jointes engendre la création et la sauvegarde de
+	documents m_LancementPJ, dont la destruction est gérée par l'agent "SupDocLancePJ"
+	Il est en effet inutile de conserver ces documents dans la base
+
+%END REM
+	
+     ' on construit le répertoire temporaire en fonction de l'os du micro
+	Dim microtemp As String
+	Dim microsep As String
+	
+	microtemp= DefinirTempRep
+	microsep =  DefinirSeparateur
+	
+	Dim session As New notesSession
+	Dim db As notesDatabase
+	Set db=session.currentDatabase
+	Dim doc As NotesDocument
+	Dim docPJ As NotesDocument
+	Dim docAdmin As NotesDocument
+	Dim uidoc As NotesUIDocument
+	Dim uiwks As New NotesUIWorkspace
+	Set uidoc=uiwks.CurrentDocument
+	Set doc=uidoc.document
+	Dim view As NotesView
+	
+	' Récup du doc d'admin de la base:
+	Set docAdmin=db.GetProfileDocument("M_ChpProfil_FR")
+	
+	' Récupération du nom de la pièce jointe à visualiser
+	' Création de la boîte de dialogue permettant de choisir celle-ci
+	
+	' Test si le user en cours est un gestionnaire:
+	Dim level As Integer
+	level = db.CurrentAccessLevel	
+	' Par défaut :
+	IsGestionnaire="Non"
+	NotesMacro$ = "@If(@IsMember(""[admin]""; @UserRoles); ""Oui""; ""Non"")"
+	RoleAdmin = Evaluate(NotesMacro$)
+	NotesMacro$ = "@If(@IsMember(""[gestion]""; @UserRoles); ""Oui""; ""Non"")"
+	RoleGestion = Evaluate(NotesMacro$)
+	If RoleAdmin(0)="Oui" Or RoleGestion(0)="Oui" Or level=6 Then
+		IsGestionnaire="Oui"
+	End If
+	
+	' RAJOUT de la V2, si la personne connectée n'est pas gestionnaire (donc consultant) et que le format est Xelec, on n'affiche que le pdf
+	i=0
+	If IsGestionnaire="Non" And doc.FormatFichier(0)="format3" Then
+		' on affiche un seul fichier: le pdf !!!
+          ' voir pour multipdf MG
+		Redim Preserve ChoixVisu(i)		
+		ChoixVisu(i)=doc.XelecListePdf(0)
+		i=1
+	Else
+		Forall item In doc.Nom_PJ
+			Redim Preserve ChoixVisu(i)			
+			ChoixVisu(i)=item
+			i=i+1
+		End Forall
+	End If
+	
+	' Affichage d'une boîte de dialogue seulement quand il y a plus d'une pièce jointe	
+	If i=1 Then
+		ChoixVisualisation=ChoixVisu(0)
+	Else
+		ChoixVisualisation=uiwks.prompt(PROMPT_OKCANCELCOMBO, _
+		"Choix du fichier","Veuillez choisir le fichier à visualiser : ",ChoixVisu(0),ChoixVisu)
+	End If
+	
+	' Si l'utilisateur ne clique pas sur annuler on continue le traitement :	
+	If ChoixVisualisation<>"" Then
+		
+	' Récupération du chemin de la base des pièces jointes associée au document en cours	
+	' Normalement les bases de stockage sont dans le même répertoire que ScanUp !
+		Dim dbpj As NotesDatabase
+		cheminBase = Strleftback(db.FilePath,"\") + "\" + doc.Base_PJ(0)
+		Set dbpj = New NotesDatabase(db.server, cheminBase)
+	' Test de l'existence de la base des pièces jointes
+		If doc.Nom_PJ(0)="" Then
+			Messagebox "Aucune pièce jointe n'est associée à ce document",16,"Avertissement !"
+			Exit Sub
+		Elseif dbpj.isOpen=False Then
+			Messagebox "Base d'enregistrement des pièces jointes non trouvée : avertir votre POA ScanUp",16,"Avertissement !"
+			Exit Sub
+		End If
+		
+	' Récupération du doc de la base des pièces Jointes
+		Set view=dbpj.GetView("V_ListePJ_FR")
+		Set DocPJ=view.GetDocumentByKey(doc.Unid_PJ(0))	
+		
+		If DocPJ Is Nothing Then
+			Messagebox "La piece jointe est introuvable ! ",16,"Avertissement"
+			Exit Sub
+		End If
+		
+	' Récupération de la pièce jointe en vue de son lancement
+		Dim rtitem As Variant	
+		Dim object As NotesEmbeddedObject
+		
+		Set rtitem = DocPJ.GetFirstItem("Doc_PJAssocies" )
+		If rtItem Is Nothing Then Exit Sub
+		If ( rtitem.Type = RICHTEXT ) Then
+			Forall o In rtitem.EmbeddedObjects
+				If ( o.Type = EMBED_ATTACHMENT ) Then
+				' On ouvre le fichier sélectionné par l'utilisateur:				
+					If o.Source=ChoixVisualisation Then
+						fileName = o.Source 
+						Set object = rtitem.GetEmbeddedObject( fileName )
+						If Not ( object Is Nothing ) Then 
+							Call o.ExtractFile ( microtemp & microsep  & fileName )
+							Print "Ouverture du fichier en cours..."
+							
+							' Ouverture des documents sans dépose sur le c: \temp...
+							Set launchDoc = db.CreateDocument
+							launchDoc.Form = "m_LancementPJ"
+							' Ci-dessous: extraction sur le disque supprimée, on prend directement la pièce jointe du document Notes
+							Set launchRtItem = launchDoc.CreateRichTextItem( "Body" )
+							Call launchRtItem.EmbedObject( EMBED_ATTACHMENT, "", microtemp & microsep & fileName )
+							Call launchDoc.Save( True, True )
+							Call uiwks.EditDocument( False, launchDoc )	
+							Print "Fichier " & FileName & ": ouverture réussie..."
+							
+						End If						
+					End If
+				End If
+			End Forall
+		End If
+	End If
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:ValiderConversionSEE:1:8
+Sub ValiderConversionSEE
+	
+	On Error Goto erreurhandler
+	
+	Set ws = New NotesUIWorkspace	
+	Set ss = New NotesSession
+	Set db = ss.CurrentDatabase	
+	Set uidoc_courant = ws.CurrentDocument
+	Set db_base = ss.CurrentDatabase
+	
+	Dim docFirst As NotesDocument
+	Dim docLast As NotesDocument
+	Dim doc_version As NotesDocument
+	
+	Set docProfil=db.getProfileDocument("M_ChpProfil_FR")
+	
+	' Sauvegarde du document courant pour pouvoir tester la présence de pièce jointe
+	Call ws.ViewRefresh	
+	uidoc_courant.editMode=True	
+	Call uidoc_courant.save
+	Call ws.ViewRefresh
+	Set curDoc = uidoc_courant.document
+	
+	'Ajout par M.GIRARDOT du 29/11/2010
+	'On doit vérifier que le type de document de la derneire version est bien dans la liste des type de doc see
+	'sinon on le force a la premiere valeur de la liste
+	
+	Dim TypePlanSee As Variant
+	Dim DocTypePlan As String
+	
+	DocTypePlan= Cstr(uidoc_courant.FieldGetText("Doc_TypePlan"))
+	TypePlanSee = docprofil.GetItemValue("TypePlanSee")
+	
+	Dim TypeSeeDEF As String
+	TypeSeeDEF = Cstr(TypePlanSee(0))	
+	
+	If DocTypePlan <> "" Then
+		Forall i In TypePlanSee
+			If DocTypePlan = i Then
+				TypeSeeDEF = DocTypePlan
+			End If
+		End Forall	
+	End If
+	
+	uidoc_courant.editMode=True
+	Call uidoc_courant.FieldsetText("Doc_TypePlan",TypeSeeDEF)
+	
+	Call uidoc_courant.save
+	Call ws.ViewRefresh
+	Set curDoc = uidoc_courant.document
+	
+	Dim nom_baselog 	As String
+	nom_baselog = Cstr(docprofil.nom_baselog(0))
+	'On log l'exécution
+	Dim Report 				As New LogEntry
+	Report.LogType			= LOGLEVEL_INFO%
+	Report.SubName		= "Initialize"
+	Report.Component   	=  "Valider Conevrsion en SEE"
+	Report.DocID		    		= curDoc.UniversalID
+	Report.LibName    		= "Lib_MultiBase"
+	Report.ClassName		= "ValiderConversionSEE"
+	Report.Msg				= "Valider Conversion en SEE"
+	
+	' ***********************************************************************************
+	' SEULEMENT EN PRESENCE D'UNE (ou plusieurs) PIECE JOINTE
+	' ---> Sauvegarde de la pièce jointe dans la base associée à ScanUp
+	' ***********************************************************************************
+	Dim rtitem As Variant	
+	Set rtitem = curDoc.GetFirstItem("Doc_FicAssocie" )
+	If ( rtitem.Type = RICHTEXT ) Then
+	' vide ou pas, on teste ce qu'il y a dans le texte riche:
+		If TestNomPiecesJointes( CurDoc )="1" Then
+	' ---------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		' Tout est OK: les fichiers remontés sont autorisés applicativement et les fichiers obligatoires sont renseignés	
+			If (Isempty(rtitem.EmbeddedObjects)=False) Then
+		' Récupération des infos dans le masque ChampProfile
+				Set docprofil = db.GetProfileDocument("M_ChpProfil_FR")
+				nombasepj = docprofil.GetItemValue( "NomBasePJ" )
+		' Instanciation de la base des pièces jointes
+				v2 = Strleftback(db.FilePath,"\") + "\" + nombasepj(0)
+				Set dbpj = New NotesDatabase(db.server, v2)
+		' Test de l'existence de la base
+				If dbpj.isOpen=False Then
+					Msgbox("base d'enregistrement des pièces jointes non trouvée : avertir votre POA ScanUp")
+					Exit Sub
+				End If
+		' Creation d'un document PJ associée dans la base des pièces jointes
+				Set newDoc = dbpj.Createdocument
+				newDoc.form = "M_CreationPJ_FR"
+				Set rtitem = curDoc.GetFirstItem ( "Doc_FicAssocie" )
+				Call rtitem.CopyItemToDocument( newDoc, "Doc_PJAssocies" )
+				Call newDoc.computewithform ( True, False )
+				'on renseigne dans le doc piece jointe l'ID de la fiche
+				newDoc.f_parent_id = CurDoc.UniversalID
+				Call newDoc.save ( True, False )
+		' On affecte à "Nom_PJ" et "NomPiecesJointesSansSpaces"  le(s) nom(s) de(s) fichier(s) joint(s)
+				Dim nompj As String
+				Dim item As NotesItem
+				Set item = CurDoc.ReplaceItemValue( "Nom_PJ","" )
+				Forall pj In rtitem.embeddedobjects	
+					Call item.AppendToTextList(pj.name)
+				' Cas d'un document Xelec où on stocke le nom du PDF dans le champ "XelecListePDF"
+					If CurDoc.FormatFichier(0)="format3" And Ucase(Strrightback(pj.name,"."))="PDF" Then
+						CurDoc.XelecListePDF=pj.name
+					End If
+				End Forall
+				
+		 ' On affecte au champ "Unid_PJ" l'unique ID du doc de la base des pièces jointes
+				Dim id As String
+				id = newDoc.UniversalID
+				CurDoc.Unid_PJ=id
+		' On affecte au champ "Base_PJ" le nom de la base des PJ
+				CurDoc.Base_PJ=nombasepj(0)
+		' Destruction de la PJ du document
+				Call rtitem.Remove ( )
+				Call CurDoc.Createrichtextitem ( "Doc_FicAssocie" )
+			Else
+			' Pas de pièce jointe, il faut remettre Nom_PJ=""
+				Dim item2 As NotesItem
+				Set item2 = CurDoc.ReplaceItemValue( "Nom_PJ","" )
+			End If
+			
+			' ********************************************************************
+			' PIECE JOINTE OU PAS on exécute le code suivant :
+			' ********************************************************************
+			
+			' Récupération de l'état du document
+			Dim s_flag As String
+			s_flag = uidoc_courant.FieldGetText("Doc_FlagEtat")
+			
+			' Le document courant passe à l'état visualisation
+			Call uidoc_courant.FieldSetText ( "Doc_FlagEtat" , "0" )
+			
+			' Mise a jour des paramètres pour affichage du doc en mode normal	
+			DernierUser = uidoc_courant.fieldGetText("Doc_UserEnCoursDeModif")	
+			Call uidoc_courant.FieldSetText ( "Doc_DateEnCoursDeModif", "")
+			Call uidoc_courant.FieldSetText ( "Doc_DateDerniereModif", Cstr(Date))		
+			Call uidoc_courant.FieldSetText ( "Doc_UserEnCoursDeModif", "")	
+			Call uidoc_courant.FieldSetText ( "Doc_UserDerniereModif", DernierUser)	
+			
+			' * * * * * FIN RAJOUT EVOLUTION SCANUP AVRIL 2004 * * * * * * * * * * * * * * 
+			
+			' Sauvegarde du document courant
+			Call uidoc_courant.save
+			Call CurDoc.save(True,False)
+			Call uidoc_courant.close
+			' on log la création d'un nouveau document pour la base de stats
+			
+			' Mise à jour de la vue des statistiques de création
+			Call MiseAjourStats("creation",uidoc_courant.FieldGetText("FormatFichier"), ss.EffectiveUserName,_
+			uidoc_courant.fieldGetText("Doc_CodeMabec"), uidoc_courant.fieldGetText("Doc_NumeroVersion"), uidoc_courant.fieldGetText("Doc_TypePlan"))
+			
+			' *******************************************************
+			' Gestion de la destruction des versions inutiles
+			' *******************************************************
+			Dim view_version As NotesView	
+			Dim dc_version As NotesDocumentCollection
+			
+			Dim CodeMabecFiche As String
+			Dim VersionFiche As String
+			Dim TypeplanFiche As String
+			Dim FormatFiche As String
+			
+			Set view_version=db_base.GetView("V_RechVersion_FR")
+			' Création de la clef de recherche pour sélectionner les docs avec un Code Mabec & un N° de planche donné
+			Clef=uidoc_courant.fieldGetText("Doc_CodeMabec")+"#"+uidoc_courant.fieldGetText("Doc_NumeroPlanche")
+			Set dc_version=view_version.getAllDocumentsByKey(clef,True)	
+			
+			' Dans la collection, les docs sont ordonnés par date de création, le n° 1 est le plus ancien
+			' Donc dès qu'on dépasse 3 documents, il faut détruire le 2nd, ainsi que le doc associé dans la base des PJ
+			If dc_version.Count = 1 Then
+				'Version 1 con tratamiento de ultima version
+				CurDoc.Doc_NumeroVersion = "1"
+				Call RemovePiecesJONITIES(CurDoc, db, "2")
+			Elseif dc_version.Count = 2 Then
+				'set getfirstdoc
+				'set getnthdoc(count)
+				Set docFirst = dc_version.GetFirstDocument
+				If Not docFirst Is Nothing Then
+					If RemovePiecesJONITIES(docFirst, db, "1") Then
+						docFirst.Doc_NumeroVersion = "1" 'First version.
+						docFirst.Doc_TypePlan =  TypeSeeDEF
+						Call docFirst.Save(True, True)
+						If RemovePiecesJONITIES(CurDoc, db, "2") Then
+							CurDoc.Doc_NumeroVersion = "2"	'Last version.
+						End If
+					End If
+				End If
+			Elseif dc_version.Count = 3 Then
+				'set getfirstdoc
+				'set docnthdoc(count-1)
+				'set getnthdoc(count)
+				Set docFirst = dc_version.GetFirstDocument 'First version
+				If Not docFirst Is Nothing Then
+					If RemovePiecesJONITIES(docFirst, db, "1") Then
+						docFirst.Doc_NumeroVersion = "1"
+						docFirst.Doc_TypePlan =  TypeSeeDEF
+						Call docFirst.Save(True, True)
+						Set docSec = dc_version.GetNextDocument(docFirst)
+						If Not docSec Is Nothing Then
+							docSec.Doc_NumeroVersion = "2"	'Middle version.
+							Call docSec.Save(True, True)
+						End If
+						If RemovePiecesJONITIES(CurDoc, db, "2") Then
+							CurDoc.Doc_NumeroVersion = "3"	'Last version.
+						End If
+					End If
+				End If
+			Elseif dc_version.Count > 3 Then
+				'set getfirstdoc
+'				set docnthdoc(count-1)
+				'set getnthdoc(count)
+				'for x=2 to (count-2)
+				'delete doc
+				'next
+				Set docFirst = dc_version.GetFirstDocument
+				If Not docFirst Is Nothing Then
+					If RemovePiecesJONITIES(docFirst, db, "1") Then
+						docFirst.Doc_NumeroVersion = "1" 'First version.
+						docFirst.Doc_TypePlan =  TypeSeeDEF
+						Call docFirst.Save(True, True)
+						Set docSec = dc_version.GetNthDocument(dc_version.Count-1)
+						If Not docSec Is Nothing Then
+							docSec.Doc_NumeroVersion = "2"	'Middle version.
+							Call docSec.Save(True, True)
+						End If
+						If RemovePiecesJONITIES(CurDoc, db, "2") Then
+							CurDoc.Doc_NumeroVersion = "3"	'Last version.
+						End If
+						'Remove all middle cases.
+						For x = 2 To dc_version.Count -2
+							Set doc_version = dc_version.GetNthDocument(x)
+							If Not doc_version Is Nothing Then
+								CodeMabecFiche = doc_version.Doc_CodeMabec(0)
+								VersionFiche = doc_version.Doc_NumeroVersion(0)
+								TypelanFiche = doc_version.Doc_TypePlan(0)
+								FormatFiche = doc_version.FormatFichier(0)
+								Call SuppressionDocument(doc_version.Base_PJ(0),doc_version.Unid_PJ(0),doc_version.Doc_CodeMabec(0))
+								' Appel de la fonction de mise à jour des stats de suppression pour la base de statistiques:
+								Call MiseAJourStats("suppression",FormatFiche, ss.EffectiveUserName, CodeMabecFiche, VersionFiche, TypeplanFiche)
+								Call doc_version.Remove(True)
+							End If
+						Next x
+					End If
+				End If
+			End If
+			
+			Call uidoc_courant.save
+			Call CurDoc.save(True,False)
+			Call uidoc_courant.close
+			Call ws.ViewRefresh
+		End If
+	End If
+	
+	Exit Sub
+	
+erreurhandler:
+	Dim LogEntry As New LogEntry
+	' Erreur propagée
+	If (Err = ERROR_PROPAGATE%) Then
+		LogEntry.FromString(Error$)
+	Else	
+		' On log l'erreur
+		LogEntry.LogType			= LOGLEVEL_ERROR%
+		LogEntry.SubName		= "Initialize"
+		LogEntry.Erl 					= Erl
+		LogEntry.Err					= Err
+		LogEntry.Msg				= Error$	
+		LogEntry.Component   	=  "RemovePiecesJONITIES"
+		If   Not curDoc Is Nothing Then
+			LogEntry.DocID		    		= curDoc.UniversalID
+		End If
+		LogEntry.LibName    		= "Lib_MultiBase"
+		LogEntry.ClassName		= "RemovePiecesJONITIES"
+		LogEntry.AddDebugLine("cle   : "+Clef)
+	End If
+	If Not Report Is Nothing Then
+		Call Report.Save(db.server, nom_baselog)
+	End If
+	Call LogEntry.Save(db.server, nom_baselog)
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:1:RemovePiecesJONITIES:1:8
+Function RemovePiecesJONITIES( curDocFirst As NotesDocument, db_base As NotesDatabase, NumFiche$) As Boolean
+	
+	On Error Goto erreurhandler
+	
+	Dim dbpj As NotesDatabase 'Base de adjuntos.
+	Dim view As NotesView
+	Dim DocPJ As NotesDocument
+	Dim rtitem As NotesRichTextItem
+	Dim itemPJ As NotesItem
+	Dim cheminBase As String
+	
+	RemovePiecesJONITIES  = False
+	curDocFirst.Nom_PJ = ""
+	
+	Set docProfil=db.getProfileDocument("M_ChpProfil_FR")
+	Dim nom_baselog 	As String
+	nom_baselog = Cstr(docprofil.nom_baselog(0))
+	'On log l'exécution
+	Dim Report 				As New LogEntry
+	Report.LogType			= LOGLEVEL_INFO%
+	Report.SubName		= "Initialize"
+	Report.Component   	=  "RemovePiecesJONITIES"
+	Report.DocID		    		= curDoc.UniversalID
+	Report.LibName    		= "Lib_MultiBase"
+	Report.ClassName		= "RemovePiecesJONITIES"
+	Report.Msg				= "RemovePiecesJONITIES"
+	
+	If ( curDocFirst.Base_PJ(0) <> "" ) Then
+		cheminBase = Strleftback(db_base.FilePath,"\") + "\" + curDocFirst.Base_PJ(0)
+		Set dbpj = New NotesDatabase(db_base.server, cheminBase)
+	End If
+	' Récupération du doc de la base des pièces Jointes
+	Set view=dbpj.GetView("V_ListePJ_FR")
+	Set DocPJ=view.GetDocumentByKey(curDocFirst.Unid_PJ(0))
+	If DocPJ Is Nothing Then
+		Report.AddDebugLine( "Erreur : La piece jointe est introuvable !" )
+	Else
+		Set itemPJ = curDocFirst.GetFirstItem("Nom_PJ")
+		Set rtitem = DocPJ.GetFirstItem("Doc_PJAssocies")
+		If (Isempty(rtitem.EmbeddedObjects)=False) Then
+			Forall pj In rtitem.embeddedobjects
+				If NumFiche$ = "1" Then
+					If  Ucase(Strrightback(pj.name,".")) <> "PDF" Then
+						Call pj.Remove
+					Else
+						'ES UN PDF
+						Call itemPJ.AppendToTextList(Cstr(pj.name))
+					End If
+				Elseif NumFiche$ = "2" Then
+					If  (Ucase(Strrightback(pj.name,".")) <> "PDF") And (Ucase(Strrightback(pj.name,".")) <> "ZIP") And (Ucase(Strrightback(pj.name,".")) <> "7Z") Then
+						Call pj.Remove
+					Else
+						'ES UN PDF O ZIP o ZIP
+						Call itemPJ.AppendToTextList(Cstr(pj.name))
+					End If	
+				End If
+			End Forall
+			Call DocPJ.Save(True, True)
+			'Call curDocFirst.Save(True, True)
+			RemovePiecesJONITIES = True
+		End If
+	End If
+	
+	Exit Function
+	
+erreurhandler:
+	Dim LogEntry As New LogEntry
+	' Erreur propagée
+	If (Err = ERROR_PROPAGATE%) Then
+		LogEntry.FromString(Error$)
+	Else	
+		' On log l'erreur
+		LogEntry.LogType			= LOGLEVEL_ERROR%
+		LogEntry.SubName		= "Initialize"
+		LogEntry.Erl 					= Erl
+		LogEntry.Err					= Err
+		LogEntry.Msg				= Error$
+		LogEntry.Component   	=  "RemovePiecesJONITIES"
+		If Not curDoc Is Nothing Then
+			LogEntry.DocID		    		= curDoc.UniversalID	
+		End If
+		LogEntry.LibName    		= "Lib_MultiBase"
+		LogEntry.ClassName		= "RemovePiecesJONITIES"
+		LogEntry.AddDebugLine("cle   : "+Clef)
+	End If
+	If Not Report Is Nothing Then
+		Call Report.Save(db.server, nom_baselog)
+	End If
+	Call LogEntry.Save(db.server, nom_baselog)
+	Exit Function
+End Function

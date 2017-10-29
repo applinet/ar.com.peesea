@@ -1,0 +1,423 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+
+' Pour fonctionner cette librairie a besoin de la librairie commune
+Use "Lib_Commune" 
+
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Initialize
+Declare Sub Trait_RecupPourModif
+Declare Function Trait_EnregistrementCreation
+Declare Function Initialisation
+Declare Function CreationNouveauDocument
+Declare Sub Trait_NouvellePlanche
+Declare Sub Trait_ReccupDoc(uidoc_courant As NotesUIDocument)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+' Workspace de l'utilisateur courant
+Dim w_user As NotesUIWorkspace
+
+' Accès à la session notes courante
+Dim s_session As NotesSession
+
+' Accès au document courant
+Dim uidoc_courant As NotesUIDocument
+
+' Objet NotesDocument pour le document courant
+Dim doc_courant As NotesDocument
+
+' Nouvel objet NotesDocument
+Dim doc_nouveau As NotesDocument
+Dim docProfil As NotesDocument
+
+' Base de données Notes
+Dim db_base As NotesDatabase
+
+Dim annulation_traitement As Boolean
+
+
+
+
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:Trait_RecupPourModif:1:8
+Sub Trait_RecupPourModif
+	
+	'On Error Goto errorhandler
+	
+	' Appel de la fonction d'initialisation
+	'Initialisation
+	Dim UIView As notesUIView
+	
+	annulation_traitement = False
+	
+	' Positionnement sur le workspace courant de l'utilisateur
+	Set w_user = New NotesUIWorkspace
+	' On se positionne sur le document courant
+	Set uidoc_courant = w_user.CurrentDocument
+'	Set doc_courant = uidoc_courant.document
+	' On se positionne sur la session courante
+	Set s_session = New NotesSession
+	Set UIView = w_user.CurrentView
+	' On se positionne sur la base de données courante
+	Set db_base = s_session.CurrentDatabase	
+	
+	If uidoc_courant Is Nothing Then
+		Dim coll_doc As NotesDocumentCollection
+		Dim doc_temp As NotesDocument
+		Set coll_doc = db_base.UnprocessedDocuments
+		Call UIView.DeselectAll
+		Set doc_temp = coll_doc.GetFirstDocument
+		While Not doc_temp Is Nothing And annulation_traitement <> True
+			Set uidoc_courant = w_user.EditDocument(False, doc_temp)
+			Set doc_courant = uidoc_courant.document
+			Print "Récupération de: Clé[ "+ uidoc_courant.FieldGetText("Doc_CodeMabec") +" ], Atelier[ "+ uidoc_courant.FieldGetText("Doc_NoAtelier") +" ], N° BE[ "+ uidoc_courant.FieldGetText("Doc_NoPointIntervention") +" ] Type[ "+ uidoc_courant.FieldGetText("Doc_TypePlan") +" ]"
+			Call Trait_ReccupDoc(uidoc_courant)		
+			Set doc_temp = coll_doc.GetNextDocument(doc_temp)
+		Wend
+		
+		If annulation_traitement = True Then
+			Messagebox "La récupération de masse pour modification, sur les documents sélectionnés, est abandonnée !" _ 
+			& Chr$(10) & "Le traitement a retourné une erreur pour le code mabec suivant: " & uidoc_courant.FieldGetText("Doc_CodeMabec"),16,"Avertissement !"
+		End If
+		
+	Else 
+		Set doc_courant = uidoc_courant.document
+		Call Trait_ReccupDoc(uidoc_courant)		
+	End If
+	
+	Exit Sub
+	
+errorhandler:
+	
+	Msgbox "Trait_RecupPourModif erreur  " & Err & " ligne " &Erl
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:Trait_EnregistrementCreation:1:8
+Function Trait_EnregistrementCreation
+	
+	'On Error Goto errorhandler
+	
+    ' Appel de la fonction d'initialisation
+	Initialisation
+	
+	' Sauvegarde de l'état du document
+	Dim s_flag As String
+	s_flag = uidoc_courant.FieldGetText("Doc_FlagEtat")
+	
+	' Le document courant passe à l'état visualisation
+	Call uidoc_courant.FieldSetText ( "Doc_FlagEtat" , "0" )
+	
+	' On affecte au champ l'id du user courant
+	Dim id_user As String
+	id_user = RecupereIdPSA
+	Call uidoc_courant.FieldSetText ( "Doc_Createur" , id_user )
+	
+	' Sauvegarde du document courant
+	Call uidoc_courant.save
+	
+	If ( s_flag = "1" ) Then
+		' Creation avec copie des champs dans un nouvel objet
+		CreationNouveauDocument	
+		
+		' Fermeture du document courant
+		Call uidoc_courant.close
+		
+		' Affichage d'un message pour informer l'utilisateur que le document est enregistré
+		Messagebox "Le document est correctement enregistré dans la base."  & Chr(10)  & "Vous pouvez saisir un nouveau document."
+		
+		' Positionnement du flag à création pour le nouveau document
+		doc_nouveau.Doc_FlagEtat = "1"
+		
+		' Nous allons nous positionner sur le champ texte riche du nouveau
+		' document pour le supprimer. En effet la rémanence des champs tous
+		' les champs sauf le champ Doc_FicAssocie
+		Dim rtItem As NotesRichTextItem
+		Set rtItem = doc_nouveau.GetFirstItem ( "Doc_FicAssocie" )
+		'Destruction du RTI du document courant et save
+		Call rtItem.Remove ( )
+		
+		' On recré le champ mais vide
+		Call doc_nouveau.Createrichtextitem ( "Doc_FicAssocie" )
+		
+		' Affichage du nouveau document pour la rémanence
+		Call w_user.EditDocument( True , doc_nouveau)
+	End If
+	
+	If (s_flag = "2" ) Then
+		uidoc_courant.close
+	End If
+	
+	Exit Function
+	
+errorhandler:
+	
+	Msgbox "Trait_EnregistrementCreation erreur  " & Err & " ligne " &Erl
+	
+End Function
+
+'++LotusScript Development Environment:2:1:Initialisation:1:8
+Function Initialisation
+	
+	'On Error Goto errorhandler
+	
+	' Positionnement sur le workspace courant de l'utilisateur
+	Set w_user = New NotesUIWorkspace
+	
+	' On se positionne sur le document courant
+	Set uidoc_courant = w_user.CurrentDocument
+	Set doc_courant = uidoc_courant.document
+	
+	' On se positionne sur la session courante
+	Set s_session = New NotesSession
+	
+	' On se positionne sur la base de données courante
+	Set db_base = s_session.CurrentDatabase
+	
+	Exit Function
+	
+errorhandler:
+	
+	Msgbox "Initialisation erreur  " & Err & " ligne " &Erl
+	
+End Function
+
+'++LotusScript Development Environment:2:1:CreationNouveauDocument:1:8
+Function CreationNouveauDocument
+	
+	'On Error Goto errorhandler
+	
+	' Instance du nouveau document : NotesDocument
+	Set doc_nouveau = New NotesDocument( db_base )
+	
+	' instance du doc profil
+	Set docProfil=db_base.GetProfileDocument("M_ChpProfil_FR")
+	
+	' Copie du document courant dans  un nouveau document
+	Call doc_courant.CopyAllItems( doc_nouveau, True )
+	
+	' Affection du form suivant le type de la base (Scanup OU Outils Coupants)
+	If docProfil.IsBaseOutils(0)="Oui" Then
+		doc_nouveau.Form = "M_CreationOutil"		
+	Else
+		doc_nouveau.Form = "M_CreationDoc_FR"	
+	End If
+	
+	' On positionne le flag à création
+	doc_nouveau.Doc_FlagEtat = "1"
+	
+	Exit Function
+	
+errorhandler:
+	
+	Msgbox "CreationNouveauDocument erreur  " & Err & " ligne " &Erl
+	
+End Function
+
+'++LotusScript Development Environment:2:2:Trait_NouvellePlanche:1:8
+Sub Trait_NouvellePlanche
+	
+	'On Error Goto errorhandler
+	
+	' Appel de la fonction d'initialisation
+	Initialisation
+	
+	' Creation avec copie des champs dans un nouvel objet
+	CreationNouveauDocument
+	
+	Call doc_courant.Save(True,False)	
+	
+	' A ce stade nous pouvons fermer le document visualisé courant
+	Dim valeur As String
+	valeur = uidoc_courant.FieldGetText("Doc_NumeroPlanche")
+	Call uidoc_courant.close
+	
+	' Nettoyage de la mémoire pour l'instance d'objet du document courant
+	Delete doc_courant
+	
+	' On initialise la version du nouveau document à 1
+	doc_nouveau.Doc_NumeroVersion = "1"
+	
+	' On incrémente le numéro de planche de la donnée
+	doc_nouveau.Doc_NumeroPlanche = IncrementePlanche ( valeur )
+	
+	' Affectation du FlagDerniereVersion à 1
+	doc_nouveau.Doc_FlagDerniereVersion = "1"
+	
+	' Affectation du Doc_FlagEtat à 1 pour spécifier création
+	doc_nouveau.Doc_FlagEtat = "1"
+	
+	doc_nouveau.Base_PJ=""
+	doc_nouveau.Nom_PJ=""
+	doc_nouveau.Unid_PJ=""
+	Set item1=doc_nouveau.ReplaceItemValue("Doc_FicAssocie","")
+	
+	' Sauvegarde du nouveau document
+	'Call doc_nouveau.save ( True , False )
+	
+	' Affichage du nouveau document pour la rémanence
+	Call w_user.EditDocument( True , doc_nouveau)
+	
+	Exit Sub
+	
+errorhandler:
+	
+	Msgbox "Trait_NouvellePlanche erreur  " & Err & " ligne " &Erl
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:Trait_ReccupDoc:1:8
+Sub Trait_ReccupDoc(uidoc_courant As NotesUIDocument)
+	
+	'On Error Goto errorhandler
+	
+	Set s_session = New NotesSession	
+	
+		' Test si l'utilisateur veut récupérer pour modification la dernière version du doc
+	' Si ce n'est pas le cas, on interdit la récupération pour modif. 
+	Dim view As NotesView
+	Set view=db_base.GetView("v_VueRecupModif")
+	Dim doc As NotesDocument
+	'Dim dc As NotesDocumentCollection
+	Dim dc As notesViewEntryCollection
+	Dim entry As NotesViewEntry
+	
+	' Création de la clef de recherche
+		clef=uidoc_courant.FieldGetText("Doc_CodeMabec")+"#"+uidoc_courant.FieldGetText("Doc_NumeroPlanche")
+	'Set dc=view.GetAllDocumentsByKey(clef,True)	
+	Set dc=view.getAllEntriesByKey(clef,True)
+	' On récupère le dernier doc créé pour avoir le dernier n° de version	
+	Set entry=dc.GetLastEntry
+	Set doc=entry.Document
+	
+	If uidoc_courant.fieldgettext("Doc_UserVerrou")<> "" then
+		MessageBox "La récupération pour modif de ce document n'est pas possible !" _ 
+		& Chr$(10) & "La version sélectionnée est vérrouillée.",16,"Avertissement !"
+		annulation_traitement = True
+		Call uidoc_courant.close
+		Exit Sub
+	End If
+	
+	' Comparaison avec la version en cours
+	If doc.Doc_NumeroVersion(0)<>uidoc_courant.fieldgettext("Doc_NumeroVersion") Then
+		Messagebox "La récupération pour modif de ce document n'est pas possible !" _ 
+		& Chr$(10) & "La version sélectionnée n'est pas la dernière en cours.",16,"Avertissement !"
+		annulation_traitement = True
+		Exit Sub
+	End If
+	
+	' Creation avec copie des champs dans un nouvel objet
+	CreationNouveauDocument
+	
+	' A ce stade nous pouvons fermer le document visualisé courant
+	valeur = uidoc_courant.FieldGetText("Doc_NumeroVersion")
+	Call uidoc_courant.close
+	
+	' Par contre le document courant doit voir quelques champs modifiés
+	' Notamment le champ indiquant si c'est la derniere version ou non
+	doc_courant.Doc_FlagDerniereVersion = "0"
+	Call doc_courant.save( True, False )	
+	
+	' Maintenant, 2 cas sont possibles: 
+	'	- 1 - Récupération d'un doc. sans aucune pièce jointe	
+	' 	- 2 - Récupération d'un doc. comportant au moins une pièce jointe
+	
+	If uidoc_courant.fieldGetText("Base_PJ")="" Then
+		' - 1 -PAS DE PIECE JOINTE	
+		' On fait rien
+	Else
+		' - 2 - AVEC PIECE JOINTE: Recherche ds la base de stockage associée		
+		' Récupération du chemin de la base des pièces jointes associée au document en cours	
+		' Normalement les bases de stockage sont dans le même répertoire que ScanUp ! (dspdn000.nsf)
+		Dim dbpj As NotesDatabase
+		cheminBase = Strleftback(db_base.FilePath,"\") + "\" + doc_courant.Base_PJ(0)
+		Set dbpj = New NotesDatabase(db_base.server, cheminBase)
+		' Test de l'existence de la base des pièces jointes
+		If doc_courant.Nom_PJ(0)="" Then
+			Messagebox "Aucune pièce jointe n'est associée à ce document." _ 
+			& Chr$(10) & "La récupération pour modif de ce document n'est pas possible.",16,"Avertissement !"
+			annulation_traitement = True
+			Exit Sub
+		Elseif dbpj.isOpen=False Then
+			Messagebox "Base d'enregistrement des pièces jointes non trouvée : avertir votre POA ScanUp",16,"Avertissement !"
+			annulation_traitement = True
+			Exit Sub
+		End If
+		
+		' Récupération du doc de la base des pièces Jointes
+		Set view=dbpj.GetView("V_ListePJ_FR")
+		Set DocPJ=view.GetDocumentByKey(doc_courant.Unid_PJ(0))	
+		
+		If DocPJ Is Nothing Then
+			Messagebox "La piece jointe est introuvable ! ",16,"Avertissement"
+			Exit Sub
+		End If
+		
+		' Copie du champ Riche de la base des pièces jointes dans le document en cours
+		' Destruction du RTF Item
+		Dim rtItem As NotesRichTextItem
+		Set rtItem = doc_nouveau.GetFirstItem ( "Doc_FicAssocie" )
+		If ( Not rtItem Is Nothing ) Then
+			Call rtItem.Remove ( )
+		End If		
+		
+		
+		' Recup pour modif formats TIF et AUTOCAD : on n'enlève aucune pièce jointe
+		Dim itemA As NotesItem
+		Dim itemB As NotesItem
+		Set itemA = docPJ.GetFirstItem( "Doc_PJAssocies" )
+		Set itemB = itemA.CopyItemToDocument( doc_nouveau, "Doc_FicAssocie" )	
+		
+	End If
+	
+	' Nettoyage de la mémoire pour l'instance d'objet du document courant
+	Delete doc_courant
+	
+	' On incremente la version du nouveau document + 1
+	Dim i_num As Integer
+	i_num = Cint( valeur )
+	i_num = i_num + 1
+	doc_nouveau.Doc_NumeroVersion = Cstr ( i_num )
+	
+	' Affectation des champs permettant le verrouillage du document
+	doc_nouveau.Doc_DateEnCoursDeModif = Cstr ( Date)
+	doc_nouveau.Doc_UserEnCoursDeModif = Evaluate ( "@Name([CN];@Username)" )
+	
+	' Affectation du FlagDerniereVersion à 1
+	doc_nouveau.Doc_FlagDerniereVersion = "1"
+	
+	' Affectation du Doc_FlagEtat à 3 pour spécifier recup pour modification
+	doc_nouveau.Doc_FlagEtat = "3"
+	
+	' Affectation du Unid de la pièce jointe à rien du tout
+	doc_nouveau.Unid_PJ=""	
+	
+	' Sauvegarde du nouveau document
+	Call doc_nouveau.computewithForm(False,False)	
+	Call doc_nouveau.save ( True , False )
+	
+	' Mise à jour de la vue des statistiques de récup pour modif
+	Call MiseAjourStats("recupModif","", s_session.EffectiveUserName, doc_nouveau.Doc_CodeMabec(0), doc_nouveau.Doc_NumeroVersion(0), doc_nouveau.Doc_TypePlan(0))
+	Call MiseAjourStats("creation",doc_nouveau.FormatFichier(0), s_session.EffectiveUserName, doc_nouveau.Doc_CodeMabec(0), doc_nouveau.Doc_NumeroVersion(0), doc_nouveau.Doc_TypePlan(0))
+	
+	' Affichage du nouveau document pour la rémanence
+	Dim uinew As NotesUIDocument
+	Set uinew = w_user.EditDocument( True , doc_nouveau)
+	Call uinew.GotoField( "Doc_DesignationPlan" )
+	
+	Call uinew.close
+	Call w_user.ViewRefresh	
+	
+	Exit Sub
+	
+errorhandler:
+	
+	Msgbox "Trait_ReccupDoc erreur  " & Err & " ligne " &Erl
+	
+End Sub

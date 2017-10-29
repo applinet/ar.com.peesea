@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='23a' unid='ADC08CC4F4BC2357C1256B15003DC116' sequence='72'>
+<created><datetime dst='true'>20011201T131431,26+02</datetime></created>
+<modified><datetime>20171028T233201,75-03</datetime></modified>
+<revised><datetime>20160721T105927,87-03</datetime></revised>
+<lastaccessed><datetime>20171028T233200,81-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233200,81-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name
+>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormatNote' summary='true' sign='true'>
+<rawitemdata type='4'>
+AQBJfJmMgWmUnu+oSgB3aiXB
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><text>(VueRechVersion)|V_RechVersion_FR</text></item>
+<item name='$Index' sign='true'><text>/O</text></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+UgECADwAAgAkMgUADQBEb2NfQ29kZU1hYmVjAAEAAQAjACICBQARAERvY19OdW1lcm9QbGFuY2hl
+ACICAwAHABAACQAJMVMyUzNTNFMAAgAoAA0ARG9jX0NvZGVNYWJlYwAFAA0ARG9jX0NvZGVNYWJl
+YwADAAIAMAARAERvY19OdW1lcm9QbGFuY2hlAAUAEQBEb2NfTnVtZXJvUGxhbmNoZQADAAUAUgBO
+AAYAAgANABEAEQAJAAQAJDJEb2NfQ29kZU1hYmVjRG9jX051bWVyb1BsYW5jaGVEb2NfTnVtZXJv
+VmVyc2lvbiRDb25mbGljdCRSRUYEAAQAAABEAAUABABmb3JtAQAQAE1fQ3JlYXRpb25Eb2NfRlIK
+AgUABABmb3JtAQAPAE1fQ3JlYXRpb25PdXRpbAAKAh0CAwAHABIADAAJTDFTMlMzUzRTNVM=
+</formula></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEiGYHAAACACQy
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAFAAMAqTAAAFZDAwQCAAMATgAAAGUAAQAACgABAAAAAAAAAAICAAAAVkOABAAAAAAKAAoACAAB
+AAAKAAAAAAAAAAAAAgIAAABWQwAADQADACoAAABIAAEAAAoAAAAAAAAAAAACAgAAAFZDAAARAAcA
+MgAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAABEABwAAAAAAUAABAAAKAAAAAAAAAAAAAgIAAAAk
+MkNsgk4AAgA8AAIAJDIFAA0ARG9jX0NvZGVNYWJlYwABAAEAIwAiAgUAEQBEb2NfTnVtZXJvUGxh
+bmNoZQAiAgMABwAQAAkACTFTMlMzUzRTAAoAAAAIAJIAAwABBQEABAB/QTD/RG9jX0NvZGVNYWJl
+Y0NsgioAAgAoAA0ARG9jX0NvZGVNYWJlYwAFAA0ARG9jX0NvZGVNYWJlYwADAERvY19OdW1lcm9Q
+bGFuY2hlUGxhbmNoZTIAAgAwABEARG9jX051bWVyb1BsYW5jaGUABQARAERvY19OdW1lcm9QbGFu
+Y2hlAAMARG9jX051bWVyb1ZlcnNpb25WZXJzaW9uJgABAAAAAQEACQEAAAoBAQ4KAAAPAK0rAQAB
+AAEAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+V0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAA
+AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAA
+AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAEAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Vue destinée à la recherche de la dernière version d'un document</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>5</text></item></note>
+

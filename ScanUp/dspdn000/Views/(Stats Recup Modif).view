@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='746' unid='77EDFE757C26BDBDC1256E770052D3D9' sequence='51'>
+<created><datetime dst='true'>20040415T170441,85+02</datetime></created>
+<modified><datetime>20171028T233208,05-03</datetime></modified>
+<revised><datetime>20160721T105932,31-03</datetime></revised>
+<lastaccessed><datetime>20171028T233202,78-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233202,78-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='TmpViewDesignCollation'><text>fr</text></item>
+<item name='$TITLE' sign='true'><text>(Stats Recup Modif)|v_StatsRecupModif</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+4AACAFAAAgAkNQUADQBBbm5lZUNyZWF0aW9uAAEAAQAjACICBQAMAE1vaXNDcmVhdGlvbiICAQAB
+ACMAIgIFAAwASm91ckNyZWF0aW9uIgIDAAIADAACACQwaQADAAUAIgAdAAQAAgACAAkABAAkNSQw
+JENvbmZsaWN0JFJFRgAEAAQAAABIAAUABABGb3JtAQARAG1fU3RhdHNSZWN1cE1vZGlmAAoCBAAF
+AA0AU3RhdENvbnNvbGlkZQBeAQEAAQAxAAsCBAAcAgMABwAUAA4ACUwxUzZTN1MxMlMxM1M=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEiGYHAAACACQ1
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAAEACAAAAFZDAwQCAA0AXgAAADIAAQAACgABAAAIAAAAAAICAAAAVkMAAAIAEQAOAAAAUAAB
+AAAKAAAAAAAAAAAAAgIAAAAkNURhdGUgQ3KCYXRpb25eAAIAUAACACQ1BQANAEFubmVlQ3JlYXRp
+b24AAQABACMAIgIFAAwATW9pc0NyZWF0aW9uIgIBAAEAIwAiAgUADABKb3VyQ3JlYXRpb24iAgMA
+BwAMAAUACTBTMEUAJDBEYXRlIGNyZWF0aW9uIGRvYw4AAgAMAAIAJDBpAAMAJgABAAAAAQEACQEA
+AAoBAQ4KAAABAK0rAQABAAEAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAQCEAAAAAAD/
+/wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAA
+AAAAAEIAAAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAAB
+AAAAAAABAAAAAAAAAAgAAAAAAAEAWUMAAAgAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAwAA
+AAAAAAAAAAAAAAAAAAAAACz/FCCsAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Nb de docs récupérés pour modif (pour la journée en cours)</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='11ca' unid='E8CE0BF18589AF7EC125779E002C96FD' sequence='41'>
+<created><datetime dst='true'>20100914T100702,37+02</datetime></created>
+<modified><datetime>20171028T233210,83-03</datetime></modified>
+<revised><datetime>20160721T105933,19-03</datetime></revised>
+<lastaccessed><datetime>20171028T233205,67-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233205,67-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='TmpViewDesignCollation'><text>fr</text></item>
+<item name='$TITLE' sign='true'><text>(Stats Nb Docs2)|v_StatsNbDocs2</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+4AACAFAAAgAkNQUADQBBbm5lZUNyZWF0aW9uAAEAAQAjACICBQAMAE1vaXNDcmVhdGlvbiICAQAB
+ACMAIgIFAAwASm91ckNyZWF0aW9uIgIDAAIAJAALAFR5cGVGaWNoaWVyAAUACwBUeXBlRmljaGll
+cgADAAIADAACACQxaQADAAUALgAqAAUAAgALAAIACQAEACQ1VHlwZUZpY2hpZXIkMSRDb25mbGlj
+dCRSRUYEAAQAAAAiAAUABABGb3JtAQAOAG1fU3RhdHNOYkRvY3MyCgIDAAcACgAEAAlMMVM=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+IQACAABEiGYHAAACAIhmBwIACwAkNVR5cGVGaWNoaWVy
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAYACAAAAFZDAwQCAA0AXgAAADIAAQAACgABAAAIAAAAAAICAAAAVkMDBAsABgAmAAAAJAAB
+AAAKAAEAAAAAAAAAAgIAAABWQwAAAgARAA4AAABlAAEAAAoAAAAAAAAAAAACAgAAACQ1RGF0ZSBD
+coJhdGlvbl4AAgBQAAIAJDUFAA0AQW5uZWVDcmVhdGlvbgABAAEAIwAiAgUADABNb2lzQ3JlYXRp
+b24iAgEAAQAjACICBQAMAEpvdXJDcmVhdGlvbiICAwAHAAwABQAJMFMwRQBUeXBlRmljaGllckZv
+cm1hdCYAAgAkAAsAVHlwZUZpY2hpZXIABQALAFR5cGVGaWNoaWVyAAMAJDFEYXRlIGNygmF0aW9u
+IGRvYw4AAgAMAAIAJDFpAAMAJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAIAAAAAAAAAAABX
+QwEBAAkAAAAAAAAAAAAAAAAAAAAAAQCEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAA
+AAAAAAAAAAAAAAEABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAA
+AAQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA
+////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAIAAAAAAABAFlDAAAIAAAAAQAAAAEAAAAA
+AAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAs/xQgrAA=
+</rawitemdata></item>
+<item name='$FormFormula' summary='true' sign='true'><formula>"m_StatsNbDocs"</formula></item>
+<item name='$Comment' sign='true'><text>Nb de docs dans la base</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

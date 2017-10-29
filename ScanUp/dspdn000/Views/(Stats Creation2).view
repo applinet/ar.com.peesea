@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='11c6' unid='CF187CAAF4FD0ED1C12577880053638D' sequence='42'>
+<created><datetime dst='true'>20100823T171049,73+02</datetime></created>
+<modified><datetime>20171028T233210,81-03</datetime></modified>
+<revised><datetime>20160721T105933,07-03</datetime></revised>
+<lastaccessed><datetime>20171028T233205,67-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233205,67-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='TmpViewDesignCollation'><text>fr</text></item>
+<item name='$TITLE' sign='true'><text>(Stats Creation2)|v_StatsCreation2</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+EAECAFAAAgAkNQUADQBBbm5lZUNyZWF0aW9uAAEAAQAjACICBQAMAE1vaXNDcmVhdGlvbiICAQAB
+ACMAIgIFAAwASm91ckNyZWF0aW9uIgIDAAIAHAAIAFR5cGVQbGFuBQAIAFR5cGVQbGFuAwACAAwA
+AgAkMWkAAwAFADgANAAGAAIACwAIAAIACQAEACQ1VHlwZUZpY2hpZXJUeXBlUGxhbiQxJENvbmZs
+aWN0JFJFRgQABAAAAEYABQAEAEZvcm0BAA8AbV9TdGF0c0NyZWF0aW9uAAoCBAAFAA0AU3RhdENv
+bnNvbGlkZQBeAQEAAQAxAAsCBAAcAgMABwAUAA4ACUwxUzZTN1MxMlMxM1M=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+MAADAABEiGYHAAACAIhmBwIACwCIZgcNAAgAJDVUeXBlRmljaGllclR5cGVQbGFu
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAEAAcACAAAAFZDAwQCAA0AXgAAAHYAAQAACgABAAAIAAAAAAICAAAAVkMDBAsABgAAAAAAJAAB
+AAAKAAEAAAAAAAAAAgIAAABWQwMECAAGAB4AAAAkAAEAAAoAAQAAAAAAAAACAgAAAFZDAAACABEA
+DgAAAGUAAQAACgAAAAAAAAAAAAICAAAAJDVEYXRlIENygmF0aW9uXgACAFAAAgAkNQUADQBBbm5l
+ZUNyZWF0aW9uAAEAAQAjACICBQAMAE1vaXNDcmVhdGlvbiICAQABACMAIgIFAAwASm91ckNyZWF0
+aW9uIgIDAAcADAAFAAkwUzBFAFR5cGVGaWNoaWVyRm9ybWF0VHlwZVBsYW5Gb3JtYXQeAAIAHAAI
+AFR5cGVQbGFuBQAIAFR5cGVQbGFuAwAkMURhdGUgY3KCYXRpb24gZG9jDgACAAwAAgAkMWkAAwAm
+AAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAgAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAA
+AAABAIQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAD/
+/wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAEABAAAAAAA//8AAAAAAAAAAAAA
+AAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAAB
+AP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAA
+AAAIAAAAAAABAFlDAAAIAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAA
+AAAAAAAs/xQgrAA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Nb de docs créés (pour la journée en cours)</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

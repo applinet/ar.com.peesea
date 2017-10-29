@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='662' unid='5422ED2D7F371A26C1256DA400358B2B' sequence='50'>
+<created><datetime dst='true'>20030917T114450,35+02</datetime></created>
+<modified><datetime>20171028T233207,01-03</datetime></modified>
+<revised><datetime>20160721T105931,69-03</datetime></revised>
+<lastaccessed><datetime>20171028T233202,67-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233202,67-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name
+>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormatNote' summary='true' sign='true'>
+<rawitemdata type='4'>
+AQBJfJmMgWmUnu+oSgB3aiXB
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><text>Tri renversé par format |v_TriRenverseParFormat</text></item>
+<item name='$Index' sign='true'><text>/O</text></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+igACABQAAwBQb3MABQADAFBvcwADAAIAGAAGAEZvcm1hdAUABgBGb3JtYXQDAAUAJgAiAAQAAwAG
+AAkABABQb3NGb3JtYXQkQ29uZmxpY3QkUkVGBAAEAAAAJAAFAAQAZm9ybQEAEABNX0NvcGllQ2hw
+UHJvZmlsCgIDAAcADgAIAAlMMVMyUzNT
+</formula></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+HQACAABEgGYAAAADAIhmAAMABgBQb3NGb3JtYXQ=
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAAIAKDAAAFZDAQADAAMAFgAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMBAAYADAAaAAAARQAB
+AAAKAAEAAAAAAAAAAgIAACBQb3NQb3MWAAIAFAADAFBvcwAFAAMAUG9zAAMARm9ybWF0VHlwZSBm
+aWNoaWVyGgACABgABgBGb3JtYXQFAAYARm9ybWF0AwAmAAEAAAABAQAJAQAACgEBDgoAAAEArSsB
+AAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAAAAAAAAAAA
+AABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQgAAAAAAAQD/
+//8ABQD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion' sign='true'><text>5</text></item></note>
+

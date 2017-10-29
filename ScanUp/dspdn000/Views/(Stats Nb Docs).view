@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='766' unid='00F7F1BF3FF76AF0C1256E7F00331F42' sequence='48'>
+<created><datetime dst='true'>20040423T111823,38+02</datetime></created>
+<modified><datetime>20171028T233208,19-03</datetime></modified>
+<revised><datetime>20160721T105932,39-03</datetime></revised>
+<lastaccessed><datetime>20171028T233202,80-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233202,80-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name
+>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='TmpViewDesignCollation'><text>fr</text></item>
+<item name='$TITLE' sign='true'><text>(Stats Nb Docs)|v_StatsNbDocs</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+4AACAFAAAgAkNQUADQBBbm5lZUNyZWF0aW9uAAEAAQAjACICBQAMAE1vaXNDcmVhdGlvbiICAQAB
+ACMAIgIFAAwASm91ckNyZWF0aW9uIgIDAAIAJAALAFR5cGVGaWNoaWVyAAUACwBUeXBlRmljaGll
+cgADAAIADAACACQxaQADAAUALgAqAAUAAgALAAIACQAEACQ1VHlwZUZpY2hpZXIkMSRDb25mbGlj
+dCRSRUYEAAQAAAAiAAUABABGb3JtAQANAG1fU3RhdHNOYkRvY3MACgIDAAcACgAEAAlMMVM=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+IQACAABEiGYHAAACAIhmBwIACwAkNVR5cGVGaWNoaWVy
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAYACAAAAFZDAwQCAA0AXgAAADIAAQAACgABAAAIAAAAAAICAAAAVkMDBAsABgAmAAAAJAAB
+AAAKAAEAAAAAAAAAAgIAAABWQwAAAgARAA4AAABlAAEAAAoAAAAAAAAAAAACAgAAACQ1RGF0ZSBD
+coJhdGlvbl4AAgBQAAIAJDUFAA0AQW5uZWVDcmVhdGlvbgABAAEAIwAiAgUADABNb2lzQ3JlYXRp
+b24iAgEAAQAjACICBQAMAEpvdXJDcmVhdGlvbiICAwAHAAwABQAJMFMwRQBUeXBlRmljaGllckZv
+cm1hdCYAAgAkAAsAVHlwZUZpY2hpZXIABQALAFR5cGVGaWNoaWVyAAMAJDFEYXRlIGNygmF0aW9u
+IGRvYw4AAgAMAAIAJDFpAAMAJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAIAAAAAAAAAAABX
+QwEBAAkAAAAAAAAAAAAAAAAAAAAAAQCEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAA
+AAAAAAAAAAAAAAEABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAA
+AAQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA
+////AAEA////AAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAIAAAAAAABAFlDAAAIAAAAAQAAAAEAAAAA
+AAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAs/xQgrAA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Nb de docs dans la base</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>6</text></item></note>
+

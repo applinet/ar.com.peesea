@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='742' unid='DB242F2FCB1F091BC1256E7700442D80' sequence='51'>
+<created><datetime dst='true'>20040415T142440,96+02</datetime></created>
+<modified><datetime>20171028T233208,03-03</datetime></modified>
+<revised><datetime>20160721T105932,29-03</datetime></revised>
+<lastaccessed><datetime>20171028T233202,77-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233202,77-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>(Stats Evolution Format)</text><text>m_StatsEvolutionFormat</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='TypeEvolution' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='AnneeCreation' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='MoisCreation' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='JourCreation' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='USERNAME' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='CODEMABECFICHE' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='VERSIONFICHE' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>VersionFiche</text><text>CodeMabecFiche</text><text
+>UserName</text><text>JourCreation</text><text>MoisCreation</text><text>AnneeCreation</text><text
+>TypeEvolution</text></textlist></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_StatsEvolutionFormat</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+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
+</rawitemdata></item></note>
+

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='15e' unid='EBA55881EF795827C1256AD500267389' sequence='64'>
+<created><datetime dst='true'>20010928T085959,45+02</datetime></created>
+<modified><datetime>20171028T233200,75-03</datetime></modified>
+<revised><datetime>20160721T105926,93-03</datetime></revised>
+<lastaccessed><datetime>20171028T233200,69-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233200,69-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='TmpViewDesignCollation'><text>fr</text></item>
+<item name='$TITLE' sign='true'><text>AllByForm|v_AllByForm</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+bgACABQABABGb3JtBQAEAEZvcm0DAAIADAACACQxaQADAAIAGAACACQyAgAGAAAAAAAAAHkAtAID
+AAUAKAAjAAUABAACAAIACQAEAEZvcm0kMSQyJENvbmZsaWN0JFJFRgAEAAQAAAAIAGYAAwA=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+GgACAABECGYHAAAEAIFmAAQAAgBGb3JtJDE=
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAMACQAAAFZDAwQEAAQAFgAAAFAAAQAACgABAAAAAAAAAAICAAAAVkMFAAIADQAOAAAAZAAB
+AAAKAAAAAAAAAAAAAgIAAABWQwAAAgAGACQAAACnAAEAAAoAAAAAAAAAAAACAgAAAEZvcm1Gb3Jt
+FgACABQABABGb3JtBQAEAEZvcm0DACQxRGF0ZSBjcoJhdGlvbg4AAgAMAAIAJDFpAAMAJDJBdXRl
+dXIkAAIAGAACACQyAgAGAAAAAAAAAHkAtAIDAAcACgADAAk0UwAmAAEAAAABAQAJAQAACgEBDgoA
+AAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAP//AAAAAAAA
+AAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MB
+AQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAUA
+////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAICAgAAAAAAAAAAAAAgAAAAA
+AAEA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Tout les documents par masque</text></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion'><text>6</text></item></note>
+

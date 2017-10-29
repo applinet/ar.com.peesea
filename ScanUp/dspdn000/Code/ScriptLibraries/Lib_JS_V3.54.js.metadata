@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8000DEA17" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="12da" sequence="10" unid="E076472844DA8035C1257EBC00306766">
+<created><datetime dst="true">20150910T104841,98+02</datetime></created>
+<modified><datetime>20171028T233211,89-03</datetime></modified>
+<revised><datetime>20160721T105934,55-03</datetime></revised>
+<lastaccessed><datetime>20171028T233205,88-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233205,88-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$TITLE" sign="true"><text>Lib_JS_V3.54</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item>
+<item name="$POID"><datetime>20160721T105934,55-03</datetime></item></note>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8000DEA17" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="592" sequence="112" unid="8DC363DA383C1FECC1256DB3002E2791">
+<created><datetime dst="true">20031002T102407,85+02</datetime></created>
+<modified><datetime>20171028T233205,97-03</datetime></modified>
+<revised><datetime>20160721T105930,65-03</datetime></revised>
+<lastaccessed><datetime>20171028T233202,48-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233202,48-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$TITLE" sign="true"><text>Lib_ImpMigBorneo</text></item>
+
+
+<item name="$POID"><datetime>20160721T105930,65-03</datetime></item></note>

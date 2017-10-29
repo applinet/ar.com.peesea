@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8000DEA17" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="119e" sequence="27" unid="9B75AA6D3ED65D34C12577A8003C27D5">
+<created><datetime dst="true">20100924T125703,57+02</datetime></created>
+<modified><datetime>20171028T233210,65-03</datetime></modified>
+<revised><datetime>20160721T105933,31-03</datetime></revised>
+<lastaccessed><datetime>20171028T233205,66-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233205,66-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$TITLE" sign="true"><text>urlbe.gif</text></item>
+<item name="$DesignerVersion" sign="true"><text>7</text></item>
+
+
+<item name="$MimeType" sign="true"><text>image/gif</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20100924T130255,29+02</datetime></item>
+<item name="$ImageNames" sign="true"><text>URLBE.gif</text></item>
+<item name="$Flags"><text>34CiQ</text></item></note>

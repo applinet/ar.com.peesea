@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8000DEA17" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="136" sequence="12" unid="E2F171992A2BC89EC1256AB500497D1D">
+<created><datetime dst="true">20010827T152241,57+02</datetime></created>
+<modified><datetime>20171028T233159,15-03</datetime></modified>
+<revised><datetime>20100204T161303,25-03</datetime></revised>
+<lastaccessed><datetime>20171028T233159,05-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233159,05-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=LAURENT GALVES - P525975/OU=users/O=PSA</name><name>CN=NADINE JUNOD - P065394/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>img_titre_scanup.gif</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>img_titre_scanup.gif</text></item>
+<item name="$Flags"><text>34CiQ</text></item></note>

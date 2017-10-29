@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='121a' unid='41A2BEB5853AC2F7C12578310051CC2F' sequence='25'>
+<created><datetime dst='true'>20110208T165326,87+02</datetime></created>
+<modified><datetime>20171028T233211,15-03</datetime></modified>
+<revised><datetime>20160721T105933,73-03</datetime></revised>
+<lastaccessed><datetime>20171028T233205,72-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233205,72-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=JUAN BAUTISTA CABRAL - E376693/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='TmpViewDesignCollation'><text>fr</text></item>
+<item name='$TITLE' sign='true'><text>(FicheCodeMabec)|v_FichesCodeMabec</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+mAACACgADQBEb2NfQ29kZU1hYmVjAAUADQBEb2NfQ29kZU1hYmVjAAMABQA4ADMABAANAA0ACQAE
+AERvY19Db2RlTWFiZWNGb3JtYXRGaWNoaWVyJENvbmZsaWN0JFJFRgAEAAQAAAAkAAUABABGb3Jt
+AQAQAE1fQ3JlYXRpb25Eb2NfRlIKAgMABwAOAAgACUwxUzJTM1M=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+LgACAABEAGYAAAANAABmAA0ADQBEb2NfQ29kZU1hYmVjRm9ybWF0RmljaGllcg==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAA0ACAAAAFZDAQANAAoAKgAAAGcAAQAACgAAAAAAAAAAAAICAAAAVkMBAA0ADQAAAAAAdwAB
+AAAKAAAAAAAAAAAAAgIAAABEb2NfQ29kZU1hYmVjQ29kZSBNYWJlYyoAAgAoAA0ARG9jX0NvZGVN
+YWJlYwAFAA0ARG9jX0NvZGVNYWJlYwADAEZvcm1hdEZpY2hpZXJGb3JtYXRGaWNoaWVyJgABAAAA
+AQEACQEAAAoBAQ4KAAABAK0rAQABAAEAAAAAAAAAAABXQwEAAAoAAAAAAAAAAAAAAAAAAAAAAQAA
+AAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAA
+AAAAAAAAAAAAAEIAAAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAAB
+AAAAAAABAAAAAAABAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8000DEA17" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="492" sequence="5" unid="ECDDCCD2D68A80CEC1256DA9003636CC">
+<created><datetime dst="true">20030922T115209,72+02</datetime></created>
+<modified><datetime>20171028T233204,71-03</datetime></modified>
+<revised><datetime>20100204T161305,37-03</datetime></revised>
+<lastaccessed><datetime>20171028T233201,19-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233201,19-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=LAURENT GALVES - P525975/OU=users/O=PSA</name><name>CN=NADINE JUNOD - P065394/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>icon_creation.gif</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$TITLE"><text>Copie de icon_creation.gif</text></item></note>

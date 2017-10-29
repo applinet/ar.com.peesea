@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='732' unid='BD380E8CE2BB85B7C1256E770034B5C8' sequence='53'>
+<created><datetime dst='true'>20040415T113544,08+02</datetime></created>
+<modified><datetime>20171028T233207,95-03</datetime></modified>
+<revised><datetime>20160721T105932,21-03</datetime></revised>
+<lastaccessed><datetime>20171028T233202,77-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233202,77-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='TmpViewDesignCollation'><text>fr</text></item>
+<item name='$TITLE' sign='true'><text>(Stats Suppression)|v_StatsSuppression</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+4AACAFAAAgAkNQUADQBBbm5lZUNyZWF0aW9uAAEAAQAjACICBQAMAE1vaXNDcmVhdGlvbiICAQAB
+ACMAIgIFAAwASm91ckNyZWF0aW9uIgIDAAIADAACACQxaQADAAUAIgAdAAQAAgACAAkABAAkNSQx
+JENvbmZsaWN0JFJFRgAEAAQAAABIAAUABABGb3JtAQASAG1fU3RhdHNTdXBwcmVzc2lvbgoCBAAF
+AA0AU3RhdENvbnNvbGlkZQBeAQEAAQAxAAsCBAAcAgMABwAUAA4ACUwxUzZTN1MxMlMxM1M=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEiGYHAAACACQ1
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAAIACAAAAFZDAwQCAA0AXgAAAD0AAQAACgABAAAIAAAAAAICAAAAVkMAAAIAEQAOAAAAUAAB
+AAAKAAAAAAAAAAAAAgIAAAAkNURhdGUgQ3KCYXRpb25eAAIAUAACACQ1BQANAEFubmVlQ3JlYXRp
+b24AAQABACMAIgIFAAwATW9pc0NyZWF0aW9uIgIBAAEAIwAiAgUADABKb3VyQ3JlYXRpb24iAgMA
+BwAMAAUACTBTMEUAJDFEYXRlIGNyZWF0aW9uIGRvYw4AAgAMAAIAJDFpAAMAJgABAAAAAQEACQEA
+AAoBAQ4KAAABAK0rAQABAAEAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAQCEAAAAAAD/
+/wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAA
+AAAAAEIAAAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAAB
+AAAAAAABAAAAAAAAAAgAAAAAAAEAWUMAAAgAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAwAA
+AAAAAAAAAAAAAAAAAAAAACz/FCCsAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Nb de docs supprimés (pour la journée en cours)</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

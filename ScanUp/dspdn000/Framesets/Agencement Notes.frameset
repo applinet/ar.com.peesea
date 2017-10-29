@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='11fe' unid='E501547E2012411DC12578100059DECF' sequence='119'>
+<created><datetime dst='true'>20110106T182137,43+02</datetime></created>
+<modified><datetime>20171028T233211,05-03</datetime></modified>
+<revised><datetime>20160721T105933,67-03</datetime></revised>
+<lastaccessed><datetime>20171028T233205,70-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233205,70-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=MIKAEL ANDRE - E354419/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$TITLE' sign='true'><text>Agencement Notes|AgencementNotes</text></item>
+<item name='$WINDOWTITLE' sign='true'><formula>"Domino Scanup"</formula></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$FrameSet' sign='true'>
+<rawitemdata type='1'>
+7/8YAAIABQAAAAAAAAAAAAAAAAAAAAAA8P8+AEkAAAABAAAAAAALAAsAAAAAAAUAAAAAAAUAAAAA
+AAIAAQAAAAAAAQAAAAAAAAADAAwAAwBcAAMAAQDx/0wAEQAAAABAAQECAAEAAQAAAAAACwAAAA0A
+AQAAAAAAAABCYW5kZWF1SGF1dGNhZHJlX2NvbnRlbnUBAP///4wBAAAJAQD///+M9v8wAAAAAAAD
+AAQADgAAAAAAAAAAAAAAAAAAAAAAAAAAAEJhbmRlYXVOb3Rlc1Yy8P8+AAEAAAABAAAAAAALAAsA
+AAAAAAUAAAAAAAUAAAAAAAEAAgAAAAAABQAAAAAAAAADAAEAAwAQAAMAVADx/z4AEQAAAABAAQEC
+AAEAAQAAAAAACgAAAAAAAQAAAAAAAABjYWRyZV9tZW51AQD///+MAQAACQEA////jPb/LQAAAAAA
+AwAHAAsAAAAAAAAAAAAAAAAAAAAAAAAAAABwX01lbnVOb3Rlcz/x/0EAEQAAAABAAQABAAEAAQAA
+AAAADQAAAAAAAQAAAAAAAABjYWRyZV9jb250ZW51AQD///+MAQAACQEA////jD/2/zAAAAAAAAMA
+BwAOAAAAAAAAAAAAAAAAAAAAAAAAAAAAcF9BY2N1ZWlsTm90ZXM=
+</rawitemdata></item>
+<item name='$Flags'><text>#34CQ</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

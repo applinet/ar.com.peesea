@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="032581C8000DEA17" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="23e" sequence="155" unid="8F67097688A67AFBC1256B1A00570EAE">
+<created><datetime dst="true">20011206T175053,90+02</datetime></created>
+<modified><datetime>20171028T233201,77-03</datetime></modified>
+<revised><datetime>20160721T105927,89-03</datetime></revised>
+<lastaccessed><datetime>20171028T233200,81-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233200,81-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$TITLE" sign="true"><text>Lib_Traitements</text></item>
+
+
+<item name="$POID"><datetime>20160721T105927,89-03</datetime></item></note>

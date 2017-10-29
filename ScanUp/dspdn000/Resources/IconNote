@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.0' replicaid='032581C8000DEA17'>
+<noteinfo noteid='116' unid='4DAB8E7B1BFCBBE0C1256A7E004CB4FE' sequence='328'>
+<created><datetime dst='true'>20010703T155750,70+02</datetime></created>
+<modified><datetime>20171028T233211,91-03</datetime></modified>
+<revised><datetime>20171028T233211,90-03</datetime></revised>
+<lastaccessed><datetime>20171028T233205,88-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233159,00-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=LAURENT GALVES - P525975/OU=users/O=PSA</name><name>CN=DEV008.DEV/OU=S/O=PSADEVDSIN</name><name
+>CN=LAURENT GALVES - P525975/OU=users/O=PSA</name><name>CN=MARTIAL VALENTIN - J508192/OU=users/O=PSA</name><name
+>CN=GPW005.DOMINO/OU=S/O=PSA</name><name>CN=MARTIAL VALENTIN - J508192/OU=users/O=PSA</name><name
+>CN=GPW005.DOMINO/OU=S/O=PSA</name><name>CN=MARTIAL VALENTIN - J508192/OU=users/O=PSA</name><name
+>CN=GPW005.DOMINO/OU=S/O=PSA</name><name>CN=MARTIAL VALENTIN - J508192/OU=users/O=PSA</name><name
+>CN=GPW005.DOMINO/OU=S/O=PSA</name><name>CN=MARTIAL VALENTIN - J508192/OU=users/O=PSA</name><name
+>CN=GPW005.DOMINO/OU=S/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=DEV008.DEV/OU=S/O=PSADEVDSIN</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=DEV008.DEV/OU=S/O=PSADEVDSIN</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=DEV008.DEV/OU=S/O=PSADEVDSIN</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=DEV008.DEV/OU=S/O=PSADEVDSIN</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=DAVID CONTANT - J504329/OU=users/O=PSA</name><name>CN=DEV025.DOMINO/OU=S/O=PSADEVDSIN</name><name
+>CN=DAVID CONTANT - J504329/OU=users/O=PSA</name><name>CN=STEPHANE BUCHOU - C022589/OU=users/O=PSA</name><name
+>CN=BERNARD ALLAINE - C010578/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=CLAUDIA SOLDANO - E355133/OU=users/O=PSA</name><name>CN=GPW506.DOMINO/OU=S/O=PSA</name><name
+>CN=CLAUDIA SOLDANO - E355133/OU=users/O=PSA</name><name>CN=ALEJANDRO MARIANO REYNAL OCONNOR - E355134/OU=users/O=PSA</name><name
+>CN=CLAUDIA SOLDANO - E355133/OU=users/O=PSA</name><name>CN=ALEJANDRO MARIANO REYNAL OCONNOR - E355134/OU=users/O=PSA</name><name
+>CN=CLAUDIA SOLDANO - E355133/OU=users/O=PSA</name><name>CN=GUILLERMO PIRPIGNANI - E357111/OU=users/O=PSA</name><name
+>CN=MARCELO GUSTAVO HUERTA - E500756/OU=users/O=PSA</name></updatedby>
+<item name='$DefaultWebLaunchPage'><text>p_lancement</text></item>
+<item name='$DefaultFrameset'><text>AgencementNotes</text></item>
+<item name='$DefaultWebFrameset'><text>A_Acceuil_FR</text></item>
+<item name='$DefaultLanguage'><text>fr-FR</text></item>
+<item name='$DefaultCollation'><text>fr</text></item>
+<item name='$FlagsNoRefresh'><text/></item>
+<item name='$TemplateServerName'><text>CN=GUILLERMO PIRPIGNANI - E357111/OU=users/O=PSA</text></item>
+<item name='$TemplateFileName'><text>C:\User\E357111\Notes 8\data\Templates\DSP\dspdn000.ntf</text></item>
+<item name='$TemplateModTime'><datetime>20160721T105934,60-03</datetime></item>
+<item name='IconBitmap' summary='true'>
+<rawitemdata type='6'>
+AiAgAQAA4c///uCH4DzAA+A4gAP/MIAB/iCAAP8ggABgIIAAYCCAAH8ggAB/IIAAfyCAAGAggABg
+IIAA/+DAQSYgwcACAICAAACAAAAAwAAAAPAGAADgBgAAwAYAAIAGAACBBgAAgwYAAIAAAACAAAAA
+wAAAAOAAAADAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAABERERAAAIgAGZmAA
+ZgAAAAREREQAAiIAZmZmAGYAAAAAAABEACIiAGYAZgBmAAAAAAABRAIiIgBmAGYAZgAAAAAAAEQC
+IiIAZgBmAGZmYAAEREREAiIiAGYAZgBmZmAABERERAIiIgBmAGYAZgBgAAAAAEQCIiIAZgBmAGYA
+YAAAAABEAiIiAGYAZgBmAGAAAAAARAIiIgBmAGYAZgBgAAREREQCIiIAZgBmAGZmYAAEREREAiIi
+AGYAZgAGZgAAAAAAAAIiIgAAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAACAGZmAABmZgBm
+BmAGYAZgAgBmZmAGZmYAZgZgBmAGYAIAAAZgBmAAAGYGYAZgBmACAAAGYAZgAABmBmAGYAZgAgAA
+BmAGYAAAZgZgBmAGYAIABmZgBmAAAGZmYAZgZmACAGZmAAZgAABmZmAGZmZgAgBmAAAGYAAAZgZg
+BmYGYAIAZgAABmAAAGYGYAZgBmACAGYAAAZgAABmBmAGYAZgAgBmZmAGZmYAZmZgBmAGYAIABmZg
+AGZmAAZmAAZgBmACAAAAAEQAAARAAARAAEAAIgBEREREREREREREREREQiIERERERERERERERERE
+REQiREREREREREREREREREREQg==
+</rawitemdata></item>
+<item name='$Flags'><text>JMFERz</text></item>
+<item name='$Daos'><text>0</text></item>
+<item name='$TITLE'><text>MDL Scanup 22/01/2015
+#1dspdn000
+#2dspdn000_loc</text></item></note>
+

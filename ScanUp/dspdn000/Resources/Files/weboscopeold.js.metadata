@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8000DEA17" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="81e" sequence="83" unid="52B88CFA2E1BD6A4C12575080041152B">
+<created><datetime dst="true">20081121T135052,59+02</datetime></created>
+<modified><datetime>20171028T233208,93-03</datetime></modified>
+<revised><datetime>20160721T105932,65-03</datetime></revised>
+<lastaccessed><datetime>20171028T233204,11-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233204,11-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$FileNames" sign="true"><text>weboscope.js</text></item>
+
+<item name="$FileModDT" sign="true"><datetime dst="true">20081205T165059,60+02</datetime></item>
+
+<item name="$EditFilePath" sign="true"><text>C:\DOCUME~1\u073949\LOCALS~1\Temp\notes8499E6\~weboscope.js</text></item>
+<item name="$Flags"><text>345CgQ$</text></item>
+<item name="$TITLE" sign="true"><text>weboscopeold.js</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5</text></item></note>

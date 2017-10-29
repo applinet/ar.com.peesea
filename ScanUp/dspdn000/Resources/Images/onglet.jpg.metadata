@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="032581C8000DEA17" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1182" sequence="22" unid="4AEB2C85D206113DC12577D2003271D0">
+<created><datetime dst="true">20101105T111059,36+02</datetime></created>
+<modified><datetime>20171028T233210,51-03</datetime></modified>
+<revised><datetime>20160721T105933,45-03</datetime></revised>
+<lastaccessed><datetime>20171028T233205,63-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233205,63-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name="$TITLE"><text>onglet.jpg</text></item>
+<item name="$FlagsExt"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$DesignerVersion"><text>7</text></item>
+
+
+<item name="$MimeType" sign="true"><text>image/jpeg</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20101105T114149,99+02</datetime></item>
+<item name="$ImageNames" sign="true"><text>onglet.jpg</text></item>
+<item name="$Flags"><text>34CiQ</text></item></note>

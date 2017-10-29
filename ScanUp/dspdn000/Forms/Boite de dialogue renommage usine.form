@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='78e' unid='E6FC090F6B3E1819C1256E8600291922' sequence='59'>
+<created><datetime dst='true'>20040430T092854,10+02</datetime></created>
+<modified><datetime>20171028T233208,35-03</datetime></modified>
+<revised><datetime>20160721T105932,43-03</datetime></revised>
+<lastaccessed><datetime>20171028T233204,00-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233204,00-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name
+>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>Boite de dialogue renommage usine</text><text
+>m_DialogBoxRenameDb</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgGAIAAAAAAgAAAIwABANTQyAAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion'><text>6</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/9KAAIABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYiTVMgU2FucyBTZXJpZgAA
+AAAAAAAAAAAAAAAAAAAAAAA=
+</rawitemdata></item>
+<item name='SaveOptions' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='ActiverRenommage' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='NouveauNom' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='InfosRenommage' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>InfosRenommage</text><text>NouveauNom</text><text
+>ActiverRenommage</text><text>SaveOptions</text></textlist></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_DialogBoxRenameDb</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAIr/PgCKAAAFADACAAAAAAAAAgEAAggOAAAAAAAAAAsAAAAAAA4A
+AAAMAAEAAQAwAAMAU2F2ZU9wdGlvbnMA3gYAAIr/hf8IAAEAAAqBAoL/WgACAAAAAAAAAAAAoAUA
+AKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAlIcAAAAA
+AAAAAAAAAAABAAAABAAAAIMEAgCF/wgAAQAACoECgwQCAIX/CAABAAAKgQKDBAIAhf9JAAUBAAlW
+b3VsZXotdm91cyBhY3RpdmV6IGxlIHJlbm9tbWFnZSBkZSBjZXR0ZSB1c2luZSBwb3VyIGNldHRl
+IG51aXQgPwCBAoMEAgCF/wkABgAACiAA3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw/xQA
+AAAEIgAAAAAAAAAAAAAAAIr/UACCggAFACAAAAgAAAAAAgUAAAkQAAAAAAAAABAAAAAMABAAAAAO
+AAEAAwBOT04AAwBBY3RpdmVyUmVub21tYWdlAgADAAMAT1VJTk9O3gYAAIr/hf8IAAUAAAuBAoME
+AgCF/wgABQAAC4ECgwQCAIX/IAAFAQAJTm91dmVhdSBub20gZGUgbCd1c2luZSA6gQKDBAIAhf8I
+AAUBAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/LgCKAAAFADACAAAAAAAAAgUAAAkA
+AAAAAAAAAAoAAAAAAE5vdXZlYXVOb23eBgAAiv+F/wgABQEACYECgwQCAIX/CAAFAQAJgQKDBAIA
+hf8gAAUBAAlJbmZvcyBzdXIgbGUgcmVub21tYWdlIDqBAoMEAgCF/wgABQEACd0GAACK//7/UAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAsP8UAAAAAAAEAAAAAAAAAAAAAACK/zIAggAABQAwAAAIAAAAAAIF
+AAAJAAAAAAAAAAAOAAAAAABJbmZvc1Jlbm9tbWFnZd4GAACK/4X/CAAFAQAJgQKDBAIAhf8IAAUB
+AAmBAoMEAgCF/w8ABQEACU5vdGUgOiAAgQKDBAIAhf9NAAUAAAlVbmUgZm9pcyBsZSB0cmFpdGVt
+ZW50IG5vY3R1cm5lIGVmZmVjdHWCLCBsZSByZW5vbW1hZ2UgZXN0IGSCc2FjdGl2gi4AgQKDBAIA
+hf96AAUAAAlTaSB0b3VzIGxlcyBkb2N1bWVudHMgbidvbnQgcGFzIIJ0giB0cmFpdIJzLCB2b3Vz
+IGRldmV6IHKCYWN0aXZleiBsZSByZW5vbW1hZ2UgcGFyIGwnaW50ZXJtgmRpYWlyZSBkZSBjZSBk
+b2N1bWVudC4=
+</rawitemdata></item></note>
+

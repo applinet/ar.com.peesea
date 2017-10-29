@@ -1,0 +1,1176 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+
+' On force la déclaration des variables
+Option Declare
+
+' Pour fonctionner cette librairie a besoin de la librairie Commune
+Use "Lib_Commune"
+
+' Pour utiliser la barre de progression nous avons besoin de cette librairie
+Use "BarreDeProgression"
+
+'fonction pour log applicative
+Use "LogEntry" 
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Public Class ClasseDocument
+Declare Function ExploiteRep( s_chemin As String, Report As LogEntry )
+Declare Function LectureFicData(Report As LogEntry) As Integer
+Declare Function CreationDocuments (Report As LogEntry)
+Declare Sub Initialize
+Declare Sub Terminate
+Declare Public Sub Nettoyage
+Declare Function TraitRecursifRep ( s_rep As String , Report As LogEntry)
+Declare Function LectureCreation(Report As LogEntry)
+Declare Function RechercheVersion ( s_mabec As String , s_planche As String ) As NotesDocument
+Declare Function Migration(Report As LogEntry)
+Declare Function RecupRepMigration
+Declare Function ChoixFormatFichier As String
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+' Déclaration d'une classe document 
+Public Class ClasseDocument
+	Public NomFichier As String
+	Public l_ficasso() As String
+	Public i_nb_ficasso As Integer
+	Public CodeMabec As String
+	Public CodeEDE As String
+	Public TypeVehicule As String
+	Public DesignationPiece As String
+	Public IntitulePlan As String
+	Public Date As Variant
+	Public NomDessinateur As String
+	Public CodeClassement As String
+	Public NomFournisseur As String
+	Public RefFournisseur As String
+	Public NoPlanche As String
+	Public Format As String
+	Public Usine As String
+	Public NumeroVersion As String
+	Public DesignationPlan As String
+	Public DatePlan As Variant
+	Public IndiceModification As String
+	Public DateModification As Variant
+	Public NoAtelier As String
+	Public NoOperation As String
+	Public TypePlan As String
+	Public CommentaireModification As String
+	Public NoPointIntervention As String
+	Public Caracteristique As String
+	Public Divers As String
+	
+	Public Createur As String
+	Public DateCreation As String
+	
+	Public FlagMigration As Integer
+	
+	Public FlagNomFichier As Integer
+	
+	' Fonction permettant l'ajout d'un fichier associé
+	Sub AjoutFicAsso( nom_fic As String)
+		Redim Preserve l_ficasso ( i_nb_ficasso )
+		l_ficasso(i_nb_ficasso) = nom_fic
+		i_nb_ficasso = i_nb_ficasso + 1
+	End Sub
+	
+	Public i_flag_err As Integer
+	Public s_lib_err As String
+	
+End Class
+
+' Champ précisant le répertoire à exploiter
+Dim s_champ_repertoire As String
+
+' Tableau d'objet document
+Dim l_listedoc() As ClasseDocument
+Dim i_nb_document As Integer
+Dim i_nb_traite As Integer
+
+' Tableau des fichiers à traiter si précisés
+Dim l_liste_sel() As Variant
+Dim i_nb_sel As Integer
+
+' Gestion des erreurs
+Dim i_err As Integer
+Dim i_err_p As Integer
+Dim s_erreur As String
+
+' Flag de migration
+Dim i_flag_migr As Integer
+Dim i_sortie As Integer
+
+Public FormatFichier As String
+Public NomVisibleFormatFichier As String
+Public NomFichierPdf As String
+
+
+'++LotusScript Development Environment:2:1:ExploiteRep:1:8
+Function ExploiteRep( s_chemin As String, Report As LogEntry )
+	
+	Dim i_traite_repertoire As Integer
+	i_traite_repertoire = 0
+	
+	On Error Goto TraitNoFic
+	
+	If( i_flag_migr <> 0 ) Then
+	' On regarde si le fichier fin.fin existe dans ce répertoire
+		Dim verLen As Long
+		' Recherche : " + s_chemin + "/fin.fin" )
+		verLen = Filelen(s_chemin + "/fin.fin")
+		'"Taille : " + Cstr(verLen) )
+	End If
+	
+	If(i_traite_repertoire = 0) Then
+		' Tableau des fichiers associés
+		Dim tab_fic() As String
+		Dim i_nb_ass As Integer
+		i_nb_ass = 0
+		
+		' Variable pour le résultat du dir sur le répertoire
+		Dim filerep As String
+		
+		' Exécution du dir sur le répertoire passé en paramètre
+		filerep = Dir(s_chemin , 0)
+		
+		Report.AddDebugLine( "Début : Analyse des fichiers sous le répertoire cible. " )
+		
+		If ( i_nb_document > 0 ) Then
+			Erase l_listedoc
+			i_nb_document = 0
+			i_nb_traite = 0
+		End If
+		
+		'On recherche les fichiers .dat et les associes dans : " + s_chemin) 
+		
+		' On boucle tant qu'il y a des fichiers dans le répertoire
+		Do While filerep <> "" And i_sortie = 0
+			
+			' On ne prend que les fichiers avec l'extension .dat
+			Dim pos As Integer
+			pos = Instr(1,Lcase(filerep),".dat")
+			
+			If ( pos > 0 ) Then
+				' On redimensionne le tableau
+				Redim Preserve l_listedoc ( i_nb_document )
+				
+				' Creation d'une nouvelle instance d'objet
+				Dim obj_doc As ClasseDocument
+				Set obj_doc = New ClasseDocument
+				obj_doc.i_nb_ficasso = 0
+				obj_doc.i_flag_err = 0
+				obj_doc.s_lib_err = ""
+				obj_doc.NomFichier = filerep
+				Set l_listedoc ( i_nb_document ) = obj_doc
+				i_nb_document = i_nb_document +1
+			Else
+				Redim Preserve tab_fic ( i_nb_ass )
+				tab_fic(i_nb_ass) = filerep
+				i_nb_ass = i_nb_ass + 1
+			End If
+			
+			' Si on est en migration on se limite à 1000 documents
+			If( i_flag_migr <> 0 ) Then
+				If ( i_nb_document > 999) Then
+					i_sortie = 1
+				End If
+			End If
+			
+			filerep = Dir()
+			
+		Loop
+		
+		'On recherche les fichiers associes dans : " + s_chemin)
+		'Nb associés : " + Cstr(i_nb_ass))
+		
+'		Msgbox "ATTENTION REBOUCLAGE SUR FICHIERS ASSOCIES"
+		' On reboucle sur les fichiers associés
+		Forall fic_asso In tab_fic
+'			Msgbox "Rebouclage sur le fichier associé: " & fic_asso
+			Dim s_sous As String
+			
+			' On prend le nom du fichier sans l'extension
+			pos = Instr(1,fic_asso,".")
+			If ( pos <> 0 ) Then
+				s_sous = Left$(fic_asso, pos-1)
+			Else
+				s_sous = fic_asso
+			End If
+			
+			
+			' De plus s'il y a plusieurs fichiers associés il faut enlever l'index du fichier associé
+			pos = Instr(1,s_sous,"-")
+			If ( pos <> 0 ) Then
+				s_sous = Left$(s_sous, pos-1)
+			End If
+			
+			' Maintenant que l'on a le debut du fichier on scrute le tableau de documents
+			' pour y ajouter un fichier associé
+			Forall objrech In l_listedoc
+				If objrech.NomFichier Like "*"+s_sous+"*" Then
+					If ( objrech.FlagNomFichier = 0  And i_flag_migr = 1 ) Then
+						' On ajoute le fichier dans la liste des fichiers associés
+						objrech.AjoutFicAsso(s_chemin + fic_asso)
+					End If
+				End If
+			End Forall
+			
+		End Forall
+		
+		Report.AddDebugLine( "Fin : Analyse des fichiers sous le répertoire cible. " )
+	Else
+		Report.AddDebugLine( "On saute le répertoire : " + s_chemin + " car pas de fichier fin.fin")
+	End If
+	
+	Goto FinFonction
+	
+TraitNoFic:
+	i_traite_repertoire = 1
+	Resume Next
+	
+FinFonction:
+	
+End Function
+'++LotusScript Development Environment:2:1:LectureFicData:1:8
+Function LectureFicData(Report As LogEntry) As Integer
+	
+	On Error Goto LectTraitErr
+	
+	' Instance d'objet pour une cession notes : NotesSession
+	Dim s_cession As NotesSession
+	Set s_cession = New NotesSession
+	
+	' Instance d'objet pour la base courante : NotesDatabase
+	Dim db As NotesDatabase
+	Set db = s_cession.CurrentDatabase
+	
+	' On test si l'usine cible est bien l'usine courante
+	' Récupération des infos dans le masque ChampProfile
+	Dim docprofil As NotesDocument
+	Set docprofil = db.GetProfileDocument("M_ChpProfil_FR")
+	
+	' Nom de l'usine de la base courante
+	Dim s_nomusine As Variant
+	s_nomusine = docprofil.GetItemValue( "Profil_NomUsine" )
+	
+	' Liste des types de format de document de la base courante
+	Dim t_format As Variant
+	t_format = docprofil.GetItemValue( "Format" )
+	
+	' Liste des types de plan de document de la base courante
+	Dim t_plan As Variant
+	t_plan = docprofil.GetItemValue( "TypePlan" )
+	
+	' Déclaration d'un objet temporaire
+	Dim obj_tempo As ClasseDocument
+	
+	Dim i_err_date As Integer
+	i_err_date = 0
+	
+	' Pour tous les fichiers répertoriés nous allons créer un document en mémoire
+	Forall element In l_listedoc
+		
+		Report.AddDebugLine( "Début exploitation du fichier .dat : " + element.NomFichier )
+		
+		' Création d'un descripteur de fichier		
+		Dim file_dat As Integer
+		file_dat = Freefile
+		
+		' Ouverture du fichier en lecture
+		'Msgbox "Ouverture:" & s_champ_repertoire + element.NomFichier
+		Open s_champ_repertoire + element.NomFichier For Input As file_dat			
+		
+		' On boucle tant qu'il y a des choses à lire dans le fichier
+		Dim i_pos As Integer
+		Dim i_parc As Integer
+		Dim i_part As Integer
+		Dim s_lecture As String
+		Dim s_cle As String
+		Dim s_valeur As String
+		Dim s_decou As String
+		Dim s_trav As String
+		
+		While Not Eof ( file_dat )
+			
+			Line Input #file_dat,s_lecture
+			
+			i_parc = 1
+			i_part = 1
+			s_cle = ""
+			s_valeur = ""
+			s_trav = s_lecture
+			
+			While ( Len ( s_trav ) > 0 )
+				s_decou = Left$ ( s_trav , 1 )
+				s_trav = Right$ ( s_trav , Len ( s_trav ) - 1 )
+				
+				If ( Asc ( s_decou ) <> 34 ) Then
+					If ( i_part = 1 ) Then
+						s_cle = s_cle + s_decou
+					End If
+					If ( i_part > 1 ) Then
+						s_valeur = s_valeur + s_decou
+					End If
+					If ( Asc ( s_decou ) = 61 ) Then
+						i_part = i_part + 1
+					End If
+				End If
+				
+			Wend
+			
+			' Enregistrements communs aux bases Scanup et à la base des outils coupants :
+			
+			' Scanup V2: CodeMabec devient clé
+			i_pos = Instr(1,s_cle,"Cle")
+			If( i_pos > 0 ) Then
+				element.CodeMabec = Strleftback(s_valeur,Chr$(13))
+			End If
+			
+			' Code Mabec conservé au cas ou l'utilisateur ne prends pas compte de la modif apportée pas la V2
+			i_pos = Instr(1,s_cle,"CodeMabec")
+			If( i_pos > 0 ) Then
+				element.CodeMabec = Strleftback(s_valeur,Chr$(13))
+			End If
+			
+			i_pos = Instr(1,s_cle,"NoPlanche")
+			If( i_pos > 0 ) Then
+				element.NoPlanche = Strleftback(s_valeur,Chr$(13))
+			End If
+			
+			i_pos = Instr(1,s_cle,"Usine")
+			If( i_pos > 0 ) Then
+				element.Usine = Strleftback(s_valeur,Chr$(13))
+			End If			
+			
+			i_pos = Instr(1,s_cle,"IndiceModification")
+			If( i_pos > 0 ) Then
+				element.IndiceModification = Strleftback(s_valeur,Chr$(13))
+			End If
+			
+			i_pos = Instr(1,s_cle,"FlagMigration")
+			If( i_pos > 0 ) Then
+				i_pos = Instr(1,Strleftback(s_valeur,Chr$(13)),"1")
+				If ( i_pos > 0 ) Then
+					element.FlagMigration = 1
+				Else
+					element.FlagMigration = 0
+				End If
+			End If
+			
+			i_pos = Instr(1,s_cle,"Date")
+			If( i_pos > 0 ) Then
+				
+				element.DatePlan = Format$ ( Cdat ( Strleftback(s_valeur,Chr$(13))) , "General Date")
+				
+			End If
+			
+			' Enregistrements de la  base des outils coupants :
+			
+			i_pos = Instr(1,s_cle,"CodeEDE")
+			If( i_pos > 0 ) Then
+				element.CodeEDE = Strleftback(s_valeur,Chr$(13))
+			End If
+			
+			i_pos = Instr(1,s_cle,"TypeVehicule")
+			If( i_pos > 0 ) Then
+				element.TypeVehicule = Strleftback(s_valeur,Chr$(13))
+			End If
+			
+			i_pos = Instr(1,s_cle,"DesignationPiece")
+			If( i_pos > 0 ) Then
+				element.DesignationPiece = Strleftback(s_valeur,Chr$(13))
+			End If
+			
+			i_pos = Instr(1,s_cle,"IntitulePlan")
+			If( i_pos > 0 ) Then
+				element.IntitulePlan =Strleftback(s_valeur,Chr$(13))
+			End If
+			
+			i_pos = Instr(1,s_cle,"NomDessinateur")
+			If( i_pos > 0 ) Then
+				element.NomDessinateur = Strleftback(s_valeur,Chr$(13))
+			End If
+			
+			i_pos = Instr(1,s_cle,"NumeroVersion")
+			If( i_pos > 0 ) Then
+				element.NumeroVersion = Strleftback(s_valeur,Chr$(13))
+			End If
+			
+			i_pos = Instr(1,s_cle,"FicAssocie")
+			If( i_pos > 0 ) Then
+				Dim s_travo As String
+				Dim s_deco As String
+				Dim s_fin As String
+				
+				s_travo = s_champ_repertoire + element.NomFichier
+				If ( i_flag_migr = 1 ) Then
+					s_deco = Strleftback(s_travo,"/")
+					s_fin = s_deco + "/" + s_valeur
+				Else
+					s_deco = Strleftback(s_travo,"\")
+					s_fin = s_deco + "\" + s_valeur
+				End If
+				
+				element.FlagNomFichier = 1
+				element.AjoutFicAsso(s_fin)
+			End If
+			
+		Wend
+		
+		' Fermeture du descripteur de fichier
+		Close file_dat
+		
+		Report.AddDebugLine( "Fin exploitation du fichier .dat : " + element.NomFichier )
+		
+	End Forall
+	
+	Goto Fin
+	
+LectTraitErr:
+	Resume Next
+	
+ErrDate:
+	Report.AddDebugLine( "Erreur dans un champ date : champ non pris en compte. " )
+	Resume Next
+	
+Fin:
+	
+End Function
+'++LotusScript Development Environment:2:1:CreationDocuments:1:8
+Function CreationDocuments (Report As LogEntry)
+	
+	Report.AddDebugLine( "Début : création des documents" )
+	
+	If(i_nb_document <> 0) Then
+		
+		On Error Goto ErreurCreationDocuments
+		
+		' Flag permettant de savoir si un champ texte riche a déjà été créé
+		Dim i_flag_creat As Integer
+		i_flag_creat = 0
+		
+		' Instance d'objet pour une cession notes : NotesSession
+		Dim s_cession As NotesSession
+		Set s_cession = New NotesSession
+		
+		' Instance d'objet pour la base courante : NotesDatabase
+		Dim db As NotesDatabase
+		Set db = s_cession.CurrentDatabase
+		
+		' Instance du nouveau document : NotesDocument
+		Dim doc As NotesDocument
+		
+		' Instanciation du document profil d'administration de la base
+		Dim docprofil As notesdocument
+		Set docprofil = db.GetProfileDocument("M_ChpProfil_FR")
+		
+		' Flag d'erreur pour document courant
+		Dim i_loc_err As Integer
+		Dim i_err_suppression As Integer
+		
+		' ajout par M.Girardot le 07/12/2009 pour adaptatino linux
+		' booleen permettant de traiter la barre de progression suivant l'os
+		Dim oswindows As Boolean
+		
+		If (Left (s_cession.Platform, 3) = "Win") Then
+			oswindows = True
+		Else
+			oswindows = False
+		End If
+		
+		If ( i_flag_migr = 0 ) Then
+			If oswindows Then
+			' Ouverture de la barre de progression
+				Dim pb_import As LNProgressBar
+				Set pb_import = New LNProgressBar(True)
+				Call pb_import.SetText("Importation de donnees en cours." & Chr(13) & Chr(13),"Veuillez patienter...")
+				Call pb_import.SetProgressRange(Clng(i_nb_document))
+			Else
+				Print ( "Importation en cours des " & Cstr(i_nb_document) &" fiches sélectionnées, veuillez patienter ...")
+			End If
+		End If
+		
+		' Index de progression pour la barre de progression
+		Dim i_index As Long
+		i_index = 1
+		
+		' Création d'une instance pour chaque document lu
+		Forall obj_lu In  l_listedoc
+			
+			Report.AddDebugLine( "Début création dans la base du document : " + obj_lu.CodeMabec + " " + obj_lu.NoPlanche )
+			
+			i_loc_err = 0
+			
+			' Nous allons tester si la base des pièces jointes na pas dépassée son quota
+			' de plus nous allons boucler sur une éventuelle création en parallèle d'un
+			' nouvelle base
+			Dim i_test As Integer
+			i_test = 1
+			
+			' Pour l'instant pas de champ texte riche
+			i_flag_creat = 0
+			
+			' On test si le Code Mabec est bien précisé dans le fichier .dat
+			Dim i_taille As Integer
+			i_taille = Cint(Len(obj_lu.CodeMabec))
+			
+			If ( Strcompare ( obj_lu.CodeMabec , "" , 1) <> 0) Then
+				
+				Dim i_comp1 As Integer
+				Dim i_comp2 As Integer
+				' Cas du format3: enlever le sousRep avant le nom du fichier
+				Dim NomFichierDat As String				
+				If  FormatFichier<>"format3" Then
+					NomFichierDat=obj_lu.NomFichier
+				Else
+					' Fichier Xelec
+					NomFichierDat=Strrightback(obj_lu.NomFichier,"\")
+					' En plus on doit mettre à jour le chp XelecListePdf
+					Forall fichier In obj_lu.l_ficasso
+						If Ucase(Strrightback(fichier,"."))="PDF" Then
+							NomFichierPdf=Strrightback(fichier,"\")
+							Exit Forall
+						End If
+						
+					End Forall
+				End If
+				
+				If i_flag_migr=1 Then
+					'Rajout pour l'import de données de bornéo:					
+					i_comp1 = Instr ( 1 , NomFichierDat , Strleftback(obj_lu.CodeMabec,Chr$(13)) + "_" , 1 )
+					i_comp2 = Instr ( 1 , NomFichierDat , "_" + Strleftback(obj_lu.NoPlanche,Chr$(13)) , 1 )	
+				Else
+					i_comp1 = Instr ( 1 , NomFichierDat , obj_lu.CodeMabec + "_" , 1 )
+					i_comp2 = Instr ( 1 , NomFichierDat , "_" + obj_lu.NoPlanche , 1 )	
+				End If
+				
+				If (  i_comp1 <> 0 And i_comp2 <> 0 ) Then
+					Msgbox "Répertoire traité: " & s_champ_repertoire & " - Fichier remonté: " & NomFichierDat
+					
+					If ( obj_lu.i_flag_err = 0 ) Then
+						
+						' Création d'une nouvelle instance de document dans la base actuelle
+						Set doc = New NotesDocument( db )
+						
+						' Affectation des champs utilisateur à l'objet Document
+						
+						If docProfil.IsBaseOutils(0)="Non" Then
+						' Champs BaseScanup Normale :
+							doc.Form									= "M_CreationDoc_FR"
+							doc.FormatFichier							= FormatFichier
+							doc.SelectionFormatFichier				= NomVisibleFormatFichier
+							doc.XelecListePdf							= NomFichierPdf
+							doc.Doc_CodeMabec					= obj_lu.CodeMabec
+							doc.Doc_NumeroPlanche				= obj_lu.NoPlanche
+							doc.Doc_Format							= obj_lu.Format
+							doc.Doc_NomUsine						= obj_lu.Usine
+							doc.Doc_DesignationPlan				= obj_lu.DesignationPlan
+							doc.Doc_NoPointIntervention			= obj_lu.NoPointIntervention
+							doc.Doc_NoAtelier						= obj_lu.NoAtelier
+							doc.Doc_DatePlan						= obj_lu.DatePlan
+							doc.Doc_NoOperation					= obj_lu.NoOperation
+							doc.Doc_TypePlan						= obj_lu.TypePlan
+							doc.Doc_IndiceModification			= obj_lu.IndiceModification
+							doc.Doc_DateModification				= obj_lu.DateModification
+							doc.Doc_CommentaireModif			= obj_lu.CommentaireModification
+							doc.Doc_Caracteristique					= obj_lu.Caracteristique
+							doc.Doc_Divers							= obj_lu.Divers	
+						Else 
+						' Champs Base des outils coupants :
+							doc.Form									= "M_CreationOutil"							
+						' attention 2 lignes ci-dessous exclusivement pour l'import Bornéo:							
+							doc.FormatFichier							= "format1"
+							doc.SelectionFormatFichier				= "Tif"
+							doc.Doc_CodeMabec					= obj_lu.CodeMabec			
+							doc.Doc_NumeroPlanche				= obj_lu.NoPlanche
+							doc.Doc_NomUsine						= obj_lu.Usine
+							doc.Doc_CodeEDE						= obj_lu.CodeEDE
+							doc.Doc_TypeVehicule					= obj_lu.TypeVehicule
+							doc.Doc_IndiceModification			= obj_lu.IndiceModification
+							doc.Doc_DesignationPiece				= obj_lu.DesignationPiece
+							doc.Doc_IntitulePlan						= obj_lu.IntitulePlan
+							doc.Doc_DatePlan						= obj_lu.DatePlan
+							doc.Doc_NomDessinateur				= obj_lu.NomDessinateur
+							doc.Doc_CodeClassement				= obj_lu.CodeClassement
+							doc.Doc_NomFournisseur				= obj_lu.NomFournisseur
+							doc.Doc_RefFournisseur				= obj_lu.RefFournisseur
+						End If
+						
+						' Affectation des champs systèmes à l'objet document
+						doc.Doc_FlagDerniereVersion			= "1"
+						doc.Doc_FlagEtat					= "0" ' 0 pour visualisation
+						doc.Doc_FlagVerrou					= "0"
+						
+						' Affectation du createur du document
+						If ( obj_lu.FlagMigration = 1 ) Then
+							doc.Doc_Createur	          = obj_lu.Createur
+							doc.Doc_DateCreation  = obj_lu.DateCreation
+						Else
+							doc.Doc_Createur	          = Evaluate ( "@Name([CN];@Username)" )
+							doc.Doc_DateCreation    = Format ( Today ( ) , "General Date" )
+						End If
+						
+						' Affectation du numéro de version
+						If ( obj_lu.FlagMigration = 1 ) Then
+							doc.Doc_NumeroVersion = obj_lu.NumeroVersion
+						Else
+							' On récupère la dernière version du document
+							Dim doc_rech As NotesDocument
+							Set doc_rech = RechercheDerniereVersionDoc ( obj_lu.CodeMabec , obj_lu.NoPlanche, Report )
+							
+							If ( i_flag_reponse = 0 ) Then
+								
+								' On récupère la version de ce document = dernière version
+								Dim s_vers As Variant
+								s_vers = doc_rech.GetItemValue ( "Doc_NumeroVersion" )
+								Report.AddDebugLine( "Document père trouvé. Version : " + s_vers(0) )
+								
+								' La version trouvée
+								Dim i_num As Integer
+								i_num = Cint( s_vers(0) )
+								
+								' Affectation de la nouvelle version au document courant
+								doc.Doc_NumeroVersion = Cstr ( i_num )
+								
+								' On récupère le flag précisant si le document est en cours de modif ou non
+								Dim t_fla As Variant
+								t_fla = doc_rech.GetItemValue ( "Doc_FlagEtat" )
+								
+								If ( Strcompare ( t_fla(0) , "3" , 1 ) = 0 ) Then
+									' Affectation de la nouvelle version au document courant
+									doc.Doc_NumeroVersion = Cstr ( i_num )
+									
+									Report.AddDebugLine( "La dernière version de ce document dans la base est en cours de modif. " )
+									Report.AddDebugLine( "Cette version sera détruite au profil du nouveau document." )
+									doc_rech.remove ( True )
+								Else
+									' On incrémente la version trouvée de 1
+									i_num = i_num + 1
+									
+									' Affectation de la nouvelle version au document courant
+									doc.Doc_NumeroVersion = Cstr ( i_num )
+									
+									' Modification du dernier document trouvé pour qu'il ne soit plus la dernière version
+									doc_rech.Doc_FlagDerniereVersion = "0"
+									
+									' Sauvegarde du document trouvé
+									Call doc_rech.save ( True, True )
+								End If
+							Else
+								doc.Doc_NumeroVersion = "1"
+							End If
+						End If
+						
+						If ( i_loc_err = 0 ) Then
+							' Récupération du nom de la base de stockage des pièces jointes
+							Dim nombasepj As Variant
+							nombasepj = docprofil.GetItemValue( "NomBasePJ" )
+							'Nom de la base de stockage des fichiers : " + nombasepj(0) )
+							
+							' Récupération du PATH de la base courante
+							Dim path As String
+							path = db.FilePath
+							
+							' Exploitation du PATH de la base actuelle pour retrouver le chemin de la base de stockage
+							Dim v1 As Variant
+							Dim v2 As Variant
+							v1 = Strleftback(path,"\")
+							If ( v1 = "" ) Then
+								v1 = Strleftback(path,"/")
+								v2 = v1 + "/" + nombasepj(0)
+							Else
+								v2 = v1 + "\" + nombasepj(0)
+							End If
+							
+							' On se positionne sur la base de stockage
+							Dim dbpj As NotesDatabase
+							Set dbpj = New NotesDatabase(db.server, v2)
+							
+							' Test de l'existence de la base
+							If dbpj.isOpen=False Then
+								
+								Report.AddDebugLine( "Erreur : Base d'enregistrement des pièces jointes non trouvée." )
+								Report.AddDebugLine( "Base : " + v2 )
+								Msgbox("Base d'enregistrement des pièces jointes non trouvée : avertir votre POA ScanUp.")
+								i_err = -1
+							Else
+								
+								'Base d'enregistrement des pièces jointes trouvée." )
+								' On affecte au document le nom de la base des PJ
+								doc.Base_PJ = nombasepj(0)
+								
+								' Traitement des fichiers associés
+							'	Msgbox "nb de fichiers associés: " & obj_lu.i_nb_ficasso
+								If ( obj_lu.i_nb_ficasso <> 0 ) Then
+									
+									' Creation d'un document PJAssociée dans la base des pièces jointes
+									Dim newDoc As NotesDocument
+									Set newDoc = New NotesDocument( dbpj )
+									newDoc.form = "M_CreationPJ_FR"
+									
+									' Operations sur le champ texte riche dud document dans la base des pièces jointes
+									Dim rtitem As NotesRichTextItem
+									Set rtitem = New NotesRichTextItem( newDoc, "Doc_PJAssocies" )
+									
+									' Rattachement d'un ou de plusieurs fichiers dans le champ text riche
+									Dim object As NotesEmbeddedObject
+									'Début rattachement des fichiers." )
+									Forall obj_ass In obj_lu.l_ficasso
+										On Error Goto ErreurAttachement
+										'Rattachement du fichier : " + obj_ass)
+										Set object = rtitem.EmbedObject ( EMBED_ATTACHMENT, "", obj_ass)
+										If(i_loc_err <> 0 ) Then
+											Report.AddDebugLine( "Erreur de rattachement du fichier : " + obj_ass)
+										End If
+									End Forall
+									Report.AddDebugLine( "      Fin rattachement des fichiers." )
+									On Error Goto ErreurCreationDocuments
+									
+									If(i_loc_err = 0) Then
+										Call newDoc.computewithform ( True, False )
+										
+										' Récupération du nom de la pièce jointe
+										Dim item As NotesItem
+										
+										Forall pj In rtitem.embeddedobjects
+											If ( i_flag_creat = 0 ) Then
+												Set item = New NotesItem( doc, "Nom_PJ" , pj.name )
+												i_flag_creat = 1
+											Else
+												Call item.AppendToTextList(pj.name)
+											End If
+										End Forall
+										
+    										' Récupération de l'UNID du nouveau document contenant la PJ	
+										Dim id As String
+										id = newDoc.UniversalID
+										doc.Unid_PJ = id
+										
+										'Sauvegarde du document." )
+										' Enregistrement du nouveau document dans la base des pièces jointes
+										Call newDoc.save ( True, False )
+									End If
+								End If
+								
+							End If
+						End If
+						
+						' Suppression des fichiers du document créé
+						If ( i_err = 0 And i_loc_err = 0 ) Then
+							
+							If  FormatFichier<>"format3" Then
+							' Destruction des fichiers d'importation tif et autocad 
+								On Error Goto Erreur_suppression								
+								Kill s_champ_repertoire + NomFichierDat
+								' Suppression du fichier dat
+								If i_err_suppression=1 Then
+									Report.AddDebugLine( "Erreur lors de la suppression du fichier : " & s_champ_repertoire + NomFichierDat & " . Celui-ci est peut-être en lecture seule..." )	
+									i_err_suppression=0
+								Else
+									Report.AddDebugLine( "Suppression réussie du fichier : " & s_champ_repertoire + NomFichierDat )		
+								End If
+								Forall obj_ass In obj_lu.l_ficasso
+									' Suppression des pièces attachées:  									
+									Kill obj_ass
+									If i_err_suppression=1 Then
+										Report.AddDebugLine( "Erreur lors de la suppression du fichier : " & obj_ass & " . Celui-ci est peut-être en lecture seule..." )	
+										i_err_suppression=0
+									Else
+										Report.AddDebugLine( "Suppression réussie du fichier : " & obj_ass + NomFichierDat )		
+									End If
+								End Forall								
+							Else
+							' Destruction des répertoires et des fichiers d'importation Xelec
+								On Error Goto Erreur_suppression
+								' Suppression du fichier dat: 
+								Kill s_champ_repertoire + obj_lu.NomFichier
+								If i_err_suppression=1 Then
+									Report.AddDebugLine( "Erreur lors de la suppression du fichier : " & s_champ_repertoire + obj_lu.NomFichier & " . Celui-ci est peut-être en lecture seule..." )	
+									i_err_suppression=0
+								Else
+									Report.AddDebugLine( "Suppression réussie du fichier : " & s_champ_repertoire + obj_lu.NomFichier )		
+								End If
+								
+								' Suppression des pièces attachées:  
+								Forall file In obj_lu.l_ficasso
+									Kill file
+									If i_err_suppression=1 Then
+										Report.AddDebugLine( "Erreur lors de la suppression du fichier : " & file & " . Celui-ci est peut-être en lecture seule..." )	
+										i_err_suppression=0
+									Else
+										Report.AddDebugLine( "Suppression réussie du fichier : " & file )		
+									End If
+								End Forall
+								
+								' Supression du répertoire:
+								Rmdir s_champ_repertoire + Strleft(obj_lu.NomFichier,"\")
+								If i_err_suppression=1 Then
+									Report.AddDebugLine( "Erreur lors de la suppression du répertoire : " & _
+									s_champ_repertoire + Strleft(obj_lu.NomFichier,"\") & " . Celui-ci est peut-être en lecture seule ou il contient encore des fichiers en lecture seule..." )	
+									i_err_suppression=0
+								Else
+									Report.AddDebugLine( "Suppression réussie du répertoire : " & s_champ_repertoire + Strleft(obj_lu.NomFichier,"\") )		
+								End If
+							End If
+						End If
+						
+						' Enregistrement du nouveau document dans la base des fiches
+						If ( i_err = 0 And i_loc_err = 0 ) Then
+							
+							Call doc.save(False,True)
+							i_nb_traite = i_nb_traite + 1
+							
+							' *******************************************************
+							' Gestion de la destruction des versions inutiles
+							' *******************************************************
+							Dim view_version As NotesView	
+							Dim dc_version As NotesDocumentCollection
+							Set view_version=db.GetView("V_RechVersion_FR")
+							
+							' Création de la clef de recherche pour sélectionner les docs avec un Code Mabec & un N° de planche donné
+							Dim Clef As String
+							Clef=obj_lu.CodeMabec + "#" + obj_lu.NoPlanche
+							
+							Call view_version.refresh
+							Set dc_version=view_version.getAllDocumentsByKey(clef,True)	
+							' Dans la collection, les docs sont ordonnés par date de création, le n° 1 est le plus ancien
+							' Donc dès qu'on dépasse 3 documents, il faut détruire le 2nd
+							If dc_version.count > 3 Then
+								Report.AddDebugLine( "Nous avons trouvé plus de 3 versions, il faut donc en supprimer une. " )
+								Dim doc_version As notesdocument
+								Set doc_version=dc_version.GetNthDocument(2)
+								Dim i_rep As Integer
+								i_rep = SuppressionDocumentPJ(doc_version.Base_PJ(0),doc_version.Unid_PJ(0),doc_version.Doc_CodeMabec(0),Report)
+								Call doc_version.Remove(True)
+							End If
+							
+						Else
+							Call doc.Remove( False )
+						End If
+						
+					Else
+						Report.AddDebugLine( "Erreur : " + obj_lu.s_lib_err )
+						Report.AddDebugLine( "Fin création dans la base du document : " + obj_lu.CodeMabec + " " + obj_lu.NoPlanche )
+						i_err_p = -1
+					End If
+				Else
+					Report.AddDebugLine( "Erreur : Code Mabec : " + obj_lu.CodeMabec + " ou Numero Planche : " + obj_lu.NoPlanche + " incorrect avec le nom du fichier : " + NomFichierDat )
+					Report.AddDebugLine( "Fin création dans la base du document : " + obj_lu.CodeMabec + " " + obj_lu.NoPlanche )
+					i_err_p = -1
+				End If		
+			Else
+				Report.AddDebugLine( "Erreur : Code Mabec incorrect ou absent dans le fichier : " + NomFichierDat )
+				Report.AddDebugLine( "Fin création dans la base du document : " + obj_lu.CodeMabec + " " + obj_lu.NoPlanche )
+				i_err_p = -1
+			End If
+			
+			If ( i_flag_migr = 0 And oswindows) Then
+				Call pb_import.SetProgressPos(i_index)
+			End If
+			i_index = i_index + 1
+			
+		End Forall
+		
+		If ( i_flag_migr = 0 And oswindows ) Then
+			' Fermeture de la barre de progression
+			Call pb_import.PBDelete
+		End If
+		
+	End If
+	
+	Goto FinFonction
+	
+ErreurCreationDocuments:
+	Resume Next
+	
+ErreurAttachement:
+	i_loc_err = 1
+	Resume Next
+	
+Erreur_suppression:
+	i_err_suppression=1
+	Resume Next
+	
+FinFonction:
+	
+End Function
+
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+	i_nb_document = 0
+	i_nb_traite = 0
+	i_nb_sel = 0
+	i_err = 0
+	i_flag_migr = 0
+	i_sortie = 0
+	
+End Sub
+'++LotusScript Development Environment:2:2:Terminate:1:10
+Sub Terminate
+	
+	i_nb_document = 0
+	i_nb_traite = 0
+	i_nb_sel = 0
+	i_err = 0
+	i_flag_migr = 0
+	i_sortie = 0
+	
+End Sub
+'++LotusScript Development Environment:2:2:Nettoyage:1:8
+Public Sub Nettoyage
+	
+	' Nettoyage tableau des fichiers à traiter si précisés
+	If ( i_nb_sel > 0) Then
+		Erase l_liste_sel
+		i_nb_sel = 0
+	End If
+	
+	' Nettoyage tableau d'objet document
+	If( i_nb_document > 0) Then
+		Erase l_listedoc
+		i_nb_document = 0
+		i_nb_traite = 0
+	End If
+	
+End Sub
+'++LotusScript Development Environment:2:1:TraitRecursifRep:1:8
+Function TraitRecursifRep ( s_rep As String , Report As LogEntry)
+	
+	On Error Goto Erreurmaj
+	Dim message_log As String
+	
+	' Affiche le répertoire de travail
+	Report.AddDebugLine( "Début : traitement du répertoire : " + s_rep)
+	'Messagebox "Répertoire de travail : " & s_rep
+	
+	' Tableau contenant la liste des répertoires à exploiter
+	Dim tab_rep() As String
+	
+	' Nombre de répertoires dans le tableau
+	Dim i_nb_tab As Integer
+	
+	i_nb_tab = 0
+	
+	' Variable pour le résultat du dir sur le répertoire
+	Dim filerep As String
+	
+	' Exécution du dir sur le répertoire passé en paramètre
+	filerep = Dir(s_rep, 16)
+	
+	' On boucle tant qu'il y a des fichiers dans le répertoire
+	Dim messagelist As String
+	Dim i_reponse As Integer
+	
+	Msgbox(filerep)
+	
+	' On boucle tant qu'il y a des fichiers dans le répertoire
+	While filerep <> "" 
+		
+		' Pour tous les elements on ne va prendre que les répertoires
+		If ( i_flag_migr = 1 ) Then
+			i_reponse = Getfileattr ( s_rep + "/" + filerep ) 
+		Else
+			i_reponse = Getfileattr ( s_rep + "\" + filerep ) 
+		End If
+		
+		If ( i_reponse = 16 ) Then
+			' De plus on ne prend pas les répertoires courant et parent
+			
+			If ( Strcompare(filerep, ".", 0)  <> 0 ) Then
+				If ( Strcompare(filerep, "..", 0)  <> 0 ) Then
+					
+					' On ajoute dans notre tableau le répertoire courant
+					Redim Preserve tab_rep ( i_nb_tab )
+					tab_rep ( i_nb_tab ) = filerep
+					i_nb_tab = i_nb_tab +1
+					
+				End If
+			End If
+		End If
+		
+		filerep = Dir()
+	Wend
+	
+	' Appel de la fonction permettant la récupération de la liste des fichiers dans le répertoire cible
+	If ( i_err = 0 ) Then
+		Call ExploiteRep ( s_rep , Report)
+	End If
+	
+	' Exploitation des fichiers et création des documents
+	Call LectureCreation(Report)
+	
+	' Pour tous les répertoires nous allons rappeler cette fonction en recursif
+	Forall element In tab_rep
+		
+		If ( i_flag_migr = 1 ) Then
+			If ( i_sortie = 0) Then
+				s_champ_repertoire = s_rep + element + "/"
+				Call TraitRecursifRep ( s_rep + element + "/",Report)
+			End If
+		Else
+			s_champ_repertoire = s_rep + element + "\"
+			Call TraitRecursifRep ( s_rep + element + "\",Report)
+		End If
+	End Forall
+	
+	' Destruction du tableau pour libération mémoire
+	Erase tab_rep
+	
+	Report.AddDebugLine( "Fin : traitement du répertoire : " + s_rep)
+	
+	Exit Function
+	
+erreurmaj:
+	
+	Report.AddDebugLine( "Erreur " + Cstr(Err) + " - Ligne " + Cstr(Erl) + " - Message : " + Error$ )
+	
+	Exit Function
+End Function
+'++LotusScript Development Environment:2:1:LectureCreation:1:8
+Function LectureCreation(Report As LogEntry)
+	
+	Report.AddDebugLine( "Début : Lecture et création. " )
+	
+	' Appel de la fonction permettant la lecture des fichiers .dat et donc la création
+	' du tableau d'objet document
+	
+	If ( i_err = 0 ) Then
+		Call LectureFicData(Report)
+	End If
+	
+	' Creation de documents dans la base
+	If ( i_err = 0 ) Then
+		Call CreationDocuments(Report)
+	End If
+	
+	If ( i_err = 0 ) Then
+		If ( s_champ_repertoire = "" ) Then
+			Messagebox "Traitement effectué." & Chr(10) & Chr(10) & Cstr(i_nb_document) & " fichier(s) traité(s)." & Chr(10) & Cstr(i_nb_traite) & " document(s) créé(s)."
+		Else
+			Messagebox "Le répertoire : " + s_champ_repertoire + " vient d'être traité." & Chr(10) & Chr(10) & Cstr(i_nb_document) & " fichier(s) traité(s)." & Chr(10) & Cstr(i_nb_traite) & " document(s) créé(s)."
+		End If
+	End If
+	
+	Report.AddDebugLine( "Fin : Lecture et création. " )
+	
+End Function
+'++LotusScript Development Environment:2:1:RechercheVersion:1:8
+Function RechercheVersion ( s_mabec As String , s_planche As String ) As NotesDocument
+	
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim view As NotesView
+	Dim dc As NotesDocumentCollection
+	Dim s_cle As String
+	
+	Set db = session.CurrentDatabase
+	Set view = db.GetView( "V_Import_FR" )
+	
+	s_cle = s_mabec + "_" + s_planche
+	
+	Set dc = view.GetAllDocumentsByKey( s_cle , False)
+	
+	If ( dc.count <> 0 ) Then
+		Set RechercheVersion = dc.GetFirstDocument
+	End If
+	
+End Function
+'++LotusScript Development Environment:2:1:Migration:1:8
+Function Migration(Report As LogEntry)
+	
+	' On initialise la gestion des erreurs à vide
+	i_err = 0
+	i_err_p = 0 
+	s_erreur = ""
+	
+	i_flag_migr = 1
+	
+	Report.AddDebugLine( "Début traitement importation récursive." )
+	
+	' Appel de la fonction permettant la récupération du répertoire à traiter
+	RecupRepMigration
+	
+	' Traitement récursif du répertoire sélectionné
+	If ( i_err = 0 ) Then
+		If  s_champ_repertoire <> "" Then
+			Call TraitRecursifRep ( s_champ_repertoire , Report)
+		Else 
+			Msgbox "Aucun répertoire Serveur  à traité "
+		End If
+		
+	End If
+	
+	' Appel de la fonction de nettoyage
+	Nettoyage
+	
+	Report.AddDebugLine( "Fin traitement importation récursive." )
+	
+End Function
+'++LotusScript Development Environment:2:1:RecupRepMigration:1:8
+Function RecupRepMigration
+	
+	' Instance d'objet pour une cession notes : NotesSession
+	Dim s_cession As NotesSession
+	Set s_cession = New NotesSession
+	
+	' Instance d'objet pour la base courante : NotesDatabase
+	Dim db As NotesDatabase
+	Set db = s_cession.CurrentDatabase
+	
+	Dim repe As Variant
+	Dim docprofil As notesdocument
+	
+	Set docprofil = db.GetProfileDocument("M_ChpProfil_FR")
+	repe = docprofil.GetItemValue( "Profil_RepMigration" )
+	
+	s_champ_repertoire = repe ( 0 )
+	
+End Function
+'++LotusScript Development Environment:2:1:ChoixFormatFichier:1:8
+Function ChoixFormatFichier As String
+	'
+	' Cette fonction permet d'affecter à la variable publique FormatFichier le type de fichier que l'on veux importer
+	'
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim uiwks As New NotesUIworkspace
+	Dim tmpdoc As Notesdocument
+	Dim doc As NotesDocument
+	Dim view As NotesView
+	Set db=session.currentDatabase
+	Dim flag As Variant	
+	Set tmpdoc = db.Createdocument( )
+	
+Boucle:
+	tmpdoc.Form="m_DialogBoxSelectFormat"
+	tmpdoc.SaveOptions="0"
+	flag = uiwks.DialogBox ( "m_DialogBoxSelectFormat",True, True, False, False, False, False, "Sélection du format du fichier",tmpdoc,False)	
+	If flag=True Then
+		If tmpdoc.ChoixFichier(0)="Tif" Then
+			ChoixFormatFichier="format1"
+			FormatFichier=ChoixFormatFichier
+		Elseif tmpdoc.ChoixFichier(0)="Autocad" Then 
+			ChoixFormatFichier="format2"
+			FormatFichier=ChoixFormatFichier
+		Elseif tmpdoc.ChoixFichier(0)="Xelec" Then 
+			ChoixFormatFichier="format3"
+			FormatFichier=ChoixFormatFichier
+		Else
+			Msgbox "Vous devez choisir un type de fichier !",48,"Avertissement"
+			Goto Boucle
+		End If
+	Else
+		Msgbox "Traitement annulé !",48,"Information"
+		End
+		
+	End If
+	'
+	Set view=db.GetView("v_TriRenverseParFormat")
+	Set doc=view.GetDocumentByKey(ChoixFormatFichier)
+	If Not doc Is Nothing Then
+		NomVisibleFormatFichier=doc.Format(0)
+	End If
+	
+End Function

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='72e' unid='0DFF30A3EC62A9D2C1256E7700346D44' sequence='55'>
+<created><datetime dst='true'>20040415T113238,44+02</datetime></created>
+<modified><datetime>20171028T233207,93-03</datetime></modified>
+<revised><datetime>20160721T105932,19-03</datetime></revised>
+<lastaccessed><datetime>20171028T233202,77-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233202,77-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name><name
+>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='TmpViewDesignCollation'><text>fr</text></item>
+<item name='$TITLE' sign='true'><text>(Stats Evolution format Tif)|v_StatsEvolutionFormat</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+8gACAFAAAgAkNQUADQBBbm5lZUNyZWF0aW9uAAEAAQAjACICBQAMAE1vaXNDcmVhdGlvbiICAQAB
+ACMAIgIFAAwASm91ckNyZWF0aW9uIgIDAAIADAACACQxaQADAAUAMAAsAAUAAgANAAIACQAEACQ1
+VHlwZUV2b2x1dGlvbiQxJENvbmZsaWN0JFJFRgQABAAAAEwABQAEAEZvcm0BABYAbV9TdGF0c0V2
+b2x1dGlvbkZvcm1hdAoCBAAFAA0AU3RhdENvbnNvbGlkZQBeAQEAAQAxAAsCBAAcAgMABwAUAA4A
+CUwxUzZTN1MxMlMxM1M=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+IwACAABEiGYHAAACAIhmBwIADQAkNVR5cGVFdm9sdXRpb24=
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAEACAAAAFZDAwQCAA0AXgAAADMAAQAACgABAAAIAAAAAAICAAAAVkMDBA0ADgAAAAAAPAAB
+AAAKAAEAAAAAAAAAAgIAAABWQwAAAgARAA4AAABlAAEAAAoAAAAAAAAAAAACAgAAACQ1RGF0ZSBD
+coJhdGlvbl4AAgBQAAIAJDUFAA0AQW5uZWVDcmVhdGlvbgABAAEAIwAiAgUADABNb2lzQ3JlYXRp
+b24iAgEAAQAjACICBQAMAEpvdXJDcmVhdGlvbiICAwAHAAwABQAJMFMwRQBUeXBlRXZvbHV0aW9u
+VHlwZSBFdm9sdXRpb24kMURhdGUgY3KCYXRpb24gZG9jDgACAAwAAgAkMWkAAwAmAAEAAAABAQAJ
+AQAACgEBDgoAAAEArSsBAAEAAgAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAABAIQAAAAA
+AP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAA
+AAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAA
+AAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAAAAAAABAAAA
+AAAAAAgAAAAAAAEAWUMAAAgAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAA
+AAAAAAAAACz/FCCsAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text>Nb de docs ayant évolué du format tif vers dwg ou xelec (pour la journée en cours)</text></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>7</text></item></note>
+

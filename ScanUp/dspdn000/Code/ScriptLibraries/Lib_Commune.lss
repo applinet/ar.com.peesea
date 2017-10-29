@@ -1,0 +1,859 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+
+Option Public
+' On force la déclaration des variables dans le code
+Option Declare
+Use "BarreDeProgression"
+
+' pour log applicative
+Use "LogEntry"
+
+
+
+
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Function IncrementePlanche ( s_chaine As String ) As String
+Declare Function RechercheDerniereVersionDoc ( s_code_mabec As String , s_no_planche As String, report As LogEntry ) As NotesDocument
+Declare Function CreationDocRecupPourModif ( doc_courant As NotesDocument, Report As LogEntry ) As Integer
+Declare Function SuppressionDocumentPJ ( s_nom  As String, s_nodoc As String, s_CodeMabec As String, report As logEntry ) As Integer
+Declare Function TestTailleBaseBase As Integer
+Declare Function ControleDate ( s_date As String ) As Integer
+Declare Public Function QuickSort(sArray As Variant)
+Declare Sub DoQS( sA() As String, bottom As Long, top As Long )
+Declare Sub DoInsertSort ( sA() As String, Byval bottom As Long, Byval top As Long )	
+Declare Function ControleCleMultiples(Cle As String,planche As String) As String
+Declare Sub EnvoiMail(Message As String, Destinataire As String)
+Declare Sub AfficherAide(Niveau As String, Categorie As String)
+Declare Sub MiseAjourStats(TypeStats As String, OptParam As String, pUserName As String, pCodeMabecFiche As String, pVersionFiche As String,pTypePlan As String )
+Declare Function DefinirTempRep (  ) As String
+Declare Function DefinirSeparateur (  ) As String
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+' Descripteur du fichier de log
+Dim file_log As Integer
+
+' Flag pour une éventuelle réponse
+Public i_flag_reponse As Integer
+Dim SortedArray As Variant
+
+'++LotusScript Development Environment:2:1:IncrementePlanche:1:8
+Function IncrementePlanche ( s_chaine As String ) As String
+	
+	' Incrémentation du numéro de planche d'un document. Pour cela le numéro de 
+	' planche initial est passé en paramètre
+	
+	' Chaine a retourner en résultat
+	Dim s_result As String
+	
+	' Longueur de la chaine passée en paramètre
+	Dim i_longueur As Integer
+	
+	' Récupération de la longueur de la chaine
+	i_longueur = Len(s_chaine)
+	
+	' Caractère découpé de la chaine
+	Dim s_caractere As String
+	
+	' Chaine de travail
+	Dim s_travail As String
+	s_travail = s_chaine
+	
+	' Compteur de parcour de la chaine
+	Dim i_compteur As Integer
+	i_compteur = i_longueur
+	
+	' Valeur UNICODE d'un caractere lu
+	Dim l_code As Long
+	
+	' Flag pour signaler si l'on incrémente ou non
+	Dim i_flag_inc As Integer
+	i_flag_inc = 1
+	
+	' Pour tous les caractères de la chaine on va les recopier dans une autre chaine
+	' On incrémentera si besoin
+	Do While (i_compteur <> 0)
+		i_longueur = Len(s_travail)
+		
+		' On récupère le dernier caractère de la chaine de travail
+		s_caractere = Right$ ( s_travail , 1)
+		
+		' On récupère l'UNICODE du caractere
+		l_code = Uni (s_caractere)
+		
+		' Si le flag d'incrément est à 1 on incrémente
+		If ( i_flag_inc = 1 ) Then
+			If ( l_code = 58) Then
+				l_code = 49
+			Else
+				If ( l_code = 90 ) Then
+					l_code = 65
+				Else
+					If ( l_code = 122 ) Then
+						l_code = 97
+					Else
+						l_code = l_code + 1
+						i_flag_inc = 0
+					End If
+				End If
+			End If
+		End If
+		
+		' On affecte à la chaine de retour le caractère
+		s_result =  String$( 1 , Chr(l_code) ) + s_result
+		
+		' On récupère toute la chaine avant ce caractere pour la chaine de travail
+		s_travail = Left$ ( s_travail , ( i_longueur -1 ) )
+		
+		' On décrémente la longueur
+		i_compteur = i_compteur - 1
+	Loop
+	
+	IncrementePlanche = s_result
+	
+End Function
+
+'++LotusScript Development Environment:2:1:RechercheDerniereVersionDoc:1:8
+Function RechercheDerniereVersionDoc ( s_code_mabec As String , s_no_planche As String, report As LogEntry ) As NotesDocument
+	
+	' Cette fonction va recherche dans la base la dernière version d'un document d'après
+	' son code mabec et son numéro de planche
+	' Cette fonction pourra nous servire pour détecter si le document qu'un utilisateur
+	' désire prendre en modification est bien la dernière version de celui-ci
+	
+	' Base de données Notes
+	Dim db_base As NotesDatabase
+	' Accès à la session notes courante
+	Dim s_session As NotesSession
+	' On se positionne sur la session courante
+	Set s_session = New NotesSession
+	' On se positionne sur la base de données courante
+	Set db_base = s_session.CurrentDatabase
+	Dim view As NotesView
+	Set view=db_base.GetView("v_VueRecupModif")
+	Dim doc As NotesDocument
+	Dim dc As NotesDocumentCollection
+	
+	' Création de la clef de recherche
+	Dim s_clef As String
+	s_clef = s_code_mabec + "#" + s_no_planche
+	Set dc=view.GetAllDocumentsByKey(s_clef)
+	
+	If ( dc.count = 0 ) Then
+		Report.AddDebugLine( "Pas de version précédente trouvé pour cette fiche(nouvelle fiche).")
+		i_flag_reponse = -1
+	Else
+		' On récupère le dernier doc créé pour avoir le dernier n° de version	
+		Set doc=dc.GetLastDocument
+		
+		Set RechercheDerniereVersionDoc = doc
+		
+		i_flag_reponse = 0
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:1:CreationDocRecupPourModif:1:8
+Function CreationDocRecupPourModif ( doc_courant As NotesDocument, Report As LogEntry ) As Integer
+	
+	' Base de données Notes
+	Dim db_base As NotesDatabase
+	' Accès à la session notes courante
+	Dim s_session As NotesSession
+	' On se positionne sur la session courante
+	Set s_session = New NotesSession
+	' On se positionne sur la base de données courante
+	Set db_base = s_session.CurrentDatabase
+	
+	' Instance du nouveau document : NotesDocument
+	Dim doc_nouveau As NotesDocument
+	Set doc_nouveau = New NotesDocument( db_base )
+	
+	' Copie du document courant dans  un nouveau document
+	Call doc_courant.CopyAllItems( doc_nouveau, True )
+	
+	' Affectation du masque sur le nouveau document
+	doc_nouveau.Form = "M_CreationDoc_FR"
+	
+	' On positionne le flag à création
+	doc_nouveau.Doc_FlagEtat = "1"
+	
+	' Par contre le document courant doit voir quelques champs modifiés
+	' Notamment le champ indiquant si c'est la derniere version ou non
+	doc_courant.Doc_FlagDerniereVersion = "0"
+	Call doc_courant.save( True, False )
+	
+	' S'il y a au moins une pièce jointe il y a traitement spécifique à effectuer
+	If ( doc_courant.Base_PJ(0) <> "" ) Then	
+		' Recherche ds la base de stockage associée		
+		' Récupération du chemin de la base des pièces jointes associée au document en cours	
+		' Normalement les bases de stockage sont dans le même répertoire que ScanUp ! (dspdn000.nsf)
+		Dim cheminBase As String
+		cheminBase = Strleftback(db_base.FilePath,"\") + "\" + doc_courant.Base_PJ(0)
+		Dim dbpj As NotesDatabase
+		Set dbpj = New NotesDatabase(db_base.server, cheminBase)
+		
+		' Test de l'existence de la base des pièces jointes
+		If doc_courant.Nom_PJ(0)="" Then
+			Report.AddDebugLine( "Erreur : Aucune pièce jointe n'est associée à ce document." )
+			Report.AddDebugLine( "Erreur : La récupération pour modif de ce document n'est pas possible." )
+			CreationDocRecupPourModif = -1
+		Elseif dbpj.isOpen=False Then
+			Report.AddDebugLine( "Erreur : Base d'enregistrement des pièces jointes non trouvée : avertir votre POA ScanUp" )
+			CreationDocRecupPourModif = -1
+		End If
+		
+		' Récupération du doc de la base des pièces Jointes
+		Dim view As NotesView
+		Set view=dbpj.GetView("V_ListePJ_FR")
+		Dim DocPJ As NotesDocument
+		Set DocPJ=view.GetDocumentByKey(doc_courant.Unid_PJ(0))	
+		
+		If DocPJ Is Nothing Then
+			Report.AddDebugLine( "Erreur : La piece jointe est introuvable !" )
+			CreationDocRecupPourModif = -1
+		End If
+		
+		' Destruction du RTF Item
+		Dim rtItem As NotesRichTextItem
+		Set rtItem = doc_nouveau.GetFirstItem ( "Doc_FicAssocie" )
+		If ( Not rtItem Is Nothing ) Then
+			Call rtItem.Remove ( )
+		End If
+		
+		' Recup des pièces jointes
+		Dim itemA As NotesItem
+		Dim itemB As NotesItem
+		Set itemA = docPJ.GetFirstItem( "Doc_PJAssocies" )
+		Set itemB = itemA.CopyItemToDocument( doc_nouveau, "Doc_FicAssocie" )	
+		
+	End If
+	
+	' On incremente la version du nouveau document + 1
+	Dim valeur As String
+	valeur = doc_courant.Doc_NumeroVersion(0)
+	Dim i_num As Integer
+	i_num = Cint( valeur )
+	i_num = i_num + 1
+	doc_nouveau.Doc_NumeroVersion = Cstr ( i_num )
+	
+	' Affectation des champs permettant le verrouillage du document
+	doc_nouveau.Doc_DateEnCoursDeModif = Cstr ( Date)
+	doc_nouveau.Doc_UserEnCoursDeModif = Evaluate ( "@Name([CN];@Username)" )
+	
+	' Affectation du FlagDerniereVersion à 1
+	doc_nouveau.Doc_FlagDerniereVersion = "1"
+	
+	' Affectation du Doc_FlagEtat à 3 pour spécifier recup pour modification
+	doc_nouveau.Doc_FlagEtat = "3"
+	
+	' Affectation du Unid de la pièce jointe à rien du tout
+	doc_nouveau.Unid_PJ=""	
+	
+	' Sauvegarde du nouveau document
+	Call doc_nouveau.computewithForm(False,False)	
+	Call doc_nouveau.save ( True , False )
+	
+End Function
+
+'++LotusScript Development Environment:2:1:SuppressionDocumentPJ:1:8
+Function SuppressionDocumentPJ ( s_nom  As String, s_nodoc As String, s_CodeMabec As String, report As logEntry ) As Integer
+	
+	' Gestion de la suppression des pièces jointes dans le cas de 
+	' suppression d'un document
+	
+	' On initialise le retour à 0
+	SuppressionDocumentPJ = 0
+	
+	Dim ss As NotesSession
+	Set ss = New NotesSession
+	Dim db As NotesDatabase
+	Set db = ss.CurrentDatabase
+	Dim curDoc As NotesDocument
+	Dim view As NotesView
+	
+	' Ouverture de la base des pièces jointes
+	Dim path As String
+	Dim v1 As String
+	Dim v2 As String
+	path = db.FilePath
+	v1 = Strleftback(path,"\")
+	If ( v1 = "" ) Then
+		v1 = Strleftback(path,"/")
+		v2 = v1 + "/" + s_nom
+	Else
+		v2 = v1 + "\" + s_nom
+	End If
+	
+	
+	Dim dbpj As NotesDatabase
+	Set dbpj = New NotesDatabase(db.server, v2)
+	
+	' Test de l'existence de la base des pièces jointes, si non on arrête tout
+	If dbpj.IsOpen=False Then
+		Report.AddDebugLine( "Base d'enregistrement des pièces jointes non trouvée : prendre contact avec le PFA de ScanUp" )
+		Report.AddDebugLine( "Le doc " & s_CodeMabec & " ne sera pas supprimé." )
+		SuppressionDocumentPJ = -1
+	End If
+	
+	' Suppression de la pièce jointe
+	Set view=dbpj.GetView("V_ListePJ_FR")
+	Set curDoc=view.GetDocumentByKey(s_nodoc)	
+	
+	If curDoc Is Nothing Then
+		Report.AddDebugLine( "Le doc à supprimer dans la base des PJ n'a pas été trouvé." )
+	Else
+		Call curDoc.Remove( True )
+		Call view.Refresh
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:1:TestTailleBaseBase:1:8
+Function TestTailleBaseBase As Integer
+	
+	' Cette fonction a pour but de tester la taille de la base des pièces jointes en cours dont le nom est " dspdn***.nsf "
+	' et de créer un doc dans v_CreationBase si la taille de celle-ci dépasse la taille max spécifiée dans la variable: BaseTailleMax
+	' IMPORTANT: cette fonction  ne peut fonctionner que si :
+	'	- le nom de la première base des pièces jointes est au format dspdn001.nsf (5 lettres + 3 chiffres + *.nsf)
+	'	- la première base de stockage est située dans le même répertoire que la base ScanUp
+	
+	' Déclaration des autres variables
+	Dim ss As NotesSession
+	Dim db,dbpj,newDb As NotesDatabase
+	Dim docprofile As NotesDocument
+	Dim docEtatBase As NotesDocument
+	Dim viewEtatBase As NotesView	
+	Dim doc As NotesDocument	
+	Dim cheminBase, fichierBase, fichierNouvelleBase As String
+	Dim cptBase As Integer
+	Set ss = New NotesSession
+	
+	' db= la base ScanUp	
+	Set db = ss.CurrentDatabase	
+	
+	' Avant tout, on teste si un doc est présent dans la vue CreationBase
+	' Si oui, une base est en cours de création
+	Dim viewTestBase As NotesView
+	Set viewTestBase=db.GetView("v_CreationBase_FR")
+	Dim docTestBase As NotesDocument
+	Set docTestBase=viewTestBase.GetFirstDocument
+	If docTestBase Is Nothing Then
+		TestTailleBaseBase=0
+	Else		
+		TestTailleBaseBase=1	
+		Exit Function
+	End If
+	
+	' Définition de la taille max de la base, en octets 
+	' Reprise de cette valeur depuis le doc d'admin. doc Profile....)		
+	Dim BaseTailleMax As Double
+	Dim docprofil As notesdocument
+	Set docprofil = db.GetProfileDocument("M_ChpProfil_FR")
+	Dim nom_baselog 	As String
+	
+	nom_baselog = Cstr(docprofil.nom_baselog(0))
+	
+'On log l'exécution
+	Dim Report 				As New LogEntry
+	Report.LogType			= LOGLEVEL_INFO%
+	Report.SubName		     = "Initialize"
+	Report.Component    	= "TestTailleBaseBase"
+	Report.DocID		     = ""
+	Report.LibName    		= "Lib_Commune"
+	Report.ClassName		= "TestTailleBaseBase"
+	Report.Msg			= "test de la taille des bases"
+	
+	BaseTailleMax=Cdbl(docprofil.BaseTailleMax(0))*1e6 	
+	
+	' Récupération dans le document d'administration du nom de la base (*.nsf) des PJ en cours 
+	fichierBase = docprofil.NomBasePJ(0)
+	
+	' Création du chemin permettant d'accéder à la base des PJ en cours
+	cheminBase = Strleftback(db.filePath,"\")
+	If ( cheminBase = "" ) Then
+		cheminBase = Strleftback(db.filePath,"/")
+		cheminBase = cheminBase + "/" + fichierBase
+	Else
+		cheminBase = cheminBase + "\" + fichierBase
+	End If
+	
+	' dbpj= la base des PJ en cours
+	Set dbpj= New NotesDatabase(db.server,cheminBase)	
+	
+	' Test de l'existence de la base	
+	If dbpj.isOpen=False Then
+		Report.AddDebugLine( "Impossible de trouver la base des pièces jointe." )
+		Messagebox "Impossible de trouver la base des pièces jointes" & Chr$(10) & _
+		"Veuillez contacter l'administrateur de l'application Domino ScanUP.",16,"Avertissement"
+		End
+	End If
+	
+	' Test de la taille de la base des PJ en cours
+	' Si Taille > BaseTailleMax on crée un doc dans v_CreationBase
+	If dbpj.size>BaseTailleMax Then
+		
+		Dim db2 As NotesDatabase
+		Set db2=ss.CurrentDatabase
+		Dim docTestBase2 As NotesDocument
+		Set docTestBase2 = New NotesDocument( db2 )
+		docTestBase2.Form = "m_CreationBase_FR"
+		Dim item As NotesItem
+		Dim info As String
+		info="Créé par: " & ss.username & " - Date : " & Date & " - Heure : " & Time
+		Set item = docTestBase2.ReplaceItemValue( "InfoCreationBase", info )
+		Call docTestBase2.Save(True,False)
+		
+		' Appel de l'agent exécuté sur le serveur pour la création de la nouvelle base
+		Dim agent As NotesAgent
+		Set agent = db.GetAgent("a_CreationBase")
+		If agent.RunOnServer <> 0 Then
+			End
+		End If
+		
+		' Destruction du doc dans la vue v_CreationBase pour autoriser de nouveau la sauvegarde des documents
+		Set viewEtatBase=db.GetView("v_CreationBase_FR")
+		Set docEtatBase=viewEtatBase.GetFirstDocument
+		Call docEtatBase.remove(True)
+		
+	End If 
+	
+End Function
+
+'++LotusScript Development Environment:2:1:ControleDate:1:8
+Function ControleDate ( s_date As String ) As Integer
+	
+	' Controle de la taille du champ
+	If ( Len ( s_date ) <> 10 ) Then
+		ControleDate = -1
+		Exit Function
+	End If
+	
+	Dim i_pos As Integer
+	Dim i_asc As Integer
+	i_pos = 1
+	
+	Dim s_decoupe As String
+	Dim s_traite As String
+	
+	s_traite = s_date
+	
+	While ( i_pos < Len ( s_date ) )
+		
+		s_decoupe = Left$ ( s_traite , 1 )
+		i_asc = Asc ( s_decoupe )
+		
+		s_traite = Right$ ( s_traite , ( Len ( s_traite ) - 1 ) )
+		
+		Select Case i_pos
+		Case 1
+			If ( i_asc < 48 Or i_asc > 51 ) Then
+				ControleDate = -1
+				Exit Function
+			End If
+		Case 2
+			If ( i_asc < 48 Or i_asc > 57 ) Then
+				ControleDate = -1
+				Exit Function
+			End If
+		Case 3
+			If ( i_asc <> 47 And i_asc <> 45 ) Then
+				ControleDate = -1
+				Exit Function
+			End If
+		Case 4
+			If ( i_asc < 48 Or i_asc > 49 ) Then
+				ControleDate = -1
+				Exit Function
+			End If
+		Case 5
+			If ( i_asc < 48 Or i_asc > 57 ) Then
+				ControleDate = -1
+				Exit Function
+			End If
+		Case 6
+			If ( i_asc <> 47 And i_asc <> 45 ) Then
+				ControleDate = -1
+				Exit Function
+			End If
+		Case 7 To 10
+			If ( i_asc < 48 Or i_asc > 57 ) Then
+				ControleDate = -1
+				Exit Function
+			End If
+		End Select
+		
+		i_pos = i_pos + 1
+	Wend
+	
+End Function
+
+'++LotusScript Development Environment:2:1:QuickSort:1:8
+Public Function QuickSort(sArray As Variant)
+	Dim sA() As String    
+	Dim j As Long
+	Dim bottom As Long
+	Dim top As Long
+	bottom = Lbound ( sArray )
+	top = Ubound ( sArray )
+	Redim sA( bottom To top ) As String     
+	For j = bottom To top
+		sA ( j ) = sArray ( j )
+	Next
+     ' DoQS does a QuickSort if the Sublist is longer than 10 elements
+     ' Thus, when DoQS finishes, all elements are within 10 spots of their correct location.
+     ' For lists that are close to being in order, an Insertion Sort is much faster than a QuickSort, so we
+     ' run through the whole thing once doing an Insertion Sort to finish tidying up the order.
+	Call DoQS( sA, bottom, top )
+	Call DoInsertSort ( sA, bottom, top )
+	SortedArray = sA
+End Function
+
+'++LotusScript Development Environment:2:2:DoQS:1:8
+Sub DoQS( sA() As String, bottom As Long, top As Long )
+     ' Called by QuickSort
+     ' Uses Public variable sA  (array of string)
+	Dim length As Long
+	Dim i As Long
+	Dim j As Long
+	Dim Pivot As Long
+	Dim PivotValue As String
+	Dim t As String
+	Dim LastSmall As Long
+	length = top - bottom + 1
+	
+     ' Only do the QuickSort if the sublist is at least 10 items long
+	If length > 10 Then
+          ' Pivot is chosen approx. halfway through sublist.
+          ' This gives us best speed if list is almost sorted already, and is no worse than any
+          ' other choice if the list is in random order.
+		Pivot = bottom + (length \ 2)   
+		
+          ' Move PivotValue out of the way
+		PivotValue = sA( Pivot )
+		sA ( Pivot ) = sA ( bottom )
+		sA ( bottom ) = PivotValue
+		
+          ' LastSmall is the location of the last value smaller than PivotValue
+		LastSmall = bottom
+		For i = bottom + 1 To top 
+			If sA ( i ) < PivotValue Then 
+				LastSmall = LastSmall + 1
+				t = sA ( i )
+				sA ( i ) = sA ( LastSmall )
+				sA ( LastSmall ) = t
+			End If
+		Next
+		
+          ' Move the PivotValue back
+		t = sA ( LastSmall )
+		sA ( LastSmall ) = sA ( bottom )
+		sA ( bottom ) = t
+		Pivot = LastSmall
+		
+          ' Now sort each side
+		Call DoQS ( sA, bottom, Pivot - 1 )
+		Call DoQS ( sA, Pivot + 1, top )
+	End If
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:DoInsertSort:1:8
+Sub DoInsertSort ( sA() As String, Byval bottom As Long, Byval top As Long )	
+	Dim i As Long
+	Dim x As Long
+	Dim v As String
+	Dim Found As Integer
+	For i = bottom+1 To top
+		x = i
+		v = sA (i )
+		Do While (sA(x-1) > v)
+			sA ( x ) = sA ( x-1 )
+			x = x - 1
+			If x=0 Then
+				Exit Do
+			End If
+		Loop
+		sA (x) = v
+	Next
+End Sub
+
+
+'++LotusScript Development Environment:2:1:ControleCleMultiples:1:8
+Function ControleCleMultiples(Cle As String,planche As String) As String
+	' 
+	' Cette fontion renvoie "1" si la cle passée en paramètre n'est pas unique dans toutes les bases ScanUp, "0" dans le cas contraire
+	'		
+	Dim session As New NotesSession
+	Dim uiwks As New NotesUIworkspace
+	Dim uidoc As NotesUIdocument
+	Set uidoc=uiwks.CurrentDocument
+	Dim db As NotesDatabase
+	Set db=session.currentDatabase
+	Dim dc As NotesDocumentCollection
+	Dim docListeBases As NotesDocument
+	Dim view As NotesView
+	Dim cpt, nbDocsTrouves, NbBases, i_progress, i As Integer
+	Dim difference As Double
+	Dim Depart, Arrivee As NotesDateTime
+	Dim query,total As String
+	Dim libellebase As String
+	Dim docprofil As notesdocument
+	Dim nom_baselog 	As String
+	Dim docctrl As NotesDocument
+	Dim clectrl As String
+	
+	' ajout par M.Girardot le 07/12/2009 pour adaptatino linux
+	' booleen permettant de traiter la barre de progression suivant l'os
+	Dim oswindows As Boolean
+	
+	If (Left (session.Platform, 3) = "Win") Then
+		oswindows = True
+	Else
+		oswindows = False
+	End If
+	
+	' Instanciation du doc Profil de la liste des bases indexées
+	Set docListeBases=db.GetProfileDocument("m_ProfilListeBases")
+	
+	' Définition de la clé de recherche	
+	query="field Doc_CodeMabec = """ & Cle & """ and field Doc_CodeMabec = """ & planche  & """"
+	
+	nbDocsTrouves=0	
+	
+	' Nb de bases sur lesquelles va tourner la recherche:
+	NbBases=Cint(docListeBases.NbBasesIndexees(0))
+	
+	If oswindows Then
+	' Affichage de la barre de progression
+		Dim progressBar As LNProgressBar
+		Set progressBar = New LNProgressBar(True)
+		Call progressBar.SetText("Controle d'existence de la cle dans les autres Bases Scanup..." & Chr(13) & Chr(13),"Veuillez patienter...")
+		Call progressBar.SetProgressRange(Clng(NbBases))
+	Else
+		Print("Controle d'existence de la cle dans les autres Bases Scanup,v euillez patienter...")		
+	End If
+	
+	i_progress=1
+	cpt=0
+	ControleCleMultiples=""
+	
+	Forall NomBase In docListeBases.ListeBaseIndexee	
+		'Set db = New NotesDatabase( docListeBases.ServeurProd(0), NomBase )
+		Set db = session.GetDatabase(docListeBases.ServeurProd(0), NomBase ,False)
+		If oswindows Then
+			Call progressBar.SetProgressPos(Clng(i_progress))
+			Call progressBar.SetText("Controle de la cle sur : "  & db.title ,"Veuillez patienter...")
+		Else
+			Print ("Controle de la cle sur : "  & db.title &"Veuillez patienter...")
+		End If
+		
+		Set view =db.GetView("v_VueRecupModif")
+		Print db.title
+		'Msgbox " serveur " & docListeBases.ServeurProd(0) & " base : " & NomBase
+		clectrl = cle & "#" & planche
+		Set docctrl= view.GetDocumentByKey(clectrl,True)	
+		
+		If Not docctrl Is Nothing Then
+			Set docprofil = db.GetProfileDocument("M_ChpProfil_FR")
+			nom_baselog = Cstr(docprofil.Profil_NomUsine(0))
+			ControleCleMultiples = ControleCleMultiples & Chr(13) & Cstr(nom_baselog)
+		End If
+		i_progress=i_progress+1
+	End Forall
+	
+	If oswindows Then
+		Call progressBar.PBDelete
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:2:EnvoiMail:1:8
+Sub EnvoiMail(Message As String, Destinataire As String)
+	'
+	' ******************************************************************************************************************************
+	' Permet l'envoi d'un mémo: 
+	' Paramètres:
+	' 	- Message:		Le message du mémo
+	'	- Destinataire:	Le destinataire du mémo
+	'
+	' ******************************************************************************************************************************
+	'
+	' -------------------------------------------------------------
+	' Déclarations des variables et objets
+	' -------------------------------------------------------------
+	'
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim maildoc As NotesDocument
+	Set db=session.CurrentDatabase
+	Dim memocontenu As NotesRichTextitem
+	
+	'	
+	' -------------------------------------------------------------------------------------------------------
+	' Création du mémo (on reprend le mémo standard messagerie)
+	' -------------------------------------------------------------------------------------------------------
+	'
+	Set maildoc=db.CreateDocument
+	maildoc.form="Memo"
+	Set memocontenu = New NotesRichTextItem( maildoc, "Body")			
+	maildoc.subject="ScanUp: Pb d'indexation..."
+	maildoc.importance="1"
+	Call memocontenu.AppendText( "Application: " & db.Title )
+	Call memocontenu.AddNewLine( 2 )
+	Call memocontenu.AppendText( Message )
+	Call memocontenu.AddNewLine( 2 )
+	
+	Call maildoc.Send(False, Destinataire)
+	'Print "Envoi d'un mémo à: " & Destinataire
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:AfficherAide:1:8
+Sub AfficherAide(Niveau As String, Categorie As String)
+	
+	' CETTE FONCTION n'est plus utilisée (DEV V2) mais elle est conservée au cas-où..............
+	'
+	' Cette fonction permet d'ouvrir l'aide contextuelle côté Notes
+	'-----------------------------------------------------------------------------------------------------------------	
+	' Paramètres d'entrée:
+	' 	- Le niveau de l'aide (accès "Consultation" ou accès "Gestion")
+	'	- La catégorie à afficher
+	'-----------------------------------------------------------------------------------------------------------------
+	' 	Rappel des catégories possibles
+	' 	Pour la consultation:
+	'		- Arborescence
+	'		- RechercheBase
+	'		- RechercheMultibase
+	'		- ListeDocsCrees
+	'
+	
+	
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Set db=session.currentDatabase
+	Dim uiwks As New NotesUIworkspace
+	Dim uidoc As NotesUIdocument
+	Dim doc As NotesDocument
+	
+	' Creation du document d'aide:
+	Set doc=db.CreateDocument
+	If Niveau="Consultation" Then
+		doc.Form="m_AideConsultVisu"	
+	Elseif Niveau="Gestion" Then
+		doc.Form="m_AideGestionVisu"	
+	Else
+		Msgbox "Erreur dans l'ouverture de l'aide"
+		End
+	End If
+	' Mise à jour du champ cachéPour:
+	doc.CachePour=Categorie
+	
+	' Affichage de l'aide contextuelle
+	Call doc.save(True,False)
+	Call  uiwks.EditDocument(True, doc)
+	Set uidoc=uiwks.currentDocument
+	
+End Sub
+
+
+
+'++LotusScript Development Environment:2:2:MiseAjourStats:1:8
+Sub MiseAjourStats(TypeStats As String, OptParam As String, pUserName As String, pCodeMabecFiche As String, pVersionFiche As String,pTypePlan As String )
+		
+	On Error Goto ErrorHandler
+	
+	'
+	' Fonction appellée pour créer un document dans une vue de statistique
+	' Paramètres - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	' 	- TypeStats (String): 	le type de document de stat à créer
+	' 	- OptParam (String):	un paramètre optionnel suivant le type de stat
+	'	- pUserName (NotesName): le nom de l'utilisateur effectuant l'action
+	'	- pCodeMabecFiche (String): le code MABEC de la fiche concernée
+	'	- pVersionFiche (String): la version de la fiche concernée
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	'
+	' Si TypeStats="creation" --> création d'un doc dans la vue v_StatsCreation, paramètre: le format du fichier
+	' Si TypeStats="recupModif" --> création d'un doc dans la vue v_StatsRecupModif, paramètre: aucun
+	' Si TypeStats="evolutionFormat" --> création d'un doc dans la vue v_StatsEvolutionFormat, paramètre: le nouveau format
+	' Si TypeStats="suppression" --> création d'un doc dans la vue v_StatsSuppression, paramètre: aucun
+	
+	Dim session As New NotesSession 
+	Dim db As NotesDatabase	
+	Dim doc As NotesDocument
+	Set db=session.CurrentDatabase
+	Set doc=db.Createdocument
+	
+	Select Case TypeStats
+	Case "creation" 
+		doc.form="m_StatsCreation"
+		doc.TypeFichier=OptParam			'(OptParam="format1" ou "format2" ou "format3")
+				
+	Case "recupModif"
+		doc.form="m_StatsRecupModif"
+		
+	Case "evolutionFormat"
+		doc.form="m_StatsEvolutionFormat"
+		doc.TypeEvolution=OptParam		' si OptParam="versFormat2", le tif a évolué vers autocad
+														' si OptParam="versFormat3", le tif a évolué vers xelec	
+		
+	Case "suppression"
+		doc.form="m_StatsSuppression"
+	End Select
+	
+	
+	' Ajout des informations dans le document de statistique
+	doc.AnneeCreation=Cstr(Year(Today))
+	doc.MoisCreation=Cstr(Month(Today))
+	doc.JourCreation=Cstr(Day(Today))
+	
+	doc.UserName = pUserName	
+	doc.CodeMabecFiche = pCodeMabecFiche
+	doc.VersionFiche = pVersionFiche
+	doc.TypePlan =pTypePlan
+	
+	' Sauvegarde du doc	
+	Call doc.save(True,False)
+	
+	
+	Exit Sub
+	
+ErrorHandler:
+	Print "Erreur " + Cstr(Err) + " - " + Error$ + " à la ligne " + Cstr(Erl)
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:1:DefinirTempRep:1:8
+Function DefinirTempRep (  ) As String
+	
+	Dim session As NotesSession
+	Set session = New NotesSession
+	
+	If (Left (session.Platform, 3) = "Win") Then
+		DefinirTempRep  = Environ("TEMP")
+		If DefinirTempRep ="" Then
+			DefinirTempRep = "C:\TEMP"
+		End If
+	Else
+		DefinirTempRep  = Environ("TEMP")
+		If DefinirTempRep ="" Then
+			DefinirTempRep = "/tmp"
+		End If
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:1:DefinirSeparateur:1:8
+Function DefinirSeparateur (  ) As String
+	
+	Dim session As NotesSession
+	Set session = New NotesSession
+	
+	If (Left (session.Platform, 3) = "Win") Then
+		DefinirSeparateur = "\"
+	Else
+		DefinirSeparateur="/"
+	End If
+	
+End Function

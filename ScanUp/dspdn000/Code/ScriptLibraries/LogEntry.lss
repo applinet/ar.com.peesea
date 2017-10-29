@@ -1,0 +1,547 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Public Class LogEntry
+Declare Sub QuickLog()
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+
+Const LOGLEVEL_EMERG%		= 0 ' Emergency
+Const LOGLEVEL_ALERT%		= 1 ' Alert
+Const LOGLEVEL_CRITICAL%	= 2 ' Critical
+Const LOGLEVEL_ERROR%		= 3 ' Error
+Const LOGLEVEL_WARNING%	= 4 ' Warning
+Const LOGLEVEL_NOTICE%		= 5 ' Notice
+Const LOGLEVEL_INFO%			= 6 ' Info
+Const LOGLEVEL_DEBUG%		= 7 ' Debug
+Const ERROR_PROPAGATE% = 1001	' Propagation d'une erreur jusqu'à la première procédure
+
+' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+' Cette classe représente une entrée dans la base de log applicative
+' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Public Class LogEntry
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	'																	MEMBRES
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	Public LogType As Integer
+	
+	Public DBName	As String
+	Public Component As String
+	Public AgentName As String
+	Public LibName As String
+	Public ClassName As String
+	Public SubName As String
+	Public DocID As String
+	Public UserName As String
+	
+	Public Err As Integer
+	Public Erl As Integer
+	Public Msg As String
+	
+	Private ErrDebugArray() As String
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	'																	PROPRIETES
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Property Get IsFatal As Boolean
+		
+		If (Me.LogType = LOGLEVEL_EMERG%) Or _
+		(Me.LogType = LOGLEVEL_ALERT%) Or _
+		(Me.LogType = LOGLEVEL_CRITICAL%) Or _
+		(Me.LogType = LOGLEVEL_ERROR%) Then
+			IsFatal = True
+		Else
+			IsFatal = False
+		End If
+		
+	End Property
+	
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	'															METHODES PUBLIQUES
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 	Constructeur
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Sub New()
+		
+		' Gestion d'erreurs
+		On Error Goto ErrorHandler
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Variables, initialisation
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		Dim CurrentSession As New NotesSession
+		Dim CurrentDB As NotesDatabase		
+		Dim CurrentAgent As NotesAgent	
+		Dim CurrentDoc As NotesDocument
+		Dim CurrentUser As NotesName
+		
+		Set CurrentDB = CurrentSession.CurrentDatabase		
+		Set CurrentAgent = CurrentSession.CurrentAgent
+		Set CurrentDoc = CurrentSession.DocumentContext
+		Set CurrentUser = New NotesName(CurrentSession.EffectiveUserName)
+		
+		Me.DBName = CurrentDB.Title
+		If Not CurrentAgent Is Nothing Then
+			Me.AgentName = CurrentAgent.Name
+		End If
+		
+		If Not CurrentDoc Is Nothing Then
+			Me.DocID = CurrentDoc.UniversalID	
+		End If
+		
+		If Not CurrentUser Is Nothing Then
+			Me.UserName = CurrentUser.Canonical
+		End If
+		
+		Redim Me.ErrDebugArray(0) As String
+		
+		
+		' C'est fini, on sort
+		Exit Sub
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+		Messagebox("LogEntry - New - Erreur " + Str(Err) + " - Ligne " + Str(Erl) + " - " + Error$)		
+		Exit Sub
+	End Sub
+	
+	
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 	Convertion objet => chaine de caratères
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Function ToString() As String
+		
+		' Gestion d'erreurs
+		On Error Goto ErrorHandler
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Variables, initialisation
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		Dim ReturnString As String
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Traitement
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		ReturnString = Me.LogType
+		ReturnString = ReturnString + "#" + Cstr(Me.Err)
+		ReturnString = ReturnString + "#" + Me.Msg
+		ReturnString = ReturnString + "#" + Cstr(Me.Erl)
+		ReturnString = ReturnString + "#" + Me.DBName
+		ReturnString = ReturnString + "#" + Me.AgentName
+		ReturnString = ReturnString + "#" + Me.LibName
+		ReturnString = ReturnString + "#" + Me.ClassName
+		ReturnString = ReturnString + "#" + Me.SubName
+		ReturnString = ReturnString + "#" + Me.Component
+		ReturnString = ReturnString + "#" + Me.DocID
+		ReturnString = ReturnString + "#" + Me.UserName
+		ReturnString = ReturnString + "#" + Implode(Me.ErrDebugArray, "@")		
+		
+		ToString = ReturnString
+		
+		
+		' C'est fini, on sort
+		Exit Function
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+		Messagebox("LogEntry - ToString - Erreur " + Str(Err) + " - Ligne " + Str(Erl) + " - " + Error$)		
+		Exit Function
+	End Function
+	
+	
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 	Convertion chaine de caractères => objet
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Sub FromString(pString As String)
+		
+		' Gestion d'erreurs
+		On Error Goto ErrorHandler
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Variables, initialisation
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		Dim MembersValues As Variant
+		Dim TempArray As Variant
+		Dim i As Integer
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Traitement
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		MembersValues = Split(pString, "#")
+		
+		Me.LogType 			= MembersValues(0)
+		Me.Err		 			= Cint(MembersValues(1))
+		Me.Msg	 			= MembersValues(2)
+		Me.Erl					= Cint(MembersValues(3))
+		Me.DBName 		= MembersValues(4)
+		Me.AgentName 		= MembersValues(5)
+		Me.LibName 		= MembersValues(6)
+		Me.ClassName 		= MembersValues(7)
+		Me.SubName 		= MembersValues(8)
+		Me.Component		= MembersValues(9)
+		Me.DocID 				= MembersValues(10)
+		Me.UserName		= MembersValues(11)
+		
+		
+		TempArray = Split(MembersValues(12), "@")		
+		Redim Me.ErrDebugArray(0) As String
+		
+		For i = 0 To Ubound(TempArray)
+			Call Me.AddDebugLine(TempArray(i))			
+		Next
+		
+		
+		' C'est fini, on sort
+		Exit Sub
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+		Messagebox("LogEntry - FromString - Erreur " + Str(Err) + " - Ligne " + Str(Erl) + " - " + Error$)		
+		Exit Sub
+	End Sub
+	
+	
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 	Ajouter d'une ligne au texte de debug
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Sub ToMsgbox()
+		
+		' Gestion d'erreurs
+		On Error Goto ErrorHandler
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Variables, initialisation
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		Dim MessageString As String
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Traitement
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		Select Case Trim(Me.LogType)
+		Case LOGLEVEL_EMERG%:		MessageString = "LogEntry - Emergency"
+		Case LOGLEVEL_ALERT%	:		MessageString = "LogEntry - Alert"
+		Case LOGLEVEL_CRITICAL%:	MessageString = "LogEntry - Critical"
+		Case LOGLEVEL_ERROR%:		MessageString = "LogEntry - Error"
+		Case LOGLEVEL_WARNING%:	MessageString = "LogEntry - Warning"
+		Case LOGLEVEL_NOTICE%:		MessageString = "LogEntry - Notice"
+		Case LOGLEVEL_INFO%:			MessageString = "LogEntry - Info"
+		Case LOGLEVEL_DEBUG%:		MessageString = "LogEntry - Debug"
+		Case Else:									MessageString = "LogEntry"
+		End Select
+		
+		' Si possible on ajoute le nom de la base
+		If (Me.DBName <> "") Then
+			MessageString = MessageString	 + Chr(10) + Chr(13) + "Base: " + Me.DBName
+		End If
+		
+		' Si possible on ajoute le nom du composant
+		If (Me.Component <> "") Then
+			MessageString = MessageString + Chr(10) + Chr(13) + "Formulaire: " + Me.Component
+		End If
+		
+		' Si possible on ajoute le nom de l'agent
+		If (Me.AgentName <> "") Then
+			MessageString = MessageString + Chr(10) + Chr(13) + "Agent: " + Me.AgentName
+		End If
+		
+		' Si possible on ajoute le nom de la bibliothèque
+		If (Me.LibName <> "") Then
+			MessageString = MessageString + Chr(10) + Chr(13) + "Bibliothèque: " + Me.LibName
+		End If
+		
+		' Si possible on ajoute le nom de la classe
+		If (Me.ClassName <> "") Then
+			MessageString = MessageString + Chr(10) + Chr(13) + "Classe: " + Me.ClassName
+		End If
+		
+		' Si possible on ajoute le nom de la procédure/fonction
+		If (Me.SubName <> "") Then
+			MessageString = MessageString + Chr(10) + Chr(13) + "Procédure: " +Me.SubName
+		End If
+		
+		' Si possible on ajoute l'ID du document
+		If (Me.DocID <> "") Then
+			MessageString = MessageString + Chr(10) + Chr(13) + "Document: " +Me.DocID
+		End If
+		
+		' Si possible on ajoute le nom de l'utilisateur
+		If (Me.UserName <> "") Then
+			MessageString = MessageString + Chr(10) + Chr(13) + "Utilisateur: " +Me.UserName
+		End If
+		
+		' Si possible on ajoute la ligne de l'erreur
+		If (Me.Erl > 0) Then
+			MessageString = MessageString + Chr(10) + Chr(13) + "Ligne: " + Str(Me.Erl)
+		End If
+		
+		' Si possible on ajoute le code de l'erreur
+		If (Me.Err > 0) Then
+			MessageString = MessageString + Chr(10) + Chr(13) + "Code: " + Str(Me.Err)
+		End If
+		
+		' Si possible on ajoute le texte du message
+		If (Me.Msg <> "") Then
+			MessageString = MessageString + Chr(10) + Chr(13) + "Message: " + Me.Msg
+		End If
+		
+		' Si possible on ajoute le texte de debug
+		If (Ubound(Me.ErrDebugArray) > 0) Then
+			MessageString = MessageString + Chr(10) + Chr(13) + "Debug:" + Implode(Me.ErrDebugArray, Chr(10) + Chr(13))
+		End If
+		
+		
+		' On affiche le message
+		Msgbox(MessageString)		
+		
+		
+		' C'est fini, on sort
+		Exit Sub
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+		Msgbox("LogEntry - Msgbox - Erreur " + Str(Err) + " - Ligne " + Str(Erl) + " - " + Error$)		
+		Exit Sub
+	End Sub	
+	
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 	Ajouter d'une ligne au texte de debug
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Sub AddDebugLine(paramLine As String)
+		
+		' Gestion d'erreurs
+		On Error Goto ErrorHandler
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Traitement
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		' On redimensionne le tableau
+		Redim Preserve Me.ErrDebugArray(Ubound(Me.ErrDebugArray) + 1) As String
+		Me.ErrDebugArray(Ubound(Me.ErrDebugArray)) = paramLine
+		
+		' C'est fini, on sort
+		Exit Sub		
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+		Messagebox("LogEntry - AddDebugLine - Erreur " + Str(Err) + " - Ligne " + Str(Erl) + " - " + Error$)		
+		Exit Sub	
+	End Sub	
+	
+	
+	
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	' 	Sauvegarde du document de log
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Public Sub Save(pServer As String, pDBPath As String)
+		
+		' Gestion d'erreurs	
+		On Error Goto ErrorHandler
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Variables, initialisation
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		Dim LogDB As NotesDatabase
+		Dim i As Integer
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Traitement
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		
+		' On ouvre la base de log
+		Set LogDB = New NotesDatabase(pServer, pDBPath)
+		
+		' Si la base n'a pas pu être ouverte, on envoie un message dans le journal
+		If (Not LogDB.IsOpen) Then
+			Messagebox("Impossible d'ouvrir la base de log '" + pDBPath + "' sur le serveur '" + pServer + "'")			
+		End If
+		
+		
+		' On nettoye les chaines de caractères
+		Me.LogType			= Trim(Me.LogType)
+		Me.DBName			= Trim(Me.DBName)
+		Me.Component		= Trim(Me.Component)
+		Me.AgentName		= Trim(Me.AgentName)
+		Me.LibName			= Trim(Me.LibName)
+		Me.ClassName		= Trim(Me.ClassName)
+		Me.SubName		= Trim(Me.SubName)
+		Me.DocID				= Trim(Me.DocID)
+		
+		Me.Msg				= Trim(Me.Msg)
+		
+		
+		' Si l'objet représentant la base à été créé et que la base a été ouverte sans problème
+		If ((Not LogDB Is Nothing) And LogDB.IsOpen)Then
+			
+			' On créé un nouveau document
+			Dim LogEntryDocument As New NotesDocument(LogDB)
+			LogEntryDocument.Form = "LogEntry"
+			
+			LogEntryDocument.LogEntry_LogType		= Me.LogType
+			
+			LogEntryDocument.LogEntry_LogTime		= Now
+			LogEntryDocument.LogEntry_DBName		= Me.DBName
+			LogEntryDocument.LogEntry_Component	= Me.Component
+			LogEntryDocument.LogEntry_AgentName	= Me.AgentName
+			LogEntryDocument.LogEntry_LibName		= Me.LibName
+			LogEntryDocument.LogEntry_ClassName	= Me.ClassName
+			LogEntryDocument.LogEntry_SubName		= Me.SubName
+			LogEntryDocument.LogEntry_DocID			= Me.DocID
+			LogEntryDocument.LogEntry_UserName		= Me.UserName
+			
+			LogEntryDocument.LogEntry_Err					= Me.Err
+			LogEntryDocument.LogEntry_Erl					= Me.Erl			
+			LogEntryDocument.LogEntry_Msg				= Me.Msg
+			
+			Dim ErrItem As New NotesRichTextItem(LogEntryDocument,"LogEntry_ErrDebug")
+			For i = 1 To Ubound(Me.ErrDebugArray)
+				ErrItem.AppendText(Me.ErrDebugArray(i))
+				ErrItem.AddNewline(1)
+			Next
+			
+			
+			' On enregistre le document
+			Call LogEntryDocument.Save(False, False)
+			
+			
+		' Si la base n'a pas été ouverte
+		Else
+			
+			' On créé une chaine de caractères à retourner
+			Dim MessageString As String
+			
+			' Gravité de la log
+			MessageString = "Sévérité " + Cstr(Me.LogType)
+			
+			
+			' Si possible on ajoute le nom de la base			
+			If (Me.DBName <> "") Then
+				MessageString = MessageString	 + " - Base " + Me.DBName
+			End If
+			
+			' Si possible on ajoute le nom du formulaire
+			If (Me.Component <> "") Then
+				MessageString = MessageString + " - Formulaire " + Me.Component
+			End If
+			
+			' Si possible on ajoute le nom de l'agent
+			If (Me.AgentName <> "") Then
+				MessageString = MessageString + " - Agent " + Me.AgentName
+			End If
+			
+			' Si possible on ajoute le nom de la bibliothèque
+			If (Me.LibName <> "") Then
+				MessageString = MessageString + " - Bibliothèque " + Me.LibName
+			End If
+			
+			' Si possible on ajoute le nom de la classe
+			If (Me.ClassName <> "") Then
+				MessageString = MessageString + " - Classe " + Me.ClassName
+			End If
+			
+			' Si possible on ajoute le nom de la procédure/fonction
+			If (Me.SubName <> "") Then
+				MessageString = MessageString + " - Procédure " +Me.SubName
+			End If
+			
+			' Si possible on ajoute l'ID du document
+			If (Me.DocID <> "") Then
+				MessageString = MessageString + " - Document " +Me.DocID
+			End If
+			
+			' Si possible on ajoute le nom de l'utilisateur
+			If (Me.UserName <> "") Then
+				MessageString = MessageString + " - Utilisateur " +Me.UserName
+			End If
+			
+			' Si possible on ajoute la ligne de l'erreur
+			If (Me.Err > 0) Then
+				MessageString = MessageString + " - Ligne " + Str(Me.Err)
+			End If
+			
+			' Si possible on ajoute le code de l'erreur
+			If (Me.Erl > 0) Then
+				MessageString = MessageString + " - Code " + Str(Me.Erl)
+			End If
+			
+			' Si possible on ajoute le texte du message
+			If (Me.Msg <> "") Then
+				MessageString = MessageString + " - " + Me.Msg
+			Else
+				MessageString = MessageString + " - Aucun message défini !"
+			End If
+			
+			' On affiche le message			
+			Messagebox(MessageString)
+			
+		End If
+		
+		
+		' C'est fini, on sort
+		Exit Sub		
+		
+		
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+		' 		Gestion d'erreurs
+		' - - - - - - - - - - - - - - - - - - - - - - - - -
+ErrorHandler:
+		Messagebox("LogEntry - Save - Erreur " + Str(Err) + " - Ligne " + Str(Erl) + " - " + Error$)		
+		Exit Sub	
+	End Sub	
+	
+End Class
+'++LotusScript Development Environment:2:2:QuickLog:4:8
+' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+' Enregistrement rapide d'un message dans la log applicative.
+' * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Sub QuickLog()
+	
+	
+	
+End Sub

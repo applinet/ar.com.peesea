@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='43e' unid='BDFC38EEF9CEA759C1256DAC002C4B12' sequence='7'>
+<created><datetime dst='true'>20030925T100348,02+02</datetime></created>
+<modified><datetime>20171028T233204,29-03</datetime></modified>
+<revised><datetime>20100204T161305,13-03</datetime></revised>
+<lastaccessed><datetime>20171028T233201,11-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233201,11-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=CORINNE DUBOIS - P526370/OU=users/O=PSA</name><name>CN=DAVID MOUGEY - J405202/OU=users/O=PSA</name><name
+>CN=CORINNE DUBOIS - P526370/OU=users/O=PSA</name><name>CN=DAVID MOUGEY - J405202/OU=users/O=PSA</name><name
+>CN=CORINNE DUBOIS - P526370/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=AdminSign/OU=users/O=PSA</name><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$TITLE' sign='true'><text>Agencement Notes pour Log|AgencementNotesLog</text></item>
+<item name='$WINDOWTITLE' sign='true'><formula>"Domino Scanup"</formula></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$FrameSet' sign='true'>
+<rawitemdata type='1'>
+7/8YAAEAAwAAAAAAAAAAAAAAAAAAAAAA8P8+AEkAAAABAAAAAAAHAAcAAAAAAAUA1NDIAAUA1NDI
+AAIAAQAAAAAAAQAAAAAAAAADAA4AAwBTAAMAAQDx/zwAEQAAAAAAAQECAAEAAQAAAAAACwAAAA0A
+AQAAAAAAAABCYW5kZWF1SGF1dGNhZHJlX2NvbnRlbnX2/zAAAAAAAAMABAAOAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAQmFuZGVhdU5vdGVzVjLx/zEAEQAAAAAAAQABAAEAAQAAAAAADQAAAAAAAQAAAAAA
+AABjYWRyZV9jb250ZW51P/b/LAAAAAAAAwACAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAB2X0FnZW50
+TG9n
+</rawitemdata></item>
+<item name='$Flags'><text>#34CQ</text></item>
+<item name='$DesignerVersion' sign='true'><text>5</text></item></note>
+

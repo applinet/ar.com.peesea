@@ -1,0 +1,1612 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+' Pour fonctionner cette librairie a besoin de la librairie commune
+Use "Lib_Commune"
+
+' fonction pour log applicative
+Use "LogEntry"
+
+' Pour utiliser la barre de progression nous avons besoin de cette librairie
+Use "BarreDeProgression" 
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Public Class ClasseRequete
+Declare Sub Initialize
+Declare Sub Terminate
+Declare Function ExploiteRep( s_chemin As String )
+Declare Function LectureFicRequete( i_posi As Integer , Report As LogEntry ) 
+Declare Function ExtractionDocuments(Report As LogEntry) As Integer
+Declare Function TraitementExportFic()
+Declare Function TraitementExportRep()
+Declare Function RecupRepertoireCible( Report As logEntry) 
+Declare Function SelectionFichier(Report As LogEntry) 
+Declare Public Sub Nettoyage
+Declare Function LectureRecherche ( i_posi As Integer, Report As LogEntry)
+Declare Function ConstruitRequete ( obj_tra As ClasseRequete ) As String
+Declare Function CreationFichiers ( obj_doc As NotesDocument, Report As LogEntry)
+Declare Function ExtraitChemin ( s_chaine As String)
+Declare Sub CreationFichierFinRecup ( o_doc As ClasseRequete , i_nb As Integer )
+Declare Function ControleDocument ( o_obj As NotesDocument , o_req As ClasseRequete , Report As LogEntry) As Integer
+Declare Function ChoixFormatFichier As String
+Declare Function Transforme( chaine As String )  As String
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+
+' Champ précisant le répertoire à exploiter
+Dim s_champ_repertoire As String
+
+' Tableau d'objet requete
+Dim l_listereq() As ClasseRequete
+Dim i_nb_requete As Integer
+Dim i_nb_recup As Integer
+
+' Gestion des erreurs
+Dim i_err As Integer
+Dim i_err_p As Integer
+Dim s_erreur As String
+
+Public FormatFichier As String
+Public NomVisibleFormatFichier As String
+Public NomFichierPdf As String
+
+' Déclaration d'une classe requete
+Public Class ClasseRequete
+	Public NomFichier As String
+	Public CodeMabec As String
+	Public CodeEDE As String
+	Public TypeVehicule As String
+	Public IntitulePlan As String
+	Public DesignationPiece As String
+	Public Date As Variant
+	Public NomDessinateur As String
+	Public NoPlanche As String
+	Public Format As String
+	Public Usine As String
+	Public DesignationPlan As String
+	Public Createur As String
+	Public DatePlan As Variant
+	Public IndiceModification As String
+	Public DateModification As Variant
+	Public NoAtelier As String
+	Public NoOperation As String
+	Public TypePlan As String
+	Public CommentaireModification As String
+	Public NoPointIntervention As String
+	Public Caracteristique As String
+	Public Divers As String
+	Public FlagPourModif As String
+End Class
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+	i_nb_requete = 0
+	
+	i_err = 0
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:Terminate:1:10
+Sub Terminate
+	
+	i_nb_requete = 0
+	
+	i_err = 0
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:ExploiteRep:1:8
+Function ExploiteRep( s_chemin As String )
+	
+	' Variable pour le résultat du dir sur le répertoire
+	Dim filerep As String
+	
+	' Exécution du dir sur le répertoire passé en paramètre
+	filerep = Dir(s_chemin , 0)
+	
+	Print "Analyse des fichiers requêtes sous le répertoire cible. "
+	
+	' On boucle tant qu'il y a des fichiers dans le répertoire
+	Do While filerep <> ""
+		
+		' On ne prend que les fichiers avec l'extension .txt
+		Dim pos As Integer
+		pos = Instr(1,Lcase(filerep),".txt")
+		
+		If ( pos > 0 ) Then
+			' On redimensionne le tableau
+			Redim Preserve l_listereq ( i_nb_requete )
+			
+			' Creation d'une nouvelle instance d'objet
+			Dim obj_req As ClasseRequete
+			Set obj_req = New ClasseRequete
+			obj_req.NomFichier = filerep
+			obj_req.FlagPourModif = "0"
+			Set l_listereq ( i_nb_requete ) = obj_req
+			i_nb_requete = i_nb_requete +1
+		End If
+		
+		filerep = Dir()
+	Loop
+	
+End Function
+
+
+
+'++LotusScript Development Environment:2:1:LectureFicRequete:1:8
+Function LectureFicRequete( i_posi As Integer , Report As LogEntry ) 
+	
+	' Déclaration d'un objet temporaire
+	Dim obj_tempo As ClasseRequete
+	
+	' Pour tous les fichiers répertoriés nous allons créer une requête en mémoire
+	Forall element In l_listereq
+		
+		'Report.AddDebugLine( "Début exploitation du fichier requête .txt : " + element.NomFichier )
+		
+		' Création d'un descripteur de fichier		
+		Dim file_dat As Integer
+		file_dat = Freefile
+		
+		' Ouverture du fichier en lecture
+		If ( i_posi = 1 ) Then
+			Open element.NomFichier For Input As file_dat
+		Else
+			Open s_champ_repertoire + element.NomFichier For Input As file_dat
+		End If		
+		
+		' On boucle tant qu'il y a des choses à lire dans le fichier
+		Dim i_pos As Integer
+		Dim i_parc As Integer
+		Dim i_part As Integer
+		Dim s_lecture As String
+		Dim s_cle As String
+		Dim s_valeur As String
+		Dim s_trav As String
+		
+		While Not Eof ( file_dat )
+			
+			Line Input #file_dat,s_lecture
+			
+			i_parc = 1
+			i_part = 1
+			s_cle = ""
+			s_valeur = ""
+			s_trav = s_lecture
+			
+			'on isole le mot cle et sa valeur sans double cote
+			s_cle = Strleft(s_trav,"=")
+			s_valeur = Strleft(Strright(s_trav,""""), """")
+			
+			' Evolution Scanup V2: CodeMabec devient clé
+			i_pos = Instr(1,s_cle,"Cle")
+			If( i_pos > 0 ) Then
+				element.CodeMabec = s_valeur
+			End If
+			
+			' Code Mabec conservé au cas ou l'utilisateur ne prends pas compte de la modif apportée pas la V2
+			i_pos = Instr(1,s_cle,"CodeMabec")
+			If( i_pos > 0 ) Then
+				element.CodeMabec = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"NoPlanche")
+			If( i_pos > 0 ) Then
+				element.NoPlanche = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"Format")
+			If( i_pos > 0 ) Then
+				element.Format = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"Usine")
+			If( i_pos > 0 ) Then
+				element.Usine = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"DesignationPlan")
+			If( i_pos > 0 ) Then
+				element.DesignationPlan = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"Createur")
+			If( i_pos > 0 ) Then
+				element.Createur = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"DatePlan")
+			If( i_pos > 0 ) Then
+				element.DatePlan = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"IndiceModification")
+			If( i_pos > 0 ) Then
+				element.IndiceModification = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"DateModification")
+			If( i_pos > 0 ) Then
+				element.DateModification = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"NoAtelier")
+			If( i_pos > 0 ) Then
+				element.NoAtelier = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"NoOperation")
+			If( i_pos > 0 ) Then
+				element.NoOperation = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"TypePlan")
+			If( i_pos > 0 ) Then
+				element.TypePlan = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"CommentaireModification")
+			If( i_pos > 0 ) Then
+				element.CommentaireModification = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"NoPointIntervention")
+			If( i_pos > 0 ) Then
+				element.NoPointIntervention = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"Caracteristique")
+			If( i_pos > 0 ) Then
+				element.Caracteristique = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"Divers")
+			If( i_pos > 0 ) Then
+				element.Divers = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"FlagModif")
+			If( i_pos > 0 ) Then
+				element.FlagPourModif = s_valeur
+			End If
+			
+			' Evolution Scanup V2:
+			' rajout des champs base outils Coupants
+			
+			i_pos = Instr(1,s_cle,"CodeEDE")
+			If( i_pos > 0 ) Then
+				element.CodeEDE = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"TypeVehicule")
+			If( i_pos > 0 ) Then
+				element.TypeVehicule = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"DesignationPiece")
+			If( i_pos > 0 ) Then
+				element.DesignationPiece = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"IntitulePlan")
+			If( i_pos > 0 ) Then
+				element.IntitulePlan = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"Date")
+			If( i_pos > 0 ) Then
+				element.Date = s_valeur
+			End If
+			
+			i_pos = Instr(1,s_cle,"NomDessinateur")
+			If( i_pos > 0 ) Then
+				element.NomDessinateur = s_valeur
+			End If
+			
+		Wend
+		
+		' Fermeture du descripteur de fichier
+		Close file_dat
+		
+		'Report.AddDebugLine( "Fin exploitation du fichier requête .txt : " + element.NomFichier )
+		
+	End Forall
+	
+End Function
+
+'++LotusScript Development Environment:2:1:ExtractionDocuments:1:8
+Function ExtractionDocuments(Report As LogEntry) As Integer
+	
+	' Pour toutes les requêtes qui sont en mémoire nous allons rechercher les documents
+	' ciblés et les extraire dans le répertoire
+	
+	' Flag d'erreur
+	Dim i_err As Integer
+	i_err = 0
+	
+	Forall obj_lu In  l_listereq
+		
+		Dim workspace As New NotesUIWorkspace
+		Dim session As New NotesSession
+		Dim db As NotesDatabase	
+		Dim folder As Notesview
+		Dim view As notesview
+		
+		' ajout par M.Girardot le 07/12/2009 pour adaptation linux
+		' booleen permettant de traiter la barre de progression suivant l'os
+		Dim oswindows As Boolean
+		
+		If (Left (session.Platform, 3) = "Win") Then
+			oswindows = True
+		Else
+			oswindows = False
+		End If		
+		
+		Dim vc As NotesViewEntryCollection
+		Set db = session.CurrentDatabase	
+		
+		' Instanciation du document d'administration de la base:
+		Dim docProfil As NotesDocument
+		Set docProfil=db.getProfileDocument("M_ChpProfil_FR")
+		
+		If docProfil.IsBaseOutils(0)="Oui" Then
+		' instanciation de la vue dans laquelle on recherche pour la base des outils coupants:			
+			If FormatFichier="format1" Then
+				Set view=db.GetView("v_OutilsFormat1TousConsult")	
+			Elseif FormatFichier="format2" Then
+				Set view=db.GetView("v_OutilsFormat2TousConsult")	
+			Elseif FormatFichier="format3" Then
+				Set view=db.GetView("v_OutilsFormat3TousConsult")	
+			Else
+				' Erreur: pas de format renvoyé, on bascule sur la vue globale
+				Set view=db.GetView("v_OutilsAllFormatTousConsult")	
+			End If		
+		Else
+		' Instanciation de la vue dans laquelle on recherche, ici depuis une base Scanup normale:			
+			If FormatFichier="format1" Then
+				Set view=db.GetView("v_Format1TousConsult")	
+			Elseif FormatFichier="format2" Then
+				Set view=db.GetView("v_Format2TousConsult")					
+			Elseif FormatFichier="format3" Then
+				Set view=db.GetView("v_Format3TousConsult")	
+			Else
+				' Erreur: pas de format renvoyé, on bascule sur la vue globale
+				Set view=db.GetView("v_AllFormatTousConsult")	
+			End If		
+		End If
+		
+		' Recherche des documents
+		
+		' Construction de la requête
+		Dim query As String
+		query = ConstruitRequete ( obj_lu )
+		
+		' Execution de la requête
+		Dim nombre As Integer
+		nombre = view.FTSearch(query,0)
+		
+		If ( nombre >= 5000 ) Then
+			Report.AddDebugLine( "La requête : " + obj_lu.NomFichier + " implique une extraction de plus de 5000 documents." & _
+			Chr(10) & Cstr(nombre) & " documents à extraire."  & Chr(10) & "Impossible d'effectuer l'export.")   
+			Messagebox "Plus de 5000 documents trouvés pour l'extraction: " & Chr(10) & "Impossible d'effectuer l'export.",16,"Avertissement"
+			s_erreur = "Trop de fichiers à récupérer." 
+			i_err = -1
+		End If
+		
+		If ( i_err = 0) Then
+			If ( nombre > 100 ) Then
+				i_err = workspace.Prompt(2,"Export de Fiches","Attention votre requête implique une extraction de plus de 100 documents. " & Cstr(nombre) & " documents à extraire." & Chr(10) & "Voulez vous continuez ?")
+				If i_err = 0 Then
+					Report.AddDebugLine( "Abandon de la  requête  qui implique une extraction de plus de 100 documents." & Chr(10) & Cstr(nombre) & " documents à extraire.")
+					Exit Function
+				End If
+				'Messagebox "La requête : " + obj_lu.NomFichier + " implique une extraction de plus de 100 documents." & Chr(10) & Cstr(nombre) & " documents à extraire."  & Chr(10) & "L'export va prendre du temps.",64,"Information"
+			End If
+			
+			Set vc = view.AllEntries
+			
+			' Exploitation du résultat
+			Dim entry As NotesViewEntry
+			Dim doc As NotesDocument
+			Dim i_nb_traite As Integer
+			i_nb_traite = 0
+			
+			If oswindows Then
+			' Ouverture de la barre de progression
+				Dim pb_export As LNProgressBar
+				Set pb_export = New LNProgressBar(True)
+				Call pb_export.SetText("Exportation de donnees en cours." & Chr(13) & Chr(13),"Veuillez patienter...")
+				Call pb_export.SetProgressRange(Clng(vc.count))
+			Else
+				Print ("Exportation des  " & Cstr(vc.Count)  &" fiches en cours, veuillez patienter...")
+			End If
+			
+			Dim i As Integer
+			Dim i_rep As Integer
+			For  i = 1 To vc.count
+				
+				If oswindows Then
+					Call pb_export.SetProgressPos(Clng(i))
+				End If
+				
+				Set entry = vc.GetNthEntry( i )
+				
+				If ( entry.IsValid ) Then
+					Set doc = entry.Document
+					
+					i_rep = ControleDocument ( doc , obj_lu, Report )
+					
+					If ( i_rep = 0 ) Then
+						Call CreationFichiers(doc,Report)
+						i_nb_traite = i_nb_traite + 1
+					End If
+				End If
+			Next
+			
+			If oswindows Then
+			' Fermeture de la barre de progression
+				Call pb_export.PBDelete
+			End If
+			
+			Call CreationFichierFinRecup ( obj_lu , nombre )
+			
+			'If ( i_err = 0 ) Then
+		 	'	Messagebox "La requête : " + obj_lu.NomFichier + " vient d'être traitée" & Chr(10) & Chr(10) & Cstr(i_nb_traite) & " document(s) extraits sur " & Cstr(nombre)
+			'End If
+		End If
+		
+		Report.AddDebugLine( "requête : " + query)
+		Report.AddDebugLine("La requête : " + obj_lu.NomFichier + " vient d'être traitée " & Cstr(i_nb_traite) & " document(s) extraits sur " & Cstr(nombre))
+		'Report.AddDebugLine( "Fin traitement de la requête : " + obj_lu.NomFichier + " vient d'être traitée" & Chr(10) & Chr(10) & Cstr(i_nb_traite) & " document(s) extraits sur " & Cstr(nombre))
+		
+	End Forall
+	
+End Function
+
+'++LotusScript Development Environment:2:1:TraitementExportFic:1:8
+Function TraitementExportFic()
+	
+	On Error Goto ErrorHandler
+	On Error 4091 Resume Next
+	
+	Dim docprofil As NotesDocument
+	Dim session 	As New NotesSession	
+	Dim db 			As notesDataBase
+	Set db=session.CurrentDatabase
+	
+	' Récupération des infos sur la base Scanup (Outils Coupants ou non ?)
+	Set docProfil=db.getProfileDocument("M_ChpProfil_FR")
+	
+	Dim nom_baselog 	As String
+	
+	nom_baselog = Cstr(docprofil.nom_baselog(0))
+	
+	'On log l'exécution
+	Dim Report 				As New LogEntry
+	Report.LogType			= LOGLEVEL_INFO%
+	Report.SubName		= "TraitementExportFic"
+	Report.Component    	= "Export de fiches"
+	Report.DocID		    		= ""
+	Report.LibName    		= "Lib_Export"
+	Report.ClassName		= "TraitementExportFic"
+	Report.Msg				= "Export de fiches par sélection de fichiers requêtes à traiter "
+	'  
+	' Avant tout, on teste quel type de documents on remonte:
+	'
+	If ChoixFormatFichier<>"" Then
+		
+	' Exportation depuis un ensemble de fichiers requêtes sélectionnés par l'utilisateur
+		
+	' On initialise la gestion des erreurs à vide
+		i_err = 0
+		s_erreur = ""
+		
+		'Report.AddDebugLine( "Début traitement exportation des documents précisés dans les requetes." )
+		
+		Call SelectionFichier(Report)
+		
+	' Traces pour afficher les fichiers sélectionnés
+		'Report.AddDebugLine( "Début liste des fichiers requêtes à traiter." )
+		Forall filelist In l_listereq
+			Report.AddDebugLine( "Fichier : " + filelist.NomFichier )
+		End Forall
+		'Report.AddDebugLine( "Fin liste des fichiers requêtes à traiter." )
+		
+	' Exploitation des fichiers requêtes et recherche des documents
+		If ( i_err = 0 ) Then
+			Call LectureRecherche ( 1, Report )
+		End If
+		
+	' Affichage de l'erreur s'il y en a une
+		If ( i_err <> 0 ) Then
+			Report.AddDebugLine( "Erreur : "  + s_erreur )
+			Messagebox ( "Erreur : " + s_erreur )
+		End If
+		
+	' Affichage de l'erreur partielle s'il y en a une
+		If ( i_err_p <> 0 ) Then
+			Messagebox ( "Il y a eu des erreurs dans le traitement." & Chr$(10) & "Consulter le fichier de log" )
+		End If
+		
+	' Appel de la fonction de nettoyage
+		Nettoyage
+		
+		'Report.AddDebugLine( "Fin traitement exportation des documents précisés dans les requetes." )
+		
+	End If
+	
+	Call Report.Save(db.server, nom_baselog)
+	
+	Exit Function
+	
+ErrorHandler:
+	
+	Dim LogEntry As New LogEntry
+	
+	' Erreur propagée
+	If (Err = ERROR_PROPAGATE%) Then
+		
+		' On charge les valeurs depuis le message d'erreur
+		LogEntry.FromString(Error$)
+		
+	' Autres erreurs
+	Else	
+		
+		' On log l'erreur
+		LogEntry.LogType			= LOGLEVEL_ERROR%
+		LogEntry.SubName		= "TraitementExportFic"
+		LogEntry.Erl 					= Erl
+		LogEntry.Err					= Err
+		LogEntry.Msg				= Error$ 
+	End If
+	
+	If Not Report Is Nothing Then
+		Call Report.Save(db.server, nom_baselog)
+	End If
+	
+	Call LogEntry.Save(db.server, nom_baselog)
+	
+End Function
+
+
+
+'++LotusScript Development Environment:2:1:TraitementExportRep:1:8
+Function TraitementExportRep()
+	
+	On Error Goto ErrorHandler
+	
+	Dim docprofil As NotesDocument
+	Dim session 	As New NotesSession	
+	Dim db 			As notesDataBase
+	Set db=session.CurrentDatabase
+	
+	' Récupération des infos sur la base Scanup (Outils Coupants ou non ?)
+	Set docProfil=db.getProfileDocument("M_ChpProfil_FR")
+	
+	Dim nom_baselog 	As String
+	
+	nom_baselog = Cstr(docprofil.nom_baselog(0))
+	
+	'On log l'exécution
+	Dim Report 				As New LogEntry
+	Report.LogType			= LOGLEVEL_INFO%
+	Report.SubName			= "Initialize"
+	Report.Component    	= "TraitementExportRep"
+	Report.DocID		    = ""
+	Report.LibName    		= "Lib_Export"
+	Report.ClassName		= "TraitementExportRep"
+	Report.Msg				= "Export de fiches par sélection de l'ensemble des fichiers d un répertoire "
+	
+	' Avant tout, on teste quel type de documents on remonte:
+	'
+	If ChoixFormatFichier<>"" Then
+		
+	' On initialise la gestion des erreurs à vide
+		i_err = 0
+		s_erreur = ""
+		
+		Report.AddDebugLine( "Début traitement exportation des documents précisés dans les requetes." )
+		
+		Call RecupRepertoireCible(Report)
+		
+	' Appel de la fonction permettant la récupération de la liste des fichiers dans le répertoire cible
+		If ( i_err = 0 ) Then
+			ExploiteRep ( s_champ_repertoire )
+		End If
+		
+	' Exploitation des fichiers et création des documents
+		If ( i_err = 0 ) Then
+			Call LectureRecherche ( 2, Report )
+		End If
+		
+	' Affichage de l'erreur s'il y en a une
+		If ( i_err <> 0 ) Then
+			Report.AddDebugLine( "Erreur : "  + s_erreur )
+			Messagebox ( "Erreur : " + s_erreur )
+		End If
+		
+	' Affichage de l'erreur partielle s'il y en a une
+		If ( i_err_p <> 0 ) Then
+			Messagebox ( "Il y a eu des erreurs dans le traitement." & Chr$(10) & "Consulter le fichier de log" )
+			Report.AddDebugLine("Il y a eu des erreurs dans le traitement.consulter le fichier de log")
+		End If
+		
+	' Appel de la fonction de nettoyage
+		Nettoyage
+		If ( i_Err = 0 ) Then
+			Call Report.Save(db.server, nom_baselog)
+		End If
+		
+	End If
+	
+	Exit Function
+	
+ErrorHandler:
+	
+	Dim LogEntry As New LogEntry
+	
+	' Erreur propagée
+	If (Err = ERROR_PROPAGATE%) Then
+		
+		' On charge les valeurs depuis le message d'erreur
+		LogEntry.FromString(Error$)
+		
+	' Autres erreurs
+	Else	
+		
+		' On log l'erreur
+		LogEntry.LogType			= LOGLEVEL_ERROR%
+		LogEntry.SubName		= "Initialize"
+		LogEntry.Erl 			= Erl
+		LogEntry.Err			= Err
+		LogEntry.Msg			= Error$ 
+		LogEntry.AddDebugLine("cle   : ")
+	End If
+	
+	If Not Report Is Nothing Then
+		Call Report.Save(db.server, nom_baselog)
+	End If
+	
+	Call LogEntry.Save(db.server, nom_baselog)
+	
+End Function
+
+'++LotusScript Development Environment:2:1:RecupRepertoireCible:1:8
+Function RecupRepertoireCible( Report As logEntry) 
+	
+	' Récupération du répertoire à traiter
+	
+	Dim Reps As Variant
+	Dim uiws As New NotesUIWorkspace
+	
+	' on construit le répertoire temporaire en fonction de l'os du micro
+	Dim microtemp As String
+	Dim microsep As String
+	
+	microtemp= DefinirTempRep
+	microsep =  DefinirSeparateur
+	
+	Reps=uiws.SaveFileDialog(True,"Choix du répertoire à traiter : ","",microtemp)
+	
+	If Isempty(Reps) Then
+		s_erreur = "Veuillez sélectionner un répertoire à traiter."
+		i_err = -1
+		Report.AddDebugLine( "Erreur : auncun répertoire sélectionné." )
+	Else
+		Forall Rep In Reps
+			s_champ_repertoire = Rep + microsep
+		End Forall
+		Report.AddDebugLine( "Répertoire sélectionné : " + s_champ_repertoire ) 
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:1:SelectionFichier:1:8
+Function SelectionFichier(Report As LogEntry) 
+	
+	
+	' on construit le répertoire temporaire en fonction de l'os du micro
+	Dim microtemp As String
+	Dim microsep As String
+	
+	microtemp= DefinirTempRep
+	microsep =  DefinirSeparateur
+	' On demande à l'utilisateur de sélectionner les fichiers à traiter
+	Dim workspace As New NotesUIWorkspace
+	Dim files As Variant
+	files = workspace.OpenFileDialog(True, "Veuillez sélectionner les fichiers à requêtes à utiliser :", "", microtemp)
+	
+	If ( Isempty(files) = False ) Then
+		' Pour tous les fichiers .txt on va créé une instance d'objet ClasseRequete
+		Forall lecture In files
+			Dim pos As Integer
+			pos = Instr(1,Lcase(lecture),".txt")
+			
+			If ( pos > 0 ) Then
+				' On redimensionne le tableau des requetes
+				Redim Preserve l_listereq ( i_nb_requete )
+				
+				' Creation d'une nouvelle instance d'objet ClasseRequete
+				Dim obj_req As ClasseRequete
+				Set obj_req = New ClasseRequete
+				obj_req.NomFichier = lecture
+				Set l_listereq ( i_nb_requete ) = obj_req
+				i_nb_requete = i_nb_requete +1
+			End If
+			
+			If ( i_nb_requete = 1 ) Then
+				ExtraitChemin ( obj_req.NomFichier )
+			End If
+			
+		End Forall
+		
+		' On test si au moin un fichier .txt à traiter
+		If ( i_nb_requete = 0 ) Then
+			s_erreur = "Vous devez sélectionner au moins un fichier requête pour l'exportation."
+			i_err = -1
+			Report.AddDebugLine( "Erreur : aucun fichier .txt sélectionné." )
+		End If
+		
+	Else
+		s_erreur = "Vous devez sélectionner les fichiers requêtes à traiter."
+		i_err = -1
+		Report.AddDebugLine( "Erreur : aucun fichier sélectionné." )
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:2:Nettoyage:1:8
+Public Sub Nettoyage
+	
+	' Nettoyage tableau d'objet document
+	If( i_nb_requete > 0) Then
+		Erase l_listereq
+		i_nb_requete = 0
+	End If
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:LectureRecherche:1:8
+Function LectureRecherche ( i_posi As Integer, Report As LogEntry)
+	
+	' Appel de la fonction permettant la lecture des fichiers .txt
+	If ( i_err = 0 ) Then
+		Call LectureFicRequete(i_posi, Report)
+	End If
+	
+	' Extraction des documents de la base
+	If ( i_err = 0 ) Then
+		Call ExtractionDocuments(Report)
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:1:ConstruitRequete:1:8
+Function ConstruitRequete ( obj_tra As ClasseRequete ) As String
+	
+	Dim s_requete As String
+	Dim i_flag As Integer
+	i_flag = 0
+	
+	If  ( obj_tra.CodeMabec <> "" And obj_tra.CodeMabec <> "*") Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		
+		If ( obj_tra.CodeMabec <> "*" ) Then
+			If ( Instr(obj_tra.CodeMabec ,"*") <> 0) Then
+				s_requete = s_requete + " FIELD Doc_CodeMabec LIKE " + obj_tra.CodeMabec
+			Else
+				s_requete = s_requete + " FIELD Doc_CodeMabec=" + obj_tra.CodeMabec
+			End If
+		End If
+		
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.NoPlanche <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_NumeroPlanche LIKE " + obj_tra.NoPlanche 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.Format <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_Format LIKE " + obj_tra.Format 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.Usine <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_NomUsine LIKE " + obj_tra.Usine 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.DesignationPlan <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_DesignationPlan LIKE " + obj_tra.DesignationPlan 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.Createur <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_Createur LIKE " + obj_tra.Createur 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.DatePlan <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_DatePlan =" + obj_tra.DatePlan
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.IndiceModification <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_IndiceModification LIKE " + obj_tra.IndiceModification 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.DateModification <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_DateModification =" + obj_tra.DateModification
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.NoAtelier <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_NoAtelier LIKE " + obj_tra.NoAtelier 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.NoOperation <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_NoOperation LIKE " + obj_tra.NoOperation 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.TypePlan <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_TypePlan LIKE " + obj_tra.TypePlan 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.CommentaireModification <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_CommentaireModif LIKE " + obj_tra.CommentaireModification 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.NoPointIntervention <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_NoPointIntervention LIKE " + obj_tra.NoPointIntervention 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.Caracteristique <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_Caracteristique LIKE " + obj_tra.Caracteristique 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.Divers <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_Divers LIKE " + obj_tra.Divers
+		i_flag = 1
+	End If
+	
+	' Rajout de la v2 ------------------------------------------------------------------------
+	' Enregistrements propres à la base des outils coupants :
+	'
+	If  ( obj_tra.CodeEDE <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_CodeEDE LIKE " + obj_tra.CodeEDE 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.TypeVehicule <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_TypeVehicule LIKE " + obj_tra.TypeVehicule 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.DesignationPiece <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_DesignationPiece LIKE " + obj_tra.DesignationPiece 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.IntitulePlan <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_IntitulePlan LIKE " + obj_tra.IntitulePlan 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.Date <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_DatePlan LIKE " + obj_tra.DatePlan 
+		i_flag = 1
+	End If
+	
+	If  ( obj_tra.NomDessinateur <> "" ) Then
+		If ( i_flag = 1 ) Then
+			s_requete = s_requete + " AND "
+		End If
+		s_requete = s_requete + " FIELD Doc_NomDessinateur LIKE " + obj_tra.NomDessinateur
+		i_flag = 1
+	End If
+	
+	' Affectation de la valeur de retour
+	ConstruitRequete = s_requete
+	
+End Function
+
+'++LotusScript Development Environment:2:1:CreationFichiers:1:8
+Function CreationFichiers ( obj_doc As NotesDocument, Report As LogEntry)
+	
+	On Error Resume Next
+	
+	Dim session 	As New NotesSession	
+	Dim db 			As notesDataBase
+	Set db=session.CurrentDatabase
+	
+	' on construit le répertoire temporairee en fonction de l'os du micro
+	Dim microtemp As String
+	Dim microsep As String
+	
+	microtemp= DefinirTempRep
+	microsep =  DefinirSeparateur
+	
+	' Descripteur du fichier de log
+	Dim file_new As Integer
+	
+	' Création d'un descripteur de fichier		
+	file_new = Freefile
+	
+	' Ouverture du fichier en écriture
+	Dim chemin As String
+	Dim subj As Variant
+	Dim codeMabec As Variant
+	Dim planche As Variant
+	Dim indexpj As Integer
+	Dim nbpj As Integer
+	Dim fileName As String
+	Dim i_pos As Integer
+	Dim k As Integer
+	
+	If FormatFichier<>"format3" Then
+		' Type autocad ou tif: on dépose directement le fichier *.dat dans le répertoire courant
+		subj = obj_doc.GetItemValue( "Doc_CodeMabec" )
+		chemin = s_champ_repertoire + microsep + subj (0) + "_"
+		subj = obj_doc.GetItemValue( "Doc_NumeroPlanche" )
+		
+		i_pos = Instr(1,subj (0),"/")
+		
+		If(i_pos > 0) Then
+			chemin = chemin + Left$ ( subj (0) , i_pos-1 ) + "_"
+		Else
+			chemin = chemin + subj (0) + "_"
+		End If
+		subj = obj_doc.GetItemValue( "Doc_NumeroVersion" )
+		chemin = chemin + subj (0) + ".dat"
+	Else
+		' Type Xelec, il faut créer un répertoire avant de déposer le fichier *.dat
+		Dim repertoire As String		
+		Dim w_repertoire As String
+		subj = obj_doc.GetItemValue( "Doc_CodeMabec" )
+		repertoire = s_champ_repertoire + subj (0) + "_"
+		subj = obj_doc.GetItemValue( "Doc_NumeroPlanche" )
+		
+		i_pos = Instr(1,subj (0),"/")
+		
+		If(i_pos > 0) Then
+			repertoire = repertoire + Left$ ( subj (0) , i_pos-1 ) + "_"
+		Else
+			repertoire = repertoire + subj (0) + "_"
+		End If
+		subj = obj_doc.GetItemValue( "Doc_NumeroVersion" )
+		w_repertoire = repertoire + subj (0) + ".doc"
+		repertoire = repertoire + subj (0)
+		Report.AddDebugLine( "Répertoire à crée : " + repertoire ) 
+		Mkdir w_repertoire
+		' Création du fichier .dat dans ce répertoire
+		chemin=w_repertoire+microsep+Strrightback(repertoire,microsep)+".dat"
+	End If
+	
+	Open chemin For Output As file_new
+	
+	' Ecriture dans le fichier
+	Dim s_chaine As String
+	
+	subj = obj_doc.GetItemValue( "Doc_CodeMabec" )
+	If ( subj (0) <> "") Then
+		s_chaine = "CodeMabec=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_NumeroPlanche" )
+	If ( subj (0) <> "") Then
+		s_chaine = "NoPlanche=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_Format" )
+	If ( subj (0) <> "") Then
+		s_chaine = "Format=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_NomUsine" )
+	If ( subj (0) <> "") Then
+		s_chaine = "Usine=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_Createur" )
+	If ( subj (0) <> "") Then
+		s_chaine = "Createur=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	' Ajout de la V2: champ(s) propre(s) à la base des outils coupants - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	subj = obj_doc.GetItemValue( "Doc_CodeEDE" )
+	If ( subj (0) <> "") Then
+		s_chaine = "CodeEDE=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_TypeVehicule" )
+	If ( subj (0) <> "") Then
+		s_chaine = "TypeVehicule=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	
+	subj = obj_doc.GetItemValue( "Doc_DesignationPlan" )
+	If ( subj (0) <> "") Then
+		s_chaine = "DesignationPlan=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_NoPointIntervention" )
+	If ( subj (0) <> "") Then
+		s_chaine = "NoPointIntervention=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_NoAtelier" )
+	If ( subj (0) <> "") Then
+		s_chaine = "NoAtelier=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_NoOperation" )
+	If ( subj (0) <> "") Then
+		s_chaine = "NoOperation=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If	
+	
+	subj = obj_doc.GetItemValue( "Doc_IndiceModification" )
+	If ( subj (0) <> "") Then
+		s_chaine = "IndiceModification=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	' Ajout de la V2: champ(s) propre(s) à la base des outils coupants - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	subj = obj_doc.GetItemValue( "Doc_DesignationPiece" )
+	If ( subj (0) <> "") Then
+		s_chaine = "DesignationPiece=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_IntitulePlan" )
+	If ( subj (0) <> "") Then
+		s_chaine = "DesignationDoc=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_NomDessinateur" )
+	If ( subj (0) <> "") Then
+		s_chaine = "NomDessinateur=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_CodeClassement" )
+	If ( subj (0) <> "") Then
+		s_chaine = "CodeClassement=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_NomFournisseur" )
+	If ( subj (0) <> "") Then
+		s_chaine = "NomConstructeur=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_RefFournisseur" )
+	If ( subj (0) <> "") Then
+		s_chaine = "RefConstructeur=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	
+	'### Ajout David C.
+	subj = obj_doc.GetItemValue( "SelectionFormatFichier" )
+	If ( subj (0) <> "") Then
+		s_chaine = "SelectionFormatFichier=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	subj = obj_doc.GetItemValue( "NbTifs" )
+	If ( subj (0) <> "") Then
+		s_chaine = "nbTif=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	'### Fin ajout	
+	
+	
+	Dim s_val As String		
+	Dim i_tmp As Integer
+	subj = obj_doc.GetItemValue( "Doc_DatePlan" )
+	If ( subj (0) <> "") Then
+		i_tmp = Day(subj (0))
+		If ( i_tmp < 10 ) Then
+			s_val = s_val + "0"
+		End If
+		s_val = s_val + Trim$(Str(i_tmp))+"-"
+		
+		i_tmp = Month(subj (0))
+		If ( i_tmp < 10 ) Then
+			s_val = s_val + "0"
+		End If
+		s_val = s_val + Trim$(Str(i_tmp))+"-"
+		
+		i_tmp = Year(subj (0))
+		s_val = s_val + Trim$(Str(i_tmp))
+		
+		s_chaine = "DatePlan=" + Chr(34) + s_val + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_TypePlan" )
+	If ( subj (0) <> "") Then
+		s_chaine = "TypePlan=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_DateModification" )
+	If ( subj (0) <> "") Then
+		s_val = ""
+		i_tmp = Day(subj (0))
+		If ( i_tmp < 10 ) Then
+			s_val = s_val + "0"
+		End If
+		s_val = s_val + Trim$(Str(i_tmp))+"-"
+		
+		i_tmp = Month(subj (0))
+		If ( i_tmp < 10 ) Then
+			s_val = s_val + "0"
+		End If
+		s_val = s_val + Trim$(Str(i_tmp))+"-"
+		
+		i_tmp = Year(subj (0))
+		s_val = s_val + Trim$(Str(i_tmp))
+		
+		s_chaine = "DateModification=" + Chr(34) + s_val + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_CommentaireModif" )
+	If ( subj (0) <> "") Then
+		s_chaine = "CommentaireModification=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_Caracteristique" )
+	If ( subj (0) <> "") Then
+		s_chaine = "Caracteristique=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	subj = obj_doc.GetItemValue( "Doc_Divers" )
+	If ( subj (0) <> "") Then
+		s_chaine = "Divers=" + Chr(34) + subj (0) + Chr(34)
+		Print #file_new, s_chaine
+	End If
+	
+	' Fermeture du descripteur de fichier
+	Close file_new
+	
+	' On se positionne sur la base contenant les pièces jointes
+	Dim dbpj As NotesDatabase
+	
+	Dim cheminBase As String
+	cheminBase = Strleftback(db.FilePath,"\") + "\" + obj_doc.Base_PJ(0)
+	Set dbpj = New NotesDatabase(db.server, cheminBase)
+	
+	' Test de l'existence de la base des pièces jointes
+	If obj_doc.Nom_PJ(0)="" Then
+		Report.AddDebugLine( "Pas de pièces jointes associées." )
+	Else
+		If dbpj.isOpen=False Then
+			Messagebox "Base d'enregistrement des pièces jointes non trouvée : avertir votre POA ScanUp",16,"Avertissement !"
+			Report.AddDebugLine("Base d'enregistrement des pièces jointes non trouvée : avertir votre POA ScanUp")
+			i_err = -1
+			s_erreur = "Base d'enregistrement des pièces jointes non trouvée"
+		End If
+		
+		
+		If ( i_err = 0 ) Then
+			' Récupération du doc de la base des pièces Jointes
+			Dim view As NotesView
+			Dim docPJ As NotesDocument
+			Set view=dbpj.GetView("V_ListePJ_FR")
+			Set DocPJ=view.GetDocumentByKey(obj_doc.Unid_PJ(0))	
+			
+			If DocPJ Is Nothing Then
+				codeMabec=obj_doc.GetItemValue( "Doc_CodeMabec" ) 
+				planche=obj_doc.GetItemValue( "Doc_NumeroPlanche" ) 
+				Messagebox "La piece jointe est introuvable pour le document suivant: " & Chr$(13) & codeMabec(0) & "_" & planche(0) ,16,"Avertissement"
+				Report.AddDebugLine("La piece jointe est introuvable pour le document suivant: " & Chr$(13) & codeMabec(0) & "_" & planche(0))
+				i_err = -1
+				s_erreur = "Une ou plusieurs pièces jointes n'ont pas été trouvées !"
+			End If
+			
+		End If
+		
+		If ( i_err = 0 ) Then
+			
+			' Récupération des pièces jointes
+			Dim rtitem As Variant	
+			Dim object As NotesEmbeddedObject
+			
+			Set rtitem = DocPJ.GetFirstItem("Doc_PJAssocies" )
+			If rtItem Is Nothing Then 
+				codeMabec=obj_doc.GetItemValue( "Doc_CodeMabec" ) 
+				planche=obj_doc.GetItemValue( "Doc_NumeroPlanche" ) 
+				Messagebox "La piece jointe est introuvable pour le document suivant: " & Chr$(13) & codeMabec(0) & "_" & planche(0) ,16,"Avertissement"
+				Report.AddDebugLine("La piece jointe est introuvable pour le document suivant: " & Chr$(13) & codeMabec(0) & "_" & planche(0))
+				i_err = -1
+				s_erreur = "Une ou plusieurs pièces jointes n'ont pas été trouvées !"
+				
+			End If
+			
+		End If
+		
+		If ( i_err = 0 ) Then
+			
+			If ( rtitem.Type = RICHTEXT ) Then
+				' - - - - - - - - - - - - - - - - - - - - - - - - - - 
+				' Modif SD du 04/03/2004:
+				' But: à l'export, donner au fichier tif le même nom que le fichier dat pour pouvoir remonter les données à l'import
+				' Compteur pour savoir le nb de pièces jointes:
+				nbpj=0				
+				Forall o In rtitem.EmbeddedObjects
+					If ( o.Type = EMBED_ATTACHMENT ) Then
+						nbpj=nbpj+1
+					End If
+				End Forall
+				' - - - - - - - - - - - - - - - - - - - - - - - - - - 
+				
+				' - - - - - - - - - - - - - - - - - - - - - - - - - - 
+				' Modif SD du 04/03/2004:
+				' 1 seule pièce jointe pour le doc en cours,  le tif extrait prend la forme suivante: Z000123_000.tif
+				If nbpj=1 Then				
+					Forall o In rtitem.EmbeddedObjects
+						If ( o.Type = EMBED_ATTACHMENT ) Then
+						' On ouvre le fichier
+							fileName = o.Source 
+							Set object = rtitem.GetEmbeddedObject( fileName )
+							If Not ( object Is Nothing ) Then 
+								codeMabec=obj_doc.GetItemValue( "Doc_CodeMabec" ) 
+								planche=obj_doc.GetItemValue( "Doc_NumeroPlanche" ) 
+								
+								If FormatFichier<>"format3" Then
+								' Dépose des tifs et des dwg
+									' on récupère l'extension du fichier
+									i_pos = Instr(1,planche(0),"/")
+									
+									If(i_pos > 0) Then
+										Call o.ExtractFile ( s_champ_repertoire + microsep & codeMabec(0) & "_" &Left$ ( planche (0) , i_pos-1 )& "." & Strrightback(fileName,".")	 )
+									Else
+										Call o.ExtractFile ( s_champ_repertoire + microsep & codeMabec(0) & "_" & planche(0)& "." & Strrightback(fileName,".")	 )
+									End If	
+								Else
+								' Dépose des Xelec
+									k=0
+									If (Ucase(Strrightback(o.name,".")))<> "PDF" Then
+										Call o.ExtractFile ( w_repertoire + microsep & o.name )	
+										Redim Preserve ListeFichiers(k)
+										ListeFichiers(k)= w_repertoire + microsep & o.name
+										k=k+1												
+									End If
+								End If
+							End If
+						End If
+					End Forall
+				Else
+					' plus d'une pièce jointe pour le doc en cours, on rajoute un compteur après le nom du tif: Z000123_000-1.tif, Z000123_000-2.tif, etc
+					indexpj=0
+					Forall o In rtitem.EmbeddedObjects
+						If ( o.Type = EMBED_ATTACHMENT ) Then
+							indexpj=indexpj+1
+						' On ouvre le fichier
+							fileName = o.Source 
+							Set object = rtitem.GetEmbeddedObject( fileName )
+							If Not ( object Is Nothing ) Then 
+								codeMabec=obj_doc.GetItemValue( "Doc_CodeMabec" ) 
+								planche=obj_doc.GetItemValue( "Doc_NumeroPlanche" ) 
+								
+								If FormatFichier<>"format3" Then
+								' Dépose des tifs et des dwg
+									' on récupère l'extension du fichier
+									i_pos = Instr(1,planche (0),"/")
+									
+									If(i_pos > 0) Then
+										Call o.ExtractFile ( s_champ_repertoire + microsep & codeMabec(0) & "_" &Left$ ( planche (0) , i_pos-1 )& "-" & Cstr(indexpj) & "." & Strrightback(fileName,".")	 )	
+									Else
+										Call o.ExtractFile ( s_champ_repertoire + microsep & codeMabec(0) & "_" & planche(0) & "-" & Cstr(indexpj) & "." & Strrightback(fileName,".")	 )	
+									End If	
+								Else
+								' Dépose des Xelec
+									'Call o.ExtractFile ( repertoire + "\" & fileName )	
+									k=0
+									If (Ucase(Strrightback(o.name,".")))<> "PDF" Then
+										Call o.ExtractFile ( w_repertoire + microsep & o.name )	
+										Redim Preserve ListeFichiers(k)
+										ListeFichiers(k)= w_repertoire + microsep & o.name
+										k=k+1												
+									End If
+								End If
+							End If
+						End If
+					End Forall
+					
+				End If
+			End If
+		End If
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:1:ExtraitChemin:1:8
+Function ExtraitChemin ( s_chaine As String)
+	
+	Dim s_sous As String
+	Dim l_carac As Long
+	Dim l_position As Long
+	Dim l_start As Long
+	
+	' on construit le répertoire temporaire en fonction de l'os du micro
+	Dim microtemp As String
+	Dim microsep As String
+	
+	microtemp= DefinirTempRep
+	microsep =  DefinirSeparateur
+	
+	l_position = Instr(1,s_chaine,microsep)
+	l_carac = Len(s_chaine) - l_position
+	s_sous = Right$(s_chaine, l_carac)
+	
+	Do While l_position <> 0
+		l_position = Instr(1,s_sous,microsep)
+		l_carac = Len(s_sous) - l_position
+		s_sous = Right$(s_sous, l_carac)
+	Loop
+	
+	l_start = Len(s_chaine) - Len(s_sous)
+	s_sous = Left$(s_chaine,l_start)
+	
+	' Affectation du champ repertoire de travail
+	s_champ_repertoire = s_sous
+	
+End Function
+
+'++LotusScript Development Environment:2:2:CreationFichierFinRecup:1:8
+Sub CreationFichierFinRecup ( o_doc As ClasseRequete , i_nb As Integer )
+	
+	' Nous allons créer le fichier requete.txt.fin pour signaler la fin du traitement de 
+	' cette requête
+	
+	' Descripteur du fichier de log
+	Dim file_fin As Integer
+	
+	' Création d'un descripteur de fichier		
+	file_fin = Freefile
+	
+	' Nom du fichier à créer
+	Dim s_file As String
+	s_file = o_doc.NomFichier + ".fin"
+	
+	' Ouverture du fichier
+	Open s_file For Output As file_fin
+	
+	' Ecriture dans le fichier
+	Print #file_fin, Cstr( i_nb ) + " document(s) récupéré(s)."
+	
+	' Fermeture du fichier
+	Close file_fin
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:ControleDocument:1:8
+Function ControleDocument ( o_obj As NotesDocument , o_req As ClasseRequete , Report As LogEntry) As Integer
+	
+	' On initialise le retour à 0
+	ControleDocument = 0
+	
+	Dim s_flag As Variant
+	s_flag = o_obj.GetItemValue( "Doc_FlagEtat") 
+	
+	' Si l'utilisateur désire effectuer une récupération pour modification
+	If ( Strcompare ( o_req.FlagPourModif , "1" , 1) = 0 ) Then
+		
+		Dim s_chcm As Variant
+		Dim s_chnp As Variant
+		s_chcm = o_obj.GetItemValue( "Doc_CodeMabec")
+		s_chnp = o_obj.GetItemValue( "Doc_NumeroPlanche")
+		
+		' On test si le document trouvé est déjà en cours de modifcation
+		' dans ce cas c'est une erreur
+		If ( s_flag(0) = "3" ) Then
+			Report.AddDebugLine( "Erreur dans la requête : " + o_req.NomFichier)			
+			Report.AddDebugLine( "Erreur : le document : " + s_chcm(0) + "_" + s_chnp(0) + " est déjà en cours de modification.")
+			i_err_p = -1
+			ControleDocument = -1
+		End If
+		
+		' Test si l'utilisateur veut récupérer pour modification la dernière version du doc
+		' Si ce n'est pas le cas, on interdit la récupération pour modif. 
+		If ( ControleDocument = 0 ) Then
+			Dim doc As NotesDocument
+			Set doc = RechercheDerniereVersionDoc ( s_chcm(0) , s_chnp(0), Report )
+			
+			' Comparaison avec la version en cours
+			Dim s_ver As Variant
+			s_ver = o_obj.GetItemValue( "Doc_NumeroVersion")
+			If ( doc.Doc_NumeroVersion(0)<>s_ver(0) ) Then
+				Report.AddDebugLine( "Erreur : La version sélectionnée n'est pas la dernière en cours.")
+				i_err_p = -1
+				ControleDocument = -1				
+			End If
+		End If
+		
+		' Si les controles sont bons et que c'est une récupération pour modification il faut
+		' effectuer une copie du document est le marquer en récup pour modification par
+		' l'utilisateur courant
+		If ( ControleDocument = 0 ) Then
+			Dim i_repo As Integer
+			i_repo = CreationDocRecupPourModif ( o_obj, Report )
+			If ( i_repo <>0 ) Then
+				Report.AddDebugLine( "Erreur : La nouvelle version du document n'as pas pu être créée dans la base.")
+				i_err_p = -1
+				ControleDocument = -1
+			Else
+				ControleDocument = 0
+			End If
+		End If
+		
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:1:ChoixFormatFichier:1:8
+Function ChoixFormatFichier As String
+	'
+	' Cette fonction permet d'affecter à la variable publique FormatFichier le type de fichier que l'on veux importer
+	'
+	' 
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim uiwks As New NotesUIworkspace
+	Dim tmpdoc As Notesdocument
+	Dim doc As NotesDocument
+	Dim view As NotesView
+	Set db=session.currentDatabase
+	Dim flag As Variant	
+	Set tmpdoc = db.Createdocument( )
+	
+Boucle:
+	tmpdoc.Form="m_DialogBoxSelectFormat"
+	tmpdoc.SaveOptions="0"
+	flag = uiwks.DialogBox ( "m_DialogBoxSelectFormat",True, True, False, False, False, False, "Sélection du format du fichier",tmpdoc,False)	
+	If flag=True Then
+		If tmpdoc.ChoixFichier(0)="Tif" Then
+			ChoixFormatFichier="format1"
+			FormatFichier=ChoixFormatFichier
+		Elseif tmpdoc.ChoixFichier(0)="Autocad" Then 
+			ChoixFormatFichier="format2"
+			FormatFichier=ChoixFormatFichier
+		Elseif tmpdoc.ChoixFichier(0)="Xelec" Then 
+			ChoixFormatFichier="format3"
+			FormatFichier=ChoixFormatFichier
+		Else
+			Msgbox "Vous devez choisir un type de fichier !",48,"Avertissement"
+			Goto Boucle
+		End If
+	Else
+		Msgbox "Traitement annulé !",48,"Information"
+		End
+		
+	End If
+	'
+	Set view=db.GetView("v_TriRenverseParFormat")
+	Set doc=view.GetDocumentByKey(ChoixFormatFichier)
+	If Not doc Is Nothing Then
+		NomVisibleFormatFichier=doc.Format(0)
+	End If
+	
+	
+End Function
+
+'++LotusScript Development Environment:2:1:Transforme:1:8
+Function Transforme( chaine As String )  As String
+	
+	Dim s_trav As String
+	Dim s_new As String
+	Dim s_decou As String
+	Dim i As Integer
+	
+	' Remplacement des * par des ?
+	s_trav = chaine
+	
+	While ( Len ( s_trav ) > 0 )
+		s_decou = Left$ ( s_trav , 1 )
+		s_trav = Right$ ( s_trav , Len ( s_trav ) - 1 )
+		
+		If ( Asc ( s_decou ) <> 42 ) Then
+			s_new = s_new + s_decou
+		Else
+			s_new = s_new + "?"
+		End If
+	Wend
+	
+	For  i = 1 To (10-Len (s_new))
+		s_new = s_new + "?"
+	Next
+	
+	Transforme = s_new
+	
+End Function
+
+

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='7ee' unid='DBCFF04ABEE7FA75C12573750046A6C1' sequence='70'>
+<created><datetime dst='true'>20071015T145142,09+02</datetime></created>
+<modified><datetime>20171028T233208,73-03</datetime></modified>
+<revised><datetime>20160721T105931,29-03</datetime></revised>
+<lastaccessed><datetime>20171028T233204,06-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233204,06-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=STEPHANE BUCHOU - C022589/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgGAIAAAAAAgAAAIwABANTQyAAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion'><text>7</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/9KAAIABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYiTVMgU2FucyBTZXJpZgAA
+AAAAAAAAAAAAAAAAAAAAAAA=
+</rawitemdata></item>
+<item name='SaveOptions' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='ActiverRenommage' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='InfosRenommage' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>Boite de dialogue renommage N° BE</text><text
+>m_DialogBoxRenameBE</text></textlist></item>
+<item name='$Comment' sign='true'><text>Demande de renommage des n° BE</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>InfosRenommage</text><text>ActiverRenommage</text><text
+>SaveOptions</text></textlist></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_DialogBoxRenameBE</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAIr/PgCKAAAFADACAAAAAAAAAgEAAggOAAAAAAAAAAsAAAAAAA4A
+AAAMAAEAAQAwAAMAU2F2ZU9wdGlvbnMA3gYAAIr/hf8IAAEAAAqBAoL/WgACAAAAAAAAAAAAoAUA
+AKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAlIcAAAAA
+AAAAAAAAAAABAAAABAAAAIMEAgCF/wgAAQAACoECgwQCAIX/UwAFAQAJVm91bGV6LXZvdXMgYWN0
+aXZleiBsZSByZW5vbW1hZ2UgZGVzIG74IEJFIGRlIGNldHRlIHVzaW5lIHBvdXIgY2V0dGUgbnVp
+dCA/AIECgwQCAIX/CQAGAAAKIADdBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/FAAAAAQi
+AAAAAAAAAAAAAAAAiv9QAIKCAAUAIAAACAAAAAACBQAACRAAAAAAAAAAEAAAAAwAEAAAAA4AAQAD
+AE5PTgADAEFjdGl2ZXJSZW5vbW1hZ2UCAAMAAwBPVUlOT07eBgAAiv+F/wgABQAAC4ECgwQCAIX/
+CAAFAAALgQKDBAIAhf8gAAUBAAlJbmZvcyBzdXIgbGUgcmVub21tYWdlIDqBAoMEAgCF/wgABQEA
+Cd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsP8UAAAAAAAEAAAAAAAAAAAAAACK/zIAggAA
+BQAwAAAIAAAAAAIFAAAJAAAAAAAAAAAOAAAAAABJbmZvc1Jlbm9tbWFnZd4GAACK/4X/CAAFAQAJ
+gQKDBAIAhf8IAAUBAAmBAoMEAgCF/w8ABQEACU5vdGUgOiAAgQKDBAIAhf9NAAUAAAlVbmUgZm9p
+cyBsZSB0cmFpdGVtZW50IG5vY3R1cm5lIGVmZmVjdHWCLCBsZSByZW5vbW1hZ2UgZXN0IGSCc2Fj
+dGl2gi4AgQKDBAIAhf96AAUAAAlTaSB0b3VzIGxlcyBkb2N1bWVudHMgbidvbnQgcGFzIIJ0giB0
+cmFpdIJzLCB2b3VzIGRldmV6IHKCYWN0aXZleiBsZSByZW5vbW1hZ2UgcGFyIGwnaW50ZXJtgmRp
+YWlyZSBkZSBjZSBkb2N1bWVudC4=
+</rawitemdata></item></note>
+

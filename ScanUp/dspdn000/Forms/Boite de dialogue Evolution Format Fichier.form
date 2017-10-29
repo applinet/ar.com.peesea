@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='032581C8000DEA17'>
+<noteinfo noteid='756' unid='6C41A7A6E484232AC1256E7C003E1A43' sequence='51'>
+<created><datetime dst='true'>20040420T131819,55+02</datetime></created>
+<modified><datetime>20171028T233208,13-03</datetime></modified>
+<revised><datetime>20160721T105932,33-03</datetime></revised>
+<lastaccessed><datetime>20171028T233202,78-03</datetime></lastaccessed>
+<addedtofile><datetime>20171028T233202,78-03</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=AdminSign/OU=users/O=PSA</name><name
+>CN=SYLVAIN DECLOIX - E123781/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=SEBASTIEN BONNET - E297798/OU=users/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name><name>CN=MICHEL GIRARDOT - U073949/OU=users/O=PSA</name><name
+>CN=AdminSignDSP/OU=Programs/O=PSA</name></updatedby>
+<item name='ChoixFichier' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>Boite de dialogue Evolution Format Fichier</text><text
+>m_DialogBoxEvolutionFormat</text></textlist></item>
+<item name='$Comment' sign='true'><text>Permet de choisir un nouveau format lors d'une récupération pour modi</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion'><text>6</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSJNUyBTYW5zIFNlcmlmAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='SaveOptions' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='ChoixFormat' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>ChoixFormat</text><text>SaveOptions</text></textlist></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>m_DialogBoxEvolutionFormat</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAIr/PgCKAAAFADACAAAAAAAAAgEAAggOAAAAAAAAAAsAAAAAAA4A
+AAAMAAEAAQAwAAMAU2F2ZU9wdGlvbnMA3gYAAIr/hf8IAAEAAAqBAoL/WgACAAAAAAAAAAAAoAUA
+AKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAlIcAAAAA
+AAAAAAAAAAABAAAABAAAAIMEAgCF/wgAAQAACoECtxygBdERnwcJAAAASAAAAAAAAAAAAAAAAAAA
+AIMEAgCBAroqpwblAg8QhQMFAQAJAQABAP///wABAAAAAgAAAAAAAAAAAAAAAAAAAIL/WgADAAAA
+AAAAAAAAoAXBL6AFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEA
+AAAAlIcAAAAAAAAAAAAAAAABAAAABAAAAIMEAwDdBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ALD/FAAAAAQgAAAAAAAAAAAAAAAAiv+yAIqCAAUAIAAACAAAAAACBQEACSQAAAAAAAAACwAAAF8A
+JAAAACIAAQAXAENvbnNlcnZlciBhdSBmb3JtYXQgdGlmAAMAQ2hvaXhGb3JtYXQDABcAJAAcAENv
+bnNlcnZlciBhdSBmb3JtYXQgdGlmRXZvbHVlciB2ZXJzIGxlIGZvcm1hdCBBdXRvY2FkIChkd2cp
+RXZvbHVlciB2ZXJzIGxlIGZvcm1hdCBYZWxlY94GAACK/4ECuCqYBroAHhACAgUAAAkBAAUA////
+AAAAABAAAAAAAAAAAAAAAAAAAAAAgwQDAIX/agAFAAAJVm91cyBhdmV6IGxhIHBvc3NpYmlsaXSC
+IGRlIGNoYW5nZXIgbGUgdHlwZSBkZSBmaWNoaWVyLg0KVmV1aWxsZXogY29jaGVyIGxhIGxpZ25l
+IGRlIHZvdHJlIGNob2l4IDq5EgAAAAAAAAAAAAAAAAAAAACBAoMEAgCF/wgAAQAACg==
+</rawitemdata></item></note>
+
